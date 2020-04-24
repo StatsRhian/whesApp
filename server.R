@@ -71,7 +71,7 @@ shinyServer(function(input, output) {
         }
     )
     
-    output$downloadPlot <- downloadHandler(
+    output$downloadPlot = downloadHandler(
         filename = function() { 
             paste("indicator001", ".png", sep = "") 
         },
@@ -79,6 +79,8 @@ shinyServer(function(input, output) {
             ggsave(file, plot = ind1_plot(), device = "png")
         }
     )
+
+    
     
 })
 

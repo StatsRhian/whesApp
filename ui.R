@@ -19,26 +19,27 @@ navbarPage("Welsh Health Equity Status",
                                icon = icon("smile-beam"),
                                fluidPage(
                                  br(), 
-                                   h2("Indicators for wellbeing"),
-                                   br(),
-                                   fluidRow(
-                                     column(6,
-                                   selectInput("wellbeing",
-                                               label = "Indicator",
-                                               width = "90%",
-                                               choices = filter(indicators,
-                                                                category == "Wellbeing") %>%
-                                                 pull(indicator))
+                                 h2("Indicators for wellbeing"),
+                                 br(),
+                                 fluidRow(
+                                   column(6,
+                                          selectInput("wellbeing",
+                                                      label = "Indicator",
+                                                      width = "90%",
+                                                      choices = filter(indicators,
+                                                                       category == "Wellbeing") %>%
+                                                        pull(indicator))
                                    ),
                                    column(6,
-                                   selectInput("disag",
-                                               label = "Disaggregate",
-                                               choices = c("Gender" = "Gender",
-                                                           "Age" = "Age",
-                                                           "Welsh Index" = "WIMD", 
-                                                           "Education level" = "Educat"),
-                                               selectize = TRUE, 
-                                               multiple = TRUE)
+                                          selectInput("disag",
+                                                      label = "Disaggregate",
+                                                      choices = c("Gender" = "Gender",
+                                                                  "Age" = "Age",
+                                                                  "Welsh Index" = "WIMD", 
+                                                                  "Education level" = "Educat"),
+                                                      selected = "Age",
+                                                      selectize = TRUE, 
+                                                      multiple = TRUE)
                                    )
                                  ), 
                                  br(),
@@ -168,15 +169,49 @@ navbarPage("Welsh Health Equity Status",
                       )
                     )
            ),
-           tabPanel("Policy Explorer"),
-           tabPanel("Metadata"), 
+           tabPanel("Policy Explorer", 
+                    includeMarkdown("www/content/policy-explorer.md")
+                    ),
+           ############ META DATA
+           tabPanel("Metadata", 
+                    navlistPanel(
+                      "Inequalities in Health",
+                      widths = c(4, 8),
+                      tabPanel("Wellbeing", 
+                               icon = icon("smile-beam"), 
+                               includeMarkdown("www/content/ind001.md")    
+                      ),
+                      tabPanel("Mortality",
+                               icon = icon("procedures")
+                      ),
+                      "Five essential conditions",
+                      tabPanel("Health Services",
+                               icon = icon("medkit")
+                      ), 
+                      tabPanel("Income and Social Protection",
+                               icon = icon("pound-sign")
+                      ),
+                      tabPanel("Living environment",
+                               icon = icon("tree")
+                      ),
+                      tabPanel("Social and human captial",
+                               icon = icon("users")
+                      ),
+                      tabPanel("Employment and working conditions",
+                               icon = icon("wrench")
+                      )
+                    )
+           ), 
            navbarMenu("About",
                       tabPanel("About the project", 
                                includeMarkdown("www/content/about_project.md")
-                               ),
+                      ),
                       tabPanel("About this app", 
                                includeMarkdown("www/content/about_app.md")
-                               )
+                      )
+           ),
+           tags$script(
+             
            ),
            tags$head(
              bootstrap()
