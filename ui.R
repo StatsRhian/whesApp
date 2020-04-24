@@ -1,40 +1,90 @@
-library(bootstraplib)
 library(shiny)
 library(tidyverse)
+library(DT)
+library(bootstraplib)
+library(shinyBS)
+library(scales)
 
-bs_theme_set("simplex")
 
-bs_theme_add_variables(
-  #   "primary" = "#42ACE0"
-)
+#bs_theme_set("simplex")
+bs_theme_set("sketchy")
 
 navbarPage("Welsh Health Equity Status",
            tabPanel("Indicators", 
                     navlistPanel(
                       "Inequalities in Health",
                       widths = c(4, 8),
-                      fluid = FALSE,
                       tabPanel("Wellbeing", 
                                icon = icon("smile-beam"),
-                               h2("Indicators for wellbeing"),
-                               br(),
-                               selectInput("wellbeing",
-                                           label = "Indicator",
-                                           width = "60%",
-                                           choices = filter(indicators,
-                                                            category == "Wellbeing") %>%
-                                             pull(indicator)),
-                               selectInput("disag",
-                                           label = "Disaggregate",
-                                           choices = c("Gender" = "Gender",
-                                                       "Age" = "Age",
-                                                       "Welsh Index" = "WIMD", 
-                                                       "Education level" = "Educat"),
-                                           selectize = TRUE), 
-                               plotOutput("ind1")
-                      ),
+                               fluidPage(
+                                 br(), 
+                                   h2("Indicators for wellbeing"),
+                                   br(),
+                                   fluidRow(
+                                     column(6,
+                                   selectInput("wellbeing",
+                                               label = "Indicator",
+                                               width = "90%",
+                                               choices = filter(indicators,
+                                                                category == "Wellbeing") %>%
+                                                 pull(indicator))
+                                   ),
+                                   column(6,
+                                   selectInput("disag",
+                                               label = "Disaggregate",
+                                               choices = c("Gender" = "Gender",
+                                                           "Age" = "Age",
+                                                           "Welsh Index" = "WIMD", 
+                                                           "Education level" = "Educat"),
+                                               selectize = TRUE, 
+                                               multiple = TRUE)
+                                   )
+                                 ), 
+                                 br(),
+                                 p("Source: ", a(href = "https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591",
+                                                 "National Survey for Wales 2019",
+                                                 .noWS = "outside", 
+                                                 target = "_blank"),
+                                   .noWS = c("after-begin", "before-end")), 
+                                 p("Year: 2019"),
+                                 fluidRow(
+                                   column(8,
+                                          wellPanel(
+                                            h2("Plot"),
+                                            actionButton("edit_plot", "Edit"),
+                                            downloadButton("downloadPlot", "Download"),
+                                            plotOutput("ind1_plot"), 
+                                            bsModal("editPlotModal",
+                                                    title = "",
+                                                    trigger = "edit_plot",
+                                                    size = "large",
+                                                    textInput("plot_title",
+                                                              label = "Plot title"
+                                                    ),
+                                                    textInput("plot_x_axis",
+                                                              label = "X axis"
+                                                    ),
+                                                    textInput("plot_y_axis",
+                                                              label = "Y axis"
+                                                    ),
+                                                    textInput("plot_caption",
+                                                              label = "Caption",
+                                                              value = "Welsh Health Report Status 2020"
+                                                    )
+                                            )
+                                          )       
+                                   ),
+                                   column(4,
+                                          wellPanel(
+                                            h2("Table"),
+                                            dataTableOutput("ind1_df"), 
+                                            downloadButton("downloadData", "Download")
+                                          )
+                                   )
+                                 )
+                               )),
                       tabPanel("Mortality",
-                               icon = icon("dizzy"),
+                               icon = icon("procedures"),
                                h2("Indicators for mortality"),
                                br(),
                                selectInput("wellbeing",
@@ -49,7 +99,7 @@ navbarPage("Welsh Health Equity Status",
                                icon = icon("medkit"),
                                img(src = "icons/health-services.png",
                                    align = "right", 
-                                   width = "20%"),
+                                   width = "15%"),
                                h2("Indicators for health services"),
                                br(),
                                selectInput("health",
@@ -63,7 +113,7 @@ navbarPage("Welsh Health Equity Status",
                                icon = icon("pound-sign"),
                                img(src = "icons/income-social-protection.png",
                                    align = "right", 
-                                   width = "20%"),
+                                   width = "15%"),
                                h2("Indicators for income and social protection"),
                                br(),
                                selectInput("social",
@@ -77,7 +127,7 @@ navbarPage("Welsh Health Equity Status",
                                icon = icon("tree"),
                                img(src = "icons/living-conditions.png",
                                    align = "right", 
-                                   width = "20%"),
+                                   width = "15%"),
                                h2("Indicators for living environment"),
                                br(),
                                selectInput("living",
@@ -91,7 +141,7 @@ navbarPage("Welsh Health Equity Status",
                                icon = icon("users"),
                                img(src = "icons/social-human-capital.png",
                                    align = "right", 
-                                   width = "20%"),
+                                   width = "15%"),
                                h2("Indicators for social and human captial"),
                                br(),
                                selectInput("living",
@@ -105,7 +155,7 @@ navbarPage("Welsh Health Equity Status",
                                icon = icon("wrench"),
                                img(src = "icons/employment-working-conditions.png",
                                    align = "right", 
-                                   width = "20%"),
+                                   width = "15%"),
                                h2("Indicators for employment and working conditions"),
                                br(),
                                selectInput("living",
@@ -117,38 +167,18 @@ navbarPage("Welsh Health Equity Status",
                       )
                     )
            ),
-           tabPanel("Policy Explorer"), 
-           tabPanel("Download"),
+           tabPanel("Policy Explorer"),
+           tabPanel("Metadata"), 
            navbarMenu("About",
-                      tabPanel("About the project"),
-                      tabPanel("About this app")
-           ),
-           tags$script(
-             HTML(
-               paste(
-                 "$(document).ready(function() {",
-                 "$('.navbar-nav').append(",
-                 "$('<form class=\"navbar-nav navbar-right\">",
-                 gsub(
-                   "\n", "",
-                   selectInput(
-                     inputId = "lang", 
-                     label = NULL, 
-                     choices = c(
-                       "EN" = "english",
-                       "CY" = "cymraeg"
-                     ),
-                     selectize = FALSE, 
-                     width = "auto"
-                   )
-                 ),
-                 "</form>')",
-                 ");",
-                 "});"
-               )
-             )
+                      tabPanel("About the project", 
+                               includeMarkdown("www/content/about_project.md")
+                               ),
+                      tabPanel("About this app", 
+                               includeMarkdown("www/content/about_app.md")
+                               )
            ),
            tags$head(
              bootstrap()
+             #shinythemes::themeSelector()
            )
 )
