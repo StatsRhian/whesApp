@@ -43,19 +43,20 @@ navbarPage("Welsh Health Equity Status",
                                    )
                                  ), 
                                  br(),
+                                 p("The percentage of adults reporting fair; bad or very bad health is 16% for Young Adults, 27% for Working Age Adults and 44% for Retirement Age Adults."),
+                                 p("Year: 2019"),
                                  p("Source: ", a(href = "https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591",
                                                  "National Survey for Wales 2019",
                                                  .noWS = "outside", 
                                                  target = "_blank"),
                                    .noWS = c("after-begin", "before-end")), 
-                                 p("Year: 2019"),
                                  fluidRow(
                                    column(8,
                                           wellPanel(
                                             h2("Plot"),
-                                            actionButton("edit_plot", "Edit"),
-                                            downloadButton("downloadPlot", "Download"),
                                             plotOutput("ind1_plot"), 
+                                            actionButton("edit_plot", "Edit", icon = icon("pencil")),
+                                            downloadButton("downloadPlot", "Download"),
                                             bsModal("editPlotModal",
                                                     title = "",
                                                     trigger = "edit_plot",
@@ -211,7 +212,29 @@ navbarPage("Welsh Health Equity Status",
                       )
            ),
            tags$script(
-             
+               HTML(
+                 paste(
+                   "$(document).ready(function() {",
+                   "$('.navbar-nav').append(",
+                   "$('<form class=\"navbar-form navbar-right\">",
+                   gsub(
+                     "\n", "",
+                     selectInput(
+                       inputId = "lang", 
+                       label = NULL, 
+                       choices = c(
+                         "EN" = "english",
+                         "CY" = "cymraeg"
+                       ),
+                       selectize = FALSE, 
+                       width = "auto"
+                     )
+                   ),
+                   "</form>')",
+                   ");",
+                   "});"
+                 )
+               )
            ),
            tags$head(
              bootstrap()

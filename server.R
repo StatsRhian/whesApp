@@ -16,7 +16,8 @@ shinyServer(function(input, output) {
                 summarise(Percent = sum(n_yes)/sum(n))
         })
     
-    output$ind1_plot = renderPlot({
+    
+    plot_obj = reactive({
         if (is.null(input$disag)) {
             g = ind1_dis() %>%
                 ggplot(aes(x = "All", y = Percent)) + 
@@ -44,7 +45,7 @@ shinyServer(function(input, output) {
         
         g + 
             #geom_text(aes(label = percent(Percent, accuracy = 1)),
-                      #position = position_dodge(width = 0.9), vjust = -0.25) + 
+            #position = position_dodge(width = 0.9), vjust = -0.25) + 
             labs(y = input$plot_y_axis,
                  x = input$plot_x_axis,
                  title = input$plot_title,
@@ -53,6 +54,10 @@ shinyServer(function(input, output) {
             coord_cartesian(ylim = c(0, 0.5)) +
             theme_minimal() +
             scale_fill_brewer(palette = "Dark2")
+    })
+    
+    output$ind1_plot = renderPlot({
+        plot_obj()
     })
     
     output$ind1_df = 
@@ -76,7 +81,7 @@ shinyServer(function(input, output) {
             paste("indicator001", ".png", sep = "") 
         },
         content = function(file) {
-            ggsave(file, plot = ind1_plot(), device = "png")
+            ggsave(file, plot =  plot_obj(), device = "png")
         }
     )
 
