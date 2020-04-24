@@ -4,6 +4,7 @@ library(DT)
 library(bootstraplib)
 library(shinyBS)
 library(scales)
+library(RColorBrewer)
 
 
 #bs_theme_set("simplex")
@@ -69,7 +70,7 @@ navbarPage("Welsh Health Equity Status",
                                                     ),
                                                     textInput("plot_caption",
                                                               label = "Caption",
-                                                              value = "Welsh Health Report Status 2020"
+                                                              value = "Welsh Health Equity Status 2020"
                                                     )
                                             )
                                           )       

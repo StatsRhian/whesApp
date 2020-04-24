@@ -20,7 +20,7 @@ shinyServer(function(input, output) {
         if (is.null(input$disag)) {
             g = ind1_dis() %>%
                 ggplot(aes(x = "All", y = Percent)) + 
-                geom_col()
+                geom_col(fill = "#1B9E77")
         } else if (length(input$disag) == 1) {
             g = ind1_dis() %>%
                 ggplot(aes(x = !!sym(input$disag), y = Percent)) + 
@@ -42,14 +42,17 @@ shinyServer(function(input, output) {
                            cols = vars(!!!syms(input$disag)[[4]]))
         }
         
-        g +
+        g + 
+            #geom_text(aes(label = percent(Percent, accuracy = 1)),
+                      #position = position_dodge(width = 0.9), vjust = -0.25) + 
             labs(y = input$plot_y_axis,
                  x = input$plot_x_axis,
                  title = input$plot_title,
                  caption = input$plot_caption) +
             scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
             coord_cartesian(ylim = c(0, 0.5)) +
-            theme_minimal() 
+            theme_minimal() +
+            scale_fill_brewer(palette = "Dark2")
     })
     
     output$ind1_df = 
