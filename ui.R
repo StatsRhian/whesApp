@@ -5,10 +5,12 @@ library(bootstraplib)
 library(shinyBS)
 library(scales)
 library(RColorBrewer)
+library(waffle)
+library(hrbrthemes)
 
 
-#bs_theme_set("simplex")
-bs_theme_set("sketchy")
+bs_theme_set("simplex")
+#bs_theme_set("sketchy")
 
 navbarPage("Welsh Health Equity Status",
            tabPanel("Indicators", 
@@ -17,75 +19,94 @@ navbarPage("Welsh Health Equity Status",
                       widths = c(4, 8),
                       tabPanel("Wellbeing", 
                                icon = icon("smile-beam"),
-                               fluidPage(
-                                 br(), 
-                                 h2("Indicators for wellbeing"),
-                                 br(),
-                                 fluidRow(
-                                   column(6,
-                                          selectInput("wellbeing",
-                                                      label = "Indicator",
-                                                      width = "90%",
-                                                      choices = filter(indicators,
-                                                                       category == "Wellbeing") %>%
-                                                        pull(indicator))
-                                   ),
-                                   column(6,
-                                          selectInput("disag",
-                                                      label = "Disaggregate",
-                                                      choices = c("Gender" = "Gender",
-                                                                  "Age" = "Age",
-                                                                  "Welsh Index" = "WIMD", 
-                                                                  "Education level" = "Educat"),
-                                                      selected = "Age",
-                                                      selectize = TRUE, 
-                                                      multiple = TRUE)
-                                   )
-                                 ), 
-                                 br(),
-                                 p("The percentage of adults reporting fair; bad or very bad health is 16% for Young Adults, 27% for Working Age Adults and 44% for Retirement Age Adults."),
-                                 p("Year: 2019"),
-                                 p("Source: ", a(href = "https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591",
-                                                 "National Survey for Wales 2019",
-                                                 .noWS = "outside", 
-                                                 target = "_blank"),
-                                   .noWS = c("after-begin", "before-end")), 
-                                 fluidRow(
-                                   column(8,
-                                          wellPanel(
-                                            h2("Plot"),
-                                            plotOutput("ind1_plot"), 
-                                            actionButton("edit_plot", "Edit", icon = icon("pencil")),
-                                            downloadButton("downloadPlot", "Download"),
-                                            bsModal("editPlotModal",
-                                                    title = "",
-                                                    trigger = "edit_plot",
-                                                    size = "large",
-                                                    textInput("plot_title",
-                                                              label = "Plot title"
-                                                    ),
-                                                    textInput("plot_x_axis",
-                                                              label = "X axis"
-                                                    ),
-                                                    textInput("plot_y_axis",
-                                                              label = "Y axis"
-                                                    ),
-                                                    textInput("plot_caption",
-                                                              label = "Caption",
-                                                              value = "Welsh Health Equity Status 2020"
-                                                    )
+                               tabsetPanel(
+                                 tabPanel("Summary",
+                                          fluidPage(
+                                            br(), 
+                                            h2("Indicators for wellbeing"),
+                                            br(),
+                                            fluidRow(
+                                              column(6,
+                                                     selectInput("wellbeing",
+                                                                 label = "Indicator",
+                                                                 width = "90%",
+                                                                 choices = filter(indicators,
+                                                                                  category == "Wellbeing") %>%
+                                                                   pull(indicator))
+                                              ),
+                                              column(6,
+                                                     selectInput("disag",
+                                                                 label = "Disaggregate",
+                                                                 choices = c("Gender" = "Gender",
+                                                                             "Age" = "Age",
+                                                                             "Welsh Index" = "WIMD", 
+                                                                             "Education level" = "Educat"),
+                                                                 selected = "Age",
+                                                                 selectize = TRUE, 
+                                                                 multiple = TRUE)
+                                              )
+                                            ), 
+                                            br(),
+                                            p("The percentage of adults reporting fair; bad or very bad health is 16% for Young Adults, 27% for Working Age Adults and 44% for Retirement Age Adults."),
+                                            p("Year: 2019"),
+                                            p("Source: ", a(href = "https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591",
+                                                            "National Survey for Wales 2019",
+                                                            .noWS = "outside", 
+                                                            target = "_blank"),
+                                              .noWS = c("after-begin", "before-end")), 
+                                            fluidRow(
+                                              column(8,
+                                                     wellPanel(
+                                                       h2("Plot"),
+                                                       plotOutput("ind1_plot"), 
+                                                       actionButton("edit_plot", "Edit", icon = icon("pencil")),
+                                                       downloadButton("downloadPlot", "Download"),
+                                                       bsModal("editPlotModal",
+                                                               title = "",
+                                                               trigger = "edit_plot",
+                                                               size = "large",
+                                                               textInput("plot_title",
+                                                                         label = "Plot title"
+                                                               ),
+                                                               textInput("plot_x_axis",
+                                                                         label = "X axis"
+                                                               ),
+                                                               textInput("plot_y_axis",
+                                                                         label = "Y axis"
+                                                               ),
+                                                               textInput("plot_caption",
+                                                                         label = "Caption",
+                                                                         value = "Welsh Health Equity Status 2020"
+                                                               )
+                                                       )
+                                                     )       
+                                              ),
+                                              column(4,
+                                                     wellPanel(
+                                                       h2("Table"),
+                                                       dataTableOutput("ind1_df"), 
+                                                       downloadButton("downloadData", "Download")
+                                                     )
+                                              )
                                             )
-                                          )       
-                                   ),
-                                   column(4,
-                                          wellPanel(
-                                            h2("Table"),
-                                            dataTableOutput("ind1_df"), 
-                                            downloadButton("downloadData", "Download")
+                                          ) # End Fluid page
+                                 ), 
+                                 tabPanel("Infographics",
+                                          fluidPage(
+                                            fluidRow(
+                                              column(6, 
+                                                     plotOutput("waffle")
+                                              ),
+                                              column(6, 
+                                                     plotOutput("age_waffle")
+                                              )
+                                            )
                                           )
-                                   )
-                                 )
-                               )),
+                                          
+                                 ) # End Tab panel
+                                 
+                               )
+                      ), # End Wellbeing Tab
                       tabPanel("Mortality",
                                icon = icon("procedures"),
                                h2("Indicators for mortality"),
@@ -172,7 +193,7 @@ navbarPage("Welsh Health Equity Status",
            ),
            tabPanel("Policy Explorer", 
                     includeMarkdown("www/content/policy-explorer.md")
-                    ),
+           ),
            ############ META DATA
            tabPanel("Metadata", 
                     navlistPanel(
@@ -212,29 +233,29 @@ navbarPage("Welsh Health Equity Status",
                       )
            ),
            tags$script(
-               HTML(
-                 paste(
-                   "$(document).ready(function() {",
-                   "$('.navbar-nav').append(",
-                   "$('<form class=\"navbar-form navbar-right\">",
-                   gsub(
-                     "\n", "",
-                     selectInput(
-                       inputId = "lang", 
-                       label = NULL, 
-                       choices = c(
-                         "EN" = "english",
-                         "CY" = "cymraeg"
-                       ),
-                       selectize = FALSE, 
-                       width = "auto"
-                     )
-                   ),
-                   "</form>')",
-                   ");",
-                   "});"
-                 )
+             HTML(
+               paste(
+                 "$(document).ready(function() {",
+                 "$('.navbar-nav').append(",
+                 "$('<form class=\"navbar-form navbar-right\">",
+                 gsub(
+                   "\n", "",
+                   selectInput(
+                     inputId = "lang", 
+                     label = NULL, 
+                     choices = c(
+                       "EN" = "english",
+                       "CY" = "cymraeg"
+                     ),
+                     selectize = FALSE, 
+                     width = "auto"
+                   )
+                 ),
+                 "</form>')",
+                 ");",
+                 "});"
                )
+             )
            ),
            tags$head(
              bootstrap()

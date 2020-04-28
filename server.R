@@ -84,7 +84,88 @@ shinyServer(function(input, output) {
             ggsave(file, plot =  plot_obj(), device = "png")
         }
     )
-
+    
+    
+    
+    
+    
+    
+    
+    output$waffle =   renderPlot({ 
+        health_percent =
+            tibble(
+                parts = factor(c("Yes (32%)", "No (68%)")),
+                vals = c(32, 68),
+                col = c("red", "grey")) 
+        
+        health_percent %>%
+            ggplot(aes(label = parts, values = vals, col = parts)) +
+            geom_pictogram(
+                n_rows = 10, size = 9.5, 
+                flip = TRUE,
+                family = "Font Awesome 5 Free Solid"
+            ) +
+            scale_color_manual(
+                name = NULL,
+                values = c("grey", "firebrick"),
+                labels = c("No (68%)", "Yes (32%)")
+            ) +
+            scale_label_pictogram(
+                name = NULL,
+                values = c("user", "user"),
+                labels = c("No (68%)", "Yes (32%)")
+            ) +
+            coord_equal(xlim = c(1, 10),
+                        ylim = c(1, 10)) +
+            theme_ipsum_rc(grid = "",
+                           plot_title_size = 14) +
+            theme_enhance_waffle() +
+            labs(title = "Percentage of adults reporting fair,\nbad or very bad health",
+                 caption = "Welsh Health Equity Status 2020")
+    })
+    
+    ############## WAFFLE FACET
+    
+    output$age_waffle = renderPlot({
+        ind1 %>%
+            mutate(WIMD = as_factor(WIMD)) %>%
+            mutate(Educat = fct_relevel(Educat, "Low", "Medium", "High")) %>%
+            mutate(Age = fct_relevel(Age, "Child", "Young Adult",
+                                     "Working Age Adult", "Retirement Age Adult")) %>%
+            group_by(Age) %>%
+            summarise(Percent = sum(n_yes)/sum(n)) %>%
+            rename(Yes = Percent) %>%
+            mutate(No = 1 - Yes) %>%
+            pivot_longer(cols = -Age, names_to = "Response", values_to = "Percent") %>%
+            mutate(Response = as_factor(Response)) %>%
+            mutate(Percent = round(Percent * 100, 0)) %>%
+            ggplot(aes(values = Percent, label = Response, colour = Response)) +
+            geom_pictogram(
+                n_rows = 10, size = 4, 
+                flip = TRUE,
+                family = "Font Awesome 5 Free Solid"
+            ) +
+            scale_colour_manual(
+                name = NULL,
+                values = c("firebrick", "grey"),
+                labels = c("Yes", "No")
+            ) +
+            scale_label_pictogram(
+                name = NULL,
+                values = c("user", "user"),
+                labels = c("Yes", "No")
+            ) +
+            facet_wrap(~Age, nrow = 1) +
+            scale_x_discrete(expand = c(0, 0)) +
+            scale_y_discrete(expand = c(0, 0)) +
+            coord_equal() +
+            labs(
+                title = "Percentage of adults reporting fair,\nbad or very bad health",
+                caption = "Welsh Health Equity Status 2020"
+            ) +
+            theme_ipsum_rc(grid = "") +
+            theme_enhance_waffle()
+    })
     
     
 })

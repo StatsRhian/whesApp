@@ -5,9 +5,9 @@ account: rhian
 server: connect.jumpingrivers.cloud
 hostUrl: https://connect.jumpingrivers.cloud/__api__
 appId: 416
-bundleId: 1065
+bundleId: 1066
 url: https://connect.jumpingrivers.cloud:443/content/416/
-when: 1587751721.28431
+when: 1587753696.8989
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: .httr-oauth
