@@ -40,7 +40,8 @@ catSimpleSummaryUI = function(id, cat){
       ), # End: fluid row
       
       fluidRow(
-        plotOutput(ns("infographic"))
+        plotOutput(ns("infographic")),
+        downloadButton(ns("downloadPlot"), "Download")
       ) # End: fluid row
     )
   )
@@ -48,7 +49,7 @@ catSimpleSummaryUI = function(id, cat){
 
 catSimpleSummary = function(input, output, session) {
   
-  output$infographic = renderPlot({
+waffle_plot = reactive({
     waffle_data = 
       ind001_df %>%
       when(
@@ -112,4 +113,18 @@ catSimpleSummary = function(input, output, session) {
     }
     waffle
   })
+
+output$infographic = renderPlot({
+  waffle_plot()
+})
+  
+  output$downloadPlot = downloadHandler(
+    filename = function() { 
+      paste("waffle_indicator001", ".png", sep = "") 
+    },
+    content = function(file) {
+      ggsave(file, plot =  waffle_plot(), device = "png")
+    }
+  )
+  
 }
