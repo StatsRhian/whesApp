@@ -50,7 +50,7 @@ catDetailUI = function(id, cat){
                  downloadButton(ns("downloadPlot"), "Download"),
                  bsModal(ns("editPlotModal"),
                          title = "",
-                         trigger = "edit_plot",
+                         trigger = ns("edit_plot"),
                          size = "large",
                          textInput(ns("plot_title"),
                                    label = "Plot title"
