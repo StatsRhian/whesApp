@@ -78,7 +78,7 @@ waffle_plot = reactive({
       geom_pictogram(
         n_rows = 10, size = 9.5, 
         flip = TRUE,
-        family = "Font Awesome 5 Free Solid"
+        family = "FontAwesome"
       ) +
       scale_color_manual(
         name = NULL,
