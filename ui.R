@@ -6,11 +6,27 @@ navbarPage("Welsh Health Equity Status",
                     navlistPanel(
                       tabPanel("Overview", 
                                icon = icon("home"), 
-                               h2("Fabulous home page")
+                               h2("Welsh Health Equity Status"), 
+                               br(),
+                               div(img(src = "icons/health-services.png",
+                                   height = "150px"), 
+                               img(src = "icons/income-social-protection.png",
+                                   height = "150px"), 
+                               img(src = "icons/living-conditions.png",
+                                   height = "150px"), 
+                               img(src = "icons/social-human-capital.png",
+                                   height = "150px"), 
+                               img(src = "icons/employment-working-conditions.png",
+                                   height = "150px"),
+                               style = "text-align: center;"), 
+                               br(),
+                               p("The overall aim of the WHESRi is to inform, enable and support policy solutions,innovation and sustainable investment towards healthy, prosperous lives for all,
+                                 increasing equity in health and leaving no one behind in Wales and beyond. The project supports the Building A Healthier Wales and the Welsh Government Transformation
+                                 Programme, facilitating, monitoring and accelerating joint action across sectors,governance levels and key stakeholders to help achieve a Healthier, a More Equal, a
+                                 Prosperous and a Globally Responsible Wales for the present and future generations.")
                       ),
                       "Inequalities in Health",
                       widths = c(2, 10),
-                      well = TRUE,
                       tabPanel(cat_df$name[cat_df$catID == "wellbeing"], 
                                icon = icon(cat_df$icon[cat_df$catID == "wellbeing"]),
                                tabsetPanel(
@@ -96,7 +112,6 @@ navbarPage("Welsh Health Equity Status",
                                  )
                                )
                       )
-                      
                     )
            ),
            tags$script(
@@ -125,6 +140,7 @@ navbarPage("Welsh Health Equity Status",
              )
            ),
            tags$head(
+             tags$script(type="text/javascript", src = "logo.js"),
              bootstrap()
            )
 )
