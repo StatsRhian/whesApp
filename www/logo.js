@@ -1,3 +1,3 @@
 $( document ).ready(function() {
-  $( ".navbar .container-fluid" ).append( '<a href="https://phw.nhs.wales/"><img src="logos/phw.png" align="right" height = "50px" target="_blank"></a>&nbsp&nbsp&nbsp<a href="http://www.euro.who.int/en/home"><img src="logos/who-euro.png" align="right" height = "50px" target="_blank"></a>&nbsp&nbsp&nbsp<a href="https://gov.wales/"><img src="logos/welsh-gov.png" align="right" height = "50px" target="_blank"></a>' );
+  $( ".navbar .container-fluid" ).append( '<a href="https://phw.nhs.wales/" target="_blank"><img src="logos/phw.png" align="right" height = "50px" ></a>&nbsp&nbsp&nbsp<a href="http://www.euro.who.int/en/home" target="_blank"><img src="logos/who-euro.png" align="right" height = "50px"></a>&nbsp&nbsp&nbsp<a href="https://gov.wales/"  target="_blank"><img src="logos/welsh-gov.png" align="right" height = "50px"></a>' );
 });
