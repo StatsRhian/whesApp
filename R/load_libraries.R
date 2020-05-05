@@ -1,12 +1,14 @@
 # Load libraries
 
-library(shiny)
-library(tidyverse)
-library(DT)
 library(bootstraplib)
-library(shinyBS)
-library(scales)
-library(RColorBrewer)
-library(waffle)
-library(hrbrthemes)
+library(DT)
 library(glue)
+library(hrbrthemes)
+library(RColorBrewer)
+library(scales)
+library(shiny)
+library(shinyBS)
+library(shinyjs)
+library(tidyverse)
+library(waffle)
+
