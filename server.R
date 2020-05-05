@@ -17,6 +17,8 @@ callModule(module = catDetail, id = "detail-income")
 callModule(module = catDetail, id = "detail-living")
 callModule(module = catDetail, id = "detail-social")
 callModule(module = catDetail, id = "detail-employment")
+
+output$test_lang = renderText(input$lang)
     
 })
 

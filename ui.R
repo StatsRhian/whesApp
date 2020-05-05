@@ -20,6 +20,7 @@ navbarPage("Welsh Health Equity Status",
                                    height = "150px"),
                                style = "text-align: center;"), 
                                br(),
+                               textOutput("test_lang"),
                                p("The overall aim of the WHESRi is to inform, enable and support policy solutions,innovation and sustainable investment towards healthy, prosperous lives for all,
                                  increasing equity in health and leaving no one behind in Wales and beyond. The project supports the Building A Healthier Wales and the Welsh Government Transformation
                                  Programme, facilitating, monitoring and accelerating joint action across sectors,governance levels and key stakeholders to help achieve a Healthier, a More Equal, a
@@ -114,33 +115,8 @@ navbarPage("Welsh Health Equity Status",
                       )
                     )
            ),
-           tags$script(
-             HTML(
-               paste(
-                 "$(document).ready(function() {",
-                 "$('.navbar-nav').append(",
-                 "$('<form class=\"navbar-form navbar-right\">",
-                 gsub(
-                   "\n", "",
-                   selectInput(
-                     inputId = "lang", 
-                     label = NULL, 
-                     choices = c(
-                       "EN" = "english",
-                       "CY" = "cymraeg"
-                     ),
-                     selectize = FALSE, 
-                     width = "auto"
-                   )
-                 ),
-                 "</form>')",
-                 ");",
-                 "});"
-               )
-             )
-           ),
            tags$head(
-             tags$script(type="text/javascript", src = "logo.js"),
+             tags$script(type = "text/javascript", src = "logo.js"),
              bootstrap()
            )
 )
