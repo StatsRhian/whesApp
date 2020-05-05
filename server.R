@@ -20,6 +20,8 @@ shinyServer(function(input, output, session) {
   
   output$test_lang = renderText(input$lang)
   
+  enableBookmarking(store = "url")
+  
   output$indicator_search = renderDataTable({
     indicators %>%
       DT::datatable()
