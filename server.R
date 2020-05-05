@@ -20,6 +20,11 @@ shinyServer(function(input, output, session) {
   
   output$test_lang = renderText(input$lang)
   
+  output$indicator_search = renderDataTable({
+    indicators %>%
+      DT::datatable()
+  })
+  
   shinyjs::onclick("img_health",
                    updateTabsetPanel(session,
                                      inputId = "tab_categories",

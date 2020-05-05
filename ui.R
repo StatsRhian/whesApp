@@ -35,7 +35,9 @@ navbarPage("Welsh Health Equity Status",
                                p("The overall aim of the WHESRi is to inform, enable and support policy solutions,innovation and sustainable investment towards healthy, prosperous lives for all,
                                  increasing equity in health and leaving no one behind in Wales and beyond. The project supports the Building A Healthier Wales and the Welsh Government Transformation
                                  Programme, facilitating, monitoring and accelerating joint action across sectors,governance levels and key stakeholders to help achieve a Healthier, a More Equal, a
-                                 Prosperous and a Globally Responsible Wales for the present and future generations.")
+                                 Prosperous and a Globally Responsible Wales for the present and future generations."),
+                               h3("Search for a specific indicator"), 
+                               dataTableOutput("indicator_search")
                       ),
                       "Inequalities in Health",
                       widths = c(2, 10),
