@@ -3713,7 +3713,7 @@
       "checksum": "c07b37b01b581ecb91c458e0179f1394"
     },
     "global.R": {
-      "checksum": "d7404327c82d5e1eb7f01a34f4290a06"
+      "checksum": "e0a4b2bbd57bcdaee1a487b94fd1733d"
     },
     "packrat/desc/askpass": {
       "checksum": "a1105713bd086e638eb25aa8e88d6cf4"
@@ -4073,10 +4073,10 @@
       "checksum": "e0ec13fb6bc5f4cd087cda0eeaaca044"
     },
     "R/catDetail_module.R": {
-      "checksum": "8457e3bccb9923ac2130c12eab2cb629"
+      "checksum": "d8b0763370dee50c2f20fc7707be0e75"
     },
     "R/catSimpleSummary_module.R": {
-      "checksum": "f47c5980c5a33a344c1f198c24d006be"
+      "checksum": "ad3e675d4561faec09b52c8014c64e38"
     },
     "R/indicatorDashModule.R": {
       "checksum": "145f51762bed1348c884dbf47a880bba"
@@ -4094,13 +4094,10 @@
       "checksum": "b587068cf4300befb98c990efa955f01"
     },
     "server.R": {
-      "checksum": "c4435428602c35d739bbdf5ce34912db"
-    },
-    "test/app.R": {
-      "checksum": "344748bb4b1b68f2627d62104907d620"
+      "checksum": "cad9289480a04a39647fcd5f28106efb"
     },
     "ui.R": {
-      "checksum": "32e6695db6f0334ec8e4467e6dd6c41c"
+      "checksum": "6d65e23f5668c7235c9a85254e3c071c"
     },
     "www/content/about_app.md": {
       "checksum": "8afefd7bdcc403da51c17d7079b8c209"
@@ -4109,7 +4106,7 @@
       "checksum": "28e27969c8e9a66b7736292c601ef950"
     },
     "www/content/ind001.md": {
-      "checksum": "db742add3d121b63039fd0d4fb328a60"
+      "checksum": "215f7f27f63538b762bd0cb550f1a0e5"
     },
     "www/content/policy-explorer.md": {
       "checksum": "f79ed5dcfd877d92b76f8260bd8440e7"
