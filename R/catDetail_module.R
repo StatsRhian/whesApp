@@ -68,6 +68,9 @@ catDetailUI = function(id, cat){
                  downloadButton(ns("downloadData"), "Download")
                )
         ) # End: column
+      ), # End: fluid row
+      fluidRow(
+        includeMarkdown("www/content/ind001.md")    
       ) # End: fluid row
     )
     

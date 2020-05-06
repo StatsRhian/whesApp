@@ -16,7 +16,7 @@ catSimpleSummaryUI = function(id, cat){
                            choices = filter(indicators,
                                             category == cat) %>%
                              pull(indicator),
-                           selectize = TRUE, 
+                           selected = "",
                            width = "90%"
                )
         ), # End: column

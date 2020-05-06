@@ -2,7 +2,7 @@ bs_theme_set("simplex")
 #bs_theme_set("sketchy")
 
 navbarPage("Welsh Health Equity Status",
-           tabPanel("Indicators", 
+           tabPanel("", 
                     navlistPanel(
                       id = "tab_categories",
                       tabPanel("Overview", 
@@ -31,11 +31,11 @@ navbarPage("Welsh Health Equity Status",
                                    style = "cursor:pointer;"), 
                                style = "text-align: center;"), 
                                br(),
-                               textOutput("test_lang"),
                                p("The overall aim of the WHESRi is to inform, enable and support policy solutions,innovation and sustainable investment towards healthy, prosperous lives for all,
                                  increasing equity in health and leaving no one behind in Wales and beyond. The project supports the Building A Healthier Wales and the Welsh Government Transformation
-                                 Programme, facilitating, monitoring and accelerating joint action across sectors,governance levels and key stakeholders to help achieve a Healthier, a More Equal, a
-                                 Prosperous and a Globally Responsible Wales for the present and future generations."),
+                                 Programme, facilitating, monitoring and accelerating joint action across sectors, governance levels and key stakeholders to help achieve a Healthier, a More Equal, a
+                                 Prosperous and a Globally Responsible Wales for the present and future generations.
+                                 You can also explore the Health Equity Status for Europe in ", a(href = 'https://whoeurope.shinyapps.io/health_equity_dataset/', 'The Health Equity Dataset', .noWS = 'outside'), ".", .noWS = c("after-begin", "before-end")),
                                h3("Search for a specific indicator"), 
                                dataTableOutput("indicator_search")
                       ),
@@ -49,7 +49,13 @@ navbarPage("Welsh Health Equity Status",
                                  ),
                                  tabPanel("Detail",
                                          catDetailUI("detail-wellbeing", "wellbeing")
-                                          )
+                                          ),
+                                 tabPanel("Policies",
+                                 h2("Policies related to Wellbeing"),
+                                 p("Page to allow users to explore various health related policies implemented by Welsh Governement.
+                                 Might link to the welsh gov website website. 
+                                 Could have an interactive tables and graphs to explore policy information.")
+                                 )
                                )
                       ), 
                       
@@ -61,6 +67,12 @@ navbarPage("Welsh Health Equity Status",
                                  ),
                                  tabPanel("Detail",
                                           catDetailUI("detail-morbidity", "morbidity")
+                                 ),
+                                 tabPanel("Policies",
+                                          h2(glue::glue("Policies related to {cat_df$name[cat_df$catID == 'morbidity']}")),
+                                          p("Page to allow users to explore various health related policies implemented by Welsh Governement.
+                                 Might link to the welsh gov website website. 
+                                 Could have an interactive tables and graphs to explore policy information.")
                                  )
                                )
                       ),
@@ -75,6 +87,12 @@ navbarPage("Welsh Health Equity Status",
                                  ),
                                  tabPanel("Detail",
                                           catDetailUI("detail-health", "health")
+                                 ),
+                                 tabPanel("Policies",
+                                          h2(glue::glue("Policies related to {cat_df$name[cat_df$catID == 'health']}")),
+                                          p("Page to allow users to explore various health related policies implemented by Welsh Governement.
+                                 Might link to the welsh gov website website. 
+                                 Could have an interactive tables and graphs to explore policy information.")
                                  )
                                )
                       ),
@@ -87,6 +105,12 @@ navbarPage("Welsh Health Equity Status",
                                  ),
                                  tabPanel("Detail",
                                           catDetailUI("detail-income", "income")
+                                 ),
+                                 tabPanel("Policies",
+                                          h2(glue::glue("Policies related to {cat_df$name[cat_df$catID == 'income']}")),
+                                          p("Page to allow users to explore various health related policies implemented by Welsh Governement.
+                                 Might link to the welsh gov website website. 
+                                 Could have an interactive tables and graphs to explore policy information.")
                                  )
                                )
                       ),
@@ -99,6 +123,12 @@ navbarPage("Welsh Health Equity Status",
                                  ),
                                  tabPanel("Detail",
                                           catDetailUI("detail-living", "living")
+                                 ),
+                                 tabPanel("Policies",
+                                          h2(glue::glue("Policies related to {cat_df$name[cat_df$catID == 'living']}")),
+                                          p("Page to allow users to explore various health related policies implemented by Welsh Governement.
+                                 Might link to the welsh gov website website. 
+                                 Could have an interactive tables and graphs to explore policy information.")
                                  )
                                )
                       ),
@@ -111,6 +141,12 @@ navbarPage("Welsh Health Equity Status",
                                  ),
                                  tabPanel("Detail",
                                           catDetailUI("detail-social", "social")
+                                 ),
+                                 tabPanel("Policies",
+                                          h2(glue::glue("Policies related to {cat_df$name[cat_df$catID == 'social']}")),
+                                          p("Page to allow users to explore various health related policies implemented by Welsh Governement.
+                                 Might link to the welsh gov website website. 
+                                 Could have an interactive tables and graphs to explore policy information.")
                                  )
                                )
                       ),
@@ -123,6 +159,12 @@ navbarPage("Welsh Health Equity Status",
                                  ),
                                  tabPanel("Detail",
                                           catDetailUI("detail-employment", "employment")
+                                 ),
+                                 tabPanel("Policies",
+                                          h2(glue::glue("Policies related to {cat_df$name[cat_df$catID == 'employment']}")),
+                                          p("Page to allow users to explore various health related policies implemented by Welsh Governement.
+                                 Might link to the welsh gov website website. 
+                                 Could have an interactive tables and graphs to explore policy information.")
                                  )
                                )
                       )
