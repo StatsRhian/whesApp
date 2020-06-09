@@ -26,7 +26,7 @@ catDetailUI = function(id, cat){
                            choices = c("Gender" = "Gender",
                                        "Age" = "Age",
                                        "Welsh Index" = "WIMD", 
-                                       "Education level" = "Educat"),
+                                       "Education level" = "Education"),
                            selected = "Gender", 
                            multiple = TRUE)
         ) # End: column
@@ -82,36 +82,32 @@ catDetail = function(input, output, session){
   
   data = 
     reactive({
-      ind001_df %>%
-        when(
-          is.null(input$disag) ~ .,
-          ~ group_by(., !!!syms(input$disag))
-        ) %>%
-        summarise(Percent = sum(n_yes)/sum(n))
+      ind_001 %>%
+        filter_disag(input$disag)
     })
   
   # Plot
   plot_obj = reactive({
     if (is.null(input$disag)) {
       g = data() %>%
-        ggplot(aes(x = "All", y = Percent)) + 
+        ggplot(aes(x = "All", y = prop)) + 
         geom_col(fill = "#1B9E77")
     } else if (length(input$disag) == 1) {
       g = data() %>%
-        ggplot(aes(x = !!sym(input$disag), y = Percent)) + 
+        ggplot(aes(x = !!sym(input$disag), y = prop)) + 
         geom_col(aes(fill = !!sym(input$disag))) 
     } else if (length(input$disag) == 2) {
       g = data() %>%
-        ggplot(aes(x = !!syms(input$disag)[[2]], y = Percent)) + 
+        ggplot(aes(x = !!syms(input$disag)[[2]], y = prop)) + 
         geom_col(aes(fill = !!syms(input$disag)[[1]]),  position = "dodge") 
     }  else if (length(input$disag) == 3) {
       g = data() %>%
-        ggplot(aes(x = !!syms(input$disag)[[2]], y = Percent)) + 
+        ggplot(aes(x = !!syms(input$disag)[[2]], y = prop)) + 
         geom_col(aes(fill = !!syms(input$disag)[[1]]),  position = "dodge") + 
         facet_wrap(vars(!!!syms(input$disag)[[3]]))
     } else if (length(input$disag) == 4) {
       g = data() %>%
-        ggplot(aes(x = !!syms(input$disag)[[2]], y = Percent)) + 
+        ggplot(aes(x = !!syms(input$disag)[[2]], y = prop)) + 
         geom_col(aes(fill = !!syms(input$disag)[[1]]),  position = "dodge") + 
         facet_grid(rows = vars(!!!syms(input$disag)[[3]]), 
                    cols = vars(!!!syms(input$disag)[[4]]))
@@ -134,7 +130,7 @@ catDetail = function(input, output, session){
     DT::renderDataTable({
       data() %>%
         DT::datatable(rownames = FALSE) %>%
-        formatPercentage("Percent")
+        formatPercentage("prop")
     })
   
   output$downloadData = downloadHandler(
