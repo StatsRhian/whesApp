@@ -15,7 +15,7 @@ prep_waffle = function(df, disag = input$disag){
     mutate(Percent = round(Percent * 100, 0))
 }
 
-cook_waffle = function(df, disag = input$disag){
+cook_waffle = function(df, disag = input$disag, title = ""){
   waffle = 
     df %>%
   ggplot(aes(values = Percent, label = Response, col = Response)) +
@@ -35,7 +35,7 @@ cook_waffle = function(df, disag = input$disag){
       labels = c("Yes", "No")
     ) +
     labs(
-      title = "Percentage of adults reporting fair,\nbad or very bad health",
+      title = title,
       caption = "Welsh Health Equity Status 2020"
     ) +
     theme_ipsum_rc(grid = "") +

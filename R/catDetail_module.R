@@ -11,11 +11,12 @@ catDetailUI = function(id, cat){
       
       fluidRow(
         column(6,
-               selectInput(ns("indicator"),
+               selectInput(ns("ind_id"),
                            label = "Please select an indicator",
-                           choices = filter(indicators,
-                                            category == cat) %>%
-                             pull(indicator),
+                           choices = 
+                             filter(indicator_info, category == cat) %>%
+                             select(name, ind_id) %>%
+                             deframe(),
                            selectize = TRUE, 
                            width = "90%"
                )
@@ -82,7 +83,8 @@ catDetail = function(input, output, session){
   
   data = 
     reactive({
-      ind_001 %>%
+      indicator_data %>%
+        filter(ind_id == input$ind_id) %>%
         filter_disag(input$disag)
     })
   

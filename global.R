@@ -7,8 +7,12 @@ source("R/cook_waffle.R")
 
 enableBookmarking(store = "url")
 
-indicators = readr::read_csv("data/indicators.csv")
-ind_001 = readRDS(file = "data/indicators/ind_001.RDS")
+# Read in indicator data and info
+indicator_info = readr::read_csv("data/indicator_info.csv")
+indicator_data = readRDS(file = "data/clean_indicators.RDS")
+
+# Read in data source info
+# source_info = readr::read_csv("data/source_info.csv")
 
 # Colour schemes
 waffle_no = "grey"

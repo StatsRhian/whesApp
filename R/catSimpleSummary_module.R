@@ -11,11 +11,12 @@ catSimpleSummaryUI = function(id, cat){
       
       fluidRow(
         column(6,
-               selectInput(ns("indicator"),
+               selectInput(ns("ind_id"),
                            label = "Please select an indicator",
-                           choices = filter(indicators,
-                                            category == cat) %>%
-                             pull(indicator),
+                           choices = 
+                             filter(indicator_info, category == cat) %>%
+                             select(name, ind_id) %>%
+                             deframe(),
                            selected = "",
                            width = "90%"
                )
@@ -50,10 +51,16 @@ catSimpleSummaryUI = function(id, cat){
 catSimpleSummary = function(input, output, session) {
   
 waffle_plot = reactive({
-  ind_001 %>%
+  title = 
+    indicator_info %>%
+    filter(ind_id == input$ind_id) %>%
+    pull(name)
+  
+  indicator_data %>%
+    filter(ind_id == input$ind_id) %>%
     filter_disag(input$disag) %>%
     prep_waffle(input$disag) %>%
-    cook_waffle(input$disag)
+    cook_waffle(input$disag, title = title)
   })
 
 output$infographic = renderPlot({

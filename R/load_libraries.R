@@ -11,4 +11,5 @@ library(shinyBS)
 library(shinyjs)
 library(tidyverse)
 library(waffle)
+library(plotly)
 
