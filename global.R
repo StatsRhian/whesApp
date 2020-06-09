@@ -2,16 +2,18 @@ source("R/load_libraries.R")
 source("R/load_categories.R")
 source("R/catDetail_module.R")
 source("R/catSimpleSummary_module.R")
+source("R/filter_disag.R")
+source("R/cook_waffle.R")
 
 enableBookmarking(store = "url")
 
-indicators = readr::read_csv("data/indicators.csv")
-wellbeing_df = readRDS("data/wellbeing.RDS")
+# Read in indicator data and info
+indicator_info = readr::read_csv("data/indicator_info.csv")
+indicator_data = readRDS(file = "data/clean_indicators.RDS")
 
-ind001_df = 
-  wellbeing_df %>%
-  filter(indID == "ind001") %>%
-  mutate(WIMD = as_factor(WIMD)) %>%
-  mutate(Educat = fct_relevel(Educat, "Low", "Medium", "High")) %>%
-  mutate(Age = fct_relevel(Age, "Child", "Young Adult",
-                           "Working Age Adult", "Retirement Age Adult"))
+# Read in data source info
+# source_info = readr::read_csv("data/source_info.csv")
+
+# Colour schemes
+waffle_no = "grey"
+waffle_yes =  "firebrick"

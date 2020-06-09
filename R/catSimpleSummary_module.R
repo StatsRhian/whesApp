@@ -11,11 +11,12 @@ catSimpleSummaryUI = function(id, cat){
       
       fluidRow(
         column(6,
-               selectInput(ns("indicator"),
+               selectInput(ns("ind_id"),
                            label = "Please select an indicator",
-                           choices = filter(indicators,
-                                            category == cat) %>%
-                             pull(indicator),
+                           choices = 
+                             filter(indicator_info, category == cat) %>%
+                             select(name, ind_id) %>%
+                             deframe(),
                            selected = "",
                            width = "90%"
                )
@@ -27,7 +28,7 @@ catSimpleSummaryUI = function(id, cat){
                                        "Gender" = "Gender",
                                        "Age" = "Age",
                                        "Welsh Index" = "WIMD", 
-                                       "Education level" = "Educat"),
+                                       "Education level" = "Education"),
                            selected = "None")
         ) # End: column
       ), # End: fluid row
@@ -50,68 +51,16 @@ catSimpleSummaryUI = function(id, cat){
 catSimpleSummary = function(input, output, session) {
   
 waffle_plot = reactive({
-    waffle_data = 
-      ind001_df %>%
-      when(
-        (input$disag == "None") ~ .,
-        ~ group_by(., !!!syms(input$disag))
-      ) %>%
-      summarise(Percent = sum(n_yes) / sum(n)) %>%
-      rename(Yes = Percent) %>%
-      mutate(No = 1 - Yes) %>%
-      when(
-        (input$disag == "None") ~ pivot_longer(., cols = everything(),
-                                              names_to = "Response",
-                                              values_to = "Percent") ,
-        ~  pivot_longer(., cols = -!!sym(input$disag),
-                        names_to = "Response",
-                        values_to = "Percent") 
-      ) %>%
-      mutate(Response = as_factor(Response)) %>%
-      mutate(Percent = round(Percent * 100, 0))
-    
-    
-    ### Theming
-    waffle = 
-      waffle_data %>%
-      ggplot(aes(values = Percent, label = Response, col = Response)) +
-      geom_pictogram(
-        n_rows = 10, size = 9.5, 
-        flip = TRUE,
-        family = "FontAwesome"
-      ) +
-      scale_color_manual(
-        name = NULL,
-        values = c("firebrick", "grey"),
-        labels = c("Yes", "No")
-      ) +
-      scale_label_pictogram(
-        name = NULL,
-        values = c("user", "user"),
-        labels = c("Yes", "No")
-      ) +
-      labs(
-        title = "Percentage of adults reporting fair,\nbad or very bad health",
-        caption = "Welsh Health Equity Status 2020"
-      ) +
-      theme_ipsum_rc(grid = "") +
-      theme_enhance_waffle()
-    
-    # DISAG
-    if(input$disag == "None"){
-      waffle = 
-        waffle +
-        coord_equal(xlim = c(1, 10),
-                    ylim = c(1, 10))
-    } else {
-      waffle = 
-        waffle +
-        facet_grid(cols = vars(!!sym(input$disag))) +
-        scale_x_discrete(expand = c(0, 0)) +
-        scale_y_discrete(expand = c(0, 0)) +
-        coord_equal()
-    }
-    waffle
+  title = 
+    indicator_info %>%
+    filter(ind_id == input$ind_id) %>%
+    pull(name)
+  
+  indicator_data %>%
+    filter(ind_id == input$ind_id) %>%
+    filter_disag(input$disag) %>%
+    prep_waffle(input$disag) %>%
+    cook_waffle(input$disag, title = title)
   })
 
 output$infographic = renderPlot({
