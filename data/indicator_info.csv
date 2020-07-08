@@ -1,77 +1,77 @@
-ind_id,category,name
-ind_001,wellbeing,"Percentage of adults reporting fair, bad or very bad health"
-ind_002,wellbeing,Percentage of students who rate their health as fair or poor
-ind_003,morbidity,"Percentage of survey respondents with a limiting long-standing illness, disability or infirmity"
-ind_004,wellbeing,"Estimated prevalence of self-reported illness caused or made worse by work, for people working in the last 12 months"
-ind_006,morbidity,Percentage of survey respondents with Heart a and circulatory illness
-ind_007,morbidity,Percentage of survey respondents with Diabetes incl. Hyperglycaemia
-ind_008,mortality,"Death rate per 100,000 due to tuberculosis"
-ind_009,wellbeing,Percentage of survey respondents who rated their satisfaction with life as low (0-4 out of 10)
-ind_010,wellbeing,"Percentage of students who rated their life satisfaction as 6 out of 10, or above"
-ind_011,wellbeing,"Warwick-Edinburgh Metnal Well-being Scale, mean score"
-ind_012,mortality,Infant mortality (under 1 year)
-ind_013,mortality,Life expectancy at birth in years
-ind_014,morbidity,Percentage of survey respondents who currently smoke either daily or occasionally
-ind_015,morbidity,Usual weekly alcohol consumption is lower risk (>0 but <=14 units)
-ind_016,morbidity,Usual weekly alcohol consumption is higher risk (>14 units)
-ind_017,morbidity,Percentage of adults aged 18-64 who are obese
-ind_018,wellbeing,Percentage of students who are physically active for at least 60 minutes per day
-ind_019,living,Sufficient number of bedrooms for the household
-ind_020,living,Overall satisfaction with accommodation
-ind_024,living,Awaiting further information from DVLA. Email sent on 05/03/20.
-ind_025,living,"Death rate per 100,000 due to road traffic accidents"
-ind_026,living,Percentage of households receiving housing benefit
-ind_027,living,Percentage of households with a sufficient number of bedrooms for the household
-ind_028,living,Percentage of survey respondents who are not able to keep accomodation warm enough
-ind_029,living,To be determined
-ind_032,living,Average PM10 concentrations across local authority and health board areas in Wales
-ind_033,living,Percentage of adults aged 16+ years reporting difficulty accessing local green space
-ind_034,living,Percentage of disabled persons (aged 16+) reporting difficulty getting to or from stop/station
-ind_035,living,Percentage of adults (16+) feeling unsafe when walking alone in local area after dark
-ind_036,living,Percentage of adults feeling unsafe at home after dark
-ind_037,living,To be determined
-ind_038,living,"Percentage of households which eat meals with meat, chicken, fish (or vegatarien equivalent) at least every other day?"
-ind_039,living,Value-added tax (VAT) on alcohol
-ind_041,social,"Percentage of children at the final year of foundation phase achieving the expected Outcome (Outcome 5+) for Personal and social development, well-being and cultural diversity"
-ind_043,social,Percentage of adults who report a feeling lonely (a score of 4 to 6 on the De Jong Gierveld loneliness scale)
-ind_044,social,"Percentage of students who agree that there is support at their school for students who feel unhappy, worried or unable to cope"
-ind_045,social,"Percentage of adults (aged 16+) who have relatives, friends, or neighbours they can ask for help"
-ind_046,social,Percentage of adults who feel they are in control of their daily life as much as they can be
-ind_049,social,Percentage of childen aged 4 years participating in education
-ind_050,social,Total expenditure delegated to nursery school education
-ind_051,social,"Estimated 16-24 year olds not in education, training or employment"
-ind_052,social,Percentage of pupils in year 11/aged 15 who achieved Level 2 incl. English/Welsh and maths
-ind_053,social,Percentage of adults aged 25-64 years participating in formal and non-formal education and training
-ind_054,social,Percentage of people who volunteer (National indicator)
-ind_055,social,Percentage of people who feel they are able to influence decisions affecting their local area
-ind_056,social,Percentage of people who feel most people can be trusted
-ind_057,employment,Gross Value Added through compensation of employees i.e. wages and salaries plus employers' social contributions.
-ind_059,employment,"Estimated incidence of self-reported workplace non-fatal injuries, for people working in the last 12 months"
-ind_060,employment,Difference in employment rates between those who are disabled and not disabled
-ind_063,employment,International Labour Organisation (ILO) unemployment rate
-ind_064,employment,International Labour Organisation (ILO) economic activity rate
-ind_065,employment,Total identifiable expenditure on social protection
-ind_068,employment,Number of claimants that are claiming Jobseekers Allowance
-ind_069,employment,Temporary employees as a percentage of the total number of employees aged 20 to 64 years
-ind_070,employment,National Living Wage and the National Minimum Wage rates
-ind_071,employment,Average (median) gross hourly earnings
-ind_072,employment,Percentage of employees whose pay and/or conditions of employment are determined by a collective agreement
-ind_074,employment,Percentage of working age adults in relative income poverty
-ind_075,employment,Percentage of survey respondents who are moderately or highly satisfied with present job
-ind_076,employment,Percentage of survey respondents who are working 49+ hours per week
-ind_077,income,"Percentage of all individuals, children, working-age adults and pensioners living in relative income poverty"
-ind_078,income,Percentage of people in relative income poverty where there is disability within the family (Equality Act definition)
-ind_080,income,Total identifiable expenditure on social protection
-ind_085,income,Percentage of women giving birth receiving Maternity Allowance
-ind_092,health,Cervical screening age-appropriate coverage
-ind_093,health,Percentage uptake of MMR dose two in children at five years of age
-ind_094,health,Prevalence of hypertension in the GP practice registered population
-ind_095,health,Prevalence of diabetes in the GP practice registered population
-ind_097,health,Total identifiable expenditure on health
-ind_099,health,"Number of physicians or doctors per 100,000 inhabitants"
-ind_100,health,Total ependiture on long-termcare as a percentage of GDP
-ind_101,health,Out-of-pocket expenditure on health care as a percentage of GP
-ind_102,health,"Available hospital beds per 100,000 inhabitants"
-ind_103,health,Percentage of survey respondents aged 16+ years caring for family members/ friends/ nieghbours
-ind_107,health,Percentage of survey respondents aged 16+ who wanted to but couldn't see a GP/family doctor about own health
-ind_109,health,Percentage of survey respondents dissatisfied with the care they received at their last appointment with GP/family doctor
+ind_id,category,EN,CY
+ind_001,wellbeing,"Percentage of adults reporting fair, bad or very bad health",A
+ind_002,wellbeing,Percentage of students who rate their health as fair or poor,B
+ind_003,morbidity,"Percentage of survey respondents with a limiting long-standing illness, disability or infirmity",C
+ind_004,wellbeing,"Estimated prevalence of self-reported illness caused or made worse by work, for people working in the last 12 months",D
+ind_006,morbidity,Percentage of survey respondents with Heart a and circulatory illness,E
+ind_007,morbidity,Percentage of survey respondents with Diabetes incl. Hyperglycaemia,F
+ind_008,mortality,"Death rate per 100,000 due to tuberculosis",G
+ind_009,wellbeing,Percentage of survey respondents who rated their satisfaction with life as low (0-4 out of 10),H
+ind_010,wellbeing,"Percentage of students who rated their life satisfaction as 6 out of 10, or above",I
+ind_011,wellbeing,"Warwick-Edinburgh Metnal Well-being Scale, mean score",J
+ind_012,mortality,Infant mortality (under 1 year),K
+ind_013,mortality,Life expectancy at birth in years,L
+ind_014,morbidity,Percentage of survey respondents who currently smoke either daily or occasionally,M
+ind_015,morbidity,Usual weekly alcohol consumption is lower risk (>0 but <=14 units),N
+ind_016,morbidity,Usual weekly alcohol consumption is higher risk (>14 units),O
+ind_017,morbidity,Percentage of adults aged 18-64 who are obese,P
+ind_018,wellbeing,Percentage of students who are physically active for at least 60 minutes per day,Q
+ind_019,living,Sufficient number of bedrooms for the household,R
+ind_020,living,Overall satisfaction with accommodation,S
+ind_024,living,Awaiting further information from DVLA. Email sent on 05/03/20.,T
+ind_025,living,"Death rate per 100,000 due to road traffic accidents",U
+ind_026,living,Percentage of households receiving housing benefit,V
+ind_027,living,Percentage of households with a sufficient number of bedrooms for the household,W
+ind_028,living,Percentage of survey respondents who are not able to keep accomodation warm enough,X
+ind_029,living,To be determined,Y
+ind_032,living,Average PM10 concentrations across local authority and health board areas in Wales,Z
+ind_033,living,Percentage of adults aged 16+ years reporting difficulty accessing local green space,A
+ind_034,living,Percentage of disabled persons (aged 16+) reporting difficulty getting to or from stop/station,B
+ind_035,living,Percentage of adults (16+) feeling unsafe when walking alone in local area after dark,C
+ind_036,living,Percentage of adults feeling unsafe at home after dark,D
+ind_037,living,To be determined,E
+ind_038,living,"Percentage of households which eat meals with meat, chicken, fish (or vegatarien equivalent) at least every other day?",F
+ind_039,living,Value-added tax (VAT) on alcohol,G
+ind_041,social,"Percentage of children at the final year of foundation phase achieving the expected Outcome (Outcome 5+) for Personal and social development, well-being and cultural diversity",H
+ind_043,social,Percentage of adults who report a feeling lonely (a score of 4 to 6 on the De Jong Gierveld loneliness scale),I
+ind_044,social,"Percentage of students who agree that there is support at their school for students who feel unhappy, worried or unable to cope",J
+ind_045,social,"Percentage of adults (aged 16+) who have relatives, friends, or neighbours they can ask for help",K
+ind_046,social,Percentage of adults who feel they are in control of their daily life as much as they can be,L
+ind_049,social,Percentage of childen aged 4 years participating in education,M
+ind_050,social,Total expenditure delegated to nursery school education,N
+ind_051,social,"Estimated 16-24 year olds not in education, training or employment",O
+ind_052,social,Percentage of pupils in year 11/aged 15 who achieved Level 2 incl. English/Welsh and maths,P
+ind_053,social,Percentage of adults aged 25-64 years participating in formal and non-formal education and training,Q
+ind_054,social,Percentage of people who volunteer (National indicator),R
+ind_055,social,Percentage of people who feel they are able to influence decisions affecting their local area,S
+ind_056,social,Percentage of people who feel most people can be trusted,T
+ind_057,employment,Gross Value Added through compensation of employees i.e. wages and salaries plus employers' social contributions.,U
+ind_059,employment,"Estimated incidence of self-reported workplace non-fatal injuries, for people working in the last 12 months",V
+ind_060,employment,Difference in employment rates between those who are disabled and not disabled,W
+ind_063,employment,International Labour Organisation (ILO) unemployment rate,X
+ind_064,employment,International Labour Organisation (ILO) economic activity rate,Y
+ind_065,employment,Total identifiable expenditure on social protection,Z
+ind_068,employment,Number of claimants that are claiming Jobseekers Allowance,A
+ind_069,employment,Temporary employees as a percentage of the total number of employees aged 20 to 64 years,B
+ind_070,employment,National Living Wage and the National Minimum Wage rates,C
+ind_071,employment,Average (median) gross hourly earnings,D
+ind_072,employment,Percentage of employees whose pay and/or conditions of employment are determined by a collective agreement,E
+ind_074,employment,Percentage of working age adults in relative income poverty,F
+ind_075,employment,Percentage of survey respondents who are moderately or highly satisfied with present job,G
+ind_076,employment,Percentage of survey respondents who are working 49+ hours per week,H
+ind_077,income,"Percentage of all individuals, children, working-age adults and pensioners living in relative income poverty",I
+ind_078,income,Percentage of people in relative income poverty where there is disability within the family (Equality Act definition),J
+ind_080,income,Total identifiable expenditure on social protection,K
+ind_085,income,Percentage of women giving birth receiving Maternity Allowance,L
+ind_092,health,Cervical screening age-appropriate coverage,M
+ind_093,health,Percentage uptake of MMR dose two in children at five years of age,N
+ind_094,health,Prevalence of hypertension in the GP practice registered population,O
+ind_095,health,Prevalence of diabetes in the GP practice registered population,P
+ind_097,health,Total identifiable expenditure on health,Q
+ind_099,health,"Number of physicians or doctors per 100,000 inhabitants",R
+ind_100,health,Total ependiture on long-termcare as a percentage of GDP,S
+ind_101,health,Out-of-pocket expenditure on health care as a percentage of GP,T
+ind_102,health,"Available hospital beds per 100,000 inhabitants",U
+ind_103,health,Percentage of survey respondents aged 16+ years caring for family members/ friends/ nieghbours,V
+ind_107,health,Percentage of survey respondents aged 16+ who wanted to but couldn't see a GP/family doctor about own health,W
+ind_109,health,Percentage of survey respondents dissatisfied with the care they received at their last appointment with GP/family doctor,X

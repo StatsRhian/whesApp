@@ -4,7 +4,8 @@ source("R/catDetail_module.R")
 source("R/catSimpleSummary_module.R")
 source("R/filter_disag.R")
 source("R/cook_waffle.R")
-
+source("R/translate.R")
+source("page_content.R")
 enableBookmarking(store = "url")
 
 # Read in indicator data and info

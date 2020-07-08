@@ -1,6 +1,7 @@
 catDetailUI = function(id, cat){
   ns = NS(id)
   category_name = cat_df$name[cat_df$catID == cat]
+  #  print(indic)
   tagList(
     fluidPage(
       fluidRow(
@@ -11,13 +12,14 @@ catDetailUI = function(id, cat){
       
       fluidRow(
         column(6,
+#               uiOutput(ns("ind_id_ui"))
                selectInput(ns("ind_id"),
                            label = "Please select an indicator",
-                           choices = 
+                           choices =
                              filter(indicator_info, category == cat) %>%
-                             select(name, ind_id) %>%
+                             select(EN, ind_id) %>%
                              deframe(),
-                           selectize = TRUE, 
+                           selectize = TRUE,
                            width = "90%"
                )
         ), # End: column
@@ -79,7 +81,9 @@ catDetailUI = function(id, cat){
 }
 
 
-catDetail = function(input, output, session){
+catDetail = function(input, output, session, lang, cat){
+  
+  print(id)
   
   data = 
     reactive({
@@ -122,6 +126,34 @@ catDetail = function(input, output, session){
       coord_cartesian(ylim = c(0, 0.5)) +
       theme_minimal() +
       scale_fill_brewer(palette = "Dark2")
+  })
+  
+  observe({
+    print(lang())
+    print(cat)
+  })
+  
+  # output$ind_id_ui = renderUI({
+  #   selectInput(session$ns("ind_id"),
+  #               label = "Please select an indicator",
+  #               choices =
+  #                 filter(indicator_info, category == cat) %>%
+  #                 select(lang(), ind_id) %>%
+  #                 deframe(),
+  #               selectize = TRUE,
+  #               width = "90%"
+  #   )
+  # })
+  
+  observeEvent(lang(), {
+    updateSelectInput(
+      session,
+      inputId = "ind_id",
+      choices =
+        filter(indicator_info, category == cat) %>%
+        select(lang(), ind_id) %>%
+        deframe()
+    )
   })
   
   output$bar_plot = renderPlot({

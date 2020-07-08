@@ -1,0 +1,12 @@
+section,n,EN,CY
+plot_x_label,1,Something,Rhywbeth
+plot_y_label,1,Ok,Iawn
+plot_title,1,Raining,Glawiad
+slider_label,1,Number,Rhif
+select_choice,1,One,Un
+select_choice,2,Two,Dau
+select_choice,3,"Three, Four, Five","Tri, Pedwar, Pump"
+text1,1,Low,Isel
+text2,1,High,Uchel
+titlePanel,1,Whatever,Beth bynnag
+h2,1,Welsh Health Equity Status,Statws Ecwiti Iechyd Cymru

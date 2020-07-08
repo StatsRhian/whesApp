@@ -1,5 +1,6 @@
 catSimpleSummaryUI = function(id, cat){
   ns = NS(id)
+  print(cat)
   category_name = cat_df$name[cat_df$catID == cat]
   tagList(
     fluidPage(
@@ -11,15 +12,16 @@ catSimpleSummaryUI = function(id, cat){
       
       fluidRow(
         column(6,
-               selectInput(ns("ind_id"),
-                           label = "Please select an indicator",
-                           choices = 
-                             filter(indicator_info, category == cat) %>%
-                             select(name, ind_id) %>%
-                             deframe(),
-                           selected = "",
-                           width = "90%"
-               )
+               uiOutput(ns("ind_id_ui"))
+               # selectInput(ns("ind_id"),
+               #             label = "Please select an indicator",
+               #             choices = 
+               #               filter(indicator_info, category == cat) %>%
+               #               select(EN, ind_id) %>%
+               #               deframe(),
+               #             selectize = TRUE, 
+               #             width = "90%"
+               # )
         ), # End: column
         column(6,
                selectInput(ns("disag"),
@@ -48,13 +50,13 @@ catSimpleSummaryUI = function(id, cat){
   )
 }
 
-catSimpleSummary = function(input, output, session) {
+catSimpleSummary = function(input, output, session, lang, cat) {
   
 waffle_plot = reactive({
   title = 
     indicator_info %>%
     filter(ind_id == input$ind_id) %>%
-    pull(name)
+    pull(EN)
   
   indicator_data %>%
     filter(ind_id == input$ind_id) %>%
@@ -62,6 +64,18 @@ waffle_plot = reactive({
     prep_waffle(input$disag) %>%
     cook_waffle(input$disag, title = title)
   })
+
+output$ind_id_ui = renderUI({
+  selectInput(session$ns("ind_id"),
+              label = "Please select an indicator",
+              choices =
+                filter(indicator_info, category == cat) %>%
+                select(lang(), ind_id) %>%
+                deframe(),
+              selectize = TRUE,
+              width = "90%"
+  )
+})
 
 output$infographic = renderPlot({
   waffle_plot()

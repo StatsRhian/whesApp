@@ -1,54 +1,44 @@
 shinyServer(function(input, output, session) {
   
+  lan = reactive({
+    input$lan
+    })
+  
   # Call modules for infographics page
-  callModule(module = catSimpleSummary, id = "simple-wellbeing")
-  callModule(module = catSimpleSummary, id = "simple-morbidity")
-  callModule(module = catSimpleSummary, id = "simple-health")
-  callModule(module = catSimpleSummary, id = "simple-income")
-  callModule(module = catSimpleSummary, id = "simple-living")
-  callModule(module = catSimpleSummary, id = "simple-social")
-  callModule(module = catSimpleSummary, id = "simple-employment")
   
+  purrr::map(cat_df$catID, ~callModule(module = catSimpleSummary, 
+                                       id = paste0("simple-", .x),
+                                       lang = lan,
+                                       cat = .x))
+  
+
   # Call modules for detail page
-  callModule(module = catDetail, id = "detail-wellbeing")
-  callModule(module = catDetail, id = "detail-morbidity")
-  callModule(module = catDetail, id = "detail-health")
-  callModule(module = catDetail, id = "detail-income")
-  callModule(module = catDetail, id = "detail-living")
-  callModule(module = catDetail, id = "detail-social")
-  callModule(module = catDetail, id = "detail-employment")
   
-  output$test_lang = renderText(input$lang)
+  purrr::map(cat_df$catID, ~callModule(module = catDetail, 
+                                       id = paste0("simple-", .x),
+                                       lang = lan,
+                                       cat = .x))
   
+  
+  # output$test_lang = renderText(input$lang)
+  # 
   output$indicator_search = renderDataTable({
     indicator_info %>%
       DT::datatable()
   })
   
-  shinyjs::onclick("img_health",
-                   updateTabsetPanel(session,
-                                     inputId = "tab_categories",
-                                     selected = cat_df$name[cat_df$catID == "health"]))
-  shinyjs::onclick("img_income",
-                   updateTabsetPanel(session,
-                                     inputId = "tab_categories",
-                                     selected = cat_df$name[cat_df$catID == "income"]))
-  
-  shinyjs::onclick("img_living",
-                   updateTabsetPanel(session,
-                                     inputId = "tab_categories",
-                                     selected = cat_df$name[cat_df$catID == "living"]))
-  
-  shinyjs::onclick("img_social",
-                   updateTabsetPanel(session,
-                                     inputId = "tab_categories",
-                                     selected = cat_df$name[cat_df$catID == "social"]))
-  
-  shinyjs::onclick("img_employment",
-                   updateTabsetPanel(session,
-                                     inputId = "tab_categories",
-                                     selected = cat_df$name[cat_df$catID == "employment"]))
-  
+
+### Function to create onclick event for images
+  onclick_tabset = function(category){
+    shinyjs::onclick(paste0("img_", category),
+                     updateTabsetPanel(session,
+                                       inputId = "tab_categories",
+                                       selected = cat_df$name[cat_df$catID == category]))
+  }
+
+### Apply above function to each category
+  purrr::map(c("health", "income", "living", "social", "employment"),
+             onclick_tabset)
   
 })
 
