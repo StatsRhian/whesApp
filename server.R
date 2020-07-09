@@ -40,6 +40,61 @@ shinyServer(function(input, output, session) {
   purrr::map(c("health", "income", "living", "social", "employment"),
              onclick_tabset)
   
+#   output$tabs = renderUI({
+# #    lapply(c("wellbeing", "morbidity"), generate_tabPanel)
+#   })
+#   
+### Update tabpanel titles
+  
+  output$overview_tab_title = renderUI({
+    tr_pull(translate_db, "overview_tab_title", lan())
+  })
+  
+  output$wellbeing_tab_title = renderUI({
+    tr_pull(translate_db, "wellbeing_tab_title", lan())
+  })
+  
+  output$morbidity_tab_title = renderUI({
+    tr_pull(translate_db, "morbidity_tab_title", lan())
+  })
+  
+  
+  output$health_tab_title = renderUI({
+    tr_pull(translate_db, "health_tab_title", lan())
+  })
+  
+  output$income_tab_title = renderText({
+    tr_pull(translate_db, "income_tab_title", lan())
+  })
+  
+  output$living_tab_title = renderUI({
+    tr_pull(translate_db, "living_tab_title", lan())
+  })
+  
+  output$social_tab_title = renderUI({
+    tr_pull(translate_db, "social_tab_title", lan())
+  })
+  
+  output$employment_tab_title = renderUI({
+    tr_pull(translate_db, "employment_tab_title", lan())
+  })
+  
+  output$infographics = renderText({
+    tr_pull(translate_db, key = "infographics_tab_title", lan())
+  })
+  
+  output$details = renderText({
+    tr_pull(translate_db, key = "details_tab_title", lan())
+  })
+  
+  output$policies = renderText({
+    tr_pull(translate_db, key = "policies_tab_title", lan())
+  })
+  
+  observe({
+    print(input$lang)
+  })
+  
 })
 
 

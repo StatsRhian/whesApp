@@ -15,7 +15,10 @@ prep_waffle = function(df, disag = input$disag){
     mutate(Percent = round(Percent * 100, 0))
 }
 
-cook_waffle = function(df, disag = input$disag, title = ""){
+cook_waffle = function(df, disag = input$disag, 
+                       title = "", 
+                       caption = "Welsh Health Equity Status 2020",
+                       legend_labels = c("Yes", "No")){
   waffle = 
     df %>%
   ggplot(aes(values = Percent, label = Response, col = Response)) +
@@ -27,16 +30,16 @@ cook_waffle = function(df, disag = input$disag, title = ""){
     scale_color_manual(
       name = NULL,
       values = c(waffle_yes, waffle_no),
-      labels = c("Yes", "No")
+      labels = legend_labels
     ) +
     scale_label_pictogram(
       name = NULL,
       values = c("user", "user"),
-      labels = c("Yes", "No")
+      labels = legend_labels
     ) +
     labs(
       title = title,
-      caption = "Welsh Health Equity Status 2020"
+      caption = caption
     ) +
     theme_ipsum_rc(grid = "") +
     theme_enhance_waffle()

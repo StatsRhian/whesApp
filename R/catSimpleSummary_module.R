@@ -12,16 +12,15 @@ catSimpleSummaryUI = function(id, cat){
       
       fluidRow(
         column(6,
-               uiOutput(ns("ind_id_ui"))
-               # selectInput(ns("ind_id"),
-               #             label = "Please select an indicator",
-               #             choices = 
-               #               filter(indicator_info, category == cat) %>%
-               #               select(EN, ind_id) %>%
-               #               deframe(),
-               #             selectize = TRUE, 
-               #             width = "90%"
-               # )
+               selectInput(ns("ind_id"),
+                           label = "Please select an indicator",
+                           choices =
+                             filter(indicator_info, category == cat) %>%
+                             select(name, ind_id) %>%
+                             deframe(),
+                           selectize = TRUE,
+                           width = "90%"
+               )
         ), # End: column
         column(6,
                selectInput(ns("disag"),
@@ -56,26 +55,46 @@ waffle_plot = reactive({
   title = 
     indicator_info %>%
     filter(ind_id == input$ind_id) %>%
-    pull(EN)
+    pull(name)
   
-  indicator_data %>%
+   indicator_data %>%
     filter(ind_id == input$ind_id) %>%
     filter_disag(input$disag) %>%
     prep_waffle(input$disag) %>%
-    cook_waffle(input$disag, title = title)
+    cook_waffle(input$disag, 
+                title = tr_pull(translate_db, 
+                                key = input$ind_id,
+                                lang = lang(),
+                                search = TRUE), 
+                caption = tr_pull(translate_db, 
+                                key = "waffle_caption",
+                                lang = lang()),
+                legend_labels = tr_pull(translate_db, 
+                                        key = "waffle_legend_label",
+                                        lang = lang()))
   })
 
-output$ind_id_ui = renderUI({
-  selectInput(session$ns("ind_id"),
-              label = "Please select an indicator",
-              choices =
-                filter(indicator_info, category == cat) %>%
-                select(lang(), ind_id) %>%
-                deframe(),
-              selectize = TRUE,
-              width = "90%"
+
+observeEvent(lang(), {
+  
+  ## translate indicators
+  updateSelectInput(
+    session,
+    inputId = "ind_id",
+    label = tr_pull(translate_db, "select_ind_label", lang()),
+    choices = tr_deframe(translate_db, key_group = cat, lang = lang())
   )
+  
+  ## translate disags
+  updateSelectInput(
+    session,
+    inputId = "disag",
+    label = tr_pull(translate_db, "select_disag_label", lang()),
+    choices = tr_deframe(translate_db, key_group = "disaggregate", lang = lang())
+  )
+  
 })
+
 
 output$infographic = renderPlot({
   waffle_plot()

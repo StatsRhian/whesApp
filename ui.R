@@ -8,7 +8,7 @@ navbarPage(
     navlistPanel(
       id = "tab_categories",
       tabPanel(
-        "Overview",
+        title = uiOutput("overview_tab_title"),
         icon = icon("home"),
           h2("Health Equity Status"),
         br(),
@@ -65,8 +65,9 @@ navbarPage(
       ),
       "Inequalities in Health",
       widths = c(2, 10),
+       # uiOutput("tabs"),
       tabPanel(
-        cat_df$name[cat_df$catID == "wellbeing"],
+        title = uiOutput("wellbeing_tab_title"),
         icon = icon(cat_df$icon[cat_df$catID == "wellbeing"]),
         tabsetPanel(
           tabPanel(
@@ -86,9 +87,9 @@ navbarPage(
           )
         )
       ),
-      
+
       tabPanel(
-        cat_df$name[cat_df$catID == "morbidity"],
+        title = uiOutput("morbidity_tab_title"),
         icon = icon(cat_df$icon[cat_df$catID == "morbidity"]),
         tabsetPanel(
           tabPanel(
@@ -116,7 +117,7 @@ navbarPage(
       "Five essential conditions",
       
       tabPanel(
-        cat_df$name[cat_df$catID == "health"],
+        title = uiOutput("health_tab_title"),
         icon = icon(cat_df$icon[cat_df$catID == "health"]),
         tabsetPanel(
           tabPanel(
@@ -140,17 +141,16 @@ navbarPage(
       ),
       
       tabPanel(
-        cat_df$name[cat_df$catID == "income"],
+        title = uiOutput("income_tab_title"),
         icon = icon(cat_df$icon[cat_df$catID == "income"]),
         tabsetPanel(
           tabPanel(
-            "Infographics",
+            title = textOutput("infographics"),
             catSimpleSummaryUI("simple-income", "income")
           ),
-          tabPanel("Detail",
+          tabPanel(title = textOutput("details"),
                    catDetailUI("detail-income", "income")),
-          tabPanel(
-            "Policies",
+          tabPanel(title = textOutput("policies"),
             h2(
               glue::glue("Policies related to {cat_df$name[cat_df$catID == 'income']}")
             ),
@@ -164,7 +164,7 @@ navbarPage(
       ),
       
       tabPanel(
-        cat_df$name[cat_df$catID == "living"],
+        title = uiOutput("living_tab_title"),
         icon = icon(cat_df$icon[cat_df$catID == "living"]),
         tabsetPanel(
           tabPanel(
@@ -188,7 +188,7 @@ navbarPage(
       ),
       
       tabPanel(
-        cat_df$name[cat_df$catID == "social"],
+        title = uiOutput("social_tab_title"),
         icon = icon(cat_df$icon[cat_df$catID == "social"]),
         tabsetPanel(
           tabPanel(
@@ -212,7 +212,7 @@ navbarPage(
       ),
       
       tabPanel(
-        cat_df$name[cat_df$catID == "employment"],
+        title = uiOutput("employment_tab_title"),
         icon = icon(cat_df$icon[cat_df$catID == "employment"]),
         tabsetPanel(
           tabPanel(

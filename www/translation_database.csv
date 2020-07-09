@@ -1,12 +1,97 @@
-section,n,EN,CY
-plot_x_label,1,Something,Rhywbeth
-plot_y_label,1,Ok,Iawn
-plot_title,1,Raining,Glawiad
-slider_label,1,Number,Rhif
-select_choice,1,One,Un
-select_choice,2,Two,Dau
-select_choice,3,"Three, Four, Five","Tri, Pedwar, Pump"
-text1,1,Low,Isel
-text2,1,High,Uchel
-titlePanel,1,Whatever,Beth bynnag
-h2,1,Welsh Health Equity Status,Statws Ecwiti Iechyd Cymru
+key,EN,CY
+wellbeing_ind_001,"Percentage of adults reporting fair, bad or very bad health",A
+wellbeing_ind_002,Percentage of students who rate their health as fair or poor,B
+morbidity_ind_003,"Percentage of survey respondents with a limiting long-standing illness, disability or infirmity",C
+wellbeing_ind_004,"Estimated prevalence of self-reported illness caused or made worse by work, for people working in the last 12 months",D
+morbidity_ind_006,Percentage of survey respondents with Heart a and circulatory illness,E
+morbidity_ind_007,Percentage of survey respondents with Diabetes incl. Hyperglycaemia,F
+mortality_ind_008,"Death rate per 100,000 due to tuberculosis",G
+wellbeing_ind_009,Percentage of survey respondents who rated their satisfaction with life as low (0-4 out of 10),H
+wellbeing_ind_010,"Percentage of students who rated their life satisfaction as 6 out of 10, or above",I
+wellbeing_ind_011,"Warwick-Edinburgh Metnal Well-being Scale, mean score",J
+mortality_ind_012,Infant mortality (under 1 year),K
+mortality_ind_013,Life expectancy at birth in years,L
+morbidity_ind_014,Percentage of survey respondents who currently smoke either daily or occasionally,M
+morbidity_ind_015,Usual weekly alcohol consumption is lower risk (>0 but <=14 units),N
+morbidity_ind_016,Usual weekly alcohol consumption is higher risk (>14 units),O
+morbidity_ind_017,Percentage of adults aged 18-64 who are obese,P
+wellbeing_ind_018,Percentage of students who are physically active for at least 60 minutes per day,Q
+living_ind_019,Sufficient number of bedrooms for the household,R
+living_ind_020,Overall satisfaction with accommodation,S
+living_ind_024,Awaiting further information from DVLA. Email sent on 05/03/20.,T
+living_ind_025,"Death rate per 100,000 due to road traffic accidents",U
+living_ind_026,Percentage of households receiving housing benefit,V
+living_ind_027,Percentage of households with a sufficient number of bedrooms for the household,W
+living_ind_028,Percentage of survey respondents who are not able to keep accomodation warm enough,X
+living_ind_029,To be determined,Y
+living_ind_032,Average PM10 concentrations across local authority and health board areas in Wales,Z
+living_ind_033,Percentage of adults aged 16+ years reporting difficulty accessing local green space,A
+living_ind_034,Percentage of disabled persons (aged 16+) reporting difficulty getting to or from stop/station,B
+living_ind_035,Percentage of adults (16+) feeling unsafe when walking alone in local area after dark,C
+living_ind_036,Percentage of adults feeling unsafe at home after dark,D
+living_ind_037,To be determined,E
+living_ind_038,"Percentage of households which eat meals with meat, chicken, fish (or vegatarien equivalent) at least every other day?",F
+living_ind_039,Value-added tax (VAT) on alcohol,G
+social_ind_041,"Percentage of children at the final year of foundation phase achieving the expected Outcome (Outcome 5+) for Personal and social development, well-being and cultural diversity",H
+social_ind_043,Percentage of adults who report a feeling lonely (a score of 4 to 6 on the De Jong Gierveld loneliness scale),I
+social_ind_044,"Percentage of students who agree that there is support at their school for students who feel unhappy, worried or unable to cope",J
+social_ind_045,"Percentage of adults (aged 16+) who have relatives, friends, or neighbours they can ask for help",K
+social_ind_046,Percentage of adults who feel they are in control of their daily life as much as they can be,L
+social_ind_049,Percentage of childen aged 4 years participating in education,M
+social_ind_050,Total expenditure delegated to nursery school education,N
+social_ind_051,"Estimated 16-24 year olds not in education, training or employment",O
+social_ind_052,Percentage of pupils in year 11/aged 15 who achieved Level 2 incl. English/Welsh and maths,P
+social_ind_053,Percentage of adults aged 25-64 years participating in formal and non-formal education and training,Q
+social_ind_054,Percentage of people who volunteer (National indicator),R
+social_ind_055,Percentage of people who feel they are able to influence decisions affecting their local area,S
+social_ind_056,Percentage of people who feel most people can be trusted,T
+employment_ind_057,Gross Value Added through compensation of employees i.e. wages and salaries plus employers' social contributions.,U
+employment_ind_059,"Estimated incidence of self-reported workplace non-fatal injuries, for people working in the last 12 months",V
+employment_ind_060,Difference in employment rates between those who are disabled and not disabled,W
+employment_ind_063,International Labour Organisation (ILO) unemployment rate,X
+employment_ind_064,International Labour Organisation (ILO) economic activity rate,Y
+employment_ind_065,Total identifiable expenditure on social protection,Z
+employment_ind_068,Number of claimants that are claiming Jobseekers Allowance,A
+employment_ind_069,Temporary employees as a percentage of the total number of employees aged 20 to 64 years,B
+employment_ind_070,National Living Wage and the National Minimum Wage rates,C
+employment_ind_071,Average (median) gross hourly earnings,D
+employment_ind_072,Percentage of employees whose pay and/or conditions of employment are determined by a collective agreement,E
+employment_ind_074,Percentage of working age adults in relative income poverty,F
+employment_ind_075,Percentage of survey respondents who are moderately or highly satisfied with present job,G
+employment_ind_076,Percentage of survey respondents who are working 49+ hours per week,H
+income_ind_077,"Percentage of all individuals, children, working-age adults and pensioners living in relative income poverty",I
+income_ind_078,Percentage of people in relative income poverty where there is disability within the family (Equality Act definition),J
+income_ind_080,Total identifiable expenditure on social protection,K
+income_ind_085,Percentage of women giving birth receiving Maternity Allowance,L
+health_ind_092,Cervical screening age-appropriate coverage,M
+health_ind_093,Percentage uptake of MMR dose two in children at five years of age,N
+health_ind_094,Prevalence of hypertension in the GP practice registered population,O
+health_ind_095,Prevalence of diabetes in the GP practice registered population,P
+health_ind_097,Total identifiable expenditure on health,Q
+health_ind_099,"Number of physicians or doctors per 100,000 inhabitants",R
+health_ind_100,Total ependiture on long-termcare as a percentage of GDP,S
+health_ind_101,Out-of-pocket expenditure on health care as a percentage of GP,T
+health_ind_102,"Available hospital beds per 100,000 inhabitants",U
+health_ind_103,Percentage of survey respondents aged 16+ years caring for family members/ friends/ nieghbours,V
+health_ind_107,Percentage of survey respondents aged 16+ who wanted to but couldn't see a GP/family doctor about own health,W
+health_ind_109,Percentage of survey respondents dissatisfied with the care they received at their last appointment with GP/family doctor,X
+select_label,Please select an indicator,Dewiswch ddangosydd
+disaggregate_Gender,Gender,Rhyw
+disaggregate_Age,Age,Oedran
+disaggregate_WIMD,Welsh Index,Mynegai Cymraeg
+disaggregate_Education,Education Level,Lefel Addysg
+select_disag_label,Please select an disaggregate,Dewiswch ddadgyfuno
+overview_tab_title,Overview,Trosolwg
+wellbeing_tab_title,Wellbeing,Lles
+morbidity_tab_title,Morbidity,Morbidrwydd
+health_tab_title,Health Services,Gwasanaethau Iechyd
+income_tab_title,Income and Social Protection,Incwm a Diogelu Cymdeithasol
+living_tab_title,Living Environment,Yr Amgylchedd Byw
+social_tab_title,Social and Human Capital,Cyfalaf Cymdeithasol a Dynol
+employment_tab_title,Employment and Working Conditions,Amodau Cyflogaeth a Gwaith
+waffle_legend_label,Yes,Yes Welsh
+waffle_legend_label,No,No Welsh
+waffle_caption,Welsh Health Equity Status 2020,Statws Ecwiti Iechyd Cymru 2020
+infographics_tab_title,Infographics,Infograffeg
+details_tab_title,Details,Manylion
+policies_tab_title,Policies,Polisïau

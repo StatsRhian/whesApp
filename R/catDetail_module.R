@@ -12,12 +12,11 @@ catDetailUI = function(id, cat){
       
       fluidRow(
         column(6,
-#               uiOutput(ns("ind_id_ui"))
                selectInput(ns("ind_id"),
                            label = "Please select an indicator",
                            choices =
                              filter(indicator_info, category == cat) %>%
-                             select(EN, ind_id) %>%
+                             select(name, ind_id) %>%
                              deframe(),
                            selectize = TRUE,
                            width = "90%"
@@ -83,8 +82,6 @@ catDetailUI = function(id, cat){
 
 catDetail = function(input, output, session, lang, cat){
   
-  print(id)
-  
   data = 
     reactive({
       indicator_data %>%
@@ -128,31 +125,23 @@ catDetail = function(input, output, session, lang, cat){
       scale_fill_brewer(palette = "Dark2")
   })
   
-  observe({
-    print(lang())
-    print(cat)
-  })
-  
-  # output$ind_id_ui = renderUI({
-  #   selectInput(session$ns("ind_id"),
-  #               label = "Please select an indicator",
-  #               choices =
-  #                 filter(indicator_info, category == cat) %>%
-  #                 select(lang(), ind_id) %>%
-  #                 deframe(),
-  #               selectize = TRUE,
-  #               width = "90%"
-  #   )
-  # })
-  
+
   observeEvent(lang(), {
+    
+    ## translate indicators
     updateSelectInput(
       session,
       inputId = "ind_id",
-      choices =
-        filter(indicator_info, category == cat) %>%
-        select(lang(), ind_id) %>%
-        deframe()
+      label = tr_pull(translate_db, "select_ind_label", lang()),
+      choices = tr_deframe(translate_db, key_group = cat, lang())
+    )
+    
+    ## translate disags
+    updateSelectInput(
+      session,
+      inputId = "disag",
+      label = tr_pull(translate_db, "select_disag_label", lang()),
+      choices = tr_deframe(translate_db, key_group = "disaggregate", lang = lang())
     )
   })
   
