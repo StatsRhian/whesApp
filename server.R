@@ -1,22 +1,13 @@
 shinyServer(function(input, output, session) {
   
-  # Call modules for infographics page
-  callModule(module = catSimpleSummary, id = "simple-wellbeing")
-  callModule(module = catSimpleSummary, id = "simple-morbidity")
-  callModule(module = catSimpleSummary, id = "simple-health")
-  callModule(module = catSimpleSummary, id = "simple-income")
-  callModule(module = catSimpleSummary, id = "simple-living")
-  callModule(module = catSimpleSummary, id = "simple-social")
-  callModule(module = catSimpleSummary, id = "simple-employment")
-  
-  # Call modules for detail page
-  callModule(module = catDetail, id = "detail-wellbeing")
-  callModule(module = catDetail, id = "detail-morbidity")
-  callModule(module = catDetail, id = "detail-health")
-  callModule(module = catDetail, id = "detail-income")
-  callModule(module = catDetail, id = "detail-living")
-  callModule(module = catDetail, id = "detail-social")
-  callModule(module = catDetail, id = "detail-employment")
+  # Call modules for all seven categories
+  callModule(categoryPanel, "wellbeing")
+  callModule(categoryPanel, "morbidity")
+  callModule(categoryPanel, "health")
+  callModule(categoryPanel, "income")
+  callModule(categoryPanel, "living")
+  callModule(categoryPanel, "social")
+  callModule(categoryPanel, "employment")
   
   output$test_lang = renderText(input$lang)
   
