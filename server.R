@@ -21,7 +21,7 @@ shinyServer(function(input, output, session) {
   output$test_lang = renderText(input$lang)
   
   output$indicator_search = renderDataTable({
-    indicators %>%
+    indicator_info %>%
       DT::datatable()
   })
   
