@@ -4,6 +4,7 @@ source("R/catDetail_module.R")
 source("R/catSimpleSummary_module.R")
 source("R/filter_disag.R")
 source("R/cook_waffle.R")
+source("R/generate_text.R")
 
 enableBookmarking(store = "url")
 
