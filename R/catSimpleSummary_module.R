@@ -34,10 +34,7 @@ catSimpleSummaryUI = function(id, cat){
       ), # End: fluid row
       
       fluidRow(
-        p("The percentage of adults reporting fair; 
-          bad or very bad health is 16% for Young Adults, 27% for
-          Working Age Adults and 44% for Retirement Age Adults.", 
-          style = "font-size:20px")
+        htmlOutput(ns("simple_summary"))
       ), # End: fluid row
       
       fluidRow(
@@ -62,6 +59,16 @@ waffle_plot = reactive({
     prep_waffle(input$disag) %>%
     cook_waffle(input$disag, title = title)
   })
+
+output$simple_summary = renderUI({
+  statement = indicator_info$name[which(indicator_info$ind_id == input$ind_id)]
+  indicator_data %>%
+    filter(ind_id == input$ind_id) %>%
+    filter_disag(input$disag) %>%
+    generate_text(input$disag, statement) %>%
+    #add_style() %>%
+    HTML()
+})
 
 output$infographic = renderPlot({
   waffle_plot()
