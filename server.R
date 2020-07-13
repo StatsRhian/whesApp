@@ -49,7 +49,6 @@ shinyServer(function(input, output, session) {
                                      inputId = "tab_categories",
                                      selected = cat_df$name[cat_df$catID == "employment"]))
   
-  
 })
 
 

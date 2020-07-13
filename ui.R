@@ -1,5 +1,4 @@
 bs_theme_set("simplex")
-#bs_theme_set("sketchy")
 
 navbarPage("Welsh Health Equity Status",
            tabPanel("", 
