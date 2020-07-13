@@ -131,8 +131,9 @@ catDetail = function(input, output, session){
   output$detailed_table = 
     DT::renderDataTable({
       data() %>%
+        select(-ind_id) %>% 
         DT::datatable(rownames = FALSE) %>%
-        formatPercentage("value")
+        formatPercentage("value", round = 1) 
     })
   
   output$downloadData = downloadHandler(
