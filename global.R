@@ -8,7 +8,7 @@ source("R/generate_text.R")
 
 enableBookmarking(store = "url")
 
-indicators = readr::read_csv("data/indicators.csv")
+indicator_info = readr::read_csv("data/indicator_info.csv")
 load(file = "data/clean_indicators.RData")
 
 # Colour schemes

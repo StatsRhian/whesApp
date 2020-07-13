@@ -2,7 +2,7 @@ generate_text = function(df, disag, statement){
   if (disag == "None") {
     percent = 
       df %>%
-      pull(prop) %>%
+      pull(value) %>%
       scales::percent() # Only for percent indicators
     text_out = glue::glue("The {first_to_lower(statement)} is <b>{percent}</b>.")
   } else {
