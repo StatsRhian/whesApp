@@ -1,8 +1,8 @@
 prep_waffle = function(df, disag = input$disag){
   df %>%
-    rename(Yes = prop) %>%
-    mutate(No = 1 - Yes)  %>%
-    select(-n_yes, -n, -ci_lower, -ci_upper, -ind_id) %>%
+    rename(Yes = value) %>%
+    mutate(No = 100 - Yes)  %>%
+    select(-type, -n, -ci_lower, -ci_upper, -ind_id) %>%
     when(
       (disag == "None") ~ pivot_longer(., cols = everything(),
                                              names_to = "Response",
@@ -12,7 +12,7 @@ prep_waffle = function(df, disag = input$disag){
                       values_to = "Percent") 
     ) %>%
     mutate(Response = as_factor(Response)) %>%
-    mutate(Percent = round(Percent * 100, 0))
+    mutate(Percent = round(Percent, 0))
 }
 
 cook_waffle = function(df, disag = input$disag, title = ""){
@@ -42,7 +42,7 @@ cook_waffle = function(df, disag = input$disag, title = ""){
     theme_enhance_waffle()
   
   # DISAG
-  if(disag == "None"){
+  if (disag == "None") {
     waffle = 
       waffle +
       coord_equal(xlim = c(1, 10),

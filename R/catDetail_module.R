@@ -65,7 +65,7 @@ catDetailUI = function(id, cat){
         ), # End: column
         column(4,
                wellPanel(
-                 dataTableOutput(ns("detailed_table")), 
+                 reactableOutput(ns("detailed_table")), 
                  downloadButton(ns("downloadData"), "Download")
                )
         ) # End: column
@@ -85,31 +85,32 @@ catDetail = function(input, output, session){
     reactive({
       indicator_data %>%
         filter(ind_id == input$ind_id) %>%
-        filter_disag(input$disag)
+        filter_disag(input$disag) %>%
+        mutate(across(where(is.numeric), round))
     })
   
   # Plot
   plot_obj = reactive({
     if (is.null(input$disag)) {
       g = data() %>%
-        ggplot(aes(x = "All", y = prop)) + 
+        ggplot(aes(x = "All", y = value)) + 
         geom_col(fill = "#1B9E77")
     } else if (length(input$disag) == 1) {
       g = data() %>%
-        ggplot(aes(x = !!sym(input$disag), y = prop)) + 
+        ggplot(aes(x = !!sym(input$disag), y = value)) + 
         geom_col(aes(fill = !!sym(input$disag))) 
     } else if (length(input$disag) == 2) {
       g = data() %>%
-        ggplot(aes(x = !!syms(input$disag)[[2]], y = prop)) + 
+        ggplot(aes(x = !!syms(input$disag)[[2]], y = value)) + 
         geom_col(aes(fill = !!syms(input$disag)[[1]]),  position = "dodge") 
     }  else if (length(input$disag) == 3) {
       g = data() %>%
-        ggplot(aes(x = !!syms(input$disag)[[2]], y = prop)) + 
+        ggplot(aes(x = !!syms(input$disag)[[2]], y = value)) + 
         geom_col(aes(fill = !!syms(input$disag)[[1]]),  position = "dodge") + 
         facet_wrap(vars(!!!syms(input$disag)[[3]]))
     } else if (length(input$disag) == 4) {
       g = data() %>%
-        ggplot(aes(x = !!syms(input$disag)[[2]], y = prop)) + 
+        ggplot(aes(x = !!syms(input$disag)[[2]], y = value)) + 
         geom_col(aes(fill = !!syms(input$disag)[[1]]),  position = "dodge") + 
         facet_grid(rows = vars(!!!syms(input$disag)[[3]]), 
                    cols = vars(!!!syms(input$disag)[[4]]))
@@ -118,8 +119,8 @@ catDetail = function(input, output, session){
     g + 
       labs(title = input$plot_title,
            caption = input$plot_caption) +
-      scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
-      coord_cartesian(ylim = c(0, 0.5)) +
+      #scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+      #coord_cartesian(ylim = c(0, 0.5)) +
       theme_minimal() +
       scale_fill_brewer(palette = "Dark2")
   })
@@ -129,10 +130,10 @@ catDetail = function(input, output, session){
   })
   
   output$detailed_table = 
-    DT::renderDataTable({
+    renderReactable({
       data() %>%
-        DT::datatable(rownames = FALSE) %>%
-        formatPercentage("prop")
+        select(-ind_id) %>% 
+        reactable()
     })
   
   output$downloadData = downloadHandler(
