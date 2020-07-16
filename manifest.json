@@ -1338,7 +1338,7 @@
         "Maintainer": "Jim Hester <james.f.hester@gmail.com>",
         "Repository": "CRAN",
         "Date/Publication": "2020-05-13 16:10:07 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:35:43 UTC; unix"
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-16 13:55:25 UTC; unix"
       }
     },
     "gridExtra": {
@@ -2645,6 +2645,71 @@
         "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:42:33 UTC; unix"
       }
     },
+    "reactR": {
+      "Source": "CRAN",
+      "Repository": "https://www.stats.bris.ac.uk/R/",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "reactR",
+        "Type": "Package",
+        "Title": "React Helpers",
+        "Version": "0.4.3",
+        "Date": "2020-07-12",
+        "Authors@R": "c(\n      person(\n        \"Facebook\", \"Inc\"\n        , role = c(\"aut\", \"cph\")\n        , comment = \"React library in lib, https://facebook.github.io/react; see AUTHORS for full list of contributors\"\n      ),\n      person(\n        \"Michel\",\"Weststrate\",\n        , role = c(\"aut\", \"cph\")\n        , comment = \"mobx library in lib, https://github.com/mobxjs\"\n      ),\n      person(\n        \"Kent\", \"Russell\"\n        , role = c(\"aut\", \"cre\")\n        , comment = \"R interface\"\n        , email = \"kent.russell@timelyportfolio.com\"\n      ),\n      person(\n        \"Alan\", \"Dipert\"\n        , role = c(\"aut\")\n        , comment = \"R interface\"\n        , email = \"alan@rstudio.com\"\n      )\n    )",
+        "Maintainer": "Kent Russell <kent.russell@timelyportfolio.com>",
+        "Description": "Make it easy to use 'React' in R with 'htmlwidget' scaffolds,\n              helper dependency functions, an embedded 'Babel' 'transpiler',\n              and examples.",
+        "URL": "https://github.com/react-R/reactR",
+        "BugReports": "https://github.com/react-R/reactR/issues",
+        "License": "MIT + file LICENSE",
+        "LazyData": "TRUE",
+        "Encoding": "UTF-8",
+        "Imports": "htmltools",
+        "Suggests": "htmlwidgets (>= 0.6.0), rmarkdown, shiny, V8, knitr, usethis,\njsonlite",
+        "RoxygenNote": "7.1.1",
+        "VignetteBuilder": "knitr",
+        "NeedsCompilation": "no",
+        "Packaged": "2020-07-12 12:29:24 UTC; kentr",
+        "Author": "Facebook Inc [aut, cph] (React library in lib,\n    https://facebook.github.io/react; see AUTHORS for full list of\n    contributors),\n  Michel Weststrate [aut, cph] (mobx library in lib,\n    https://github.com/mobxjs),\n  Kent Russell [aut, cre] (R interface),\n  Alan Dipert [aut] (R interface)",
+        "Repository": "CRAN",
+        "Date/Publication": "2020-07-12 12:50:02 UTC",
+        "Built": "R 4.0.0; ; 2020-07-16 13:55:34 UTC; unix"
+      }
+    },
+    "reactable": {
+      "Source": "CRAN",
+      "Repository": "https://www.stats.bris.ac.uk/R/",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "reactable",
+        "Type": "Package",
+        "Title": "Interactive Data Tables Based on 'React Table'",
+        "Version": "0.2.0",
+        "Authors@R": "c(\n    person(\"Greg\", \"Lin\", email = \"glin@glin.io\", role = c(\"aut\", \"cre\")),\n    person(\"Tanner\", \"Linsley\", role = c(\"ctb\", \"cph\"), comment = \"React Table library\"),\n    person(family = \"Emotion team and other contributors\", role = c(\"ctb\", \"cph\"),\n           comment = \"Emotion library\")\n    )",
+        "Description": "Interactive data tables for R, based on the 'React Table'\n    JavaScript library. Provides an HTML widget that can be used in 'R Markdown'\n    documents and 'Shiny' applications, or viewed from an R console.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://glin.github.io/reactable,\nhttps://github.com/glin/reactable",
+        "BugReports": "https://github.com/glin/reactable/issues",
+        "Depends": "R (>= 3.1)",
+        "Imports": "digest, htmltools, htmlwidgets, jsonlite, reactR",
+        "Suggests": "covr, crosstalk, dplyr, leaflet, rmarkdown, shiny, sparkline,\ntestthat",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "RoxygenNote": "7.1.0",
+        "NeedsCompilation": "no",
+        "Packaged": "2020-05-28 05:25:16 UTC; greg",
+        "Author": "Greg Lin [aut, cre],\n  Tanner Linsley [ctb, cph] (React Table library),\n  Emotion team and other contributors [ctb, cph] (Emotion library)",
+        "Maintainer": "Greg Lin <glin@glin.io>",
+        "Repository": "CRAN",
+        "Date/Publication": "2020-05-28 05:50:03 UTC",
+        "Built": "R 4.0.0; ; 2020-07-16 13:55:35 UTC; unix"
+      }
+    },
     "readr": {
       "Source": "CRAN",
       "Repository": "https://www.stats.bris.ac.uk/R/",
@@ -3817,17 +3882,14 @@
     }
   },
   "files": {
-    ".httr-oauth": {
-      "checksum": "775fadd6bb7f1ac1d408071f742430d4"
-    },
-    "data/clean_indicators.RDS": {
-      "checksum": "ef17c5265ffb87a837549ed7fb975ef8"
+    "data/clean_indicators.RData": {
+      "checksum": "363acca605cb1cf56cdd08c3c0ca19c2"
     },
     "data/indicator_info.csv": {
       "checksum": "0c157faa8e6dce79010548198cbe08d7"
     },
     "global.R": {
-      "checksum": "b6972b0c06a5c0fd44adab5dc795a697"
+      "checksum": "40641b8d127ee576b099252984cc09bf"
     },
     "packrat/desc/askpass": {
       "checksum": "ce96e54b5f5701e98ab539cd23787fca"
@@ -3938,7 +4000,7 @@
       "checksum": "8658e66cdae882dc48444bb57349e1a7"
     },
     "packrat/desc/glue": {
-      "checksum": "31e153d2f4f063993ab9937107db5093"
+      "checksum": "64d3e522c71796b13a525dcb421d9cdd"
     },
     "packrat/desc/gridExtra": {
       "checksum": "9ddc343d3866968eac627f2607877b1b"
@@ -4081,6 +4143,12 @@
     "packrat/desc/Rcpp": {
       "checksum": "a8c8241990f8dd70e4811204dc0a7351"
     },
+    "packrat/desc/reactable": {
+      "checksum": "3caf3e2b4d1c87ac47e8b52814a29550"
+    },
+    "packrat/desc/reactR": {
+      "checksum": "2b6efa655762b7fc65d84873fff174e2"
+    },
     "packrat/desc/readr": {
       "checksum": "bc1a75dedad8a456184178eacb198abb"
     },
@@ -4196,16 +4264,22 @@
       "checksum": "f18e6ca9d7017b65c58a6d3eb85f60f2"
     },
     "packrat/packrat.lock": {
-      "checksum": "ebda91155f0123e584487d86ea6be215"
+      "checksum": "f9355b426ad33dc65f701f21599939ed"
+    },
+    "R/calc_disags.R": {
+      "checksum": "3db4bffc413753aae24fb8fe1fcbdf95"
     },
     "R/catDetail_module.R": {
-      "checksum": "973a49521298c3edde59f0e085fccdf7"
+      "checksum": "d34ba55f4c6394261eb15c7667db9ea1"
+    },
+    "R/categoryPanel-module.R": {
+      "checksum": "fb7ba73bf0c58d154af0aa929c570c10"
     },
     "R/catSimpleSummary_module.R": {
       "checksum": "2e054f2739119949b2315e6834376f35"
     },
     "R/cook_waffle.R": {
-      "checksum": "1174f32fc1e8f02f1c9d30a0f49a701a"
+      "checksum": "d0dbd80df3e6354676b601b71f791fa3"
     },
     "R/create_indicator_info.R": {
       "checksum": "7a8d34609661332087ed2be32ee7d8e9"
@@ -4214,7 +4288,7 @@
       "checksum": "f34a404baa46c1e816845b233d9bebb5"
     },
     "R/generate_text.R": {
-      "checksum": "51c07eed090c2d46101a07d039e472e5"
+      "checksum": "2e441aa30fd2d787ff2d0a41391451e7"
     },
     "R/indicatorDashModule.R": {
       "checksum": "145f51762bed1348c884dbf47a880bba"
@@ -4223,16 +4297,16 @@
       "checksum": "d95e41728f179fa6045b42a67a7fb1e8"
     },
     "R/load_libraries.R": {
-      "checksum": "2339f27f14c94d467308722b9b816b63"
+      "checksum": "34af88d7e2c9ef54841841e1b835a5c1"
     },
     "README.md": {
       "checksum": "b587068cf4300befb98c990efa955f01"
     },
     "server.R": {
-      "checksum": "9fedbe6ad2434f8960347959b99c3943"
+      "checksum": "426fbfda131b16661d549558732baac7"
     },
     "ui.R": {
-      "checksum": "6d65e23f5668c7235c9a85254e3c071c"
+      "checksum": "dc1e92e1706adf709da2a2028e3a6534"
     },
     "www/content/about_app.md": {
       "checksum": "8afefd7bdcc403da51c17d7079b8c209"
