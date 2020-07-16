@@ -65,7 +65,7 @@ catDetailUI = function(id, cat){
         ), # End: column
         column(4,
                wellPanel(
-                 dataTableOutput(ns("detailed_table")), 
+                 reactableOutput(ns("detailed_table")), 
                  downloadButton(ns("downloadData"), "Download")
                )
         ) # End: column
@@ -85,7 +85,8 @@ catDetail = function(input, output, session){
     reactive({
       indicator_data %>%
         filter(ind_id == input$ind_id) %>%
-        filter_disag(input$disag)
+        filter_disag(input$disag) %>%
+        mutate(across(where(is.numeric), round))
     })
   
   # Plot
@@ -118,8 +119,8 @@ catDetail = function(input, output, session){
     g + 
       labs(title = input$plot_title,
            caption = input$plot_caption) +
-      scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
-      coord_cartesian(ylim = c(0, 0.5)) +
+      #scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+      #coord_cartesian(ylim = c(0, 0.5)) +
       theme_minimal() +
       scale_fill_brewer(palette = "Dark2")
   })
@@ -129,11 +130,10 @@ catDetail = function(input, output, session){
   })
   
   output$detailed_table = 
-    DT::renderDataTable({
+    renderReactable({
       data() %>%
         select(-ind_id) %>% 
-        DT::datatable(rownames = FALSE) %>%
-        formatPercentage("value", round = 1) 
+        reactable()
     })
   
   output$downloadData = downloadHandler(

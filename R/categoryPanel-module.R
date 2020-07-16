@@ -21,5 +21,5 @@ categoryPanelUI = function(id){
 
 categoryPanel = function(input, output, session){
   callModule(catSimpleSummary, "simple")
-  callModule(catDetail, "detail")
+  callModule(catDetail, "detailed")
 }

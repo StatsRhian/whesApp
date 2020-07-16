@@ -1,7 +1,8 @@
 # Load libraries
 
 library(bootstraplib)
-library(DT)
+#library(DT)
+library(reactable)
 library(glue)
 library(hrbrthemes)
 library(RColorBrewer)

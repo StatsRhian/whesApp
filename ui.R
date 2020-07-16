@@ -41,7 +41,7 @@ navbarPage("Welsh Health Equity Status",
                                  Prosperous and a Globally Responsible Wales for the present and future generations.
                                  You can also explore the Health Equity Status for Europe in ", a(href = 'https://whoeurope.shinyapps.io/health_equity_dataset/', 'The Health Equity Dataset', .noWS = 'outside'), ".", .noWS = c("after-begin", "before-end")),
                       h3("Search for a specific indicator"), 
-                      dataTableOutput("indicator_search")
+                      reactableOutput("indicator_search")
              ),
              
              "Inequalities in Health",

@@ -11,9 +11,11 @@ shinyServer(function(input, output, session) {
   
   output$test_lang = renderText(input$lang)
   
-  output$indicator_search = renderDataTable({
+  output$indicator_search = renderReactable({
     indicator_info %>%
-      DT::datatable()
+      select(-ind_id) %>%
+      reactable(filterable = TRUE) 
+      
   })
   
   shinyjs::onclick("img_health",
