@@ -21,15 +21,7 @@ catSimpleSummaryUI = function(id, cat){
                            width = "90%"
                )
         ), # End: column
-        column(6,
-               selectInput(ns("disag"),
-                           label = "Please select a disaggregate",
-                           choices = c("None" = "None",
-                                       "Gender" = "Gender",
-                                       "Age" = "Age",
-                                       "Welsh Index" = "WIMD", 
-                                       "Education level" = "Education"),
-                           selected = "None")
+        column(6, uiOutput(ns("select_disag"))
         ) # End: column
       ), # End: fluid row
       
@@ -46,6 +38,19 @@ catSimpleSummaryUI = function(id, cat){
 }
 
 catSimpleSummary = function(input, output, session) {
+  
+output$select_disag = renderUI({
+  choices =
+    indicator_info %>%
+    filter(ind_id == input$ind_id) %>%
+    pull(disag) %>%
+    unlist()
+  names(choices) = choices
+selectInput(session$ns("disag"),
+                          label = "Please select a disaggregate",
+                          choices = c("None", choices),
+                          selected = "None")
+})
   
 waffle_plot = reactive({
   title = 
