@@ -15,10 +15,30 @@ prep_waffle = function(df, disag = input$disag){
     mutate(Percent = round(Percent * 100, 0))
 }
 
+disag_facet_labels = tr_pull(translate_db,
+                             key = "disag_[A-Za-z]*_value[0-9]",
+                             lang = "EN",
+                             search = TRUE)
+disag_facet_labels_new = tr_pull(translate_db,
+                                 key = "disag_[A-Za-z]*_value[0-9]",
+                                 lang = "CY",
+                                 search = TRUE)
+
+names(disag_facet_labels_new) = disag_facet_labels
+names(disag_facet_labels) = disag_facet_labels
+
+translate_labeller = function(lang){
+  switch(lang, 
+         "EN" = as_labeller(disag_facet_labels),
+         "CY" = as_labeller(disag_facet_labels_new))
+}
+
+
 cook_waffle = function(df, disag = input$disag, 
                        title = "", 
                        caption = "Welsh Health Equity Status 2020",
-                       legend_labels = c("Yes", "No")){
+                       legend_labels = c("Yes", "No"),
+                       lang = "EN"){
   waffle = 
     df %>%
   ggplot(aes(values = Percent, label = Response, col = Response)) +
@@ -53,7 +73,8 @@ cook_waffle = function(df, disag = input$disag,
   } else {
     waffle = 
       waffle +
-      facet_grid(cols = vars(!!sym(disag))) +
+      facet_grid(cols = vars(!!sym(disag)),
+                 labeller = translate_labeller(lang = lang)) +
       scale_x_discrete(expand = c(0, 0)) +
       scale_y_discrete(expand = c(0, 0)) +
       coord_equal()

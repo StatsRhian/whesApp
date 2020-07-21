@@ -95,3 +95,16 @@ waffle_caption,Welsh Health Equity Status 2020,Statws Ecwiti Iechyd Cymru 2020
 infographics_tab_title,Infographics,Infograffeg
 details_tab_title,Details,Manylion
 policies_tab_title,Policies,Polisïau
+disag_Gender_value1,Male,Hi
+disag_Gender_value2,Female,Hello
+disag_Age_value1,Retirement Age Adult,A
+disag_Age_value2,Working Age Adult,B
+disag_Age_value3,Young Adult,C
+disag_WIMD_value1,1,1
+disag_WIMD_value2,2,2
+disag_WIMD_value3,3,3
+disag_WIMD_value4,4,4
+disag_WIMD_value5,5,5
+disag_Education_value1,Low,hsr
+disag_Education_value2,High,fdsbaj
+disag_Education_value3,Medium,feiw
