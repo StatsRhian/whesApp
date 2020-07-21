@@ -45,11 +45,32 @@ output$select_disag = renderUI({
     filter(ind_id == input$ind_id) %>%
     pull(disag) %>%
     unlist()
+
+  if (is.na(choices)) {
+    choices = "None"
+  } else {
+    choices = c("None", choices)
+  }
   names(choices) = choices
 selectInput(session$ns("disag"),
                           label = "Please select a disaggregate",
-                          choices = c("None", choices),
+                          choices = choices,
                           selected = "None")
+})
+
+# Hide Waffle & Download if not a pecentage indicator
+observeEvent(input$ind_id, {
+  type = 
+    indicator_info %>%
+    filter(ind_id == input$ind_id) %>%
+    pull(type)
+  if (type != "percent") {
+    hide("infographic")
+    hide("downloadPlot")
+  } else {
+    show("infographic")
+    show("downloadPlot")
+    }
 })
   
 waffle_plot = reactive({
@@ -66,13 +87,20 @@ waffle_plot = reactive({
   })
 
 output$simple_summary = renderUI({
-  statement = indicator_info$name[which(indicator_info$ind_id == input$ind_id)]
+  type = indicator_info %>%
+    filter(ind_id == input$ind_id) %>% 
+    pull(type)
+  
+  statement = indicator_info %>%
+    filter(ind_id == input$ind_id) %>% 
+    pull(name)
+
   indicator_data %>%
     filter(ind_id == input$ind_id) %>%
     filter_disag(input$disag) %>%
-    generate_text(input$disag, statement) %>%
-    #add_style() %>%
-    HTML()
+    generate_text(statement, input$disag, type) %>%
+    HTML() %>%
+    style_text()
 })
 
 output$infographic = renderPlot({
