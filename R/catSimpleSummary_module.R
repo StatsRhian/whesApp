@@ -12,7 +12,7 @@ catSimpleSummaryUI = function(id, cat){
       fluidRow(
         column(6,
                selectInput(ns("ind_id"),
-                           label = "Please select an indicator",
+                           label = "Please select an indicator. You can type in the box to search for a key word.",
                            choices = 
                              filter(indicator_info, category == cat) %>%
                              select(name, ind_id) %>%
@@ -52,6 +52,7 @@ output$select_disag = renderUI({
     choices = c("None", choices)
   }
   names(choices) = choices
+  
 selectInput(session$ns("disag"),
                           label = "Please select a disaggregate",
                           choices = choices,
@@ -115,5 +116,8 @@ output$infographic = renderPlot({
       ggsave(file, plot =  waffle_plot(), device = "png")
     }
   )
+
+# Ensure select_disag works on start
+outputOptions(output, "select_disag", suspendWhenHidden = FALSE)
   
 }

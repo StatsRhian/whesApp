@@ -24,3 +24,10 @@ cat_df =
            "wrench"
   )
   )
+
+full_category = Vectorize(function(cat){
+  return(cat_df$name[cat_df$catID == cat])
+}, 
+USE.NAMES = FALSE
+)
+

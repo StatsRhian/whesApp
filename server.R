@@ -13,37 +13,47 @@ shinyServer(function(input, output, session) {
   
   output$indicator_search = renderReactable({
     indicator_info %>%
-      select(-ind_id) %>%
-      reactable(filterable = TRUE) 
-      
+      mutate(category = full_category(category)) %>%
+      select(name, category) %>%
+      reactable(
+        defaultPageSize = 5,
+        compact = TRUE,
+        searchable = TRUE,
+        columns = list(
+          name = colDef(name = "Indicator"),
+          category = colDef(name = "Category")
+        ),
+        defaultColDef = colDef(
+          align = "left",
+          headerStyle = list(background = "#f7f7f8")
+        ))
+    
   })
   
   shinyjs::onclick("img_health",
                    updateTabsetPanel(session,
                                      inputId = "tab_categories",
-                                     selected = cat_df$name[cat_df$catID == "health"]))
+                                     selected =  full_category("health")))
   shinyjs::onclick("img_income",
                    updateTabsetPanel(session,
                                      inputId = "tab_categories",
-                                     selected = cat_df$name[cat_df$catID == "income"]))
+                                     selected =  full_category("income")))
   
   shinyjs::onclick("img_living",
                    updateTabsetPanel(session,
                                      inputId = "tab_categories",
-                                     selected = cat_df$name[cat_df$catID == "living"]))
+                                     selected =  full_category("living")))
   
   shinyjs::onclick("img_social",
                    updateTabsetPanel(session,
                                      inputId = "tab_categories",
-                                     selected = cat_df$name[cat_df$catID == "social"]))
+                                     selected =  full_category("social")))
   
   shinyjs::onclick("img_employment",
                    updateTabsetPanel(session,
                                      inputId = "tab_categories",
-                                     selected = cat_df$name[cat_df$catID == "employment"]))
+                                     selected = full_category("employment")))
   
 })
-
-
 
 

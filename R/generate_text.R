@@ -1,6 +1,6 @@
 generate_text = function(df, statement, disag, type){
   if (disag == "None") {
-    if(type == "percent"){
+    if (type == "percent") {
       value = df %>%
         pull(value) %>%
         scales::percent(scale = 1, accuracy = 1) # Only for percent indicators

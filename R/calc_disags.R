@@ -14,7 +14,8 @@ calc_disag_vars = Vectorize(function(id){
   }
   
   return(list(disags))
-})
+}, 
+USE.NAMES = FALSE)
 
 get_disag_choices = function(id){
   indicator_info %>%

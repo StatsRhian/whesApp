@@ -34,13 +34,8 @@ catDetailUI = function(id, cat){
       ), # End: fluid row
       
       fluidRow(
-        p("Year: 2019"),
-        br(),
-        p("Source: ", a(href = "https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591",
-                        "National Survey for Wales 2019",
-                        .noWS = "outside", 
-                        target = "_blank"),
-          .noWS = c("after-begin", "before-end"))
+        htmlOutput(ns("source_info")),
+        tags$br()
       ), # End: fluid row
       
       fluidRow(
@@ -71,6 +66,7 @@ catDetailUI = function(id, cat){
         ) # End: column
       ), # End: fluid row
       fluidRow(
+        tags$br(),
         includeMarkdown("www/content/ind001.md")    
       ) # End: fluid row
     )
@@ -135,6 +131,14 @@ catDetail = function(input, output, session){
         select(-ind_id) %>% 
         reactable()
     })
+  
+  output$source_info = renderUI({
+    df = indicator_info %>%
+      filter(ind_id == input$ind_id) 
+    df %>%
+      generate_source() %>%
+      HTML() 
+  })
   
   output$downloadData = downloadHandler(
     filename = function() {
