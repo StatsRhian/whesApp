@@ -104,13 +104,20 @@ catDetail = function(input, output, session){
                    cols = vars(!!!syms(input$disag)[[4]]))
     }
     
-    g + 
+    g = 
+      g + 
       labs(title = input$plot_title,
            caption = input$plot_caption) +
-      #scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
       #coord_cartesian(ylim = c(0, 0.5)) +
       theme_minimal() +
       scale_fill_brewer(palette = "Dark2")
+    
+    if (data()$type == "percent") {
+      g = g + 
+        scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+        ylab("Percent")
+    }
+    return(g)
   })
   
   output$bar_plot = renderPlot({
