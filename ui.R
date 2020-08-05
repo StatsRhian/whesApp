@@ -40,7 +40,7 @@ navbarPage("Welsh Health Equity Status",
                                  Programme, facilitating, monitoring and accelerating joint action across sectors, governance levels and key stakeholders to help achieve a Healthier, a More Equal, a
                                  Prosperous and a Globally Responsible Wales for the present and future generations.
                                  You can also explore the Health Equity Status for Europe in ", a(href = 'https://whoeurope.shinyapps.io/health_equity_dataset/', 'The Health Equity Dataset', .noWS = 'outside'), ".", .noWS = c("after-begin", "before-end")),
-                      h3("Search for a specific indicator"), 
+                      p("Search the table below for a specific indicator, to discover which category they are listed under. Or simply select a category on the left to start exploring."), 
                       reactableOutput("indicator_search")
              ),
              

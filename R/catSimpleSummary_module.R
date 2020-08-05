@@ -12,7 +12,7 @@ catSimpleSummaryUI = function(id, cat){
       fluidRow(
         column(6,
                selectInput(ns("ind_id"),
-                           label = "Please select an indicator",
+                           label = "Please select an indicator. You can type in the box to search for a key word.",
                            choices = 
                              filter(indicator_info, category == cat) %>%
                              select(name, ind_id) %>%
@@ -21,15 +21,7 @@ catSimpleSummaryUI = function(id, cat){
                            width = "90%"
                )
         ), # End: column
-        column(6,
-               selectInput(ns("disag"),
-                           label = "Please select a disaggregate",
-                           choices = c("None" = "None",
-                                       "Gender" = "Gender",
-                                       "Age" = "Age",
-                                       "Welsh Index" = "WIMD", 
-                                       "Education level" = "Education"),
-                           selected = "None")
+        column(6, uiOutput(ns("select_disag"))
         ) # End: column
       ), # End: fluid row
       
@@ -47,6 +39,41 @@ catSimpleSummaryUI = function(id, cat){
 
 catSimpleSummary = function(input, output, session) {
   
+output$select_disag = renderUI({
+  choices =
+    indicator_info %>%
+    filter(ind_id == input$ind_id) %>%
+    pull(disag) %>%
+    unlist()
+
+  if (is.na(choices)) {
+    choices = "None"
+  } else {
+    choices = c("None", choices)
+  }
+  names(choices) = choices
+  
+selectInput(session$ns("disag"),
+                          label = "Please select a disaggregate",
+                          choices = choices,
+                          selected = "None")
+})
+
+# Hide Waffle & Download if not a pecentage indicator
+observeEvent(input$ind_id, {
+  type = 
+    indicator_info %>%
+    filter(ind_id == input$ind_id) %>%
+    pull(type)
+  if (type != "percent") {
+    hide("infographic")
+    hide("downloadPlot")
+  } else {
+    show("infographic")
+    show("downloadPlot")
+    }
+})
+  
 waffle_plot = reactive({
   title = 
     indicator_info %>%
@@ -61,13 +88,20 @@ waffle_plot = reactive({
   })
 
 output$simple_summary = renderUI({
-  statement = indicator_info$name[which(indicator_info$ind_id == input$ind_id)]
+  type = indicator_info %>%
+    filter(ind_id == input$ind_id) %>% 
+    pull(type)
+  
+  statement = indicator_info %>%
+    filter(ind_id == input$ind_id) %>% 
+    pull(name)
+
   indicator_data %>%
     filter(ind_id == input$ind_id) %>%
     filter_disag(input$disag) %>%
-    generate_text(input$disag, statement) %>%
-    #add_style() %>%
-    HTML()
+    generate_text(statement, input$disag, type) %>%
+    HTML() %>%
+    style_text()
 })
 
 output$infographic = renderPlot({
@@ -82,5 +116,8 @@ output$infographic = renderPlot({
       ggsave(file, plot =  waffle_plot(), device = "png")
     }
   )
+
+# Ensure select_disag works on start
+outputOptions(output, "select_disag", suspendWhenHidden = FALSE)
   
 }

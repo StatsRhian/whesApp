@@ -1,13 +1,16 @@
-generate_text = function(df, disag, statement){
+generate_text = function(df, statement, disag, type){
   if (disag == "None") {
-    percent = 
-      df %>%
-      pull(value) %>%
-      scales::percent(scale = 1, accuracy = 1) # Only for percent indicators
-    text_out = glue::glue("The {first_to_lower(statement)} is <b>{percent}</b>.")
+    if (type == "percent") {
+      value = df %>%
+        pull(value) %>%
+        scales::percent(accuracy = 1) # Only for percent indicators
+    } else{
+      value = df %>%
+        pull(value)
+    }
+    text_out = glue::glue("The {first_to_lower(statement)} is <b>{value}</b>.")
   } else {
-    
-    
+   text_out = "" 
   }
 
   return(text_out) 
@@ -22,4 +25,8 @@ first_to_lower = function(text){
    
    str_sub(text, 1, 1) = new
    return(text)
+}
+
+style_text = function(text){
+  styled = p(text,  style = "font-size: 20px")
 }
