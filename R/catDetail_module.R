@@ -21,15 +21,7 @@ catDetailUI = function(id, cat){
                            width = "90%"
                )
         ), # End: column
-        column(6,
-               selectInput(ns("disag"),
-                           label = "Please select a disaggregate",
-                           choices = c("Gender" = "Gender",
-                                       "Age" = "Age",
-                                       "Welsh Index" = "WIMD", 
-                                       "Education level" = "Education"),
-                           selected = "Gender", 
-                           multiple = TRUE)
+        column(6, uiOutput(ns("select_disag"))
         ) # End: column
       ), # End: fluid row
       
@@ -90,7 +82,8 @@ catDetail = function(input, output, session){
     if (is.null(input$disag)) {
       g = data() %>%
         ggplot(aes(x = "All", y = value)) + 
-        geom_col(fill = "#1B9E77")
+        geom_col(fill = "#1B9E77") +
+        xlab("")
     } else if (length(input$disag) == 1) {
       g = data() %>%
         ggplot(aes(x = !!sym(input$disag), y = value)) + 
@@ -125,11 +118,27 @@ catDetail = function(input, output, session){
     plot_obj()
   })
   
+  
+  output$select_disag = renderUI({
+    choices =
+      indicator_info %>%
+      filter(ind_id == input$ind_id) %>%
+      pull(disag) %>%
+      unlist()
+    
+    names(choices) = choices
+    
+    selectInput(session$ns("disag"),
+                label = "Please select a disaggregate",
+                choices = choices,
+                selected = "",
+                multiple = TRUE)
+  })  
+  
   output$detailed_table = 
     renderReactable({
       data() %>%
-        select(-ind_id) %>% 
-        reactable()
+        create_reactable()
     })
   
   output$source_info = renderUI({
@@ -157,5 +166,8 @@ catDetail = function(input, output, session){
       ggsave(file, plot =  plot_obj(), device = "png")
     }
   )
+  
+  # Ensure select_disag works on start
+  outputOptions(output, "select_disag", suspendWhenHidden = FALSE)
   
 }
