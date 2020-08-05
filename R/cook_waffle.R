@@ -1,7 +1,7 @@
 prep_waffle = function(df, disag = input$disag){
   df %>%
     rename(Yes = value) %>%
-    mutate(No = 100 - Yes)  %>%
+    mutate(No = 1 - Yes)  %>%
     select(-type, -n, -ci_lower, -ci_upper, -ind_id) %>%
     when(
       (disag == "None") ~ pivot_longer(., cols = everything(),
@@ -12,7 +12,7 @@ prep_waffle = function(df, disag = input$disag){
                       values_to = "Percent") 
     ) %>%
     mutate(Response = as_factor(Response)) %>%
-    mutate(Percent = round(Percent, 0))
+    mutate(Percent = round(Percent * 100, 0))
 }
 
 cook_waffle = function(df, disag = input$disag, title = ""){

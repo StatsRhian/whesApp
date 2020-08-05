@@ -73,8 +73,7 @@ catDetail = function(input, output, session){
     reactive({
       indicator_data %>%
         filter(ind_id == input$ind_id) %>%
-        filter_disag(input$disag) %>%
-        mutate(across(where(is.numeric), round))
+        filter_disag(input$disag)
     })
   
   # Plot
