@@ -919,26 +919,26 @@
         "Type": "Package",
         "Package": "dplyr",
         "Title": "A Grammar of Data Manipulation",
-        "Version": "1.0.0",
+        "Version": "1.0.1",
         "Authors@R": "\n    c(person(given = \"Hadley\",\n             family = \"Wickham\",\n             role = c(\"aut\", \"cre\"),\n             email = \"hadley@rstudio.com\",\n             comment = c(ORCID = \"0000-0003-4757-117X\")),\n      person(given = \"Romain\",\n             family = \"François\",\n             role = \"aut\",\n             comment = c(ORCID = \"0000-0002-2444-4226\")),\n      person(given = \"Lionel\",\n             family = \"Henry\",\n             role = \"aut\"),\n      person(given = \"Kirill\",\n             family = \"Müller\",\n             role = \"aut\",\n             comment = c(ORCID = \"0000-0002-1416-3412\")),\n      person(given = \"RStudio\",\n             role = c(\"cph\", \"fnd\")))",
         "Description": "A fast, consistent tool for working with data frame\n    like objects, both in memory and out of memory.",
         "License": "MIT + file LICENSE",
         "URL": "https://dplyr.tidyverse.org, https://github.com/tidyverse/dplyr",
         "BugReports": "https://github.com/tidyverse/dplyr/issues",
         "Depends": "R (>= 3.2.0)",
-        "Imports": "ellipsis, generics, glue (>= 1.3.2), lifecycle (>= 0.2.0),\nmagrittr (>= 1.5), methods, R6, rlang (>= 0.4.6), tibble (>=\n2.1.3), tidyselect (>= 1.1.0), utils, vctrs (>= 0.3.0)",
+        "Imports": "ellipsis, generics, glue (>= 1.3.2), lifecycle (>= 0.2.0),\nmagrittr (>= 1.5), methods, R6, rlang (>= 0.4.7), tibble (>=\n2.1.3), tidyselect (>= 1.1.0), utils, vctrs (>= 0.3.2)",
         "Suggests": "bench, broom, callr, covr, DBI, dbplyr (>= 1.4.3), knitr,\nLahman, lobstr, microbenchmark, nycflights13, purrr, rmarkdown,\nRMySQL, RPostgreSQL, RSQLite, testthat (>= 2.1.0), withr",
         "VignetteBuilder": "knitr",
         "Encoding": "UTF-8",
         "LazyData": "yes",
-        "RoxygenNote": "7.1.0",
+        "RoxygenNote": "7.1.1",
         "NeedsCompilation": "yes",
-        "Packaged": "2020-05-28 23:53:24 UTC; hadley",
+        "Packaged": "2020-07-22 12:06:49 UTC; romainfrancois",
         "Author": "Hadley Wickham [aut, cre] (<https://orcid.org/0000-0003-4757-117X>),\n  Romain François [aut] (<https://orcid.org/0000-0002-2444-4226>),\n  Lionel Henry [aut],\n  Kirill Müller [aut] (<https://orcid.org/0000-0002-1416-3412>),\n  RStudio [cph, fnd]",
         "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
         "Repository": "CRAN",
-        "Date/Publication": "2020-05-29 15:00:03 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:45:16 UTC; unix"
+        "Date/Publication": "2020-07-31 07:00:05 UTC",
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-08-03 09:18:30 UTC; unix"
       }
     },
     "ellipsis": {
@@ -1186,7 +1186,7 @@
       "description": {
         "Package": "fs",
         "Title": "Cross-Platform File System Operations Based on 'libuv'",
-        "Version": "1.4.2",
+        "Version": "1.5.0",
         "Authors@R": "c(\n    person(\"Jim\", \"Hester\", email = \"james.f.hester@gmail.com\", role = c(\"aut\", \"cre\")),\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", \"aut\"),\n    person(\"libuv project contributors\", role = \"cph\", comment = \"libuv library\"),\n    person(\"Joyent, Inc. and other Node contributors\", role = \"cph\", comment = \"libuv library\"),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\"))\n    )",
         "Description": "A cross-platform interface to file system operations, built on\n  top of the 'libuv' C library.",
         "Depends": "R (>= 3.1)",
@@ -1200,16 +1200,16 @@
         "URL": "http://fs.r-lib.org, https://github.com/r-lib/fs",
         "BugReports": "https://github.com/r-lib/fs/issues",
         "Copyright": "file COPYRIGHTS",
-        "Suggests": "testthat, covr, pillar (>= 1.0.0), tibble (>= 1.1.0), crayon,\nrmarkdown, knitr, withr, spelling",
+        "Suggests": "testthat, covr, pillar (>= 1.0.0), tibble (>= 1.1.0), crayon,\nrmarkdown, knitr, withr, spelling, vctrs (>= 0.3.0)",
         "VignetteBuilder": "knitr",
         "Language": "en-US",
         "NeedsCompilation": "yes",
-        "Packaged": "2020-06-30 13:21:06 UTC; jhester",
+        "Packaged": "2020-07-31 21:00:55 UTC; jhester",
         "Author": "Jim Hester [aut, cre],\n  Hadley Wickham [aut],\n  libuv project contributors [cph] (libuv library),\n  Joyent, Inc. and other Node contributors [cph] (libuv library),\n  RStudio [cph, fnd]",
         "Maintainer": "Jim Hester <james.f.hester@gmail.com>",
         "Repository": "CRAN",
-        "Date/Publication": "2020-06-30 14:40:02 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:38:58 UTC; unix"
+        "Date/Publication": "2020-07-31 21:30:03 UTC",
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-08-04 10:20:28 UTC; unix"
       }
     },
     "gdtools": {
@@ -1666,7 +1666,7 @@
       "description": {
         "Package": "httr",
         "Title": "Tools for Working with URLs and HTTP",
-        "Version": "1.4.1",
+        "Version": "1.4.2",
         "Authors@R": "\n    c(person(given = \"Hadley\",\n             family = \"Wickham\",\n             role = c(\"aut\", \"cre\"),\n             email = \"hadley@rstudio.com\"),\n      person(given = \"RStudio\",\n             role = \"cph\"))",
         "Description": "Useful tools for working with HTTP organised by\n    HTTP verbs (GET(), POST(), etc). Configuration functions make it easy\n    to control additional request components (authenticate(),\n    add_headers() and so on).",
         "License": "MIT + file LICENSE",
@@ -1677,14 +1677,14 @@
         "Suggests": "covr, httpuv, jpeg, knitr, png, readr, rmarkdown, testthat\n(>= 0.8.0), xml2",
         "VignetteBuilder": "knitr",
         "Encoding": "UTF-8",
-        "RoxygenNote": "6.1.1",
+        "RoxygenNote": "7.1.1",
         "NeedsCompilation": "no",
-        "Packaged": "2019-07-30 13:44:18 UTC; hadley",
+        "Packaged": "2020-07-20 14:19:08 UTC; hadley",
         "Author": "Hadley Wickham [aut, cre],\n  RStudio [cph]",
         "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
         "Repository": "CRAN",
-        "Date/Publication": "2019-08-05 14:30:02 UTC",
-        "Built": "R 4.0.0; ; 2020-07-07 13:44:02 UTC; unix"
+        "Date/Publication": "2020-07-20 23:40:04 UTC",
+        "Built": "R 4.0.0; ; 2020-08-04 10:20:22 UTC; unix"
       }
     },
     "isoband": {
@@ -1718,6 +1718,38 @@
         "Repository": "CRAN",
         "Date/Publication": "2020-06-20 18:20:03 UTC",
         "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:49:08 UTC; unix"
+      }
+    },
+    "janitor": {
+      "Source": "CRAN",
+      "Repository": "https://www.stats.bris.ac.uk/R/",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "janitor",
+        "Title": "Simple Tools for Examining and Cleaning Dirty Data",
+        "Version": "2.0.1",
+        "Authors@R": "c(person(\"Sam\", \"Firke\", email = \"samuel.firke@gmail.com\", role = c(\"aut\", \"cre\")),\n    person(\"Bill\", \"Denney\", email = \"wdenney@humanpredictions.com\", role = \"ctb\"),\n    person(\"Chris\", \"Haid\", email = \"chrishaid@gmail.com\", role = \"ctb\"),\n    person(\"Ryan\", \"Knight\", email = \"ryangknight@gmail.com\", role = \"ctb\"),\n    person(\"Malte\", \"Grosser\", email = \"malte.grosser@gmail.com\", role = \"ctb\"),\n    person(\"Jonathan\", \"Zadra\", email = \"jonathan.zadra@sorensonimpact.com\", role = \"ctb\"))",
+        "Description": "The main janitor functions can: perfectly format data.frame column\n    names; provide quick counts of variable combinations (i.e., frequency\n    tables and crosstabs); and isolate duplicate records. Other janitor functions\n    nicely format the tabulation results. These tabulate-and-report functions\n    approximate popular features of SPSS and Microsoft Excel. This package\n    follows the principles of the \"tidyverse\" and works well with the pipe function\n    %>%. janitor was built with beginning-to-intermediate R users in mind and is\n    optimized for user-friendliness. Advanced R users can already do everything\n    covered here, but with janitor they can do it faster and save their thinking for\n    the fun stuff.",
+        "URL": "https://github.com/sfirke/janitor",
+        "BugReports": "https://github.com/sfirke/janitor/issues",
+        "Depends": "R (>= 3.1.2)",
+        "Imports": "dplyr (>= 0.7.0), lifecycle, lubridate, magrittr, purrr,\nrlang, stringi, stringr, snakecase (>= 0.9.2), tidyselect (>=\n1.0.0), tidyr (>= 0.7.0)",
+        "License": "MIT + file LICENSE",
+        "LazyData": "true",
+        "RoxygenNote": "7.1.0",
+        "Suggests": "knitr, rmarkdown, sf, testthat, tibble, tidygraph",
+        "VignetteBuilder": "knitr",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "no",
+        "Packaged": "2020-04-11 21:26:03 UTC; samfi",
+        "Author": "Sam Firke [aut, cre],\n  Bill Denney [ctb],\n  Chris Haid [ctb],\n  Ryan Knight [ctb],\n  Malte Grosser [ctb],\n  Jonathan Zadra [ctb]",
+        "Maintainer": "Sam Firke <samuel.firke@gmail.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2020-04-12 05:40:02 UTC",
+        "Built": "R 4.0.0; ; 2020-07-10 10:10:03 UTC; unix"
       }
     },
     "jquerylib": {
@@ -2262,25 +2294,24 @@
       "description": {
         "Package": "pillar",
         "Title": "Coloured Formatting for Columns",
-        "Version": "1.4.4",
+        "Version": "1.4.6",
         "Authors@R": "\n    c(person(given = \"Kirill\",\n             family = \"M\\u00fcller\",\n             role = c(\"aut\", \"cre\"),\n             email = \"krlmlr+r@mailbox.org\"),\n      person(given = \"Hadley\",\n             family = \"Wickham\",\n             role = \"aut\"),\n      person(given = \"RStudio\",\n             role = \"cph\"))",
         "Description": "Provides 'pillar' and 'colonnade' generics designed\n    for formatting columns of data using the full range of colours\n    provided by modern terminals.",
         "License": "GPL-3",
         "URL": "https://github.com/r-lib/pillar",
         "BugReports": "https://github.com/r-lib/pillar/issues",
-        "Imports": "cli, crayon (>= 1.3.4), fansi, rlang (>= 0.3.0), utf8 (>=\n1.1.0), vctrs (>= 0.2.0)",
-        "Suggests": "knitr, lubridate, testthat (>= 2.0.0), withr",
+        "Imports": "cli, crayon (>= 1.3.4), ellipsis, fansi, lifecycle, rlang (>=\n0.3.0), utf8 (>= 1.1.0), vctrs (>= 0.2.0)",
+        "Suggests": "bit64, knitr, lubridate, testthat (>= 2.0.0), withr",
         "Encoding": "UTF-8",
         "LazyData": "true",
-        "RoxygenNote": "7.1.0",
-        "Collate": "'capital.R' 'compat-lifecycle.R' 'compat-purrr.R'\n'deprecated.R' 'dim.R' 'empty-data.R' 'extent.R' 'lengths.R'\n'multi.R' 'ornament.R' 'pillar-package.R' 'pillar.R'\n'rowid-capital.R' 'rowid-data.R' 'rowid-title.R' 'rowid-type.R'\n'scientific.R' 'shaft.R' 'shaft-simple.R' 'sigfig.R'\n'spark-bar.R' 'spark-line.R' 'strrep.R' 'styles.R' 'testthat.R'\n'tick.R' 'title.R' 'type-sum.R' 'type.R' 'utils.R' 'vctrs.R'\n'width.R' 'zzz.R'",
+        "RoxygenNote": "7.1.1.9000",
         "NeedsCompilation": "no",
-        "Packaged": "2020-05-05 03:49:44 UTC; kirill",
+        "Packaged": "2020-07-10 13:36:04 UTC; kirill",
         "Author": "Kirill Müller [aut, cre],\n  Hadley Wickham [aut],\n  RStudio [cph]",
         "Maintainer": "Kirill Müller <krlmlr+r@mailbox.org>",
         "Repository": "CRAN",
-        "Date/Publication": "2020-05-05 05:30:03 UTC",
-        "Built": "R 4.0.0; ; 2020-07-07 13:44:07 UTC; unix"
+        "Date/Publication": "2020-07-10 17:10:13 UTC",
+        "Built": "R 4.0.0; ; 2020-08-04 10:20:26 UTC; unix"
       }
     },
     "pkgbuild": {
@@ -3214,6 +3245,38 @@
         "Built": "R 4.0.0; ; 2020-07-09 15:09:43 UTC; unix"
       }
     },
+    "snakecase": {
+      "Source": "CRAN",
+      "Repository": "https://www.stats.bris.ac.uk/R/",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "snakecase",
+        "Version": "0.11.0",
+        "Date": "2019-05-25",
+        "Title": "Convert Strings into any Case",
+        "Description": "A consistent, flexible and easy to use tool to parse and convert strings into cases like snake or camel among others.",
+        "Authors@R": "c(\n    person(\"Malte\", \"Grosser\", , \"malte.grosser@gmail.com\", role = c(\"aut\", \"cre\")))",
+        "Maintainer": "Malte Grosser <malte.grosser@gmail.com>",
+        "Depends": "R (>= 3.2)",
+        "Imports": "stringr, stringi",
+        "Suggests": "testthat, covr, tibble, purrrlyr, knitr, rmarkdown, magrittr",
+        "URL": "https://github.com/Tazinho/snakecase",
+        "BugReports": "https://github.com/Tazinho/snakecase/issues",
+        "Encoding": "UTF-8",
+        "License": "GPL-3",
+        "RoxygenNote": "6.1.1",
+        "VignetteBuilder": "knitr",
+        "NeedsCompilation": "no",
+        "Packaged": "2019-05-25 21:16:42 UTC; MGO",
+        "Author": "Malte Grosser [aut, cre]",
+        "Repository": "CRAN",
+        "Date/Publication": "2019-05-25 22:50:03 UTC",
+        "Built": "R 4.0.0; ; 2020-07-07 14:01:13 UTC; unix"
+      }
+    },
     "sourcetools": {
       "Source": "CRAN",
       "Repository": "https://www.stats.bris.ac.uk/R/",
@@ -3318,7 +3381,7 @@
         "Package": "sys",
         "Type": "Package",
         "Title": "Powerful and Reliable Tools for Running System Commands in R",
-        "Version": "3.3",
+        "Version": "3.4",
         "Authors@R": "c(person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), \n      email = \"jeroen@berkeley.edu\", comment = c(ORCID = \"0000-0002-4035-0289\")),\n    person(\"Gábor\", \"Csárdi\", , \"csardi.gabor@gmail.com\", role = \"ctb\"))",
         "Description": "Drop-in replacements for the base system2() function with fine control\n    and consistent behavior across platforms. Supports clean interruption, timeout, \n    background tasks, and streaming STDIN / STDOUT / STDERR over binary or text \n    connections. Arguments on Windows automatically get encoded and quoted to work \n    on different locales.",
         "License": "MIT + file LICENSE",
@@ -3326,16 +3389,16 @@
         "BugReports": "https://github.com/jeroen/sys/issues",
         "Encoding": "UTF-8",
         "LazyData": "true",
-        "RoxygenNote": "6.1.1",
+        "RoxygenNote": "7.1.1",
         "Suggests": "unix (>= 1.4), spelling, testthat",
         "Language": "en-US",
         "NeedsCompilation": "yes",
-        "Packaged": "2019-08-21 11:45:42 UTC; jeroen",
+        "Packaged": "2020-07-22 19:23:54 UTC; jeroen",
         "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>),\n  Gábor Csárdi [ctb]",
         "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
         "Repository": "CRAN",
-        "Date/Publication": "2019-08-21 14:20:02 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:37:06 UTC; unix"
+        "Date/Publication": "2020-07-23 04:30:02 UTC",
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-08-04 10:20:25 UTC; unix"
       }
     },
     "systemfonts": {
@@ -3412,7 +3475,7 @@
       "description": {
         "Package": "tibble",
         "Title": "Simple Data Frames",
-        "Version": "3.0.2",
+        "Version": "3.0.3",
         "Authors@R": "\n    c(person(given = \"Kirill\",\n             family = \"M\\u00fcller\",\n             role = c(\"aut\", \"cre\"),\n             email = \"krlmlr+r@mailbox.org\"),\n      person(given = \"Hadley\",\n             family = \"Wickham\",\n             role = \"aut\",\n             email = \"hadley@rstudio.com\"),\n      person(given = \"Romain\",\n             family = \"Francois\",\n             role = \"ctb\",\n             email = \"romain@r-enthusiasts.com\"),\n      person(given = \"Jennifer\",\n             family = \"Bryan\",\n             role = \"ctb\",\n             email = \"jenny@rstudio.com\"),\n      person(given = \"RStudio\",\n             role = \"cph\"))",
         "Description": "Provides a 'tbl_df' class (the 'tibble') that\n    provides stricter checking and better formatting than the traditional\n    data frame.",
         "License": "MIT + file LICENSE",
@@ -3426,12 +3489,12 @@
         "LazyData": "yes",
         "RoxygenNote": "7.1.1.9000",
         "NeedsCompilation": "yes",
-        "Packaged": "2020-07-07 03:05:11 UTC; kirill",
+        "Packaged": "2020-07-10 09:44:37 UTC; kirill",
         "Author": "Kirill Müller [aut, cre],\n  Hadley Wickham [aut],\n  Romain Francois [ctb],\n  Jennifer Bryan [ctb],\n  RStudio [cph]",
         "Maintainer": "Kirill Müller <krlmlr+r@mailbox.org>",
         "Repository": "CRAN",
-        "Date/Publication": "2020-07-07 13:00:02 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:44:23 UTC; unix"
+        "Date/Publication": "2020-07-10 20:40:03 UTC",
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-08-04 10:20:56 UTC; unix"
       }
     },
     "tidyr": {
@@ -3603,27 +3666,27 @@
       "description": {
         "Package": "vctrs",
         "Title": "Vector Helpers",
-        "Version": "0.3.1",
+        "Version": "0.3.2",
         "Authors@R": "\n    c(person(given = \"Hadley\",\n             family = \"Wickham\",\n             role = \"aut\",\n             email = \"hadley@rstudio.com\"),\n      person(given = \"Lionel\",\n             family = \"Henry\",\n             role = c(\"aut\", \"cre\"),\n             email = \"lionel@rstudio.com\"),\n      person(given = \"Davis\",\n             family = \"Vaughan\",\n             role = \"aut\",\n             email = \"davis@rstudio.com\"),\n      person(given = \"RStudio\",\n             role = \"cph\"))",
         "Description": "Defines new notions of prototype and size that are\n    used to provide tools for consistent and well-founded type-coercion\n    and size-recycling, and are in turn connected to ideas of type- and\n    size-stability useful for analysing function interfaces.",
         "License": "GPL-3",
         "URL": "https://vctrs.r-lib.org/",
         "BugReports": "https://github.com/r-lib/vctrs/issues",
         "Depends": "R (>= 3.2)",
-        "Imports": "ellipsis (>= 0.2.0), digest, glue, rlang (>= 0.4.5)",
+        "Imports": "ellipsis (>= 0.2.0), digest, glue, rlang (>= 0.4.7)",
         "Suggests": "bit64, covr, crayon, dplyr (>= 0.8.5), generics, knitr,\npillar (>= 1.4.4), pkgdown, rmarkdown, testthat (>= 2.3.0),\ntibble, withr, xml2, zeallot",
         "VignetteBuilder": "knitr",
         "Encoding": "UTF-8",
         "Language": "en-GB",
         "LazyData": "true",
-        "RoxygenNote": "7.1.0",
+        "RoxygenNote": "7.1.1",
         "NeedsCompilation": "yes",
-        "Packaged": "2020-06-05 14:23:35 UTC; lionel",
+        "Packaged": "2020-07-15 10:57:45 UTC; lionel",
         "Author": "Hadley Wickham [aut],\n  Lionel Henry [aut, cre],\n  Davis Vaughan [aut],\n  RStudio [cph]",
         "Maintainer": "Lionel Henry <lionel@rstudio.com>",
         "Repository": "CRAN",
-        "Date/Publication": "2020-06-05 16:00:02 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:43:01 UTC; unix"
+        "Date/Publication": "2020-07-15 11:30:02 UTC",
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-08-03 09:18:21 UTC; unix"
       }
     },
     "viridisLite": {
@@ -3883,13 +3946,13 @@
   },
   "files": {
     "data/clean_indicators.RData": {
-      "checksum": "363acca605cb1cf56cdd08c3c0ca19c2"
+      "checksum": "9ecb01a022b3948099c5cdef73f3f881"
     },
     "data/indicator_info.csv": {
-      "checksum": "0c157faa8e6dce79010548198cbe08d7"
+      "checksum": "2212cb892381d208cda9ccb5cee27bc8"
     },
     "global.R": {
-      "checksum": "40641b8d127ee576b099252984cc09bf"
+      "checksum": "3b605ee8a1cc15951367f127816f9660"
     },
     "packrat/desc/askpass": {
       "checksum": "ce96e54b5f5701e98ab539cd23787fca"
@@ -3958,7 +4021,7 @@
       "checksum": "965236e15ee3b4c421925f483d92300d"
     },
     "packrat/desc/dplyr": {
-      "checksum": "3a7cc5962e827812a9616f737ce54c9b"
+      "checksum": "8fac4c9293a2a7fdc8e882f3dd03b607"
     },
     "packrat/desc/DT": {
       "checksum": "7c24a7b1b5a6784788c2e5045ec2f4cf"
@@ -3988,7 +4051,7 @@
       "checksum": "36a40826732efe022d7e28c9bb53e5ce"
     },
     "packrat/desc/fs": {
-      "checksum": "a9efd29433ea41d4814ab0a02fa92f59"
+      "checksum": "34f1ab2e630230bab6715395d9ed46fe"
     },
     "packrat/desc/gdtools": {
       "checksum": "d9b18406cca5613877a2381e9ca0bacb"
@@ -4033,10 +4096,13 @@
       "checksum": "fce7ac0375d790c9d6733298900b037b"
     },
     "packrat/desc/httr": {
-      "checksum": "aef9dbfb32e2bcddced347e6ba82ca77"
+      "checksum": "3ede95012ac8a51db9d78d7ad7038124"
     },
     "packrat/desc/isoband": {
       "checksum": "68816c1344dcc1a9202983a54d53ad54"
+    },
+    "packrat/desc/janitor": {
+      "checksum": "93d46eb1000094db916ed3a3198eb5ac"
     },
     "packrat/desc/jquerylib": {
       "checksum": "edcb6f89f7fd1e81ffeb3d2e6222a5d0"
@@ -4096,7 +4162,7 @@
       "checksum": "469fd16787d3d487c282e181d49eef94"
     },
     "packrat/desc/pillar": {
-      "checksum": "f938523a3e996db05625430a045133e5"
+      "checksum": "ace5f9df59f7be8e94a0baaef2e69494"
     },
     "packrat/desc/pkgbuild": {
       "checksum": "d997f3a6f97e4df4fd391a99b299abfc"
@@ -4200,6 +4266,9 @@
     "packrat/desc/shinyjs": {
       "checksum": "869148d208be90d14a0d350d62eb3bd1"
     },
+    "packrat/desc/snakecase": {
+      "checksum": "a8e578e9bfb818d502822989cc5bcc64"
+    },
     "packrat/desc/sourcetools": {
       "checksum": "97539f401765824623dff4b5c5ac016f"
     },
@@ -4210,7 +4279,7 @@
       "checksum": "f763326e6a7ef145841f157df11fad49"
     },
     "packrat/desc/sys": {
-      "checksum": "095b8ffe06051fb3624f70aafa616b5a"
+      "checksum": "c7dc2e6c9cedbe659e27b5926bc6d179"
     },
     "packrat/desc/systemfonts": {
       "checksum": "23902a164e0a77a988f76935f651ba1c"
@@ -4219,7 +4288,7 @@
       "checksum": "5c8423546c8b18c45309b13c96014d22"
     },
     "packrat/desc/tibble": {
-      "checksum": "68eb0cab6ce81c0ad9c0a34647ecf019"
+      "checksum": "702984801f4a2c04ec693137cea0d9e9"
     },
     "packrat/desc/tidyr": {
       "checksum": "515e6dfc5bf807eea5d695a5a25a19b7"
@@ -4237,7 +4306,7 @@
       "checksum": "3f4e45e6fc4983231f0949d9c979c1e0"
     },
     "packrat/desc/vctrs": {
-      "checksum": "e0c87138a30fa26210638f76dc2aee54"
+      "checksum": "494960077c3d61c7358ed2ef0c85839f"
     },
     "packrat/desc/viridisLite": {
       "checksum": "995c702afa3864d7f3407f49882cbea5"
@@ -4264,37 +4333,40 @@
       "checksum": "f18e6ca9d7017b65c58a6d3eb85f60f2"
     },
     "packrat/packrat.lock": {
-      "checksum": "f9355b426ad33dc65f701f21599939ed"
+      "checksum": "8d93e90794417fd298d0bf53c788b868"
     },
     "R/calc_disags.R": {
-      "checksum": "3db4bffc413753aae24fb8fe1fcbdf95"
+      "checksum": "c6d26a4bc7ea17f13a5e3a7abe7a3293"
     },
     "R/catDetail_module.R": {
-      "checksum": "d34ba55f4c6394261eb15c7667db9ea1"
+      "checksum": "0084d84a4b7330bf83565bd769c39741"
     },
     "R/categoryPanel-module.R": {
-      "checksum": "fb7ba73bf0c58d154af0aa929c570c10"
+      "checksum": "ad4449a8a1b197db4c15a94af7d4115b"
     },
     "R/catSimpleSummary_module.R": {
-      "checksum": "2e054f2739119949b2315e6834376f35"
+      "checksum": "6cb667914fb24564463e8d30a83feaa8"
     },
     "R/cook_waffle.R": {
-      "checksum": "d0dbd80df3e6354676b601b71f791fa3"
+      "checksum": "28955acee4e94f24311e3c2e3215da4d"
     },
     "R/create_indicator_info.R": {
-      "checksum": "7a8d34609661332087ed2be32ee7d8e9"
+      "checksum": "2bbd2a633d5f255fbfb516951c5c3ef0"
+    },
+    "R/create_reactable.R": {
+      "checksum": "340f724950a3e76849119a3c322b8cf6"
     },
     "R/filter_disag.R": {
       "checksum": "f34a404baa46c1e816845b233d9bebb5"
     },
-    "R/generate_text.R": {
-      "checksum": "2e441aa30fd2d787ff2d0a41391451e7"
+    "R/generate_source.R": {
+      "checksum": "edce838fc3a5746887de8d83f1cb4337"
     },
-    "R/indicatorDashModule.R": {
-      "checksum": "145f51762bed1348c884dbf47a880bba"
+    "R/generate_text.R": {
+      "checksum": "1521153664adb33e9389e06e0b2a3bed"
     },
     "R/load_categories.R": {
-      "checksum": "d95e41728f179fa6045b42a67a7fb1e8"
+      "checksum": "cac0f379940d3263d3d6567fa0c844aa"
     },
     "R/load_libraries.R": {
       "checksum": "34af88d7e2c9ef54841841e1b835a5c1"
@@ -4303,10 +4375,10 @@
       "checksum": "b587068cf4300befb98c990efa955f01"
     },
     "server.R": {
-      "checksum": "426fbfda131b16661d549558732baac7"
+      "checksum": "8930cb962b6fd60f1a5359e3e1d67f0d"
     },
     "ui.R": {
-      "checksum": "dc1e92e1706adf709da2a2028e3a6534"
+      "checksum": "e171b829470f445825e7423966ada6fa"
     },
     "www/content/about_app.md": {
       "checksum": "8afefd7bdcc403da51c17d7079b8c209"
@@ -4315,7 +4387,7 @@
       "checksum": "28e27969c8e9a66b7736292c601ef950"
     },
     "www/content/ind001.md": {
-      "checksum": "215f7f27f63538b762bd0cb550f1a0e5"
+      "checksum": "2f0f7194cd3448aa3cf8f7cdba247716"
     },
     "www/content/policy-explorer.md": {
       "checksum": "f79ed5dcfd877d92b76f8260bd8440e7"
@@ -4337,9 +4409,6 @@
     },
     "www/icons/social-human-capital.png": {
       "checksum": "4a58f01f2822950073b8547b04437008"
-    },
-    "www/indicators.csv": {
-      "checksum": "c76ed4fb9f85ccf3410c30632ec2d7b8"
     },
     "www/logo.js": {
       "checksum": "bae66a9ea0d9c8aae574637b473a24b9"
