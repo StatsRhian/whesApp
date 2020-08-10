@@ -4,9 +4,11 @@ catDetailUI = function(id, cat){
   tagList(
     fluidPage(
       fluidRow(
+        column(12,
         br(),
         h2(category_name), 
         br()
+        )
       ), # End: fluid row
       
       fluidRow(
@@ -26,8 +28,10 @@ catDetailUI = function(id, cat){
       ), # End: fluid row
       
       fluidRow(
+        column(12,
         htmlOutput(ns("source_info")),
         tags$br()
+        )
       ), # End: fluid row
       
       fluidRow(
@@ -58,8 +62,10 @@ catDetailUI = function(id, cat){
         ) # End: column
       ), # End: fluid row
       fluidRow(
+        column(12,
         tags$br(),
-        includeMarkdown("www/content/ind001.md")    
+        includeMarkdown("www/content/ind001.md")   
+        )
       ) # End: fluid row
     )
     

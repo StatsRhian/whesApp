@@ -1,10 +1,11 @@
-bs_theme_set("simplex")
+bs_theme_set("united")
 navbarPage("Welsh Health Equity Status",
            
            tags$head(
              tags$script(type = "text/javascript", src = "logo.js"),
              bootstrap(),
-             useShinyjs()
+             useShinyjs(),
+               tags$link(rel = "stylesheet", type = "text/css", href = "phw-style.css")
            ),
            
            navlistPanel(
