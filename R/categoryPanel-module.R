@@ -10,12 +10,23 @@ categoryPanelUI = function(id){
                       catDetailUI(ns("detailed"), id)
              ),
              tabPanel("Policies",
-                      h2(glue::glue("Policies related to {cat_df$name[cat_df$catID == id]}")),
-                      p("Page to allow users to explore various policies implemented by Welsh Governement.
-                                 Might link to the welsh gov website website. 
-                                 Could have an interactive tables and graphs to explore policy information.")
-             )
-           )
+                      fluidPage(
+                        fluidRow(
+                          column(12,
+                                 br(),
+                                 h2(glue::glue("Policies related to {cat_df$name[cat_df$catID == id]}")), 
+                                 br()
+                          )
+                        ), # End: fluid row
+                        fluidRow(
+                          column(12,
+                                 tags$br(),
+                                 includeMarkdown(glue::glue("www/content/policy-{id}.md"))  
+                          )
+                        ) # End: fluid row 
+                      ) # End: fluid page
+             ) # End policy tab panel
+           ) # End tabset panel
   )
 }
 

@@ -4,9 +4,11 @@ catSimpleSummaryUI = function(id, cat){
   tagList(
     fluidPage(
       fluidRow(
+        column(12,
         br(),
         h2(category_name), 
         br()
+        )
       ), # End: fluid row
       
       fluidRow(
