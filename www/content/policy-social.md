@@ -1,4 +1,4 @@
-## Social and Human Capital
+## **Social** and Human Capital
 
 _Policies that improve human capital for health through education, learning and literacy; and policies
 that improve the social capital of individuals and communities in a way that protects and promotes
@@ -9,9 +9,20 @@ health and well-being._
 Policy themes and related key words and phrases have been identified by scanning the data indicators,
 in addition to the terms and definitions highlighted in the chapter ‘Social and Human Capital’ in the
 WHO Health Equity Policy Tool, and by looking at synonyms or descriptions of the data and policy
-indicators. The result of this exercise is shown in table 7.
+indicators.
 
-**Table 7.** Social and Human Capital policy themes and key words/phrases
+
+
+| Policy Themes                        | Key words/phrases                                            |
+| ------------------------------------ | ------------------------------------------------------------ |
+| **Discrimination**                   | Equal treatment, rights, unjust or prejudicial treatment, discrimination, protected characteristics (Age, Disability, Gender reassignment, Marriage and civil partnership, Race, Religion or belief, Sex, Sexual orientation) |
+| **Volunteering**                     | Participation in volunteering, communication, informal learning, unpaid work, voluntary |
+| **Education**                        | NEET rates, Children's reading and maths proficiency, public spending on early years education (e.g. on crèches, day care centres and primary education), adult education and training, health and social literacy, lifelong learning, |
+| **Political participation**          | Perceived ability to influence politics, political corruption, |
+| **Social participation**             | Regular contact with family/friends, social isolation, civic participation, social justice, social connections, loneliness and social isolation |
+| **Feeling of control over own life** | Freedom, trust in others, feeling of autonomy, mental health |
+
+
 
 
 ### Focus on key indicators
@@ -22,7 +33,15 @@ reading and maths proficiency.** These five key policy indicators closely align 
 indicators as shown in table 8. Combined they have been identified as playing an important role in
 equity in relation to social and human capital in Wales.
 
-**Table 8.** Social and Human Capital policy Indicators from WHO Health Equity Policy Tool document and corresponding data indicators
+| **HESR Policy indicators**                   | Link to HESR Data Indicator****                              | **Data Indicator number** |
+| -------------------------------------------- | ------------------------------------------------------------ | ------------------------- |
+| **NEET Rates**                               | Percentage of young people 16-24 years old who are not in employment, education or training | **51**                    |
+|                                              | Percentage of adults aged 25-64 years participating in formal and non-formal education and training | **53**                    |
+| **Participation in volunteering**            | Percentage of people aged 16+ years participating in formal voluntary activities | 54                        |
+| **Perceived ability to influence politics**  | Percentage of people aged 16+ years reporting having no ability to influence politics | 55                        |
+|                                              | Percentage of people aged 16+ years reporting low levels of freedom of choice and control over their own life | 46                        |
+| **Trust in others**                          | Percentage of adults aged 18+ years reporting low trust in other people | 56                        |
+| **Children’s reading and maths proficiency** | Percentage of children aged 15 years achieving minimum proficiency in mathematics and reading | 52                        |
 
 
 **The policy indicators and their link to health equity (including the data indicators they align with):**

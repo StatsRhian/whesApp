@@ -8,10 +8,16 @@ conditions that impact our health and well-being_
 Policy themes and related key words and phrases have been identified by scanning the data indicators,
 in addition to the terms and definitions highlighted in the chapter ‘Living Conditions’ in the WHO
 Health Equity Policy Tool, and by looking at synonyms or descriptions of the data and policy indicators.
-The result of this exercise is shown in table 5.
 
-**Table 5.** Living Conditions policy themes and key words/phrases
-**Policy Themes Key words/phrases**
+| Policy Themes                             | Key words / phrases                                          |
+| ----------------------------------------- | ------------------------------------------------------------ |
+| **Housing conditions**                    | Overcrowded dwelling, damp, dark, indoor toilet, sanitation, drinking water, heating, adequate lighting |
+| **Living environment (outside the home)** | Satisfaction with living environment, access to public transport, access to recreational or green areas |
+| **Road Safety**                           | Road traffic deaths, bicycle lanes, speed limit,             |
+| **Economic status**                       | household housing allowance, afford to keep house warm, costs are more than 40% of the net housing allowance, ability to eat a protein-rich meal |
+| **Climate/green environment/air quality** | Pollution, grime, diesel cars, annual mean concentration of PM10 in cities, access green spaces |
+| **Crime**                                 | Feeling safe when walking home after dark, feeling unsafe at home after dark |
+| **Government investment tax**             | Government expenditure on housing and community amenities, Value-added tax (VAT) on alcohol, Tobacco taxes as a percentage of price of the most sold brand, Minimum Unit Pricing |
 
 
 
@@ -22,8 +28,11 @@ food insecurity**. These two key policy indicators closely align with the three 
 in table 6. Combined they have been identified as playing an important role in equity in relation to
 living conditions in Wales.
 
-**Table 6.** Living conditions policy Indicators from WHO Health Equity Policy Tool document and
-corresponding data indicators
+| HESR Policy indicators   | Link to HESR Data Indicator                                  | Data indicator number |
+| ------------------------ | ------------------------------------------------------------ | --------------------- |
+| **Neighbourhood safety** | Percentage of adults feeling unsafe when walking alone in their area after dark | 35                    |
+|                          | Percentage of adults aged 18+ years feeling unsafe from crime in their own home | 36                    |
+| **Food insecurity**      | Percentage of people who cannot afford to eat a protein-rich meal every other day | 38                    |
 
 
 **The policy indicators and their link to health equity (including the data indicators they align with):**
