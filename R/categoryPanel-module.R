@@ -13,13 +13,6 @@ categoryPanelUI = function(id){
                       fluidPage(
                         fluidRow(
                           column(12,
-                                 br(),
-                                 h2(glue::glue("Policies related to {cat_df$name[cat_df$catID == id]}")), 
-                                 br()
-                          )
-                        ), # End: fluid row
-                        fluidRow(
-                          column(12,
                                  tags$br(),
                                  includeMarkdown(glue::glue("www/content/policy-{id}.md"))  
                           )
