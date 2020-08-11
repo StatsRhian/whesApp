@@ -1,4 +1,4 @@
-## **Social** and Human Capital
+## Social and Human Capital
 
 _Policies that improve human capital for health through education, learning and literacy; and policies
 that improve the social capital of individuals and communities in a way that protects and promotes

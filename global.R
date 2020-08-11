@@ -20,7 +20,8 @@ indicator_info =
   filter(ind_id %in% indicator_data$ind_id) %>%
   mutate(disag = calc_disag_vars(ind_id)) %>%
   left_join(distinct(select(indicator_data, c(ind_id, type)))) %>%
-  filter(type == "percent")
+  filter(type == "percent") %>%
+  filter(ind_id != "ind_019")
 
 # Colour schemes
 waffle_no = "grey"

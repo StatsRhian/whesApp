@@ -2,7 +2,7 @@
 # Not to live in final app
 create_indicator_info = function(){
 indicator_info =
-  readxl::read_excel("~/Downloads/20200403_HealthEquityDataset_IndicatorListForJumpingRivers_FINAL.xlsx")
+  readxl::read_excel("~/Downloads/20200403_HealthEquityDataset_IndicatorListForJumpingRivers_FINAL_sp.xlsx")
 
 # Fix typos
 indicator_info$`Category/Policy area`[8] = "Morbidity"
