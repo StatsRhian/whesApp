@@ -7,9 +7,7 @@ and health-care services and programmes.
 Policy themes and related key words and phrases have been identified by scanning the data indicators,
 in addition to the terms and definitions highlighted in the chapter ‘Health Services’ in the WHO Health
 Equity Policy Tool (Annex 2), and by looking at synonyms or descriptions of the data and policy
-indicators. The result of this exercise is shown in table 1.
-
-**Table 1.** Health services policy themes and key words
+indicators. 
 
 | Policy Themes                       | Key words/phrases                                            |
 | ----------------------------------- | ------------------------------------------------------------ |
@@ -34,9 +32,6 @@ One component of the policy analysis for health services is to focus on **unmet 
 and burden of informal care**. These two key policy indicators closely align with the six data indicators
 as shown in table 2. Combined they have been identified as playing an important role in equity in
 relation to health services in Wales.
-
-**Table 2.** Health services policy Indicators from WHO Health Equity Policy Tool document and
-corresponding data indicators
 
 | HESR Policy Indicators    | Link to HESR Data Indicator                                  | Indicator ID |
 | ------------------------- | ------------------------------------------------------------ | ------------ |

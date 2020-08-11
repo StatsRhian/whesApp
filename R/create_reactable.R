@@ -11,6 +11,7 @@ create_reactable = function(df){
       mutate(across(c(ci_upper, ci_lower), ~ percent(round(., 2)))) %>%
       unite(col = "Confidence", ci_lower:ci_upper, sep = " - ") %>%
       relocate(Confidence, .after = value) %>%
+      rename(Value = value) %>%
       reactable(columns = list(
         Value = colDef(format = colFormat(percent = TRUE, digits = 1))
       ))
@@ -18,8 +19,9 @@ create_reactable = function(df){
   table_out = 
     df %>%
     select(-ind_id, -type) %>%
+    rename(Value = value) %>%
     reactable(columns = list(
-      value = colDef(format = colFormat(percent = TRUE, digits = 1))
+      Value = colDef(format = colFormat(percent = TRUE, digits = 1))
     ))
 } else {
   table_out = 
