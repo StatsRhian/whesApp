@@ -1,4 +1,5 @@
-bs_theme_set("united")
+bs_theme_set("minty")
+bs_theme_accent_colors(primary = "#1A5D7E", secondary = "#c60158")
 navbarPage("Welsh Health Equity Status",
            
            tags$head(
