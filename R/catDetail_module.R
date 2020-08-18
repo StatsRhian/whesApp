@@ -1,7 +1,6 @@
 catDetailUI = function(id, cat){
   ns = NS(id)
   category_name = cat_df$name[cat_df$catID == cat]
-  #  print(indic)
   tagList(
     fluidPage(
       fluidRow(

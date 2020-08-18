@@ -23,7 +23,7 @@ categoryPanelUI = function(id){
   )
 }
 
-categoryPanel = function(input, output, session){
-  callModule(catSimpleSummary, "simple")
-  callModule(catDetail, "detailed")
+categoryPanel = function(input, output, session, lang, cat){
+  callModule(catSimpleSummary, "simple", lang = lang, cat = cat)
+  callModule(catDetail, "detailed", lang = lang, cat = cat)
 }

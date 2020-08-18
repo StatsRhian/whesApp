@@ -1,24 +1,30 @@
 shinyServer(function(input, output, session) {
 
-  # Call modules for all seven  (purrr)
-  callModule(categoryPanel, "wellbeing")
-  callModule(categoryPanel, "morbidity")
-  callModule(categoryPanel, "health")
-  callModule(categoryPanel, "income")
-  callModule(categoryPanel, "living")
-  callModule(categoryPanel, "social")
-  callModule(categoryPanel, "employment")
+  # # Call modules for all seven  (purrr)
+  # callModule(categoryPanel, "wellbeing")
+  # callModule(categoryPanel, "morbidity")
+  # callModule(categoryPanel, "health")
+  # callModule(categoryPanel, "income")
+  # callModule(categoryPanel, "living")
+  # callModule(categoryPanel, "social")
+  # callModule(categoryPanel, "employment")
   
-  # Call modules for infographics page
-  purrr::map(cat_df$catID, ~callModule(module = catSimpleSummary, 
-                                       id = paste0("simple-", .x),
+  # Call modules for tabs
+  purrr::map(cat_df$catID, ~callModule(module = categoryPanel,
+                                       id = .x,
                                        lang = lan,
                                        cat = .x))
-  # Call modules for detail page
-  purrr::map(cat_df$catID, ~callModule(module = catDetail, 
-                                       id = paste0("simple-", .x),
-                                       lang = lan,
-                                       cat = .x))
+  
+  # # Call modules for infographics page
+  # purrr::map(cat_df$catID, ~callModule(module = catSimpleSummary, 
+  #                                      id = paste0("simple-", .x),
+  #                                      lang = lan,
+  #                                      cat = .x))
+  # # Call modules for detail page
+  # purrr::map(cat_df$catID, ~callModule(module = catDetail, 
+  #                                      id = paste0("simple-", .x),
+  #                                      lang = lan,
+  #                                      cat = .x))
  
    lan = reactive({
     input$lan
@@ -54,11 +60,7 @@ shinyServer(function(input, output, session) {
 ### Apply above function to each category
   purrr::map(c("health", "income", "living", "social", "employment"),
              onclick_tabset)
-  
-#   output$tabs = renderUI({
-# #    lapply(c("wellbeing", "morbidity"), generate_tabPanel)
-#   })
-#   
+ 
 ### Update tabpanel titles
   
   output$overview_tab_title = renderUI({

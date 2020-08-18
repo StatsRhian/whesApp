@@ -1,17 +1,17 @@
 translate_db = read_csv("www/translation_database.csv")
 
 tr_pull = function(translate_db, key, lang, search = FALSE){
-  if (search){
+  if (search) {
   translate_db %>%
     filter(str_detect(key, {{ key }})) %>%
     pull({{ lang }})
-  } else{
+  } else {
     translate_db %>%
       filter(key == {{ key }}) %>%
       pull({{ lang }})
   }
 }
-tr_pull(translate_db, key = "ind_001", lang = "EN", search = TRUE)
+# tr_pull(translate_db, key = "ind_001", lang = "EN", search = TRUE)
 
 
 # indented for the search filters

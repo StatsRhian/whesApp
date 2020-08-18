@@ -37,6 +37,19 @@ indicator_info =
   filter(ind_id != "ind_019") %>%
   filter(ind_id != "ind_020")
 
+# Also filter the translated
+trans_other = 
+  translate_db %>%
+  filter(!str_detect(key, "_ind_"))
+  
+trans_ind = 
+  translate_db %>%
+  filter(str_detect(key, "_ind_")) %>%
+  filter(EN %in% indicator_info$name)
+
+translate_db = 
+  bind_rows(trans_ind, trans_other)
+
 # Colour schemes
 waffle_no = "grey"
 waffle_yes = "firebrick"

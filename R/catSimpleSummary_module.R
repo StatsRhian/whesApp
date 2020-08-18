@@ -1,6 +1,5 @@
 catSimpleSummaryUI = function(id, cat){
   ns = NS(id)
-  print(cat)
   category_name = cat_df$name[cat_df$catID == cat]
   tagList(
     fluidPage(
@@ -49,11 +48,11 @@ output$select_disag = renderUI({
     pull(disag) %>%
     unlist()
 
-  if (is.na(choices)) {
-    choices = "None"
-  } else {
-    choices = c("None", choices)
-  }
+#  if (is.na(choices)) {
+#    choices = "None"
+#  } else {
+#    choices = c("None", choices)
+#  }
   names(choices) = choices
   
 selectInput(session$ns("disag"),
@@ -68,13 +67,13 @@ observeEvent(input$ind_id, {
     indicator_info %>%
     filter(ind_id == input$ind_id) %>%
     pull(type)
-  if (type != "percent") {
-    hide("infographic")
-    hide("downloadPlot")
-  } else {
-    show("infographic")
-    show("downloadPlot")
-    }
+#  if (type != "percent") {
+#    hide("infographic")
+#    hide("downloadPlot")
+#  } else {
+#    show("infographic")
+#    show("downloadPlot")
+#    }
 })
   
 waffle_plot = reactive({
