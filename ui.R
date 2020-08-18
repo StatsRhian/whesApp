@@ -1,6 +1,6 @@
 bs_theme_set("minty")
 bs_theme_accent_colors(primary = "#1A5D7E", secondary = "#c60158")
-navbarPage("Welsh Health Equity Status",
+navbarPage("Welsh Health Equity Solutions Platform",
            
            tags$head(
              tags$script(type = "text/javascript", src = "logo.js"),
@@ -13,7 +13,7 @@ navbarPage("Welsh Health Equity Status",
              id = "tab_categories",
              tabPanel("Overview", 
                       icon = icon("home"), 
-                      h2("Welsh Health Equity Status"), 
+                      h2("Welsh Health Equity Solutions Platform"), 
                       br(),
                       div(img(src = "icons/health-services.png",
                               height = "250px",
