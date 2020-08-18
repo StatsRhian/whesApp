@@ -5,9 +5,11 @@ catDetailUI = function(id, cat){
   tagList(
     fluidPage(
       fluidRow(
+        column(12,
         br(),
         h2(category_name), 
         br()
+        )
       ), # End: fluid row
       
       fluidRow(
@@ -22,26 +24,15 @@ catDetailUI = function(id, cat){
                            width = "90%"
                )
         ), # End: column
-        column(6,
-               selectInput(ns("disag"),
-                           label = "Please select a disaggregate",
-                           choices = c("Gender" = "Gender",
-                                       "Age" = "Age",
-                                       "Welsh Index" = "WIMD", 
-                                       "Education level" = "Education"),
-                           selected = "Gender", 
-                           multiple = TRUE)
+        column(6, uiOutput(ns("select_disag"))
         ) # End: column
       ), # End: fluid row
       
       fluidRow(
-        p("Year: 2019"),
-        br(),
-        p("Source: ", a(href = "https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591",
-                        "National Survey for Wales 2019",
-                        .noWS = "outside", 
-                        target = "_blank"),
-          .noWS = c("after-begin", "before-end"))
+        column(12,
+        htmlOutput(ns("source_info")),
+        tags$br()
+        )
       ), # End: fluid row
       
       fluidRow(
@@ -59,20 +50,23 @@ catDetailUI = function(id, cat){
                          ),
                          textInput(ns("plot_caption"),
                                    label = "Caption",
-                                   value = "Welsh Health Equity Status 2020"
+                                   value = "Welsh Health Equity Solutions Platform, WHESRi 2020"
                          )
                  )
                )       
         ), # End: column
         column(4,
                wellPanel(
-                 dataTableOutput(ns("detailed_table")), 
+                 reactableOutput(ns("detailed_table")), 
                  downloadButton(ns("downloadData"), "Download")
                )
         ) # End: column
       ), # End: fluid row
       fluidRow(
-        includeMarkdown("www/content/ind001.md")    
+        column(12,
+        tags$br(),
+        includeMarkdown("www/content/ind001.md")   
+        )
       ) # End: fluid row
     )
     
@@ -93,36 +87,44 @@ catDetail = function(input, output, session, lang, cat){
   plot_obj = reactive({
     if (is.null(input$disag)) {
       g = data() %>%
-        ggplot(aes(x = "All", y = prop)) + 
-        geom_col(fill = "#1B9E77")
+        ggplot(aes(x = "All", y = value)) + 
+        geom_col(fill = "#1B9E77") +
+        xlab("")
     } else if (length(input$disag) == 1) {
       g = data() %>%
-        ggplot(aes(x = !!sym(input$disag), y = prop)) + 
+        ggplot(aes(x = !!sym(input$disag), y = value)) + 
         geom_col(aes(fill = !!sym(input$disag))) 
     } else if (length(input$disag) == 2) {
       g = data() %>%
-        ggplot(aes(x = !!syms(input$disag)[[2]], y = prop)) + 
+        ggplot(aes(x = !!syms(input$disag)[[2]], y = value)) + 
         geom_col(aes(fill = !!syms(input$disag)[[1]]),  position = "dodge") 
     }  else if (length(input$disag) == 3) {
       g = data() %>%
-        ggplot(aes(x = !!syms(input$disag)[[2]], y = prop)) + 
+        ggplot(aes(x = !!syms(input$disag)[[2]], y = value)) + 
         geom_col(aes(fill = !!syms(input$disag)[[1]]),  position = "dodge") + 
         facet_wrap(vars(!!!syms(input$disag)[[3]]))
     } else if (length(input$disag) == 4) {
       g = data() %>%
-        ggplot(aes(x = !!syms(input$disag)[[2]], y = prop)) + 
+        ggplot(aes(x = !!syms(input$disag)[[2]], y = value)) + 
         geom_col(aes(fill = !!syms(input$disag)[[1]]),  position = "dodge") + 
         facet_grid(rows = vars(!!!syms(input$disag)[[3]]), 
                    cols = vars(!!!syms(input$disag)[[4]]))
     }
     
-    g + 
+    g = 
+      g + 
       labs(title = input$plot_title,
            caption = input$plot_caption) +
-      scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
-      coord_cartesian(ylim = c(0, 0.5)) +
+      #coord_cartesian(ylim = c(0, 0.5)) +
       theme_minimal() +
       scale_fill_brewer(palette = "Dark2")
+    
+    if (data()$type == "percent") {
+      g = g + 
+        scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+        ylab("Percent")
+    }
+    return(g)
   })
   
 
@@ -149,12 +151,36 @@ catDetail = function(input, output, session, lang, cat){
     plot_obj()
   })
   
+  
+  output$select_disag = renderUI({
+    choices =
+      indicator_info %>%
+      filter(ind_id == input$ind_id) %>%
+      pull(disag) %>%
+      unlist()
+    
+    names(choices) = choices
+    
+    selectInput(session$ns("disag"),
+                label = "Please select a disaggregate",
+                choices = choices,
+                selected = "",
+                multiple = TRUE)
+  })  
+  
   output$detailed_table = 
-    DT::renderDataTable({
+    renderReactable({
       data() %>%
-        DT::datatable(rownames = FALSE) %>%
-        formatPercentage("prop")
+        create_reactable()
     })
+  
+  output$source_info = renderUI({
+    df = indicator_info %>%
+      filter(ind_id == input$ind_id) 
+    df %>%
+      generate_source() %>%
+      HTML() 
+  })
   
   output$downloadData = downloadHandler(
     filename = function() {
@@ -173,5 +199,8 @@ catDetail = function(input, output, session, lang, cat){
       ggsave(file, plot =  plot_obj(), device = "png")
     }
   )
+  
+  # Ensure select_disag works on start
+  outputOptions(output, "select_disag", suspendWhenHidden = FALSE)
   
 }

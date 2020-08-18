@@ -1,0 +1,16 @@
+table {
+    border-top: double;
+    border-bottom: double;
+    border-right: blank
+}
+thead, tbody, tfoot {
+    border-top: solid;
+    border-bottom: solid
+}
+colgroup {
+    border-right: solid
+}
+
+.nav .navbar-brand {
+    white-space: normal;
+}

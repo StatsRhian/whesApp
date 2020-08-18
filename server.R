@@ -1,39 +1,54 @@
 shinyServer(function(input, output, session) {
-  
-  lan = reactive({
-    input$lan
-    })
+
+  # Call modules for all seven  (purrr)
+  callModule(categoryPanel, "wellbeing")
+  callModule(categoryPanel, "morbidity")
+  callModule(categoryPanel, "health")
+  callModule(categoryPanel, "income")
+  callModule(categoryPanel, "living")
+  callModule(categoryPanel, "social")
+  callModule(categoryPanel, "employment")
   
   # Call modules for infographics page
-  
   purrr::map(cat_df$catID, ~callModule(module = catSimpleSummary, 
                                        id = paste0("simple-", .x),
                                        lang = lan,
                                        cat = .x))
-  
-
   # Call modules for detail page
-  
   purrr::map(cat_df$catID, ~callModule(module = catDetail, 
                                        id = paste0("simple-", .x),
                                        lang = lan,
                                        cat = .x))
-  
-  
-  # output$test_lang = renderText(input$lang)
-  # 
-  output$indicator_search = renderDataTable({
+ 
+   lan = reactive({
+    input$lan
+  })  
+
+  output$indicator_search = renderReactable({
     indicator_info %>%
-      DT::datatable()
+      mutate(category = full_category(category)) %>%
+      select(name, category) %>%
+      reactable(
+        defaultPageSize = 5,
+        compact = TRUE,
+        searchable = TRUE,
+        columns = list(
+          name = colDef(name = "Indicator"),
+          category = colDef(name = "Category")
+        ),
+        defaultColDef = colDef(
+          align = "left",
+          headerStyle = list(background = "#f7f7f8")
+        ))
+    
   })
   
-
 ### Function to create onclick event for images
   onclick_tabset = function(category){
     shinyjs::onclick(paste0("img_", category),
                      updateTabsetPanel(session,
                                        inputId = "tab_categories",
-                                       selected = cat_df$name[cat_df$catID == category]))
+                                       selected = full_category(category)))
   }
 
 ### Apply above function to each category
@@ -57,7 +72,6 @@ shinyServer(function(input, output, session) {
   output$morbidity_tab_title = renderUI({
     tr_pull(translate_db, "morbidity_tab_title", lan())
   })
-  
   
   output$health_tab_title = renderUI({
     tr_pull(translate_db, "health_tab_title", lan())
@@ -96,7 +110,5 @@ shinyServer(function(input, output, session) {
   })
   
 })
-
-
 
 

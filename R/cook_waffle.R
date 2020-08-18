@@ -1,8 +1,8 @@
 prep_waffle = function(df, disag = input$disag){
   df %>%
-    rename(Yes = prop) %>%
+    rename(Yes = value) %>%
     mutate(No = 1 - Yes)  %>%
-    select(-n_yes, -n, -ci_lower, -ci_upper, -ind_id) %>%
+    select(-type, -n, -ci_lower, -ci_upper, -ind_id) %>%
     when(
       (disag == "None") ~ pivot_longer(., cols = everything(),
                                              names_to = "Response",
@@ -59,13 +59,13 @@ cook_waffle = function(df, disag = input$disag,
     ) +
     labs(
       title = title,
-      caption = caption
+      caption = "Welsh Health Equity Solutions Platform, WHESRi 2020"
     ) +
     theme_ipsum_rc(grid = "") +
     theme_enhance_waffle()
   
   # DISAG
-  if(disag == "None"){
+  if (disag == "None") {
     waffle = 
       waffle +
       coord_equal(xlim = c(1, 10),

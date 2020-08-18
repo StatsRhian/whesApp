@@ -1,77 +1,77 @@
-ind_id,category,name
-ind_001,wellbeing,"Percentage of adults reporting fair, bad or very bad health"
-ind_002,wellbeing,Percentage of students who rate their health as fair or poor
-ind_003,morbidity,"Percentage of survey respondents with a limiting long-standing illness, disability or infirmity"
-ind_004,wellbeing,"Estimated prevalence of self-reported illness caused or made worse by work, for people working in the last 12 months"
-ind_006,morbidity,Percentage of survey respondents with Heart a and circulatory illness
-ind_007,morbidity,Percentage of survey respondents with Diabetes incl. Hyperglycaemia
-ind_008,mortality,"Death rate per 100,000 due to tuberculosis"
-ind_009,wellbeing,Percentage of survey respondents who rated their satisfaction with life as low (0-4 out of 10)
-ind_010,wellbeing,"Percentage of students who rated their life satisfaction as 6 out of 10, or above"
-ind_011,wellbeing,"Warwick-Edinburgh Metnal Well-being Scale, mean score"
-ind_012,mortality,Infant mortality (under 1 year)
-ind_013,mortality,Life expectancy at birth in years
-ind_014,morbidity,Percentage of survey respondents who currently smoke either daily or occasionally
-ind_015,morbidity,Usual weekly alcohol consumption is lower risk (>0 but <=14 units)
-ind_016,morbidity,Usual weekly alcohol consumption is higher risk (>14 units)
-ind_017,morbidity,Percentage of adults aged 18-64 who are obese
-ind_018,wellbeing,Percentage of students who are physically active for at least 60 minutes per day
-ind_019,living,Sufficient number of bedrooms for the household
-ind_020,living,Overall satisfaction with accommodation
-ind_024,living,Awaiting further information from DVLA. Email sent on 05/03/20.
-ind_025,living,"Death rate per 100,000 due to road traffic accidents"
-ind_026,living,Percentage of households receiving housing benefit
-ind_027,living,Percentage of households with a sufficient number of bedrooms for the household
-ind_028,living,Percentage of survey respondents who are not able to keep accomodation warm enough
-ind_029,living,To be determined
-ind_032,living,Average PM10 concentrations across local authority and health board areas in Wales
-ind_033,living,Percentage of adults aged 16+ years reporting difficulty accessing local green space
-ind_034,living,Percentage of disabled persons (aged 16+) reporting difficulty getting to or from stop/station
-ind_035,living,Percentage of adults (16+) feeling unsafe when walking alone in local area after dark
-ind_036,living,Percentage of adults feeling unsafe at home after dark
-ind_037,living,To be determined
-ind_038,living,"Percentage of households which eat meals with meat, chicken, fish (or vegatarien equivalent) at least every other day?"
-ind_039,living,Value-added tax (VAT) on alcohol
-ind_041,social,"Percentage of children at the final year of foundation phase achieving the expected Outcome (Outcome 5+) for Personal and social development, well-being and cultural diversity"
-ind_043,social,Percentage of adults who report a feeling lonely (a score of 4 to 6 on the De Jong Gierveld loneliness scale)
-ind_044,social,"Percentage of students who agree that there is support at their school for students who feel unhappy, worried or unable to cope"
-ind_045,social,"Percentage of adults (aged 16+) who have relatives, friends, or neighbours they can ask for help"
-ind_046,social,Percentage of adults who feel they are in control of their daily life as much as they can be
-ind_049,social,Percentage of childen aged 4 years participating in education
-ind_050,social,Total expenditure delegated to nursery school education
-ind_051,social,"Estimated 16-24 year olds not in education, training or employment"
-ind_052,social,Percentage of pupils in year 11/aged 15 who achieved Level 2 incl. English/Welsh and maths
-ind_053,social,Percentage of adults aged 25-64 years participating in formal and non-formal education and training
-ind_054,social,Percentage of people who volunteer (National indicator)
-ind_055,social,Percentage of people who feel they are able to influence decisions affecting their local area
-ind_056,social,Percentage of people who feel most people can be trusted
-ind_057,employment,Gross Value Added through compensation of employees i.e. wages and salaries plus employers' social contributions.
-ind_059,employment,"Estimated incidence of self-reported workplace non-fatal injuries, for people working in the last 12 months"
-ind_060,employment,Difference in employment rates between those who are disabled and not disabled
-ind_063,employment,International Labour Organisation (ILO) unemployment rate
-ind_064,employment,International Labour Organisation (ILO) economic activity rate
-ind_065,employment,Total identifiable expenditure on social protection
-ind_068,employment,Number of claimants that are claiming Jobseekers Allowance
-ind_069,employment,Temporary employees as a percentage of the total number of employees aged 20 to 64 years
-ind_070,employment,National Living Wage and the National Minimum Wage rates
-ind_071,employment,Average (median) gross hourly earnings
-ind_072,employment,Percentage of employees whose pay and/or conditions of employment are determined by a collective agreement
-ind_074,employment,Percentage of working age adults in relative income poverty
-ind_075,employment,Percentage of survey respondents who are moderately or highly satisfied with present job
-ind_076,employment,Percentage of survey respondents who are working 49+ hours per week
-ind_077,income,"Percentage of all individuals, children, working-age adults and pensioners living in relative income poverty"
-ind_078,income,Percentage of people in relative income poverty where there is disability within the family (Equality Act definition)
-ind_080,income,Total identifiable expenditure on social protection
-ind_085,income,Percentage of women giving birth receiving Maternity Allowance
-ind_092,health,Cervical screening age-appropriate coverage
-ind_093,health,Percentage uptake of MMR dose two in children at five years of age
-ind_094,health,Prevalence of hypertension in the GP practice registered population
-ind_095,health,Prevalence of diabetes in the GP practice registered population
-ind_097,health,Total identifiable expenditure on health
-ind_099,health,"Number of physicians or doctors per 100,000 inhabitants"
-ind_100,health,Total ependiture on long-termcare as a percentage of GDP
-ind_101,health,Out-of-pocket expenditure on health care as a percentage of GP
-ind_102,health,"Available hospital beds per 100,000 inhabitants"
-ind_103,health,Percentage of survey respondents aged 16+ years caring for family members/ friends/ nieghbours
-ind_107,health,Percentage of survey respondents aged 16+ who wanted to but couldn't see a GP/family doctor about own health
-ind_109,health,Percentage of survey respondents dissatisfied with the care they received at their last appointment with GP/family doctor
+ind_id,category,name,source,source_link,year
+ind_001,wellbeing,"Percentage of adults reporting fair, bad or very bad health","National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591,2018-19
+ind_002,wellbeing,Percentage of students who rate their health as fair or poor,School Health Research Network (SHRN) & Health Behaviour in School-Aged Children (HBSC),http://www.shrn.org.uk/wp-content/uploads/2019/05/SHRN-HBSC-NR_31.05.2019.pdf,2017-18
+ind_003,morbidity,"Percentage of survey respondents with a limiting long-standing illness, disability or infirmity","National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591,2018-19
+ind_004,wellbeing,"Estimated prevalence of self-reported illness caused or made worse by work, for people working in the last 12 months",Labour Force Survey (LFS) via Health & Safety Exectuive,https://www.hse.gov.uk/statistics/lfs/index.htm#illness,2016/17-2018/19
+ind_006,morbidity,Percentage of survey respondents with Heart a and circulatory illness,"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591,2018-19
+ind_007,morbidity,Percentage of survey respondents with Diabetes incl. Hyperglycaemia,"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591,2018-19
+ind_008,mortality,"Death rate per 100,000 due to tuberculosis","Mortality statistics, Office for National Statistics",https://www.nomisweb.co.uk/query/construct/summary.asp?menuopt=200&subcomp=,2018
+ind_009,wellbeing,Percentage of survey respondents who rated their satisfaction with life as low (0-4 out of 10),"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591,2018-19
+ind_010,wellbeing,"Percentage of students who rated their life satisfaction as 6 out of 10, or above",School Health Research Network (SHRN) & Health Behaviour in School-Aged Children (HBSC),http://www.shrn.org.uk/wp-content/uploads/2019/05/SHRN-HBSC-NR_31.05.2019.pdf,2017-18
+ind_011,wellbeing,"Warwick-Edinburgh Metnal Well-being Scale, mean score","National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591,2018-19
+ind_012,mortality,Infant mortality (under 1 year),"Mortality statistics, Office for National Statistics",https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/infantmortalitybirthcohorttablesinenglandandwales,2017
+ind_013,mortality,Life expectancy at birth in years,"Public Health Outcomes Framework for Wales, Public Health Wales",http://www.publichealthwalesobservatory.wales.nhs.uk/phof,2015-2017
+ind_014,morbidity,Percentage of survey respondents who currently smoke either daily or occasionally,"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591,2018-19
+ind_015,morbidity,Percentage of adults whose usual weekly alcohol consumption is lower risk (>0 but <=14 units),"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591,2018-19
+ind_016,morbidity,Percentage of adults whose usual weekly alcohol consumption is higher risk (>14 units),"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591,2018-19
+ind_017,morbidity,Percentage of adults aged 18-64 who are obese,"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591,2018-19
+ind_018,wellbeing,Percentage of students who are physically active for at least 60 minutes per day,School Health Research Network (SHRN) & Health Behaviour in School-Aged Children (HBSC),http://www.shrn.org.uk/wp-content/uploads/2019/05/SHRN-HBSC-NR_31.05.2019.pdf,2017-18
+ind_019,living,Sufficient number of bedrooms for the household,"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8390,2017-18
+ind_020,living,Overall satisfaction with accommodation,"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=7552#!/details,2013-14
+ind_024,living,Awaiting further information from DVLA. Email sent on 05/03/20.,NA,NA,NA
+ind_025,living,"Death rate per 100,000 due to road traffic accidents","Mortality statistics, Office for National Statistics",https://www.nomisweb.co.uk/query/construct/summary.asp?menuopt=200&subcomp=,2018
+ind_026,living,Percentage of households receiving housing benefit,Department for Work and Pensions,https://stat-xplore.dwp.gov.uk/webapi/jsf/login.xhtml,2018-19
+ind_027,living,Percentage of households with a sufficient number of bedrooms for the household,"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8390,2017-18
+ind_028,living,Percentage of survey respondents who are not able to keep accomodation warm enough,"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591,2018-19
+ind_029,living,To be determined,"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8390,2017-18
+ind_032,living,Average PM10 concentrations across local authority and health board areas in Wales,"Air Concentraion, Department for Environment, Food and Rural Affairs (DEFRA). Accessed via StatsWales.",https://statswales.gov.wales/Catalogue/Environment-and-Countryside/Air-Quality/airqualityindicators,2017
+ind_033,living,Percentage of adults aged 16+ years reporting difficulty accessing local green space,"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591,2018-19
+ind_034,living,Percentage of disabled persons (aged 16+) reporting difficulty getting to or from stop/station,"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8301,2016-17
+ind_035,living,Percentage of adults (16+) feeling unsafe when walking alone in local area after dark,"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591,2018-19
+ind_036,living,Percentage of adults feeling unsafe at home after dark,"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591,2018-19
+ind_037,living,To be determined,HMT Public Expenditure Statistical Analyses (PESA),https://www.gov.uk/government/statistics/country-and-regional-analysis-2019,2014-15 to 2018-19
+ind_038,living,"Percentage of households which eat meals with meat, chicken, fish (or vegatarien equivalent) at least every other day?","National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591,2018-19
+ind_039,living,Value-added tax (VAT) on alcohol,GOV.UK,https://www.gov.uk/tax-on-shopping/alcohol-tobacco,2020
+ind_041,social,"Percentage of children at the final year of foundation phase achieving the expected Outcome (Outcome 5+) for Personal and social development, well-being and cultural diversity","National teacher assessment data collection, Welsh Government. Accessed via StatsWales.",https://statswales.gov.wales/Catalogue/Education-and-Skills/Schools-and-Teachers/Examinations-and-Assessments/Foundation-Phase,2019
+ind_043,social,Percentage of adults who report a feeling lonely (a score of 4 to 6 on the De Jong Gierveld loneliness scale),"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8390,2017-18
+ind_044,social,"Percentage of students who agree that there is support at their school for students who feel unhappy, worried or unable to cope",School Health Research Network (SHRN) & Health Behaviour in School-Aged Children (HBSC),http://www.shrn.org.uk/wp-content/uploads/2019/05/SHRN-HBSC-NR_31.05.2019.pdf,2017-18
+ind_045,social,"Percentage of adults (aged 16+) who have relatives, friends, or neighbours they can ask for help","National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=7552#!/documentation,2013-14
+ind_046,social,Percentage of adults who feel they are in control of their daily life as much as they can be,"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591,2018-19
+ind_049,social,Percentage of childen aged 4 years participating in education,Eurostat,Eurostat,2013-2017
+ind_050,social,Total expenditure delegated to nursery school education,"Revenue outturn (RO) data collection, Welsh Government. Accessed via StatsWales.",https://statswales.gov.wales/Catalogue/Local-Government/Finance/Revenue/Education/educationrevenueexpenditure-by-service,2018-19
+ind_051,social,"Estimated percentage of 16-24 year olds not in education, training or employment","Pupil Level Annual School Census (PLASC), Welsh Government. Accessed via StatsWales.",https://statswales.gov.wales/Catalogue/Education-and-Skills/Post-16-Education-and-Training/Lifelong-Learning/Participation-of-Adults-and-Young-People/estimated1624neet-by-gender-economicactivity-agegroup,2018
+ind_052,social,Percentage of pupils in year 11/aged 15 who achieved Level 2 incl. English/Welsh and maths,"Welsh Examinations Database, Welsh Government (via Awarding Organisations and a contracted collection body)",https://statswales.gov.wales/Catalogue/Education-and-Skills/Schools-and-Teachers/Examinations-and-Assessments/Key-Stage-4,2017/18
+ind_053,social,Percentage of adults aged 25-64 years participating in formal and non-formal education and training,Annual Population Survey (APS),NA,2018
+ind_054,social,Percentage of people who volunteer (National indicator),"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8390#!/details,2017-18
+ind_055,social,Percentage of people who feel they are able to influence decisions affecting their local area,"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591#!/details,2018-19
+ind_056,social,Percentage of people who feel most people can be trusted,"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8390#!/details,2017-18
+ind_057,employment,Gross Value Added through compensation of employees i.e. wages and salaries plus employers' social contributions.,"Regional Accounts, Office for National Statistics. Accessed via StatsWales.",https://statswales.gov.wales/Catalogue/Business-Economy-and-Labour-Market/Regional-Accounts/Gross-Value-Added-GDP/gva-by-area-component,2018
+ind_059,employment,"Estimated incidence of self-reported workplace non-fatal injuries, for people working in the last 12 months",Labour Force Survey (LFS) via Health & Safety Exectuive,https://www.hse.gov.uk/statistics/lfs/index.htm,2016/17-2018/19
+ind_060,employment,Difference in employment rates between those who are disabled and not disabled,"Annual Population Survey/ Labour Force Survey, Office for National Statistics. Accessed via StatsWales.",https://statswales.gov.wales/Catalogue/Equality-and-Diversity/Disability/summaryofeconomicactivity-by-area-disabledstatus-fromapril2013,Year ending 30 September 2019.
+ind_063,employment,International Labour Organisation (ILO) unemployment rate,"Annual Population Survey/ Labour Force Survey, Office for National Statistics. Accessed via StatsWales.",https://statswales.gov.wales/Catalogue/Business-Economy-and-Labour-Market/People-and-Work/Unemployment/ILO-Unemployment/ilounemploymentrates-by-welshlocalareas-year,Year ending 30 September 2019.
+ind_064,employment,International Labour Organisation (ILO) economic activity rate,"Annual Population Survey/ Labour Force Survey, Office for National Statistics. Accessed via StatsWales.",https://statswales.gov.wales/Catalogue/Business-Economy-and-Labour-Market/People-and-Work/Unemployment/ILO-Unemployment/ilounemploymentrates-by-welshlocalareas-year,Year ending 30 September 2019.
+ind_065,employment,Total identifiable expenditure on social protection,HMT Public Expenditure Statistical Analyses (PESA),https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/847179/CRA_2019_Chapter_B_tables.xlsx,2014-15 to 2018-19
+ind_068,employment,Number of claimants that are claiming Jobseekers Allowance,Department for Work and Pensions (Accessed via Stat-Xplore),https://stat-xplore.dwp.gov.uk/webapi/jsf/login.xhtml,43678
+ind_069,employment,Temporary employees as a percentage of the total number of employees aged 20 to 64 years,"Annual Population Survey, Office for National Statistics",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8461#!/details,"January - December, 2018"
+ind_070,employment,National Living Wage and the National Minimum Wage rates,GOV.UK,https://www.gov.uk/national-minimum-wage-rates,As at 2020
+ind_071,employment,Average (median) gross hourly earnings,"Annual Survey of Hours and Earnings, Office for National Statistics. Accessed via StatsWales.",https://statswales.gov.wales/Catalogue/Business-Economy-and-Labour-Market/People-and-Work/Earnings/medianweeklyearnings-by-ukcountryenglishregion-year,2019
+ind_072,employment,Percentage of employees whose pay and/or conditions of employment are determined by a collective agreement,"Annual Survey of Hours and Earnings, Office for National Statistics.",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=6689#!/details,2019
+ind_074,employment,Percentage of working age adults in relative income poverty,"Family Resources Survey, Department for Work and Pensions. Accessed via StatsWales.",https://statswales.gov.wales/Catalogue/Community-Safety-and-Social-Inclusion/Poverty/workingageadultsinrelativeincomepoverty-by-economicstatusofhousehold,2015-16 to 2017-18
+ind_075,employment,Percentage of survey respondents who are moderately or highly satisfied with present job,"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8390#!/details,2017-18
+ind_076,employment,Percentage of survey respondents who are working 49+ hours per week,"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8390#!/details,2017-18
+ind_077,income,"Percentage of all individuals, children, working-age adults and pensioners living in relative income poverty","Family Resources Survey, Department for Work and Pensions. Accessed via StatsWales.",https://statswales.gov.wales/Catalogue/Community-Safety-and-Social-Inclusion/Poverty/householdbelowaverageincome-by-year,2015-16 to 2017-18
+ind_078,income,Percentage of people in relative income poverty where there is disability within the family (Equality Act definition),"Family Resources Survey, Department for Work and Pensions. Accessed via StatsWales.",https://statswales.gov.wales/Catalogue/Community-Safety-and-Social-Inclusion/Poverty/peopleinrelativeincomepoverty-by-whetherthereisdisabilitywithinthefamily,2015-16 to 2017-18
+ind_080,income,Total identifiable expenditure on social protection,HMT Public Expenditure Statistical Analyses (PESA),https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/847179/CRA_2019_Chapter_B_tables.xlsx,2014-15 to 2018-19
+ind_085,income,Percentage of women giving birth receiving Maternity Allowance,GOV.UK,https://www.gov.uk/maternity-allowance/what-youll-get,2020
+ind_092,health,Cervical screening age-appropriate coverage,"Cervical Screening Wales, Public Health Wales",http://www.cervicalscreeningwales.wales.nhs.uk/sitesplus/documents/1032/Cervical%20Screening%20Wales%20Annual%20Statistical%20Report%202018-19.V1.0.pdf,2018-19
+ind_093,health,Percentage uptake of MMR dose two in children at five years of age,"National immunisation uptake data, Public Health Wales",http://www2.nphs.wales.nhs.uk:8080/CommunitySurveillanceDocs.nsf/($All)/8C2940AE7E75F0C3802584180043A131/$File/COVER20182019_v1a.pdf,2018-19
+ind_094,health,Prevalence of hypertension in the GP practice registered population,"GP Quality and Outcomes Framework, NHS Wales Informatics Service",https://gov.wales/sites/default/files/statistics-and-research/2019-09/general-medical-services-contract-quality-and-outcomes-framework-april-2018-march-20199-599.pdf,2018-19
+ind_095,health,Prevalence of diabetes in the GP practice registered population,"GP Quality and Outcomes Framework, NHS Wales Informatics Service",https://gov.wales/sites/default/files/statistics-and-research/2019-09/general-medical-services-contract-quality-and-outcomes-framework-april-2018-march-20199-599.pdf,2018-19
+ind_097,health,Total identifiable expenditure on health,HMT Public Expenditure Statistical Analyses (PESA),https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/847179/CRA_2019_Chapter_B_tables.xlsx,2014-15 to 2018-19
+ind_099,health,"Number of physicians or doctors per 100,000 inhabitants",NHS electronic staff record. Accessed via StatsWales.,https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Staff/Medical-and-Dental-Staff/hospitalmedicalanddentalstaff-by-grade-year,At 30 September 2019
+ind_100,health,Total ependiture on long-termcare as a percentage of GDP,"UK Health Accounts, Office for National Statistics",https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/healthcaresystem/bulletins/ukhealthaccounts/2017#long-term-care-expenditure,2017
+ind_101,health,Out-of-pocket expenditure on health care as a percentage of GP,"UK Health Accounts, Office for National Statistics",https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/healthcaresystem/bulletins/ukhealthaccounts/2017,2017
+ind_102,health,"Available hospital beds per 100,000 inhabitants","QueSt1 return, NHS Wales Informatics Service (NWIS). Accessed via StatsWales.",https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Hospital-Activity/NHS-Beds/nhsbedssummarydata-by-year,2018-19
+ind_103,health,Percentage of survey respondents aged 16+ years caring for family members/friends/neighbours,"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8390,2017-18
+ind_107,health,Percentage of survey respondents aged 16+ who wanted to but couldn't see a GP/family doctor about own health,"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591#!/details,2018-19
+ind_109,health,Percentage of survey respondents dissatisfied with the care they received at their last appointment with GP/family doctor,"National Survey for Wales, Welsh Government",https://beta.ukdataservice.ac.uk/datacatalogue/studies/study?id=8591#!/details,2018-19

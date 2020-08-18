@@ -5,16 +5,18 @@ catSimpleSummaryUI = function(id, cat){
   tagList(
     fluidPage(
       fluidRow(
+        column(12,
         br(),
         h2(category_name), 
         br()
+        )
       ), # End: fluid row
       
       fluidRow(
         column(6,
                selectInput(ns("ind_id"),
-                           label = "Please select an indicator",
-                           choices =
+                           label = "Please select an indicator. You can type in the box to search for a key word.",
+                           choices = 
                              filter(indicator_info, category == cat) %>%
                              select(name, ind_id) %>%
                              deframe(),
@@ -22,23 +24,12 @@ catSimpleSummaryUI = function(id, cat){
                            width = "90%"
                )
         ), # End: column
-        column(6,
-               selectInput(ns("disag"),
-                           label = "Please select a disaggregate",
-                           choices = c("None" = "None",
-                                       "Gender" = "Gender",
-                                       "Age" = "Age",
-                                       "Welsh Index" = "WIMD", 
-                                       "Education level" = "Education"),
-                           selected = "None")
+        column(6, uiOutput(ns("select_disag"))
         ) # End: column
       ), # End: fluid row
       
       fluidRow(
-        p("The percentage of adults reporting fair; 
-          bad or very bad health is 16% for Young Adults, 27% for
-          Working Age Adults and 44% for Retirement Age Adults.", 
-          style = "font-size:20px")
+        htmlOutput(ns("simple_summary"))
       ), # End: fluid row
       
       fluidRow(
@@ -50,6 +41,41 @@ catSimpleSummaryUI = function(id, cat){
 }
 
 catSimpleSummary = function(input, output, session, lang, cat) {
+  
+output$select_disag = renderUI({
+  choices =
+    indicator_info %>%
+    filter(ind_id == input$ind_id) %>%
+    pull(disag) %>%
+    unlist()
+
+  if (is.na(choices)) {
+    choices = "None"
+  } else {
+    choices = c("None", choices)
+  }
+  names(choices) = choices
+  
+selectInput(session$ns("disag"),
+                          label = "Please select a disaggregate",
+                          choices = choices,
+                          selected = "None")
+})
+
+# Hide Waffle & Download if not a pecentage indicator
+observeEvent(input$ind_id, {
+  type = 
+    indicator_info %>%
+    filter(ind_id == input$ind_id) %>%
+    pull(type)
+  if (type != "percent") {
+    hide("infographic")
+    hide("downloadPlot")
+  } else {
+    show("infographic")
+    show("downloadPlot")
+    }
+})
   
 waffle_plot = reactive({
   title = 
@@ -78,7 +104,6 @@ waffle_plot = reactive({
                 lang = lang())
   })
 
-
 observeEvent(lang(), {
   
   ## translate indicators
@@ -99,6 +124,23 @@ observeEvent(lang(), {
   
 })
 
+output$simple_summary = renderUI({
+  type = indicator_info %>%
+    filter(ind_id == input$ind_id) %>% 
+    pull(type)
+  
+  statement = indicator_info %>%
+    filter(ind_id == input$ind_id) %>% 
+    pull(name)
+
+  indicator_data %>%
+    filter(ind_id == input$ind_id) %>%
+    filter_disag(input$disag) %>%
+    generate_text(statement, input$disag, type) %>%
+    HTML() %>%
+    style_text()
+})
+
 
 output$infographic = renderPlot({
   waffle_plot()
@@ -112,5 +154,8 @@ output$infographic = renderPlot({
       ggsave(file, plot =  waffle_plot(), device = "png")
     }
   )
+
+# Ensure select_disag works on start
+outputOptions(output, "select_disag", suspendWhenHidden = FALSE)
   
 }
