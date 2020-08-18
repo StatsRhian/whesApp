@@ -36,7 +36,7 @@ cook_waffle = function(df, disag = input$disag, title = ""){
     ) +
     labs(
       title = title,
-      caption = "Welsh Health Equity Status 2020"
+      caption = "Welsh Health Equity Solutions Platform, WHESRi 2020"
     ) +
     theme_ipsum_rc(grid = "") +
     theme_enhance_waffle()

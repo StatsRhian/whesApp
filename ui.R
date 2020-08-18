@@ -46,7 +46,7 @@ navbarPage("Welsh Health Equity Status",
                       reactableOutput("indicator_search")
              ),
              
-             "Inequalities in Health",
+             "Inequities in Health",
              widths = c(2, 10),
              categoryPanelUI("wellbeing"), 
              categoryPanelUI("morbidity"),
