@@ -1,5 +1,5 @@
 filter_disag = function(df, disag = input$disag){
-  breakdown_vars = c("Gender", "Age", "WIMD", "Education")
+  breakdown_vars = c("Gender", "Age", "Multiple Deprivation", "Education")
   keep_vars = breakdown_vars[(breakdown_vars %in% disag)]
   remove_vars = breakdown_vars[!(breakdown_vars %in% disag)]
   
