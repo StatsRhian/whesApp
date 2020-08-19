@@ -1,6 +1,6 @@
 categoryPanelUI = function(id){
   ns = NS(id)
-  tabPanel(full_category(id), 
+  tabPanel(uiOutput(glue("{id}_tab_title")), 
            icon = icon(cat_df$icon[cat_df$catID == id]),
            tabsetPanel(
              tabPanel("Infographics",

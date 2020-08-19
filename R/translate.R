@@ -1,4 +1,4 @@
-translate_db = read_csv("www/translation_database.csv")
+translate_db = read_csv("data/translation_database.csv")
 
 tr_pull = function(translate_db, key, lang, search = FALSE){
   if (search) {

@@ -55,8 +55,7 @@ navbarPage("Welsh Health Equity Solutions Platform",
              categoryPanelUI("income"),
              categoryPanelUI("living"),
              categoryPanelUI("social"),
-             categoryPanelUI("employment"),
-             selectInput("lan", "Language", c("EN", "CY"))
+             categoryPanelUI("employment")
            )
 )
 
