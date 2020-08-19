@@ -1,6 +1,6 @@
 key,EN,CY
-wellbeing_ind_001,"Percentage of adults reporting fair, bad or very bad health",A
-wellbeing_ind_002,Percentage of students who rate their health as fair or poor,B
+wellbeing_ind_001,"Percentage of adults reporting fair, bad or very bad health","Canran yr oedolion sy'n nodi iechyd gweddol, gwael neu wael iawn"
+wellbeing_ind_002,Percentage of students who rate their health as fair or poor,Canran y myfyrwyr sy'n graddio'u hiechyd yn deg neu'n wael
 morbidity_ind_003,"Percentage of survey respondents with a limiting long-standing illness, disability or infirmity",C
 wellbeing_ind_004,"Estimated prevalence of self-reported illness caused or made worse by work, for people working in the last 12 months",D
 morbidity_ind_006,Percentage of survey respondents with Heart a and circulatory illness,E
