@@ -7,7 +7,7 @@ shinyServer(function(input, output, session) {
                                        cat = .x))
   
    lan = reactive({
-    input$oldlang
+    input$lan
   })  
 
   output$indicator_search = renderReactable({
