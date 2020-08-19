@@ -89,22 +89,35 @@ income_tab_title,Income and Social Protection,Incwm a Diogelu Cymdeithasol
 living_tab_title,Living Environment,Yr Amgylchedd Byw
 social_tab_title,Social and Human Capital,Cyfalaf Cymdeithasol a Dynol
 employment_tab_title,Employment and Working Conditions,Amodau Cyflogaeth a Gwaith
-waffle_legend_label,Yes,Yes Welsh
-waffle_legend_label,No,No Welsh
-waffle_caption,Welsh Health Equity Status 2020,Statws Ecwiti Iechyd Cymru 2020
+waffle_legend_label,Yes,Do
+waffle_legend_label,No,Naddo
+waffle_caption,Welsh Health Equity Solutions Platform 2020,Llwyfan Datrysiadau Ecwiti Iechyd Cymru 2020
 infographics_tab_title,Infographics,Infograffeg
 details_tab_title,Details,Manylion
 policies_tab_title,Policies,Polisïau
-disag_Gender_value1,Male,Hi
-disag_Gender_value2,Female,Hello
-disag_Age_value1,Retirement Age Adult,A
-disag_Age_value2,Working Age Adult,B
-disag_Age_value3,Young Adult,C
-disag_Deprivation_value1,1,1
-disag_Deprivation_value2,2,2
-disag_Deprivation_value3,3,3
-disag_Deprivation_value4,4,4
-disag_Deprivation_value5,5,5
-disag_Education_value1,Low,hsr
-disag_Education_value2,High,fdsbaj
-disag_Education_value3,Medium,feiw
+disag_Gender_value1,Male,Gwryw
+disag_Gender_value2,Female,Benyw
+disag_Gender_value3,All,I gyd
+disag_Gender_value4,NA,NA
+disag_Age_value1,Retirement Age Adult,Oedolyn Oed Ymddeol
+disag_Age_value2,Working Age Adult,Oedolyn Oedran Gweithio
+disag_Age_value3,Young Adult,Oedolyn Ifanc
+disag_Age_value4,Boys,Bechgyn
+disag_Age_value5,Girls,Merched
+disag_Age_value6,All,I gyd
+disag_Age_value7,NA,NA
+disag_WIMD_value1,Most deprived 20%,Y mwyafrif difreintiedig 20%
+disag_WIMD_value2,Quintile 2,Cwintel 2
+disag_WIMD_value3,Quintile 3,Cwintel 3
+disag_WIMD_value4,Quintile 4,Cwintel 4
+disag_WIMD_value5,Least deprived 20%,Y lleiaf difreintiedig 20%
+disag_WIMD_value6,Eligible for Free School Meals,Yn gymwys ar gyfer Prydau Ysgol Am Ddim
+disag_WIMD_value7,Not Eligible for Free School Meals,Ddim yn Gymwys ar gyfer Prydau Ysgol Am Ddim
+disag_WIMD_value8,All,I gyd
+disag_WIMD_value9,NA,NA
+disag_Education_value1,Low,Isel
+disag_Education_value2,High,Uchel
+disag_Education_value3,Medium,Canolig
+disag_Education_value4,All,I gyd
+disag_Education_value5,NA,NA
+disag_None,None,Dim

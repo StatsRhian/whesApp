@@ -91,12 +91,7 @@ waffle_plot = reactive({
                 lang = lang())
   })
 
-toListen <- reactive({
-  list(lang(), input$ind_id)
-})
-
-observeEvent(toListen(),  {
-  
+observeEvent(lang(), { 
   ## translate indicators
   updateSelectInput(
     session,
@@ -104,6 +99,13 @@ observeEvent(toListen(),  {
     label = tr_pull(translate_db, "select_ind_label", lang()),
     choices = tr_deframe(translate_db, key_group = cat, lang = lang())
   )
+})
+
+toListen <- reactive({
+  list(lang(), input$ind_id)
+})
+
+observeEvent(toListen(),  {
   
   ## translate disags
   disag_choices =
