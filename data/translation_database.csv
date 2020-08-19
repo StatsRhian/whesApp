@@ -75,11 +75,11 @@ health_ind_102,"Available hospital beds per 100,000 inhabitants",U
 health_ind_103,Percentage of survey respondents aged 16+ years caring for family members/ friends/ nieghbours,V
 health_ind_107,Percentage of survey respondents aged 16+ who wanted to but couldn't see a GP/family doctor about own health,W
 health_ind_109,Percentage of survey respondents dissatisfied with the care they received at their last appointment with GP/family doctor,X
-select_label,Please select an indicator,Dewiswch ddangosydd
 disaggregate_Gender,Gender,Rhyw
 disaggregate_Age,Age,Oedran
-disaggregate_WIMD,Welsh Index,Mynegai Cymraeg
+disaggregate_Deprivation,Deprivation,Amddifadedd
 disaggregate_Education,Education Level,Lefel Addysg
+select_ind_label,Please select an indicator. You can type in the box to search for a key word,Dewiswch ddangosydd. Gallwch deipio yn y blwch i chwilio am air allweddol
 select_disag_label,Please select an disaggregate,Dewiswch ddadgyfuno
 overview_tab_title,Overview,Trosolwg
 wellbeing_tab_title,Wellbeing,Lles
@@ -100,11 +100,11 @@ disag_Gender_value2,Female,Hello
 disag_Age_value1,Retirement Age Adult,A
 disag_Age_value2,Working Age Adult,B
 disag_Age_value3,Young Adult,C
-disag_WIMD_value1,1,1
-disag_WIMD_value2,2,2
-disag_WIMD_value3,3,3
-disag_WIMD_value4,4,4
-disag_WIMD_value5,5,5
+disag_Deprivation_value1,1,1
+disag_Deprivation_value2,2,2
+disag_Deprivation_value3,3,3
+disag_Deprivation_value4,4,4
+disag_Deprivation_value5,5,5
 disag_Education_value1,Low,hsr
 disag_Education_value2,High,fdsbaj
 disag_Education_value3,Medium,feiw

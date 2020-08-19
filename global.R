@@ -16,9 +16,9 @@ load(file = "data/clean_indicators.RData")
 #! Move this data processing to WHESPrep
 indicator_data = 
   indicator_data %>%
-  rename(`Multiple Deprivation` = WIMD) %>%
-  mutate(`Multiple Deprivation` = 
-           forcats::fct_recode(`Multiple Deprivation`,
+  rename(`Deprivation` = WIMD) %>%
+  mutate(`Deprivation` = 
+           forcats::fct_recode(`Deprivation`,
                                "Most deprived 20%" = "1",
                                "Quintile 2" = "2",
                                "Quintile 3" = "3",

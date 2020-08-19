@@ -13,14 +13,12 @@ tr_pull = function(translate_db, key, lang, search = FALSE){
 }
 # tr_pull(translate_db, key = "ind_001", lang = "EN", search = TRUE)
 
-
 # indented for the search filters
 tr_deframe = function(translate_db, key_group, lang){
   translate_db %>%
-    filter(str_detect(key, {{ key_group }})) %>% 
+    filter(str_detect(key,  key_group )) %>% 
     mutate(ind_id = str_extract(key, "_.*"),
            ind_id = str_remove(ind_id, "_")) %>% 
     select({{ lang }}, ind_id) %>% 
     deframe()
 }
-

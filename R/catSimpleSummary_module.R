@@ -23,7 +23,15 @@ catSimpleSummaryUI = function(id, cat){
                            width = "90%"
                )
         ), # End: column
-        column(6, uiOutput(ns("select_disag"))
+        column(6, 
+               selectInput(ns("disag"),
+                           label = "Please select a disaggregate",
+                           choices = c("None" = "None",
+                                       "Gender" = "Gender",
+                                       "Age" = "Age",
+                                       "Deprivation" = "Deprivation", 
+                                       "Education level" = "Education"),
+                           selected = "None")
         ) # End: column
       ), # End: fluid row
       
@@ -41,26 +49,6 @@ catSimpleSummaryUI = function(id, cat){
 
 catSimpleSummary = function(input, output, session, lang, cat) {
   
-output$select_disag = renderUI({
-  choices =
-    indicator_info %>%
-    filter(ind_id == input$ind_id) %>%
-    pull(disag) %>%
-    unlist()
-
-#  if (is.na(choices)) {
-#    choices = "None"
-#  } else {
-#    choices = c("None", choices)
-#  }
-  names(choices) = choices
-  
-selectInput(session$ns("disag"),
-                          label = "Please select a disaggregate",
-                          choices = choices,
-                          selected = "None")
-})
-
 # Hide Waffle & Download if not a pecentage indicator
 observeEvent(input$ind_id, {
   type = 
@@ -103,7 +91,11 @@ waffle_plot = reactive({
                 lang = lang())
   })
 
-observeEvent(lang(), {
+toListen <- reactive({
+  list(lang(), input$ind_id)
+})
+
+observeEvent(toListen(),  {
   
   ## translate indicators
   updateSelectInput(
@@ -114,13 +106,32 @@ observeEvent(lang(), {
   )
   
   ## translate disags
+  disag_choices =
+    indicator_info %>%
+    filter(ind_id == input$ind_id) %>%
+    pull(disag) %>%
+    unlist()
+  
+  disag_choices = c("None", disag_choices)
+  names(disag_choices) = disag_choices
+    
+#    if (is.na(disag_choices[1])) {
+#      disag_choices = "None"
+#    } else {
+#      disag_choices = c("None", disag_choices)
+#    }
+
+  
+  search_disag = glue("disaggregate_[{paste(disag_choices, collapse = '|')}]")
+  
+  print(search_disag)
+  
   updateSelectInput(
     session,
     inputId = "disag",
     label = tr_pull(translate_db, "select_disag_label", lang()),
-    choices = tr_deframe(translate_db, key_group = "disaggregate", lang = lang())
+    choices = tr_deframe(translate_db, key_group = search_disag, lang = lang())
   )
-  
 })
 
 output$simple_summary = renderUI({
@@ -155,6 +166,6 @@ output$infographic = renderPlot({
   )
 
 # Ensure select_disag works on start
-outputOptions(output, "select_disag", suspendWhenHidden = FALSE)
+#outputOptions(output, "select_disag", suspendWhenHidden = FALSE)
   
 }

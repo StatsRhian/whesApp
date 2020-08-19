@@ -5,8 +5,7 @@ shinyServer(function(input, output, session) {
                                        id = .x,
                                        lang = lan,
                                        cat = .x))
-  
-   lan = reactive({
+  lan = reactive({
     input$lan
   })  
 

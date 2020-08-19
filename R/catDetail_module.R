@@ -23,7 +23,15 @@ catDetailUI = function(id, cat){
                            width = "90%"
                )
         ), # End: column
-        column(6, uiOutput(ns("select_disag"))
+        column(6, 
+               selectInput(ns("disag"),
+                           label = "Please select a disaggregate",
+                           choices = c("Gender" = "Gender",
+                                       "Age" = "Age",
+                                       "Deprivation" = "Deprivation", 
+                                       "Education level" = "Education"),
+                           selected = "Gender", 
+                           multiple = TRUE)
         ) # End: column
       ), # End: fluid row
       
@@ -151,21 +159,21 @@ catDetail = function(input, output, session, lang, cat){
   })
   
   
-  output$select_disag = renderUI({
-    choices =
-      indicator_info %>%
-      filter(ind_id == input$ind_id) %>%
-      pull(disag) %>%
-      unlist()
-    
-    names(choices) = choices
-    
-    selectInput(session$ns("disag"),
-                label = "Please select a disaggregate",
-                choices = choices,
-                selected = "",
-                multiple = TRUE)
-  })  
+  # output$select_disag = renderUI({
+  #   choices =
+  #     indicator_info %>%
+  #     filter(ind_id == input$ind_id) %>%
+  #     pull(disag) %>%
+  #     unlist()
+  #   
+  #   names(choices) = choices
+  #   
+  #   selectInput(session$ns("disag"),
+  #               label = "Please select a disaggregate",
+  #               choices = choices,
+  #               selected = "",
+  #               multiple = TRUE)
+  # })  
   
   output$detailed_table = 
     renderReactable({
@@ -200,6 +208,6 @@ catDetail = function(input, output, session, lang, cat){
   )
   
   # Ensure select_disag works on start
-  outputOptions(output, "select_disag", suspendWhenHidden = FALSE)
+  #outputOptions(output, "select_disag", suspendWhenHidden = FALSE)
   
 }
