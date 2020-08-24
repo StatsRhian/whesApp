@@ -11,7 +11,7 @@ navbarPage("Welsh Health Equity Solutions Platform",
            
            navlistPanel(
              id = "tab_categories",
-             tabPanel("Overview", 
+             tabPanel(uiOutput("overview_tab_title"), 
                       icon = icon("home"), 
                       h2("Welsh Health Equity Solutions Platform"), 
                       br(),

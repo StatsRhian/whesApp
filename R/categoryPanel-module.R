@@ -1,6 +1,6 @@
 categoryPanelUI = function(id){
   ns = NS(id)
-  tabPanel(full_category(id), 
+  tabPanel(uiOutput(glue("{id}_tab_title")), 
            icon = icon(cat_df$icon[cat_df$catID == id]),
            tabsetPanel(
              tabPanel("Infographics",
@@ -23,7 +23,7 @@ categoryPanelUI = function(id){
   )
 }
 
-categoryPanel = function(input, output, session){
-  callModule(catSimpleSummary, "simple")
-  callModule(catDetail, "detailed")
+categoryPanel = function(input, output, session, lang, cat){
+  callModule(catSimpleSummary, "simple", lang = lang, cat = cat)
+  callModule(catDetail, "detailed", lang = lang, cat = cat)
 }
