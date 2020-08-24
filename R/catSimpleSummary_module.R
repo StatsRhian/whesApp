@@ -70,9 +70,6 @@ waffle_plot = reactive({
     filter(ind_id == input$ind_id) %>%
     pull(name)
   
-  print(indicator_data)
-  print(input$disag)
-  
    indicator_data %>%
     filter(ind_id == input$ind_id) %>%
     filter_disag(input$disag) %>%
