@@ -33,9 +33,7 @@ indicator_info =
   filter(ind_id %in% indicator_data$ind_id) %>%
   mutate(disag = calc_disag_vars(ind_id)) %>%
   left_join(distinct(select(indicator_data, c(ind_id, type)))) %>%
-  filter(type == "percent") %>%
-  filter(ind_id != "ind_019") %>%
-  filter(ind_id != "ind_020")
+  filter(type == "percent")
 
 # Also filter the translated
 trans_other = 
