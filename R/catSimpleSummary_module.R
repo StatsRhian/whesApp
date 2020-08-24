@@ -89,7 +89,7 @@ waffle_plot = reactive({
   })
 
 observeEvent(lang(), { 
-  ## translate indicators
+  ## Translate indicators
   updateSelectInput(
     session,
     inputId = "ind_id",
@@ -104,23 +104,15 @@ toListen <- reactive({
 
 observeEvent(toListen(),  {
   
-  ## translate disags
+  # Translate the disaggregates
   disag_choices =
     indicator_info %>%
     filter(ind_id == input$ind_id) %>%
     pull(disag) %>%
     unlist()
   
-  disag_choices = c("None", disag_choices)
   names(disag_choices) = disag_choices
-    
-#    if (is.na(disag_choices[1])) {
-#      disag_choices = "None"
-#    } else {
-#      disag_choices = c("None", disag_choices)
-#    }
 
-  
   search_disag = glue("disaggregate_[{paste(disag_choices, collapse = '|')}]")
   
   print(search_disag)

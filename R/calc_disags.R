@@ -10,9 +10,10 @@ calc_disag_vars = Vectorize(function(id){
     pull(name) 
   
   if (identical(disags, character(0))) {
-    disags = NA
+    disags = "None"
+  } else{
+    disags = c("None", disags)
   }
-  
   return(list(disags))
 }, 
 USE.NAMES = FALSE)
