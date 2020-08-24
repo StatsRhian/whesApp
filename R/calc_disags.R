@@ -11,13 +11,14 @@ calc_disag_vars = Vectorize(function(id){
   
   if (identical(disags, character(0))) {
     disags = "None"
-  } else{
+  } else {
     disags = c("None", disags)
   }
   return(list(disags))
-}, 
+},
 USE.NAMES = FALSE)
 
+# Not currently used
 get_disag_choices = function(id){
   indicator_info %>%
     filter(ind_id == id) %>%

@@ -79,6 +79,7 @@ disaggregate_Gender,Gender,Rhyw
 disaggregate_Age,Age,Oedran
 disaggregate_Deprivation,Deprivation,Amddifadedd
 disaggregate_Education,Education Level,Lefel Addysg
+disaggregate_None,None,Dim
 select_ind_label,Please select an indicator. You can type in the box to search for a key word,Dewiswch ddangosydd. Gallwch deipio yn y blwch i chwilio am air allweddol
 select_disag_label,Please select an disaggregate,Dewiswch ddadgyfuno
 overview_tab_title,Overview,Trosolwg
@@ -120,4 +121,3 @@ disag_Education_value2,High,Uchel
 disag_Education_value3,Medium,Canolig
 disag_Education_value4,All,I gyd
 disag_Education_value5,NA,NA
-disag_None,None,Dim

@@ -133,48 +133,48 @@ catDetail = function(input, output, session, lang, cat){
     }
     return(g)
   })
-  
 
+  ## Translate indicators
   observeEvent(lang(), {
-    
-    ## translate indicators
     updateSelectInput(
       session,
       inputId = "ind_id",
       label = tr_pull(translate_db, "select_ind_label", lang()),
-      choices = tr_deframe(translate_db, key_group = cat, lang())
+      choices = tr_deframe_inds(translate_db,
+                                key_group = cat,
+                                lang = lang(),
+                                indicator_info = indicator_info)
     )
+  })
+  
+  
+  toListen <- reactive({
+    list(lang(), input$ind_id)
+  })
+  
+  observeEvent(toListen(),  {
+    # Translate the disaggregates
+    disag_choices =
+      indicator_info %>%
+      filter(ind_id == input$ind_id) %>%
+      pull(disag) %>%
+      unlist()
     
-    ## translate disags
+    names(disag_choices) = disag_choices
+    search_disag = glue("disaggregate_({paste(disag_choices, collapse = '|')})")
+    
     updateSelectInput(
       session,
       inputId = "disag",
       label = tr_pull(translate_db, "select_disag_label", lang()),
-      choices = tr_deframe(translate_db, key_group = "disaggregate", lang = lang())
+      choices = tr_deframe(translate_db, pattern = search_disag, lang = lang())
     )
   })
   
   output$bar_plot = renderPlot({
     plot_obj()
   })
-  
-  
-  # output$select_disag = renderUI({
-  #   choices =
-  #     indicator_info %>%
-  #     filter(ind_id == input$ind_id) %>%
-  #     pull(disag) %>%
-  #     unlist()
-  #   
-  #   names(choices) = choices
-  #   
-  #   selectInput(session$ns("disag"),
-  #               label = "Please select a disaggregate",
-  #               choices = choices,
-  #               selected = "",
-  #               multiple = TRUE)
-  # })  
-  
+
   output$detailed_table = 
     renderReactable({
       data() %>%

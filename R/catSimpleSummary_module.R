@@ -94,7 +94,10 @@ observeEvent(lang(), {
     session,
     inputId = "ind_id",
     label = tr_pull(translate_db, "select_ind_label", lang()),
-    choices = tr_deframe(translate_db, key_group = cat, lang = lang())
+    choices = tr_deframe_inds(translate_db,
+                              key_group = cat,
+                              lang = lang(),
+                              indicator_info = indicator_info)
   )
 })
 
@@ -103,7 +106,6 @@ toListen <- reactive({
 })
 
 observeEvent(toListen(),  {
-  
   # Translate the disaggregates
   disag_choices =
     indicator_info %>%
@@ -112,16 +114,14 @@ observeEvent(toListen(),  {
     unlist()
   
   names(disag_choices) = disag_choices
-
-  search_disag = glue("disaggregate_[{paste(disag_choices, collapse = '|')}]")
-  
-  print(search_disag)
+  search_disag = glue("disaggregate_({paste(disag_choices, collapse = '|')})")
   
   updateSelectInput(
     session,
     inputId = "disag",
     label = tr_pull(translate_db, "select_disag_label", lang()),
-    choices = tr_deframe(translate_db, key_group = search_disag, lang = lang())
+    choices = tr_deframe(translate_db, pattern = search_disag, lang = lang()),
+    selected = tr_deframe(translate_db, pattern = "disaggregate_None", lang = lang())
   )
 })
 
