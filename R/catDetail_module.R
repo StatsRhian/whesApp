@@ -49,7 +49,7 @@ catDetailUI = function(id, cat){
                          ),
                          textInput(ns("plot_caption"),
                                    label = "Caption",
-                                   value = "Welsh Health Equity Status 2020"
+                                   value = "Welsh Health Equity Solutions Platform, WHESRi 2020"
                          )
                  )
                )       
