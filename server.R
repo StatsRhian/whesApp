@@ -1,16 +1,14 @@
 shinyServer(function(input, output, session) {
   
-  # Call modules for all seven categories
-  callModule(categoryPanel, "wellbeing")
-  callModule(categoryPanel, "morbidity")
-  callModule(categoryPanel, "health")
-  callModule(categoryPanel, "income")
-  callModule(categoryPanel, "living")
-  callModule(categoryPanel, "social")
-  callModule(categoryPanel, "employment")
-  
-  output$test_lang = renderText(input$lang)
-  
+  # Call modules for tabs
+  purrr::map(cat_df$catID, ~callModule(module = categoryPanel,
+                                       id = .x,
+                                       lang = lan,
+                                       cat = .x))
+  lan = reactive({
+    input$lan
+  })  
+
   output$indicator_search = renderReactable({
     indicator_info %>%
       mutate(category = full_category(category)) %>%
@@ -30,29 +28,63 @@ shinyServer(function(input, output, session) {
     
   })
   
-  shinyjs::onclick("img_health",
-                   updateTabsetPanel(session,
-                                     inputId = "tab_categories",
-                                     selected =  full_category("health")))
-  shinyjs::onclick("img_income",
-                   updateTabsetPanel(session,
-                                     inputId = "tab_categories",
-                                     selected =  full_category("income")))
+### Function to create onclick event for images
+  onclick_tabset = function(category){
+    shinyjs::onclick(paste0("img_", category),
+                     updateTabsetPanel(session,
+                                       inputId = "tab_categories",
+                                       selected = full_category(category)))
+  }
+
+### Apply above function to each category
+  purrr::map(c("health", "income", "living", "social", "employment"),
+             onclick_tabset)
+ 
+### Update tabpanel titles
   
-  shinyjs::onclick("img_living",
-                   updateTabsetPanel(session,
-                                     inputId = "tab_categories",
-                                     selected =  full_category("living")))
+  output$overview_tab_title = renderUI({
+    tr_pull(translate_db, "overview_tab_title", lan())
+  })
   
-  shinyjs::onclick("img_social",
-                   updateTabsetPanel(session,
-                                     inputId = "tab_categories",
-                                     selected =  full_category("social")))
+  output$wellbeing_tab_title = renderUI({
+    tr_pull(translate_db, "wellbeing_tab_title", lan())
+  })
   
-  shinyjs::onclick("img_employment",
-                   updateTabsetPanel(session,
-                                     inputId = "tab_categories",
-                                     selected = full_category("employment")))
+  output$morbidity_tab_title = renderUI({
+    tr_pull(translate_db, "morbidity_tab_title", lan())
+  })
+  
+  output$health_tab_title = renderUI({
+    tr_pull(translate_db, "health_tab_title", lan())
+  })
+  
+  output$income_tab_title = renderText({
+    tr_pull(translate_db, "income_tab_title", lan())
+  })
+  
+  output$living_tab_title = renderUI({
+    tr_pull(translate_db, "living_tab_title", lan())
+  })
+  
+  output$social_tab_title = renderUI({
+    tr_pull(translate_db, "social_tab_title", lan())
+  })
+  
+  output$employment_tab_title = renderUI({
+    tr_pull(translate_db, "employment_tab_title", lan())
+  })
+  
+  output$infographics = renderText({
+    tr_pull(translate_db, key = "infographics_tab_title", lan())
+  })
+  
+  output$details = renderText({
+    tr_pull(translate_db, key = "details_tab_title", lan())
+  })
+  
+  output$policies = renderText({
+    tr_pull(translate_db, key = "policies_tab_title", lan())
+  })
   
   observe({
     # Trigger this observer every time an input changes

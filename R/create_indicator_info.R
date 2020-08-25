@@ -23,3 +23,4 @@ indicator_info %>%
 
 write_csv(indicator_info, "data/indicator_info.csv")
 }
+
