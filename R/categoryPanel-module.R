@@ -4,12 +4,15 @@ categoryPanelUI = function(id){
            icon = icon(cat_df$icon[cat_df$catID == id]),
            tabsetPanel(
              tabPanel("Infographics",
+                      value = "infographics",
                       catSimpleSummaryUI(ns("simple"), id)
              ),
              tabPanel("Detail",
+                      value = "detail",
                       catDetailUI(ns("detailed"), id)
              ),
              tabPanel("Policies",
+                      value = "policy",
                       fluidPage(
                         fluidRow(
                           column(12,
