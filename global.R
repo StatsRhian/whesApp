@@ -13,18 +13,6 @@ enableBookmarking(store = "url")
 
 load(file = "data/clean_indicators.RData")
 
-#! Move this data processing to WHESPrep
-indicator_data = 
-  indicator_data %>%
-  rename(`Deprivation` = WIMD) %>%
-  mutate(`Deprivation` = 
-           forcats::fct_recode(`Deprivation`,
-                               "Most deprived 20%" = "1",
-                               "Quintile 2" = "2",
-                               "Quintile 3" = "3",
-                               "Quintile 4" = "4",
-                               "Least deprived 20%" = "5"))
-
 # Filter indicators to only show ones I have data about
 indicator_info = readr::read_csv("data/indicator_info.csv")
 
