@@ -19,11 +19,19 @@ catSimpleSummaryUI = function(id, cat){
                              filter(indicator_info, category == cat) %>%
                              select(name, ind_id) %>%
                              deframe(),
-                           selected = "",
+                           selectize = TRUE,
                            width = "90%"
                )
         ), # End: column
-        column(6, uiOutput(ns("select_disag"))
+        column(6, 
+               selectInput(ns("disag"),
+                           label = "Please select a disaggregate",
+                           choices = c("None" = "None",
+                                       "Gender" = "Gender",
+                                       "Age" = "Age",
+                                       "Deprivation" = "Deprivation", 
+                                       "Education level" = "Education"),
+                           selected = "None")
         ) # End: column
       ), # End: fluid row
       
@@ -39,41 +47,21 @@ catSimpleSummaryUI = function(id, cat){
   )
 }
 
-catSimpleSummary = function(input, output, session) {
+catSimpleSummary = function(input, output, session, lang, cat) {
   
-output$select_disag = renderUI({
-  choices =
-    indicator_info %>%
-    filter(ind_id == input$ind_id) %>%
-    pull(disag) %>%
-    unlist()
-
-  if (is.na(choices)) {
-    choices = "None"
-  } else {
-    choices = c("None", choices)
-  }
-  names(choices) = choices
-  
-selectInput(session$ns("disag"),
-                          label = "Please select a disaggregate",
-                          choices = choices,
-                          selected = "None")
-})
-
 # Hide Waffle & Download if not a pecentage indicator
 observeEvent(input$ind_id, {
   type = 
     indicator_info %>%
     filter(ind_id == input$ind_id) %>%
     pull(type)
-  if (type != "percent") {
-    hide("infographic")
-    hide("downloadPlot")
-  } else {
-    show("infographic")
-    show("downloadPlot")
-    }
+#  if (type != "percent") {
+#    hide("infographic")
+#    hide("downloadPlot")
+#  } else {
+#    show("infographic")
+#    show("downloadPlot")
+#    }
 })
   
 waffle_plot = reactive({
@@ -82,12 +70,60 @@ waffle_plot = reactive({
     filter(ind_id == input$ind_id) %>%
     pull(name)
   
-  indicator_data %>%
+   indicator_data %>%
     filter(ind_id == input$ind_id) %>%
     filter_disag(input$disag) %>%
     prep_waffle(input$disag) %>%
-    cook_waffle(input$disag, title = title)
+    cook_waffle(input$disag, 
+                title = tr_pull(translate_db, 
+                                key = input$ind_id,
+                                lang = lang(),
+                                search = TRUE), 
+                caption = tr_pull(translate_db, 
+                                key = "waffle_caption",
+                                lang = lang()),
+                legend_labels = tr_pull(translate_db, 
+                                        key = "waffle_legend_label",
+                                        lang = lang()),
+                lang = lang())
   })
+
+observeEvent(lang(), { 
+  ## Translate indicators
+  updateSelectInput(
+    session,
+    inputId = "ind_id",
+    label = tr_pull(translate_db, "select_ind_label", lang()),
+    choices = tr_deframe_inds(translate_db,
+                              key_group = cat,
+                              lang = lang(),
+                              indicator_info = indicator_info)
+  )
+})
+
+toListen <- reactive({
+  list(lang(), input$ind_id)
+})
+
+observeEvent(toListen(),  {
+  # Translate the disaggregates
+  disag_choices =
+    indicator_info %>%
+    filter(ind_id == input$ind_id) %>%
+    pull(disag) %>%
+    unlist()
+  
+  names(disag_choices) = disag_choices
+  search_disag = glue("disaggregate_({paste(disag_choices, collapse = '|')})")
+  
+  updateSelectInput(
+    session,
+    inputId = "disag",
+    label = tr_pull(translate_db, "select_disag_label", lang()),
+    choices = tr_deframe(translate_db, pattern = search_disag, lang = lang()),
+    selected = tr_deframe(translate_db, pattern = "disaggregate_None", lang = lang())
+  )
+})
 
 output$simple_summary = renderUI({
   type = indicator_info %>%
@@ -106,6 +142,7 @@ output$simple_summary = renderUI({
     style_text()
 })
 
+
 output$infographic = renderPlot({
   waffle_plot()
 })
@@ -120,6 +157,6 @@ output$infographic = renderPlot({
   )
 
 # Ensure select_disag works on start
-outputOptions(output, "select_disag", suspendWhenHidden = FALSE)
+#outputOptions(output, "select_disag", suspendWhenHidden = FALSE)
   
 }
