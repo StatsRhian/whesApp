@@ -82,6 +82,7 @@ disaggregate_Education,Education Level,Lefel Addysg
 disaggregate_None,None,Dim
 select_ind_label,Please select an indicator. You can type in the box to search for a key word,Dewiswch ddangosydd. Gallwch deipio yn y blwch i chwilio am air allweddol
 select_disag_label,Please select an disaggregate,Dewiswch ddadgyfuno
+whes_title,Welsh Health Equity Solutions Platform,Llwyfan Datrysiadau Ecwiti Iechyd Cymru
 overview_tab_title,Overview,Trosolwg
 wellbeing_tab_title,Wellbeing,Lles
 morbidity_tab_title,Morbidity,Morbidrwydd
@@ -89,6 +90,7 @@ health_tab_title,Health Services,Gwasanaethau Iechyd
 income_tab_title,Income and Social Protection,Incwm a Diogelu Cymdeithasol
 living_tab_title,Living Environment,Yr Amgylchedd Byw
 social_tab_title,Social and Human Capital,Cyfalaf Cymdeithasol a Dynol
+inequities_tab_title,Inequities in Health,Anghydraddoldebau mewn Iechyd
 employment_tab_title,Employment and Working Conditions,Amodau Cyflogaeth a Gwaith
 waffle_legend_label,Yes,Do
 waffle_legend_label,No,Naddo
@@ -96,26 +98,38 @@ waffle_caption,Welsh Health Equity Solutions Platform 2020,Llwyfan Datrysiadau E
 infographics_tab_title,Infographics,Infograffeg
 details_tab_title,Details,Manylion
 policies_tab_title,Policies,Polisïau
-disag_Gender_value1,Male,Gwryw
-disag_Gender_value2,Female,Benyw
-disag_Gender_value3,All,I gyd
-disag_Gender_value4,NA,NA
-disag_Age_value1,Retirement Age Adult,Oedolyn Oed Ymddeol
-disag_Age_value2,Working Age Adult,Oedolyn Oedran Gweithio
-disag_Age_value3,Young Adult,Oedolyn Ifanc
-disag_Age_value4,Boys,Bechgyn
-disag_Age_value5,Girls,Merched
-disag_Age_value6,All,I gyd
-disag_Age_value7,NA,NA
-disag_WIMD_value1,Most deprived 20%,Y mwyafrif difreintiedig 20%
-disag_WIMD_value2,Quintile 2,Cwintel 2
-disag_WIMD_value3,Quintile 3,Cwintel 3
-disag_WIMD_value4,Quintile 4,Cwintel 4
-disag_WIMD_value5,Least deprived 20%,Y lleiaf difreintiedig 20%
-disag_WIMD_value6,Eligible for Free School Meals,Yn gymwys ar gyfer Prydau Ysgol Am Ddim
-disag_WIMD_value7,Not Eligible for Free School Meals,Ddim yn Gymwys ar gyfer Prydau Ysgol Am Ddim
-disag_WIMD_value8,All,I gyd
-disag_WIMD_value9,NA,NA
+disag_Gender_value_01,Male,Gwryw
+disag_Gender_value_02,Female,Benyw
+disag_Gender_value_03,All,I gyd
+disag_Gender_value_04,NA,NA
+disag_Age_value_01,Retirement Age Adult,Oedolyn Oed Ymddeol
+disag_Age_value_02,Working Age Adult,Oedolyn Oedran Gweithio
+disag_Age_value_03,Young Adult,Oedolyn Ifanc
+disag_Age_value_04,Boys,Bechgyn
+disag_Age_value_05,Girls,Merched
+disag_Age_value_06,All,I gyd
+disag_Age_value_07,NA,NA
+disag_Age_value_08,Year 7,Blwyddyn 7
+disag_Age_value_09,Year 8,Blwyddyn 8
+disag_Age_value_10,Year 9,Blwyddyn 9
+disag_Age_value_11,Year 10,Blwyddyn 10
+disag_Age_value_12,Year 11,Blwyddyn 11
+disag_WIMD_value_01,Most deprived fifth,Y mwyafrif difreintiedig 20%
+disag_WIMD_value_02,Next most deprived fifth,Cwintel 2
+disag_WIMD_value_03,Middle,Cwintel 3
+disag_WIMD_value_04,Next least deprived fifth,Cwintel 4
+disag_WIMD_value_05,Least deprived fifth,Y lleiaf difreintiedig 20%
+disag_WIMD_value_06,Eligible for Free School Meals,Yn gymwys ar gyfer Prydau Ysgol Am Ddim
+disag_WIMD_value_07,Not Eligible for Free School Meals,Ddim yn Gymwys ar gyfer Prydau Ysgol Am Ddim
+disag_WIMD_value_08,All,I gyd
+disag_WIMD_value_09,NA,NA
+disag_WIMD_value_10,FAS 1 (Low),FAS 1 (Isel)
+disag_WIMD_value_11,FAS 2 (Medium),FAS 2 (Canolig)
+disag_WIMD_value_12,FAS 3 (High),FAS 3 (Uchel)
+disag_WIMD_value_13,All adults in work,Pob oedolyn mewn gwaith
+disag_WIMD_value_14,"At least one adult in work, but not all","O leiaf un oedolyn mewn gwaith, ond nid pob un"
+disag_WIMD_value_15,Working households,Cartrefi sy'n gweithio
+disag_WIMD_value_16,Workless households,Cartrefi di-waith
 disag_Education_value1,Low,Isel
 disag_Education_value2,High,Uchel
 disag_Education_value3,Medium,Canolig
