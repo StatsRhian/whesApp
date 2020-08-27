@@ -16,11 +16,11 @@ prep_waffle = function(df, disag = input$disag){
 }
 
 disag_facet_labels = tr_pull(translate_db,
-                             key = "disag_[A-Za-z]*_value[0-9]",
+                             key = "disag_[A-Za-z]*_value_[0-9]*",
                              lang = "EN",
                              search = TRUE)
 disag_facet_labels_new = tr_pull(translate_db,
-                                 key = "disag_[A-Za-z]*_value[0-9]",
+                                 key = "disag_[A-Za-z]*_value_[0-9]*",
                                  lang = "CY",
                                  search = TRUE)
 
@@ -58,11 +58,12 @@ cook_waffle = function(df, disag = input$disag,
       labels = legend_labels
     ) +
     labs(
-      title = title,
+      title = wrapper(title, width = 100),
       caption = "Welsh Health Equity Solutions Platform, WHESRi 2020"
     ) +
     theme_ipsum_rc(grid = "") +
-    theme_enhance_waffle()
+    theme_enhance_waffle() +
+    theme(plot.title = element_text(size = 14, hjust = 0, vjust = 0))
   
   # DISAG
   if (disag == "None") {
@@ -80,4 +81,9 @@ cook_waffle = function(df, disag = input$disag,
       coord_equal()
   }
   waffle
+}
+
+wrapper <- function(x, ...) 
+{
+  paste(strwrap(x, ...), collapse = "\n")
 }

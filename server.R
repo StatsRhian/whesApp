@@ -41,7 +41,10 @@ shinyServer(function(input, output, session) {
              onclick_tabset)
  
 ### Update tabpanel titles
-  
+  output$whes_title = renderText({
+    tr_pull(translate_db, "whes_title", lan())
+  })
+    
   output$overview_tab_title = renderUI({
     tr_pull(translate_db, "overview_tab_title", lan())
   })

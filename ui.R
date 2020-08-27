@@ -1,6 +1,6 @@
 bs_theme_set("minty")
 bs_theme_accent_colors(primary = "#1A5D7E", secondary = "#c60158")
-navbarPage("Welsh Health Equity Solutions Platform",
+navbarPage(title = textOutput("whes_title"),
            
            tags$head(
              tags$script(type = "text/javascript", src = "logo.js"),
@@ -13,7 +13,7 @@ navbarPage("Welsh Health Equity Solutions Platform",
              id = "tab_categories",
              tabPanel(uiOutput("overview_tab_title", inline = TRUE), 
                       icon = icon("home"), 
-                      h2("Welsh Health Equity Solutions Platform"), 
+                      #h2(textOutput("whes_title")),
                       br(),
                       div(img(src = "icons/health-services.png",
                               height = "250px",
@@ -48,7 +48,7 @@ navbarPage("Welsh Health Equity Solutions Platform",
              
              "Inequities in Health",
              widths = c(2, 10),
-             categoryPanelUI("wellbeing"), 
+             categoryPanelUI("wellbeing"),
              categoryPanelUI("morbidity"),
              "Five essential conditions",
              categoryPanelUI("health"),
