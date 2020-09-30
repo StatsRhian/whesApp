@@ -55,13 +55,13 @@ observeEvent(input$ind_id, {
     indicator_info %>%
     filter(ind_id == input$ind_id) %>%
     pull(type)
-#  if (type != "percent") {
-#    hide("infographic")
-#    hide("downloadPlot")
-#  } else {
-#    show("infographic")
-#    show("downloadPlot")
-#    }
+ if (type != "percent") {
+   hide("infographic")
+   hide("downloadPlot")
+ } else {
+   show("infographic")
+   show("downloadPlot")
+   }
 })
   
 waffle_plot = reactive({
