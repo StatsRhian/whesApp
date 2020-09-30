@@ -5,12 +5,12 @@ morbidity_ind_003,"Percentage of survey respondents with a limiting long-standin
 wellbeing_ind_004,"Estimated prevalence of self-reported illness caused or made worse by work, for people working in the last 12 months","Amcangyfrif o nifer yr achosion o salwch hunan-gofnodedig a achoswyd neu a waethygwyd gan waith, i bobl sy'n gweithio yn ystod y 12 mis diwethaf"
 morbidity_ind_006,Percentage of survey respondents with Heart a and circulatory illness,E
 morbidity_ind_007,Percentage of survey respondents with Diabetes incl. Hyperglycaemia,F
-mortality_ind_008,"Death rate per 100,000 due to tuberculosis",G
+morbidity_ind_008,"Death rate per 100,000 due to tuberculosis",G
 wellbeing_ind_009,Percentage of survey respondents who rated their satisfaction with life as low (0-4 out of 10),H
 wellbeing_ind_010,"Percentage of students who rated their life satisfaction as 6 out of 10, or above",I
 wellbeing_ind_011,"Warwick-Edinburgh Metnal Well-being Scale, mean score",J
-mortality_ind_012,Infant mortality (under 1 year),K
-mortality_ind_013,Life expectancy at birth in years,L
+morbidity_ind_012,Infant mortality (under 1 year),K
+morbidity_ind_013,Life expectancy at birth in years,L
 morbidity_ind_014,Percentage of survey respondents who currently smoke either daily or occasionally,M
 morbidity_ind_015,Usual weekly alcohol consumption is lower risk (>0 but <=14 units),N
 morbidity_ind_016,Usual weekly alcohol consumption is higher risk (>14 units),O
@@ -102,18 +102,7 @@ disag_Gender_value_01,Male,Gwryw
 disag_Gender_value_02,Female,Benyw
 disag_Gender_value_03,All,I gyd
 disag_Gender_value_04,NA,NA
-disag_Age_value_01,Retirement Age Adult,Oedolyn Oed Ymddeol
-disag_Age_value_02,Working Age Adult,Oedolyn Oedran Gweithio
-disag_Age_value_03,Young Adult,Oedolyn Ifanc
-disag_Age_value_04,Boys,Bechgyn
-disag_Age_value_05,Girls,Merched
-disag_Age_value_06,All,I gyd
-disag_Age_value_07,NA,NA
-disag_Age_value_08,Year 7,Blwyddyn 7
-disag_Age_value_09,Year 8,Blwyddyn 8
-disag_Age_value_10,Year 9,Blwyddyn 9
-disag_Age_value_11,Year 10,Blwyddyn 10
-disag_Age_value_12,Year 11,Blwyddyn 11
+disag_Gender_value_05,Couple,Cwpl
 disag_WIMD_value_01,Most deprived fifth,Y mwyafrif difreintiedig 20%
 disag_WIMD_value_02,Next most deprived fifth,Cwintel 2
 disag_WIMD_value_03,Middle,Cwintel 3
@@ -130,8 +119,46 @@ disag_WIMD_value_13,All adults in work,Pob oedolyn mewn gwaith
 disag_WIMD_value_14,"At least one adult in work, but not all","O leiaf un oedolyn mewn gwaith, ond nid pob un"
 disag_WIMD_value_15,Working households,Cartrefi sy'n gweithio
 disag_WIMD_value_16,Workless households,Cartrefi di-waith
-disag_Education_value1,Low,Isel
-disag_Education_value2,High,Uchel
-disag_Education_value3,Medium,Canolig
-disag_Education_value4,All,I gyd
-disag_Education_value5,NA,NA
+disag_Education_value_01,Low,Isel
+disag_Education_value_02,High,Uchel
+disag_Education_value_03,Medium,Canolig
+disag_Education_value_04,All,I gyd
+disag_Education_value_05,NA,NA
+disag_Education_value_06,None,Dim
+disag_Age_value_01 ,16 - 24,16 - 24
+disag_Age_value_02,25 - 64,25 - 64
+disag_Age_value_03,65+,65+
+disag_Age_value_04,All,I gyd
+disag_Age_value_05,Year 7,Blwyddyn 7
+disag_Age_value_06,Year 8,Blwyddyn 8
+disag_Age_value_07,Year 9,Blwyddyn 9
+disag_Age_value_08,Year 10,Blwyddyn 10
+disag_Age_value_09,Year 11,Blwyddyn 11
+disag_Age_value_10,Under 25,Under 25
+disag_Age_value_11,25 - 34,25 - 34
+disag_Age_value_12,35 - 44,35 - 44
+disag_Age_value_13,45 - 49,45 - 49
+disag_Age_value_14,50 - 54,50 - 54
+disag_Age_value_15,55 - 59,55 - 59
+disag_Age_value_16,60 - 64,60 - 64
+disag_Age_value_17,65 - 69,65 - 69
+disag_Age_value_18,70+,70+
+disag_Age_value_19,NA,NA
+disag_Age_value_20,25 - 29,25 - 29
+disag_Age_value_21,30 - 34,30 - 34
+disag_Age_value_22,35 - 39,35 - 39
+disag_Age_value_23,40 - 44,40 - 44
+disag_Age_value_24,25 - 49,25 - 49
+disag_Age_value_25,50 - 64,50 - 64
+disag_Age_value_26,18 - 24,18 - 24
+disag_Age_value_27,20 - 29,20 - 29
+disag_Age_value_28,30 - 49,30 - 49
+disag_Age_value_29,25+,25+
+disag_Age_value_30,21 - 24,21 - 24
+disag_Age_value_31,18 - 20,18 - 20
+disag_Age_value_32,Under 18,Dan 18 oed
+disag_Age_value_33,Pensioners,Pensiynwyr
+disag_Age_value_34,Children,Plant
+disag_Age_value_35,Working-age adults,Oedolion o oedran gweithio
+disag_Age_value_36,16 - 18,16 - 18
+disag_Age_value_37,19 - 24,19 - 24

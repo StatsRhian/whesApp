@@ -72,7 +72,7 @@ catDetailUI = function(id, cat){
       fluidRow(
         column(12,
         tags$br(),
-        includeMarkdown("www/content/ind001.md")   
+        includeMarkdown("www/content/ind_001.md")   
         )
       ) # End: fluid row
     )
