@@ -81,7 +81,7 @@ disaggregate_Deprivation,Deprivation,Amddifadedd
 disaggregate_Education,Education Level,Lefel Addysg
 disaggregate_None,None,Dim
 select_ind_label,Please select an indicator. You can type in the box to search for a key word,Dewiswch ddangosydd. Gallwch deipio yn y blwch i chwilio am air allweddol
-select_disag_label,Please select an disaggregate,Dewiswch ddadgyfuno
+select_disag_label,Please select a grouping,Dewiswch grwpio
 whes_title,Welsh Health Equity Solutions Platform,Llwyfan Datrysiadau Ecwiti Iechyd Cymru
 overview_tab_title,Overview,Trosolwg
 wellbeing_tab_title,Wellbeing,Lles

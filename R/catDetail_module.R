@@ -25,7 +25,7 @@ catDetailUI = function(id, cat){
         ), # End: column
         column(6, 
                selectInput(ns("disag"),
-                           label = "Please select a disaggregate",
+                           label = "Please select a grouping",
                            choices = c("Gender" = "Gender",
                                        "Age" = "Age",
                                        "Deprivation" = "Deprivation", 
