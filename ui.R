@@ -8,12 +8,15 @@ navbarPage(title = textOutput("whes_title"),
              useShinyjs(),
                tags$link(rel = "stylesheet", type = "text/css", href = "phw-style.css")
            ),
+           tags$style(type = "text/css",
+                      ".shiny-output-error { visibility: hidden; }",
+                      ".shiny-output-error:before { visibility: hidden; }"
+           ),
            
            navlistPanel(
              id = "tab_categories",
              tabPanel(uiOutput("overview_tab_title", inline = TRUE), 
                       icon = icon("home"), 
-                      #h2(textOutput("whes_title")),
                       br(),
                       div(img(src = "icons/health-services.png",
                               height = "250px",
@@ -45,7 +48,6 @@ navbarPage(title = textOutput("whes_title"),
                       p("Search the table below for a specific indicator, to discover which category they are listed under. Or simply select a category on the left to start exploring."), 
                       reactableOutput("indicator_search")
              ),
-             
              "Inequities in Health",
              widths = c(2, 10),
              categoryPanelUI("wellbeing"),

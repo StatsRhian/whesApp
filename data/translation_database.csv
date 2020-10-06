@@ -94,7 +94,7 @@ inequities_tab_title,Inequities in Health,Anghydraddoldebau mewn Iechyd
 employment_tab_title,Employment and Working Conditions,Amodau Cyflogaeth a Gwaith
 waffle_legend_label,Yes,Do
 waffle_legend_label,No,Naddo
-waffle_caption,Welsh Health Equity Solutions Platform 2020,Llwyfan Datrysiadau Ecwiti Iechyd Cymru 2020
+caption,Welsh Health Equity Solutions Platform 2020,Llwyfan Datrysiadau Ecwiti Iechyd Cymru 2020
 infographics_tab_title,Infographics,Infograffeg
 details_tab_title,Details,Manylion
 policies_tab_title,Policies,Polisïau
@@ -162,3 +162,6 @@ disag_Age_value_34,Children,Plant
 disag_Age_value_35,Working-age adults,Oedolion o oedran gweithio
 disag_Age_value_36,16 - 18,16 - 18
 disag_Age_value_37,19 - 24,19 - 24
+download,Download,Lawrlwytho 
+percent,Percent,Y Cant
+all,All,I gyd 

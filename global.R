@@ -5,11 +5,11 @@ source("R/catSimpleSummary_module.R")
 source("R/filter_disag.R")
 source("R/translate.R")
 source("R/cook_waffle.R")
+source("R/translate_plots.R")
+source("R/make_barchart.R")
 source("R/generate_text.R")
 source("R/generate_source.R")
 source("R/calc_disags.R")
-
-enableBookmarking(store = "url")
 
 load(file = "data/clean_indicators.RData")
 
@@ -38,3 +38,4 @@ translate_db =
 # Colour schemes
 waffle_no = "grey"
 waffle_yes = "firebrick"
+brewer_pallete = "Dark2"
