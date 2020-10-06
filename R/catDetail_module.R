@@ -79,46 +79,17 @@ catDetail = function(input, output, session, lang, cat){
   
   # Plot
   plot_obj = reactive({
-    if (is.null(input$disag)) {
-      g = data() %>%
-        ggplot(aes(x = "All", y = value)) + 
-        geom_col(fill = "#1B9E77") +
-        xlab("")
-    } else if (length(input$disag) == 1) {
-      g = data() %>%
-        ggplot(aes(x = !!sym(input$disag), y = value)) + 
-        geom_col(aes(fill = !!sym(input$disag))) 
-    } else if (length(input$disag) == 2) {
-      g = data() %>%
-        ggplot(aes(x = !!syms(input$disag)[[2]], y = value)) + 
-        geom_col(aes(fill = !!syms(input$disag)[[1]]),  position = "dodge") 
-    }  else if (length(input$disag) == 3) {
-      g = data() %>%
-        ggplot(aes(x = !!syms(input$disag)[[2]], y = value)) + 
-        geom_col(aes(fill = !!syms(input$disag)[[1]]),  position = "dodge") + 
-        facet_wrap(vars(!!!syms(input$disag)[[3]]))
-    } else if (length(input$disag) == 4) {
-      g = data() %>%
-        ggplot(aes(x = !!syms(input$disag)[[2]], y = value)) + 
-        geom_col(aes(fill = !!syms(input$disag)[[1]]),  position = "dodge") + 
-        facet_grid(rows = vars(!!!syms(input$disag)[[3]]), 
-                   cols = vars(!!!syms(input$disag)[[4]]))
-    }
-    
-    g = 
-      g + 
-      labs(title = input$plot_title,
-           caption = input$plot_caption) +
-      #coord_cartesian(ylim = c(0, 0.5)) +
-      theme_minimal() +
-      scale_fill_brewer(palette = "Dark2")
-    
-    if (data()$type == "percent") {
-      g = g + 
-        scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
-        ylab("Percent")
-    }
-    return(g)
+    make_barchart(df = data(),
+                  disag = input$disag,
+                  title = tr_pull(translate_db, 
+                                  key = input$ind_id,
+                                  lang = lang(),
+                                  search = TRUE), 
+                  caption = tr_pull(translate_db, 
+                                    key = "caption",
+                                    lang = lang()),
+                  lang = lang())
+
   })
 
   ## Translate indicators
