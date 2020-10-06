@@ -8,6 +8,10 @@ navbarPage(title = textOutput("whes_title"),
              useShinyjs(),
                tags$link(rel = "stylesheet", type = "text/css", href = "phw-style.css")
            ),
+           tags$style(type = "text/css",
+                      ".shiny-output-error { visibility: hidden; }",
+                      ".shiny-output-error:before { visibility: hidden; }"
+           ),
            
            navlistPanel(
              id = "tab_categories",

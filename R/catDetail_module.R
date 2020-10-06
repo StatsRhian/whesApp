@@ -118,15 +118,20 @@ catDetail = function(input, output, session, lang, cat){
       pull(disag) %>%
       unlist()
     
-    names(disag_choices) = disag_choices
-    search_disag = glue("disaggregate_({paste(disag_choices, collapse = '|')})")
-    
-    updateSelectInput(
-      session,
-      inputId = "disag",
-      label = tr_pull(translate_db, "select_disag_label", lang()),
-      choices = tr_deframe(translate_db, pattern = search_disag, lang = lang())
-    )
+    if (length(disag_choices) == 1 & disag_choices[[1]] == "None") {
+      hide("disag")
+    } else {
+      disag_choices = disag_choices[disag_choices != "None"]
+      names(disag_choices) = disag_choices
+      search_disag = glue("disaggregate_({paste(disag_choices, collapse = '|')})")
+      updateSelectInput(
+        session,
+        inputId = "disag",
+        label = tr_pull(translate_db, "select_disag_label", lang()),
+        choices = tr_deframe(translate_db, pattern = search_disag, lang = lang())
+      )
+      show("disag")
+    }
   })
   
   output$bar_plot = renderPlot({

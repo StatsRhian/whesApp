@@ -113,8 +113,14 @@ catSimpleSummary = function(input, output, session, lang, cat) {
       pull(disag) %>%
       unlist()
     
+    if (length(disag_choices) == 1 & disag_choices[[1]] == "None") {
+      hide("disag")
+      search_disag = "disaggregate_None"
+    } else {
     names(disag_choices) = disag_choices
     search_disag = glue("disaggregate_({paste(disag_choices, collapse = '|')})")
+    show("disag")
+    }
     
     updateSelectInput(
       session,
