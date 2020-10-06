@@ -46,26 +46,13 @@ catDetailUI = function(id, cat){
         column(8,
                wellPanel(
                  plotOutput(ns("bar_plot")), 
-                 actionButton(ns("edit_plot"), "Edit", icon = icon("pencil")),
-                 downloadButton(ns("downloadPlot"), "Download"),
-                 bsModal(ns("editPlotModal"),
-                         title = "",
-                         trigger = ns("edit_plot"),
-                         size = "large",
-                         textInput(ns("plot_title"),
-                                   label = "Plot title"
-                         ),
-                         textInput(ns("plot_caption"),
-                                   label = "Caption",
-                                   value = "Welsh Health Equity Solutions Platform, WHESRi 2020"
-                         )
-                 )
+                 uiOutput(ns("download_plot_button"))
                )       
         ), # End: column
         column(4,
                wellPanel(
                  reactableOutput(ns("detailed_table")), 
-                 downloadButton(ns("downloadData"), "Download")
+                 uiOutput(ns("download_data_button"))
                )
         ) # End: column
       ), # End: fluid row
@@ -189,18 +176,26 @@ catDetail = function(input, output, session, lang, cat){
       HTML() 
   })
   
-  output$downloadData = downloadHandler(
+  output$download_data_button = renderUI({
+    downloadButton(session$ns("download_data"), tr_pull(translate_db, "download", lang()))
+  })
+  
+  output$download_data = downloadHandler(
     filename = function() {
-      paste("indicator001", ".csv", sep = "")
+      glue("data_{input$ind_id}.csv")
     },
     content = function(file) {
       write.csv(data(), file, row.names = FALSE)
     }
   )
   
-  output$downloadPlot = downloadHandler(
+  output$download_plot_button = renderUI({
+    downloadButton(session$ns("download_plot"), tr_pull(translate_db, "download", lang()))
+  })
+  
+  output$download_plot = downloadHandler(
     filename = function() { 
-      paste("indicator001", ".png", sep = "") 
+      glue("barchart_{input$ind_id}.png")
     },
     content = function(file) {
       ggsave(file, plot =  plot_obj(), device = "png")

@@ -2,7 +2,7 @@ create_reactable = function(df){
   type = unique(df$type)
   
   # Remove columns with NA
-  df = janitor::remove_empty(df)
+  df = janitor::remove_empty(df, which = c("rows", "cols"))
   
   if (type == "percent" & "ci_lower" %in% names(df)) {
     table_out = 

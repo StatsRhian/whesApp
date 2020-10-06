@@ -41,7 +41,7 @@ catSimpleSummaryUI = function(id, cat){
       
       fluidRow(
         plotOutput(ns("infographic")),
-        downloadButton(ns("downloadPlot"), "Download")
+        uiOutput(ns("download_plot_button"))
       ) # End: fluid row
     )
   )
@@ -49,7 +49,7 @@ catSimpleSummaryUI = function(id, cat){
 
 catSimpleSummary = function(input, output, session, lang, cat) {
   
-# Hide Waffle & Download if not a pecentage indicator
+# Hide Waffle & download button if not a pecentage indicator
 observeEvent(input$ind_id, {
   type = 
     indicator_info %>%
@@ -57,10 +57,10 @@ observeEvent(input$ind_id, {
     pull(type)
  if (type != "percent") {
    hide("infographic")
-   hide("downloadPlot")
+   hide("download_plot_button")
  } else {
    show("infographic")
-   show("downloadPlot")
+   show("download_plot_button")
    }
 })
   
@@ -146,10 +146,15 @@ output$simple_summary = renderUI({
 output$infographic = renderPlot({
   waffle_plot()
 })
+
+
+output$download_plot_button = renderUI({
+  downloadButton(session$ns("download_plot"), tr_pull(translate_db, "download", lang()))
+})
   
-  output$downloadPlot = downloadHandler(
+  output$download_plot = downloadHandler(
     filename = function() { 
-      paste("waffle_indicator001", ".png", sep = "") 
+      glue("infographic_{input$ind_id}.png") 
     },
     content = function(file) {
       ggsave(file, plot =  waffle_plot(), device = "png")

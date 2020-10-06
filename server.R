@@ -3,9 +3,9 @@ shinyServer(function(input, output, session) {
   # Call modules for tabs
   purrr::map(cat_df$catID, ~callModule(module = categoryPanel,
                                        id = .x,
-                                       lang = lan,
+                                       lang = lang,
                                        cat = .x))
-  lan = reactive({
+  lang = reactive({
     input$lan
   })  
 
@@ -42,51 +42,51 @@ shinyServer(function(input, output, session) {
  
 ### Update tabpanel titles
   output$whes_title = renderText({
-    tr_pull(translate_db, "whes_title", lan())
+    tr_pull(translate_db, "whes_title", lang())
   })
     
   output$overview_tab_title = renderUI({
-    tr_pull(translate_db, "overview_tab_title", lan())
+    tr_pull(translate_db, "overview_tab_title", lang())
   })
   
   output$wellbeing_tab_title = renderUI({
-    tr_pull(translate_db, "wellbeing_tab_title", lan())
+    tr_pull(translate_db, "wellbeing_tab_title", lang())
   })
   
   output$morbidity_tab_title = renderUI({
-    tr_pull(translate_db, "morbidity_tab_title", lan())
+    tr_pull(translate_db, "morbidity_tab_title", lang())
   })
   
   output$health_tab_title = renderUI({
-    tr_pull(translate_db, "health_tab_title", lan())
+    tr_pull(translate_db, "health_tab_title", lang())
   })
   
   output$income_tab_title = renderText({
-    tr_pull(translate_db, "income_tab_title", lan())
+    tr_pull(translate_db, "income_tab_title", lang())
   })
   
   output$living_tab_title = renderUI({
-    tr_pull(translate_db, "living_tab_title", lan())
+    tr_pull(translate_db, "living_tab_title", lang())
   })
   
   output$social_tab_title = renderUI({
-    tr_pull(translate_db, "social_tab_title", lan())
+    tr_pull(translate_db, "social_tab_title", lang())
   })
   
   output$employment_tab_title = renderUI({
-    tr_pull(translate_db, "employment_tab_title", lan())
+    tr_pull(translate_db, "employment_tab_title", lang())
   })
   
   output$infographics = renderText({
-    tr_pull(translate_db, key = "infographics_tab_title", lan())
+    tr_pull(translate_db, key = "infographics_tab_title", lang())
   })
   
   output$details = renderText({
-    tr_pull(translate_db, key = "details_tab_title", lan())
+    tr_pull(translate_db, key = "details_tab_title", lang())
   })
   
   output$policies = renderText({
-    tr_pull(translate_db, key = "policies_tab_title", lan())
+    tr_pull(translate_db, key = "policies_tab_title", lang())
   })
 })
 

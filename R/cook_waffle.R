@@ -19,18 +19,18 @@ disag_facet_labels = tr_pull(translate_db,
                              key = "disag_[A-Za-z]*_value_[0-9]*",
                              lang = "EN",
                              search = TRUE)
-disag_facet_labels_new = tr_pull(translate_db,
+disag_facet_labels_CY = tr_pull(translate_db,
                                  key = "disag_[A-Za-z]*_value_[0-9]*",
                                  lang = "CY",
                                  search = TRUE)
 
-names(disag_facet_labels_new) = disag_facet_labels
+names(disag_facet_labels_CY) = disag_facet_labels
 names(disag_facet_labels) = disag_facet_labels
 
 translate_labeller = function(lang){
   switch(lang, 
          "EN" = as_labeller(disag_facet_labels),
-         "CY" = as_labeller(disag_facet_labels_new))
+         "CY" = as_labeller(disag_facet_labels_CY))
 }
 
 
@@ -59,7 +59,7 @@ cook_waffle = function(df, disag = input$disag,
     ) +
     labs(
       title = wrapper(title, width = 100),
-      caption = "Welsh Health Equity Solutions Platform, WHESRi 2020"
+      caption = caption
     ) +
     theme_ipsum_rc(grid = "") +
     theme_enhance_waffle() +
