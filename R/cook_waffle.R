@@ -5,8 +5,8 @@ prep_waffle = function(df, disag = input$disag){
     select(-type, -n, -ci_lower, -ci_upper, -ind_id) %>%
     when(
       (disag == "None") ~ pivot_longer(., cols = everything(),
-                                             names_to = "Response",
-                                             values_to = "Percent") ,
+                                       names_to = "Response",
+                                       values_to = "Percent") ,
       ~  pivot_longer(., cols = -!!sym(disag),
                       names_to = "Response",
                       values_to = "Percent") 
@@ -15,25 +15,6 @@ prep_waffle = function(df, disag = input$disag){
     mutate(Percent = round(Percent * 100, 0))
 }
 
-disag_facet_labels = tr_pull(translate_db,
-                             key = "disag_[A-Za-z]*_value_[0-9]*",
-                             lang = "EN",
-                             search = TRUE)
-disag_facet_labels_CY = tr_pull(translate_db,
-                                 key = "disag_[A-Za-z]*_value_[0-9]*",
-                                 lang = "CY",
-                                 search = TRUE)
-
-names(disag_facet_labels_CY) = disag_facet_labels
-names(disag_facet_labels) = disag_facet_labels
-
-translate_labeller = function(lang){
-  switch(lang, 
-         "EN" = as_labeller(disag_facet_labels),
-         "CY" = as_labeller(disag_facet_labels_CY))
-}
-
-
 cook_waffle = function(df, disag = input$disag, 
                        title = "", 
                        caption = "Welsh Health Equity Status 2020",
@@ -41,7 +22,7 @@ cook_waffle = function(df, disag = input$disag,
                        lang = "EN"){
   waffle = 
     df %>%
-  ggplot(aes(values = Percent, label = Response, col = Response)) +
+    ggplot(aes(values = Percent, label = Response, col = Response)) +
     geom_pictogram(
       n_rows = 10, size = 9.5, 
       flip = TRUE,
