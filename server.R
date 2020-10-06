@@ -88,4 +88,6 @@ shinyServer(function(input, output, session) {
   output$policies = renderText({
     tr_pull(translate_db, key = "policies_tab_title", lang())
   })
+  
 })
+

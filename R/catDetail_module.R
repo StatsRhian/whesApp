@@ -172,8 +172,4 @@ catDetail = function(input, output, session, lang, cat){
       ggsave(file, plot =  plot_obj(), device = "png")
     }
   )
-  
-  # Ensure select_disag works on start
-  #outputOptions(output, "select_disag", suspendWhenHidden = FALSE)
-  
 }
