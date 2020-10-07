@@ -1,10 +1,12 @@
 
 make_barchart = function(df = data(),
                          disag = input$disag, 
+                         ci = input$show_ci,
                          title = "", 
                          caption = "Welsh Health Equity Status 2020",
                          lang = "EN"){
-  
+d = 0.9
+print(df)
   if (is.null(disag)) {
     g = df %>%
       ggplot(aes(x = tr_pull(translate_db, "all", lang) , y = value)) + 
@@ -12,25 +14,25 @@ make_barchart = function(df = data(),
       xlab("")
   } else if (length(disag) == 1) {
     g = df %>%
-      ggplot(aes(x = !!sym(disag), y = value)) + 
-      geom_col(aes(fill = !!sym(disag)))
+      ggplot(aes(x = !!sym(disag), y = value, fill = !!sym(disag))) + 
+      geom_col()
   } else if (length(disag) == 2) {
     g = df %>%
-      ggplot(aes(x = !!syms(disag)[[2]], y = value)) + 
-      geom_col(aes(fill = !!syms(disag)[[1]]),  position = "dodge") 
+      ggplot(aes(x = !!syms(disag)[[2]], y = value, fill = !!syms(disag)[[1]])) + 
+      geom_col(position = position_dodge(d)) 
   }  else if (length(disag) == 3) {
     g = df %>%
-      ggplot(aes(x = !!syms(disag)[[2]], y = value)) + 
-      geom_col(aes(fill = !!syms(disag)[[1]]),  position = "dodge") + 
-      facet_wrap(vars(!!!syms(disag)[[3]]),
+      ggplot(aes(x = !!syms(disag)[[2]], y = value, fill = !!syms(disag)[[1]])) + 
+      geom_col(position = position_dodge(d)) + 
+      facet_wrap(vars(!!syms(disag)[[3]]),
                  labeller = translate_labeller(lang = lang))
     
   } else if (length(disag) == 4) {
     g = df %>%
-      ggplot(aes(x = !!syms(disag)[[2]], y = value)) + 
-      geom_col(aes(fill = !!syms(disag)[[1]]),  position = "dodge") + 
-      facet_grid(rows = vars(!!!syms(disag)[[3]]), 
-                 cols = vars(!!!syms(disag)[[4]]),
+      ggplot(aes(x = !!syms(disag)[[2]], y = value, fill = !!syms(disag)[[1]])) + 
+      geom_col(position = position_dodge(d)) + 
+      facet_grid(rows = vars(!!syms(disag)[[3]]), 
+                 cols = vars(!!syms(disag)[[4]]),
                  labeller = translate_labeller(lang = lang))
   }
   
@@ -50,6 +52,15 @@ make_barchart = function(df = data(),
     labs(title = title,
          caption = caption) +
     theme_minimal() 
+  
+  if (!all(is.na(df$ci_lower)) & (ci == TRUE)) {
+    g = g +
+      geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper),
+                    width = 0.3,
+                    size = 0.4,
+                    alpha = 0.8,
+                    position = position_dodge(d)) 
+  }
   
   if (unique(df$type) == "percent") {
     g = g + 

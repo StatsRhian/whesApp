@@ -7,8 +7,6 @@ source("R/translate.R")
 source("R/cook_waffle.R")
 source("R/translate_plots.R")
 source("R/make_barchart.R")
-source("R/generate_text.R")
-source("R/generate_source.R")
 source("R/calc_disags.R")
 
 load(file = "data/clean_indicators.RData")
