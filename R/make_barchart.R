@@ -48,9 +48,9 @@ d = 0.9
   
   # Add captions & theme
   g = g + 
-    labs(title = title,
+    labs(title = wrapper(title, width = 100),
          caption = caption) +
-    theme_minimal() 
+    theme_minimal(base_size = 14) 
   
   if (!is.null(ci)){
   if (!all(is.na(df$ci_lower)) & (ci == TRUE)) {
