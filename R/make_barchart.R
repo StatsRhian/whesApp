@@ -6,7 +6,6 @@ make_barchart = function(df = data(),
                          caption = "Welsh Health Equity Status 2020",
                          lang = "EN"){
 d = 0.9
-print(df)
   if (is.null(disag)) {
     g = df %>%
       ggplot(aes(x = tr_pull(translate_db, "all", lang) , y = value)) + 
@@ -49,10 +48,11 @@ print(df)
   
   # Add captions & theme
   g = g + 
-    labs(title = title,
+    labs(title = wrapper(title, width = 100),
          caption = caption) +
-    theme_minimal() 
+    theme_minimal(base_size = 14) 
   
+  if (!is.null(ci)){
   if (!all(is.na(df$ci_lower)) & (ci == TRUE)) {
     g = g +
       geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper),
@@ -60,6 +60,7 @@ print(df)
                     size = 0.4,
                     alpha = 0.8,
                     position = position_dodge(d)) 
+  }
   }
   
   if (unique(df$type) == "percent") {
