@@ -75,6 +75,11 @@ catDetail = function(input, output, session, lang, cat){
   
   # Plot
   plot_obj = reactive({
+    print(data())
+    print(input$ind_id)
+    print(input$disag)
+    print(input$show_ci)
+
     make_barchart(df = data(),
                   disag = input$disag,
                   ci = input$show_ci,
@@ -186,7 +191,7 @@ catDetail = function(input, output, session, lang, cat){
       glue("barchart_{input$ind_id}.png")
     },
     content = function(file) {
-      ggsave(file, plot =  plot_obj(), device = "png")
+      ggsave(file, plot =  plot_obj(), device = "png", width = 20, height = 10)
     }
   )
 }
