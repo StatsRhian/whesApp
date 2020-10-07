@@ -23,7 +23,7 @@ catDetailUI = function(id, cat){
                            width = "90%"
                )
         ), # End: column
-        column(6, 
+        column(4, 
                selectInput(ns("disag"),
                            label = "Please select a grouping",
                            choices = c("Gender" = "Gender",
@@ -32,6 +32,9 @@ catDetailUI = function(id, cat){
                                        "Education level" = "Education"),
                            selected = "Gender", 
                            multiple = TRUE)
+        ), # End: column
+        column(2, 
+               uiOutput(ns("ci_button"))
         ) # End: column
       ), # End: fluid row
       
@@ -74,6 +77,7 @@ catDetail = function(input, output, session, lang, cat){
   plot_obj = reactive({
     make_barchart(df = data(),
                   disag = input$disag,
+                  ci = input$show_ci,
                   title = tr_pull(translate_db, 
                                   key = input$ind_id,
                                   lang = lang(),
@@ -112,6 +116,12 @@ catDetail = function(input, output, session, lang, cat){
       unlist()
     
     if (length(disag_choices) == 1 & disag_choices[[1]] == "None") {
+      updateSelectInput(
+        session,
+        inputId = "disag",
+        label = tr_pull(translate_db, "select_disag_label", lang()),
+        choices = tr_deframe(translate_db, pattern = "disaggregate_None", lang = lang())
+      )
       hide("disag")
     } else {
       disag_choices = disag_choices[disag_choices != "None"]
@@ -125,6 +135,19 @@ catDetail = function(input, output, session, lang, cat){
       )
       show("disag")
     }
+    
+    no_ci = 
+      indicator_data %>%
+      filter(ind_id == input$ind_id) %>%
+      pull(ci_lower) %>%
+      is.na() %>%
+      all()
+    
+    if (no_ci) {
+      hide("ci_button")
+    } else {
+      show("ci_button")
+    }
   })
   
   output$bar_plot = renderPlot({
@@ -136,6 +159,10 @@ catDetail = function(input, output, session, lang, cat){
       data() %>%
         create_reactable()
     })
+  
+  output$ci_button = renderUI({
+    checkboxInput(session$ns("show_ci"), label = tr_pull(translate_db, "show_ci", lang()), value = TRUE)
+  })
   
   output$download_data_button = renderUI({
     downloadButton(session$ns("download_data"), tr_pull(translate_db, "download", lang()))
