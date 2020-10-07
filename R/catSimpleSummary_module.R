@@ -60,15 +60,19 @@ catSimpleSummary = function(input, output, session, lang, cat) {
     }
   })
   
+  ind_df = reactive({
+      indicator_data %>%
+      filter(ind_id == input$ind_id) %>%
+      filter_disag(input$disag)
+  })
+  
   waffle_plot = reactive({
     title = 
       indicator_info %>%
       filter(ind_id == input$ind_id) %>%
       pull(name)
     
-    indicator_data %>%
-      filter(ind_id == input$ind_id) %>%
-      filter_disag(input$disag) %>%
+      ind_df() %>%
       tr_table(translate_db, lang()) %>%
       prep_waffle(input$disag) %>%
       cook_waffle(input$disag, 
@@ -82,6 +86,7 @@ catSimpleSummary = function(input, output, session, lang, cat) {
                   legend_labels = tr_pull(translate_db, 
                                           key = "waffle_legend_label",
                                           lang = lang()),
+                  plot_width = plot_width(),
                   lang = lang())
   })
   
@@ -98,6 +103,16 @@ catSimpleSummary = function(input, output, session, lang, cat) {
     )
   })
   
+  
+  plot_width = reactive({
+    # Multiplier for download settings
+    if (input$disag == "None") {
+      n = 1
+    } else
+    {
+      n = ind_df() %>% pull(input$disag) %>% length()
+    }
+  })
   toListen <- reactive({
     list(lang(), input$ind_id)
   })
@@ -142,7 +157,7 @@ catSimpleSummary = function(input, output, session, lang, cat) {
       glue("infographic_{input$ind_id}.png") 
     },
     content = function(file) {
-      ggsave(file, plot =  waffle_plot(), device = "png")
+      ggsave(file, plot = waffle_plot(), device = "png", width = plot_width() * 6, height = 6)
     }
   )
 }

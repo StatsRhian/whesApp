@@ -37,6 +37,7 @@ cook_waffle = function(df, disag = input$disag,
                        title = "", 
                        caption = "Welsh Health Equity Status 2020",
                        legend_labels = c("Yes", "No"),
+                       plot_width = plot_width(),
                        lang = "EN"){
 
   if (disag == "None") {
@@ -62,7 +63,7 @@ cook_waffle = function(df, disag = input$disag,
       labels = legend_labels
     ) +
     labs(
-      title = wrapper(title, width = 100),
+      title = wrapper(title, width = 50 * plot_width),
       caption = caption
     ) +
     theme_ipsum_rc(grid = "", base_size = 14,) +
@@ -78,8 +79,7 @@ cook_waffle = function(df, disag = input$disag,
   } else {
     waffle = 
       waffle +
-      facet_grid(cols = vars(!!sym(disag))) + #, 
-                 #labeller = translate_labeller(lang = lang)) +
+      facet_grid(cols = vars(!!sym(disag))) + 
       scale_x_discrete(expand = c(0, 0)) +
       scale_y_discrete(expand = c(0, 0)) +
       coord_equal()
