@@ -36,13 +36,6 @@ catDetailUI = function(id, cat){
       ), # End: fluid row
       
       fluidRow(
-        column(12,
-        htmlOutput(ns("source_info")),
-        tags$br()
-        )
-      ), # End: fluid row
-      
-      fluidRow(
         column(8,
                wellPanel(
                  plotOutput(ns("bar_plot")), 
@@ -143,14 +136,6 @@ catDetail = function(input, output, session, lang, cat){
       data() %>%
         create_reactable()
     })
-  
-  output$source_info = renderUI({
-    df = indicator_info %>%
-      filter(ind_id == input$ind_id) 
-    df %>%
-      generate_source() %>%
-      HTML() 
-  })
   
   output$download_data_button = renderUI({
     downloadButton(session$ns("download_data"), tr_pull(translate_db, "download", lang()))

@@ -22,15 +22,15 @@ make_barchart = function(df = data(),
     g = df %>%
       ggplot(aes(x = !!syms(disag)[[2]], y = value)) + 
       geom_col(aes(fill = !!syms(disag)[[1]]),  position = "dodge") + 
-      facet_wrap(vars(!!!syms(disag)[[3]]),
+      facet_wrap(vars(!!syms(disag)[[3]]),
                  labeller = translate_labeller(lang = lang))
     
   } else if (length(disag) == 4) {
     g = df %>%
       ggplot(aes(x = !!syms(disag)[[2]], y = value)) + 
       geom_col(aes(fill = !!syms(disag)[[1]]),  position = "dodge") + 
-      facet_grid(rows = vars(!!!syms(disag)[[3]]), 
-                 cols = vars(!!!syms(disag)[[4]]),
+      facet_grid(rows = vars(!!syms(disag)[[3]]), 
+                 cols = vars(!!syms(disag)[[4]]),
                  labeller = translate_labeller(lang = lang))
   }
   

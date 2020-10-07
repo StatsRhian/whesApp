@@ -36,10 +36,6 @@ catSimpleSummaryUI = function(id, cat){
       ), # End: fluid row
       
       fluidRow(
-        htmlOutput(ns("simple_summary"))
-      ), # End: fluid row
-      
-      fluidRow(
         plotOutput(ns("infographic")),
         uiOutput(ns("download_plot_button"))
       ) # End: fluid row
@@ -130,24 +126,6 @@ catSimpleSummary = function(input, output, session, lang, cat) {
       selected = tr_deframe(translate_db, pattern = "disaggregate_None", lang = lang())
     )
   })
-  
-  output$simple_summary = renderUI({
-    type = indicator_info %>%
-      filter(ind_id == input$ind_id) %>% 
-      pull(type)
-    
-    statement = indicator_info %>%
-      filter(ind_id == input$ind_id) %>% 
-      pull(name)
-    
-    indicator_data %>%
-      filter(ind_id == input$ind_id) %>%
-      filter_disag(input$disag) %>%
-      generate_text(statement, input$disag, type) %>%
-      HTML() %>%
-      style_text()
-  })
-  
   
   output$infographic = renderPlot({
     waffle_plot()
