@@ -103,22 +103,22 @@ disag_Gender_value_02,Female,Benyw
 disag_Gender_value_03,All,I gyd
 disag_Gender_value_04,NA,NA
 disag_Gender_value_05,Couple,Cwpl
-disag_WIMD_value_01,Most deprived fifth,Y mwyafrif difreintiedig 20%
-disag_WIMD_value_02,Next most deprived fifth,Cwintel 2
-disag_WIMD_value_03,Middle,Cwintel 3
-disag_WIMD_value_04,Next least deprived fifth,Cwintel 4
-disag_WIMD_value_05,Least deprived fifth,Y lleiaf difreintiedig 20%
-disag_WIMD_value_06,Eligible for Free School Meals,Yn gymwys ar gyfer Prydau Ysgol Am Ddim
-disag_WIMD_value_07,Not Eligible for Free School Meals,Ddim yn Gymwys ar gyfer Prydau Ysgol Am Ddim
-disag_WIMD_value_08,All,I gyd
-disag_WIMD_value_09,NA,NA
-disag_WIMD_value_10,FAS 1 (Low),FAS 1 (Isel)
-disag_WIMD_value_11,FAS 2 (Medium),FAS 2 (Canolig)
-disag_WIMD_value_12,FAS 3 (High),FAS 3 (Uchel)
-disag_WIMD_value_13,All adults in work,Pob oedolyn mewn gwaith
-disag_WIMD_value_14,"At least one adult in work, but not all","O leiaf un oedolyn mewn gwaith, ond nid pob un"
-disag_WIMD_value_15,Working households,Cartrefi sy'n gweithio
-disag_WIMD_value_16,Workless households,Cartrefi di-waith
+disag_Deprivation_value_01,Most deprived fifth,Y mwyafrif difreintiedig 20%
+disag_Deprivation_value_02,Next most deprived fifth,Cwintel 2
+disag_Deprivation_value_03,Middle,Cwintel 3
+disag_Deprivation_value_04,Next least deprived fifth,Cwintel 4
+disag_Deprivation_value_05,Least deprived fifth,Y lleiaf difreintiedig 20%
+disag_Deprivation_value_06,Eligible for Free School Meals,Yn gymwys ar gyfer Prydau Ysgol Am Ddim
+disag_Deprivation_value_07,Not Eligible for Free School Meals,Ddim yn Gymwys ar gyfer Prydau Ysgol Am Ddim
+disag_Deprivation_value_08,All,I gyd
+disag_Deprivation_value_09,NA,NA
+disag_Deprivation_value_10,FAS 1 (Low),FAS 1 (Isel)
+disag_Deprivation_value_11,FAS 2 (Medium),FAS 2 (Canolig)
+disag_Deprivation_value_12,FAS 3 (High),FAS 3 (Uchel)
+disag_Deprivation_value_13,All adults in work,Pob oedolyn mewn gwaith
+disag_Deprivation_value_14,"At least one adult in work, but not all","O leiaf un oedolyn mewn gwaith, ond nid pob un"
+disag_Deprivation_value_15,Working households,Cartrefi sy'n gweithio
+disag_Deprivation_value_16,Workless households,Cartrefi di-waith
 disag_Education_value_01,Low,Isel
 disag_Education_value_02,High,Uchel
 disag_Education_value_03,Medium,Canolig

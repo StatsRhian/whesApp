@@ -69,6 +69,7 @@ catSimpleSummary = function(input, output, session, lang, cat) {
     indicator_data %>%
       filter(ind_id == input$ind_id) %>%
       filter_disag(input$disag) %>%
+      tr_table(translate_db, lang()) %>%
       prep_waffle(input$disag) %>%
       cook_waffle(input$disag, 
                   title = tr_pull(translate_db, 

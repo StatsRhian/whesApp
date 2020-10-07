@@ -1,5 +1,7 @@
 prep_waffle = function(df, disag = input$disag){
-  df %>%
+
+  df = 
+    df %>%
     rename(Yes = value) %>%
     mutate(No = 1 - Yes)  %>%
     select(-type, -n, -ci_lower, -ci_upper, -ind_id) %>%
@@ -9,10 +11,26 @@ prep_waffle = function(df, disag = input$disag){
                                        values_to = "Percent") ,
       ~  pivot_longer(., cols = -!!sym(disag),
                       names_to = "Response",
-                      values_to = "Percent") 
+                      values_to = "Percent")
     ) %>%
     mutate(Response = as_factor(Response)) %>%
-    mutate(Percent = round(Percent * 100, 0))
+    mutate(Percent = round(Percent * 100, 0)) 
+  
+  # For facetted - add Yes percent to factor
+  if (disag != "None") {
+    levels = df %>% pull({{disag}}) %>% unique() %>% as.character()
+    
+    names(levels) =
+      df %>%
+      filter(Response == "Yes") %>%
+      mutate(!!sym(disag) := paste0(!!sym(disag), " (", Percent, "%", ")")) %>%
+      pull({{disag}}) %>%
+      unique()
+
+    df = df %>%
+      mutate(!!sym(disag) := fct_recode(!!sym(disag), !!!levels))
+  }
+  return(df)
 }
 
 cook_waffle = function(df, disag = input$disag, 
@@ -20,6 +38,11 @@ cook_waffle = function(df, disag = input$disag,
                        caption = "Welsh Health Equity Status 2020",
                        legend_labels = c("Yes", "No"),
                        lang = "EN"){
+
+  if (disag == "None") {
+    legend_labels = glue("{legend_labels} ({df$Percent}%)")
+  }
+  
   waffle = 
     df %>%
     ggplot(aes(values = Percent, label = Response, col = Response)) +
@@ -42,9 +65,9 @@ cook_waffle = function(df, disag = input$disag,
       title = wrapper(title, width = 100),
       caption = caption
     ) +
-    theme_ipsum_rc(grid = "") +
+    theme_ipsum_rc(grid = "", base_size = 14,) +
     theme_enhance_waffle() +
-    theme(plot.title = element_text(size = 14, hjust = 0, vjust = 0))
+    theme(plot.title = element_text(size = 16, hjust = 0, vjust = 0))
   
   # DISAG
   if (disag == "None") {
@@ -55,8 +78,8 @@ cook_waffle = function(df, disag = input$disag,
   } else {
     waffle = 
       waffle +
-      facet_grid(cols = vars(!!sym(disag)),
-                 labeller = translate_labeller(lang = lang)) +
+      facet_grid(cols = vars(!!sym(disag))) + #, 
+                 #labeller = translate_labeller(lang = lang)) +
       scale_x_discrete(expand = c(0, 0)) +
       scale_y_discrete(expand = c(0, 0)) +
       coord_equal()
