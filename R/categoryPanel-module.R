@@ -7,7 +7,7 @@ categoryPanelUI = function(id){
                       value = "infographics",
                       catSimpleSummaryUI(ns("simple"), id)
              ),
-             tabPanel("Detail",
+             tabPanel("Data Explorer",
                       value = "detail",
                       catDetailUI(ns("detailed"), id)
              ),
@@ -16,8 +16,8 @@ categoryPanelUI = function(id){
                       fluidPage(
                         fluidRow(
                           column(12,
-                                 tags$br(),
-                                 includeMarkdown(glue::glue("www/content/policy-{id}.md"))  
+                                 tags$br()#,
+                                 #includeMarkdown(glue::glue("www/content/policy-{id}.md"))  
                           )
                         ) # End: fluid row 
                       ) # End: fluid page
