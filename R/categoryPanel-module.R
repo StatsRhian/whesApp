@@ -7,7 +7,7 @@ categoryPanelUI = function(id){
                       value = "infographics",
                       catSimpleSummaryUI(ns("simple"), id)
              ),
-             tabPanel("Detail",
+             tabPanel("Data Explorer",
                       value = "detail",
                       catDetailUI(ns("detailed"), id)
              ),
