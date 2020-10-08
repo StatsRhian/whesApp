@@ -55,7 +55,7 @@ catDetailUI = function(id, cat){
       fluidRow(
         column(12,
         tags$br(),
-        includeMarkdown("www/content/ind_001.md")   
+        uiOutput(ns("indicator_md"))
         )
       ) # End: fluid row
     )
@@ -72,6 +72,17 @@ catDetail = function(input, output, session, lang, cat){
         filter(ind_id == input$ind_id) %>%
         filter_disag(input$disag)
     })
+  
+  output$indicator_md = reactive({
+    includeMarkdown(glue("www/content/EN/indicators/ind_001.md"))
+      filename = glue("www/content/{lang()}/indicators/{input$ind_id}.md")
+      print(filename)
+      if (file.exists(filename)) {
+      includeMarkdown(filename)
+    } else {
+      includeMarkdown(glue("www/content/{lang()}/indicators/missing.md"))
+    }
+  })
   
   # Plot
   plot_obj = reactive({

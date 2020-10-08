@@ -8,7 +8,7 @@ cat_df =
                    "social", 
                    "employment"
   ),
-  name = c("Wellbeing",
+  name = c("Well-being",
               "Morbidity",
               "Health Services", 
               "Income and Social Protection",
