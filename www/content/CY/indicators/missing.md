@@ -1,3 +1,3 @@
-## Indicator information missing
+## Gwybodaeth dangosydd ar goll
 
 

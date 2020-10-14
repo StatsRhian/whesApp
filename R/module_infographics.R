@@ -1,12 +1,11 @@
-catSimpleSummaryUI = function(id, cat){
+infographicsUI = function(id, cat){
   ns = NS(id)
-  category_name = cat_df$name[cat_df$catID == cat]
   tagList(
     fluidPage(
       fluidRow(
         column(12,
                br(),
-               h2(category_name), 
+               uiOutput(ns("tab_heading")),
                br()
         )
       ), # End: fluid row
@@ -43,7 +42,7 @@ catSimpleSummaryUI = function(id, cat){
   )
 }
 
-catSimpleSummary = function(input, output, session, lang, cat) {
+infographics = function(input, output, session, lang, cat) {
   
   # Hide Waffle & download button if not a pecentage indicator
   observeEvent(input$ind_id, {
@@ -147,6 +146,10 @@ catSimpleSummary = function(input, output, session, lang, cat) {
     waffle_plot()
   })
   
+  output$tab_heading = renderUI({
+    tr_pull(translate_db, glue("{cat}_tab_title"), lang()) %>%
+      h2()
+  })
   
   output$download_plot_button = renderUI({
     downloadButton(session$ns("download_plot"), tr_pull(translate_db, "download", lang()))

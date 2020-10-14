@@ -1,12 +1,11 @@
-catDetailUI = function(id, cat){
+dataExplorerUI = function(id, cat){
   ns = NS(id)
-  category_name = cat_df$name[cat_df$catID == cat]
   tagList(
     fluidPage(
       fluidRow(
         column(12,
         br(),
-        h2(category_name), 
+        uiOutput(ns("tab_heading")),
         br()
         )
       ), # End: fluid row
@@ -64,7 +63,7 @@ catDetailUI = function(id, cat){
 }
 
 
-catDetail = function(input, output, session, lang, cat){
+dataExplorer = function(input, output, session, lang, cat){
   
   data = 
     reactive({
@@ -164,6 +163,11 @@ catDetail = function(input, output, session, lang, cat){
     } else {
       show("ci_button")
     }
+  })
+  
+  output$tab_heading = renderUI({
+    tr_pull(translate_db, glue("{cat}_tab_title"), lang()) %>%
+      h2()
   })
   
   output$bar_plot = renderPlot({
