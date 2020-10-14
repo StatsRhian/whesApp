@@ -77,17 +77,7 @@ shinyServer(function(input, output, session) {
     tr_pull(translate_db, "employment_tab_title", lang())
   })
   
-  output$infographics = renderText({
-    tr_pull(translate_db, key = "infographics_tab_title", lang())
-  })
-  
-  output$details = renderText({
-    tr_pull(translate_db, key = "details_tab_title", lang())
-  })
-  
-  output$policies = renderText({
-    tr_pull(translate_db, key = "policies_tab_title", lang())
-  })
+
   
 })
 

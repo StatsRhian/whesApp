@@ -1,7 +1,5 @@
 source("R/load_libraries.R")
 source("R/load_categories.R")
-source("R/catDetail_module.R")
-source("R/catSimpleSummary_module.R")
 source("R/filter_disag.R")
 source("R/translate.R")
 source("R/cook_waffle.R")
