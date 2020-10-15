@@ -75,7 +75,6 @@ dataExplorer = function(input, output, session, lang, cat){
   output$indicator_md = reactive({
     includeMarkdown(glue("www/content/EN/indicators/ind_001.md"))
       filename = glue("www/content/{lang()}/indicators/{input$ind_id}.md")
-      print(filename)
       if (file.exists(filename)) {
       includeMarkdown(filename)
     } else {
@@ -85,11 +84,6 @@ dataExplorer = function(input, output, session, lang, cat){
   
   # Plot
   plot_obj = reactive({
-    print(data())
-    print(input$ind_id)
-    print(input$disag)
-    print(input$show_ci)
-
     make_barchart(df = data(),
                   disag = input$disag,
                   ci = input$show_ci,
