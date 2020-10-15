@@ -16,7 +16,7 @@ navbarPage(title = textOutput("whes_title"),
            navlistPanel(
              id = "tab_categories",
              tabPanel(uiOutput("overview_tab_title", inline = TRUE), 
-                      icon = icon("home"), 
+                      icon = icon("home") ,
                       br(),
                       div(img(src = "icons/health-services.png",
                               height = "200px",

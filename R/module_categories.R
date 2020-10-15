@@ -2,6 +2,7 @@ categoryPanelUI = function(id){
   ns = NS(id)
   tabPanel(uiOutput(glue("{id}_tab_title"), inline = TRUE), 
            icon = icon(cat_df$icon[cat_df$catID == id]),
+           value = id,
            tabsetPanel(
              tabPanel(uiOutput(ns("infographics")),
                       value = "infographics",

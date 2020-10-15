@@ -30,10 +30,10 @@ shinyServer(function(input, output, session) {
   
 ### Function to create onclick event for images
   onclick_tabset = function(category){
-    shinyjs::onclick(paste0("img_", category),
-                     updateTabsetPanel(session,
+    shinyjs::onclick(glue("img_{category}"),
+                     updateNavlistPanel(session,
                                        inputId = "tab_categories",
-                                       selected = full_category(category)))
+                                       selected = category))
   }
 
 ### Apply above function to each category
