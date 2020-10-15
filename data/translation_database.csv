@@ -157,3 +157,11 @@ download,Download,Lawrlwytho
 percent,Percent,Y Cant
 all,All,I gyd 
 show_ci,Show confidence intervals?,Dangos cyfyngau hyder?
+table_search,Search…,Chwilio…
+table_no_entries,No entries found,Ni ddarganfuwyd unrhyw gofnodion
+table_previous,Previous page,Tudalen flaenoro
+table_next,Next page,Tudalen nesaf
+table_entries,{rowStart} to {rowEnd} of {rows} entries,{rowStart} i {rowEnd} o gofnodion {rows}
+table_rows,Show {rows},Dangos {rows}
+table_indicator,Indicator,Dangosydd
+table_category,Category,Categori
