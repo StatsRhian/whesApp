@@ -9,6 +9,19 @@ shinyServer(function(input, output, session) {
     input$lan
   })  
   
+  observeEvent(lang(), {
+    options(reactable.language = reactableLang(
+      searchPlaceholder = tr_pull(translate_db, "table_search", lang()),
+      noData =  tr_pull(translate_db, "table_no_entries", lang()),
+      pageInfo = tr_pull(translate_db, "table_entries", lang()),
+      pageSizeOptions = tr_pull(translate_db, "table_rows", lang()),
+      pagePrevious = "\u276e",
+      pageNext = "\u276f",
+      pagePreviousLabel = tr_pull(translate_db, "table_previous", lang()),
+      pageNextLabel = tr_pull(translate_db, "table_next", lang())
+    ))
+  })
+  
   output$indicator_search = renderReactable({
     indicator_info %>%
       mutate(category = full_category(category)) %>%
@@ -25,22 +38,8 @@ shinyServer(function(input, output, session) {
         defaultColDef = colDef(
           align = "left",
           headerStyle = list(background = "#f7f7f8")
-        ),
-        language = table_lang()
+        )
       )
-  })
-  
-  table_lang = reactive({
-    reactableLang(
-      searchPlaceholder = tr_pull(translate_db, "table_search", lang()),
-      noData =  tr_pull(translate_db, "table_no_entries", lang()),
-      pageInfo = tr_pull(translate_db, "table_entries", lang()),
-      pageSizeOptions = tr_pull(translate_db, "table_rows", lang()),
-      pagePrevious = "\u276e",
-      pageNext = "\u276f",
-      pagePreviousLabel = tr_pull(translate_db, "table_previous", lang()),
-      pageNextLabel = tr_pull(translate_db, "table_next", lang())
-    )
   })
   
   ### Function to create onclick event for images
