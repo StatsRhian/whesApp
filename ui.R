@@ -3,16 +3,15 @@ bs_theme_accent_colors(primary = "#1A5D7E", secondary = "#c60158")
 navbarPage(title = textOutput("whes_title"),
            
            tags$head(
-             tags$script(type = "text/javascript", src = "logo.js"),
              bootstrap(),
              useShinyjs(),
-               tags$link(rel = "stylesheet", type = "text/css", href = "phw-style.css")
-           ),
-           tags$style(type = "text/css",
-                      ".shiny-output-error { visibility: hidden; }",
-                      ".shiny-output-error:before { visibility: hidden; }"
-           ),
-           
+             tags$script(type = "text/javascript", src = "logo.js"),
+             tags$script(HTML('Shiny.addCustomMessageHandler("changetitle", function(x) {document.title=x});')),
+             tags$link(rel = "stylesheet", type = "text/css", href = "phw-style.css"),
+             tags$style(type = "text/css",
+                        ".shiny-output-error { visibility: hidden; }",
+                        ".shiny-output-error:before { visibility: hidden; }"
+             )),
            navlistPanel(
              id = "tab_categories",
              tabPanel(uiOutput("overview_tab_title", inline = TRUE), 
