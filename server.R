@@ -77,6 +77,11 @@ shinyServer(function(input, output, session) {
     tr_pull(translate_db, "employment_tab_title", lang())
   })
   
+  output$intro_md = reactive({
+    filename = glue("www/content/{lang()}/intro.md")
+    includeMarkdown(filename)
+  })
+  
 
   
 })
