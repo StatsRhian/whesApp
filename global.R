@@ -16,6 +16,9 @@ indicator_info =
   left_join(distinct(select(indicator_data, c(ind_id, type))))
 
 # Colour schemes
-waffle_no = "grey"
-waffle_yes = "firebrick"
 brewer_pallete = "Dark2"
+primary = "#1A5D7E"
+secondary = "#c60158"
+waffle_no = "grey"
+waffle_yes = secondary
+font_family = "Helvetica Neue"

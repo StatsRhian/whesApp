@@ -171,6 +171,7 @@ dataExplorer = function(input, output, session, lang, cat){
   output$detailed_table = 
     renderReactable({
       data() %>%
+        tr_table(translate_db, lang = lang()) %>%
         create_reactable()
     })
   

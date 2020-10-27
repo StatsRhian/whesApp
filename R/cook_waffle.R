@@ -4,7 +4,7 @@ prep_waffle = function(df, disag = input$disag){
     df %>%
     rename(Yes = value) %>%
     mutate(No = 1 - Yes)  %>%
-    select(-type, -n, -ci_lower, -ci_upper, -ind_id) %>%
+    select(-type, -ci_lower, -ci_upper, -ind_id) %>%
     when(
       (disag == "None") ~ pivot_longer(., cols = everything(),
                                        names_to = "Response",
@@ -66,7 +66,7 @@ cook_waffle = function(df, disag = input$disag,
       title = wrapper(title, width = 50 * plot_width),
       caption = caption
     ) +
-    theme_ipsum_rc(grid = "", base_size = 14,) +
+    theme_ipsum(grid = "", base_size = 14) +
     theme_enhance_waffle() +
     theme(plot.title = element_text(size = 16, hjust = 0, vjust = 0))
   
