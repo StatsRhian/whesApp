@@ -19,20 +19,6 @@ d = 0.9
     g = df %>%
       ggplot(aes(x = !!syms(disag)[[2]], y = value, fill = !!syms(disag)[[1]])) + 
       geom_col(position = position_dodge(d)) 
-  }  else if (length(disag) == 3) {
-    g = df %>%
-      ggplot(aes(x = !!syms(disag)[[2]], y = value, fill = !!syms(disag)[[1]])) + 
-      geom_col(position = position_dodge(d)) + 
-      facet_wrap(vars(!!syms(disag)[[3]]),
-                 labeller = translate_labeller(lang = lang))
-    
-  } else if (length(disag) == 4) {
-    g = df %>%
-      ggplot(aes(x = !!syms(disag)[[2]], y = value, fill = !!syms(disag)[[1]])) + 
-      geom_col(position = position_dodge(d)) + 
-      facet_grid(rows = vars(!!syms(disag)[[3]]), 
-                 cols = vars(!!syms(disag)[[4]]),
-                 labeller = translate_labeller(lang = lang))
   }
   
   # Translate fill & x axis
@@ -40,7 +26,7 @@ d = 0.9
     g = g %>%
       translate_x_axis(df, disag, lang = lang) %>%
       translate_fill(df, disag, lang = lang)
-  } else if (length(disag) >= 2) {
+  } else if (length(disag) == 2) {
     g = g %>%
       translate_x_axis(df, disag[[2]], lang = lang) %>%
       translate_fill(df, disag[[1]], lang = lang)
@@ -52,7 +38,7 @@ d = 0.9
          caption = caption) +
     theme_minimal(base_size = 14) 
   
-  if (!is.null(ci)){
+  if (!is.null(ci)) {
   if (!all(is.na(df$ci_lower)) & (ci == TRUE)) {
     g = g +
       geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper),

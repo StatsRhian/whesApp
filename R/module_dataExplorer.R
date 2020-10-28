@@ -22,15 +22,23 @@ dataExplorerUI = function(id, cat){
                            width = "90%"
                )
         ), # End: column
-        column(4, 
-               selectInput(ns("disag"),
+        column(2, 
+               selectInput(ns("disag1"),
                            label = "Please select a grouping",
                            choices = c("Gender" = "Gender",
                                        "Age" = "Age",
                                        "Deprivation" = "Deprivation", 
                                        "Education level" = "Education"),
-                           selected = "Gender", 
-                           multiple = TRUE)
+                           selected = "Gender")
+        ), # End: column
+        column(2, 
+               selectInput(ns("disag2"),
+                           label = "Please select a grouping",
+                           choices = c("Gender" = "Gender",
+                                       "Age" = "Age",
+                                       "Deprivation" = "Deprivation", 
+                                       "Education level" = "Education"),
+                           selected = "Age")
         ), # End: column
         column(2, 
                uiOutput(ns("ci_button"))
@@ -69,7 +77,7 @@ dataExplorer = function(input, output, session, lang, cat){
     reactive({
       indicator_data %>%
         filter(ind_id == input$ind_id) %>%
-        filter_disag(input$disag)
+        filter_disag(c(input$disag1, input$disag2))
     })
   
   output$indicator_md = reactive({
@@ -85,7 +93,8 @@ dataExplorer = function(input, output, session, lang, cat){
   # Plot
   plot_obj = reactive({
     make_barchart(df = data(),
-                  disag = input$disag,
+                  disag1 = input$disag1,
+                  disag2 = input$disag2,
                   ci = input$show_ci,
                   title = tr_pull(translate_db, 
                                   key = input$ind_id,
@@ -111,39 +120,77 @@ dataExplorer = function(input, output, session, lang, cat){
     )
   })
   
+  disag_choices = reactive({
+      indicator_info %>%
+      filter(ind_id == input$ind_id) %>%
+      pull(disag) %>%
+      unlist()
+  })
   
   toListen <- reactive({
     list(lang(), input$ind_id)
   })
   
   observeEvent(toListen(),  {
-    # Translate the disaggregates
-    disag_choices =
-      indicator_info %>%
-      filter(ind_id == input$ind_id) %>%
-      pull(disag) %>%
-      unlist()
     
-    if (length(disag_choices) == 1 & disag_choices[[1]] == "None") {
+    if (length(disag_choices()) == 1 & disag_choices()[[1]] == "None") {
       updateSelectInput(
         session,
-        inputId = "disag",
+        inputId = "disag1",
         label = tr_pull(translate_db, "select_disag_label", lang()),
         choices = tr_deframe(translate_db, pattern = "disaggregate_None", lang = lang())
       )
-      hide("disag")
     } else {
-      disag_choices = disag_choices[disag_choices != "None"]
-      names(disag_choices) = disag_choices
-      search_disag = glue("disaggregate_({paste(disag_choices, collapse = '|')})")
+      disag1 = disag_choices()
+      names(disag1) = disag1
+      search_disag = glue("disaggregate_({paste(disag1, collapse = '|')})")
       updateSelectInput(
         session,
-        inputId = "disag",
+        inputId = "disag1",
         label = tr_pull(translate_db, "select_disag_label", lang()),
         choices = tr_deframe(translate_db, pattern = search_disag, lang = lang())
       )
-      show("disag")
+      if (input$disag1 != "None") {
+      disag2 = disag_choices()[disag_choices() != input$disag1]
+      } else {
+        disag2 = disag_choices()
+      }
+      
+      names(disag2) = disag2
+      search_disag2 = glue("disaggregate_({paste(disag2, collapse = '|')})")
+      updateSelectInput(
+        session,
+        inputId = "disag2",
+        label = tr_pull(translate_db, "select_disag_label", lang()),
+        choices = tr_deframe(translate_db, pattern = search_disag2, lang = lang()),
+        selected = "None"
+      )
     }
+  
+
+    observeEvent(input$disag1,  {
+      if (input$disag1 == "None") {
+        updateSelectInput(
+          session,
+          inputId = "disag2",
+          label = tr_pull(translate_db, "select_disag_label", lang()),
+          choices = tr_deframe(translate_db, pattern = "disaggregate_None", lang = lang())
+        )
+      } else {
+      disag2 = disag_choices()[disag_choices() != input$disag1]
+      names(disag2) = disag2
+      search_disag2 = glue("disaggregate_({paste(disag2, collapse = '|')})")
+      updateSelectInput(
+        session,
+        inputId = "disag2",
+        label = tr_pull(translate_db, "select_disag_label", lang()),
+        choices = tr_deframe(translate_db, pattern = search_disag2, lang = lang()),
+        selected = "None"
+      )
+      }
+      
+    })
+    
     
     no_ci = 
       indicator_data %>%
