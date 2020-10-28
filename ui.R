@@ -1,5 +1,5 @@
 bs_theme_set("minty")
-bs_theme_accent_colors(primary = "#1A5D7E", secondary = "#c60158")
+bs_theme_accent_colors(primary = primary, secondary = secondary)
 navbarPage(title = textOutput("whes_title"),
            
            tags$head(

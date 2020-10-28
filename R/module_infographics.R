@@ -32,7 +32,7 @@ infographicsUI = function(id, cat){
                                        "Education level" = "Education"),
                            selected = "None")
         ) # End: column
-      ), # End: fluid row
+      ), # End: fluid row,
       
       fluidRow(
         plotOutput(ns("infographic")),
@@ -44,49 +44,65 @@ infographicsUI = function(id, cat){
 
 infographics = function(input, output, session, lang, cat) {
   
-  # Hide Waffle & download button if not a pecentage indicator
-  observeEvent(input$ind_id, {
-    type = 
-      indicator_info %>%
-      filter(ind_id == input$ind_id) %>%
-      pull(type)
-    if (type != "percent") {
-      hide("infographic")
-      hide("download_plot_button")
-    } else {
-      show("infographic")
-      show("download_plot_button")
-    }
-  })
+  # # Hide Waffle & download button if not a pecentage indicator
+  # observeEvent(input$ind_id, {
+  #   type = 
+  #     indicator_info %>%
+  #     filter(ind_id == input$ind_id) %>%
+  #     pull(type)
+  #   if (type != "percent") {
+  #     hide("infographic")
+  #     hide("download_plot_button")
+  #   } else {
+  #     show("infographic")
+  #     show("download_plot_button")
+  #   }
+  # })
   
   ind_df = reactive({
-      indicator_data %>%
+    indicator_data %>%
       filter(ind_id == input$ind_id) %>%
       filter_disag(input$disag)
   })
   
-  waffle_plot = reactive({
-    title = 
+  ind_type = reactive({
       indicator_info %>%
       filter(ind_id == input$ind_id) %>%
-      pull(name)
-    
+      pull(type)
+  })
+  
+  infographic = reactive({
+    if (ind_type() == "percent") {
+      title = 
+        indicator_info %>%
+        filter(ind_id == input$ind_id) %>%
+        pull(name)
+      
       ind_df() %>%
-      tr_table(translate_db, lang()) %>%
-      prep_waffle(input$disag) %>%
-      cook_waffle(input$disag, 
-                  title = tr_pull(translate_db, 
-                                  key = input$ind_id,
-                                  lang = lang(),
-                                  search = TRUE), 
-                  caption = tr_pull(translate_db, 
-                                    key = "caption",
-                                    lang = lang()),
-                  legend_labels = tr_pull(translate_db, 
-                                          key = "waffle_legend_label",
-                                          lang = lang()),
-                  plot_width = plot_width(),
-                  lang = lang())
+        tr_table(translate_db, lang()) %>%
+        prep_waffle(input$disag) %>%
+        cook_waffle(input$disag, 
+                    title = tr_pull(translate_db, 
+                                    key = input$ind_id,
+                                    lang = lang(),
+                                    search = TRUE), 
+                    caption = tr_pull(translate_db, 
+                                      key = "caption",
+                                      lang = lang()),
+                    legend_labels = tr_pull(translate_db, 
+                                            key = "waffle_legend_label",
+                                            lang = lang()),
+                    plot_width = plot_width(),
+                    lang = lang())
+    } else {
+      ind_df() %>%
+        mutate(label = tr_pull(translate_db, key = ind_id, lang = lang(), search = TRUE)) %>%
+        mutate(label = wrapper(label, 50)) %>%
+        mutate(icon = "fa-bar-chart") %>% # Allow to update depending on indicator
+        make_valuebox(caption = tr_pull(translate_db, key = "caption", lang = lang()))
+    }
+
+
   })
   
   observeEvent(lang(), { 
@@ -102,15 +118,20 @@ infographics = function(input, output, session, lang, cat) {
     )
   })
   
-  
   plot_width = reactive({
     # Multiplier for download settings
-    if (input$disag == "None") {
-      n = 1
-    } else
-    {
-      n = ind_df() %>% pull(input$disag) %>% length()
+    
+    if (ind_type() == "percent") {
+      if (input$disag == "None") {
+        n = 1
+      } else
+      {
+        n = ind_df() %>% pull(input$disag) %>% length()
+      }
+    } else {
+      n = 1.6
     }
+    
   })
   toListen <- reactive({
     list(lang(), input$ind_id)
@@ -128,9 +149,9 @@ infographics = function(input, output, session, lang, cat) {
       hide("disag")
       search_disag = "disaggregate_None"
     } else {
-    names(disag_choices) = disag_choices
-    search_disag = glue("disaggregate_({paste(disag_choices, collapse = '|')})")
-    show("disag")
+      names(disag_choices) = disag_choices
+      search_disag = glue("disaggregate_({paste(disag_choices, collapse = '|')})")
+      show("disag")
     }
     
     updateSelectInput(
@@ -143,7 +164,7 @@ infographics = function(input, output, session, lang, cat) {
   })
   
   output$infographic = renderPlot({
-    waffle_plot()
+    infographic()
   })
   
   output$tab_heading = renderUI({
@@ -160,7 +181,7 @@ infographics = function(input, output, session, lang, cat) {
       glue("infographic_{input$ind_id}.png") 
     },
     content = function(file) {
-      ggsave(file, plot = waffle_plot(), device = "png", width = plot_width() * 6, height = 6)
+      ggsave(file, plot = infographic(), device = "png", width = plot_width() * 6, height = 6)
     }
   )
 }
