@@ -1,4 +1,3 @@
-
 make_barchart = function(df = data(),
                          disag1 = input$disag1, 
                          disag2 = input$disag2,
@@ -39,6 +38,7 @@ d = 0.9
     g = g +
       geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper),
                     size = 0.4,
+                    width = 0.3,
                     alpha = 0.8,
                     position = position_dodge(d)) 
   }
