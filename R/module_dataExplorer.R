@@ -242,7 +242,6 @@ dataExplorer = function(input, output, session, lang, cat){
     plot_obj()
   })   
   
-  
   # Download buttons --------------------------
   output$download_data_button = renderUI({
     downloadButton(session$ns("download_data"), tr_pull(translate_db, "download", lang()))
@@ -262,9 +261,7 @@ dataExplorer = function(input, output, session, lang, cat){
   })
   
   output$download_plot = downloadHandler(
-    filename = function() { 
-      glue("barchart_{input$ind_id}.png")
-    },
+    filename = glue("barchart_{input$ind_id}.png"),
     content = function(file) {
       ggsave(file, plot = plot_obj(), device = "png", width = 20, height = 10)
     }
