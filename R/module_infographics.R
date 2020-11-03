@@ -44,21 +44,6 @@ infographicsUI = function(id, cat){
 
 infographics = function(input, output, session, lang, cat) {
   
-  # # Hide Waffle & download button if not a pecentage indicator
-  # observeEvent(input$ind_id, {
-  #   type = 
-  #     indicator_info %>%
-  #     filter(ind_id == input$ind_id) %>%
-  #     pull(type)
-  #   if (type != "percent") {
-  #     hide("infographic")
-  #     hide("download_plot_button")
-  #   } else {
-  #     show("infographic")
-  #     show("download_plot_button")
-  #   }
-  # })
-  
   ind_df = reactive({
     indicator_data %>%
       filter(ind_id == input$ind_id) %>%
@@ -66,13 +51,14 @@ infographics = function(input, output, session, lang, cat) {
   })
   
   ind_type = reactive({
-      indicator_info %>%
+    indicator_info %>%
       filter(ind_id == input$ind_id) %>%
       pull(type)
   })
   
   infographic = reactive({
     if (ind_type() == "percent") {
+      show("disag")
       title = 
         indicator_info %>%
         filter(ind_id == input$ind_id) %>%
@@ -95,14 +81,15 @@ infographics = function(input, output, session, lang, cat) {
                     plot_width = plot_width(),
                     lang = lang())
     } else {
+      hide("disag")
       ind_df() %>%
         mutate(label = tr_pull(translate_db, key = ind_id, lang = lang(), search = TRUE)) %>%
         mutate(label = wrapper(label, 50)) %>%
         mutate(icon = "fa-bar-chart") %>% # Allow to update depending on indicator
         make_valuebox(caption = tr_pull(translate_db, key = "caption", lang = lang()))
     }
-
-
+    
+    
   })
   
   observeEvent(lang(), { 

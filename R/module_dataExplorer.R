@@ -222,7 +222,6 @@ dataExplorer = function(input, output, session, lang, cat){
   
   # Bar chart ---------------------------------
   plot_obj = reactive({
-    print("Making plot")
     make_barchart(df = data(),
                   disag1 = input$disag1,
                   disag2 = input$disag2,
@@ -238,8 +237,7 @@ dataExplorer = function(input, output, session, lang, cat){
   })
   
   output$bar_plot = renderPlot({
-    print("Rendering Plot")
-    plot_obj()
+      plot_obj()
   })   
   
   # Download buttons --------------------------
