@@ -155,7 +155,7 @@ infographics = function(input, output, session, lang, cat) {
   })
   
   output$tab_heading = renderUI({
-    tr_pull(translate_db, glue("{cat}_tab_title"), lang()) %>%
+    tr_pull(translate_db, glue("category_{cat}"), lang()) %>%
       h2()
   })
   

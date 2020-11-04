@@ -8,7 +8,7 @@ ind_007,morbidity,Percentage of survey respondents with diabetes incl. hyperglyc
 ind_008,morbidity,"Death rate per 100,000 due to tuberculosis",NA
 ind_009,wellbeing,Percentage of survey respondents who rated their satisfaction with life as low (0-4 out of 10),nsw1819
 ind_010,wellbeing,"Percentage of students who rated their life satisfaction as 6 out of 10, or above",NA
-ind_011,wellbeing,Percentage of adults (16+) scoring low on the  Warwick- Edinburgh Mental Well-being Scale,nsw1819
+ind_011,wellbeing,Percentage of adults (16+) scoring low on the  Warwick-Edinburgh Mental Well-being Scale,nsw1819
 ind_012,morbidity,Infant mortality (under 1 year),NA
 ind_013,morbidity,Life expectancy at birth in years,NA
 ind_014,morbidity,Percentage of survey respondents who currently smoke either daily or occasionally,nsw1819

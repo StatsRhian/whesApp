@@ -7,6 +7,9 @@ source("R/translate_plots.R")
 source("R/make_barchart.R")
 source("R/calc_disags.R")
 
+breakdown_vars = c("Gender", "Age", "Deprivation", "Education")
+globalVariables(breakdown_vars)
+
 load(file = "data/clean_indicators.RData")
 indicator_info = readr::read_csv("data/indicator_info.csv")
 
