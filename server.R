@@ -24,7 +24,8 @@ shinyServer(function(input, output, session) {
   
   output$indicator_search = renderReactable({
     indicator_info %>%
-      mutate(category = full_category(category)) %>%
+      mutate(name =  map2_chr(ind_id, category, ~tr_pull(translate_db, glue("{.y}_{.x}"), lang()))) %>%
+      mutate(category = map_chr(category, ~tr_pull(translate_db, glue("category_{.x}"), lang()))) %>%
       select(name, category) %>%
       reactable(
         defaultPageSize = 10,
@@ -64,31 +65,31 @@ shinyServer(function(input, output, session) {
   })
   
   output$wellbeing_tab_title = renderUI({
-    tr_pull(translate_db, "wellbeing_tab_title", lang())
+    tr_pull(translate_db, "category_wellbeing", lang())
   })
   
   output$morbidity_tab_title = renderUI({
-    tr_pull(translate_db, "morbidity_tab_title", lang())
+    tr_pull(translate_db, "category_morbidity", lang())
   })
   
   output$health_tab_title = renderUI({
-    tr_pull(translate_db, "health_tab_title", lang())
+    tr_pull(translate_db, "category_health", lang())
   })
   
   output$income_tab_title = renderText({
-    tr_pull(translate_db, "income_tab_title", lang())
+    tr_pull(translate_db, "category_income", lang())
   })
   
   output$living_tab_title = renderUI({
-    tr_pull(translate_db, "living_tab_title", lang())
+    tr_pull(translate_db, "category_living", lang())
   })
   
   output$social_tab_title = renderUI({
-    tr_pull(translate_db, "social_tab_title", lang())
+    tr_pull(translate_db, "category_social", lang())
   })
   
   output$employment_tab_title = renderUI({
-    tr_pull(translate_db, "employment_tab_title", lang())
+    tr_pull(translate_db, "category_employment", lang())
   })
   
   output$intro_md = reactive({
@@ -96,15 +97,9 @@ shinyServer(function(input, output, session) {
     includeMarkdown(filename)
   })
   
-  
   ## Fix tab title
   observeEvent(lang(), {
     title =  tr_pull(translate_db, "whes_title", lang())
     session$sendCustomMessage("changetitle", title)
   })
-  
-  
-  
-  
 })
-

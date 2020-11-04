@@ -22,7 +22,7 @@ dataExplorerUI = function(id, cat){
                            width = "90%"
                )
         ), # End: column
-        column(2, 
+        column(3, 
                selectInput(ns("disag1"),
                            label = "Please select a grouping",
                            choices = c("Gender" = "Gender",
@@ -31,7 +31,7 @@ dataExplorerUI = function(id, cat){
                                        "Education level" = "Education"),
                            selected = "Gender")
         ), # End: column
-        column(2, 
+        column(3, 
                selectInput(ns("disag2"),
                            label = "Please select a grouping",
                            choices = c("Gender" = "Gender",
@@ -39,23 +39,31 @@ dataExplorerUI = function(id, cat){
                                        "Deprivation" = "Deprivation", 
                                        "Education level" = "Education"),
                            selected = "Age")
-        ), # End: column
-        column(2, 
-               uiOutput(ns("ci_button"))
         ) # End: column
-      ), # End: fluid row
+        ), # End: fluid row
       
       fluidRow(
         column(7,
                wellPanel(
-                 plotOutput(ns("bar_plot")), 
-                 uiOutput(ns("download_plot_button"))
+                 fluidRow(column(12,
+                                   plotOutput(ns("bar_plot")),
+                                   br()
+                 )),
+                 fluidRow(
+                   column(6, uiOutput(ns("download_plot_button"))),
+                   column(6, uiOutput(ns("ci_button")))
+                 )
                )       
         ), # End: column
         column(5,
                wellPanel(
-                 reactableOutput(ns("detailed_table")), 
-                 uiOutput(ns("download_data_button"))
+                 fluidRow(column(12,
+                                 reactableOutput(ns("detailed_table")),
+                                 br()
+                 )),
+                 fluidRow(column(12,
+                                 uiOutput(ns("download_data_button"))
+                 ))
                )
         ) # End: column
       ), # End: fluid row
@@ -73,7 +81,7 @@ dataExplorerUI = function(id, cat){
 dataExplorer = function(input, output, session, lang, cat){
   # Translate page title ----------------------
   output$tab_heading = renderUI({
-    tr_pull(translate_db, glue("{cat}_tab_title"), lang()) %>%
+    tr_pull(translate_db, glue("category_{cat}"), lang()) %>%
       h2()
   })
   
@@ -188,7 +196,7 @@ dataExplorer = function(input, output, session, lang, cat){
       renderReactable({
         data() %>%
           tr_table(translate_db, lang = lang()) %>%
-          create_reactable()
+          create_reactable(lang = lang())
       })
     
     # Confidence Intervals Button ----------------------

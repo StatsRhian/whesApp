@@ -20,7 +20,6 @@ living_ind_019,Percentage of households with a sufficient number of bedrooms for
 living_ind_020,Percentage of survey respondents who rated their overall satisfaction with their accomodation as low (0-4 out of 10),Cyfieithu Cymraeg yn mynd yma
 living_ind_025,"Death rate per 100,000 due to road traffic accidents",Cyfieithu Cymraeg yn mynd yma
 living_ind_026,Number of households receiving housing benefit,Cyfieithu Cymraeg yn mynd yma
-living_ind_028,Percentage of survey respondents who are not able to keep accomodation warm enough,Cyfieithu Cymraeg yn mynd yma
 living_ind_032,Average PM10 concentrations across local authority and health board areas in Wales,Cyfieithu Cymraeg yn mynd yma
 living_ind_033,Percentage of adults aged 16+ years reporting difficulty accessing local green space,Cyfieithu Cymraeg yn mynd yma
 living_ind_034,Percentage of disabled persons (aged 16+) reporting difficulty getting to or from stop/station,Cyfieithu Cymraeg yn mynd yma
@@ -75,14 +74,14 @@ select_ind_label,Please select an indicator. You can type in the box to search f
 select_disag_label,Please select a grouping,Dewiswch grwpio
 whes_title,Welsh Health Equity Solutions Platform,Llwyfan Datrysiadau Ecwiti Iechyd Cymru
 overview_tab_title,Overview,Trosolwg
-wellbeing_tab_title,Well-being,Lles
-morbidity_tab_title,Morbidity,Morbidrwydd
-health_tab_title,Health Services,Gwasanaethau Iechyd
-income_tab_title,Income and Social Protection,Incwm a Diogelu Cymdeithasol
-living_tab_title,Living Environment,Yr Amgylchedd Byw
-social_tab_title,Social and Human Capital,Cyfalaf Cymdeithasol a Dynol
+category_wellbeing,Well-being,Lles
+category_morbidity,Morbidity,Morbidrwydd
+category_health,Health Services,Gwasanaethau Iechyd
+category_income,Income and Social Protection,Incwm a Diogelu Cymdeithasol
+category_living,Living Environment,Yr Amgylchedd Byw
+category_social,Social and Human Capital,Cyfalaf Cymdeithasol a Dynol
 inequities_tab_title,Inequities in Health,Anghydraddoldebau mewn Iechyd
-employment_tab_title,Employment and Working Conditions,Amodau Cyflogaeth a Gwaith
+category_employment,Employment and Working Conditions,Amodau Cyflogaeth a Gwaith
 waffle_legend_label,Yes,Do
 waffle_legend_label,No,Naddo
 caption,Welsh Health Equity Solutions Platform 2020,Llwyfan Datrysiadau Ecwiti Iechyd Cymru 2020
@@ -165,3 +164,5 @@ table_entries,{rowStart} to {rowEnd} of {rows} entries,{rowStart} i {rowEnd} o g
 table_rows,Show {rows},Dangos {rows}
 table_indicator,Indicator,Dangosydd
 table_category,Category,Categori
+col_value,Value,Gwerth
+col_confidence,Confidence,Hyder
