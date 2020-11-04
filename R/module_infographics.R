@@ -85,7 +85,8 @@ infographics = function(input, output, session, lang, cat) {
       ind_df() %>%
         mutate(label = tr_pull(translate_db, key = ind_id, lang = lang(), search = TRUE)) %>%
         mutate(label = wrapper(label, 50)) %>%
-        mutate(icon = "fa-bar-chart") %>% # Allow to update depending on indicator
+        mutate(icon = "fa-bar-chart") %>% # Allow to update depending on indicator %>%
+        mutate(value = format(round(value, 2), big.mark = ",")) %>%
         make_valuebox(caption = tr_pull(translate_db, key = "caption", lang = lang()))
     }
     
