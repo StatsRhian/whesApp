@@ -87,6 +87,7 @@ infographics = function(input, output, session, lang, cat) {
         mutate(label = wrapper(label, 50)) %>%
         mutate(icon = "fa-bar-chart") %>% # Allow to update depending on indicator %>%
         mutate(value = format(round(value, 2), big.mark = ",")) %>%
+        mutate(value = ifelse(str_detect(label, "£"), glue("£{value}"), value)) %>%
         make_valuebox(caption = tr_pull(translate_db, key = "caption", lang = lang()))
     }
     
@@ -108,7 +109,6 @@ infographics = function(input, output, session, lang, cat) {
   
   plot_width = reactive({
     # Multiplier for download settings
-    
     if (ind_type() == "percent") {
       if (input$disag == "None") {
         n = 1

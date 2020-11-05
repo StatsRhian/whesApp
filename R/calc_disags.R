@@ -1,6 +1,5 @@
 # Calculate which disaggregates are available for all indicators
 calc_disag_vars = Vectorize(function(id){
-  breakdown_vars = c("Gender", "Age", "Education", "Deprivation")
   disags = 
     indicator_data %>%
     filter(ind_id == id) %>%

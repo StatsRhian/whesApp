@@ -1,7 +1,6 @@
 bs_theme_set("minty")
 bs_theme_accent_colors(primary = primary, secondary = secondary)
 navbarPage(title = textOutput("whes_title"),
-           
            tags$head(
              bootstrap(),
              useShinyjs(),
@@ -14,6 +13,7 @@ navbarPage(title = textOutput("whes_title"),
              )),
            navlistPanel(
              id = "tab_categories",
+             widths = c(2, 10),
              tabPanel(uiOutput("overview_tab_title", inline = TRUE), 
                       icon = icon("home") ,
                       br(),
@@ -42,11 +42,8 @@ navbarPage(title = textOutput("whes_title"),
                       uiOutput("intro_md"),
                       reactableOutput("indicator_search")
              ),
-             "Inequities in Health",
-             widths = c(2, 10),
              categoryPanelUI("wellbeing"),
              categoryPanelUI("morbidity"),
-             "Five essential conditions",
              categoryPanelUI("health"),
              categoryPanelUI("income"),
              categoryPanelUI("living"),
@@ -54,4 +51,3 @@ navbarPage(title = textOutput("whes_title"),
              categoryPanelUI("employment")
            )
 )
-

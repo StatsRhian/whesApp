@@ -43,14 +43,14 @@ cook_waffle = function(df, disag = input$disag,
   if (disag == "None") {
     legend_labels = glue("{legend_labels} ({df$Percent}%)")
   }
-  
+
   waffle = 
     df %>%
     ggplot(aes(values = Percent, label = Response, col = Response)) +
     geom_pictogram(
       n_rows = 10, size = 9.5, 
       flip = TRUE,
-      family = "FontAwesome"
+      family = "Font Awesome 5 Free Solid"
     ) +
     scale_color_manual(
       name = NULL,
@@ -69,8 +69,8 @@ cook_waffle = function(df, disag = input$disag,
     theme_ipsum(grid = "", base_size = 14) +
     theme_enhance_waffle() +
     theme(plot.title = element_text(size = 16, hjust = 0, vjust = 0))
-  
-  # DISAG
+ 
+   # DISAG
   if (disag == "None") {
     waffle = 
       waffle +
@@ -84,10 +84,10 @@ cook_waffle = function(df, disag = input$disag,
       scale_y_discrete(expand = c(0, 0)) +
       coord_equal()
   }
-  waffle
+  return(waffle)
 }
 
-wrapper <- function(x, ...) 
+wrapper = function(x, ...) 
 {
   paste(strwrap(x, ...), collapse = "\n")
 }

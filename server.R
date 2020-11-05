@@ -97,7 +97,6 @@ shinyServer(function(input, output, session) {
     includeMarkdown(filename)
   })
   
-  
   ## Fix tab title
   observeEvent(lang(), {
     title =  tr_pull(translate_db, "whes_title", lang())
@@ -105,4 +104,3 @@ shinyServer(function(input, output, session) {
   })
   
 })
-

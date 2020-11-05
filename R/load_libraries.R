@@ -1,8 +1,9 @@
 # Load libraries
 library(bootstraplib)
-#library(emojifont)
+library(extrafont)
 library(glue)
 library(hrbrthemes)
+library(plyr)
 library(RColorBrewer)
 library(reactable)
 library(scales)

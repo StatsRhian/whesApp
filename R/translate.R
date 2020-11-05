@@ -37,7 +37,6 @@ tr_pull = function(translate_db, key, lang, search = FALSE){
 tr_table = function(df, translate_db, lang){
   
   if (lang == "CY") {
-    breakdown_vars = c("Gender", "Age", "Deprivation", "Education")
     df_breakdown = which(breakdown_vars %in% names(df))
     
     for (i in seq_along(df_breakdown)) {

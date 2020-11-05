@@ -2411,6 +2411,38 @@
         "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:44:09 UTC; unix"
       }
     },
+    "plyr": {
+      "Source": "CRAN",
+      "Repository": "https://www.stats.bris.ac.uk/R/",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "plyr",
+        "Title": "Tools for Splitting, Applying and Combining Data",
+        "Version": "1.8.6",
+        "Authors@R": "\n    person(given = \"Hadley\",\n           family = \"Wickham\",\n           role = c(\"aut\", \"cre\"),\n           email = \"hadley@rstudio.com\")",
+        "Description": "A set of tools that solves a common set of\n    problems: you need to break a big problem down into manageable pieces,\n    operate on each piece and then put all the pieces back together.  For\n    example, you might want to fit a model to each spatial location or\n    time point in your study, summarise data by panels or collapse\n    high-dimensional arrays to simpler summary statistics. The development\n    of 'plyr' has been generously supported by 'Becton Dickinson'.",
+        "License": "MIT + file LICENSE",
+        "URL": "http://had.co.nz/plyr, https://github.com/hadley/plyr",
+        "BugReports": "https://github.com/hadley/plyr/issues",
+        "Depends": "R (>= 3.1.0)",
+        "Imports": "Rcpp (>= 0.11.0)",
+        "Suggests": "abind, covr, doParallel, foreach, iterators, itertools,\ntcltk, testthat",
+        "LinkingTo": "Rcpp",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "RoxygenNote": "7.0.2",
+        "NeedsCompilation": "yes",
+        "Packaged": "2020-03-02 23:46:56 UTC; hadley",
+        "Author": "Hadley Wickham [aut, cre]",
+        "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2020-03-03 14:40:02 UTC",
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:41:18 UTC; unix"
+      }
+    },
     "praise": {
       "Source": "CRAN",
       "Repository": "https://www.stats.bris.ac.uk/R/",
@@ -3993,7 +4025,7 @@
       "checksum": "bd099003eb26b61ddcec42b8a36bf064"
     },
     "global.R": {
-      "checksum": "8b79680263cd9a890a5f37e127fb869f"
+      "checksum": "0a1a10370d61da66bb093650da921836"
     },
     "packrat/desc/askpass": {
       "checksum": "ce96e54b5f5701e98ab539cd23787fca"
@@ -4214,6 +4246,9 @@
     "packrat/desc/pkgload": {
       "checksum": "8f416dd9af557758357abea1b12cb68a"
     },
+    "packrat/desc/plyr": {
+      "checksum": "8522d19b9c4622ee2a0b14a068d9d9ff"
+    },
     "packrat/desc/praise": {
       "checksum": "b9be8290605ab866fb4f72a391a8fbbe"
     },
@@ -4377,13 +4412,13 @@
       "checksum": "f18e6ca9d7017b65c58a6d3eb85f60f2"
     },
     "packrat/packrat.lock": {
-      "checksum": "91918559922e6c1dcfac1b621aa8e05a"
+      "checksum": "e8879718477f3b7835238504c43d347a"
     },
     "R/calc_disags.R": {
       "checksum": "cd53b22e9c9a017c000dc100ed5b66e3"
     },
     "R/cook_waffle.R": {
-      "checksum": "698ab979b6a1652dfe085ce8045d4b3d"
+      "checksum": "6e2c6330f902779525ecea79faa2f20c"
     },
     "R/create_reactable.R": {
       "checksum": "d175b78151afcd2d10dac029d926f141"
@@ -4398,7 +4433,7 @@
       "checksum": "a8bfd781a0ea0d10dc53ef9af02f8e42"
     },
     "R/load_libraries.R": {
-      "checksum": "5cfd7d0455daad15a52a2fdd834124c0"
+      "checksum": "e399c4f538356bbbd9d0fdf22a8a6b25"
     },
     "R/make_barchart.R": {
       "checksum": "c17eca5fcbf3e6f0a9338fc59eb3db87"
@@ -4425,10 +4460,10 @@
       "checksum": "9e5142c2b2357d1f10ebab70a5dd3018"
     },
     "server.R": {
-      "checksum": "2dea27e10aee6005d079b65bfedc3d38"
+      "checksum": "11fbc8b338f61e141f1777e3dd6d8e2a"
     },
     "ui.R": {
-      "checksum": "fe96222ced37526498cd6c94ed2be048"
+      "checksum": "3edc28c2582bde087ba66ac9705a8998"
     },
     "www/content/CY/indicators/missing.md": {
       "checksum": "d4cad56d19972349a6ddba83d3081ebc"
@@ -4684,6 +4719,21 @@
     },
     "www/favicon.ico": {
       "checksum": "03697e45b450c4325fe8308ce552f0bf"
+    },
+    "www/fonts/fa-brands-400.ttf": {
+      "checksum": "ed2b8bf117160466ba6220a8f1da54a4"
+    },
+    "www/fonts/fa-solid-900.ttf": {
+      "checksum": "acf50f59802f20d8b45220eaae532a1c"
+    },
+    "www/fonts/roboto-condensed/RobotoCondensed-Bold.ttf": {
+      "checksum": "7ff4438405bfb9fe87b606ca356ba6a0"
+    },
+    "www/fonts/roboto-condensed/RobotoCondensed-Light.ttf": {
+      "checksum": "cf4449c1884598b292630aa9f4007c19"
+    },
+    "www/fonts/roboto-condensed/RobotoCondensed-Regular.ttf": {
+      "checksum": "e6fd95f0cb839566476ec9b6df34849c"
     },
     "www/icons/employment-working-conditions.png": {
       "checksum": "0d41c2961379ddf4d08704f6f2088168"
