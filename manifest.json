@@ -79,7 +79,7 @@
         "Package": "DT",
         "Type": "Package",
         "Title": "A Wrapper of the JavaScript Library 'DataTables'",
-        "Version": "0.14",
+        "Version": "0.15",
         "Authors@R": "c(\n    person(\"Yihui\", \"Xie\", email = \"xie@yihui.name\", role = c(\"aut\", \"cre\")),\n    person(\"Joe\", \"Cheng\", role = \"aut\"),\n    person(\"Xianying\", \"Tan\", role = \"aut\"),\n    person(\"JJ\", \"Allaire\", role = \"ctb\"),\n    person(\"Maximilian\", \"Girlich\", role = \"ctb\"),\n    person(\"Greg\", \"Freedman Ellis\", role = \"ctb\"),\n    person(\"Johannes\", \"Rauh\", role = \"ctb\"),\n    person(\"jQuery contributors\", role = c(\"ctb\", \"cph\"), comment = \"jQuery in htmlwidgets/lib\"),\n    person(\"SpryMedia Limited\", role = c(\"ctb\", \"cph\"), comment = \"DataTables in htmlwidgets/lib\"),\n    person(\"Brian\", \"Reavis\", role = c(\"ctb\", \"cph\"), comment = \"selectize.js in htmlwidgets/lib\"),\n    person(\"Leon\", \"Gersen\", role = c(\"ctb\", \"cph\"), comment = \"noUiSlider in htmlwidgets/lib\"),\n    person(\"Bartek\", \"Szopka\", role = c(\"ctb\", \"cph\"), comment = \"jquery.highlight.js in htmlwidgets/lib\"),\n    person(\"RStudio, PBC\", role = \"cph\")\n    )",
         "Maintainer": "Yihui Xie <xie@yihui.name>",
         "Description": "Data objects in R can be rendered as HTML tables using the\n    JavaScript library 'DataTables' (typically via R Markdown or Shiny). The\n    'DataTables' library has been included in this R package. The package name\n    'DT' is an abbreviation of 'DataTables'.",
@@ -89,14 +89,14 @@
         "Imports": "htmltools (>= 0.3.6), htmlwidgets (>= 1.3), jsonlite (>=\n0.9.16), magrittr, crosstalk, promises",
         "Suggests": "knitr (>= 1.8), rmarkdown, shiny (>= 1.2.0), testit",
         "VignetteBuilder": "knitr",
-        "RoxygenNote": "7.1.0",
+        "RoxygenNote": "7.1.1",
         "Encoding": "UTF-8",
         "NeedsCompilation": "no",
-        "Packaged": "2020-06-23 21:31:12 UTC; yihui",
+        "Packaged": "2020-08-05 02:57:58 UTC; yihui",
         "Author": "Yihui Xie [aut, cre],\n  Joe Cheng [aut],\n  Xianying Tan [aut],\n  JJ Allaire [ctb],\n  Maximilian Girlich [ctb],\n  Greg Freedman Ellis [ctb],\n  Johannes Rauh [ctb],\n  jQuery contributors [ctb, cph] (jQuery in htmlwidgets/lib),\n  SpryMedia Limited [ctb, cph] (DataTables in htmlwidgets/lib),\n  Brian Reavis [ctb, cph] (selectize.js in htmlwidgets/lib),\n  Leon Gersen [ctb, cph] (noUiSlider in htmlwidgets/lib),\n  Bartek Szopka [ctb, cph] (jquery.highlight.js in htmlwidgets/lib),\n  RStudio, PBC [cph]",
         "Repository": "CRAN",
-        "Date/Publication": "2020-06-24 05:30:13 UTC",
-        "Built": "R 4.0.0; ; 2020-07-07 14:52:14 UTC; unix"
+        "Date/Publication": "2020-08-05 15:42:07 UTC",
+        "Built": "R 4.0.0; ; 2020-10-08 10:55:02 UTC; unix"
       }
     },
     "MASS": {
@@ -348,7 +348,7 @@
         "Package": "backports",
         "Type": "Package",
         "Title": "Reimplementations of Functions Introduced Since R-3.0.0",
-        "Version": "1.1.8",
+        "Version": "1.1.10",
         "Authors@R": "c(\n    person(\"Michel\", \"Lang\", NULL, \"michellang@gmail.com\",\n      role = c(\"cre\", \"aut\"), comment = c(ORCID = \"0000-0001-9754-0393\")),\n    person(\"R Core Team\", role = \"aut\"))",
         "Maintainer": "Michel Lang <michellang@gmail.com>",
         "Description": "\n    Functions introduced or changed since R v3.0.0 are re-implemented in this\n    package. The backports are conditionally exported in order to let R resolve\n    the function name to either the implemented backport, or the respective base\n    version, if available. Package developers can make use of new functions or\n    arguments by selectively importing specific backports to\n    support older installations.",
@@ -360,12 +360,12 @@
         "Depends": "R (>= 3.0.0)",
         "Imports": "utils",
         "Encoding": "UTF-8",
-        "RoxygenNote": "7.1.0",
-        "Packaged": "2020-06-17 08:57:04 UTC; michel",
+        "RoxygenNote": "7.1.1",
+        "Packaged": "2020-09-15 21:10:09 UTC; michel",
         "Author": "Michel Lang [cre, aut] (<https://orcid.org/0000-0001-9754-0393>),\n  R Core Team [aut]",
         "Repository": "CRAN",
-        "Date/Publication": "2020-06-17 10:00:08 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:37:43 UTC; unix"
+        "Date/Publication": "2020-09-15 22:00:03 UTC",
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-10-05 17:58:58 UTC; unix"
       }
     },
     "base64enc": {
@@ -474,27 +474,29 @@
       "description": {
         "Type": "Package",
         "Package": "broom",
-        "Title": "Convert Statistical Analysis Objects into Tidy Tibbles",
-        "Version": "0.5.6",
-        "Authors@R": "\n    c(person(given = \"David\",\n             family = \"Robinson\",\n             role = \"aut\",\n             email = \"admiral.david@gmail.com\"),\n      person(given = \"Alex\",\n             family = \"Hayes\",\n             role = c(\"aut\", \"cre\"),\n             email = \"alexpghayes@gmail.com\",\n             comment = c(ORCID = \"0000-0002-4985-5160\")),\n      person(given = \"Matthieu\",\n             family = \"Gomez\",\n             role = \"ctb\",\n             email = \"mattg@princeton.edu\"),\n      person(given = \"Boris\",\n             family = \"Demeshev\",\n             role = \"ctb\",\n             email = \"boris.demeshev@gmail.com\"),\n      person(given = \"Dieter\",\n             family = \"Menne\",\n             role = \"ctb\",\n             email = \"dieter.menne@menne-biomed.de\"),\n      person(given = \"Benjamin\",\n             family = \"Nutter\",\n             role = \"ctb\",\n             email = \"nutter@battelle.org\"),\n      person(given = \"Luke\",\n             family = \"Johnston\",\n             role = \"ctb\",\n             email = \"luke.johnston@mail.utoronto.ca\"),\n      person(given = \"Ben\",\n             family = \"Bolker\",\n             role = \"ctb\",\n             email = \"bolker@mcmaster.ca\"),\n      person(given = \"Francois\",\n             family = \"Briatte\",\n             role = \"ctb\",\n             email = \"f.briatte@gmail.com\"),\n      person(given = \"Jeffrey\",\n             family = \"Arnold\",\n             role = \"ctb\",\n             email = \"jeffrey.arnold@gmail.com\"),\n      person(given = \"Jonah\",\n             family = \"Gabry\",\n             role = \"ctb\",\n             email = \"jsg2201@columbia.edu\"),\n      person(given = \"Luciano\",\n             family = \"Selzer\",\n             role = \"ctb\",\n             email = \"luciano.selzer@gmail.com\"),\n      person(given = \"Gavin\",\n             family = \"Simpson\",\n             role = \"ctb\",\n             email = \"ucfagls@gmail.com\"),\n      person(given = \"Jens\",\n             family = \"Preussner\",\n             role = \"ctb\",\n             email = \" jens.preussner@mpi-bn.mpg.de\"),\n      person(given = \"Jay\",\n             family = \"Hesselberth\",\n             role = \"ctb\",\n             email = \"jay.hesselberth@gmail.com\"),\n      person(given = \"Hadley\",\n             family = \"Wickham\",\n             role = \"ctb\",\n             email = \"hadley@rstudio.com\"),\n      person(given = \"Matthew\",\n             family = \"Lincoln\",\n             role = \"ctb\",\n             email = \"matthew.d.lincoln@gmail.com\"),\n      person(given = \"Alessandro\",\n             family = \"Gasparini\",\n             role = \"ctb\",\n             email = \"ag475@leicester.ac.uk\"),\n      person(given = \"Lukasz\",\n             family = \"Komsta\",\n             role = \"ctb\",\n             email = \"lukasz.komsta@umlub.pl\"),\n      person(given = \"Frederick\",\n             family = \"Novometsky\",\n             role = \"ctb\"),\n      person(given = \"Wilson\",\n             family = \"Freitas\",\n             role = \"ctb\"),\n      person(given = \"Michelle\",\n             family = \"Evans\",\n             role = \"ctb\"),\n      person(given = \"Jason Cory\",\n             family = \"Brunson\",\n             role = \"ctb\",\n             email = \"cornelioid@gmail.com\"),\n      person(given = \"Simon\",\n             family = \"Jackson\",\n             role = \"ctb\",\n             email = \"drsimonjackson@gmail.com\"),\n      person(given = \"Ben\",\n             family = \"Whalley\",\n             role = \"ctb\",\n             email = \"ben.whalley@plymouth.ac.uk\"),\n      person(given = \"Michael\",\n             family = \"Kuehn\",\n             role = \"ctb\",\n             email = \"mkuehn10@gmail.com\"),\n      person(given = \"Jorge\",\n             family = \"Cimentada\",\n             role = \"ctb\",\n             email = \"cimentadaj@gmail.com\"),\n      person(given = \"Erle\",\n             family = \"Holgersen\",\n             role = \"ctb\",\n             email = \"erle.holgersen@gmail.com\"),\n      person(given = \"Karl\",\n             family = \"Dunkle Werner\",\n             role = \"ctb\"))",
+        "Title": "Convert Statistical Objects into Tidy Tibbles",
+        "Version": "0.7.1",
+        "Authors@R": "\n    c(person(given = \"David\",\n             family = \"Robinson\",\n             role = \"aut\",\n             email = \"admiral.david@gmail.com\"),\n      person(given = \"Alex\",\n             family = \"Hayes\",\n             role = c(\"aut\", \"cre\"),\n             email = \"alexpghayes@gmail.com\",\n             comment = c(ORCID = \"0000-0002-4985-5160\")),\n      person(given = \"Simon\",\n             family = \"Couch\",\n             role = \"aut\",\n             email = \"simonpatrickcouch@gmail.com\"),\n      person(given = \"Indrajeet\",\n             family = \"Patil\",\n             role = \"ctb\",\n             email = \"patilindrajeet.science@gmail.com\",\n             comment = c(ORCID = \"0000-0003-1995-6531\")),\n      person(given = \"Derek\",\n             family = \"Chiu\",\n             role = \"ctb\",\n             email = \"dchiu@bccrc.ca\"),\n      person(given = \"Matthieu\",\n             family = \"Gomez\",\n             role = \"ctb\",\n             email = \"mattg@princeton.edu\"),\n      person(given = \"Boris\",\n             family = \"Demeshev\",\n             role = \"ctb\",\n             email = \"boris.demeshev@gmail.com\"),\n      person(given = \"Dieter\",\n             family = \"Menne\",\n             role = \"ctb\",\n             email = \"dieter.menne@menne-biomed.de\"),\n      person(given = \"Benjamin\",\n             family = \"Nutter\",\n             role = \"ctb\",\n             email = \"nutter@battelle.org\"),\n      person(given = \"Luke\",\n             family = \"Johnston\",\n             role = \"ctb\",\n             email = \"luke.johnston@mail.utoronto.ca\"),\n      person(given = \"Ben\",\n             family = \"Bolker\",\n             role = \"ctb\",\n             email = \"bolker@mcmaster.ca\"),\n      person(given = \"Francois\",\n             family = \"Briatte\",\n             role = \"ctb\",\n             email = \"f.briatte@gmail.com\"),\n      person(given = \"Jeffrey\",\n             family = \"Arnold\",\n             role = \"ctb\",\n             email = \"jeffrey.arnold@gmail.com\"),\n      person(given = \"Jonah\",\n             family = \"Gabry\",\n             role = \"ctb\",\n             email = \"jsg2201@columbia.edu\"),\n      person(given = \"Luciano\",\n             family = \"Selzer\",\n             role = \"ctb\",\n             email = \"luciano.selzer@gmail.com\"),\n      person(given = \"Gavin\",\n             family = \"Simpson\",\n             role = \"ctb\",\n             email = \"ucfagls@gmail.com\"),\n      person(given = \"Jens\",\n             family = \"Preussner\",\n             role = \"ctb\",\n             email = \" jens.preussner@mpi-bn.mpg.de\"),\n      person(given = \"Jay\",\n             family = \"Hesselberth\",\n             role = \"ctb\",\n             email = \"jay.hesselberth@gmail.com\"),\n      person(given = \"Hadley\",\n             family = \"Wickham\",\n             role = \"ctb\",\n             email = \"hadley@rstudio.com\"),\n      person(given = \"Matthew\",\n             family = \"Lincoln\",\n             role = \"ctb\",\n             email = \"matthew.d.lincoln@gmail.com\"),\n      person(given = \"Alessandro\",\n             family = \"Gasparini\",\n             role = \"ctb\",\n             email = \"ag475@leicester.ac.uk\"),\n      person(given = \"Lukasz\",\n             family = \"Komsta\",\n             role = \"ctb\",\n             email = \"lukasz.komsta@umlub.pl\"),\n      person(given = \"Frederick\",\n             family = \"Novometsky\",\n             role = \"ctb\"),\n      person(given = \"Wilson\",\n             family = \"Freitas\",\n             role = \"ctb\"),\n      person(given = \"Michelle\",\n             family = \"Evans\",\n             role = \"ctb\"),\n      person(given = \"Jason Cory\",\n             family = \"Brunson\",\n             role = \"ctb\",\n             email = \"cornelioid@gmail.com\"),\n      person(given = \"Simon\",\n             family = \"Jackson\",\n             role = \"ctb\",\n             email = \"drsimonjackson@gmail.com\"),\n      person(given = \"Ben\",\n             family = \"Whalley\",\n             role = \"ctb\",\n             email = \"ben.whalley@plymouth.ac.uk\"),\n      person(given = \"Karissa\",\n             family = \"Whiting\",\n             role = \"ctb\",\n             email = \"karissa.whiting@gmail.com\"),\n      person(given = \"Yves\",\n             family = \"Rosseel\",\n             role = \"ctb\",\n             email = \"yrosseel@gmail.com\"),\n      person(given = \"Michael\",\n             family = \"Kuehn\",\n             role = \"ctb\",\n             email = \"mkuehn10@gmail.com\"),\n      person(given = \"Jorge\",\n             family = \"Cimentada\",\n             role = \"ctb\",\n             email = \"cimentadaj@gmail.com\"),\n      person(given = \"Erle\",\n             family = \"Holgersen\",\n             role = \"ctb\",\n             email = \"erle.holgersen@gmail.com\"),\n      person(given = \"Karl\",\n             family = \"Dunkle Werner\",\n             role = \"ctb\",\n             comment = c(ORCID = \"0000-0003-0523-7309\")),\n      person(given = \"Ethan\",\n             family = \"Christensen\",\n             role = \"ctb\",\n             email = \"christensen.ej@gmail.com\"),\n      person(given = \"Steven\",\n             family = \"Pav\",\n             role = \"ctb\",\n             email = \"shabbychef@gmail.com\"),\n      person(given = \"Paul\",\n             family = \"PJ\",\n             role = \"ctb\",\n             email = \"pjpaul.stephens@gmail.com\"),\n      person(given = \"Ben\",\n             family = \"Schneider\",\n             role = \"ctb\",\n             email = \"benjamin.julius.schneider@gmail.com\"),\n      person(given = \"Patrick\",\n             family = \"Kennedy\",\n             role = \"ctb\",\n             email = \"pkqstr@protonmail.com\"),\n      person(given = \"Lily\",\n             family = \"Medina\",\n             role = \"ctb\",\n             email = \"lilymiru@gmail.com\"),\n      person(given = \"Brian\",\n             family = \"Fannin\",\n             role = \"ctb\",\n             email = \"captain@pirategrunt.com\"),\n      person(given = \"Jason\",\n             family = \"Muhlenkamp\",\n             role = \"ctb\",\n             email = \"jason.muhlenkamp@gmail.com\"),\n      person(given = \"Matt\",\n             family = \"Lehman\",\n             role = \"ctb\"),\n      person(given = \"Bill\",\n             family = \"Denney\",\n             role = \"ctb\",\n             email = \"wdenney@humanpredictions.com\",\n             comment = c(ORCID = \"0000-0002-5759-428X\")),\n      person(given = \"Nic\",\n             family = \"Crane\",\n             role = \"ctb\"),\n      person(given = \"Andrew\",\n             family = \"Bates\",\n             role = \"ctb\"),\n      person(given = \"Vincent\",\n             family = \"Arel-Bundock\",\n             role = \"ctb\",\n             email = \"vincent.arel-bundock@umontreal.ca\",\n             comment = c(ORCID = \"0000-0003-2042-7063\")),\n      person(given = \"Hideaki\",\n             family = \"Hayashi\",\n             role = \"ctb\"),\n      person(given = \"Luis\",\n             family = \"Tobalina\",\n             role = \"ctb\"),\n      person(given = \"Annie\",\n             family = \"Wang\",\n             role = \"ctb\",\n             email = \"anniewang.uc@gmail.com\"),\n      person(given = \"Wei Yang\",\n             family = \"Tham\",\n             role = \"ctb\",\n             email = \"weiyang.tham@gmail.com\"),\n      person(given = \"Clara\",\n             family = \"Wang\",\n             role = \"ctb\",\n             email = \"clara.wang.94@gmail.com\"),\n      person(given = \"Abby\",\n             family = \"Smith\",\n             role = \"ctb\",\n             email = \"als1@u.northwestern.edu\",\n             comment = c(ORCID = \"0000-0002-3207-0375\")),\n      person(given = \"Jasper\",\n             family = \"Cooper\",\n             role = \"ctb\",\n             email = \"jaspercooper@gmail.com\",\n             comment = c(ORCID = \"0000-0002-8639-3188\")),\n      person(given = \"E Auden\",\n             family = \"Krauska\",\n             role = \"ctb\",\n             email = \"krauskae@gmail.com\",\n             comment = c(ORCID = \"0000-0002-1466-5850\")),\n      person(given = \"Alex\",\n             family = \"Wang\",\n             role = \"ctb\",\n             email = \"x249wang@uwaterloo.ca\"),\n      person(given = \"Malcolm\",\n             family = \"Barrett\",\n             role = \"ctb\",\n             email = \"malcolmbarrett@gmail.com\",\n             comment = c(ORCID = \"0000-0003-0299-5825\")),\n      person(given = \"Charles\",\n             family = \"Gray\",\n             role = \"ctb\",\n             email = \"charlestigray@gmail.com\",\n             comment = c(ORCID = \"0000-0002-9978-011X\")),\n      person(given = \"Jared\",\n             family = \"Wilber\",\n             role = \"ctb\"),\n      person(given = \"Vilmantas\",\n             family = \"Gegzna\",\n             role = \"ctb\",\n             email = \"GegznaV@gmail.com\",\n             comment = c(ORCID = \"0000-0002-9500-5167\")),\n      person(given = \"Eduard\",\n             family = \"Szoecs\",\n             role = \"ctb\",\n             email = \"eduardszoecs@gmail.com\"),\n      person(given = \"Frederik\",\n             family = \"Aust\",\n             role = \"ctb\",\n             email = \"frederik.aust@uni-koeln.de\",\n             comment = c(ORCID = \"0000-0003-4900-788X\")),\n      person(given = \"Angus\",\n             family = \"Moore\",\n             role = \"ctb\",\n             email = \"angusmoore9@gmail.com\"),\n      person(given = \"Nick\",\n             family = \"Williams\",\n             role = \"ctb\",\n             email = \"ntwilliams.personal@gmail.com\"),\n      person(given = \"Marius\",\n             family = \"Barth\",\n             role = \"ctb\",\n             email = \"marius.barth.uni.koeln@gmail.com\",\n             comment = c(ORCID = \"0000-0002-3421-6665\")),\n      person(given = \"Bruna\",\n             family = \"Wundervald\",\n             role = \"ctb\",\n             email = \"brunadaviesw@gmail.com\",\n             comment = c(ORCID = \"0000-0001-8163-220X\")),\n      person(given = \"Joyce\",\n             family = \"Cahoon\",\n             role = \"ctb\",\n             email = \"joyceyu48@gmail.com\",\n             comment = c(ORCID = \"0000-0001-7217-4702\")),\n      person(given = \"Grant\",\n             family = \"McDermott\",\n             role = \"ctb\",\n             email = \"grantmcd@uoregon.edu\",\n             comment = c(ORCID = \"0000-0001-7883-8573\")),\n      person(given = \"Kevin\",\n             family = \"Zarca\",\n             role = \"ctb\",\n             email = \"kevin.zarca@gmail.com\"),\n      person(given = \"Shiro\",\n             family = \"Kuriwaki\",\n             role = \"ctb\",\n             email = \"shirokuriwaki@gmail.com\",\n             comment = c(ORCID = \"0000-0002-5687-2647\")),\n      person(given = \"Lukas\",\n             family = \"Wallrich\",\n             role = \"ctb\",\n             email = \"lukas.wallrich@gmail.com\",\n             comment = c(ORCID = \"0000-0003-2121-5177\")),\n      person(given = \"James\",\n             family = \"Martherus\",\n             role = \"ctb\",\n             email = \"james@martherus.com\",\n             comment = c(ORCID = \"0000-0002-8285-3300\")),\n      person(given = \"Chuliang\",\n             family = \"Xiao\",\n             role = \"ctb\",\n             email = \"cxiao@umich.edu\",\n             comment = c(ORCID = \"0000-0002-8466-9398\")),\n      person(given = \"Joseph\",\n             family = \"Larmarange\",\n             role = \"ctb\",\n             email = \"joseph@larmarange.net\"),\n      person(given = \"Max\",\n             family = \"Kuhn\",\n             role = \"ctb\",\n             email = \"max@rstudio.com\"),\n      person(given = \"Michal\",\n             family = \"Bojanowski\",\n             role = \"ctb\",\n             email = \"michal2992@gmail.com\"),\n      person(given = \"Hakon\",\n             family = \"Malmedal\",\n             role = \"ctb\",\n             email = \"hmalmedal@gmail.com\"),\n      person(given = \"Clara\",\n             family = \"Wang\",\n             role = \"ctb\"),\n      person(given = \"Sergio\",\n             family = \"Oller\",\n             role = \"ctb\",\n             email = \"sergioller@gmail.com\"),\n      person(given = \"Luke\",\n             family = \"Sonnet\",\n             role = \"ctb\",\n             email = \"luke.sonnet@gmail.com\"),\n      person(given = \"Jim\",\n             family = \"Hester\",\n             role = \"ctb\",\n             email = \"jim.hester@rstudio.com\"),\n      person(given = \"Cory\",\n             family = \"Brunson\",\n             role = \"ctb\",\n             email = \"cornelioid@gmail.com\"),\n      person(given = \"Ben\",\n             family = \"Schneider\",\n             role = \"ctb\",\n             email = \"benjamin.julius.schneider@gmail.com\"),\n      person(given = \"Bernie\",\n             family = \"Gray\",\n             role = \"ctb\",\n             email = \"bfgray3@gmail.com\",\n             comment = c(ORCID = \"0000-0001-9190-6032\")),\n      person(given = \"Mara\",\n             family = \"Averick\",\n             role = \"ctb\",\n             email = \"mara@rstudio.com\"),\n      person(given = \"Aaron\",\n             family = \"Jacobs\",\n             role = \"ctb\",\n             email = \"atheriel@gmail.com\"),\n      person(given = \"Andreas\",\n             family = \"Bender\",\n             role = \"ctb\",\n             email = \"bender.at.R@gmail.com\"),\n      person(given = \"Sven\",\n             family = \"Templer\",\n             role = \"ctb\",\n             email = \"sven.templer@gmail.com\"),\n      person(given = \"Paul-Christian\",\n             family = \"Buerkner\",\n             role = \"ctb\",\n             email = \"paul.buerkner@gmail.com\"),\n      person(given = \"Matthew\",\n             family = \"Kay\",\n             role = \"ctb\",\n             email = \"mjskay@umich.edu\"),\n      person(given = \"Erwan\",\n             family = \"Le Pennec\",\n             role = \"ctb\",\n             email = \"lepennec@gmail.com\"),\n      person(given = \"Johan\",\n             family = \"Junkka\",\n             role = \"ctb\",\n             email = \"johan.junkka@umu.se\"),\n      person(given = \"Hao\",\n             family = \"Zhu\",\n             role = \"ctb\",\n             email = \"haozhu233@gmail.com\"),\n      person(given = \"Benjamin\",\n             family = \"Soltoff\",\n             role = \"ctb\",\n             email = \"soltoffbc@uchicago.edu\"),\n      person(given = \"Zoe\",\n             family = \"Wilkinson Saldana\",\n             role = \"ctb\",\n             email = \"zoewsaldana@gmail.com\"),\n      person(given = \"Tyler\",\n             family = \"Littlefield\",\n             role = \"ctb\",\n             email = \"tylurp1@gmail.com\"),\n      person(given = \"Charles T.\",\n             family = \"Gray\",\n             role = \"ctb\",\n             email = \"charlestigray@gmail.com\"),\n      person(given = \"Shabbh E.\",\n             family = \"Banks\",\n             role = \"ctb\"),\n      person(given = \"Serina\",\n             family = \"Robinson\",\n             role = \"ctb\",\n             email = \"robi0916@umn.edu\"),\n      person(given = \"Roger\",\n             family = \"Bivand\",\n             role = \"ctb\",\n             email = \"Roger.Bivand@nhh.no\"),\n      person(given = \"Riinu\",\n             family = \"Ots\",\n             role = \"ctb\",\n             email = \"riinuots@gmail.com\"),\n      person(given = \"Nicholas\",\n             family = \"Williams\",\n             role = \"ctb\",\n             email = \"ntwilliams.personal@gmail.com\"),\n      person(given = \"Nina\",\n             family = \"Jakobsen\",\n             role = \"ctb\"),\n      person(given = \"Michael\",\n             family = \"Weylandt\",\n             role = \"ctb\",\n             email = \"michael.weylandt@gmail.com\"),\n      person(given = \"Lisa\",\n             family = \"Lendway\",\n             role = \"ctb\",\n             email = \"llendway@macalester.edu\"),\n      person(given = \"Karl\",\n             family = \"Hailperin\",\n             role = \"ctb\",\n             email = \"khailper@gmail.com\"),\n      person(given = \"Josue\",\n             family = \"Rodriguez\",\n             role = \"ctb\",\n             email = \"jerrodriguez@ucdavis.edu\"),\n      person(given = \"Jenny\",\n             family = \"Bryan\",\n             role = \"ctb\",\n             email = \"jenny@rstudio.com\"),\n      person(given = \"Chris\",\n             family = \"Jarvis\",\n             role = \"ctb\",\n             email = \"Christopher1.jarvis@gmail.com\"),\n      person(given = \"Greg\",\n             family = \"Macfarlane\",\n             role = \"ctb\",\n             email = \"gregmacfarlane@gmail.com\"),\n      person(given = \"Brian\",\n             family = \"Mannakee\",\n             role = \"ctb\",\n             email = \"bmannakee@gmail.com\"),\n      person(given = \"Drew\",\n             family = \"Tyre\",\n             role = \"ctb\",\n             email = \"atyre2@unl.edu\"),\n      person(given = \"Shreyas\",\n             family = \"Singh\",\n             role = \"ctb\",\n             email = \"shreyas.singh.298@gmail.com\"),\n      person(given = \"Laurens\",\n             family = \"Geffert\",\n             role = \"ctb\",\n             email = \"laurensgeffert@gmail.com\"),\n      person(given = \"Hong\",\n             family = \"Ooi\",\n             role = \"ctb\",\n             email = \"hongooi@microsoft.com\"),\n      person(given = \"Henrik\",\n             family = \"Bengtsson\",\n             role = \"ctb\",\n             email = \"henrikb@braju.com\"),\n      person(given = \"Eduard\",\n             family = \"Szocs\",\n             role = \"ctb\",\n             email = \"eduardszoecs@gmail.com\"),\n      person(given = \"David\",\n             family = \"Hugh-Jones\",\n             role = \"ctb\",\n             email = \"davidhughjones@gmail.com\"),\n      person(given = \"Matthieu\",\n             family = \"Stigler\",\n             role = \"ctb\",\n             email = \"Matthieu.Stigler@gmail.com\"),\n      person(given = \"Hugo\",\n             family = \"Tavares\",\n             role = \"ctb\",\n             email = \"hm533@cam.ac.uk\",\n             comment = c(ORCID = \"0000-0001-9373-2726\")),\n\t    person(given = \"R. Willem\",\n             family = \"Vervoort\",\n             role = \"ctb\",\n             email = \"Willemvervoort@gmail.com\"),\n         person(given = \"Brenton M.\",\n             family = \"Wiernik\",\n             role = \"ctb\",\n             email = \"brenton@wiernik.org\"))",
         "Description": "Summarizes key information about statistical\n    objects in tidy tibbles. This makes it easy to report results, create\n    plots and consistently work with large numbers of models at once.\n    Broom provides three verbs that each provide different types of\n    information about a model. tidy() summarizes information about model\n    components such as coefficients of a regression. glance() reports\n    information about an entire model, such as goodness of fit measures\n    like AIC and BIC. augment() adds information about individual\n    observations to a dataset, such as fitted values or influence\n    measures.",
         "License": "MIT + file LICENSE",
-        "URL": "http://github.com/tidyverse/broom",
-        "BugReports": "http://github.com/tidyverse/broom/issues",
+        "URL": "https://broom.tidymodels.org/, https://github.com/tidymodels/broom",
+        "BugReports": "https://github.com/tidymodels/broom/issues",
         "Depends": "R (>= 3.1)",
-        "Imports": "backports, dplyr, generics (>= 0.0.2), methods, nlme, purrr,\nreshape2, stringr, tibble (>= 3.0.0), tidyr",
-        "Suggests": "AER, akima, AUC, bbmle, betareg, biglm, binGroup, boot, brms,\nbtergm, car, caret, coda, covr, e1071, emmeans, ergm, gam (>=\n1.15), gamlss, gamlss.data, gamlss.dist, geepack, ggplot2,\nglmnet, gmm, Hmisc, irlba, Kendall, knitr, ks, Lahman, lavaan,\nlfe, lme4, lmodel2, lmtest, lsmeans, maps, maptools, MASS,\nMatrix, mclust, mgcv, muhaz, multcomp, network, nnet, orcutt\n(>= 2.2), ordinal, plm, plyr, poLCA, psych, quantreg, rgeos,\nrmarkdown, rsample, rstan, rstanarm, sp, speedglm,\nstatnet.common, survey, survival, testthat, tseries, zoo",
+        "Imports": "backports, dplyr (>= 1.0.0), ellipsis, generics (>= 0.0.2),\nglue, methods, purrr, rlang, stringr, tibble (>= 3.0.0), tidyr\n(>= 1.0.0)",
+        "Suggests": "AER, akima, AUC, bbmle, betareg, biglm, binGroup, boot,\nbtergm, car, caret, cluster, coda, covr, drc, e1071, emmeans,\nepiR, ergm (>= 3.10.4), fixest (>= 0.5.0), gam (>= 1.15),\ngamlss, gamlss.data, gamlss.dist, gee, geepack, ggplot2,\nglmnet, glmnetUtils, gmm, Hmisc, irlba, joineRML, Kendall,\nknitr, ks, Lahman, lavaan, leaps, lfe, lm.beta, lme4, lmodel2,\nlmtest (>= 0.9.38), lsmeans, maps, maptools, margins, MASS,\nMatrix, mclogit, mclust, mediation, metafor, mfx, mgcv, mlogit,\nmodeldata, modeltests, muhaz, multcomp, network, nnet, orcutt\n(>= 2.2), ordinal, plm, poLCA, psych, quantreg, rgeos,\nrmarkdown, robust, robustbase, rsample, sandwich, sp, spdep,\nspatialreg, speedglm, spelling, survey, survival, systemfit,\ntestthat (>= 2.1.0), tseries, zoo",
         "VignetteBuilder": "knitr",
         "Encoding": "UTF-8",
         "LazyData": "true",
-        "RoxygenNote": "7.1.0",
+        "RoxygenNote": "7.1.1",
+        "Language": "en-US",
+        "Collate": "'aaa-documentation-helper.R' 'null-and-default-tidiers.R'\n'aer-tidiers.R' 'auc-tidiers.R' 'base-tidiers.R'\n'bbmle-tidiers.R' 'betareg-tidiers.R' 'biglm-tidiers.R'\n'bingroup-tidiers.R' 'boot-tidiers.R' 'broom-package.R'\n'broom.R' 'btergm-tidiers.R' 'car-tidiers.R' 'caret-tidiers.R'\n'data-frame-tidiers.R' 'deprecated-0-7-0.R'\n'deprecated-0-7-1.R' 'drc-tidiers.R' 'emmeans-tidiers.R'\n'epiR-tidiers.R' 'ergm-tidiers.R' 'fixest-tidiers.R'\n'gam-tidiers.R' 'gee.R' 'geepack-tidiers.R'\n'glmnet-cv-glmnet-tidiers.R' 'glmnet-glmnet-tidiers.R'\n'gmm-tidiers.R' 'hmisc-tidiers.R' 'joinerml-tidiers.R'\n'kendall-tidiers.R' 'ks-tidiers.R' 'lavaan-tidiers.R' 'leaps.R'\n'lfe-tidiers.R' 'list-irlba.R' 'list-optim-tidiers.R'\n'list-svd-tidiers.R' 'list-tidiers.R' 'list-xyz-tidiers.R'\n'lm-beta-tidiers.R' 'lmodel2-tidiers.R' 'lmtest-tidiers.R'\n'maps-tidiers.R' 'margins-tidiers.R' 'mass-fitdistr-tidiers.R'\n'mass-polr-tidiers.R' 'mass-ridgelm-tidiers.R'\n'stats-lm-tidiers.R' 'mass-rlm-tidiers.R' 'matrix-tidiers.R'\n'mclogit.R' 'mclust-tidiers.R' 'mediate-tidiers.R'\n'mfx-tidiers.R' 'mgcv-tidiers.R' 'mlogit-tidiers.R'\n'muhaz-tidiers.R' 'multcomp-tidiers.R' 'nnet-tidiers.R'\n'nobs.R' 'orcutt-tidiers.R' 'ordinal-clm-tidiers.R'\n'ordinal-clmm-tidiers.R' 'pam-tidiers.R' 'plm-tidiers.R'\n'polca-tidiers.R' 'psych-tidiers.R' 'stats-nls-tidiers.R'\n'quantreg-nlrq-tidiers.R' 'quantreg-rq-tidiers.R'\n'quantreg-rqs-tidiers.R' 'rma-tidiers.R'\n'robust-glmrob-tidiers.R' 'robust-lmrob-tidiers.R'\n'robustbase-glmrob-tidiers.R' 'robustbase-lmrob-tidiers.R'\n'scam-tidiers.R' 'sp-tidiers.R' 'spdep-tidiers.R'\n'speedglm-speedglm-tidiers.R' 'speedglm-speedlm-tidiers.R'\n'stats-anova-tidiers.R' 'stats-arima-tidiers.R'\n'stats-decompose-tidiers.R' 'stats-factanal-tidiers.R'\n'stats-glm-tidiers.R' 'stats-htest-tidiers.R'\n'stats-kmeans-tidiers.R' 'stats-loess-tidiers.R'\n'stats-mlm-tidiers.R' 'stats-prcomp-tidiers.R'\n'stats-smooth.spline-tidiers.R' 'stats-time-series-tidiers.R'\n'survey-tidiers.R' 'survival-aareg-tidiers.R'\n'survival-cch-tidiers.R' 'survival-coxph-tidiers.R'\n'survival-pyears-tidiers.R' 'survival-survdiff-tidiers.R'\n'survival-survexp-tidiers.R' 'survival-survfit-tidiers.R'\n'survival-survreg-tidiers.R' 'systemfit-tidiers.R'\n'tseries-tidiers.R' 'utilities.R' 'zoo-tidiers.R' 'zzz.R'",
         "NeedsCompilation": "no",
-        "Packaged": "2020-04-20 16:06:03 UTC; alex",
-        "Author": "David Robinson [aut],\n  Alex Hayes [aut, cre] (<https://orcid.org/0000-0002-4985-5160>),\n  Matthieu Gomez [ctb],\n  Boris Demeshev [ctb],\n  Dieter Menne [ctb],\n  Benjamin Nutter [ctb],\n  Luke Johnston [ctb],\n  Ben Bolker [ctb],\n  Francois Briatte [ctb],\n  Jeffrey Arnold [ctb],\n  Jonah Gabry [ctb],\n  Luciano Selzer [ctb],\n  Gavin Simpson [ctb],\n  Jens Preussner [ctb],\n  Jay Hesselberth [ctb],\n  Hadley Wickham [ctb],\n  Matthew Lincoln [ctb],\n  Alessandro Gasparini [ctb],\n  Lukasz Komsta [ctb],\n  Frederick Novometsky [ctb],\n  Wilson Freitas [ctb],\n  Michelle Evans [ctb],\n  Jason Cory Brunson [ctb],\n  Simon Jackson [ctb],\n  Ben Whalley [ctb],\n  Michael Kuehn [ctb],\n  Jorge Cimentada [ctb],\n  Erle Holgersen [ctb],\n  Karl Dunkle Werner [ctb]",
+        "Packaged": "2020-09-29 03:51:07 UTC; simonpcouch",
+        "Author": "David Robinson [aut],\n  Alex Hayes [aut, cre] (<https://orcid.org/0000-0002-4985-5160>),\n  Simon Couch [aut],\n  Indrajeet Patil [ctb] (<https://orcid.org/0000-0003-1995-6531>),\n  Derek Chiu [ctb],\n  Matthieu Gomez [ctb],\n  Boris Demeshev [ctb],\n  Dieter Menne [ctb],\n  Benjamin Nutter [ctb],\n  Luke Johnston [ctb],\n  Ben Bolker [ctb],\n  Francois Briatte [ctb],\n  Jeffrey Arnold [ctb],\n  Jonah Gabry [ctb],\n  Luciano Selzer [ctb],\n  Gavin Simpson [ctb],\n  Jens Preussner [ctb],\n  Jay Hesselberth [ctb],\n  Hadley Wickham [ctb],\n  Matthew Lincoln [ctb],\n  Alessandro Gasparini [ctb],\n  Lukasz Komsta [ctb],\n  Frederick Novometsky [ctb],\n  Wilson Freitas [ctb],\n  Michelle Evans [ctb],\n  Jason Cory Brunson [ctb],\n  Simon Jackson [ctb],\n  Ben Whalley [ctb],\n  Karissa Whiting [ctb],\n  Yves Rosseel [ctb],\n  Michael Kuehn [ctb],\n  Jorge Cimentada [ctb],\n  Erle Holgersen [ctb],\n  Karl Dunkle Werner [ctb] (<https://orcid.org/0000-0003-0523-7309>),\n  Ethan Christensen [ctb],\n  Steven Pav [ctb],\n  Paul PJ [ctb],\n  Ben Schneider [ctb],\n  Patrick Kennedy [ctb],\n  Lily Medina [ctb],\n  Brian Fannin [ctb],\n  Jason Muhlenkamp [ctb],\n  Matt Lehman [ctb],\n  Bill Denney [ctb] (<https://orcid.org/0000-0002-5759-428X>),\n  Nic Crane [ctb],\n  Andrew Bates [ctb],\n  Vincent Arel-Bundock [ctb] (<https://orcid.org/0000-0003-2042-7063>),\n  Hideaki Hayashi [ctb],\n  Luis Tobalina [ctb],\n  Annie Wang [ctb],\n  Wei Yang Tham [ctb],\n  Clara Wang [ctb],\n  Abby Smith [ctb] (<https://orcid.org/0000-0002-3207-0375>),\n  Jasper Cooper [ctb] (<https://orcid.org/0000-0002-8639-3188>),\n  E Auden Krauska [ctb] (<https://orcid.org/0000-0002-1466-5850>),\n  Alex Wang [ctb],\n  Malcolm Barrett [ctb] (<https://orcid.org/0000-0003-0299-5825>),\n  Charles Gray [ctb] (<https://orcid.org/0000-0002-9978-011X>),\n  Jared Wilber [ctb],\n  Vilmantas Gegzna [ctb] (<https://orcid.org/0000-0002-9500-5167>),\n  Eduard Szoecs [ctb],\n  Frederik Aust [ctb] (<https://orcid.org/0000-0003-4900-788X>),\n  Angus Moore [ctb],\n  Nick Williams [ctb],\n  Marius Barth [ctb] (<https://orcid.org/0000-0002-3421-6665>),\n  Bruna Wundervald [ctb] (<https://orcid.org/0000-0001-8163-220X>),\n  Joyce Cahoon [ctb] (<https://orcid.org/0000-0001-7217-4702>),\n  Grant McDermott [ctb] (<https://orcid.org/0000-0001-7883-8573>),\n  Kevin Zarca [ctb],\n  Shiro Kuriwaki [ctb] (<https://orcid.org/0000-0002-5687-2647>),\n  Lukas Wallrich [ctb] (<https://orcid.org/0000-0003-2121-5177>),\n  James Martherus [ctb] (<https://orcid.org/0000-0002-8285-3300>),\n  Chuliang Xiao [ctb] (<https://orcid.org/0000-0002-8466-9398>),\n  Joseph Larmarange [ctb],\n  Max Kuhn [ctb],\n  Michal Bojanowski [ctb],\n  Hakon Malmedal [ctb],\n  Clara Wang [ctb],\n  Sergio Oller [ctb],\n  Luke Sonnet [ctb],\n  Jim Hester [ctb],\n  Cory Brunson [ctb],\n  Ben Schneider [ctb],\n  Bernie Gray [ctb] (<https://orcid.org/0000-0001-9190-6032>),\n  Mara Averick [ctb],\n  Aaron Jacobs [ctb],\n  Andreas Bender [ctb],\n  Sven Templer [ctb],\n  Paul-Christian Buerkner [ctb],\n  Matthew Kay [ctb],\n  Erwan Le Pennec [ctb],\n  Johan Junkka [ctb],\n  Hao Zhu [ctb],\n  Benjamin Soltoff [ctb],\n  Zoe Wilkinson Saldana [ctb],\n  Tyler Littlefield [ctb],\n  Charles T. Gray [ctb],\n  Shabbh E. Banks [ctb],\n  Serina Robinson [ctb],\n  Roger Bivand [ctb],\n  Riinu Ots [ctb],\n  Nicholas Williams [ctb],\n  Nina Jakobsen [ctb],\n  Michael Weylandt [ctb],\n  Lisa Lendway [ctb],\n  Karl Hailperin [ctb],\n  Josue Rodriguez [ctb],\n  Jenny Bryan [ctb],\n  Chris Jarvis [ctb],\n  Greg Macfarlane [ctb],\n  Brian Mannakee [ctb],\n  Drew Tyre [ctb],\n  Shreyas Singh [ctb],\n  Laurens Geffert [ctb],\n  Hong Ooi [ctb],\n  Henrik Bengtsson [ctb],\n  Eduard Szocs [ctb],\n  David Hugh-Jones [ctb],\n  Matthieu Stigler [ctb],\n  Hugo Tavares [ctb] (<https://orcid.org/0000-0001-9373-2726>),\n  R. Willem Vervoort [ctb],\n  Brenton M. Wiernik [ctb]",
         "Maintainer": "Alex Hayes <alexpghayes@gmail.com>",
         "Repository": "CRAN",
-        "Date/Publication": "2020-04-20 17:10:02 UTC",
-        "Built": "R 4.0.0; ; 2020-07-07 13:51:21 UTC; unix"
+        "Date/Publication": "2020-10-02 00:00:06 UTC",
+        "Built": "R 4.0.0; ; 2020-10-05 18:01:22 UTC; unix"
       }
     },
     "callr": {
@@ -507,25 +509,25 @@
       "description": {
         "Package": "callr",
         "Title": "Call R from R",
-        "Version": "3.4.3",
+        "Version": "3.4.4",
         "Authors@R": "c(\n    person(\"Gábor\", \"Csárdi\", role = c(\"aut\", \"cre\", \"cph\"),\n           email = \"csardi.gabor@gmail.com\",\n\t   comment = c(ORCID = \"0000-0001-7098-9676\")),\n    person(\"Winston\", \"Chang\", role = \"aut\"),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\")),\n    person(\"Mango Solutions\", role  = c(\"cph\", \"fnd\")))",
         "Description": "It is sometimes useful to perform a computation in a\n    separate R process, without affecting the current R process at all.\n    This packages does exactly that.",
         "License": "MIT + file LICENSE",
         "LazyData": "true",
         "URL": "https://github.com/r-lib/callr#readme",
         "BugReports": "https://github.com/r-lib/callr/issues",
-        "RoxygenNote": "7.0.2",
+        "RoxygenNote": "7.1.1",
         "Imports": "processx (>= 3.4.0), R6, utils",
         "Suggests": "cliapp, covr, crayon, fansi, pingr, ps, rprojroot, spelling,\ntestthat, tibble, withr",
         "Encoding": "UTF-8",
         "Language": "en-US",
         "NeedsCompilation": "no",
-        "Packaged": "2020-03-26 14:35:17 UTC; gaborcsardi",
+        "Packaged": "2020-09-07 20:20:04 UTC; gaborcsardi",
         "Author": "Gábor Csárdi [aut, cre, cph] (<https://orcid.org/0000-0001-7098-9676>),\n  Winston Chang [aut],\n  RStudio [cph, fnd],\n  Mango Solutions [cph, fnd]",
         "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
         "Repository": "CRAN",
-        "Date/Publication": "2020-03-28 05:50:17 UTC",
-        "Built": "R 4.0.0; ; 2020-07-07 13:43:30 UTC; unix"
+        "Date/Publication": "2020-09-07 21:20:03 UTC",
+        "Built": "R 4.0.0; ; 2020-10-08 10:57:20 UTC; unix"
       }
     },
     "cellranger": {
@@ -685,6 +687,39 @@
         "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 14:02:01 UTC; unix"
       }
     },
+    "cpp11": {
+      "Source": "CRAN",
+      "Repository": "https://www.stats.bris.ac.uk/R/",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "cpp11",
+        "Title": "A C++11 Interface for R's C Interface",
+        "Version": "0.2.2",
+        "Authors@R": "\n    c(person(given = \"Jim\",\n             family = \"Hester\",\n             role = c(\"aut\", \"cre\"),\n             email = \"jim.hester@rstudio.com\",\n             comment = c(ORCID = \"0000-0002-2739-7082\")),\n      person(given = \"Romain\",\n             family = \"François\",\n             role = \"ctb\"),\n      person(given = \"Benjamin\",\n             family = \"Kietzman\",\n             role = \"ctb\"),\n      person(given = \"RStudio\",\n             role = c(\"cph\", \"fnd\")))",
+        "Description": "Provides a header only, C++11 interface to R's C\n    interface.  Compared to other approaches 'cpp11' strives to be safe\n    against long jumps from the C API as well as C++ exceptions, conform\n    to normal R function semantics and supports interaction with 'ALTREP'\n    vectors.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://github.com/r-lib/cpp11",
+        "BugReports": "https://github.com/r-lib/cpp11/issues",
+        "Suggests": "bench, brio, callr, cli, covr, decor, desc, ggplot2, glue,\nknitr, lobstr, mockery, progress, rmarkdown, scales, testthat,\ntibble, utils, vctrs, withr",
+        "VignetteBuilder": "knitr",
+        "Config/testthat/edition": "3",
+        "Config/Needs/cpp11/cpp_register": "brio, cli, decor, desc, glue, tibble,\nvctrs",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "RoxygenNote": "7.1.1",
+        "SystemRequirements": "C++11",
+        "NeedsCompilation": "no",
+        "Packaged": "2020-09-30 20:00:35 UTC; jhester",
+        "Author": "Jim Hester [aut, cre] (<https://orcid.org/0000-0002-2739-7082>),\n  Romain François [ctb],\n  Benjamin Kietzman [ctb],\n  RStudio [cph, fnd]",
+        "Maintainer": "Jim Hester <jim.hester@rstudio.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2020-10-01 07:40:06 UTC",
+        "Built": "R 4.0.0; ; 2020-10-05 17:58:41 UTC; unix"
+      }
+    },
     "crayon": {
       "Source": "CRAN",
       "Repository": "https://www.stats.bris.ac.uk/R/",
@@ -778,37 +813,6 @@
         "Repository": "CRAN",
         "Date/Publication": "2019-12-02 14:00:03 UTC",
         "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:38:38 UTC; unix"
-      }
-    },
-    "data.table": {
-      "Source": "CRAN",
-      "Repository": "https://www.stats.bris.ac.uk/R/",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
-      "description": {
-        "Package": "data.table",
-        "Version": "1.12.8",
-        "Title": "Extension of `data.frame`",
-        "Authors@R": "c(\n  person(\"Matt\",\"Dowle\",           role=c(\"aut\",\"cre\"), email=\"mattjdowle@gmail.com\"),\n  person(\"Arun\",\"Srinivasan\",      role=\"aut\",          email=\"arunkumar.sriniv@gmail.com\"),\n  person(\"Jan\",\"Gorecki\",          role=\"ctb\"),\n  person(\"Michael\",\"Chirico\",      role=\"ctb\"),\n  person(\"Pasha\",\"Stetsenko\",      role=\"ctb\"),\n  person(\"Tom\",\"Short\",            role=\"ctb\"),\n  person(\"Steve\",\"Lianoglou\",      role=\"ctb\"),\n  person(\"Eduard\",\"Antonyan\",      role=\"ctb\"),\n  person(\"Markus\",\"Bonsch\",        role=\"ctb\"),\n  person(\"Hugh\",\"Parsonage\",       role=\"ctb\"),\n  person(\"Scott\",\"Ritchie\",        role=\"ctb\"),\n  person(\"Kun\",\"Ren\",              role=\"ctb\"),\n  person(\"Xianying\",\"Tan\",         role=\"ctb\"),\n  person(\"Rick\",\"Saporta\",         role=\"ctb\"),\n  person(\"Otto\",\"Seiskari\",        role=\"ctb\"),\n  person(\"Xianghui\",\"Dong\",        role=\"ctb\"),\n  person(\"Michel\",\"Lang\",          role=\"ctb\"),\n  person(\"Watal\",\"Iwasaki\",        role=\"ctb\"),\n  person(\"Seth\",\"Wenchel\",         role=\"ctb\"),\n  person(\"Karl\",\"Broman\",          role=\"ctb\"),\n  person(\"Tobias\",\"Schmidt\",       role=\"ctb\"),\n  person(\"David\",\"Arenburg\",       role=\"ctb\"),\n  person(\"Ethan\",\"Smith\",          role=\"ctb\"),\n  person(\"Francois\",\"Cocquemas\",   role=\"ctb\"),\n  person(\"Matthieu\",\"Gomez\",       role=\"ctb\"),\n  person(\"Philippe\",\"Chataignon\",  role=\"ctb\"),\n  person(\"Declan\",\"Groves\",        role=\"ctb\"),\n  person(\"Daniel\",\"Possenriede\",   role=\"ctb\"),\n  person(\"Felipe\",\"Parages\",       role=\"ctb\"),\n  person(\"Denes\",\"Toth\",           role=\"ctb\"),\n  person(\"Mus\",\"Yaramaz-David\",    role=\"ctb\"),\n  person(\"Ayappan\",\"Perumal\",      role=\"ctb\"),\n  person(\"James\",\"Sams\",           role=\"ctb\"),\n  person(\"Martin\",\"Morgan\",        role=\"ctb\"),\n  person(\"Michael\",\"Quinn\",        role=\"ctb\"),\n  person(\"@javrucebo\",\"\",          role=\"ctb\"),\n  person(\"@marc-outins\",\"\",        role=\"ctb\"),\n  person(\"Roy\",\"Storey\",           role=\"ctb\"),\n  person(\"Manish\",\"Saraswat\",      role=\"ctb\"),\n  person(\"Morgan\",\"Jacob\",         role=\"ctb\"),\n  person(\"Michael\",\"Schubmehl\",    role=\"ctb\"),\n  person(\"Davis\",\"Vaughan\",        role=\"ctb\"))",
-        "Depends": "R (>= 3.1.0)",
-        "Imports": "methods",
-        "Suggests": "bit64, curl, R.utils, knitr, xts, nanotime, zoo, yaml",
-        "SystemRequirements": "zlib",
-        "Description": "Fast aggregation of large data (e.g. 100GB in RAM), fast ordered joins, fast add/modify/delete of columns by group using no copies at all, list columns, friendly and fast character-separated-value read/write. Offers a natural and flexible syntax, for faster development.",
-        "License": "MPL-2.0 | file LICENSE",
-        "URL": "http://r-datatable.com, https://Rdatatable.gitlab.io/data.table,\nhttps://github.com/Rdatatable/data.table",
-        "BugReports": "https://github.com/Rdatatable/data.table/issues",
-        "VignetteBuilder": "knitr",
-        "ByteCompile": "TRUE",
-        "NeedsCompilation": "yes",
-        "Packaged": "2019-12-08 22:28:25.859 UTC; mdowle",
-        "Author": "Matt Dowle [aut, cre],\n  Arun Srinivasan [aut],\n  Jan Gorecki [ctb],\n  Michael Chirico [ctb],\n  Pasha Stetsenko [ctb],\n  Tom Short [ctb],\n  Steve Lianoglou [ctb],\n  Eduard Antonyan [ctb],\n  Markus Bonsch [ctb],\n  Hugh Parsonage [ctb],\n  Scott Ritchie [ctb],\n  Kun Ren [ctb],\n  Xianying Tan [ctb],\n  Rick Saporta [ctb],\n  Otto Seiskari [ctb],\n  Xianghui Dong [ctb],\n  Michel Lang [ctb],\n  Watal Iwasaki [ctb],\n  Seth Wenchel [ctb],\n  Karl Broman [ctb],\n  Tobias Schmidt [ctb],\n  David Arenburg [ctb],\n  Ethan Smith [ctb],\n  Francois Cocquemas [ctb],\n  Matthieu Gomez [ctb],\n  Philippe Chataignon [ctb],\n  Declan Groves [ctb],\n  Daniel Possenriede [ctb],\n  Felipe Parages [ctb],\n  Denes Toth [ctb],\n  Mus Yaramaz-David [ctb],\n  Ayappan Perumal [ctb],\n  James Sams [ctb],\n  Martin Morgan [ctb],\n  Michael Quinn [ctb],\n  @javrucebo [ctb],\n  @marc-outins [ctb],\n  Roy Storey [ctb],\n  Manish Saraswat [ctb],\n  Morgan Jacob [ctb],\n  Michael Schubmehl [ctb],\n  Davis Vaughan [ctb]",
-        "Maintainer": "Matt Dowle <mattjdowle@gmail.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2019-12-09 10:30:10 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:36:10 UTC; unix"
       }
     },
     "dbplyr": {
@@ -919,8 +923,8 @@
         "Type": "Package",
         "Package": "dplyr",
         "Title": "A Grammar of Data Manipulation",
-        "Version": "1.0.1",
-        "Authors@R": "\n    c(person(given = \"Hadley\",\n             family = \"Wickham\",\n             role = c(\"aut\", \"cre\"),\n             email = \"hadley@rstudio.com\",\n             comment = c(ORCID = \"0000-0003-4757-117X\")),\n      person(given = \"Romain\",\n             family = \"François\",\n             role = \"aut\",\n             comment = c(ORCID = \"0000-0002-2444-4226\")),\n      person(given = \"Lionel\",\n             family = \"Henry\",\n             role = \"aut\"),\n      person(given = \"Kirill\",\n             family = \"Müller\",\n             role = \"aut\",\n             comment = c(ORCID = \"0000-0002-1416-3412\")),\n      person(given = \"RStudio\",\n             role = c(\"cph\", \"fnd\")))",
+        "Version": "1.0.2",
+        "Authors@R": "\n    c(person(given = \"Hadley\",\n             family = \"Wickham\",\n             role = c(\"aut\", \"cre\"),\n             email = \"hadley@rstudio.com\",\n             comment = c(ORCID = \"0000-0003-4757-117X\")),\n      person(given = \"Romain\",\n             family = \"François\",\n             role = \"aut\",\n             comment = c(ORCID = \"0000-0002-2444-4226\")),\n      person(given = \"Lionel\",\n             family = \"\n             Henry\",\n             role = \"aut\"),\n      person(given = \"Kirill\",\n             family = \"Müller\",\n             role = \"aut\",\n             comment = c(ORCID = \"0000-0002-1416-3412\")),\n      person(given = \"RStudio\",\n             role = c(\"cph\", \"fnd\")))",
         "Description": "A fast, consistent tool for working with data frame\n    like objects, both in memory and out of memory.",
         "License": "MIT + file LICENSE",
         "URL": "https://dplyr.tidyverse.org, https://github.com/tidyverse/dplyr",
@@ -933,12 +937,12 @@
         "LazyData": "yes",
         "RoxygenNote": "7.1.1",
         "NeedsCompilation": "yes",
-        "Packaged": "2020-07-22 12:06:49 UTC; romainfrancois",
+        "Packaged": "2020-08-12 15:16:36 UTC; romainfrancois",
         "Author": "Hadley Wickham [aut, cre] (<https://orcid.org/0000-0003-4757-117X>),\n  Romain François [aut] (<https://orcid.org/0000-0002-2444-4226>),\n  Lionel Henry [aut],\n  Kirill Müller [aut] (<https://orcid.org/0000-0002-1416-3412>),\n  RStudio [cph, fnd]",
         "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
         "Repository": "CRAN",
-        "Date/Publication": "2020-07-31 07:00:05 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-08-03 09:18:30 UTC; unix"
+        "Date/Publication": "2020-08-18 12:30:02 UTC",
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-08-24 11:05:22 UTC; unix"
       }
     },
     "ellipsis": {
@@ -970,6 +974,38 @@
         "Repository": "CRAN",
         "Date/Publication": "2020-05-15 14:10:06 UTC",
         "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:41:55 UTC; unix"
+      }
+    },
+    "emojifont": {
+      "Source": "CRAN",
+      "Repository": "https://www.stats.bris.ac.uk/R/",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "emojifont",
+        "Type": "Package",
+        "Title": "Emoji and Font Awesome in Graphics",
+        "Version": "0.5.3",
+        "Authors@R": "c(\n    person(given = \"Guangchuang\", family = \"Yu\",      email = \"guangchuangyu@gmail.com\", role  = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-6485-8781\")),\n    person(given = \"Claus Thorn\", family = \"Ekstrøm\", email = \"ekstrom@sund.ku.dk\",      role  = c(\"ctb\"))\n    )",
+        "Maintainer": "Guangchuang Yu <guangchuangyu@gmail.com>",
+        "Description": "An implementation of using emoji and fontawesome for using in both\n    base and 'ggplot2' graphics.",
+        "Depends": "R (>= 3.4.0)",
+        "Imports": "ggplot2, proto, showtext, sysfonts, utils",
+        "Suggests": "colorspace, knitr, prettydoc",
+        "VignetteBuilder": "knitr",
+        "License": "Artistic-2.0",
+        "Encoding": "UTF-8",
+        "URL": "https://guangchuangyu.github.io/emojifont",
+        "BugReports": "https://github.com/GuangchuangYu/emojifont/issues",
+        "Packaged": "2019-12-12 03:21:24 UTC; ygc",
+        "RoxygenNote": "7.0.2",
+        "NeedsCompilation": "no",
+        "Author": "Guangchuang Yu [aut, cre] (<https://orcid.org/0000-0002-6485-8781>),\n  Claus Thorn Ekstrøm [ctb]",
+        "Repository": "CRAN",
+        "Date/Publication": "2019-12-12 07:00:03 UTC",
+        "Built": "R 4.0.0; ; 2020-10-27 13:46:27 UTC; unix"
       }
     },
     "evaluate": {
@@ -1318,27 +1354,27 @@
       "description": {
         "Package": "glue",
         "Title": "Interpreted String Literals",
-        "Version": "1.4.1",
+        "Version": "1.4.2",
         "Authors@R": "person(\"Jim\", \"Hester\", email = \"james.f.hester@gmail.com\", role = c(\"aut\", \"cre\"))",
         "Description": "An implementation of interpreted string literals, inspired by\n  Python's Literal String Interpolation <https://www.python.org/dev/peps/pep-0498/> and Docstrings\n  <https://www.python.org/dev/peps/pep-0257/> and Julia's Triple-Quoted String Literals\n  <https://docs.julialang.org/en/v1.3/manual/strings/#Triple-Quoted-String-Literals-1>.",
-        "Depends": "R (>= 3.1)",
+        "Depends": "R (>= 3.2)",
         "Imports": "methods",
         "Suggests": "testthat, covr, magrittr, crayon, knitr, rmarkdown, DBI,\nRSQLite, R.utils, forcats, microbenchmark, rprintf, stringr,\nggplot2, dplyr, withr, vctrs (>= 0.3.0)",
         "License": "MIT + file LICENSE",
         "Encoding": "UTF-8",
         "LazyData": "true",
-        "RoxygenNote": "7.1.0",
+        "RoxygenNote": "7.1.1",
         "URL": "https://github.com/tidyverse/glue, https://glue.tidyverse.org/",
         "BugReports": "https://github.com/tidyverse/glue/issues",
         "VignetteBuilder": "knitr",
         "ByteCompile": "true",
         "NeedsCompilation": "yes",
-        "Packaged": "2020-05-13 14:58:42 UTC; jhester",
+        "Packaged": "2020-08-26 17:24:06 UTC; jhester",
         "Author": "Jim Hester [aut, cre]",
         "Maintainer": "Jim Hester <james.f.hester@gmail.com>",
         "Repository": "CRAN",
-        "Date/Publication": "2020-05-13 16:10:07 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-16 13:55:25 UTC; unix"
+        "Date/Publication": "2020-08-27 13:50:06 UTC",
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-08-28 14:48:12 UTC; unix"
       }
     },
     "gridExtra": {
@@ -1433,34 +1469,6 @@
         "Repository": "CRAN",
         "Date/Publication": "2020-06-01 15:00:06 UTC",
         "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:49:55 UTC; unix"
-      }
-    },
-    "hexbin": {
-      "Source": "CRAN",
-      "Repository": "https://www.stats.bris.ac.uk/R/",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
-      "description": {
-        "Package": "hexbin",
-        "Version": "1.28.1",
-        "Title": "Hexagonal Binning Routines",
-        "Author": "Dan Carr <dcarr@voxel.galaxy.gmu.edu>, ported by Nicholas\n        Lewin-Koh and Martin Maechler <maechler@stat.math.ethz.ch>,\n\t\tcontains copies of lattice functions written by Deepayan Sarkar \n\t\t<deepayan.sarkar@r-project.org>",
-        "Maintainer": "Edzer Pebesma <edzer.pebesma@uni-muenster.de>",
-        "Depends": "R (>= 2.0.1), methods",
-        "Imports": "lattice, grid, graphics, grDevices, stats, utils",
-        "Suggests": "marray, affy, Biobase, limma, knitr",
-        "Description": "Binning and plotting functions for hexagonal bins.",
-        "Collate": "lattice.R BTC.R BTY.R grid.hexagons.R grid.hexlegend.R hbox.R\nhdiffplot.R hexbinList.R hexbinplot.R hexbin.s4.R hexpanel.R\nhexplom.R hexPlotMA.R hexutil.R hexViewport.R HO.R LINGRAY.R\nLOCS.R MAG.R RB.R smoothHexbin.R",
-        "License": "GPL-2",
-        "VignetteBuilder": "knitr",
-        "NeedsCompilation": "yes",
-        "URL": "http://github.com/edzer/hexbin",
-        "Packaged": "2020-02-03 13:36:39 UTC; edzer",
-        "Repository": "CRAN",
-        "Date/Publication": "2020-02-03 16:20:02 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 16:02:29 UTC; unix"
       }
     },
     "highr": {
@@ -1602,24 +1610,24 @@
         "Package": "htmlwidgets",
         "Type": "Package",
         "Title": "HTML Widgets for R",
-        "Version": "1.5.1",
-        "Authors@R": "c(\n    person(\"Ramnath\", \"Vaidyanathan\", role = c(\"aut\", \"cph\")),\n    person(\"Yihui\", \"Xie\", role = c(\"aut\")),\n    person(\"JJ\", \"Allaire\", role = c(\"aut\")),\n    person(\"Joe\", \"Cheng\", role = c(\"aut\", \"cre\"), email = \"joe@rstudio.com\"),\n    person(\"Kenton\", \"Russell\", role = c(\"aut\", \"cph\")),\n    person(family = \"RStudio\", role = \"cph\")\n    )",
+        "Version": "1.5.2",
+        "Authors@R": "c(\n    person(\"Ramnath\", \"Vaidyanathan\", role = c(\"aut\", \"cph\")),\n    person(\"Yihui\", \"Xie\", role = c(\"aut\")),\n    person(\"JJ\", \"Allaire\", role = c(\"aut\")),\n    person(\"Joe\", \"Cheng\", role = c(\"aut\"), email = \"joe@rstudio.com\"),\n    person(\"Carson\", \"Sievert\", role = c(\"aut\", \"cre\"), email = \"carson@rstudio.com\", comment = c(ORCID = \"0000-0002-4958-2844\")),\n    person(\"Kenton\", \"Russell\", role = c(\"aut\", \"cph\")),\n    person(family = \"RStudio\", role = \"cph\")\n    )",
         "Description": "A framework for creating HTML widgets that render in various\n    contexts including the R console, 'R Markdown' documents, and 'Shiny'\n    web applications.",
         "License": "MIT + file LICENSE",
         "VignetteBuilder": "knitr",
         "Imports": "grDevices, htmltools (>= 0.3), jsonlite (>= 0.9.16), yaml",
-        "Suggests": "knitr (>= 1.8)",
+        "Suggests": "knitr (>= 1.8), rmarkdown",
         "Enhances": "shiny (>= 1.1)",
         "URL": "https://github.com/ramnathv/htmlwidgets",
         "BugReports": "https://github.com/ramnathv/htmlwidgets/issues",
-        "RoxygenNote": "6.1.1",
+        "RoxygenNote": "7.1.1",
         "NeedsCompilation": "no",
-        "Packaged": "2019-10-07 21:55:31 UTC; jcheng",
-        "Author": "Ramnath Vaidyanathan [aut, cph],\n  Yihui Xie [aut],\n  JJ Allaire [aut],\n  Joe Cheng [aut, cre],\n  Kenton Russell [aut, cph],\n  RStudio [cph]",
-        "Maintainer": "Joe Cheng <joe@rstudio.com>",
+        "Packaged": "2020-10-03 15:06:05 UTC; cpsievert",
+        "Author": "Ramnath Vaidyanathan [aut, cph],\n  Yihui Xie [aut],\n  JJ Allaire [aut],\n  Joe Cheng [aut],\n  Carson Sievert [aut, cre] (<https://orcid.org/0000-0002-4958-2844>),\n  Kenton Russell [aut, cph],\n  RStudio [cph]",
+        "Maintainer": "Carson Sievert <carson@rstudio.com>",
         "Repository": "CRAN",
-        "Date/Publication": "2019-10-08 08:40:02 UTC",
-        "Built": "R 4.0.0; ; 2020-07-07 14:51:35 UTC; unix"
+        "Date/Publication": "2020-10-03 22:00:02 UTC",
+        "Built": "R 4.0.0; ; 2020-10-08 10:47:37 UTC; unix"
       }
     },
     "httpuv": {
@@ -1798,25 +1806,25 @@
       "GithubSha1": null,
       "description": {
         "Package": "jsonlite",
-        "Version": "1.7.0",
-        "Title": "A Robust, High Performance JSON Parser and Generator for R",
+        "Version": "1.7.1",
+        "Title": "A Simple and Robust JSON Parser and Generator for R",
         "License": "MIT + file LICENSE",
-        "NeedsCompilation": "yes",
         "Depends": "methods",
         "Authors@R": "c(\n    person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroen@berkeley.edu\",\n      comment = c(ORCID = \"0000-0002-4035-0289\")),\n    person(\"Duncan\", \"Temple Lang\", role = \"ctb\"),\n    person(\"Lloyd\", \"Hilaiel\", role = \"cph\", comment=\"author of bundled libyajl\"))",
-        "URL": "https://arxiv.org/abs/1403.2805 (paper)\nhttps://jeroen.cran.dev/jsonlite (docs)",
-        "BugReports": "http://github.com/jeroen/jsonlite/issues",
+        "URL": "https://arxiv.org/abs/1403.2805 (paper)",
+        "BugReports": "https://github.com/jeroen/jsonlite/issues",
         "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
         "VignetteBuilder": "knitr, R.rsp",
-        "Description": "A fast JSON parser and generator optimized for statistical data\n    and the web. Started out as a fork of 'RJSONIO', but has been completely\n    rewritten in recent versions. The package offers flexible, robust, high\n    performance tools for working with JSON in R and is particularly powerful\n    for building pipelines and interacting with a web API. The implementation is\n    based on the mapping described in the vignette (Ooms, 2014). In addition to\n    converting JSON data from/to R objects, 'jsonlite' contains functions to\n    stream, validate, and prettify JSON data. The unit tests included with the\n    package verify that all edge cases are encoded and decoded consistently for\n    use with dynamic data in systems and applications.",
-        "Suggests": "httr, curl, plyr, testthat, knitr, rmarkdown, R.rsp, sf, sp",
+        "Description": "A reasonably fast JSON parser and generator, optimized for statistical \n    data and the web. Offers simple, flexible tools for working with JSON in R, and\n    is particularly powerful for building pipelines and interacting with a web API. \n    The implementation is based on the mapping described in the vignette (Ooms, 2014).\n    In addition to converting JSON data from/to R objects, 'jsonlite' contains \n    functions to stream, validate, and prettify JSON data. The unit tests included \n    with the package verify that all edge cases are encoded and decoded consistently \n    for use with dynamic data in systems and applications.",
+        "Suggests": "httr, curl, plyr, testthat, knitr, rmarkdown, R.rsp, sf",
         "RoxygenNote": "7.1.0",
         "Encoding": "UTF-8",
-        "Packaged": "2020-06-24 22:21:10 UTC; jeroen",
+        "NeedsCompilation": "yes",
+        "Packaged": "2020-09-05 10:16:12 UTC; jeroen",
         "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>),\n  Duncan Temple Lang [ctb],\n  Lloyd Hilaiel [cph] (author of bundled libyajl)",
         "Repository": "CRAN",
-        "Date/Publication": "2020-06-25 11:50:11 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:40:36 UTC; unix"
+        "Date/Publication": "2020-09-07 06:50:02 UTC",
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-10-05 17:58:52 UTC; unix"
       }
     },
     "knitr": {
@@ -1830,7 +1838,7 @@
         "Package": "knitr",
         "Type": "Package",
         "Title": "A General-Purpose Package for Dynamic Report Generation in R",
-        "Version": "1.29",
+        "Version": "1.30",
         "Authors@R": "c(\n    person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\")),\n    person(\"Adam\", \"Vogt\", role = \"ctb\"),\n    person(\"Alastair\", \"Andrew\", role = \"ctb\"),\n    person(\"Alex\", \"Zvoleff\", role = \"ctb\"),\n    person(\"Andre\", \"Simon\", role = \"ctb\", comment = \"the CSS files under inst/themes/ were derived from the Highlight package http://www.andre-simon.de\"),\n    person(\"Aron\", \"Atkins\", role = \"ctb\"),\n    person(\"Aaron\", \"Wolen\", role = \"ctb\"),\n    person(\"Ashley\", \"Manton\", role = \"ctb\"),\n    person(\"Atsushi\", \"Yasumoto\", role = \"ctb\", comment = c(ORCID = \"0000-0002-8335-495X\")),\n    person(\"Ben\", \"Baumer\", role = \"ctb\"),\n    person(\"Brian\", \"Diggs\", role = \"ctb\"),\n    person(\"Brian\", \"Zhang\", role = \"ctb\"),\n    person(\"Cassio\", \"Pereira\", role = \"ctb\"),\n    person(\"Christophe\", \"Dervieux\", role = \"ctb\"),\n    person(\"David\", \"Hugh-Jones\", role = \"ctb\"),\n    person(\"David\", \"Robinson\", role = \"ctb\"),\n    person(\"Doug\", \"Hemken\", role = \"ctb\"),\n    person(\"Duncan\", \"Murdoch\", role = \"ctb\"),\n    person(\"Elio\", \"Campitelli\", role = \"ctb\"),\n    person(\"Ellis\", \"Hughes\", role = \"ctb\"),\n    person(\"Emily\", \"Riederer\", role = \"ctb\"),\n    person(\"Fabian\", \"Hirschmann\", role = \"ctb\"),\n    person(\"Fitch\", \"Simeon\", role = \"ctb\"),\n    person(\"Forest\", \"Fang\", role = \"ctb\"),\n    person(c(\"Frank\", \"E\", \"Harrell\", \"Jr\"), role = \"ctb\", comment = \"the Sweavel package at inst/misc/Sweavel.sty\"),\n    person(\"Garrick\", \"Aden-Buie\", role = \"ctb\"),\n    person(\"Gregoire\", \"Detrez\", role = \"ctb\"),\n    person(\"Hadley\", \"Wickham\", role = \"ctb\"),\n    person(\"Hao\", \"Zhu\", role = \"ctb\"),\n    person(\"Heewon\", \"Jeon\", role = \"ctb\"),\n    person(\"Henrik\", \"Bengtsson\", role = \"ctb\"),\n    person(\"Hiroaki\", \"Yutani\", role = \"ctb\"),\n    person(\"Ian\", \"Lyttle\", role = \"ctb\"),\n    person(\"Hodges\", \"Daniel\", role = \"ctb\"),\n    person(\"Jake\", \"Burkhead\", role = \"ctb\"),\n    person(\"James\", \"Manton\", role = \"ctb\"),\n    person(\"Jared\", \"Lander\", role = \"ctb\"),\n    person(\"Jason\", \"Punyon\", role = \"ctb\"),\n    person(\"Javier\", \"Luraschi\", role = \"ctb\"),\n    person(\"Jeff\", \"Arnold\", role = \"ctb\"),\n    person(\"Jenny\", \"Bryan\", role = \"ctb\"),\n    person(\"Jeremy\", \"Ashkenas\", role = c(\"ctb\", \"cph\"), comment = \"the CSS file at inst/misc/docco-classic.css\"),\n    person(\"Jeremy\", \"Stephens\", role = \"ctb\"),\n    person(\"Jim\", \"Hester\", role = \"ctb\"),\n    person(\"Joe\", \"Cheng\", role = \"ctb\"),\n    person(\"Johannes\", \"Ranke\", role = \"ctb\"),\n    person(\"John\", \"Honaker\", role = \"ctb\"),\n    person(\"John\", \"Muschelli\", role = \"ctb\"),\n    person(\"Jonathan\", \"Keane\", role = \"ctb\"),\n    person(\"JJ\", \"Allaire\", role = \"ctb\"),\n    person(\"Johan\", \"Toloe\", role = \"ctb\"),\n    person(\"Jonathan\", \"Sidi\", role = \"ctb\"),\n    person(\"Joseph\", \"Larmarange\", role = \"ctb\"),\n    person(\"Julien\", \"Barnier\", role = \"ctb\"),\n    person(\"Kaiyin\", \"Zhong\", role = \"ctb\"),\n    person(\"Kamil\", \"Slowikowski\", role = \"ctb\"),\n    person(\"Karl\", \"Forner\", role = \"ctb\"),\n    person(c(\"Kevin\", \"K.\"), \"Smith\", role = \"ctb\"),\n    person(\"Kirill\", \"Mueller\", role = \"ctb\"),\n    person(\"Kohske\", \"Takahashi\", role = \"ctb\"),\n    person(\"Lorenz\", \"Walthert\", role = \"ctb\"),\n    person(\"Lucas\", \"Gallindo\", role = \"ctb\"),\n    person(\"Marius\", \"Hofert\", role = \"ctb\"),\n    person(\"Martin\", \"Modrák\", role = \"ctb\"),\n    person(\"Michael\", \"Chirico\", role = \"ctb\"),\n    person(\"Michael\", \"Friendly\", role = \"ctb\"),\n    person(\"Michal\", \"Bojanowski\", role = \"ctb\"),\n    person(\"Michel\", \"Kuhlmann\", role = \"ctb\"),\n    person(\"Miller\", \"Patrick\", role = \"ctb\"),\n    person(\"Nacho\", \"Caballero\", role = \"ctb\"),\n    person(\"Nick\", \"Salkowski\", role = \"ctb\"),\n    person(\"Niels Richard\", \"Hansen\", role = \"ctb\"),\n    person(\"Noam\", \"Ross\", role = \"ctb\"),\n    person(\"Obada\", \"Mahdi\", role = \"ctb\"),\n    person(\"Qiang\", \"Li\", role = \"ctb\"),\n    person(\"Ramnath\", \"Vaidyanathan\", role = \"ctb\"),\n    person(\"Richard\", \"Cotton\", role = \"ctb\"),\n    person(\"Robert\", \"Krzyzanowski\", role = \"ctb\"),\n    person(\"Romain\", \"Francois\", role = \"ctb\"),\n    person(\"Ruaridh\", \"Williamson\", role = \"ctb\"),\n    person(\"Scott\", \"Kostyshak\", role = \"ctb\"),\n    person(\"Sebastian\", \"Meyer\", role = \"ctb\"),\n    person(\"Sietse\", \"Brouwer\", role = \"ctb\"),\n    person(c(\"Simon\", \"de\"), \"Bernard\", role = \"ctb\"),\n    person(\"Sylvain\", \"Rousseau\", role = \"ctb\"),\n    person(\"Taiyun\", \"Wei\", role = \"ctb\"),\n    person(\"Thibaut\", \"Assus\", role = \"ctb\"),\n    person(\"Thibaut\", \"Lamadon\", role = \"ctb\"),\n    person(\"Thomas\", \"Leeper\", role = \"ctb\"),\n    person(\"Tim\", \"Mastny\", role = \"ctb\"),\n    person(\"Tom\", \"Torsney-Weir\", role = \"ctb\"),\n    person(\"Trevor\", \"Davis\", role = \"ctb\"),\n    person(\"Viktoras\", \"Veitas\", role = \"ctb\"),\n    person(\"Weicheng\", \"Zhu\", role = \"ctb\"),\n    person(\"Wush\", \"Wu\", role = \"ctb\"),\n    person(\"Zachary\", \"Foster\", role = \"ctb\")\n    )",
         "Description": "Provides a general-purpose tool for dynamic report generation in R\n    using Literate Programming techniques.",
         "Depends": "R (>= 3.2.3)",
@@ -1843,14 +1851,14 @@
         "VignetteBuilder": "knitr",
         "SystemRequirements": "Package vignettes based on R Markdown v2 or\nreStructuredText require Pandoc (http://pandoc.org). The\nfunction rst2pdf() require rst2pdf\n(https://github.com/rst2pdf/rst2pdf).",
         "Collate": "'block.R' 'cache.R' 'utils.R' 'citation.R' 'hooks-html.R'\n'plot.R' 'defaults.R' 'concordance.R' 'engine.R' 'highlight.R'\n'themes.R' 'header.R' 'hooks-asciidoc.R' 'hooks-chunk.R'\n'hooks-extra.R' 'hooks-latex.R' 'hooks-md.R' 'hooks-rst.R'\n'hooks-textile.R' 'hooks.R' 'output.R' 'package.R' 'pandoc.R'\n'params.R' 'parser.R' 'pattern.R' 'rocco.R' 'spin.R' 'table.R'\n'template.R' 'utils-conversion.R' 'utils-rd2html.R'\n'utils-sweave.R' 'utils-upload.R' 'utils-vignettes.R' 'zzz.R'",
-        "RoxygenNote": "7.1.0",
+        "RoxygenNote": "7.1.1",
         "NeedsCompilation": "no",
-        "Packaged": "2020-06-23 04:37:45 UTC; yihui",
+        "Packaged": "2020-09-22 05:11:07 UTC; yihui",
         "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>),\n  Adam Vogt [ctb],\n  Alastair Andrew [ctb],\n  Alex Zvoleff [ctb],\n  Andre Simon [ctb] (the CSS files under inst/themes/ were derived from\n    the Highlight package http://www.andre-simon.de),\n  Aron Atkins [ctb],\n  Aaron Wolen [ctb],\n  Ashley Manton [ctb],\n  Atsushi Yasumoto [ctb] (<https://orcid.org/0000-0002-8335-495X>),\n  Ben Baumer [ctb],\n  Brian Diggs [ctb],\n  Brian Zhang [ctb],\n  Cassio Pereira [ctb],\n  Christophe Dervieux [ctb],\n  David Hugh-Jones [ctb],\n  David Robinson [ctb],\n  Doug Hemken [ctb],\n  Duncan Murdoch [ctb],\n  Elio Campitelli [ctb],\n  Ellis Hughes [ctb],\n  Emily Riederer [ctb],\n  Fabian Hirschmann [ctb],\n  Fitch Simeon [ctb],\n  Forest Fang [ctb],\n  Frank E Harrell Jr [ctb] (the Sweavel package at inst/misc/Sweavel.sty),\n  Garrick Aden-Buie [ctb],\n  Gregoire Detrez [ctb],\n  Hadley Wickham [ctb],\n  Hao Zhu [ctb],\n  Heewon Jeon [ctb],\n  Henrik Bengtsson [ctb],\n  Hiroaki Yutani [ctb],\n  Ian Lyttle [ctb],\n  Hodges Daniel [ctb],\n  Jake Burkhead [ctb],\n  James Manton [ctb],\n  Jared Lander [ctb],\n  Jason Punyon [ctb],\n  Javier Luraschi [ctb],\n  Jeff Arnold [ctb],\n  Jenny Bryan [ctb],\n  Jeremy Ashkenas [ctb, cph] (the CSS file at\n    inst/misc/docco-classic.css),\n  Jeremy Stephens [ctb],\n  Jim Hester [ctb],\n  Joe Cheng [ctb],\n  Johannes Ranke [ctb],\n  John Honaker [ctb],\n  John Muschelli [ctb],\n  Jonathan Keane [ctb],\n  JJ Allaire [ctb],\n  Johan Toloe [ctb],\n  Jonathan Sidi [ctb],\n  Joseph Larmarange [ctb],\n  Julien Barnier [ctb],\n  Kaiyin Zhong [ctb],\n  Kamil Slowikowski [ctb],\n  Karl Forner [ctb],\n  Kevin K. Smith [ctb],\n  Kirill Mueller [ctb],\n  Kohske Takahashi [ctb],\n  Lorenz Walthert [ctb],\n  Lucas Gallindo [ctb],\n  Marius Hofert [ctb],\n  Martin Modrák [ctb],\n  Michael Chirico [ctb],\n  Michael Friendly [ctb],\n  Michal Bojanowski [ctb],\n  Michel Kuhlmann [ctb],\n  Miller Patrick [ctb],\n  Nacho Caballero [ctb],\n  Nick Salkowski [ctb],\n  Niels Richard Hansen [ctb],\n  Noam Ross [ctb],\n  Obada Mahdi [ctb],\n  Qiang Li [ctb],\n  Ramnath Vaidyanathan [ctb],\n  Richard Cotton [ctb],\n  Robert Krzyzanowski [ctb],\n  Romain Francois [ctb],\n  Ruaridh Williamson [ctb],\n  Scott Kostyshak [ctb],\n  Sebastian Meyer [ctb],\n  Sietse Brouwer [ctb],\n  Simon de Bernard [ctb],\n  Sylvain Rousseau [ctb],\n  Taiyun Wei [ctb],\n  Thibaut Assus [ctb],\n  Thibaut Lamadon [ctb],\n  Thomas Leeper [ctb],\n  Tim Mastny [ctb],\n  Tom Torsney-Weir [ctb],\n  Trevor Davis [ctb],\n  Viktoras Veitas [ctb],\n  Weicheng Zhu [ctb],\n  Wush Wu [ctb],\n  Zachary Foster [ctb]",
         "Maintainer": "Yihui Xie <xie@yihui.name>",
         "Repository": "CRAN",
-        "Date/Publication": "2020-06-23 06:20:05 UTC",
-        "Built": "R 4.0.0; ; 2020-07-07 13:42:41 UTC; unix"
+        "Date/Publication": "2020-09-22 16:30:03 UTC",
+        "Built": "R 4.0.0; ; 2020-09-24 09:05:33 UTC; unix"
       }
     },
     "labeling": {
@@ -2226,8 +2234,8 @@
       "GithubSha1": null,
       "description": {
         "Package": "nlme",
-        "Version": "3.1-148",
-        "Date": "2020-05-13",
+        "Version": "3.1-149",
+        "Date": "2020-08-21",
         "Priority": "recommended",
         "Title": "Linear and Nonlinear Mixed Effects Models",
         "Authors@R": "c(person(\"José\", \"Pinheiro\", role = \"aut\", comment = \"S version\"),\n             person(\"Douglas\", \"Bates\", role = \"aut\", comment = \"up to 2007\"),\n             person(\"Saikat\", \"DebRoy\", role = \"ctb\", comment = \"up to 2002\"),\n             person(\"Deepayan\", \"Sarkar\", role = \"ctb\", comment = \"up to 2005\"),\n             person(\"EISPACK authors\", role = \"ctb\", comment = \"src/rs.f\"),\n\t     person(\"Siem\", \"Heisterkamp\", role = \"ctb\", comment = \"Author fixed sigma\"),\n             person(\"Bert\", \"Van Willigen\",role = \"ctb\", comment = \"Programmer fixed sigma\"),\n\t     person(\"R-core\", email = \"R-core@R-project.org\",\n                    role = c(\"aut\", \"cre\")))",
@@ -2242,14 +2250,14 @@
         "License": "GPL (>= 2) | file LICENCE",
         "BugReports": "https://bugs.r-project.org",
         "MailingList": "R-help@r-project.org",
-        "URL": "https://svn.r-project.org/R-packages/trunk/nlme",
+        "URL": "https://svn.r-project.org/R-packages/trunk/nlme/",
         "NeedsCompilation": "yes",
-        "Packaged": "2020-05-13 08:42:56 UTC; maechler",
+        "Packaged": "2020-08-21 12:48:52 UTC; ripley",
         "Author": "José Pinheiro [aut] (S version),\n  Douglas Bates [aut] (up to 2007),\n  Saikat DebRoy [ctb] (up to 2002),\n  Deepayan Sarkar [ctb] (up to 2005),\n  EISPACK authors [ctb] (src/rs.f),\n  Siem Heisterkamp [ctb] (Author fixed sigma),\n  Bert Van Willigen [ctb] (Programmer fixed sigma),\n  R-core [aut, cre]",
         "Maintainer": "R-core <R-core@R-project.org>",
         "Repository": "CRAN",
-        "Date/Publication": "2020-05-24 00:40:02 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:37:46 UTC; unix"
+        "Date/Publication": "2020-08-23 05:23:49 UTC",
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-10-08 10:51:39 UTC; unix"
       }
     },
     "openssl": {
@@ -2263,7 +2271,7 @@
         "Package": "openssl",
         "Type": "Package",
         "Title": "Toolkit for Encryption, Signatures and Certificates Based on\nOpenSSL",
-        "Version": "1.4.2",
+        "Version": "1.4.3",
         "Authors@R": "c(person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroen@berkeley.edu\",\n    comment = c(ORCID = \"0000-0002-4035-0289\")),\n    person(\"Oliver\", \"Keyes\", role = \"ctb\"))",
         "Description": "Bindings to OpenSSL libssl and libcrypto, plus custom SSH key parsers.\n    Supports RSA, DSA and EC curves P-256, P-384, P-521, and curve25519. Cryptographic\n    signatures can either be created and verified manually or via x509 certificates. \n    AES can be used in cbc, ctr or gcm mode for symmetric encryption; RSA for asymmetric\n    (public key) encryption or EC for Diffie Hellman. High-level envelope functions \n    combine RSA and AES for encrypting arbitrary sized data. Other utilities include key\n    generators, hash functions (md5, sha1, sha256, etc), base64 encoder, a secure random\n    number generator, and 'bignum' math methods for manually performing crypto \n    calculations on large multibyte integers.",
         "License": "MIT + file LICENSE",
@@ -2276,12 +2284,12 @@
         "RoxygenNote": "7.1.1",
         "Encoding": "UTF-8",
         "NeedsCompilation": "yes",
-        "Packaged": "2020-06-27 13:18:44 UTC; jeroen",
+        "Packaged": "2020-09-18 10:34:40 UTC; jeroen",
         "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>),\n  Oliver Keyes [ctb]",
         "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
         "Repository": "CRAN",
-        "Date/Publication": "2020-06-27 15:00:02 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:43:21 UTC; unix"
+        "Date/Publication": "2020-09-18 12:00:02 UTC",
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-10-05 17:58:43 UTC; unix"
       }
     },
     "pillar": {
@@ -2324,25 +2332,25 @@
       "description": {
         "Package": "pkgbuild",
         "Title": "Find Tools Needed to Build R Packages",
-        "Version": "1.0.8",
+        "Version": "1.1.0",
         "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", role = \"aut\"),\n    person(\"Jim\", \"Hester\", , \"jim.hester@rstudio.com\", role = c(\"aut\", \"cre\")),\n    person(\"RStudio\", role = \"cph\")\n  )",
         "Description": "Provides functions used to build R packages. Locates compilers\n  needed to build R packages on various platforms and ensures the PATH is\n  configured appropriately so R can use them.",
         "Imports": "callr (>= 3.2.0), cli, crayon, desc, prettyunits, R6,\nrprojroot, withr (>= 2.1.2)",
-        "Suggests": "Rcpp, testthat, covr",
+        "Suggests": "Rcpp, cpp11, testthat, covr",
         "License": "GPL-3",
         "Encoding": "UTF-8",
         "LazyData": "true",
-        "RoxygenNote": "6.1.1",
+        "RoxygenNote": "7.1.1",
         "URL": "https://github.com/r-lib/pkgbuild",
         "BugReports": "https://github.com/r-lib/pkgbuild/issues",
         "Depends": "R (>= 3.1)",
         "NeedsCompilation": "no",
-        "Packaged": "2020-05-06 19:57:03 UTC; jhester",
+        "Packaged": "2020-07-13 15:26:18 UTC; jhester",
         "Author": "Hadley Wickham [aut],\n  Jim Hester [aut, cre],\n  RStudio [cph]",
         "Maintainer": "Jim Hester <jim.hester@rstudio.com>",
         "Repository": "CRAN",
-        "Date/Publication": "2020-05-07 08:40:13 UTC",
-        "Built": "R 4.0.0; ; 2020-07-07 13:43:46 UTC; unix"
+        "Date/Publication": "2020-07-13 17:30:02 UTC",
+        "Built": "R 4.0.0; ; 2020-10-08 10:57:29 UTC; unix"
       }
     },
     "pkgconfig": {
@@ -2401,69 +2409,6 @@
         "Repository": "CRAN",
         "Date/Publication": "2020-05-29 05:10:08 UTC",
         "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:44:09 UTC; unix"
-      }
-    },
-    "plotly": {
-      "Source": "CRAN",
-      "Repository": "https://www.stats.bris.ac.uk/R/",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
-      "description": {
-        "Package": "plotly",
-        "Title": "Create Interactive Web Graphics via 'plotly.js'",
-        "Version": "4.9.2.1",
-        "Authors@R": "c(person(\"Carson\", \"Sievert\", role = c(\"aut\", \"cre\"),\n    email = \"cpsievert1@gmail.com\", comment = c(ORCID = \"0000-0002-4958-2844\")),\n    person(\"Chris\", \"Parmer\", role = \"aut\",\n    email = \"chris@plot.ly\"),\n    person(\"Toby\", \"Hocking\", role = \"aut\",\n    email = \"tdhock5@gmail.com\"),\n    person(\"Scott\", \"Chamberlain\", role = \"aut\",\n    email = \"myrmecocystus@gmail.com\"),\n    person(\"Karthik\", \"Ram\", role = \"aut\",\n    email = \"karthik.ram@gmail.com\"),\n    person(\"Marianne\", \"Corvellec\", role = \"aut\",\n    email = \"marianne.corvellec@igdore.org\", comment = c(ORCID = \"0000-0002-1994-3581\")),\n    person(\"Pedro\", \"Despouy\", role = \"aut\",\n    email = \"pedro@plot.ly\"),\n    person(\"Plotly Technologies Inc.\", role = \"cph\"))",
-        "License": "MIT + file LICENSE",
-        "Description": "Create interactive web graphics from 'ggplot2' graphs and/or a custom interface to the (MIT-licensed) JavaScript library 'plotly.js' inspired by the grammar of graphics.",
-        "URL": "https://plotly-r.com, https://github.com/ropensci/plotly#readme,\nhttps://plot.ly/r",
-        "BugReports": "https://github.com/ropensci/plotly/issues",
-        "Depends": "R (>= 3.2.0), ggplot2 (>= 3.0.0)",
-        "Imports": "tools, scales, httr, jsonlite (>= 1.6), magrittr, digest,\nviridisLite, base64enc, htmltools (>= 0.3.6), htmlwidgets (>=\n1.3), tidyr, hexbin, RColorBrewer, dplyr, tibble, lazyeval (>=\n0.2.0), rlang, crosstalk, purrr, data.table, promises",
-        "Suggests": "MASS, maps, ggthemes, GGally, testthat, knitr, devtools,\nshiny (>= 1.1.0), shinytest (>= 1.3.0), curl, rmarkdown,\nvdiffr, Cairo, broom, webshot, listviewer, dendextend, sf,\nmaptools, rgeos, png, IRdisplay, processx, plotlyGeoAssets,\nforcats",
-        "LazyData": "true",
-        "RoxygenNote": "7.1.0",
-        "Encoding": "UTF-8",
-        "NeedsCompilation": "no",
-        "Packaged": "2020-04-04 18:46:43 UTC; cpsievert",
-        "Author": "Carson Sievert [aut, cre] (<https://orcid.org/0000-0002-4958-2844>),\n  Chris Parmer [aut],\n  Toby Hocking [aut],\n  Scott Chamberlain [aut],\n  Karthik Ram [aut],\n  Marianne Corvellec [aut] (<https://orcid.org/0000-0002-1994-3581>),\n  Pedro Despouy [aut],\n  Plotly Technologies Inc. [cph]",
-        "Maintainer": "Carson Sievert <cpsievert1@gmail.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2020-04-04 19:50:02 UTC",
-        "Built": "R 4.0.0; ; 2020-07-07 16:02:52 UTC; unix"
-      }
-    },
-    "plyr": {
-      "Source": "CRAN",
-      "Repository": "https://www.stats.bris.ac.uk/R/",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
-      "description": {
-        "Package": "plyr",
-        "Title": "Tools for Splitting, Applying and Combining Data",
-        "Version": "1.8.6",
-        "Authors@R": "\n    person(given = \"Hadley\",\n           family = \"Wickham\",\n           role = c(\"aut\", \"cre\"),\n           email = \"hadley@rstudio.com\")",
-        "Description": "A set of tools that solves a common set of\n    problems: you need to break a big problem down into manageable pieces,\n    operate on each piece and then put all the pieces back together.  For\n    example, you might want to fit a model to each spatial location or\n    time point in your study, summarise data by panels or collapse\n    high-dimensional arrays to simpler summary statistics. The development\n    of 'plyr' has been generously supported by 'Becton Dickinson'.",
-        "License": "MIT + file LICENSE",
-        "URL": "http://had.co.nz/plyr, https://github.com/hadley/plyr",
-        "BugReports": "https://github.com/hadley/plyr/issues",
-        "Depends": "R (>= 3.1.0)",
-        "Imports": "Rcpp (>= 0.11.0)",
-        "Suggests": "abind, covr, doParallel, foreach, iterators, itertools,\ntcltk, testthat",
-        "LinkingTo": "Rcpp",
-        "Encoding": "UTF-8",
-        "LazyData": "true",
-        "RoxygenNote": "7.0.2",
-        "NeedsCompilation": "yes",
-        "Packaged": "2020-03-02 23:46:56 UTC; hadley",
-        "Author": "Hadley Wickham [aut, cre]",
-        "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2020-03-03 14:40:02 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:41:18 UTC; unix"
       }
     },
     "praise": {
@@ -2531,7 +2476,7 @@
       "description": {
         "Package": "processx",
         "Title": "Execute and Control System Processes",
-        "Version": "3.4.3",
+        "Version": "3.4.4",
         "Authors@R": "c(\n    person(\"Gábor\", \"Csárdi\", role = c(\"aut\", \"cre\", \"cph\"),\n           email = \"csardi.gabor@gmail.com\",\n\t   comment = c(ORCID = \"0000-0001-7098-9676\")),\n    person(\"Winston\", \"Chang\", role = \"aut\"),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\")),\n    person(\"Mango Solutions\", role  = c(\"cph\", \"fnd\")))",
         "Description": "Tools to run system processes in the background.\n    It can check if a background process is running; wait on a background\n    process to finish; get the exit status of finished processes; kill\n    background processes. It can read the standard output and error of\n    the processes, using non-blocking connections. 'processx' can poll\n    a process for standard output or error, with a timeout. It can also\n    poll several processes at once.",
         "License": "MIT + file LICENSE",
@@ -2543,12 +2488,12 @@
         "Suggests": "callr (>= 3.2.0), codetools, covr, crayon, curl, debugme,\nparallel, testthat, withr",
         "Encoding": "UTF-8",
         "NeedsCompilation": "yes",
-        "Packaged": "2020-07-05 12:57:04 UTC; gaborcsardi",
+        "Packaged": "2020-09-03 12:21:42 UTC; gaborcsardi",
         "Author": "Gábor Csárdi [aut, cre, cph] (<https://orcid.org/0000-0001-7098-9676>),\n  Winston Chang [aut],\n  RStudio [cph, fnd],\n  Mango Solutions [cph, fnd]",
         "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
         "Repository": "CRAN",
-        "Date/Publication": "2020-07-05 13:40:08 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:41:37 UTC; unix"
+        "Date/Publication": "2020-09-03 13:00:03 UTC",
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-10-08 10:55:20 UTC; unix"
       }
     },
     "progress": {
@@ -2610,7 +2555,34 @@
         "Maintainer": "Joe Cheng <joe@rstudio.com>",
         "Repository": "CRAN",
         "Date/Publication": "2020-06-09 21:50:02 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 14:51:58 UTC; unix"
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-10-29 15:32:49 UTC; unix"
+      }
+    },
+    "proto": {
+      "Source": "CRAN",
+      "Repository": "https://www.stats.bris.ac.uk/R/",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "proto",
+        "Version": "1.0.0",
+        "Title": "Prototype Object-Based Programming",
+        "Description": "An object oriented system using object-based, also\n\tcalled prototype-based, rather than class-based object oriented ideas.",
+        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", \"cre\"),\n    person(\"Gabor\", \"Grothendieck\", , \"ggrothendieck@gmail.com\", \"aut\"),\n    person(\"Louis\", \"Kates\", role = \"aut\"),\n    person(\"Thomas\", \"Petzoldt\", role = \"aut\")\n  )",
+        "License": "GPL-2",
+        "URL": "https://github.com/hadley/proto",
+        "BugReports": "https://github.com/hadley/proto/issues",
+        "Suggests": "testthat, covr",
+        "RoxygenNote": "5.0.1.9000",
+        "NeedsCompilation": "no",
+        "Packaged": "2016-10-28 22:08:08 UTC; hadley",
+        "Author": "Hadley Wickham [cre],\n  Gabor Grothendieck [aut],\n  Louis Kates [aut],\n  Thomas Petzoldt [aut]",
+        "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2016-10-29 00:23:07",
+        "Built": "R 4.0.0; ; 2020-10-27 13:46:19 UTC; unix"
       }
     },
     "ps": {
@@ -2622,7 +2594,7 @@
       "GithubSha1": null,
       "description": {
         "Package": "ps",
-        "Version": "1.3.3",
+        "Version": "1.3.4",
         "Title": "List, Query, Manipulate System Processes",
         "Description": "List, query and manipulate all system processes, on 'Windows',\n    'Linux' and 'macOS'.",
         "Authors@R": "c(\n    person(\"Jay\", \"Loden\", role = \"aut\"),\n    person(\"Dave\", \"Daeschler\", role = \"aut\"),\n    person(\"Giampaolo\", \"Rodola'\", role = \"aut\"),\n    person(\"Gábor\", \"Csárdi\", , \"csardi.gabor@gmail.com\", c(\"aut\", \"cre\")),\n    person(\"RStudio\", role = \"cph\"))",
@@ -2636,12 +2608,12 @@
         "RoxygenNote": "7.0.2.9000",
         "Biarch": "true",
         "NeedsCompilation": "yes",
-        "Packaged": "2020-05-07 21:14:24 UTC; gaborcsardi",
+        "Packaged": "2020-08-11 10:42:55 UTC; gaborcsardi",
         "Author": "Jay Loden [aut],\n  Dave Daeschler [aut],\n  Giampaolo Rodola' [aut],\n  Gábor Csárdi [aut, cre],\n  RStudio [cph]",
         "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2020-05-08 08:50:02 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:37:07 UTC; unix"
+        "Repository": "RSPM",
+        "Date/Publication": "2020-08-11 14:30:02 UTC",
+        "Built": "R 4.0.2; x86_64-pc-linux-gnu; 2020-08-13 10:26:40 UTC; unix"
       }
     },
     "purrr": {
@@ -2720,25 +2692,25 @@
         "Package": "reactable",
         "Type": "Package",
         "Title": "Interactive Data Tables Based on 'React Table'",
-        "Version": "0.2.0",
+        "Version": "0.2.3",
         "Authors@R": "c(\n    person(\"Greg\", \"Lin\", email = \"glin@glin.io\", role = c(\"aut\", \"cre\")),\n    person(\"Tanner\", \"Linsley\", role = c(\"ctb\", \"cph\"), comment = \"React Table library\"),\n    person(family = \"Emotion team and other contributors\", role = c(\"ctb\", \"cph\"),\n           comment = \"Emotion library\")\n    )",
         "Description": "Interactive data tables for R, based on the 'React Table'\n    JavaScript library. Provides an HTML widget that can be used in 'R Markdown'\n    documents and 'Shiny' applications, or viewed from an R console.",
         "License": "MIT + file LICENSE",
-        "URL": "https://glin.github.io/reactable,\nhttps://github.com/glin/reactable",
+        "URL": "https://glin.github.io/reactable/,\nhttps://github.com/glin/reactable",
         "BugReports": "https://github.com/glin/reactable/issues",
         "Depends": "R (>= 3.1)",
         "Imports": "digest, htmltools, htmlwidgets, jsonlite, reactR",
-        "Suggests": "covr, crosstalk, dplyr, leaflet, rmarkdown, shiny, sparkline,\ntestthat",
+        "Suggests": "covr, crosstalk, dplyr, leaflet, MASS, rmarkdown, shiny,\nsparkline, testthat",
         "Encoding": "UTF-8",
         "LazyData": "true",
-        "RoxygenNote": "7.1.0",
+        "RoxygenNote": "7.1.1",
         "NeedsCompilation": "no",
-        "Packaged": "2020-05-28 05:25:16 UTC; greg",
+        "Packaged": "2020-10-04 21:31:55 UTC; greg",
         "Author": "Greg Lin [aut, cre],\n  Tanner Linsley [ctb, cph] (React Table library),\n  Emotion team and other contributors [ctb, cph] (Emotion library)",
         "Maintainer": "Greg Lin <glin@glin.io>",
         "Repository": "CRAN",
-        "Date/Publication": "2020-05-28 05:50:03 UTC",
-        "Built": "R 4.0.0; ; 2020-07-16 13:55:35 UTC; unix"
+        "Date/Publication": "2020-10-04 21:50:02 UTC",
+        "Built": "R 4.0.0; ; 2020-10-08 10:57:12 UTC; unix"
       }
     },
     "readr": {
@@ -2750,29 +2722,33 @@
       "GithubSha1": null,
       "description": {
         "Package": "readr",
-        "Version": "1.3.1",
         "Title": "Read Rectangular Text Data",
-        "Description": "The goal of 'readr' is to provide a fast and friendly way to read\n    rectangular data (like 'csv', 'tsv', and 'fwf'). It is designed to flexibly\n    parse many types of data found in the wild, while still cleanly failing when\n    data unexpectedly changes.",
-        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", \"aut\"),\n    person(\"Jim\", \"Hester\", , \"james.hester@rstudio.com\", c(\"aut\", \"cre\")),\n    person(\"Romain\", \"Francois\", role = \"aut\"),\n    person(\"R Core Team\", role = \"ctb\", comment = \"Date time code adapted from R\"),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\")),\n    person(\"Jukka\", \"Jylänki\", role = c(\"ctb\", \"cph\"), comment = \"grisu3 implementation\"),\n    person(\"Mikkel\", \"Jørgensen\", role = c(\"ctb\", \"cph\"), comment = \"grisu3 implementation\"))",
-        "Encoding": "UTF-8",
-        "Depends": "R (>= 3.1)",
-        "LinkingTo": "Rcpp, BH",
-        "Imports": "Rcpp (>= 0.12.0.5), tibble, hms (>= 0.4.1), R6, clipr, crayon,\nmethods",
-        "Suggests": "curl, testthat, knitr, rmarkdown, stringi, covr, spelling",
+        "Version": "1.4.0",
+        "Authors@R": "\n    c(person(given = \"Hadley\",\n             family = \"Wickham\",\n             role = \"aut\",\n             email = \"hadley@rstudio.com\"),\n      person(given = \"Jim\",\n             family = \"Hester\",\n             role = c(\"aut\", \"cre\"),\n             email = \"james.hester@rstudio.com\"),\n      person(given = \"Romain\",\n             family = \"Francois\",\n             role = \"ctb\"),\n      person(given = \"R Core Team\",\n             role = \"ctb\",\n             comment = \"Date time code adapted from R\"),\n      person(given = \"RStudio\",\n             role = c(\"cph\", \"fnd\")),\n      person(given = \"Jukka\",\n             family = \"Jylänki\",\n             role = c(\"ctb\", \"cph\"),\n             comment = \"grisu3 implementation\"),\n      person(given = \"Mikkel\",\n             family = \"Jørgensen\",\n             role = c(\"ctb\", \"cph\"),\n             comment = \"grisu3 implementation\"))",
+        "Description": "The goal of 'readr' is to provide a fast and\n    friendly way to read rectangular data (like 'csv', 'tsv', and 'fwf').\n    It is designed to flexibly parse many types of data found in the wild,\n    while still cleanly failing when data unexpectedly changes.",
         "License": "GPL (>= 2) | file LICENSE",
+        "URL": "https://readr.tidyverse.org, https://github.com/tidyverse/readr",
         "BugReports": "https://github.com/tidyverse/readr/issues",
-        "URL": "http://readr.tidyverse.org, https://github.com/tidyverse/readr",
+        "Depends": "R (>= 3.1)",
+        "Imports": "cli, clipr, crayon, hms (>= 0.4.1), methods, rlang, R6,\ntibble, utils, lifecycle",
+        "Suggests": "covr, curl, dplyr, knitr, rmarkdown, spelling, stringi,\ntestthat, xml2",
+        "LinkingTo": "BH, cpp11",
         "VignetteBuilder": "knitr",
-        "RoxygenNote": "6.1.1",
-        "SystemRequirements": "GNU make",
+        "Config/Needs/website": "pkgdown, tidyverse/tidytemplate",
+        "Config/testthat/edition": "3",
+        "Config/testthat/parallel": "false",
+        "Encoding": "UTF-8",
         "Language": "en-US",
+        "RoxygenNote": "7.1.1",
+        "SystemRequirements": "C++11",
+        "RdMacros": "lifecycle",
         "NeedsCompilation": "yes",
-        "Packaged": "2018-12-20 16:06:40 UTC; jhester",
-        "Author": "Hadley Wickham [aut],\n  Jim Hester [aut, cre],\n  Romain Francois [aut],\n  R Core Team [ctb] (Date time code adapted from R),\n  RStudio [cph, fnd],\n  Jukka Jylänki [ctb, cph] (grisu3 implementation),\n  Mikkel Jørgensen [ctb, cph] (grisu3 implementation)",
+        "Packaged": "2020-10-01 15:34:22 UTC; jhester",
+        "Author": "Hadley Wickham [aut],\n  Jim Hester [aut, cre],\n  Romain Francois [ctb],\n  R Core Team [ctb] (Date time code adapted from R),\n  RStudio [cph, fnd],\n  Jukka Jylänki [ctb, cph] (grisu3 implementation),\n  Mikkel Jørgensen [ctb, cph] (grisu3 implementation)",
         "Maintainer": "Jim Hester <james.hester@rstudio.com>",
         "Repository": "CRAN",
-        "Date/Publication": "2018-12-21 09:40:02 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:45:29 UTC; unix"
+        "Date/Publication": "2020-10-05 08:50:03 UTC",
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-10-08 10:52:02 UTC; unix"
       }
     },
     "readxl": {
@@ -2869,37 +2845,6 @@
         "Built": "R 4.0.0; ; 2020-07-07 13:44:16 UTC; unix"
       }
     },
-    "reshape2": {
-      "Source": "CRAN",
-      "Repository": "https://www.stats.bris.ac.uk/R/",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
-      "description": {
-        "Package": "reshape2",
-        "Title": "Flexibly Reshape Data: A Reboot of the Reshape Package",
-        "Version": "1.4.4",
-        "Author": "Hadley Wickham <h.wickham@gmail.com>",
-        "Maintainer": "Hadley Wickham <h.wickham@gmail.com>",
-        "Description": "Flexibly restructure and aggregate data using just two\n    functions: melt and 'dcast' (or 'acast').",
-        "License": "MIT + file LICENSE",
-        "URL": "https://github.com/hadley/reshape",
-        "BugReports": "https://github.com/hadley/reshape/issues",
-        "Depends": "R (>= 3.1)",
-        "Imports": "plyr (>= 1.8.1), Rcpp, stringr",
-        "Suggests": "covr, lattice, testthat (>= 0.8.0)",
-        "LinkingTo": "Rcpp",
-        "Encoding": "UTF-8",
-        "LazyData": "true",
-        "RoxygenNote": "7.1.0",
-        "NeedsCompilation": "yes",
-        "Packaged": "2020-04-09 12:27:19 UTC; hadley",
-        "Repository": "CRAN",
-        "Date/Publication": "2020-04-09 13:50:02 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:42:50 UTC; unix"
-      }
-    },
     "rlang": {
       "Source": "CRAN",
       "Repository": "https://www.stats.bris.ac.uk/R/",
@@ -2943,26 +2888,26 @@
         "Package": "rmarkdown",
         "Type": "Package",
         "Title": "Dynamic Documents for R",
-        "Version": "2.3",
-        "Authors@R": "c(\n  person(\"JJ\", \"Allaire\", role = \"aut\", email = \"jj@rstudio.com\"),\n  person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\")),\n  person(\"Jonathan\", \"McPherson\", role = \"aut\", email = \"jonathan@rstudio.com\"),\n  person(\"Javier\", \"Luraschi\", role = \"aut\", email = \"javier@rstudio.com\"),\n  person(\"Kevin\", \"Ushey\", role = \"aut\", email = \"kevin@rstudio.com\"),\n  person(\"Aron\", \"Atkins\", role = \"aut\", email = \"aron@rstudio.com\"),\n  person(\"Hadley\", \"Wickham\", role = \"aut\", email = \"hadley@rstudio.com\"),\n  person(\"Joe\", \"Cheng\", role = \"aut\", email = \"joe@rstudio.com\"),\n  person(\"Winston\", \"Chang\", role = \"aut\", email = \"winston@rstudio.com\"),\n  person(\"Richard\", \"Iannone\", role = \"aut\", email = \"rich@rstudio.com\", comment = c(ORCID = \"0000-0003-3925-190X\")),\n  #\n  # Contributors, ordered alphabetically by first name\n  person(\"Andrew\", \"Dunning\", role = \"ctb\", comment = c(ORCID = \"0000-0003-0464-5036\")),\n  person(\"Atsushi\", \"Yasumoto\", role = \"ctb\", comment = c(ORCID = \"0000-0002-8335-495X\")),\n  person(\"Barret\", \"Schloerke\", role = \"ctb\"),\n  person(\"Christophe\", \"Dervieux\", role = \"ctb\"),\n  person(\"Frederik\", \"Aust\", role = \"ctb\", email = \"frederik.aust@uni-koeln.de\", comment = c(ORCID = \"0000-0003-4900-788X\")),\n  person(\"Jeff\", \"Allen\", role = \"ctb\", email = \"jeff@rstudio.com\"),\n  person(\"JooYoung\", \"Seo\", role=\"ctb\", comment = c(ORCID = \"0000-0002-4064-6012\")),\n  person(\"Malcolm\", \"Barrett\", role = \"ctb\"),\n  person(\"Rob\", \"Hyndman\", role = \"ctb\", email = \"Rob.Hyndman@monash.edu\"),\n  person(\"Romain\", \"Lesur\", role = \"ctb\"),\n  person(\"Roy\", \"Storey\", role = \"ctb\"),\n  person(\"Ruben\", \"Arslan\", role = \"ctb\", email = \"ruben.arslan@uni-goettingen.de\"),\n  person(\"Sergio\", \"Oller\", role = \"ctb\"),\n  #\n  # Copyright holders\n  person(family = \"RStudio, PBC\", role = \"cph\"),\n  person(family = \"jQuery Foundation\", role = \"cph\",\n         comment = \"jQuery library\"),\n  person(family = \"jQuery contributors\", role = c(\"ctb\", \"cph\"),\n         comment = \"jQuery library; authors listed in inst/rmd/h/jquery-AUTHORS.txt\"),\n  person(family = \"jQuery UI contributors\", role = c(\"ctb\", \"cph\"),\n         comment = \"jQuery UI library; authors listed in inst/rmd/h/jqueryui-AUTHORS.txt\"),\n  person(\"Mark\", \"Otto\", role = \"ctb\",\n         comment = \"Bootstrap library\"),\n  person(\"Jacob\", \"Thornton\", role = \"ctb\",\n         comment = \"Bootstrap library\"),\n  person(family = \"Bootstrap contributors\", role = \"ctb\",\n         comment = \"Bootstrap library\"),\n  person(family = \"Twitter, Inc\", role = \"cph\",\n         comment = \"Bootstrap library\"),\n  person(\"Alexander\", \"Farkas\", role = c(\"ctb\", \"cph\"),\n         comment = \"html5shiv library\"),\n  person(\"Scott\", \"Jehl\", role = c(\"ctb\", \"cph\"),\n         comment = \"Respond.js library\"),\n  person(\"Ivan\", \"Sagalaev\", role = c(\"ctb\", \"cph\"),\n         comment = \"highlight.js library\"),\n  person(\"Greg\", \"Franko\", role = c(\"ctb\", \"cph\"),\n         comment = \"tocify library\"),\n  person(\"John\", \"MacFarlane\", role = c(\"ctb\", \"cph\"),\n         comment = \"Pandoc templates\"),\n  person(family = \"Google, Inc.\", role = c(\"ctb\", \"cph\"),\n         comment = \"ioslides library\"),\n  person(\"Dave\", \"Raggett\", role = \"ctb\",\n         comment = \"slidy library\"),\n  person(family = \"W3C\", role = \"cph\",\n         comment = \"slidy library\"),\n  person(\"Dave\", \"Gandy\", role = c(\"ctb\", \"cph\"),\n         comment = \"Font-Awesome\"),\n  person(\"Ben\", \"Sperry\", role = \"ctb\",\n         comment = \"Ionicons\"),\n  person(family = \"Drifty\", role = \"cph\",\n         comment = \"Ionicons\"),\n  person(\"Aidan\", \"Lister\", role = c(\"ctb\", \"cph\"), \n         comment = \"jQuery StickyTabs\"),\n  person(\"Benct Philip\", \"Jonsson\", role = c(\"ctb\", \"cph\"), \n         comment = \"pagebreak lua filter\"),\n  person(\"Albert\", \"Krewinkel\", role = c(\"ctb\", \"cph\"), \n         comment = \"pagebreak lua filter\")\n  )",
+        "Version": "2.5",
+        "Authors@R": "c(\n  person(\"JJ\", \"Allaire\", role = \"aut\", email = \"jj@rstudio.com\"),\n  person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\")),\n  person(\"Jonathan\", \"McPherson\", role = \"aut\", email = \"jonathan@rstudio.com\"),\n  person(\"Javier\", \"Luraschi\", role = \"aut\", email = \"javier@rstudio.com\"),\n  person(\"Kevin\", \"Ushey\", role = \"aut\", email = \"kevin@rstudio.com\"),\n  person(\"Aron\", \"Atkins\", role = \"aut\", email = \"aron@rstudio.com\"),\n  person(\"Hadley\", \"Wickham\", role = \"aut\", email = \"hadley@rstudio.com\"),\n  person(\"Joe\", \"Cheng\", role = \"aut\", email = \"joe@rstudio.com\"),\n  person(\"Winston\", \"Chang\", role = \"aut\", email = \"winston@rstudio.com\"),\n  person(\"Richard\", \"Iannone\", role = \"aut\", email = \"rich@rstudio.com\", comment = c(ORCID = \"0000-0003-3925-190X\")),\n  #\n  # Contributors, ordered alphabetically by first name\n  person(\"Andrew\", \"Dunning\", role = \"ctb\", comment = c(ORCID = \"0000-0003-0464-5036\")),\n  person(\"Atsushi\", \"Yasumoto\", role = c(\"ctb\", \"cph\"),\n         comment = c(ORCID = \"0000-0002-8335-495X\",\n                     cph = \"Number sections Lua filter\")),\n  person(\"Barret\", \"Schloerke\", role = \"ctb\"),\n  person(\"Christophe\", \"Dervieux\", role = \"ctb\"),\n  person(\"Frederik\", \"Aust\", role = \"ctb\", email = \"frederik.aust@uni-koeln.de\", comment = c(ORCID = \"0000-0003-4900-788X\")),\n  person(\"Jeff\", \"Allen\", role = \"ctb\", email = \"jeff@rstudio.com\"),\n  person(\"JooYoung\", \"Seo\", role=\"ctb\", comment = c(ORCID = \"0000-0002-4064-6012\")),\n  person(\"Malcolm\", \"Barrett\", role = \"ctb\"),\n  person(\"Rob\", \"Hyndman\", role = \"ctb\", email = \"Rob.Hyndman@monash.edu\"),\n  person(\"Romain\", \"Lesur\", role = \"ctb\"),\n  person(\"Roy\", \"Storey\", role = \"ctb\"),\n  person(\"Ruben\", \"Arslan\", role = \"ctb\", email = \"ruben.arslan@uni-goettingen.de\"),\n  person(\"Sergio\", \"Oller\", role = \"ctb\"),\n  #\n  # Copyright holders\n  person(family = \"RStudio, PBC\", role = \"cph\"),\n  person(family = \"jQuery Foundation\", role = \"cph\",\n         comment = \"jQuery library\"),\n  person(family = \"jQuery contributors\", role = c(\"ctb\", \"cph\"),\n         comment = \"jQuery library; authors listed in inst/rmd/h/jquery-AUTHORS.txt\"),\n  person(family = \"jQuery UI contributors\", role = c(\"ctb\", \"cph\"),\n         comment = \"jQuery UI library; authors listed in inst/rmd/h/jqueryui-AUTHORS.txt\"),\n  person(\"Mark\", \"Otto\", role = \"ctb\",\n         comment = \"Bootstrap library\"),\n  person(\"Jacob\", \"Thornton\", role = \"ctb\",\n         comment = \"Bootstrap library\"),\n  person(family = \"Bootstrap contributors\", role = \"ctb\",\n         comment = \"Bootstrap library\"),\n  person(family = \"Twitter, Inc\", role = \"cph\",\n         comment = \"Bootstrap library\"),\n  person(\"Alexander\", \"Farkas\", role = c(\"ctb\", \"cph\"),\n         comment = \"html5shiv library\"),\n  person(\"Scott\", \"Jehl\", role = c(\"ctb\", \"cph\"),\n         comment = \"Respond.js library\"),\n  person(\"Ivan\", \"Sagalaev\", role = c(\"ctb\", \"cph\"),\n         comment = \"highlight.js library\"),\n  person(\"Greg\", \"Franko\", role = c(\"ctb\", \"cph\"),\n         comment = \"tocify library\"),\n  person(\"John\", \"MacFarlane\", role = c(\"ctb\", \"cph\"),\n         comment = \"Pandoc templates\"),\n  person(family = \"Google, Inc.\", role = c(\"ctb\", \"cph\"),\n         comment = \"ioslides library\"),\n  person(\"Dave\", \"Raggett\", role = \"ctb\",\n         comment = \"slidy library\"),\n  person(family = \"W3C\", role = \"cph\",\n         comment = \"slidy library\"),\n  person(\"Dave\", \"Gandy\", role = c(\"ctb\", \"cph\"),\n         comment = \"Font-Awesome\"),\n  person(\"Ben\", \"Sperry\", role = \"ctb\",\n         comment = \"Ionicons\"),\n  person(family = \"Drifty\", role = \"cph\",\n         comment = \"Ionicons\"),\n  person(\"Aidan\", \"Lister\", role = c(\"ctb\", \"cph\"), \n         comment = \"jQuery StickyTabs\"),\n  person(\"Benct Philip\", \"Jonsson\", role = c(\"ctb\", \"cph\"), \n         comment = \"pagebreak Lua filter\"),\n  person(\"Albert\", \"Krewinkel\", role = c(\"ctb\", \"cph\"), \n         comment = \"pagebreak Lua filter\")\n  )",
         "Maintainer": "Yihui Xie <xie@yihui.name>",
         "Description": "Convert R Markdown documents into a variety of formats.",
         "Depends": "R (>= 3.0)",
-        "Imports": "tools, utils, knitr (>= 1.22), yaml (>= 2.1.19), htmltools (>=\n0.3.5), evaluate (>= 0.13), base64enc, jsonlite, mime, tinytex\n(>= 0.11), xfun, methods, stringr (>= 1.2.0)",
-        "Suggests": "shiny (>= 0.11), tufte, testthat, digest, dygraphs, tibble,\nfs, pkgdown, rsconnect",
-        "SystemRequirements": "pandoc (>= 1.12.3) - http://pandoc.org",
+        "Imports": "tools, utils, knitr (>= 1.22), yaml (>= 2.1.19), htmltools (>=\n0.3.5), evaluate (>= 0.13), jsonlite, tinytex (>= 0.11), xfun\n(>= 0.15), methods, stringr (>= 1.2.0)",
+        "Suggests": "shiny (>= 0.11), tufte, testthat, digest, dygraphs, vctrs,\ntibble, fs, rsconnect",
+        "SystemRequirements": "pandoc (>= 1.14) - http://pandoc.org",
         "URL": "https://github.com/rstudio/rmarkdown",
         "BugReports": "https://github.com/rstudio/rmarkdown/issues",
         "License": "GPL-3",
-        "RoxygenNote": "7.1.0",
+        "RoxygenNote": "7.1.1",
         "Encoding": "UTF-8",
         "VignetteBuilder": "knitr",
         "NeedsCompilation": "no",
-        "Packaged": "2020-06-18 13:32:36 UTC; yihui",
-        "Author": "JJ Allaire [aut],\n  Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>),\n  Jonathan McPherson [aut],\n  Javier Luraschi [aut],\n  Kevin Ushey [aut],\n  Aron Atkins [aut],\n  Hadley Wickham [aut],\n  Joe Cheng [aut],\n  Winston Chang [aut],\n  Richard Iannone [aut] (<https://orcid.org/0000-0003-3925-190X>),\n  Andrew Dunning [ctb] (<https://orcid.org/0000-0003-0464-5036>),\n  Atsushi Yasumoto [ctb] (<https://orcid.org/0000-0002-8335-495X>),\n  Barret Schloerke [ctb],\n  Christophe Dervieux [ctb],\n  Frederik Aust [ctb] (<https://orcid.org/0000-0003-4900-788X>),\n  Jeff Allen [ctb],\n  JooYoung Seo [ctb] (<https://orcid.org/0000-0002-4064-6012>),\n  Malcolm Barrett [ctb],\n  Rob Hyndman [ctb],\n  Romain Lesur [ctb],\n  Roy Storey [ctb],\n  Ruben Arslan [ctb],\n  Sergio Oller [ctb],\n  RStudio, PBC [cph],\n  jQuery Foundation [cph] (jQuery library),\n  jQuery contributors [ctb, cph] (jQuery library; authors listed in\n    inst/rmd/h/jquery-AUTHORS.txt),\n  jQuery UI contributors [ctb, cph] (jQuery UI library; authors listed in\n    inst/rmd/h/jqueryui-AUTHORS.txt),\n  Mark Otto [ctb] (Bootstrap library),\n  Jacob Thornton [ctb] (Bootstrap library),\n  Bootstrap contributors [ctb] (Bootstrap library),\n  Twitter, Inc [cph] (Bootstrap library),\n  Alexander Farkas [ctb, cph] (html5shiv library),\n  Scott Jehl [ctb, cph] (Respond.js library),\n  Ivan Sagalaev [ctb, cph] (highlight.js library),\n  Greg Franko [ctb, cph] (tocify library),\n  John MacFarlane [ctb, cph] (Pandoc templates),\n  Google, Inc. [ctb, cph] (ioslides library),\n  Dave Raggett [ctb] (slidy library),\n  W3C [cph] (slidy library),\n  Dave Gandy [ctb, cph] (Font-Awesome),\n  Ben Sperry [ctb] (Ionicons),\n  Drifty [cph] (Ionicons),\n  Aidan Lister [ctb, cph] (jQuery StickyTabs),\n  Benct Philip Jonsson [ctb, cph] (pagebreak lua filter),\n  Albert Krewinkel [ctb, cph] (pagebreak lua filter)",
+        "Packaged": "2020-10-20 21:57:00 UTC; yihui",
+        "Author": "JJ Allaire [aut],\n  Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>),\n  Jonathan McPherson [aut],\n  Javier Luraschi [aut],\n  Kevin Ushey [aut],\n  Aron Atkins [aut],\n  Hadley Wickham [aut],\n  Joe Cheng [aut],\n  Winston Chang [aut],\n  Richard Iannone [aut] (<https://orcid.org/0000-0003-3925-190X>),\n  Andrew Dunning [ctb] (<https://orcid.org/0000-0003-0464-5036>),\n  Atsushi Yasumoto [ctb, cph] (<https://orcid.org/0000-0002-8335-495X>,\n    Number sections Lua filter),\n  Barret Schloerke [ctb],\n  Christophe Dervieux [ctb],\n  Frederik Aust [ctb] (<https://orcid.org/0000-0003-4900-788X>),\n  Jeff Allen [ctb],\n  JooYoung Seo [ctb] (<https://orcid.org/0000-0002-4064-6012>),\n  Malcolm Barrett [ctb],\n  Rob Hyndman [ctb],\n  Romain Lesur [ctb],\n  Roy Storey [ctb],\n  Ruben Arslan [ctb],\n  Sergio Oller [ctb],\n  RStudio, PBC [cph],\n  jQuery Foundation [cph] (jQuery library),\n  jQuery contributors [ctb, cph] (jQuery library; authors listed in\n    inst/rmd/h/jquery-AUTHORS.txt),\n  jQuery UI contributors [ctb, cph] (jQuery UI library; authors listed in\n    inst/rmd/h/jqueryui-AUTHORS.txt),\n  Mark Otto [ctb] (Bootstrap library),\n  Jacob Thornton [ctb] (Bootstrap library),\n  Bootstrap contributors [ctb] (Bootstrap library),\n  Twitter, Inc [cph] (Bootstrap library),\n  Alexander Farkas [ctb, cph] (html5shiv library),\n  Scott Jehl [ctb, cph] (Respond.js library),\n  Ivan Sagalaev [ctb, cph] (highlight.js library),\n  Greg Franko [ctb, cph] (tocify library),\n  John MacFarlane [ctb, cph] (Pandoc templates),\n  Google, Inc. [ctb, cph] (ioslides library),\n  Dave Raggett [ctb] (slidy library),\n  W3C [cph] (slidy library),\n  Dave Gandy [ctb, cph] (Font-Awesome),\n  Ben Sperry [ctb] (Ionicons),\n  Drifty [cph] (Ionicons),\n  Aidan Lister [ctb, cph] (jQuery StickyTabs),\n  Benct Philip Jonsson [ctb, cph] (pagebreak Lua filter),\n  Albert Krewinkel [ctb, cph] (pagebreak Lua filter)",
         "Repository": "CRAN",
-        "Date/Publication": "2020-06-18 14:50:02 UTC",
-        "Built": "R 4.0.0; ; 2020-07-07 13:43:55 UTC; unix"
+        "Date/Publication": "2020-10-21 05:00:06 UTC",
+        "Built": "R 4.0.0; ; 2020-10-27 17:15:17 UTC; unix"
       }
     },
     "rprojroot": {
@@ -3037,7 +2982,7 @@
       "description": {
         "Package": "rvest",
         "Title": "Easily Harvest (Scrape) Web Pages",
-        "Version": "0.3.5",
+        "Version": "0.3.6",
         "Authors@R": "\n    c(person(given = \"Hadley\",\n             family = \"Wickham\",\n             role = c(\"aut\", \"cre\"),\n             email = \"hadley@rstudio.com\"),\n      person(given = \"RStudio\",\n             role = \"cph\"))",
         "Description": "Wrappers around the 'xml2' and 'httr' packages to\n    make it easy to download, then manipulate, HTML and XML.",
         "License": "GPL-3",
@@ -3050,14 +2995,14 @@
         "Encoding": "UTF-8",
         "Language": "en-US",
         "LazyData": "true",
-        "RoxygenNote": "6.1.1",
+        "RoxygenNote": "7.1.1",
         "NeedsCompilation": "no",
-        "Packaged": "2019-11-08 18:31:35 UTC; hadley",
+        "Packaged": "2020-07-20 14:06:08 UTC; hadley",
         "Author": "Hadley Wickham [aut, cre],\n  RStudio [cph]",
         "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
         "Repository": "CRAN",
-        "Date/Publication": "2019-11-08 23:10:02 UTC",
-        "Built": "R 4.0.0; ; 2020-07-07 13:44:20 UTC; unix"
+        "Date/Publication": "2020-07-25 21:50:02 UTC",
+        "Built": "R 4.0.0; ; 2020-10-08 10:54:00 UTC; unix"
       }
     },
     "sass": {
@@ -3223,26 +3168,87 @@
       "description": {
         "Package": "shinyjs",
         "Title": "Easily Improve the User Experience of Your Shiny Apps in Seconds",
-        "Version": "1.1",
+        "Version": "2.0.0",
         "Authors@R": "person(\"Dean\", \"Attali\", email = \"daattali@gmail.com\",\n    role = c(\"aut\", \"cre\"))",
         "Description": "Perform common useful JavaScript operations in Shiny apps that will\n    greatly improve your apps without having to know any JavaScript. Examples\n    include: hiding an element, disabling an input, resetting an input back to\n    its original value, delaying code execution by a few seconds, and many more\n    useful functions for both the end user and the developer. 'shinyjs' can also\n    be used to easily call your own custom JavaScript functions from R.",
-        "URL": "https://deanattali.com/shinyjs",
+        "URL": "https://deanattali.com/shinyjs/",
         "BugReports": "https://github.com/daattali/shinyjs/issues",
         "Depends": "R (>= 3.1.0)",
         "Imports": "digest (>= 0.6.8), htmltools (>= 0.2.9), jsonlite, shiny (>=\n1.0.0)",
-        "Suggests": "knitr (>= 1.7), rmarkdown, shinyAce, testthat (>= 0.9.1), V8\n(>= 0.6)",
-        "License": "AGPL-3",
+        "Suggests": "knitr (>= 1.7), rmarkdown, shinyAce, shinydisconnect,\ntestthat (>= 0.9.1)",
+        "License": "MIT + file LICENSE",
         "SystemRequirements": "pandoc with https support",
         "LazyData": "true",
         "VignetteBuilder": "knitr",
-        "RoxygenNote": "6.1.1",
+        "RoxygenNote": "7.1.0",
         "NeedsCompilation": "no",
-        "Packaged": "2020-01-13 01:12:39 UTC; Oriane",
+        "Packaged": "2020-09-01 14:48:56 UTC; D",
         "Author": "Dean Attali [aut, cre]",
         "Maintainer": "Dean Attali <daattali@gmail.com>",
         "Repository": "CRAN",
-        "Date/Publication": "2020-01-13 06:40:03 UTC",
-        "Built": "R 4.0.0; ; 2020-07-09 15:09:43 UTC; unix"
+        "Date/Publication": "2020-09-09 07:50:03 UTC",
+        "Built": "R 4.0.0; ; 2020-10-08 10:54:01 UTC; unix"
+      }
+    },
+    "showtext": {
+      "Source": "CRAN",
+      "Repository": "https://www.stats.bris.ac.uk/R/",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "showtext",
+        "Type": "Package",
+        "Title": "Using Fonts More Easily in R Graphs",
+        "Version": "0.9",
+        "Date": "2020-08-13",
+        "Author": "Yixuan Qiu and authors/contributors of the\n    included software. See file AUTHORS for details.",
+        "Maintainer": "Yixuan Qiu <yixuan.qiu@cos.name>",
+        "Description": "Making it easy to use various types of fonts ('TrueType',\n    'OpenType', Type 1, web fonts, etc.) in R graphs, and supporting most output\n    formats of R graphics including PNG, PDF and SVG. Text glyphs will be converted\n    into polygons or raster images, hence after the plot has been created, it no\n    longer relies on the font files. No external software such as 'Ghostscript' is\n    needed to use this package.",
+        "Depends": "sysfonts (>= 0.7.1), showtextdb (>= 2.0)",
+        "Imports": "grDevices",
+        "Suggests": "knitr, rmarkdown, prettydoc, curl, jsonlite",
+        "SystemRequirements": "zlib, libpng, FreeType",
+        "URL": "https://github.com/yixuan/showtext",
+        "BugReports": "https://github.com/yixuan/showtext/issues",
+        "License": "Apache License (>= 2.0)",
+        "Copyright": "see file COPYRIGHTS",
+        "VignetteBuilder": "knitr, rmarkdown",
+        "RoxygenNote": "7.1.1",
+        "NeedsCompilation": "yes",
+        "Packaged": "2020-08-13 00:30:14 UTC; qyx",
+        "Repository": "CRAN",
+        "Date/Publication": "2020-08-13 05:20:02 UTC",
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-10-27 13:46:25 UTC; unix"
+      }
+    },
+    "showtextdb": {
+      "Source": "CRAN",
+      "Repository": "https://www.stats.bris.ac.uk/R/",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "showtextdb",
+        "Type": "Package",
+        "Title": "Font Files for the 'showtext' Package",
+        "Version": "3.0",
+        "Date": "2020-05-31",
+        "Author": "Yixuan Qiu and authors/contributors of the included fonts. See file\n    AUTHORS for details.",
+        "Maintainer": "Yixuan Qiu <yixuan.qiu@cos.name>",
+        "Description": "Providing font files that can be used by the 'showtext' package.",
+        "Imports": "sysfonts (>= 0.7), utils",
+        "Suggests": "curl",
+        "License": "Apache License (>= 2.0)",
+        "Copyright": "see file COPYRIGHTS",
+        "RoxygenNote": "7.1.0",
+        "NeedsCompilation": "no",
+        "Packaged": "2020-06-04 04:05:01 UTC; qyx",
+        "Repository": "CRAN",
+        "Date/Publication": "2020-06-04 08:10:02 UTC",
+        "Built": "R 4.0.0; ; 2020-10-27 13:46:23 UTC; unix"
       }
     },
     "snakecase": {
@@ -3315,27 +3321,27 @@
       "GithubSha1": null,
       "description": {
         "Package": "stringi",
-        "Version": "1.4.6",
-        "Date": "2020-02-17",
+        "Version": "1.5.3",
+        "Date": "2020-09-04",
         "Title": "Character String Processing Facilities",
-        "Description": "Fast, correct, consistent, portable and convenient character\n    string/text processing in every locale and any native encoding. \n    Owing to the use of the 'ICU' (International Components for Unicode) \n    library, the package provides 'R' users with platform-independent functions\n    known to 'Java', 'Perl', 'Python', 'PHP' and 'Ruby' programmers. Available\n    features include: pattern searching (e.g., with 'Java'-like regular\n    expressions or the 'Unicode' collation algorithm), random string generation,\n    case mapping, string transliteration, concatenation,\n    Unicode normalization, date-time formatting and parsing and many more.",
-        "URL": "http://www.gagolewski.com/software/stringi/\nhttp://site.icu-project.org/ http://www.unicode.org/",
-        "BugReports": "http://github.com/gagolews/stringi/issues",
+        "Description": "A multitude of character string/text/natural language\n    processing tools: pattern searching (e.g., with 'Java'-like regular\n    expressions or the 'Unicode' collation algorithm), random string generation,\n    case mapping, string transliteration, concatenation, sorting, padding,\n    wrapping, Unicode normalisation, date-time formatting and parsing,\n    and many more. They are fast, consistent, convenient, and -\n    owing to the use of the 'ICU' (International Components for Unicode)\n    library - portable across all locales and platforms.",
+        "URL": "https://stringi.gagolewski.com/ http://site.icu-project.org/\nhttps://www.unicode.org/",
+        "BugReports": "https://github.com/gagolews/stringi/issues",
         "SystemRequirements": "ICU4C (>= 55, optional)",
         "Type": "Package",
         "Depends": "R (>= 2.14)",
         "Imports": "tools, utils, stats",
         "Biarch": "TRUE",
         "License": "file LICENSE",
-        "Author": "Marek Gagolewski [aut, cre] (<https://orcid.org/0000-0003-0637-6028>),\n    Bartek Tartanus [ctb]\n    and other contributors (stringi source code);\n    IBM, Unicode, Inc. and other contributors (ICU4C source code);\n    Unicode, Inc. (Unicode Character Database)",
+        "Author": "Marek Gagolewski [aut, cre, cph] (<https://orcid.org/0000-0003-0637-6028>),\n    Bartek Tartanus [ctb],\n    and other contributors (stringi source code);\n    IBM, Unicode, Inc. and other contributors (ICU4C source code);\n    Unicode, Inc. (Unicode Character Database)",
         "Maintainer": "Marek Gagolewski <marek@gagolewski.com>",
-        "RoxygenNote": "7.0.2",
+        "RoxygenNote": "7.1.1",
+        "Encoding": "UTF-8",
         "NeedsCompilation": "yes",
-        "Packaged": "2020-02-17 01:46:10 UTC; gagolews",
-        "License_is_FOSS": "yes",
+        "Packaged": "2020-09-04 06:13:18 UTC; gagolews",
         "Repository": "CRAN",
-        "Date/Publication": "2020-02-17 18:00:06 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:39:27 UTC; unix"
+        "Date/Publication": "2020-09-09 06:40:03 UTC",
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-10-05 17:57:11 UTC; unix"
       }
     },
     "stringr": {
@@ -3401,6 +3407,36 @@
         "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-08-04 10:20:25 UTC; unix"
       }
     },
+    "sysfonts": {
+      "Source": "CRAN",
+      "Repository": "https://www.stats.bris.ac.uk/R/",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "sysfonts",
+        "Type": "Package",
+        "Title": "Loading Fonts into R",
+        "Version": "0.8.1",
+        "Date": "2020-05-06",
+        "Author": "Yixuan Qiu and authors/contributors of the\n    included fonts. See file AUTHORS for details.",
+        "Maintainer": "Yixuan Qiu <yixuan.qiu@cos.name>",
+        "Description": "Loading system fonts and Google Fonts\n    <https://fonts.google.com/> into R, in order to\n    support other packages such as 'R2SWF' and 'showtext'.",
+        "Suggests": "curl, jsonlite",
+        "Copyright": "see file COPYRIGHTS",
+        "SystemRequirements": "zlib, libpng, FreeType",
+        "URL": "https://github.com/yixuan/sysfonts",
+        "BugReports": "https://github.com/yixuan/sysfonts/issues",
+        "License": "GPL-2",
+        "RoxygenNote": "7.1.0",
+        "NeedsCompilation": "yes",
+        "Packaged": "2020-05-08 14:19:05 UTC; dell",
+        "Repository": "CRAN",
+        "Date/Publication": "2020-05-08 15:40:02 UTC",
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-10-27 13:46:22 UTC; unix"
+      }
+    },
     "systemfonts": {
       "Source": "CRAN",
       "Repository": "https://www.stats.bris.ac.uk/R/",
@@ -3412,25 +3448,26 @@
         "Package": "systemfonts",
         "Type": "Package",
         "Title": "System Native Font Finding",
-        "Version": "0.2.3",
+        "Version": "0.3.2",
         "Authors@R": "\n    c(person(given = \"Thomas Lin\",\n             family = \"Pedersen\",\n             role = c(\"aut\", \"cre\"),\n             email = \"thomas.pedersen@rstudio.com\",\n             comment = c(ORCID = \"0000-0002-5147-4711\")),\n      person(given = \"Jeroen\", \n             family = \"Ooms\", \n             role = \"aut\",\n             email = \"jeroen@berkeley.edu\",\n             comment = c(ORCID = \"0000-0002-4035-0289\")),\n      person(given = \"Devon\",\n             family = \"Govett\",\n             role = \"aut\",\n             comment = \"Author of font-manager\"),\n      person(given = \"RStudio\",\n             role = \"cph\"))",
         "Maintainer": "Thomas Lin Pedersen <thomas.pedersen@rstudio.com>",
         "Description": "Provides system native access to the font catalogue. As font\n    handling varies between systems it is difficult to correctly locate \n    installed fonts across different operating systems. The 'systemfonts' \n    package provides bindings to the native libraries on Windows, macOS and \n    Linux for finding font files that can then be used further by e.g. graphic\n    devices. The main use is intended to be from compiled code but 'systemfonts'\n    also provides access from R.",
         "License": "MIT + file LICENSE",
         "Encoding": "UTF-8",
         "LazyData": "true",
-        "RoxygenNote": "7.1.0",
-        "SystemRequirements": "C++11, fontconfig, freetype2",
+        "RoxygenNote": "7.1.1",
+        "SystemRequirements": "c(\"C++11\", \"\\n fontconfig\", \"\\n freetype2\"), C++11",
         "Suggests": "testthat (>= 2.1.0), covr, knitr, rmarkdown, tools",
         "VignetteBuilder": "knitr",
         "URL": "https://github.com/r-lib/systemfonts",
         "BugReports": "https://github.com/r-lib/systemfonts/issues",
+        "LinkingTo": "cpp11",
         "NeedsCompilation": "yes",
-        "Packaged": "2020-06-09 07:38:26 UTC; thomas",
+        "Packaged": "2020-09-29 18:29:38 UTC; thomas",
         "Author": "Thomas Lin Pedersen [aut, cre]\n    (<https://orcid.org/0000-0002-5147-4711>),\n  Jeroen Ooms [aut] (<https://orcid.org/0000-0002-4035-0289>),\n  Devon Govett [aut] (Author of font-manager),\n  RStudio [cph]",
         "Repository": "CRAN",
-        "Date/Publication": "2020-06-09 08:10:02 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-13 11:40:39 UTC; unix"
+        "Date/Publication": "2020-09-29 19:00:02 UTC",
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-10-08 10:54:12 UTC; unix"
       }
     },
     "testthat": {
@@ -3507,27 +3544,28 @@
       "description": {
         "Package": "tidyr",
         "Title": "Tidy Messy Data",
-        "Version": "1.1.0",
-        "Authors@R": "\n    c(person(given = \"Hadley\",\n             family = \"Wickham\",\n             role = c(\"aut\", \"cre\"),\n             email = \"hadley@rstudio.com\"),\n      person(given = \"Lionel\",\n             family = \"Henry\",\n             role = \"aut\",\n             email = \"lionel@rstudio.com\"),\n      person(given = \"RStudio\",\n             role = \"cph\"))",
+        "Version": "1.1.2",
+        "Authors@R": "\n    c(person(given = \"Hadley\",\n             family = \"Wickham\",\n             role = c(\"aut\", \"cre\"),\n             email = \"hadley@rstudio.com\"),\n      person(given = \"RStudio\",\n             role = \"cph\"))",
         "Description": "Tools to help to create tidy data, where each column is a \n    variable, each row is an observation, and each cell contains a single value.  \n    'tidyr' contains tools for changing the shape (pivoting) and hierarchy\n    (nesting and 'unnesting') of a dataset, turning deeply nested lists\n    into rectangular data frames ('rectangling'), and extracting values out \n    of string columns. It also includes tools for working with missing values \n    (both implicit and explicit).",
         "License": "MIT + file LICENSE",
         "URL": "https://tidyr.tidyverse.org, https://github.com/tidyverse/tidyr",
         "BugReports": "https://github.com/tidyverse/tidyr/issues",
         "Depends": "R (>= 3.1)",
-        "Imports": "dplyr (>= 0.8.2), ellipsis (>= 0.1.0), glue, magrittr, purrr,\nRcpp, rlang, stringi, tibble (>= 2.1.1), tidyselect (>= 1.1.0),\nutils, vctrs (>= 0.3.0), lifecycle",
+        "Imports": "dplyr (>= 0.8.2), ellipsis (>= 0.1.0), glue, magrittr, purrr,\nrlang, tibble (>= 2.1.1), tidyselect (>= 1.1.0), utils, vctrs\n(>= 0.3.0), lifecycle",
         "Suggests": "covr, jsonlite, knitr, repurrrsive (>= 1.0.0), rmarkdown,\nreadr, testthat (>= 2.1.0)",
-        "LinkingTo": "Rcpp",
+        "LinkingTo": "cpp11 (>= 0.2.1)",
         "VignetteBuilder": "knitr",
+        "SystemRequirements": "C++11",
         "Encoding": "UTF-8",
         "LazyData": "true",
-        "RoxygenNote": "7.1.0",
+        "RoxygenNote": "7.1.1",
         "NeedsCompilation": "yes",
-        "Packaged": "2020-05-19 21:32:06 UTC; hadley",
-        "Author": "Hadley Wickham [aut, cre],\n  Lionel Henry [aut],\n  RStudio [cph]",
+        "Packaged": "2020-08-26 15:43:09 UTC; hadley",
+        "Author": "Hadley Wickham [aut, cre],\n  RStudio [cph]",
         "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
         "Repository": "CRAN",
-        "Date/Publication": "2020-05-20 13:10:02 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:51:02 UTC; unix"
+        "Date/Publication": "2020-08-27 12:20:02 UTC",
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-08-28 14:48:14 UTC; unix"
       }
     },
     "tidyselect": {
@@ -3605,8 +3643,8 @@
       "description": {
         "Package": "tinytex",
         "Type": "Package",
-        "Title": "Helper Functions to Install and Maintain 'TeX Live', and Compile\n'LaTeX' Documents",
-        "Version": "0.24",
+        "Title": "Helper Functions to Install and Maintain TeX Live, and Compile\nLaTeX Documents",
+        "Version": "0.26",
         "Authors@R": "c(\n  person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\", \"cph\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\")),\n  person(family = \"RStudio, PBC\", role = \"cph\"),\n  person(\"Fernando\", \"Cagua\", role = \"ctb\"),\n  person(\"Ethan\", \"Heinzen\", role = \"ctb\"),\n  person()\n  )",
         "Description": "Helper functions to install and maintain the 'LaTeX' distribution\n  named 'TinyTeX' (<https://yihui.org/tinytex/>), a lightweight, cross-platform,\n  portable, and easy-to-maintain version of 'TeX Live'. This package also\n  contains helper functions to compile 'LaTeX' documents, and install missing\n  'LaTeX' packages automatically.",
         "Imports": "xfun (>= 0.5)",
@@ -3616,14 +3654,14 @@
         "BugReports": "https://github.com/yihui/tinytex/issues",
         "Encoding": "UTF-8",
         "LazyData": "true",
-        "RoxygenNote": "7.1.0",
+        "RoxygenNote": "7.1.1",
         "NeedsCompilation": "no",
-        "Packaged": "2020-06-20 02:40:59 UTC; yihui",
+        "Packaged": "2020-09-21 22:17:05 UTC; yihui",
         "Author": "Yihui Xie [aut, cre, cph] (<https://orcid.org/0000-0003-0645-5666>),\n  RStudio, PBC [cph],\n  Fernando Cagua [ctb],\n  Ethan Heinzen [ctb]",
         "Maintainer": "Yihui Xie <xie@yihui.name>",
         "Repository": "CRAN",
-        "Date/Publication": "2020-06-20 09:20:06 UTC",
-        "Built": "R 4.0.0; ; 2020-07-07 13:41:50 UTC; unix"
+        "Date/Publication": "2020-09-22 06:30:02 UTC",
+        "Built": "R 4.0.0; ; 2020-10-08 10:57:15 UTC; unix"
       }
     },
     "utf8": {
@@ -3666,7 +3704,7 @@
       "description": {
         "Package": "vctrs",
         "Title": "Vector Helpers",
-        "Version": "0.3.2",
+        "Version": "0.3.4",
         "Authors@R": "\n    c(person(given = \"Hadley\",\n             family = \"Wickham\",\n             role = \"aut\",\n             email = \"hadley@rstudio.com\"),\n      person(given = \"Lionel\",\n             family = \"Henry\",\n             role = c(\"aut\", \"cre\"),\n             email = \"lionel@rstudio.com\"),\n      person(given = \"Davis\",\n             family = \"Vaughan\",\n             role = \"aut\",\n             email = \"davis@rstudio.com\"),\n      person(given = \"RStudio\",\n             role = \"cph\"))",
         "Description": "Defines new notions of prototype and size that are\n    used to provide tools for consistent and well-founded type-coercion\n    and size-recycling, and are in turn connected to ideas of type- and\n    size-stability useful for analysing function interfaces.",
         "License": "GPL-3",
@@ -3674,19 +3712,19 @@
         "BugReports": "https://github.com/r-lib/vctrs/issues",
         "Depends": "R (>= 3.2)",
         "Imports": "ellipsis (>= 0.2.0), digest, glue, rlang (>= 0.4.7)",
-        "Suggests": "bit64, covr, crayon, dplyr (>= 0.8.5), generics, knitr,\npillar (>= 1.4.4), pkgdown, rmarkdown, testthat (>= 2.3.0),\ntibble, withr, xml2, zeallot",
+        "Suggests": "bit64, covr, crayon, dplyr (>= 0.8.5), generics, knitr,\npillar (>= 1.4.4), pkgdown, rmarkdown, testthat (>= 2.3.0),\ntibble, withr, xml2, waldo (>= 0.2.0), zeallot",
         "VignetteBuilder": "knitr",
         "Encoding": "UTF-8",
         "Language": "en-GB",
         "LazyData": "true",
         "RoxygenNote": "7.1.1",
         "NeedsCompilation": "yes",
-        "Packaged": "2020-07-15 10:57:45 UTC; lionel",
+        "Packaged": "2020-08-28 15:24:30 UTC; lionel",
         "Author": "Hadley Wickham [aut],\n  Lionel Henry [aut, cre],\n  Davis Vaughan [aut],\n  RStudio [cph]",
         "Maintainer": "Lionel Henry <lionel@rstudio.com>",
         "Repository": "CRAN",
-        "Date/Publication": "2020-07-15 11:30:02 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-08-03 09:18:21 UTC; unix"
+        "Date/Publication": "2020-08-29 07:40:02 UTC",
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-10-05 17:56:49 UTC; unix"
       }
     },
     "viridisLite": {
@@ -3799,27 +3837,27 @@
       "description": {
         "Package": "withr",
         "Title": "Run Code 'With' Temporarily Modified Global State",
-        "Version": "2.2.0",
-        "Authors@R": "\n    c(person(given = \"Jim\",\n             family = \"Hester\",\n             role = c(\"aut\", \"cre\"),\n             email = \"james.f.hester@gmail.com\"),\n      person(given = \"Kirill\",\n             family = \"Müller\",\n             role = \"aut\",\n             email = \"krlmlr+r@mailbox.org\"),\n      person(given = \"Kevin\",\n             family = \"Ushey\",\n             role = \"aut\",\n             email = \"kevinushey@gmail.com\"),\n      person(given = \"Hadley\",\n             family = \"Wickham\",\n             role = \"aut\",\n             email = \"hadley@rstudio.com\"),\n      person(given = \"Winston\",\n             family = \"Chang\",\n             role = \"aut\"),\n      person(given = \"Richard\",\n             family = \"Cotton\",\n             role = \"ctb\"),\n      person(given = \"RStudio\",\n             role = \"cph\"))",
+        "Version": "2.3.0",
+        "Authors@R": "\n    c(person(given = \"Jim\",\n             family = \"Hester\",\n             role = c(\"aut\", \"cre\"),\n             email = \"james.f.hester@gmail.com\"),\n      person(given = \"Kirill\",\n             family = \"Müller\",\n             role = \"aut\",\n             email = \"krlmlr+r@mailbox.org\"),\n      person(given = \"Kevin\",\n             family = \"Ushey\",\n             role = \"aut\",\n             email = \"kevinushey@gmail.com\"),\n      person(given = \"Hadley\",\n             family = \"Wickham\",\n             role = \"aut\",\n             email = \"hadley@rstudio.com\"),\n      person(given = \"Winston\",\n             family = \"Chang\",\n             role = \"aut\"),\n      person(given = \"Jennifer\",\n             family = \"Bryan\",\n             role = \"ctb\"),\n      person(given = \"Richard\",\n             family = \"Cotton\",\n             role = \"ctb\"),\n      person(given = \"RStudio\",\n             role = \"cph\"))",
         "Description": "A set of functions to run code 'with' safely and\n    temporarily modified global state. Many of these functions were\n    originally a part of the 'devtools' package, this provides a simple\n    package with limited dependencies to provide access to these\n    functions.",
         "License": "GPL (>= 2)",
-        "URL": "http://withr.r-lib.org, http://github.com/r-lib/withr#readme",
-        "BugReports": "http://github.com/r-lib/withr/issues",
+        "URL": "https://withr.r-lib.org, https://github.com/r-lib/withr#readme",
+        "BugReports": "https://github.com/r-lib/withr/issues",
         "Depends": "R (>= 3.2.0)",
         "Imports": "graphics, grDevices, stats",
         "Suggests": "covr, DBI, knitr, lattice, methods, rmarkdown, RSQLite,\ntestthat (>= 2.1.0)",
         "VignetteBuilder": "knitr",
         "Encoding": "UTF-8",
         "LazyData": "true",
-        "RoxygenNote": "7.1.0",
-        "Collate": "'local_.R' 'with_.R' 'collate.R' 'connection.R' 'db.R'\n'defer.R' 'wrap.R' 'devices.R' 'dir.R' 'env.R' 'file.R'\n'libpaths.R' 'locale.R' 'makevars.R' 'namespace.R' 'options.R'\n'par.R' 'path.R' 'rng.R' 'seed.R' 'sink.R' 'tempfile.R'\n'timezone.R' 'torture.R' 'utils.R' 'with.R'",
+        "RoxygenNote": "7.1.1",
+        "Collate": "'local_.R' 'with_.R' 'collate.R' 'compat-defer.R'\n'connection.R' 'db.R' 'defer.R' 'wrap.R' 'devices.R' 'dir.R'\n'env.R' 'file.R' 'libpaths.R' 'locale.R' 'makevars.R'\n'namespace.R' 'options.R' 'par.R' 'path.R' 'rng.R' 'seed.R'\n'sink.R' 'tempfile.R' 'timezone.R' 'torture.R' 'utils.R'\n'with.R'",
         "NeedsCompilation": "no",
-        "Packaged": "2020-04-20 21:18:04 UTC; jhester",
-        "Author": "Jim Hester [aut, cre],\n  Kirill Müller [aut],\n  Kevin Ushey [aut],\n  Hadley Wickham [aut],\n  Winston Chang [aut],\n  Richard Cotton [ctb],\n  RStudio [cph]",
+        "Packaged": "2020-09-10 19:00:52 UTC; jhester",
+        "Author": "Jim Hester [aut, cre],\n  Kirill Müller [aut],\n  Kevin Ushey [aut],\n  Hadley Wickham [aut],\n  Winston Chang [aut],\n  Jennifer Bryan [ctb],\n  Richard Cotton [ctb],\n  RStudio [cph]",
         "Maintainer": "Jim Hester <james.f.hester@gmail.com>",
         "Repository": "CRAN",
-        "Date/Publication": "2020-04-20 22:10:02 UTC",
-        "Built": "R 4.0.0; ; 2020-07-07 13:38:07 UTC; unix"
+        "Date/Publication": "2020-09-22 15:40:02 UTC",
+        "Built": "R 4.0.0; ; 2020-10-08 10:54:37 UTC; unix"
       }
     },
     "xfun": {
@@ -3833,25 +3871,25 @@
         "Package": "xfun",
         "Type": "Package",
         "Title": "Miscellaneous Functions by 'Yihui Xie'",
-        "Version": "0.15",
+        "Version": "0.18",
         "Authors@R": "c(\n  person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\", \"cph\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\")),\n  person(\"Wush\", \"Wu\", role = \"ctb\"),\n  person(\"Daijiang\", \"Li\", role = \"ctb\"),\n  person(\"Xianying\", \"Tan\", role = \"ctb\"),\n  person(\"Salim\", \"Brüggemann\", role = \"ctb\", email = \"salim-b@pm.me\", comment = c(ORCID = \"0000-0002-5329-5987\")),\n  person()\n  )",
         "Description": "Miscellaneous functions commonly used in other packages maintained by 'Yihui Xie'.",
         "Imports": "stats, tools",
-        "Suggests": "testit, parallel, codetools, rstudioapi, tinytex, mime,\nmarkdown, knitr, htmltools, remotes, rmarkdown",
+        "Suggests": "testit, parallel, codetools, rstudioapi, tinytex, mime,\nmarkdown, knitr, htmltools, remotes, pak, rmarkdown",
         "License": "MIT + file LICENSE",
         "URL": "https://github.com/yihui/xfun",
         "BugReports": "https://github.com/yihui/xfun/issues",
         "Encoding": "UTF-8",
         "LazyData": "true",
-        "RoxygenNote": "7.1.0",
+        "RoxygenNote": "7.1.1",
         "VignetteBuilder": "knitr",
         "NeedsCompilation": "yes",
-        "Packaged": "2020-06-20 22:08:34 UTC; yihui",
+        "Packaged": "2020-09-28 21:43:57 UTC; yihui",
         "Author": "Yihui Xie [aut, cre, cph] (<https://orcid.org/0000-0003-0645-5666>),\n  Wush Wu [ctb],\n  Daijiang Li [ctb],\n  Xianying Tan [ctb],\n  Salim Brüggemann [ctb] (<https://orcid.org/0000-0002-5329-5987>)",
         "Maintainer": "Yihui Xie <xie@yihui.name>",
         "Repository": "CRAN",
-        "Date/Publication": "2020-06-21 05:50:02 UTC",
-        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-07-07 13:37:41 UTC; unix"
+        "Date/Publication": "2020-09-29 10:00:02 UTC",
+        "Built": "R 4.0.0; x86_64-pc-linux-gnu; 2020-10-08 10:54:38 UTC; unix"
       }
     },
     "xml2": {
@@ -3946,13 +3984,16 @@
   },
   "files": {
     "data/clean_indicators.RData": {
-      "checksum": "9ecb01a022b3948099c5cdef73f3f881"
+      "checksum": "58b165460b2d8974b44f026b01f20f37"
     },
     "data/indicator_info.csv": {
-      "checksum": "2212cb892381d208cda9ccb5cee27bc8"
+      "checksum": "5885f3fed4331702fe2cfddbd23b9fd8"
+    },
+    "data/translation_database.csv": {
+      "checksum": "bd099003eb26b61ddcec42b8a36bf064"
     },
     "global.R": {
-      "checksum": "3b605ee8a1cc15951367f127816f9660"
+      "checksum": "8b79680263cd9a890a5f37e127fb869f"
     },
     "packrat/desc/askpass": {
       "checksum": "ce96e54b5f5701e98ab539cd23787fca"
@@ -3961,7 +4002,7 @@
       "checksum": "22bd69115b5b68aa0b4b6dcffbebebb9"
     },
     "packrat/desc/backports": {
-      "checksum": "485d4f2cd5d73a0401db35ca9b733dd2"
+      "checksum": "47f7d478674c2f43a0857db6eebb14af"
     },
     "packrat/desc/base64enc": {
       "checksum": "aee251575686445ffd821e520ee71375"
@@ -3976,10 +4017,10 @@
       "checksum": "cb3d1abb07d5eef6663e684e9c01f2f5"
     },
     "packrat/desc/broom": {
-      "checksum": "661563be7bac8720f52de60ece72b8f4"
+      "checksum": "7dcb849a194580af76a77d8f8bfc2156"
     },
     "packrat/desc/callr": {
-      "checksum": "ee4776109095dfa0f7c2e188edf30464"
+      "checksum": "5c827b87a68df9126eaf371230f3e786"
     },
     "packrat/desc/cellranger": {
       "checksum": "a085a239238f58f7d386bdc44215ca36"
@@ -3996,6 +4037,9 @@
     "packrat/desc/commonmark": {
       "checksum": "af2d18fbb44ad4c71c739588da4783e3"
     },
+    "packrat/desc/cpp11": {
+      "checksum": "e9497db0ec62b0671ec3f83e1c92b9a7"
+    },
     "packrat/desc/crayon": {
       "checksum": "6bbdc8e29832ef0d622bd444b0bb0036"
     },
@@ -4004,9 +4048,6 @@
     },
     "packrat/desc/curl": {
       "checksum": "e1b554f2350b5a3af6ed0d8c29388a5b"
-    },
-    "packrat/desc/data.table": {
-      "checksum": "af59dc329c6869710c995afa8c1b1240"
     },
     "packrat/desc/DBI": {
       "checksum": "53d2f593dbff1a44182d83969d4c5047"
@@ -4021,13 +4062,16 @@
       "checksum": "965236e15ee3b4c421925f483d92300d"
     },
     "packrat/desc/dplyr": {
-      "checksum": "8fac4c9293a2a7fdc8e882f3dd03b607"
+      "checksum": "83a2edab9da31e9c74843bf206235fd8"
     },
     "packrat/desc/DT": {
-      "checksum": "7c24a7b1b5a6784788c2e5045ec2f4cf"
+      "checksum": "e7e5d02315138e55f68ac348bb8c5022"
     },
     "packrat/desc/ellipsis": {
       "checksum": "3f1f98cf9fe6eb672f704a15df3f62a1"
+    },
+    "packrat/desc/emojifont": {
+      "checksum": "a291289318c9d8d290dba9fec0118d6f"
     },
     "packrat/desc/evaluate": {
       "checksum": "b523e49cef99f337c62a7f3e9aea0325"
@@ -4063,7 +4107,7 @@
       "checksum": "8658e66cdae882dc48444bb57349e1a7"
     },
     "packrat/desc/glue": {
-      "checksum": "64d3e522c71796b13a525dcb421d9cdd"
+      "checksum": "1f2ceb3c98c4cebe598d76c35c78762e"
     },
     "packrat/desc/gridExtra": {
       "checksum": "9ddc343d3866968eac627f2607877b1b"
@@ -4073,9 +4117,6 @@
     },
     "packrat/desc/haven": {
       "checksum": "d6778a9cb8576a3b1424bfe35dd8044e"
-    },
-    "packrat/desc/hexbin": {
-      "checksum": "d55e41b2dc4309afc426921bb1619817"
     },
     "packrat/desc/highr": {
       "checksum": "8403d23030f9486fd9e27d51e2e13be6"
@@ -4090,7 +4131,7 @@
       "checksum": "adca26fc7e28df54720d84b30b30db52"
     },
     "packrat/desc/htmlwidgets": {
-      "checksum": "45193f3306c3325ae10deb707c486fc7"
+      "checksum": "8cde835335334e2d5ae3bc75c7a34bbb"
     },
     "packrat/desc/httpuv": {
       "checksum": "fce7ac0375d790c9d6733298900b037b"
@@ -4108,10 +4149,10 @@
       "checksum": "edcb6f89f7fd1e81ffeb3d2e6222a5d0"
     },
     "packrat/desc/jsonlite": {
-      "checksum": "469a6d1da3b507e475c6b9d1b7171928"
+      "checksum": "8bb1d7875ca55a9697fda1bd8c8c7d81"
     },
     "packrat/desc/knitr": {
-      "checksum": "963b9937c7f144f02b278e1be506e352"
+      "checksum": "b219f90a4b7eee244d8e91faa643b333"
     },
     "packrat/desc/labeling": {
       "checksum": "d74fa138e4c96c8f6fe92659603349de"
@@ -4156,28 +4197,22 @@
       "checksum": "baf1ac6cdcf113086e4af47145f64739"
     },
     "packrat/desc/nlme": {
-      "checksum": "441687095aa362f7ac69352dba36dd28"
+      "checksum": "b9e1c9c11f58ee094adc4ade2f208626"
     },
     "packrat/desc/openssl": {
-      "checksum": "469fd16787d3d487c282e181d49eef94"
+      "checksum": "6b94e24aa57ffc2512eafbd6f786d04e"
     },
     "packrat/desc/pillar": {
       "checksum": "ace5f9df59f7be8e94a0baaef2e69494"
     },
     "packrat/desc/pkgbuild": {
-      "checksum": "d997f3a6f97e4df4fd391a99b299abfc"
+      "checksum": "04a6f649f33fe3fb3ae007863e3ed526"
     },
     "packrat/desc/pkgconfig": {
       "checksum": "f0d3ed2e5500e3be2aa797356f5af052"
     },
     "packrat/desc/pkgload": {
       "checksum": "8f416dd9af557758357abea1b12cb68a"
-    },
-    "packrat/desc/plotly": {
-      "checksum": "a28bd2670d8dbc11ee26594c98d49d0b"
-    },
-    "packrat/desc/plyr": {
-      "checksum": "8522d19b9c4622ee2a0b14a068d9d9ff"
     },
     "packrat/desc/praise": {
       "checksum": "b9be8290605ab866fb4f72a391a8fbbe"
@@ -4186,16 +4221,19 @@
       "checksum": "10c301085049e7a44b3ad067078d0536"
     },
     "packrat/desc/processx": {
-      "checksum": "676abd14094c08e78118c04c7d046542"
+      "checksum": "6ff0e497f5699c62f41cc19df5fca43d"
     },
     "packrat/desc/progress": {
       "checksum": "663c20f8bf7e3dd7f337b5c3e577326b"
     },
     "packrat/desc/promises": {
-      "checksum": "af0cb966fe3be5b3f7f015ae42f4218c"
+      "checksum": "9cc2994ea1a1b21efac6955596c0448b"
+    },
+    "packrat/desc/proto": {
+      "checksum": "3b2d259ae684eea28e1dca41b5f2afa5"
     },
     "packrat/desc/ps": {
-      "checksum": "5dc06653aca4e7412a16404c5d1691a4"
+      "checksum": "ec34f98b92b01905c0f41fd6a672e134"
     },
     "packrat/desc/purrr": {
       "checksum": "a0d5577462ee6337f73a94f13a5d47b5"
@@ -4210,13 +4248,13 @@
       "checksum": "a8c8241990f8dd70e4811204dc0a7351"
     },
     "packrat/desc/reactable": {
-      "checksum": "3caf3e2b4d1c87ac47e8b52814a29550"
+      "checksum": "dbaf0e559393e96c9b84a8b8cd4685c2"
     },
     "packrat/desc/reactR": {
       "checksum": "2b6efa655762b7fc65d84873fff174e2"
     },
     "packrat/desc/readr": {
-      "checksum": "bc1a75dedad8a456184178eacb198abb"
+      "checksum": "ca10445fc826d666d741249b78fc955b"
     },
     "packrat/desc/readxl": {
       "checksum": "05dff7c7a0c5b5a8a44e8cc8741c5c60"
@@ -4227,14 +4265,11 @@
     "packrat/desc/reprex": {
       "checksum": "60ce14384ae166a1ae940cb581f43b67"
     },
-    "packrat/desc/reshape2": {
-      "checksum": "1d1061897391ea4fbfd6b11a32424a87"
-    },
     "packrat/desc/rlang": {
       "checksum": "861751c5fa8a8a6a7dd2a9f7684bb0a4"
     },
     "packrat/desc/rmarkdown": {
-      "checksum": "8b239ed95ad9c8f75d80f48c6d0501b6"
+      "checksum": "e651fa193f47e12a7929d91c9ad84057"
     },
     "packrat/desc/rprojroot": {
       "checksum": "824307c5efda948165a76518bc9ac44a"
@@ -4246,7 +4281,7 @@
       "checksum": "df4e1cfd93a69ebdd2516ed0c5878efd"
     },
     "packrat/desc/rvest": {
-      "checksum": "24838a7973bd47de5d44a757086f6eea"
+      "checksum": "9bd527188fca868f92952399dff740c1"
     },
     "packrat/desc/sass": {
       "checksum": "ea4e82d6fa738c2a679f7c63839b4be2"
@@ -4264,7 +4299,13 @@
       "checksum": "dae0ce315778e02210ea102878ebdde4"
     },
     "packrat/desc/shinyjs": {
-      "checksum": "869148d208be90d14a0d350d62eb3bd1"
+      "checksum": "86f7249ab122b7d1de1ca1db922d21b5"
+    },
+    "packrat/desc/showtext": {
+      "checksum": "2902b4a4c49e40ff2641e79e5d25a932"
+    },
+    "packrat/desc/showtextdb": {
+      "checksum": "555787cb282d42586157c89b8355e10f"
     },
     "packrat/desc/snakecase": {
       "checksum": "a8e578e9bfb818d502822989cc5bcc64"
@@ -4273,7 +4314,7 @@
       "checksum": "97539f401765824623dff4b5c5ac016f"
     },
     "packrat/desc/stringi": {
-      "checksum": "9278b535dd40aae76c1ac58f15657a46"
+      "checksum": "714b81fe4be276206a9379d3608724e6"
     },
     "packrat/desc/stringr": {
       "checksum": "f763326e6a7ef145841f157df11fad49"
@@ -4281,8 +4322,11 @@
     "packrat/desc/sys": {
       "checksum": "c7dc2e6c9cedbe659e27b5926bc6d179"
     },
+    "packrat/desc/sysfonts": {
+      "checksum": "e28dc64720e5e59cb9e0e99d1c3d6a3f"
+    },
     "packrat/desc/systemfonts": {
-      "checksum": "23902a164e0a77a988f76935f651ba1c"
+      "checksum": "0bb95422794027a7057bd0c790e50bf5"
     },
     "packrat/desc/testthat": {
       "checksum": "5c8423546c8b18c45309b13c96014d22"
@@ -4291,7 +4335,7 @@
       "checksum": "702984801f4a2c04ec693137cea0d9e9"
     },
     "packrat/desc/tidyr": {
-      "checksum": "515e6dfc5bf807eea5d695a5a25a19b7"
+      "checksum": "50c1858976b550b5becd71b61dae97db"
     },
     "packrat/desc/tidyselect": {
       "checksum": "af4fd259bcd06e08d8608a3edd4e98b8"
@@ -4300,13 +4344,13 @@
       "checksum": "44115b4dc1702541188416a6134d90fb"
     },
     "packrat/desc/tinytex": {
-      "checksum": "475f475a8f3e249dd5ab03a982ea6c05"
+      "checksum": "adb6a2353155e42b31382c8890e1784b"
     },
     "packrat/desc/utf8": {
       "checksum": "3f4e45e6fc4983231f0949d9c979c1e0"
     },
     "packrat/desc/vctrs": {
-      "checksum": "494960077c3d61c7358ed2ef0c85839f"
+      "checksum": "7ecf99c3a0e773bc0444c5f717ba3dd3"
     },
     "packrat/desc/viridisLite": {
       "checksum": "995c702afa3864d7f3407f49882cbea5"
@@ -4318,10 +4362,10 @@
       "checksum": "b5bfb7538465fb1cf534eb9630ccdc01"
     },
     "packrat/desc/withr": {
-      "checksum": "685330aec1ba0baea6d8fae1810bb806"
+      "checksum": "f4af1f6e69b4c7d95626dedc98012824"
     },
     "packrat/desc/xfun": {
-      "checksum": "2d96c5f5b06306fd7ad37544103566d4"
+      "checksum": "de41f740615413438688f86bf0e37b4d"
     },
     "packrat/desc/xml2": {
       "checksum": "8b98a0d955cc1c8619dcd2511e787184"
@@ -4333,85 +4377,331 @@
       "checksum": "f18e6ca9d7017b65c58a6d3eb85f60f2"
     },
     "packrat/packrat.lock": {
-      "checksum": "8d93e90794417fd298d0bf53c788b868"
+      "checksum": "91918559922e6c1dcfac1b621aa8e05a"
     },
     "R/calc_disags.R": {
-      "checksum": "c6d26a4bc7ea17f13a5e3a7abe7a3293"
-    },
-    "R/catDetail_module.R": {
-      "checksum": "0084d84a4b7330bf83565bd769c39741"
-    },
-    "R/categoryPanel-module.R": {
-      "checksum": "ad4449a8a1b197db4c15a94af7d4115b"
-    },
-    "R/catSimpleSummary_module.R": {
-      "checksum": "6cb667914fb24564463e8d30a83feaa8"
+      "checksum": "cd53b22e9c9a017c000dc100ed5b66e3"
     },
     "R/cook_waffle.R": {
-      "checksum": "28955acee4e94f24311e3c2e3215da4d"
-    },
-    "R/create_indicator_info.R": {
-      "checksum": "2bbd2a633d5f255fbfb516951c5c3ef0"
+      "checksum": "698ab979b6a1652dfe085ce8045d4b3d"
     },
     "R/create_reactable.R": {
-      "checksum": "340f724950a3e76849119a3c322b8cf6"
+      "checksum": "d175b78151afcd2d10dac029d926f141"
+    },
+    "R/create_valuebox.R": {
+      "checksum": "5e2bb4c1484dca9c386d723167eb2058"
     },
     "R/filter_disag.R": {
-      "checksum": "f34a404baa46c1e816845b233d9bebb5"
-    },
-    "R/generate_source.R": {
-      "checksum": "edce838fc3a5746887de8d83f1cb4337"
-    },
-    "R/generate_text.R": {
-      "checksum": "1521153664adb33e9389e06e0b2a3bed"
+      "checksum": "bf1a9902e3adb229eeafdbcaedb65595"
     },
     "R/load_categories.R": {
-      "checksum": "cac0f379940d3263d3d6567fa0c844aa"
+      "checksum": "a8bfd781a0ea0d10dc53ef9af02f8e42"
     },
     "R/load_libraries.R": {
-      "checksum": "34af88d7e2c9ef54841841e1b835a5c1"
+      "checksum": "5cfd7d0455daad15a52a2fdd834124c0"
+    },
+    "R/make_barchart.R": {
+      "checksum": "c17eca5fcbf3e6f0a9338fc59eb3db87"
+    },
+    "R/module_categories.R": {
+      "checksum": "754f35d1ed9fd3be563f51631420799d"
+    },
+    "R/module_dataExplorer.R": {
+      "checksum": "33c3de4982c53aad49569f5b3b7599e8"
+    },
+    "R/module_infographics.R": {
+      "checksum": "f5fa45f294cc6a058082e349b33335e6"
+    },
+    "R/module_policies.R": {
+      "checksum": "65d1e5b5d689d8c129e866f4561dcc9c"
+    },
+    "R/translate_plots.R": {
+      "checksum": "cf7343393a0cf4b96a49ede69db87343"
+    },
+    "R/translate.R": {
+      "checksum": "d63b4c5f19a6b05b0929875493b8a6d8"
     },
     "README.md": {
-      "checksum": "b587068cf4300befb98c990efa955f01"
+      "checksum": "9e5142c2b2357d1f10ebab70a5dd3018"
     },
     "server.R": {
-      "checksum": "8930cb962b6fd60f1a5359e3e1d67f0d"
+      "checksum": "2dea27e10aee6005d079b65bfedc3d38"
     },
     "ui.R": {
-      "checksum": "e171b829470f445825e7423966ada6fa"
+      "checksum": "fe96222ced37526498cd6c94ed2be048"
     },
-    "www/content/about_app.md": {
-      "checksum": "8afefd7bdcc403da51c17d7079b8c209"
+    "www/content/CY/indicators/missing.md": {
+      "checksum": "d4cad56d19972349a6ddba83d3081ebc"
     },
-    "www/content/about_project.md": {
-      "checksum": "28e27969c8e9a66b7736292c601ef950"
+    "www/content/CY/intro.md": {
+      "checksum": "552a48f154eaf7ba34ab517d3dab06f7"
     },
-    "www/content/ind001.md": {
-      "checksum": "2f0f7194cd3448aa3cf8f7cdba247716"
+    "www/content/CY/policies/policy-employment.md": {
+      "checksum": "d5223efc84e43fea5b5816028306a226"
     },
-    "www/content/policy-explorer.md": {
-      "checksum": "f79ed5dcfd877d92b76f8260bd8440e7"
+    "www/content/CY/policies/policy-health.md": {
+      "checksum": "31ca13c48b9f0e41ffd91ab49842248e"
+    },
+    "www/content/CY/policies/policy-income.md": {
+      "checksum": "658158e14c27c3c7a558902eb3836df1"
+    },
+    "www/content/CY/policies/policy-living.md": {
+      "checksum": "31ca13c48b9f0e41ffd91ab49842248e"
+    },
+    "www/content/CY/policies/policy-morbidity.md": {
+      "checksum": "658158e14c27c3c7a558902eb3836df1"
+    },
+    "www/content/CY/policies/policy-social.md": {
+      "checksum": "658158e14c27c3c7a558902eb3836df1"
+    },
+    "www/content/CY/policies/policy-wellbeing.md": {
+      "checksum": "d5223efc84e43fea5b5816028306a226"
+    },
+    "www/content/EN/indicators/ind_001.md": {
+      "checksum": "51c4bad018e45c8b4d43a8c40b5ebfab"
+    },
+    "www/content/EN/indicators/ind_002.md": {
+      "checksum": "50f7b22eeff83a3dae9fe063f2820333"
+    },
+    "www/content/EN/indicators/ind_003.md": {
+      "checksum": "02c4b5831cfb931c5e5ba110dc0aee14"
+    },
+    "www/content/EN/indicators/ind_004.md": {
+      "checksum": "178b39d611981cec668f01e8ee2a9ca9"
+    },
+    "www/content/EN/indicators/ind_006.md": {
+      "checksum": "e627fc70e0249c787701715d87f680d8"
+    },
+    "www/content/EN/indicators/ind_007.md": {
+      "checksum": "2051f32c1faa6e71aeff2cde0a44ba74"
+    },
+    "www/content/EN/indicators/ind_008.md": {
+      "checksum": "1e2304f52fbaed82af5ceff33f6b0cba"
+    },
+    "www/content/EN/indicators/ind_009.md": {
+      "checksum": "dba26b18ca578ebff64cc1047f8606dc"
+    },
+    "www/content/EN/indicators/ind_010.md": {
+      "checksum": "ad0a99b137b803c5ec2aed147482e0b4"
+    },
+    "www/content/EN/indicators/ind_011.md": {
+      "checksum": "a53b27fe5567be46a6067fb1fe4cd773"
+    },
+    "www/content/EN/indicators/ind_012.md": {
+      "checksum": "1b3bef6bed0be88e1f73d4bf08f2c350"
+    },
+    "www/content/EN/indicators/ind_013.md": {
+      "checksum": "35f7c29b0d7d2f2e8e82ed4bc9554107"
+    },
+    "www/content/EN/indicators/ind_014.md": {
+      "checksum": "d0a174fe98aaf86e14582b8719bf83ce"
+    },
+    "www/content/EN/indicators/ind_015.md": {
+      "checksum": "d21b126ca6e943b8239e347f6b06459d"
+    },
+    "www/content/EN/indicators/ind_016.md": {
+      "checksum": "231b21edd31e07180175b9bc5e59c993"
+    },
+    "www/content/EN/indicators/ind_017.md": {
+      "checksum": "50339314bb5804cdcf420db3b206bfdc"
+    },
+    "www/content/EN/indicators/ind_018.md": {
+      "checksum": "22a30c13d5ddee17c997e33adbd532bb"
+    },
+    "www/content/EN/indicators/ind_019.md": {
+      "checksum": "b1bfda01fe304366ab18fc7b65215870"
+    },
+    "www/content/EN/indicators/ind_020.md": {
+      "checksum": "632c5cc356377e66d3b63a67e25b3620"
+    },
+    "www/content/EN/indicators/ind_025.md": {
+      "checksum": "8e6b140f8bbb985094fab1cee4ca7d0d"
+    },
+    "www/content/EN/indicators/ind_026.md": {
+      "checksum": "3b21992f3358b85a9619394c8375a2fe"
+    },
+    "www/content/EN/indicators/ind_032.md": {
+      "checksum": "d45230b3b63ec722679a1c638ea4f2db"
+    },
+    "www/content/EN/indicators/ind_033.md": {
+      "checksum": "e6969804c80fb52c41aaf9588d3649a1"
+    },
+    "www/content/EN/indicators/ind_034.md": {
+      "checksum": "41b86e35ed50d3c77df824bc7320b13a"
+    },
+    "www/content/EN/indicators/ind_035.md": {
+      "checksum": "34bc7c29027274edb14a9fd06b01bfc8"
+    },
+    "www/content/EN/indicators/ind_036.md": {
+      "checksum": "b2ec90217032f2f0ffdb2ec4582cf544"
+    },
+    "www/content/EN/indicators/ind_038.md": {
+      "checksum": "7885522005eadbd9e54b0f64b5a049c9"
+    },
+    "www/content/EN/indicators/ind_039.md": {
+      "checksum": "4ce99e6424d4b71d0522c64ed9b2e36b"
+    },
+    "www/content/EN/indicators/ind_041.md": {
+      "checksum": "d8dc702068fc5b60c5fc8ced8816d15a"
+    },
+    "www/content/EN/indicators/ind_043.md": {
+      "checksum": "5ac9753d721b4c05004be0267d7141de"
+    },
+    "www/content/EN/indicators/ind_044.md": {
+      "checksum": "c13a9d9af057e83eab9c00f76598d50e"
+    },
+    "www/content/EN/indicators/ind_045.md": {
+      "checksum": "80a5105e4fae8a936ceef7e626c6876f"
+    },
+    "www/content/EN/indicators/ind_046.md": {
+      "checksum": "96681a7d24b8d712670243099456615e"
+    },
+    "www/content/EN/indicators/ind_049.md": {
+      "checksum": "816cc865fcadf30fdafa7ae3b6bb736d"
+    },
+    "www/content/EN/indicators/ind_050.md": {
+      "checksum": "6daf8b0fb645d4a11798527374904bdd"
+    },
+    "www/content/EN/indicators/ind_051.md": {
+      "checksum": "684cad58c94aab263f6d0c874863c21a"
+    },
+    "www/content/EN/indicators/ind_052.md": {
+      "checksum": "cd1d515ad22d260ac8457399db4ff701"
+    },
+    "www/content/EN/indicators/ind_054.md": {
+      "checksum": "e674c0ecdcfb94e2e17913ed0946db34"
+    },
+    "www/content/EN/indicators/ind_055.md": {
+      "checksum": "916af730465a9bc555d159f5db2df3cf"
+    },
+    "www/content/EN/indicators/ind_056.md": {
+      "checksum": "6c31661344282b5d7a6f075b494227db"
+    },
+    "www/content/EN/indicators/ind_057.md": {
+      "checksum": "732c4ee44a1fb6a7c9a2eed049179836"
+    },
+    "www/content/EN/indicators/ind_059.md": {
+      "checksum": "431891d23559c7aacd73f115e046d655"
+    },
+    "www/content/EN/indicators/ind_060.md": {
+      "checksum": "d7fa3230c352504c09c2623c1a0905b5"
+    },
+    "www/content/EN/indicators/ind_063.md": {
+      "checksum": "04b946415f899d28f80f74b242fb5446"
+    },
+    "www/content/EN/indicators/ind_064.md": {
+      "checksum": "04b946415f899d28f80f74b242fb5446"
+    },
+    "www/content/EN/indicators/ind_065.md": {
+      "checksum": "1d37cf47956b81ecaef514e9f075fad3"
+    },
+    "www/content/EN/indicators/ind_068.md": {
+      "checksum": "45363959c7a9741364d25977e106c5d8"
+    },
+    "www/content/EN/indicators/ind_069.md": {
+      "checksum": "a74472311e76fbb0666229d9a77339b8"
+    },
+    "www/content/EN/indicators/ind_070.md": {
+      "checksum": "a298272620a1739b469c07a3ed9215a5"
+    },
+    "www/content/EN/indicators/ind_071.md": {
+      "checksum": "a776451215f25a44ef1b7fae3433c0c0"
+    },
+    "www/content/EN/indicators/ind_074.md": {
+      "checksum": "ca0a56f7f45d9c4c2e75d7aec077f414"
+    },
+    "www/content/EN/indicators/ind_075.md": {
+      "checksum": "eb57d6051e7e66f9441909e15a95e462"
+    },
+    "www/content/EN/indicators/ind_076.md": {
+      "checksum": "9b154995883015a788883f32bfacff57"
+    },
+    "www/content/EN/indicators/ind_077.md": {
+      "checksum": "abbcd0af344041fe4676a3f995f3a727"
+    },
+    "www/content/EN/indicators/ind_078.md": {
+      "checksum": "b3dd3631101290061e59e9bd3b8656a9"
+    },
+    "www/content/EN/indicators/ind_085.md": {
+      "checksum": "ee854a9b9d823a5d0b99375301f02eb8"
+    },
+    "www/content/EN/indicators/ind_092.md": {
+      "checksum": "4557f3c08f0de8cf29955c007e9fb440"
+    },
+    "www/content/EN/indicators/ind_093.md": {
+      "checksum": "7309580921fd345505b95d6106105b83"
+    },
+    "www/content/EN/indicators/ind_094.md": {
+      "checksum": "9b884f69c60dec060da2a670f2144722"
+    },
+    "www/content/EN/indicators/ind_095.md": {
+      "checksum": "9b884f69c60dec060da2a670f2144722"
+    },
+    "www/content/EN/indicators/ind_097.md": {
+      "checksum": "084634f2af2dbfcf3b764fe4a4ad3256"
+    },
+    "www/content/EN/indicators/ind_099.md": {
+      "checksum": "c9d9f9bdc288f8f7b33c9406f56ca156"
+    },
+    "www/content/EN/indicators/ind_102.md": {
+      "checksum": "0663ce3195a0cd8ff016949333a1b3dc"
+    },
+    "www/content/EN/indicators/ind_103.md": {
+      "checksum": "eea5229e94b622c16e492a4df23377af"
+    },
+    "www/content/EN/indicators/ind_107.md": {
+      "checksum": "623fafea23d2d895224e2a477832e872"
+    },
+    "www/content/EN/indicators/ind_109.md": {
+      "checksum": "f83d4f47128f62bc4cc6470db3d6404a"
+    },
+    "www/content/EN/indicators/missing.md": {
+      "checksum": "98b69e9379333d4447e002904bc094b3"
+    },
+    "www/content/EN/intro.md": {
+      "checksum": "79b225d0e5bb5a13971322d3ce537ec3"
+    },
+    "www/content/EN/policies/policy-employment.md": {
+      "checksum": "68ab1800fd6c66e791f43952770dac94"
+    },
+    "www/content/EN/policies/policy-health.md": {
+      "checksum": "2ba08ac577bf4975eaa449cb8cc462fd"
+    },
+    "www/content/EN/policies/policy-income.md": {
+      "checksum": "820460976a4a4025ad26d6c5971efb39"
+    },
+    "www/content/EN/policies/policy-living.md": {
+      "checksum": "5d15fe1f0cde4d19b79f9acf7a2742db"
+    },
+    "www/content/EN/policies/policy-morbidity.md": {
+      "checksum": "45f19d438e5a5ef35a40558d9f55bf30"
+    },
+    "www/content/EN/policies/policy-social.md": {
+      "checksum": "77c41582daf9e3b71fd9fdce8d7f2a63"
+    },
+    "www/content/EN/policies/policy-wellbeing.md": {
+      "checksum": "feedccf442dbc7ee8d2b8339f3916056"
     },
     "www/favicon.ico": {
       "checksum": "03697e45b450c4325fe8308ce552f0bf"
     },
     "www/icons/employment-working-conditions.png": {
-      "checksum": "bf5d3a555cf5a73d473c5b054f7d413b"
+      "checksum": "0d41c2961379ddf4d08704f6f2088168"
     },
     "www/icons/health-services.png": {
-      "checksum": "cee88efdfe91ed568dbff97dcf8f95ec"
+      "checksum": "8087159c30349b60e0123c9e8877ffe2"
     },
     "www/icons/income-social-protection.png": {
-      "checksum": "be49dc115fd53c1a6a81da37e0586116"
+      "checksum": "60065784b7891a5d91181d550104326a"
     },
     "www/icons/living-conditions.png": {
-      "checksum": "c07a647775234c6eed829a3bedde6516"
+      "checksum": "58c73a29a5dbb89d9ab31533f24ed19d"
     },
     "www/icons/social-human-capital.png": {
-      "checksum": "4a58f01f2822950073b8547b04437008"
+      "checksum": "806372f44258453ab0d35f5c5deddd36"
     },
     "www/logo.js": {
-      "checksum": "bae66a9ea0d9c8aae574637b473a24b9"
+      "checksum": "e44cb55e3846ea79a99c3410a6b4a8cf"
     },
     "www/logos/phw.png": {
       "checksum": "7da3274efea632da417b0fe2b60c93f2"
@@ -4421,6 +4711,9 @@
     },
     "www/logos/who-euro.png": {
       "checksum": "646edcd7f8d55c752dcd135093ccab5d"
+    },
+    "www/phw-style.css": {
+      "checksum": "de7da38d25f450d0260f82698aa4f4e8"
     }
   },
   "users": null
