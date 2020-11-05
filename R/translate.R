@@ -1,5 +1,27 @@
 translate_db = read_csv("data/translation_database.csv")
 
+update_db = function(indicator_info, translate_db){
+info_titles = indicator_info$name
+tran_titles = translate_db$EN
+missing = which(!(info_titles %in% tran_titles))
+
+if (length(missing > 0)) {
+new = info_titles[missing]
+new_id = indicator_info$ind_id[missing]
+
+for (i in seq_along(new_id)) {
+  id = new_id[i]
+  trans_row = str_which(translate_db$key, id)
+  if (length(trans_row) != 1) {
+    stop("Error in updating translation db")
+  }
+  translate_db$EN[trans_row] = new[i]
+}
+write_csv(translate_db, file = "data/translation_database.csv")
+}
+return(translate_db)
+}
+
 tr_pull = function(translate_db, key, lang, search = FALSE){
   if (search) {
     translate_db %>%

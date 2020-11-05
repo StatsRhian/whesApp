@@ -2,53 +2,53 @@ key,EN,CY
 wellbeing_ind_001,"Percentage of adults reporting fair, bad or very bad health",Cyfieithu Cymraeg yn mynd yma
 wellbeing_ind_002,Percentage of students who rate their health as fair or poor,Cyfieithu Cymraeg yn mynd yma
 morbidity_ind_003,"Percentage of survey respondents with a limiting long-standing illness, disability or infirmity",Cyfieithu Cymraeg yn mynd yma
-wellbeing_ind_004,"Estimated prevalence of self-reported illness caused or made worse by work, for people working in the last 12 months",Cyfieithu Cymraeg yn mynd yma
+wellbeing_ind_004,"Estimated prevalence of self-reported illness caused or made worse by work, for people working in the last 12 months (per 100,000)",Cyfieithu Cymraeg yn mynd yma
 morbidity_ind_006,Percentage of survey respondents with heart and circulatory illness,Cyfieithu Cymraeg yn mynd yma
-morbidity_ind_007,Percentage of survey respondents with diabetes incl. hyperglycaemia,Cyfieithu Cymraeg yn mynd yma
+morbidity_ind_007,Percentage of survey respondents with Diabetes incl. Hyperglycaemia,Cyfieithu Cymraeg yn mynd yma
 morbidity_ind_008,"Death rate per 100,000 due to tuberculosis",Cyfieithu Cymraeg yn mynd yma
 wellbeing_ind_009,Percentage of survey respondents who rated their satisfaction with life as low (0-4 out of 10),Cyfieithu Cymraeg yn mynd yma
 wellbeing_ind_010,"Percentage of students who rated their life satisfaction as 6 out of 10, or above",Cyfieithu Cymraeg yn mynd yma
 wellbeing_ind_011,Percentage of adults (16+) scoring low on the  Warwick-Edinburgh Mental Well-being Scale,Cyfieithu Cymraeg yn mynd yma
-morbidity_ind_012,Infant mortality (under 1 year),Cyfieithu Cymraeg yn mynd yma
+morbidity_ind_012,"Infant mortality rate, the number of children that die under one year of age, per 1,000 live births",Cyfieithu Cymraeg yn mynd yma
 morbidity_ind_013,Life expectancy at birth in years,Cyfieithu Cymraeg yn mynd yma
 morbidity_ind_014,Percentage of survey respondents who currently smoke either daily or occasionally,Cyfieithu Cymraeg yn mynd yma
-morbidity_ind_015,Percentage of survey respondents who usual weekly alcohol consumption is lower risk (>0 but <=14 units),Cyfieithu Cymraeg yn mynd yma
-morbidity_ind_016,Percentage of survey respondents whoe usual weekly alcohol consumption is higher risk (>14 units),Cyfieithu Cymraeg yn mynd yma
+morbidity_ind_015,Usual weekly alcohol consumption is lower risk (>0 but <=14 units),Cyfieithu Cymraeg yn mynd yma
+morbidity_ind_016,Usual weekly alcohol consumption is higher risk (>14 units),Cyfieithu Cymraeg yn mynd yma
 morbidity_ind_017,Percentage of adults aged 18-64 who are obese,Cyfieithu Cymraeg yn mynd yma
 wellbeing_ind_018,Percentage of students who are physically active for at least 60 minutes per day,Cyfieithu Cymraeg yn mynd yma
 living_ind_019,Percentage of households with a sufficient number of bedrooms for the household,Cyfieithu Cymraeg yn mynd yma
 living_ind_020,Percentage of survey respondents who rated their overall satisfaction with their accomodation as low (0-4 out of 10),Cyfieithu Cymraeg yn mynd yma
 living_ind_025,"Death rate per 100,000 due to road traffic accidents",Cyfieithu Cymraeg yn mynd yma
 living_ind_026,Number of households receiving housing benefit,Cyfieithu Cymraeg yn mynd yma
-living_ind_032,Average PM10 concentrations across local authority and health board areas in Wales,Cyfieithu Cymraeg yn mynd yma
+living_ind_032,Average PM10 concentrations across Wales (µg/m3),Cyfieithu Cymraeg yn mynd yma
 living_ind_033,Percentage of adults aged 16+ years reporting difficulty accessing local green space,Cyfieithu Cymraeg yn mynd yma
 living_ind_034,Percentage of disabled persons (aged 16+) reporting difficulty getting to or from stop/station,Cyfieithu Cymraeg yn mynd yma
 living_ind_035,Percentage of adults (16+) feeling unsafe when walking alone in local area after dark,Cyfieithu Cymraeg yn mynd yma
 living_ind_036,Percentage of adults feeling unsafe at home after dark,Cyfieithu Cymraeg yn mynd yma
-living_ind_038,"Percentage of households which eat meals with meat, chicken, fish (or vegatarien equivalent) at least every other day",Cyfieithu Cymraeg yn mynd yma
-living_ind_039,Value-added tax (VAT) on alcohol,Cyfieithu Cymraeg yn mynd yma
+living_ind_038,"Percentage of households which eat eals with meat, chicken, fish (or vegetarian equivalent) at least every other day",Cyfieithu Cymraeg yn mynd yma
+living_ind_039,Value-added tax (VAT) on alcohol (%),Cyfieithu Cymraeg yn mynd yma
 social_ind_041,"Percentage of children at the final year of foundation phase achieving the expected Outcome (Outcome 5+) for Personal and social development, well-being and cultural diversity",Cyfieithu Cymraeg yn mynd yma
 social_ind_043,Percentage of adults who report a feeling lonely (a score of 4 to 6 on the De Jong Gierveld loneliness scale),Cyfieithu Cymraeg yn mynd yma
 social_ind_044,"Percentage of students who agree that there is support at their school for students who feel unhappy, worried or unable to cope",Cyfieithu Cymraeg yn mynd yma
 social_ind_045,"Percentage of adults (aged 16+) who have relatives, friends, or neighbours they can ask for help",Cyfieithu Cymraeg yn mynd yma
 social_ind_046,Percentage of adults who feel they are in control of their daily life as much as they can be,Cyfieithu Cymraeg yn mynd yma
 social_ind_049,Percentage of childen aged 4 years participating in education,Cyfieithu Cymraeg yn mynd yma
-social_ind_050,Total expenditure delegated to nursery school education,Cyfieithu Cymraeg yn mynd yma
-social_ind_051,"Estimated 16-24 year olds not in education, training or employment",Cyfieithu Cymraeg yn mynd yma
+social_ind_050,Total expenditure delegated to nursery school education (£ thousand),Cyfieithu Cymraeg yn mynd yma
+social_ind_051,"Percentage of 16-24 year olds not in education, training or employment",Cyfieithu Cymraeg yn mynd yma
 social_ind_052,Percentage of pupils in year 11/aged 15 who achieved Level 2 incl. English/Welsh and maths,Cyfieithu Cymraeg yn mynd yma
 social_ind_054,Percentage of people who volunteer (National indicator),Cyfieithu Cymraeg yn mynd yma
 social_ind_055,Percentage of people who feel they are able to influence decisions affecting their local area,Cyfieithu Cymraeg yn mynd yma
 social_ind_056,Percentage of people who feel most people can be trusted,Cyfieithu Cymraeg yn mynd yma
-employment_ind_057,Gross Value Added through compensation of employees i.e. wages and salaries plus employers' social contributions.,Cyfieithu Cymraeg yn mynd yma
-employment_ind_059,"Estimated incidence of self-reported workplace non-fatal injuries, for people working in the last 12 months",Cyfieithu Cymraeg yn mynd yma
-employment_ind_060,Difference in employment rates between those who are disabled and not disabled,Cyfieithu Cymraeg yn mynd yma
+employment_ind_057,Gross Value Added through compensation of employees i.e. wages and salaries plus employers' social contributions (£ million),Cyfieithu Cymraeg yn mynd yma
+employment_ind_059,"Estimated incidence of self-reported workplace non-fatal injuries, for people working in the last 12 months (per 100,000)",Cyfieithu Cymraeg yn mynd yma
+employment_ind_060,Percent difference in employment rates between those who are disabled and not disabled,Cyfieithu Cymraeg yn mynd yma
 employment_ind_063,International Labour Organisation (ILO) unemployment rate,Cyfieithu Cymraeg yn mynd yma
 employment_ind_064,International Labour Organisation (ILO) economic activity rate,Cyfieithu Cymraeg yn mynd yma
-employment_ind_065,Total identifiable expenditure on social protection,Cyfieithu Cymraeg yn mynd yma
+employment_ind_065,Total identifiable expenditure on social protection (£ per head),Cyfieithu Cymraeg yn mynd yma
 employment_ind_068,Number of claimants that are claiming Jobseekers Allowance,Cyfieithu Cymraeg yn mynd yma
 employment_ind_069,Temporary employees as a percentage of the total number of employees aged 20 to 64 years,Cyfieithu Cymraeg yn mynd yma
-employment_ind_070,National Living Wage and the National Minimum Wage rates,Cyfieithu Cymraeg yn mynd yma
-employment_ind_071,Average (median) gross hourly earnings,Cyfieithu Cymraeg yn mynd yma
+employment_ind_070,National Living Wage and the National Minimum Wage rates (£),Cyfieithu Cymraeg yn mynd yma
+employment_ind_071,Average (median) gross hourly earnings (£),Cyfieithu Cymraeg yn mynd yma
 employment_ind_074,Percentage of working age adults in relative income poverty,Cyfieithu Cymraeg yn mynd yma
 employment_ind_075,Percentage of survey respondents who are moderately or highly satisfied with present job,Cyfieithu Cymraeg yn mynd yma
 employment_ind_076,Percentage of survey respondents who are working 49+ hours per week,Cyfieithu Cymraeg yn mynd yma
@@ -59,7 +59,7 @@ health_ind_092,Percentage of women (25 - 49) who are eligible for cervical scree
 health_ind_093,Percentage uptake of MMR dose two in children at five years of age,Cyfieithu Cymraeg yn mynd yma
 health_ind_094,Prevalence of hypertension in the GP practice registered population,Cyfieithu Cymraeg yn mynd yma
 health_ind_095,Prevalence of diabetes in the GP practice registered population,Cyfieithu Cymraeg yn mynd yma
-health_ind_097,Total identifiable expenditure on health,Cyfieithu Cymraeg yn mynd yma
+health_ind_097,Total identifiable expenditure on health (£ per head),Cyfieithu Cymraeg yn mynd yma
 health_ind_099,"Number of physicians or doctors per 100,000 inhabitants",Cyfieithu Cymraeg yn mynd yma
 health_ind_102,"Available hospital beds per 100,000 inhabitants",Cyfieithu Cymraeg yn mynd yma
 health_ind_103,Percentage of survey respondents aged 16+ years caring for family members/friends/neighbours,Cyfieithu Cymraeg yn mynd yma
@@ -115,7 +115,7 @@ disag_Education_value_03,Medium,Canolig
 disag_Education_value_04,All,I gyd
 disag_Education_value_05,NA,NA
 disag_Education_value_06,None,Dim
-disag_Age_value_01 ,16 - 24,16 - 24
+disag_Age_value_01,16 - 24,16 - 24
 disag_Age_value_02,25 - 64,25 - 64
 disag_Age_value_03,65+,65+
 disag_Age_value_04,All,I gyd
@@ -152,9 +152,9 @@ disag_Age_value_34,Children,Plant
 disag_Age_value_35,Working-age adults,Oedolion o oedran gweithio
 disag_Age_value_36,16 - 18,16 - 18
 disag_Age_value_37,19 - 24,19 - 24
-download,Download,Lawrlwytho 
+download,Download,Lawrlwytho
 percent,Percent,Y Cant
-all,All,I gyd 
+all,All,I gyd
 show_ci,Show confidence intervals?,Dangos cyfyngau hyder?
 table_search,Search…,Chwilio…
 table_no_entries,No entries found,Ni ddarganfuwyd unrhyw gofnodion

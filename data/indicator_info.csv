@@ -2,53 +2,53 @@ ind_id,category,name,source_id
 ind_001,wellbeing,"Percentage of adults reporting fair, bad or very bad health",nsw1819
 ind_002,wellbeing,Percentage of students who rate their health as fair or poor,NA
 ind_003,morbidity,"Percentage of survey respondents with a limiting long-standing illness, disability or infirmity",nsw1819
-ind_004,wellbeing,"Estimated prevalence of self-reported illness caused or made worse by work, for people working in the last 12 months",NA
+ind_004,wellbeing,"Estimated prevalence of self-reported illness caused or made worse by work, for people working in the last 12 months (per 100,000)",NA
 ind_006,morbidity,Percentage of survey respondents with heart and circulatory illness,nsw1819
-ind_007,morbidity,Percentage of survey respondents with diabetes incl. hyperglycaemia,nsw1819
+ind_007,morbidity,Percentage of survey respondents with Diabetes incl. Hyperglycaemia,nsw1819
 ind_008,morbidity,"Death rate per 100,000 due to tuberculosis",NA
 ind_009,wellbeing,Percentage of survey respondents who rated their satisfaction with life as low (0-4 out of 10),nsw1819
 ind_010,wellbeing,"Percentage of students who rated their life satisfaction as 6 out of 10, or above",NA
 ind_011,wellbeing,Percentage of adults (16+) scoring low on the  Warwick-Edinburgh Mental Well-being Scale,nsw1819
-ind_012,morbidity,Infant mortality (under 1 year),NA
+ind_012,morbidity,"Infant mortality rate, the number of children that die under one year of age, per 1,000 live births",NA
 ind_013,morbidity,Life expectancy at birth in years,NA
 ind_014,morbidity,Percentage of survey respondents who currently smoke either daily or occasionally,nsw1819
-ind_015,morbidity,Percentage of survey respondents who usual weekly alcohol consumption is lower risk (>0 but <=14 units),nsw1819
-ind_016,morbidity,Percentage of survey respondents whoe usual weekly alcohol consumption is higher risk (>14 units),nsw1819
+ind_015,morbidity,Usual weekly alcohol consumption is lower risk (>0 but <=14 units),nsw1819
+ind_016,morbidity,Usual weekly alcohol consumption is higher risk (>14 units),nsw1819
 ind_017,morbidity,Percentage of adults aged 18-64 who are obese,nsw1819
 ind_018,wellbeing,Percentage of students who are physically active for at least 60 minutes per day,NA
 ind_019,living,Percentage of households with a sufficient number of bedrooms for the household,nsw1718
 ind_020,living,Percentage of survey respondents who rated their overall satisfaction with their accomodation as low (0-4 out of 10),nsw1314
 ind_025,living,"Death rate per 100,000 due to road traffic accidents",NA
 ind_026,living,Number of households receiving housing benefit,NA
-ind_032,living,Average PM10 concentrations across local authority and health board areas in Wales,NA
+ind_032,living,Average PM10 concentrations across Wales (µg/m3),NA
 ind_033,living,Percentage of adults aged 16+ years reporting difficulty accessing local green space,nsw1819
 ind_034,living,Percentage of disabled persons (aged 16+) reporting difficulty getting to or from stop/station,nsw1617
 ind_035,living,Percentage of adults (16+) feeling unsafe when walking alone in local area after dark,nsw1819
 ind_036,living,Percentage of adults feeling unsafe at home after dark,nsw1819
-ind_038,living,"Percentage of households which eat meals with meat, chicken, fish (or vegatarien equivalent) at least every other day",nsw1819
-ind_039,living,Value-added tax (VAT) on alcohol,NA
+ind_038,living,"Percentage of households which eat eals with meat, chicken, fish (or vegetarian equivalent) at least every other day",nsw1819
+ind_039,living,Value-added tax (VAT) on alcohol (%),NA
 ind_041,social,"Percentage of children at the final year of foundation phase achieving the expected Outcome (Outcome 5+) for Personal and social development, well-being and cultural diversity",NA
 ind_043,social,Percentage of adults who report a feeling lonely (a score of 4 to 6 on the De Jong Gierveld loneliness scale),nsw1718
 ind_044,social,"Percentage of students who agree that there is support at their school for students who feel unhappy, worried or unable to cope",NA
 ind_045,social,"Percentage of adults (aged 16+) who have relatives, friends, or neighbours they can ask for help",nsw1314
 ind_046,social,Percentage of adults who feel they are in control of their daily life as much as they can be,nsw1819
 ind_049,social,Percentage of childen aged 4 years participating in education,NA
-ind_050,social,Total expenditure delegated to nursery school education,NA
-ind_051,social,"Estimated 16-24 year olds not in education, training or employment",NA
+ind_050,social,Total expenditure delegated to nursery school education (£ thousand),NA
+ind_051,social,"Percentage of 16-24 year olds not in education, training or employment",NA
 ind_052,social,Percentage of pupils in year 11/aged 15 who achieved Level 2 incl. English/Welsh and maths,NA
 ind_054,social,Percentage of people who volunteer (National indicator),nsw1718
 ind_055,social,Percentage of people who feel they are able to influence decisions affecting their local area,nsw1819
 ind_056,social,Percentage of people who feel most people can be trusted,nsw1718
-ind_057,employment,Gross Value Added through compensation of employees i.e. wages and salaries plus employers' social contributions.,NA
-ind_059,employment,"Estimated incidence of self-reported workplace non-fatal injuries, for people working in the last 12 months",NA
-ind_060,employment,Difference in employment rates between those who are disabled and not disabled,NA
+ind_057,employment,Gross Value Added through compensation of employees i.e. wages and salaries plus employers' social contributions (£ million),NA
+ind_059,employment,"Estimated incidence of self-reported workplace non-fatal injuries, for people working in the last 12 months (per 100,000)",NA
+ind_060,employment,Percent difference in employment rates between those who are disabled and not disabled,NA
 ind_063,employment,International Labour Organisation (ILO) unemployment rate,NA
 ind_064,employment,International Labour Organisation (ILO) economic activity rate,NA
-ind_065,employment,Total identifiable expenditure on social protection,NA
+ind_065,employment,Total identifiable expenditure on social protection (£ per head),NA
 ind_068,employment,Number of claimants that are claiming Jobseekers Allowance,NA
 ind_069,employment,Temporary employees as a percentage of the total number of employees aged 20 to 64 years,NA
-ind_070,employment,National Living Wage and the National Minimum Wage rates,NA
-ind_071,employment,Average (median) gross hourly earnings,NA
+ind_070,employment,National Living Wage and the National Minimum Wage rates (£),NA
+ind_071,employment,Average (median) gross hourly earnings (£),NA
 ind_074,employment,Percentage of working age adults in relative income poverty,NA
 ind_075,employment,Percentage of survey respondents who are moderately or highly satisfied with present job,nsw1718
 ind_076,employment,Percentage of survey respondents who are working 49+ hours per week,nsw1718
@@ -59,7 +59,7 @@ ind_092,health,Percentage of women (25 - 49) who are eligible for cervical scree
 ind_093,health,Percentage uptake of MMR dose two in children at five years of age,NA
 ind_094,health,Prevalence of hypertension in the GP practice registered population,NA
 ind_095,health,Prevalence of diabetes in the GP practice registered population,NA
-ind_097,health,Total identifiable expenditure on health,NA
+ind_097,health,Total identifiable expenditure on health (£ per head),NA
 ind_099,health,"Number of physicians or doctors per 100,000 inhabitants",NA
 ind_102,health,"Available hospital beds per 100,000 inhabitants",NA
 ind_103,health,Percentage of survey respondents aged 16+ years caring for family members/friends/neighbours,nsw1718

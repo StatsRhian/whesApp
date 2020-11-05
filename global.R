@@ -18,6 +18,11 @@ indicator_info =
   mutate(disag = calc_disag_vars(ind_id)) %>%
   left_join(distinct(select(indicator_data, c(ind_id, type))))
 
+development = TRUE
+if (development) {
+  translate_db = update_db(indicator_info, translate_db)
+}
+
 # Colour schemes
 brewer_pallete = "Dark2"
 primary = "#1A5D7E"
