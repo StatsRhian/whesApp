@@ -1,10 +1,15 @@
-make_barchart = function(df = data(),
+create_barchart = function(df = data(),
                          disag1 = input$disag1, 
                          disag2 = input$disag2,
                          ci = input$show_ci,
                          title = "", 
                          caption = "Welsh Health Equity Status 2020",
                          lang = "EN"){
+  
+  df = 
+    df %>%
+    filter(!is.nan(value))
+  
 d = 0.9
   if (disag1 == "None" & disag2 == "None") {
     g = df %>%
@@ -48,6 +53,9 @@ d = 0.9
     g = g + 
       scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
       ylab(tr_pull(translate_db, "percent", lang))
+  } else {
+    g = g + ylab(tr_pull(translate_db, "value", lang))
+      
   }
   return(g)
 }

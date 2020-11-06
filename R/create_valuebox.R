@@ -1,4 +1,4 @@
-make_valuebox = function(df, caption = caption){
+create_valuebox = function(df, caption = caption){
   g = 
     ggplot(df, aes(10, 10, height = 5, width = 8, label = ind_id)) +
     geom_tile(fill = primary, linejoin = "round") +

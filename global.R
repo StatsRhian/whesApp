@@ -4,7 +4,7 @@ source("R/filter_disag.R")
 source("R/translate.R")
 source("R/cook_waffle.R")
 source("R/translate_plots.R")
-source("R/make_barchart.R")
+source("R/create_barchart.R")
 source("R/calc_disags.R")
 
 # Install fonts for font awesome

@@ -166,3 +166,4 @@ table_indicator,Indicator,Dangosydd
 table_category,Category,Categori
 col_value,Value,Gwerth
 col_confidence,Confidence,Hyder
+small_numbers,* indicates value removed due to small sample size (n < 30),* yn dynodi gwerth a dynnwyd oherwydd maint sampl bach (n <30)
