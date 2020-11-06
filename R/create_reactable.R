@@ -31,16 +31,20 @@ create_reactable = function(df, lang){
     table_out = 
       df %>%
       reactable(
+        showPageSizeOptions = TRUE,
         columns = list(
           value = colDef(name = tr_pull(translate_db, "col_value", lang),
-                         format = colFormat(percent = TRUE, digits = 1))
+                         format = colFormat(percent = TRUE, digits = 1),
+                         na = "*")
         ))
   } else {
     table_out = 
       df %>%
       reactable(
+        showPageSizeOptions = TRUE,
         columns = list(
-          value = colDef(name = tr_pull(translate_db, "col_value", lang))
+          value = colDef(name = tr_pull(translate_db, "col_value", lang),
+                         na = "*")
         )
       )
   }

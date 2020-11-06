@@ -40,30 +40,33 @@ dataExplorerUI = function(id, cat){
                                        "Education level" = "Education"),
                            selected = "Age")
         ) # End: column
-        ), # End: fluid row
+      ), # End: fluid row
       
       fluidRow(
-        column(7,
+        column(6,
                wellPanel(
                  fluidRow(column(12,
-                                   plotOutput(ns("bar_plot")),
-                                   br()
+                                 plotOutput(ns("bar_plot")),
+                                 br()
                  )),
                  fluidRow(
-                   column(6, uiOutput(ns("download_plot_button"))),
-                   column(6, uiOutput(ns("ci_button")))
+                   column(3, uiOutput(ns("download_plot_button"))),
+                   column(9, uiOutput(ns("ci_button")))
                  )
                )       
         ), # End: column
-        column(5,
+        column(6,
                wellPanel(
                  fluidRow(column(12,
                                  reactableOutput(ns("detailed_table")),
                                  br()
                  )),
-                 fluidRow(column(12,
-                                 uiOutput(ns("download_data_button"))
-                 ))
+                 fluidRow(
+                   column(3,
+                          uiOutput(ns("download_data_button"))
+                   ), 
+                   column(9,
+                          textOutput(ns("small_numbers"))))
                )
         ) # End: column
       ), # End: fluid row
@@ -199,6 +202,13 @@ dataExplorer = function(input, output, session, lang, cat){
           create_reactable(lang = lang())
       })
     
+    
+    # Small numbers text ------------------------
+    
+    output$small_numbers = renderText({
+      tr_pull(translate_db, "small_numbers", lang())
+    })
+    
     # Confidence Intervals Button ----------------------
     no_ci = 
       indicator_data %>%
@@ -230,22 +240,22 @@ dataExplorer = function(input, output, session, lang, cat){
   
   # Bar chart ---------------------------------
   plot_obj = reactive({
-    make_barchart(df = data(),
-                  disag1 = input$disag1,
-                  disag2 = input$disag2,
-                  ci = input$show_ci,
-                  title = tr_pull(translate_db, 
-                                  key = input$ind_id,
-                                  lang = lang(),
-                                  search = TRUE), 
-                  caption = tr_pull(translate_db, 
-                                    key = "caption",
-                                    lang = lang()),
-                  lang = lang())
+    create_barchart(df = data(),
+                    disag1 = input$disag1,
+                    disag2 = input$disag2,
+                    ci = input$show_ci,
+                    title = tr_pull(translate_db, 
+                                    key = input$ind_id,
+                                    lang = lang(),
+                                    search = TRUE), 
+                    caption = tr_pull(translate_db, 
+                                      key = "caption",
+                                      lang = lang()),
+                    lang = lang())
   })
   
   output$bar_plot = renderPlot({
-      plot_obj()
+    plot_obj()
   })   
   
   # Download buttons --------------------------
