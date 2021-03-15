@@ -1,13 +1,17 @@
-# Calculate which disaggregates are available for all indicators
-calc_disag_vars = Vectorize(function(id){
-  disags = 
+#' Calculate disaggregates
+#' Calculate which disaggregates are available for all indicators
+#' @param id The selected indicator
+#' @return The available disagregates
+calc_disag_vars = Vectorize(function(id) {
+  disags =
     indicator_data %>%
-    filter(ind_id == id) %>%
-    summarise(across(all_of(breakdown_vars), n_distinct)) %>%
-    pivot_longer(cols = everything()) %>%
-    filter(value > 1) %>%
-    pull(name) 
-  
+    dplyr::filter(ind_id == id) %>%
+    dplyr::summarise(dplyr::across(tidyselect::all_of(breakdown_vars),
+                                   dplyr::n_distinct)) %>%
+    tidyr::pivot_longer(cols = tidyselect::everything()) %>%
+    dplyr::filter(value > 1) %>%
+    dplyr::pull(name)
+
   if (identical(disags, character(0))) {
     disags = "None"
   } else {
@@ -16,14 +20,3 @@ calc_disag_vars = Vectorize(function(id){
   return(list(disags))
 },
 USE.NAMES = FALSE)
-
-# Not currently used
-get_disag_choices = function(id){
-  indicator_info %>%
-    filter(ind_id == id) %>%
-    pull(disag) %>%
-    magrittr::extract2(1)
-}
-
-
-

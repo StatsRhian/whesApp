@@ -1,6 +1,11 @@
-translate_db = read_csv("data/translation_database.csv")
+#' Update database
+#' @param indicator_info The indictor information
+#' @param translate_db The translation database
+#' @return The updated database
+#' This function is only used in development when
+#' there is an update to the indicators.
 
-update_db = function(indicator_info, translate_db){
+update_db = function(indicator_info, translate_db) {
 info_titles = indicator_info$name
 tran_titles = translate_db$EN
 missing = which(!(info_titles %in% tran_titles))
@@ -11,72 +16,95 @@ new_id = indicator_info$ind_id[missing]
 
 for (i in seq_along(new_id)) {
   id = new_id[i]
-  trans_row = str_which(translate_db$key, id)
+  trans_row = stringr::str_which(translate_db$key, id)
   if (length(trans_row) != 1) {
     stop("Error in updating translation db")
   }
   translate_db$EN[trans_row] = new[i]
 }
-write_csv(translate_db, file = "data/translation_database.csv")
+readr::write_csv(translate_db, file = "data/translation_database.csv")
 }
 return(translate_db)
 }
 
-tr_pull = function(translate_db, key, lang, search = FALSE){
+#' Pull translation
+#' @param translate_db The translation database
+#' @param key The phrase to translate
+#' @param lang The language to translate into
+#' @param search Whether to search for many matches or just one
+#' @return Translation
+tr_pull = function(translate_db, key, lang, search = FALSE) {
   if (search) {
     translate_db %>%
-      filter(str_detect(key, {{ key }})) %>%
-      pull({{ lang }})
+      dplyr::filter(stringr::str_detect(key, {{ key }})) %>%
+      dplyr::pull({{ lang }})
   } else {
     translate_db %>%
-      filter(key == {{ key }}) %>%
-      pull({{ lang }})
+      dplyr::filter(key == {{ key }}) %>%
+      dplyr::pull({{ lang }})
   }
 }
 
-tr_table = function(df, translate_db, lang){
-  
+#' Translate
+#' @param df The table to translate
+#' @param translate_db The translation database
+#' @param lang The language to translate into (EN or CY)
+tr_table = function(df, translate_db, lang) {
+
   if (lang == "CY") {
-    df_breakdown = which(breakdown_vars %in% names(df))
-    
+    df_breakdown = which(whesApp::breakdown_vars %in% names(df))
+
     for (i in seq_along(df_breakdown)) {
-      disag = breakdown_vars[df_breakdown[i]]
-      mini_trans = 
+      disag = whesApp::breakdown_vars[df_breakdown[i]]
+      mini_trans =
         translate_db %>%
-        filter(str_detect(key, glue("^disag_{disag}")))
-      
-      disag_levels = levels(df %>% pull({{ disag }}))
-      levels_CY = mini_trans$CY[match(disag_levels, mini_trans$EN)]
-      
+        dplyr::filter(stringr::str_detect(.data$key, glue::glue("^disag_{disag}")))
+
+      disag_levels = levels(df %>% dplyr::pull({{ disag }}))
+      levels_cy = mini_trans$CY[match(disag_levels, mini_trans$EN)]
+
       df = suppressWarnings(
           df %>%
-          left_join(mini_trans, by = setNames("EN", disag)) %>%
-          select(-key, -{{ disag }}) %>%
-          rename({{ disag }} := "CY") %>%
-          relocate({{ disag }}, .before = value) %>%
-          mutate({{ disag }} := fct_relevel(as_factor(!!sym(disag)), levels = levels_CY)) # keep level order
+          dplyr::left_join(mini_trans, by = stats::setNames("EN", disag)) %>%
+          dplyr::select(-.data$key, -{{ disag }}) %>%
+          dplyr::rename({{ disag }} := "CY") %>%
+          dplyr::relocate({{ disag }}, .before = .data$value) %>%
+          dplyr::mutate({{ disag }} := forcats::fct_relevel(
+            forcats::as_factor(!!rlang::sym(disag)),
+            levels = levels_cy)) # keep level order
       )
     }
   }
   return(df)
 }
 
-tr_deframe_inds = function(translate_db, key_group, lang, indicator_info){
-  available_inds = 
+
+#' TR deframe indicators
+#' @param translate_db The translation database
+#' @param key_group The key phrase
+#' @param lang The language to translate into
+#' @param indicator_info The indicator information
+#' @return The translation
+tr_deframe_inds = function(translate_db, key_group, lang, indicator_info) {
+  available_inds =
     indicator_info %>%
-    filter(category == key_group) %>%
-    pull(ind_id) 
-  
-  pattern = glue("^{key_group}_({paste(available_inds, collapse = '|')})$")
+    dplyr::filter(.data$category == key_group) %>%
+    dplyr::pull(.data$ind_id)
+
+  pattern = glue::glue("^{key_group}_({paste(available_inds, collapse = '|')})$")
   return(tr_deframe(translate_db, pattern, lang))
 }
 
+#' Translation deframe
+#' @param translate_db The translation database
+#' @param pattern The pattern to search for
+#' @param lang The language to translate into
 # indented for the search filters
-tr_deframe = function(translate_db, pattern, lang){
+tr_deframe = function(translate_db, pattern, lang) {
   translate_db %>%
-    filter(str_detect(key,  pattern)) %>% 
-    mutate(ind_id = str_extract(key, "_.*"),
-           ind_id = str_remove(ind_id, "_")) %>% 
-    select({{ lang }}, ind_id) %>% 
-    deframe()
+    dplyr::filter(stringr::str_detect(.data$key,  pattern)) %>%
+    dplyr::mutate(ind_id = stringr::str_extract(.data$key, "_.*"),
+                  ind_id = stringr::str_remove(.data$ind_id, "_")) %>%
+    dplyr::select({{ lang }}, .data$ind_id) %>%
+    tibble::deframe()
 }
