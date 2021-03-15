@@ -1,93 +1,117 @@
-prep_waffle = function(df, disag = input$disag){
+#' Prep Waffle
+#' Prepare the waffle plot
+#' @param df The selected data
+#' @param disag The grouping to disaggregate (can be None)
+#' @return Prepped data, ready for plotting
+prep_waffle = function(df, disag) {
 
-  df = 
+  df =
     df %>%
-    rename(Yes = value) %>%
-    mutate(No = 1 - Yes)  %>%
-    select(-type, -ci_lower, -ci_upper, -ind_id) %>%
-    when(
-      (disag == "None") ~ pivot_longer(., cols = everything(),
-                                       names_to = "Response",
-                                       values_to = "Percent") ,
-      ~  pivot_longer(., cols = -!!sym(disag),
-                      names_to = "Response",
-                      values_to = "Percent")
+    dplyr::rename(Yes = .data$value) %>%
+    dplyr::mutate(No = 1 - .data$Yes)  %>%
+    dplyr::select(-.data$type, -.data$ci_lower, -.data$ci_upper, -.data$ind_id) %>%
+    purrr::when(
+      (disag == "None") ~ tidyr::pivot_longer(.,
+                                              cols = tidyselect::everything(),
+                                              names_to = "Response",
+                                              values_to = "Percent"),
+      ~  tidyr::pivot_longer(.,
+                             cols = -!!rlang::sym(disag),
+                             names_to = "Response",
+                             values_to = "Percent")
     ) %>%
-    mutate(Response = as_factor(Response)) %>%
-    mutate(Percent = round(Percent * 100, 0)) 
-  
+    dplyr::mutate(Response = forcats::as_factor(.data$Response)) %>%
+    dplyr::mutate(Percent = round(.data$Percent * 100, 0))
+
   # For facetted - add Yes percent to factor
   if (disag != "None") {
-    levels = df %>% pull({{disag}}) %>% unique() %>% as.character()
-    
+    levels = df %>% dplyr::pull({{disag}}) %>% unique() %>% as.character()
+
     names(levels) =
       df %>%
-      filter(Response == "Yes") %>%
-      mutate(!!sym(disag) := paste0(!!sym(disag), " (", Percent, "%", ")")) %>%
-      pull({{disag}}) %>%
+      dplyr::filter(.data$Response == "Yes") %>%
+      dplyr::mutate(!!rlang::sym(disag) := paste0(!!rlang::sym(disag),
+                                                  " (", .data$Percent, "%", ")")) %>%
+      dplyr::pull({{disag}}) %>%
       unique()
 
     df = df %>%
-      mutate(!!sym(disag) := fct_recode(!!sym(disag), !!!levels))
+      dplyr::mutate(!!rlang::sym(disag) := forcats::fct_recode(!!rlang::sym(disag), !!!levels))
   }
   return(df)
 }
 
-cook_waffle = function(df, disag = input$disag, 
-                       title = "", 
+#' Cook waffle
+#' Create waffle plot on selected data
+#' @param df The data to plot
+#' @param disag The grouping to disaggregate (can be None)
+#' @param title The title for the plot
+#' @param caption The caption for the plot
+#' @param legend_labels The legend labels
+#' @param plot_width The width of the plot
+#' @param lang The langauge to translate into
+cook_waffle = function(df, disag,
+                       title = "",
                        caption = "Welsh Health Equity Status 2020",
                        legend_labels = c("Yes", "No"),
                        plot_width = plot_width(),
-                       lang = "EN"){
+                       lang = "EN") {
 
   if (disag == "None") {
-    legend_labels = glue("{legend_labels} ({df$Percent}%)")
+    legend_labels = glue::glue("{legend_labels} ({df$Percent}%)")
   }
 
-  waffle = 
+  waffle =
     df %>%
-    ggplot(aes(values = Percent, label = Response, col = Response)) +
-    geom_pictogram(
-      n_rows = 10, size = 9.5, 
+    ggplot2::ggplot(ggplot2::aes(values = .data$Percent,
+                                 label = .data$Response,
+                                 col = .data$Response)) +
+    waffle::geom_pictogram(
+      n_rows = 10, size = 9.5,
       flip = TRUE,
       family = "Font Awesome 5 Free Solid"
     ) +
-    scale_color_manual(
+    ggplot2::scale_color_manual(
       name = NULL,
-      values = c(waffle_yes, waffle_no),
+      values = c("#c60158", "grey"),
       labels = legend_labels
     ) +
-    scale_label_pictogram(
+    waffle::scale_label_pictogram(
       name = NULL,
       values = c("user", "user"),
       labels = legend_labels
     ) +
-    labs(
+    ggplot2::labs(
       title = wrapper(title, width = 50 * plot_width),
       caption = caption
     ) +
-    theme_ipsum(grid = "", base_size = 14) +
-    theme_enhance_waffle() +
-    theme(plot.title = element_text(size = 16, hjust = 0, vjust = 0))
- 
+    hrbrthemes::theme_ipsum(grid = "", base_size = 14) +
+    waffle::theme_enhance_waffle() +
+    ggplot2::theme(plot.title = ggplot2::element_text(size = 16,
+                                                      hjust = 0,
+                                                      vjust = 0))
+
    # DISAG
   if (disag == "None") {
-    waffle = 
+    waffle =
       waffle +
-      coord_equal(xlim = c(1, 10),
-                  ylim = c(1, 10))
+      ggplot2::coord_equal(xlim = c(1, 10),
+                           ylim = c(1, 10))
   } else {
-    waffle = 
+    waffle =
       waffle +
-      facet_grid(cols = vars(!!sym(disag))) + 
-      scale_x_discrete(expand = c(0, 0)) +
-      scale_y_discrete(expand = c(0, 0)) +
-      coord_equal()
+      ggplot2::facet_grid(cols = dplyr::vars(!!rlang::sym(disag))) +
+      ggplot2::scale_x_discrete(expand = c(0, 0)) +
+      ggplot2::scale_y_discrete(expand = c(0, 0)) +
+      ggplot2::coord_equal()
   }
   return(waffle)
 }
 
-wrapper = function(x, ...) 
-{
+#' Wrapper
+#' @param x The string to wrap
+#' @param ... Optional parameters to pass to strwrap()
+#' @return Wrapped string
+wrapper = function(x, ...) {
   paste(strwrap(x, ...), collapse = "\n")
-}
+  }

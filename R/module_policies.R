@@ -1,20 +1,20 @@
-policiesUI = function(id, cat){
-  ns = NS(id)
+policiesUI = function(id, cat) {
+  ns = shiny::NS(id)
 
-fluidPage(
-  fluidRow(
-    column(12,
-           tags$br(),
-           uiOutput(ns("policy_md"))
+shiny::fluidPage(
+  shiny::fluidRow(
+    shiny::column(12,
+           shiny::tags$br(),
+           shiny::uiOutput(ns("policy_md"))
     )
-  ) # End: fluid row 
+  ) # End: fluid row
 ) # End: fluid page
 }
 
-policies = function(input, output, session, lang, cat){
-  
-  output$policy_md = reactive({
-    filename = glue("www/content/{lang()}/policies/policy-{cat}.md")
-      includeMarkdown(filename)
+policies = function(input, output, session, lang, cat) {
+
+  output$policy_md = shiny::reactive({
+    filename = app_sys(glue::glue("app/www/content/{lang()}/policies/policy-{cat}.md"))
+      shiny::includeMarkdown(filename)
   })
 }

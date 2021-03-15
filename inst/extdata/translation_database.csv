@@ -167,3 +167,10 @@ table_category,Category,Categori
 col_value,Value,Gwerth
 col_confidence,Confidence,Hyder
 small_numbers,* indicates value removed due to small sample size (n < 30),* yn dynodi gwerth a dynnwyd oherwydd maint sampl bach (n <30)
+temp,Temporary Caption,Pennawd Dros Dro
+nsw1819,National Survey for Wales 2018 - 2019,Arolwg Cenedlaethol Cymru 2018 - 2019
+nsw1718,National Survey for Wales 2017 - 2018,Arolwg Cenedlaethol Cymru 2017 - 2018
+nsw1617,National Survey for Wales 2016 - 2017,Arolwg Cenedlaethol Cymru 2016 - 2017
+nsw1314,National Survey for Wales 2013 - 2014,Arolwg Cenedlaethol Cymru 2013 - 2014
+shrn,School Health Research Network ,Cyfieithu Cymraeg yn mynd yma 
+gov,UK Government,Cyfieithu Cymraeg yn mynd yma 
