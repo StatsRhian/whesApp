@@ -1,3 +1,8 @@
+# whesApp 0.1.1 _2021-03-31_
+
+* Add shiny app test
+* Add health economics page
+
 # whesApp 0.1.0 _2021-03-04_
 
-* Added a `NEWS.md` file to track changes to the package.
+* Add a `NEWS.md` file to track changes to the package.

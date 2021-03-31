@@ -12,16 +12,21 @@ dataExplorerUI = function(id, cat) {
 
       shiny::fluidRow(
         shiny::column(6,
-                      shiny::selectInput(ns("ind_id"),
-                                         label = "Please select an indicator",
-                                         choices =
-                                           dplyr::filter(whesApp::indicator_info,
-                                                         .data$category == cat) %>%
-                                           dplyr::select(.data$name, .data$ind_id) %>%
-                                           tibble::deframe(),
-                                         selectize = TRUE,
-                                         width = "90%"
-               )
+                      shinyWidgets::pickerInput(
+                        inputId = ns("ind_id"),
+                        label = "Please select an indicator. You can type in the box to search for a key word.", #nolint
+                        choices =
+                          dplyr::filter(whesApp::indicator_info,
+                                        .data$category == cat) %>%
+                          dplyr::select(.data$name, .data$ind_id) %>%
+                          tibble::deframe(),
+                        choicesOpt = list(
+                          style = dplyr::filter(whesApp::indicator_info, .data$category == cat) %>%
+                            dplyr::pull(.data$style)
+                        ),
+                        options = list(`live-search` = TRUE),
+                        width = "90%"
+                      )
         ), # End: column
         shiny::column(3,
                       shiny::selectInput(ns("disag1"),
@@ -120,20 +125,24 @@ dataExplorer = function(input, output, session, lang, cat) {
 
   # Translate indicator drop down -------------
   shiny::observeEvent(lang(), {
-    shiny::updateSelectInput(
+    shinyWidgets::updatePickerInput(
       session,
       inputId = "ind_id",
       label = tr_pull(whesApp::translate_db, "select_ind_label", lang()),
       choices = tr_deframe_inds(whesApp::translate_db,
                                 key_group = cat,
                                 lang = lang(),
-                                indicator_info = whesApp::indicator_info)
+                                indicator_info = whesApp::indicator_info),
+      choicesOpt = list(
+        style = dplyr::filter(whesApp::indicator_info, .data$category == cat) %>%
+          dplyr::pull(.data$style)
+      )
     )
   })
 
 
   # Translate grouping dropdown ---------------
-  toListen <- shiny::reactive({
+  toListen = shiny::reactive({
     list(lang(), input$ind_id)
   })
 
@@ -231,7 +240,7 @@ dataExplorer = function(input, output, session, lang, cat) {
   })
 
   # Indicator Information ---------------------
-  output$indicator_md = shiny::reactive({
+  output$indicator_md = shiny::renderUI({
     filename = app_sys(glue::glue("app/www/content/{lang()}/indicators/{input$ind_id}.md"))
     if (file.exists(filename)) {
       shiny::includeMarkdown(filename)

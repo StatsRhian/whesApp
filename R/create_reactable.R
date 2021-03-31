@@ -16,7 +16,8 @@ create_reactable = function(df, lang) {
   }
 
   # Remove columns with NA and drop unnecessary cols
-  df = janitor::remove_empty(df, which = c("rows", "cols")) %>%
+  df = df %>%
+    stats::na.omit() %>%
     dplyr::select(-.data$ind_id, -type)
 
   # Format confidence intervals

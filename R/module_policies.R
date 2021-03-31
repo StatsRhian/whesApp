@@ -7,8 +7,8 @@ shiny::fluidPage(
            shiny::tags$br(),
            shiny::uiOutput(ns("policy_md"))
     )
-  ) # End: fluid row
-) # End: fluid page
+  )
+)
 }
 
 policies = function(input, output, session, lang, cat) {

@@ -1,23 +1,19 @@
 categoryPanelUI = function(id) {
   ns = shiny::NS(id)
   shiny::tabPanel(shiny::uiOutput(glue::glue("{id}_tab_title"), inline = TRUE),
-           icon = shiny::icon(whesApp::cat_df$icon[whesApp::cat_df$catID == id]),
-           value = id,
-           shiny::tabsetPanel(
-             shiny::tabPanel(shiny::uiOutput(ns("infographics")),
-                             value = "infographics",
-                             infographicsUI(ns("simple"), id)
-             ),
-             shiny::tabPanel(shiny::uiOutput(ns("details")),
-                             value = "detail",
-                             dataExplorerUI(ns("detailed"), id)
-             ),
-             shiny::tabPanel(shiny::uiOutput(ns("policies")),
-                             value = "policy",
-                             policiesUI(ns("policy"), id)
-             )
-           ) # End tabsetPanel
-  ) # End tabPanel
+                  icon = shiny::icon(whesApp::cat_df$icon[whesApp::cat_df$catID == id]),
+                  value = id,
+                  shiny::tabsetPanel(
+                    shiny::tabPanel(shiny::uiOutput(ns("infographics")),
+                                    value = "infographics",
+                                    infographicsUI(ns("simple"), id)
+                    ),
+                    shiny::tabPanel(shiny::uiOutput(ns("details")),
+                                    value = "detail",
+                                    dataExplorerUI(ns("detailed"), id)
+                    )
+                  )
+  )
 }
 
 categoryPanel = function(input, output, session, lang, cat) {
@@ -33,7 +29,5 @@ categoryPanel = function(input, output, session, lang, cat) {
     tr_pull(whesApp::translate_db, key = "details_tab_title", lang())
   })
 
-  output$policies = shiny::renderText({
-    tr_pull(whesApp::translate_db, key = "policies_tab_title", lang())
-  })
+
 }
