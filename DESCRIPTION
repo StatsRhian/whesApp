@@ -1,7 +1,7 @@
 Type: Package
 Package: whesApp
 Title: Builds shiny app for the Welsh Health Equity Solutions Platform
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     person(given = "Jumping",
            family = "Rivers",
@@ -10,19 +10,15 @@ Authors@R:
 Description: An R package to contain the code for the shiny app.
 License: GPL-3
 Depends: 
-    ggplot2,
     R (>= 4.0.0)
 Imports: 
     bslib,
-    config,
-    devtools,
     dplyr,
     emojifont,
     forcats,
+    ggplot2,
     glue,
-    golem,
     hrbrthemes,
-    janitor,
     purrr,
     reactable,
     readr,
@@ -30,12 +26,14 @@ Imports:
     scales,
     shiny,
     shinyjs,
+    shinyWidgets,
     stringr,
     tibble,
     tidyr,
     tidyselect,
     waffle
 Suggests:
+    shinytest,
     testthat (>= 3.0.0)
 Remotes: 
     hrbrmstr/waffle

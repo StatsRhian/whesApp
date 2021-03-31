@@ -22,7 +22,6 @@ for (i in seq_along(new_id)) {
   }
   translate_db$EN[trans_row] = new[i]
 }
-readr::write_csv(translate_db, file = "data/translation_database.csv")
 }
 return(translate_db)
 }
