@@ -18,3 +18,17 @@ caption_source = function(ind, info = whesApp::indicator_info) {
                      by = "ind_id") %>%
     dplyr::pull(.data$source_id)
 }
+
+#' Get caption
+#' @param id indicator id
+#' @param lang language
+get_caption = function(id, lang) {
+  glue::glue(tr_pull(whesApp::translate_db,
+                     key = "caption",
+                     lang = lang),
+             "\n",
+             tr_pull(whesApp::translate_db,
+                     key = caption_source(
+                       ind = id),
+                     lang = lang))
+}

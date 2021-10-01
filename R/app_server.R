@@ -2,12 +2,11 @@
 #' @param input,output,session Internal parameters for {shiny}.
 #' @noRd
 app_server = function(input, output, session) {
-  require("ggplot2")
-  purrr::map(whesApp::cat_df$catID, ~callModule(module = categoryPanel,
-                                                id = .x, lang = lang, cat = .x))
   lang = shiny::reactive({
     input$lan
   })
+
+  purrr::map(whesApp::cat_df$catID, ~categoryPanelServer(.x, lang = lang, cat = .x))
 
   shiny::observeEvent(lang(), {
     translate_reactable_options(lang = lang())
@@ -17,7 +16,7 @@ app_server = function(input, output, session) {
     create_contents_table(lang = lang())
   })
 
-  purrr::map(whesApp::cat_df$catID[3:7], ~onclick_tabset(.x, session))
+  purrr::map(whesApp::cat_df$catID[3:7], onclick_tabset)
 
   ### Update tabpanel titles
   output$whes_title = shiny::renderText({

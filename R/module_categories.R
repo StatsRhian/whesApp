@@ -16,10 +16,10 @@ categoryPanelUI = function(id) {
   )
 }
 
-categoryPanel = function(input, output, session, lang, cat) {
-  shiny::callModule(infographics, "simple", lang = lang, cat = cat)
-  shiny::callModule(dataExplorer, "detailed", lang = lang, cat = cat)
-  shiny::callModule(policies, "policy", lang = lang, cat = cat)
+categoryPanelServer = function(id, lang, cat){
+  shiny::moduleServer(id, function(input, output, session){
+    infographicsServer("simple", lang = lang, cat = cat)
+    dataExplorerServer("detailed", lang = lang, cat = cat)
 
   output$infographics = shiny::renderText({
     tr_pull(whesApp::translate_db, key = "infographics_tab_title", lang())
@@ -29,5 +29,5 @@ categoryPanel = function(input, output, session, lang, cat) {
     tr_pull(whesApp::translate_db, key = "details_tab_title", lang())
   })
 
-
+  })
 }

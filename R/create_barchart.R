@@ -51,7 +51,7 @@ create_barchart = function(df,
 
   # Add captions & theme
   g = g +
-    ggplot2::labs(title = wrapper(title, width = 100),
+    ggplot2::labs(title = wrapper(title, width = 80),
                   caption = caption) +
     ggplot2::theme_minimal(base_size = 14)
 
