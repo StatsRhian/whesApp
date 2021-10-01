@@ -4,12 +4,10 @@
 \alias{onclick_tabset}
 \title{On-click}
 \usage{
-onclick_tabset(category, session)
+onclick_tabset(category)
 }
 \arguments{
-\item{category}{The indicator category}
-
-\item{session}{the shiny session
+\item{category}{The indicator category
 Function to create on-click event for images}
 }
 \description{

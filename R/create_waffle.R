@@ -41,7 +41,7 @@ prep_waffle = function(df, disag) {
   return(df)
 }
 
-#' Cook waffle
+#' Create waffle
 #' Create waffle plot on selected data
 #' @param df The data to plot
 #' @param disag The grouping to disaggregate (can be None)
@@ -50,12 +50,12 @@ prep_waffle = function(df, disag) {
 #' @param legend_labels The legend labels
 #' @param plot_width The width of the plot
 #' @param lang The langauge to translate into
-cook_waffle = function(df, disag,
-                       title = "",
-                       caption = "Welsh Health Equity Status 2020",
-                       legend_labels = c("Yes", "No"),
-                       plot_width = plot_width(),
-                       lang = "EN") {
+create_waffle = function(df, disag,
+                         title = "",
+                         caption = "Welsh Health Equity Status 2020",
+                         legend_labels = c("Yes", "No"),
+                         plot_width = 1.6,
+                         lang = "EN") {
 
   if (disag == "None") {
     legend_labels = glue::glue("{legend_labels} ({df$Percent}%)")
@@ -91,7 +91,7 @@ cook_waffle = function(df, disag,
                                                       hjust = 0,
                                                       vjust = 0))
 
-   # DISAG
+  # DISAG
   if (disag == "None") {
     waffle =
       waffle +
@@ -108,10 +108,3 @@ cook_waffle = function(df, disag,
   return(waffle)
 }
 
-#' Wrapper
-#' @param x The string to wrap
-#' @param ... Optional parameters to pass to strwrap()
-#' @return Wrapped string
-wrapper = function(x, ...) {
-  paste(strwrap(x, ...), collapse = "\n")
-  }
