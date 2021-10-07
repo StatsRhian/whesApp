@@ -15,7 +15,8 @@ caption_source = function(ind, info = whesApp::indicator_info) {
   ind %>%
     tibble::enframe(name = NULL, value = "ind_id") %>%
     dplyr::left_join(dplyr::select(info, .data$ind_id, .data$source_id),
-                     by = "ind_id") %>%
+      by = "ind_id"
+    ) %>%
     dplyr::pull(.data$source_id)
 }
 
@@ -23,12 +24,17 @@ caption_source = function(ind, info = whesApp::indicator_info) {
 #' @param id indicator id
 #' @param lang language
 get_caption = function(id, lang) {
-  glue::glue(tr_pull(whesApp::translate_db,
-                     key = "caption",
-                     lang = lang),
-             "\n",
-             tr_pull(whesApp::translate_db,
-                     key = caption_source(
-                       ind = id),
-                     lang = lang))
+  glue::glue(
+    tr_pull(whesApp::translate_db,
+      key = "caption",
+      lang = lang
+    ),
+    "\n",
+    tr_pull(whesApp::translate_db,
+      key = caption_source(
+        ind = id
+      ),
+      lang = lang
+    )
+  )
 }

@@ -12,10 +12,13 @@ app_sys = function(...) {
 #' Function to create on-click event for images
 onclick_tabset = function(category) {
   session = shiny::getDefaultReactiveDomain()
-  shinyjs::onclick(glue::glue("img_{category}"),
-                   shiny::updateNavlistPanel(session,
-                                             inputId = "tab_categories",
-                                             selected = category))
+  shinyjs::onclick(
+    glue::glue("img_{category}"),
+    shiny::updateNavlistPanel(session,
+      inputId = "tab_categories",
+      selected = category
+    )
+  )
 }
 
 #' Get indicator type
@@ -30,12 +33,16 @@ get_ind_type = function(id) {
 #' @param df The indicator data set
 #' @param id The indicator id
 #' @param disag The selected disaggregate
-get_plot_width =  function(df, id, disag) {
+get_plot_width = function(df, id, disag) {
   if (get_ind_type(id) == "percent") {
     if (disag == "None") {
       n = 1
     } else {
-      n = df %>% dplyr::pull({disag}) %>% length()
+      n = df %>%
+        dplyr::pull({
+          disag
+        }) %>%
+        length()
     }
   } else {
     n = 1.6

@@ -3,41 +3,46 @@ infographicsUI = function(id, cat) {
   shiny::tagList(
     shiny::fluidPage(
       shiny::fluidRow(
-        shiny::column(12,
-                      shiny::br(),
-                      shiny::uiOutput(ns("tab_heading")),
-                      shiny::br()
+        shiny::column(
+          12,
+          shiny::br(),
+          shiny::uiOutput(ns("tab_heading")),
+          shiny::br()
         )
       ), # End: fluid row
 
       shiny::fluidRow(
-        shiny::column(6,
-                      shinyWidgets::pickerInput(
-                        inputId = ns("ind_id"),
-                        label = "Please select an indicator. You can type in the box to search for a key word.", #nolint
-                        choices =
-                          dplyr::filter(whesApp::indicator_info,
-                                        .data$category == cat) %>%
-                          dplyr::select(.data$name, .data$ind_id) %>%
-                          tibble::deframe(),
-                        choicesOpt = list(
-                          style = dplyr::filter(whesApp::indicator_info, .data$category == cat) %>%
-                            dplyr::pull(.data$style)
-                        ),
-                        options = list(
-                          `live-search` = TRUE),
-                        width = "90%"
-                      )
+        shiny::column(
+          6,
+          shinyWidgets::pickerInput(
+            inputId = ns("ind_id"),
+            label = "Please select an indicator. You can type in the box to search for a key word.", # nolint
+            choices =
+              dplyr::filter(
+                whesApp::indicator_info,
+                .data$category == cat
+              ) %>%
+                dplyr::select(.data$name, .data$ind_id) %>%
+                tibble::deframe(),
+            options = list(
+              `live-search` = TRUE
+            ),
+            width = "90%"
+          )
         ), # End: column
-        shiny::column(6,
-                      shiny::selectInput(ns("disag"),
-                                         label = "Please select a grouping",
-                                         choices = c("None" = "None",
-                                                     "Gender" = "Gender",
-                                                     "Age" = "Age",
-                                                     "Deprivation" = "Deprivation",
-                                                     "Education level" = "Education"),
-                                         selected = "None")
+        shiny::column(
+          6,
+          shiny::selectInput(ns("disag"),
+            label = "Please select a grouping",
+            choices = c(
+              "None" = "None",
+              "Gender" = "Gender",
+              "Age" = "Age",
+              "Deprivation" = "Deprivation",
+              "Education level" = "Education"
+            ),
+            selected = "None"
+          )
         ) # End: column
       ), # End: fluid row,
 
@@ -50,8 +55,7 @@ infographicsUI = function(id, cat) {
 }
 
 infographicsServer = function(id, lang, cat) {
-  shiny::moduleServer(id, function(input, output, session){
-
+  shiny::moduleServer(id, function(input, output, session) {
     ind_df = shiny::reactive({
       whesApp::indicator_data %>%
         dplyr::filter(.data$ind_id == input$ind_id) %>%
@@ -64,12 +68,9 @@ infographicsServer = function(id, lang, cat) {
         inputId = "ind_id",
         label = tr_pull(whesApp::translate_db, "select_ind_label", lang()),
         choices = tr_deframe_inds(whesApp::translate_db,
-                                  key_group = cat,
-                                  lang = lang(),
-                                  indicator_info = whesApp::indicator_info),
-        choicesOpt = list(
-          style = dplyr::filter(whesApp::indicator_info, .data$category == cat) %>%
-            dplyr::pull(.data$style)
+          key_group = cat,
+          lang = lang(),
+          indicator_info = whesApp::indicator_info
         )
       )
     })
@@ -78,13 +79,15 @@ infographicsServer = function(id, lang, cat) {
       list(lang(), input$ind_id)
     })
 
-    shiny::observeEvent(toListen(),{
+    shiny::observeEvent(toListen(), {
       update_disag(selected_ind_id = input$ind_id, lang = lang())
     })
 
     infographic = shiny::reactive({
-      create_infographic(ind_df(), id = input$ind_id,
-                         input$disag, lang())
+      create_infographic(ind_df(),
+        id = input$ind_id,
+        input$disag, lang()
+      )
     })
 
     output$infographic = shiny::renderPlot({
@@ -98,8 +101,10 @@ infographicsServer = function(id, lang, cat) {
 
 
     output$download_plot_button = shiny::renderUI({
-      shiny::downloadButton(session$ns("download_plot"),
-                            tr_pull(whesApp::translate_db, "download", lang()))
+      shiny::downloadButton(
+        session$ns("download_plot"),
+        tr_pull(whesApp::translate_db, "download", lang())
+      )
     })
 
     output$download_plot = shiny::downloadHandler(
@@ -107,11 +112,12 @@ infographicsServer = function(id, lang, cat) {
         glue::glue("infographic_{input$ind_id}.png")
       },
       content = function(file) {
-        ggplot2::ggsave(file,  plot =  infographic(),
-                        device = ragg::agg_png, bg = "white",
-                        width = get_plot_width(ind_df(), input$ind_id, input$disag) * 6, height = 6)
+        ggplot2::ggsave(file,
+          plot = infographic(),
+          device = ragg::agg_png, bg = "white",
+          width = get_plot_width(ind_df(), input$ind_id, input$disag) * 6, height = 6
+        )
       }
     )
-
   })
 }

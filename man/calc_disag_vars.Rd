@@ -11,7 +11,7 @@ calc_disag_vars(id)
 \item{id}{The selected indicator}
 }
 \value{
-The available disagregates
+The available disaggregates
 }
 \description{
 Calculate disaggregates

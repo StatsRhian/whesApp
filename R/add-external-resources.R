@@ -11,9 +11,10 @@ add_external_resources = function() {
     shiny::tags$script(type = "text/javascript", src = "www/logo.js"),
     shiny::tags$script(shiny::HTML("Shiny.addCustomMessageHandler('changetitle', function(x) {document.title=x});")),
     shiny::tags$link(rel = "stylesheet", type = "text/css", href = "www/phw-style.css"),
-    shiny::tags$style(type = "text/css",
-                      ".shiny-output-error { visibility: hidden; }",
-                      ".shiny-output-error:before { visibility: hidden; }",
+    shiny::tags$style(
+      type = "text/css",
+      ".shiny-output-error { visibility: hidden; }",
+      ".shiny-output-error:before { visibility: hidden; }",
     )
   )
 }
