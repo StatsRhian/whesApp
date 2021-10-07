@@ -1,29 +1,34 @@
 #' Define categories
 #' @return Define categories for five essential conditions
 define_categories = function() {
-  tibble::tibble(catID = c("wellbeing",
-                           "morbidity",
-                           "health",
-                           "income",
-                           "living",
-                           "social",
-                           "employment"
-  ),
-  name = c("Well-being",
-           "Morbidity",
-           "Health Services",
-           "Income and Social Protection",
-           "Living Environment",
-           "Social and Human Capital",
-           "Employment and Working Conditions"),
-  icon = c("smile-beam",
-           "procedures",
-           "medkit",
-           "pound-sign",
-           "tree",
-           "users",
-           "wrench"
-  )
+  tibble::tibble(
+    catID = c(
+      "wellbeing",
+      "morbidity",
+      "health",
+      "income",
+      "living",
+      "social",
+      "employment"
+    ),
+    name = c(
+      "Well-being",
+      "Morbidity",
+      "Health Services",
+      "Income Security and Social Protection",
+      "Living Conditions",
+      "Social and Human Capital",
+      "Employment and Working Conditions"
+    ),
+    icon = c(
+      "smile-beam",
+      "procedures",
+      "medkit",
+      "pound-sign",
+      "tree",
+      "users",
+      "wrench"
+    )
   )
 }
 

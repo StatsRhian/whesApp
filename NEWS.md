@@ -1,3 +1,7 @@
+# whesApp 0.1.3 _2021-10-01_
+
+- Update wording
+
 # whesApp 0.1.2 _2021-10-01_
 
 - Refactor

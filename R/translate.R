@@ -6,24 +6,24 @@
 #' there is an update to the indicators.
 
 update_db = function(indicator_info, translate_db) {
-info_titles = indicator_info$name
-tran_titles = translate_db$EN
-missing = which(!(info_titles %in% tran_titles))
+  info_titles = indicator_info$name
+  tran_titles = translate_db$EN
+  missing = which(!(info_titles %in% tran_titles))
 
-if (length(missing > 0)) {
-new = info_titles[missing]
-new_id = indicator_info$ind_id[missing]
+  if (length(missing > 0)) {
+    new = info_titles[missing]
+    new_id = indicator_info$ind_id[missing]
 
-for (i in seq_along(new_id)) {
-  id = new_id[i]
-  trans_row = stringr::str_which(translate_db$key, id)
-  if (length(trans_row) != 1) {
-    stop("Error in updating translation db")
+    for (i in seq_along(new_id)) {
+      id = new_id[i]
+      trans_row = stringr::str_which(translate_db$key, id)
+      if (length(trans_row) != 1) {
+        stop("Error in updating translation db")
+      }
+      translate_db$EN[trans_row] = new[i]
+    }
   }
-  translate_db$EN[trans_row] = new[i]
-}
-}
-return(translate_db)
+  return(translate_db)
 }
 
 #' Pull translation
@@ -49,7 +49,6 @@ tr_pull = function(translate_db, key, lang, search = FALSE) {
 #' @param translate_db The translation database
 #' @param lang The language to translate into (EN or CY)
 tr_table = function(df, translate_db, lang) {
-
   if (lang == "CY") {
     df_breakdown = which(whesApp::breakdown_vars %in% names(df))
 
@@ -63,14 +62,15 @@ tr_table = function(df, translate_db, lang) {
       levels_cy = mini_trans$CY[match(disag_levels, mini_trans$EN)]
 
       df = suppressWarnings(
-          df %>%
+        df %>%
           dplyr::left_join(mini_trans, by = stats::setNames("EN", disag)) %>%
           dplyr::select(-.data$key, -{{ disag }}) %>%
           dplyr::rename({{ disag }} := "CY") %>%
           dplyr::relocate({{ disag }}, .before = .data$value) %>%
           dplyr::mutate({{ disag }} := forcats::fct_relevel(
             forcats::as_factor(!!rlang::sym(disag)),
-            levels = levels_cy)) # keep level order
+            levels = levels_cy
+          )) # keep level order
       )
     }
   }
@@ -101,9 +101,11 @@ tr_deframe_inds = function(translate_db, key_group, lang, indicator_info) {
 # indented for the search filters
 tr_deframe = function(translate_db, pattern, lang) {
   translate_db %>%
-    dplyr::filter(stringr::str_detect(.data$key,  pattern)) %>%
-    dplyr::mutate(ind_id = stringr::str_extract(.data$key, "_.*"),
-                  ind_id = stringr::str_remove(.data$ind_id, "_")) %>%
+    dplyr::filter(stringr::str_detect(.data$key, pattern)) %>%
+    dplyr::mutate(
+      ind_id = stringr::str_extract(.data$key, "_.*"),
+      ind_id = stringr::str_remove(.data$ind_id, "_")
+    ) %>%
     dplyr::select({{ lang }}, .data$ind_id) %>%
     tibble::deframe()
 }

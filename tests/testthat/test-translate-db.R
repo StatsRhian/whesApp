@@ -1,6 +1,8 @@
 test_that("Indicators wording is correct in translation db", {
   ind1 = whesApp::indicator_info %>% dplyr::pull(name)
-  ind2 = whesApp::translate_db %>% dplyr::filter(stringr::str_detect(key, "ind_\\d{3}")) %>% dplyr::pull("EN")
+  ind2 = whesApp::translate_db %>%
+    dplyr::filter(stringr::str_detect(key, "ind_\\d{3}")) %>%
+    dplyr::pull("EN")
   expect_identical(length(which(!(ind1 %in% ind2))), 0L)
 })
 

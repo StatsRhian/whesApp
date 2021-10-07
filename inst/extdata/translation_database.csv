@@ -65,7 +65,7 @@ health_ind_102,"Available hospital beds per 100,000 inhabitants",Cyfieithu Cymra
 health_ind_103,Percentage of survey respondents aged 16+ years caring for family members/friends/neighbours,Cyfieithu Cymraeg yn mynd yma
 health_ind_107,Percentage of survey respondents aged 16+ who wanted to but couldn't see a GP/family doctor about own health,Cyfieithu Cymraeg yn mynd yma
 health_ind_109,Percentage of survey respondents dissatisfied with the care they received at their last appointment with GP/family doctor,Cyfieithu Cymraeg yn mynd yma
-disaggregate_Gender,Gender,Rhyw
+disaggregate_Gender,Sex,Rhyw
 disaggregate_Age,Age,Oedran
 disaggregate_Deprivation,Deprivation,Amddifadedd
 disaggregate_Education,Education Level,Lefel Addysg
@@ -77,8 +77,8 @@ overview_tab_title,Overview,Trosolwg
 category_wellbeing,Well-being,Lles
 category_morbidity,Morbidity,Morbidrwydd
 category_health,Health Services,Gwasanaethau Iechyd
-category_income,Income and Social Protection,Incwm a Diogelu Cymdeithasol
-category_living,Living Environment,Yr Amgylchedd Byw
+category_income,Income Security and Social Protection,Diogelwch Incwm a Diogelu Cymdeithasol
+category_living,Living Conditions,Amodau byw
 category_social,Social and Human Capital,Cyfalaf Cymdeithasol a Dynol
 inequities_tab_title,Inequities in Health,Anghydraddoldebau mewn Iechyd
 category_employment,Employment and Working Conditions,Amodau Cyflogaeth a Gwaith

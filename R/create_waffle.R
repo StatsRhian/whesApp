@@ -4,35 +4,41 @@
 #' @param disag The grouping to disaggregate (can be None)
 #' @return Prepped data, ready for plotting
 prep_waffle = function(df, disag) {
-
   df =
     df %>%
     dplyr::rename(Yes = .data$value) %>%
-    dplyr::mutate(No = 1 - .data$Yes)  %>%
+    dplyr::mutate(No = 1 - .data$Yes) %>%
     dplyr::select(-.data$type, -.data$ci_lower, -.data$ci_upper, -.data$ind_id) %>%
     purrr::when(
       (disag == "None") ~ tidyr::pivot_longer(.,
-                                              cols = tidyselect::everything(),
-                                              names_to = "Response",
-                                              values_to = "Percent"),
-      ~  tidyr::pivot_longer(.,
-                             cols = -!!rlang::sym(disag),
-                             names_to = "Response",
-                             values_to = "Percent")
+        cols = tidyselect::everything(),
+        names_to = "Response",
+        values_to = "Percent"
+      ),
+      ~ tidyr::pivot_longer(.,
+        cols = -!!rlang::sym(disag),
+        names_to = "Response",
+        values_to = "Percent"
+      )
     ) %>%
     dplyr::mutate(Response = forcats::as_factor(.data$Response)) %>%
     dplyr::mutate(Percent = round(.data$Percent * 100, 0))
 
   # For facetted - add Yes percent to factor
   if (disag != "None") {
-    levels = df %>% dplyr::pull({{disag}}) %>% unique() %>% as.character()
+    levels = df %>%
+      dplyr::pull({{ disag }}) %>%
+      unique() %>%
+      as.character()
 
     names(levels) =
       df %>%
       dplyr::filter(.data$Response == "Yes") %>%
-      dplyr::mutate(!!rlang::sym(disag) := paste0(!!rlang::sym(disag),
-                                                  " (", .data$Percent, "%", ")")) %>%
-      dplyr::pull({{disag}}) %>%
+      dplyr::mutate(!!rlang::sym(disag) := paste0(
+        !!rlang::sym(disag),
+        " (", .data$Percent, "%", ")"
+      )) %>%
+      dplyr::pull({{ disag }}) %>%
       unique()
 
     df = df %>%
@@ -56,16 +62,17 @@ create_waffle = function(df, disag,
                          legend_labels = c("Yes", "No"),
                          plot_width = 1.6,
                          lang = "EN") {
-
   if (disag == "None") {
     legend_labels = glue::glue("{legend_labels} ({df$Percent}%)")
   }
 
   waffle =
     df %>%
-    ggplot2::ggplot(ggplot2::aes(values = .data$Percent,
-                                 label = .data$Response,
-                                 col = .data$Response)) +
+    ggplot2::ggplot(ggplot2::aes(
+      values = .data$Percent,
+      label = .data$Response,
+      col = .data$Response
+    )) +
     waffle::geom_pictogram(
       n_rows = 10, size = 9.5,
       flip = TRUE,
@@ -87,16 +94,20 @@ create_waffle = function(df, disag,
     ) +
     hrbrthemes::theme_ipsum(grid = "", base_size = 14) +
     waffle::theme_enhance_waffle() +
-    ggplot2::theme(plot.title = ggplot2::element_text(size = 16,
-                                                      hjust = 0,
-                                                      vjust = 0))
+    ggplot2::theme(plot.title = ggplot2::element_text(
+      size = 16,
+      hjust = 0,
+      vjust = 0
+    ))
 
   # DISAG
   if (disag == "None") {
     waffle =
       waffle +
-      ggplot2::coord_equal(xlim = c(1, 10),
-                           ylim = c(1, 10))
+      ggplot2::coord_equal(
+        xlim = c(1, 10),
+        ylim = c(1, 10)
+      )
   } else {
     waffle =
       waffle +
@@ -107,4 +118,3 @@ create_waffle = function(df, disag,
   }
   return(waffle)
 }
-
