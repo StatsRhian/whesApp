@@ -88,6 +88,7 @@ caption,Welsh Health Equity Solutions Platform 2020,Llwyfan Datrysiadau Ecwiti I
 infographics_tab_title,Infographics,Infograffeg
 details_tab_title,Data Explorer,Archwiliwr Data
 policies_tab_title,Policies & Health Economics,Polisïau ac Economeg Iechyd
+search_tab_title,Search indicators,Dangosyddion chwilio
 disag_Gender_value_01,Male,Gwryw
 disag_Gender_value_02,Female,Benyw
 disag_Gender_value_03,All,I gyd
@@ -163,7 +164,7 @@ table_next,Next page,Tudalen nesaf
 table_entries,{rowStart} to {rowEnd} of {rows} entries,{rowStart} i {rowEnd} o gofnodion {rows}
 table_rows,Show {rows},Dangos {rows}
 table_indicator,Indicator,Dangosydd
-table_category,Category,Categori
+table_category,Essential Condition,Cyflwr Hanfodol
 col_value,Value,Gwerth
 col_confidence,Confidence,Hyder
 small_numbers,* indicates value removed due to small sample size (n < 30),* yn dynodi gwerth a dynnwyd oherwydd maint sampl bach (n <30)

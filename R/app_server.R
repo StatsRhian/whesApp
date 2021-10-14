@@ -27,6 +27,10 @@ app_server = function(input, output, session) {
     tr_pull(whesApp::translate_db, "overview_tab_title", lang())
   })
 
+  output$search_tab_title = shiny::renderUI({
+    tr_pull(whesApp::translate_db, "search_tab_title", lang())
+  })
+
   output$wellbeing_tab_title = shiny::renderUI({
     tr_pull(whesApp::translate_db, "category_wellbeing", lang())
   })

@@ -7,23 +7,29 @@ create_contents_table = function(lang) {
       .data$category,
       ~ tr_pull(whesApp::translate_db, glue::glue("{.y}_{.x}"), lang)
     )) %>%
-    dplyr::mutate(category = purrr::map_chr(
-      .data$category,
-      ~ tr_pull(whesApp::translate_db, glue::glue("category_{.x}"), lang)
-    )) %>%
     dplyr::select(.data$name, .data$category) %>%
+    dplyr::filter(.data$category %in% c("health", "income", "living", "social", "employment")) %>%
     reactable::reactable(
-      defaultPageSize = 10,
+      defaultPageSize = 50,
       compact = TRUE,
       searchable = TRUE,
       showPageSizeOptions = TRUE,
       columns = list(
         name = reactable::colDef(name = tr_pull(whesApp::translate_db, "table_indicator", lang)),
-        category = reactable::colDef(name = tr_pull(whesApp::translate_db, "table_category", lang))
-      ),
-      defaultColDef = reactable::colDef(
-        align = "left",
-        headerStyle = list(background = "#f7f7f8")
+        category = reactable::colDef(
+          name = tr_pull(whesApp::translate_db, "table_category", lang),
+          cell = function(value) {
+            class = glue::glue("tag ess-cond-{tolower(value)}")
+            shiny::div(
+              class = class,
+              tr_pull(
+                whesApp::translate_db,
+                glue::glue("category_{value}"),
+                lang
+              )
+            )
+          }
+        )
       )
     )
 }
