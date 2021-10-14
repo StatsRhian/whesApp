@@ -14,3 +14,36 @@ colgroup {
 .nav .navbar-brand {
     white-space: normal;
 }
+
+.tag {
+display: inline-block;
+padding: 2px 12px;
+border-radius: 15px;
+font-weight: 600;
+font-size: 12px;
+}
+
+.ess-cond-health {
+background: #e40428;
+color: #fff;
+}
+
+.ess-cond-income {
+background: #f7a70a;
+color: #fff;
+}
+
+.ess-cond-living {
+background: #95c11f;
+color:  #fff;
+}
+
+.ess-cond-social {
+background: #962a86;
+color:  #fff;
+}
+
+.ess-cond-employment {
+background: #36a9e1;
+color: #fff;
+}
