@@ -27,7 +27,7 @@
 #' @format A tibble
 #' \describe{
 #'   \item{ind_id}{Unique id}
-#'   \item{Gender}{Can be Male, Female or All}
+#'   \item{Sex}{Can be Male, Female or All}
 #'   \item{Age}{Age category, varies depending indicator, can be "All"}
 #'   \item{Deprivation}{Indicator of deprivation, varies depending on indicator, can be "All"}
 #'   \item{Education}{Can be High, Medium, Low or All}

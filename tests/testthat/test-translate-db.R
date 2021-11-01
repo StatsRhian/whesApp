@@ -8,7 +8,9 @@ test_that("Indicators wording is correct in translation db", {
 
 test_that("Source keys present in translation db", {
   source1 = whesApp::indicator_info %>% dplyr::pull(source_id)
-  source2 = whesApp::translate_db %>% dplyr::pull(key)
+  source2 = whesApp::translate_db %>%
+    dplyr::pull(key) %>%
+    stringr::str_replace("source_", "")
   expect_identical(length(which(!(source1 %in% source2))), 0L)
 })
 

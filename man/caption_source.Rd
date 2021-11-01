@@ -4,10 +4,10 @@
 \alias{caption_source}
 \title{caption_source}
 \usage{
-caption_source(ind, info = whesApp::indicator_info)
+caption_source(id, info = whesApp::indicator_info)
 }
 \arguments{
-\item{ind}{The indicator ID (from a filtered version of
+\item{id}{The indicator ID (from a filtered version of
 \code{\link{indicator_data}}).}
 
 \item{info}{Lookup dataset containing the source ID. Defaults to
