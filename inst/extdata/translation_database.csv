@@ -27,6 +27,7 @@ living_ind_035,Percentage of adults (16+) feeling unsafe when walking alone in l
 living_ind_036,Percentage of adults feeling unsafe at home after dark,Cyfieithu Cymraeg yn mynd yma
 living_ind_038,"Percentage of households which eat eals with meat, chicken, fish (or vegetarian equivalent) at least every other day",Cyfieithu Cymraeg yn mynd yma
 living_ind_039,Value-added tax (VAT) on alcohol (%),Cyfieithu Cymraeg yn mynd yma
+living_ind_242,Do you have a garden?,Cyfieithu Cymraeg yn mynd yma
 social_ind_041,"Percentage of children at the final year of foundation phase achieving the expected Outcome (Outcome 5+) for Personal and social development, well-being and cultural diversity",Cyfieithu Cymraeg yn mynd yma
 social_ind_043,Percentage of adults who report a feeling lonely (a score of 4 to 6 on the De Jong Gierveld loneliness scale),Cyfieithu Cymraeg yn mynd yma
 social_ind_044,"Percentage of students who agree that there is support at their school for students who feel unhappy, worried or unable to cope",Cyfieithu Cymraeg yn mynd yma
@@ -39,6 +40,7 @@ social_ind_052,Percentage of pupils in year 11/aged 15 who achieved Level 2 incl
 social_ind_054,Percentage of people who volunteer (National indicator),Cyfieithu Cymraeg yn mynd yma
 social_ind_055,Percentage of people who feel they are able to influence decisions affecting their local area,Cyfieithu Cymraeg yn mynd yma
 social_ind_056,Percentage of people who feel most people can be trusted,Cyfieithu Cymraeg yn mynd yma
+social_ind_217,"Over the past week, how much have the following issues been worrying you? Your children's education",Cyfieithu Cymraeg yn mynd yma
 employment_ind_057,Gross Value Added through compensation of employees i.e. wages and salaries plus employers' social contributions (£ million),Cyfieithu Cymraeg yn mynd yma
 employment_ind_059,"Estimated incidence of self-reported workplace non-fatal injuries, for people working in the last 12 months (per 100,000)",Cyfieithu Cymraeg yn mynd yma
 employment_ind_060,Percent difference in employment rates between those who are disabled and not disabled,Cyfieithu Cymraeg yn mynd yma
@@ -52,9 +54,12 @@ employment_ind_071,Average (median) gross hourly earnings (£),Cyfieithu Cymraeg
 employment_ind_074,Percentage of working age adults in relative income poverty,Cyfieithu Cymraeg yn mynd yma
 employment_ind_075,Percentage of survey respondents who are moderately or highly satisfied with present job,Cyfieithu Cymraeg yn mynd yma
 employment_ind_076,Percentage of survey respondents who are working 49+ hours per week,Cyfieithu Cymraeg yn mynd yma
+employment_ind_220,"Over the past week, how much have the following issues been worrying you?  Work, even if you feel your job is secure",Cyfieithu Cymraeg yn mynd yma
 income_ind_077,"Percentage of all individuals, children, working-age adults and pensioners living in relative income poverty",Cyfieithu Cymraeg yn mynd yma
 income_ind_078,Percentage of people in relative income poverty where there is disability within the family (Equality Act definition),Cyfieithu Cymraeg yn mynd yma
+income_ind_214,Have you been worrying about becoming seriously ill with coronavirus?,Cyfieithu Cymraeg yn mynd yma
 income_ind_085,Percentage of women giving birth receiving Maternity Allowance,Cyfieithu Cymraeg yn mynd yma
+income_ind_232,As a result of coronavirus has anyone in your household lost their job permanently?,Cyfieithu Cymraeg yn mynd yma
 health_ind_092,Percentage of women (25 - 49) who are eligible for cervical screening who have been screened within the last 3.5 years,Cyfieithu Cymraeg yn mynd yma
 health_ind_093,Percentage uptake of MMR dose two in children at five years of age,Cyfieithu Cymraeg yn mynd yma
 health_ind_094,Prevalence of hypertension in the GP practice registered population,Cyfieithu Cymraeg yn mynd yma
@@ -65,6 +70,7 @@ health_ind_102,"Available hospital beds per 100,000 inhabitants",Cyfieithu Cymra
 health_ind_103,Percentage of survey respondents aged 16+ years caring for family members/friends/neighbours,Cyfieithu Cymraeg yn mynd yma
 health_ind_107,Percentage of survey respondents aged 16+ who wanted to but couldn't see a GP/family doctor about own health,Cyfieithu Cymraeg yn mynd yma
 health_ind_109,Percentage of survey respondents dissatisfied with the care they received at their last appointment with GP/family doctor,Cyfieithu Cymraeg yn mynd yma
+health_ind_212,"Over the past week, how much have the following issues been worrying you?  Becoming seriously ill with coronavirus.",Cyfieithu Cymraeg yn mynd yma
 disaggregate_Gender,Sex,Rhyw
 disaggregate_Age,Age,Oedran
 disaggregate_Deprivation,Deprivation,Amddifadedd
@@ -153,6 +159,10 @@ disag_Age_value_34,Children,Plant
 disag_Age_value_35,Working-age adults,Oedolion o oedran gweithio
 disag_Age_value_36,16 - 18,16 - 18
 disag_Age_value_37,19 - 24,19 - 24
+disag_Age_value_38,18 - 34,18 - 34
+disag_Age_value_39,35 - 54,35 - 54
+disag_Age_value_40,55 - 74,55 - 74
+disag_Age_value_41,75+,75+
 download,Download,Lawrlwytho
 percent,Percent,Y Cant
 all,All,I gyd
@@ -168,10 +178,11 @@ table_category,Essential Condition,Cyflwr Hanfodol
 col_value,Value,Gwerth
 col_confidence,Confidence,Hyder
 small_numbers,* indicates value removed due to small sample size (n < 30),* yn dynodi gwerth a dynnwyd oherwydd maint sampl bach (n <30)
-temp,Temporary Caption,Pennawd Dros Dro
-nsw1819,National Survey for Wales 2018 - 2019,Arolwg Cenedlaethol Cymru 2018 - 2019
-nsw1718,National Survey for Wales 2017 - 2018,Arolwg Cenedlaethol Cymru 2017 - 2018
-nsw1617,National Survey for Wales 2016 - 2017,Arolwg Cenedlaethol Cymru 2016 - 2017
-nsw1314,National Survey for Wales 2013 - 2014,Arolwg Cenedlaethol Cymru 2013 - 2014
-shrn,School Health Research Network ,Cyfieithu Cymraeg yn mynd yma 
-gov,UK Government,Cyfieithu Cymraeg yn mynd yma 
+source_temp,Temporary Caption,Pennawd Dros Dro
+source_nsw1819,National Survey for Wales 2018 - 2019,Arolwg Cenedlaethol Cymru 2018 - 2019
+source_nsw1718,National Survey for Wales 2017 - 2018,Arolwg Cenedlaethol Cymru 2017 - 2018
+source_nsw1617,National Survey for Wales 2016 - 2017,Arolwg Cenedlaethol Cymru 2016 - 2017
+source_nsw1314,National Survey for Wales 2013 - 2014,Arolwg Cenedlaethol Cymru 2013 - 2014
+source_shrn,School Health Research Network ,Cyfieithu Cymraeg yn mynd yma 
+source_gov,UK Government,Cyfieithu Cymraeg yn mynd yma 
+source_covid,PHW Coronavirus public engagement survey ,Arolwg ymgysylltu cyhoeddus Coronavirus PHW

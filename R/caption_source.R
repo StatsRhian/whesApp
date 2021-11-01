@@ -7,16 +7,17 @@
 #' within \code{\link{tr_pull}} to obtain the full description of the source ID
 #' in English or Cymraeg.
 #'
-#' @param ind The indicator ID (from a filtered version of
+#' @param id The indicator ID (from a filtered version of
 #' \code{\link{indicator_data}}).
 #' @param info Lookup dataset containing the source ID. Defaults to
 #' \code{\link{indicator_info}}.
-caption_source = function(ind, info = whesApp::indicator_info) {
-  ind %>%
+caption_source = function(id, info = whesApp::indicator_info) {
+  id %>%
     tibble::enframe(name = NULL, value = "ind_id") %>%
     dplyr::left_join(dplyr::select(info, .data$ind_id, .data$source_id),
       by = "ind_id"
     ) %>%
+    dplyr::mutate(source_id = glue::glue("source_{.data$source_id}")) %>%
     dplyr::pull(.data$source_id)
 }
 
@@ -32,7 +33,7 @@ get_caption = function(id, lang) {
     "\n",
     tr_pull(whesApp::translate_db,
       key = caption_source(
-        ind = id
+        id = id
       ),
       lang = lang
     )

@@ -286,7 +286,7 @@ dataExplorerServer = function(id, lang, cat) {
             "\n",
             tr_pull(whesApp::translate_db,
               key = caption_source(
-                ind = input$ind_id
+                id = input$ind_id
               ),
               lang = lang()
             )
