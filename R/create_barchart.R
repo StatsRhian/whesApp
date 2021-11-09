@@ -1,7 +1,7 @@
 #' Create barchart
 #' @param df The data to plot
-#' @param disag1 The first disagregate
-#' @param disag2 The second disagregate
+#' @param disag1 The first disaggregate
+#' @param disag2 The second disaggregate
 #' @param ci Whether to display confidence intervals (logical)
 #' @param title The plot title
 #' @param caption The plot caption

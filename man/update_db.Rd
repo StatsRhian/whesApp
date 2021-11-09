@@ -7,7 +7,7 @@
 update_db(indicator_info, translate_db)
 }
 \arguments{
-\item{indicator_info}{The indictor information}
+\item{indicator_info}{The indicator information}
 
 \item{translate_db}{The translation database}
 }
