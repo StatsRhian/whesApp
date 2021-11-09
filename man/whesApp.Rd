@@ -3,7 +3,7 @@
 \docType{package}
 \name{whesApp}
 \alias{whesApp}
-\title{\code{whesApp} package}
+\title{`whesApp` package}
 \description{
 Shiny app for Public Health Wales.
 }

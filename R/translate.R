@@ -1,5 +1,5 @@
 #' Update database
-#' @param indicator_info The indictor information
+#' @param indicator_info The indicator information
 #' @param translate_db The translation database
 #' @return The updated database
 #' This function is only used in development when

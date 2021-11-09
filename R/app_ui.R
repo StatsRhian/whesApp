@@ -24,7 +24,7 @@ app_ui = function(request) {
               .x = whesApp::cat_df$catID[3:7],
               .f = ~ shiny::img(
                 src = glue::glue("www/images/{.x}.png"),
-                height = "200px",
+                height = "250px",
                 id = glue::glue("img_{.x}"),
                 style = "cursor:pointer;"
               )

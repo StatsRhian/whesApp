@@ -1,16 +1,16 @@
 #' caption_source
 #'
-#' \code{caption_source} aids in the captioning of infographics. It takes an
+#' `caption_source` aids in the captioning of infographics. It takes an
 #' indicator ID (located within a filtered version of
-#' \code{\link{indicator_data}}) and returns the corresponding source ID
-#' (located within \code{\link{indicator_info}}). The resulting value is used
-#' within \code{\link{tr_pull}} to obtain the full description of the source ID
+#' [indicator_data]) and returns the corresponding source ID
+#' (located within [indicator_info]). The resulting value is used
+#' within [tr_pull()] to obtain the full description of the source ID
 #' in English or Cymraeg.
 #'
 #' @param id The indicator ID (from a filtered version of
-#' \code{\link{indicator_data}}).
+#' [indicator_data].
 #' @param info Lookup dataset containing the source ID. Defaults to
-#' \code{\link{indicator_info}}.
+#' [indicator_info].
 caption_source = function(id, info = whesApp::indicator_info) {
   id %>%
     tibble::enframe(name = NULL, value = "ind_id") %>%

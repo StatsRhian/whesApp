@@ -1,4 +1,4 @@
-#' \code{whesApp} package
+#' `whesApp` package
 #'
 #' Shiny app for Public Health Wales.
 #'

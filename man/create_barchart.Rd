@@ -18,9 +18,9 @@ create_barchart(
 \arguments{
 \item{df}{The data to plot}
 
-\item{disag1}{The first disagregate}
+\item{disag1}{The first disaggregate}
 
-\item{disag2}{The second disagregate}
+\item{disag2}{The second disaggregate}
 
 \item{ci}{Whether to display confidence intervals (logical)}
 
