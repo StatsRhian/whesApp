@@ -99,13 +99,17 @@ tr_deframe_inds = function(translate_db, key_group, lang, indicator_info) {
 #' @param pattern The pattern to search for
 #' @param lang The language to translate into
 # indented for the search filters
+# The key is stripped of everything before the _first underscore_
+# E.g Searching "disaggregate" returns "None", "Sex" (not "disaggregate_None")
+# E.g Searching "income" returns "ind_077", "ind_078", (not "income_ind_077")
+
 tr_deframe = function(translate_db, pattern, lang) {
   translate_db %>%
     dplyr::filter(stringr::str_detect(.data$key, pattern)) %>%
     dplyr::mutate(
-      ind_id = stringr::str_extract(.data$key, "_.*"),
-      ind_id = stringr::str_remove(.data$ind_id, "_")
+      key = stringr::str_extract(.data$key, "_.*"),
+      key = stringr::str_remove(.data$key, "_")
     ) %>%
-    dplyr::select({{ lang }}, .data$ind_id) %>%
+    dplyr::select({{ lang }}, .data$key) %>%
     tibble::deframe()
 }
