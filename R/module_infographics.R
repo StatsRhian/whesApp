@@ -79,9 +79,7 @@ infographicsServer = function(id, lang, cat) {
     })
 
     shiny::observeEvent(filter_covid_ind(), {
-      if(input$include_covid == "no"){
-print("drop covid")
-print(dplyr::filter(whesApp::indicator_info, !covid))
+      if (input$include_covid == "no") {
         shinyWidgets::updatePickerInput(
           session,
           inputId = "ind_id",
@@ -89,7 +87,7 @@ print(dplyr::filter(whesApp::indicator_info, !covid))
           choices = tr_deframe_inds(whesApp::translate_db,
                                     key_group = cat,
                                     lang = lang(),
-                                    indicator_info = dplyr::filter(whesApp::indicator_info, !covid)
+                                    indicator_info = dplyr::filter(whesApp::indicator_info, !.data$covid)
           )
         )
 

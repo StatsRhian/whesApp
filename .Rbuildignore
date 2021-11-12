@@ -6,3 +6,9 @@
 ^\.gitlab-ci\.yml$
 .lintr
 ^\.httr-oauth$
+^\.lintr$
+_files$
+^_
+docs
+^CODEOWNERS$
+/rsconnect/

@@ -1,13 +1,12 @@
-image: rocker/tidyverse
+# Values should be 0, unless reasons given
+variables:
+  ALLOWED_WARNINGS: 0
+  ALLOWED_NOTES: 1
+  NO_IMPORTS: 1
+  # downstream_trigger_branch: main # adjust for testing different demos
 
-stages:
-  - build
-  - test
-  - deploy
-
-building:
-  stage: build
-  script:
-    - R -e "remotes::install_deps(dependencies = TRUE)"
-    - R -e "shinytest::installDependencies()"
-    - R -e 'devtools::check()'
+include:
+  # https://gitlab.com/jumpingrivers/tools/ci-templates/-/blob/main/templates/r-package.yml
+  - project: 'jumpingrivers/tools/ci-templates'
+    ref: main
+    file: '/templates/r-package.yml'

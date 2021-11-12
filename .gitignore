@@ -45,3 +45,11 @@ docs/
 po/*~
 
 .DS_Store
+rsconnect/
+*_files/
+inst/doc
+.env
+.secrets
+.jrtemplate.yml
+*.env
+*.swp
