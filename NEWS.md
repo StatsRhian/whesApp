@@ -1,3 +1,7 @@
+# whesApp 0.1.4 _2021-11-12_
+
+- Add pm-check
+
 # whesApp 0.1.3 _2021-10-01_
 
 - Update wording
