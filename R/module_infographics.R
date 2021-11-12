@@ -22,8 +22,8 @@ infographicsUI = function(id, cat) {
                 whesApp::indicator_info,
                 .data$category == cat
               ) %>%
-                dplyr::select(.data$name, .data$ind_id) %>%
-                tibble::deframe(),
+              dplyr::select(.data$name, .data$ind_id) %>%
+              tibble::deframe(),
             options = list(
               `live-search` = TRUE
             ),
@@ -33,18 +33,30 @@ infographicsUI = function(id, cat) {
         shiny::column(
           6,
           shiny::selectInput(ns("disag"),
-            label = "Please select a grouping",
-            choices = c(
-              "None" = "None",
-              "Gender" = "Gender",
-              "Age" = "Age",
-              "Deprivation" = "Deprivation",
-              "Education level" = "Education"
-            ),
-            selected = "None"
+                             label = "Please select a grouping",
+                             choices = c(
+                               "None" = "None",
+                               "Gender" = "Gender",
+                               "Age" = "Age",
+                               "Deprivation" = "Deprivation",
+                               "Education level" = "Education"
+                             ),
+                             selected = "None"
           )
         ) # End: column
       ), # End: fluid row,
+
+      shiny::fluidRow(
+        shiny::column(
+          2,
+          shiny::radioButtons(
+            inputId = ns("include_covid"),
+            label = "Include COVID indicators?",
+            choices = c("Yes" = "yes",
+                        "No" = "no")
+          )
+        ) # End: column
+      ), # End: fluid row
 
       shiny::fluidRow(
         shiny::plotOutput(ns("infographic")),
@@ -62,16 +74,47 @@ infographicsServer = function(id, lang, cat) {
         filter_disag(input$disag)
     })
 
-    shiny::observeEvent(lang(), {
-      shinyWidgets::updatePickerInput(
-        session,
-        inputId = "ind_id",
-        label = tr_pull(whesApp::translate_db, "select_ind_label", lang()),
-        choices = tr_deframe_inds(whesApp::translate_db,
-          key_group = cat,
-          lang = lang(),
-          indicator_info = whesApp::indicator_info
+    filter_covid_ind = shiny::reactive({
+      list(lang(), input$include_covid)
+    })
+
+    shiny::observeEvent(filter_covid_ind(), {
+      if(input$include_covid == "no"){
+print("drop covid")
+print(dplyr::filter(whesApp::indicator_info, !covid))
+        shinyWidgets::updatePickerInput(
+          session,
+          inputId = "ind_id",
+          label = tr_pull(whesApp::translate_db, "select_ind_label", lang()),
+          choices = tr_deframe_inds(whesApp::translate_db,
+                                    key_group = cat,
+                                    lang = lang(),
+                                    indicator_info = dplyr::filter(whesApp::indicator_info, !covid)
+          )
         )
+
+      } else {
+
+        shinyWidgets::updatePickerInput(
+          session,
+          inputId = "ind_id",
+          label = tr_pull(whesApp::translate_db, "select_ind_label", lang()),
+          choices = tr_deframe_inds(whesApp::translate_db,
+                                    key_group = cat,
+                                    lang = lang(),
+                                    indicator_info = whesApp::indicator_info
+          )
+        )
+
+      }
+    })
+
+    shiny::observeEvent(lang(), {
+      shiny::updateRadioButtons(
+        session,
+        inputId = "include_covid",
+        label = tr_pull(whesApp::translate_db, "show_covid_label", lang()),
+        choices = tr_deframe(whesApp::translate_db, pattern = "selectcovid", lang = lang())
       )
     })
 
@@ -85,8 +128,8 @@ infographicsServer = function(id, lang, cat) {
 
     infographic = shiny::reactive({
       create_infographic(ind_df(),
-        id = input$ind_id,
-        input$disag, lang()
+                         id = input$ind_id,
+                         input$disag, lang()
       )
     })
 
@@ -113,9 +156,9 @@ infographicsServer = function(id, lang, cat) {
       },
       content = function(file) {
         ggplot2::ggsave(file,
-          plot = infographic(),
-          device = ragg::agg_png, bg = "white",
-          width = get_plot_width(ind_df(), input$ind_id, input$disag) * 6, height = 6
+                        plot = infographic(),
+                        device = ragg::agg_png, bg = "white",
+                        width = get_plot_width(ind_df(), input$ind_id, input$disag) * 6, height = 6
         )
       }
     )

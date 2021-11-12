@@ -204,3 +204,6 @@ source_nsw1314,National Survey for Wales 2013 - 2014,Arolwg Cenedlaethol Cymru 2
 source_shrn,School Health Research Network ,Cyfieithu Cymraeg yn mynd yma 
 source_gov,UK Government,Cyfieithu Cymraeg yn mynd yma 
 source_covid,PHW Coronavirus public engagement survey ,Arolwg ymgysylltu cyhoeddus Coronavirus PHW
+show_covid_label,Show COVID data?,Dangos data COVID?
+selectcovid_yes,Yes,Ie
+selectcovid_no,No,Nage
