@@ -1,3 +1,7 @@
+# whesApp 7.0.0 _2021-12-07_
+
+- Add pm-check
+
 # whesApp 0.1.4 _2021-11-12_
 
 - Add pm-check
