@@ -1,3 +1,7 @@
+# whesApp 7.0.1 _2021-12-09_
+
+- Realign images
+
 # whesApp 7.0.0 _2021-12-07_
 
 - Add pm-check
