@@ -1,3 +1,9 @@
+# whesApp 7.0.2 _2021-12-22_
+
+- Update waffle functions
+- Add new value box function
+- Remove dependence on waffle, hrbrthemes
+
 # whesApp 7.0.1 _2021-12-09_
 
 - Realign images

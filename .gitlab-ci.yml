@@ -1,8 +1,8 @@
 # Values should be 0, unless reasons given
 variables:
-  ALLOWED_WARNINGS: 0
-  ALLOWED_NOTES: 1
-  NO_IMPORTS: 1
+  ALLOWED_WARNINGS: 1 # emojifont version
+  ALLOWED_NOTES: 1 # ASCII
+  NO_IMPORTS: 2
   # downstream_trigger_branch: main # adjust for testing different demos
 
 include:

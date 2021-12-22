@@ -22,8 +22,7 @@ create_infographic = function(df, id, disag, lang) {
           key = "waffle_legend_label",
           lang = lang
         ),
-        plot_width = get_plot_width(df, id, disag),
-        lang = lang
+        plot_width = get_plot_width(df, id, disag)
       )
   } else {
     shinyjs::hide("disag")
