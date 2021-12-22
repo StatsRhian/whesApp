@@ -2,8 +2,7 @@
 % Please edit documentation in R/create_waffle.R
 \name{prep_waffle}
 \alias{prep_waffle}
-\title{Prep Waffle
-Prepare the waffle plot}
+\title{Prepare the waffle plot}
 \usage{
 prep_waffle(df, disag)
 }
@@ -16,6 +15,5 @@ prep_waffle(df, disag)
 Prepped data, ready for plotting
 }
 \description{
-Prep Waffle
 Prepare the waffle plot
 }

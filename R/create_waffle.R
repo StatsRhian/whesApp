@@ -1,4 +1,12 @@
-#' Prep Waffle
+#' Replicate dataframe
+#' Function to replicate data frame
+#' @param x the data frame to replicate
+#' @param times the number of replications
+rep_df = function(x, times) {
+  as.data.frame(lapply(x, rep, times = times))
+}
+
+
 #' Prepare the waffle plot
 #' @param df The selected data
 #' @param disag The grouping to disaggregate (can be None)
@@ -11,14 +19,14 @@ prep_waffle = function(df, disag) {
     dplyr::select(-.data$type, -.data$ci_lower, -.data$ci_upper, -.data$ind_id) %>%
     purrr::when(
       (disag == "None") ~ tidyr::pivot_longer(.,
-        cols = tidyselect::everything(),
-        names_to = "Response",
-        values_to = "Percent"
+                                              cols = tidyselect::everything(),
+                                              names_to = "Response",
+                                              values_to = "Percent"
       ),
       ~ tidyr::pivot_longer(.,
-        cols = -!!rlang::sym(disag),
-        names_to = "Response",
-        values_to = "Percent"
+                            cols = -!!rlang::sym(disag),
+                            names_to = "Response",
+                            values_to = "Percent"
       )
     ) %>%
     dplyr::mutate(Response = forcats::as_factor(.data$Response)) %>%
@@ -44,7 +52,71 @@ prep_waffle = function(df, disag) {
     df = df %>%
       dplyr::mutate(!!rlang::sym(disag) := forcats::fct_recode(!!rlang::sym(disag), !!!levels))
   }
-  return(df)
+
+  # format data to work with waffle
+  if (disag != "None") {
+    df_new = rep_df(expand.grid(x = 1:10, y = 1:10), length(levels)) %>%
+      dplyr::mutate(
+        label = rep(emojifont::fontawesome("fa-user"), times = 100 * length(levels)),
+        disag_cat = rep(names(levels), each = 100),
+        type = rep(df$Response, times = df$Percent)
+      )
+  } else {
+    df_new = expand.grid(x = 1:10, y = 1:10) %>%
+      dplyr::mutate(
+        label = rep(emojifont::fontawesome("fa-user"), times = 100),
+        type = rep(df$Response, times = df$Percent),
+        Percent = rep(df$Percent, times = df$Percent)
+      )
+  }
+  return(df_new)
+}
+
+# set key for legend
+draw_key_user = function(data, params, size) {
+  grid::textGrob(
+    label = emojifont::fontawesome("fa-user"),
+    x = c(0.5),
+    y = c(0.5),
+    gp = grid::gpar(
+      col = scales::alpha(data$colour, data$alpha),
+      fontfamily = "fontawesome-webfont",
+      fontsize = 7 * .pt
+    )
+  )
+}
+
+# helper function
+set_draw_key = function(geom, draw_key = NULL) {
+  if (is.null(draw_key)) {
+    return(geom)
+  }
+  if (is.character(draw_key)) {
+    draw_key = paste0("draw_key_", draw_key)
+  }
+  draw_key = match.fun(draw_key)
+
+  ggproto("", geom, draw_key = draw_key)
+}
+
+# version of `geom_text()` with modifiable draw key
+geom_user = function(mapping = NULL, data = NULL, stat = "identity",
+                      position = "identity", na.rm = FALSE,
+                      show.legend = NA, inherit.aes = TRUE, draw_key = NULL,
+                      ...) {
+  ggplot2::layer(
+    data = data,
+    mapping = mapping,
+    stat = stat,
+    geom = set_draw_key(GeomText, draw_key),
+    position = position,
+    show.legend = show.legend,
+    inherit.aes = inherit.aes,
+    params = list(
+      na.rm = na.rm,
+      ...
+    )
+  )
 }
 
 #' Create waffle
@@ -55,66 +127,67 @@ prep_waffle = function(df, disag) {
 #' @param caption The caption for the plot
 #' @param legend_labels The legend labels
 #' @param plot_width The width of the plot
-#' @param lang The langauge to translate into
+#' @import emojifont
 create_waffle = function(df, disag,
                          title = "",
                          caption = "Welsh Health Equity Status 2020",
                          legend_labels = c("Yes", "No"),
-                         plot_width = 1.6,
-                         lang = "EN") {
-  if (disag == "None") {
-    legend_labels = glue::glue("{legend_labels} ({df$Percent}%)")
-  }
-
-  waffle =
-    df %>%
-    ggplot2::ggplot(ggplot2::aes(
-      values = .data$Percent,
-      label = .data$Response,
-      col = .data$Response
-    )) +
-    waffle::geom_pictogram(
-      n_rows = 10, size = 9.5,
-      flip = TRUE,
-      family = "Font Awesome 5 Free Solid"
+                         plot_width = 1.6) {
+  waffle = ggplot2::ggplot(df, ggplot2::aes(x = .data$x, y = .data$y, label = .data$label, colour = .data$type)) +
+    # create plot
+    geom_user(
+      family = "fontawesome-webfont",
+      size = 7,
+      draw_key = "user"
     ) +
-    ggplot2::scale_color_manual(
-      name = NULL,
-      values = c("#c60158", "grey"),
-      labels = legend_labels
+    ggplot2::coord_equal(
+      xlim = c(1, 10),
+      ylim = c(10, 1)
     ) +
-    waffle::scale_label_pictogram(
-      name = NULL,
-      values = c("user", "user"),
-      labels = legend_labels
-    ) +
+    # add titles
     ggplot2::labs(
       title = wrapper(title, width = 50 * plot_width),
       caption = caption
     ) +
-    hrbrthemes::theme_ipsum(grid = "", base_size = 14) +
-    waffle::theme_enhance_waffle() +
-    ggplot2::theme(plot.title = ggplot2::element_text(
-      size = 16,
-      hjust = 0,
-      vjust = 0
-    ))
-
-  # DISAG
+    # add themes
+    ggplot2::theme_void() +
+    ggplot2::theme(
+      plot.title = ggplot2::element_text(
+        size = 16,
+        hjust = 0,
+        vjust = 0
+      ),
+      plot.caption = ggplot2::element_text(
+        face = "italic",
+        hjust = 1,
+        size = 10
+      ),
+      legend.text = ggplot2::element_text(margin = margin(t = 15, b = 15, unit = "pt"))
+    )
   if (disag == "None") {
-    waffle =
-      waffle +
-      ggplot2::coord_equal(
-        xlim = c(1, 10),
-        ylim = c(1, 10)
+    waffle = waffle +
+      ggplot2::scale_colour_manual(
+        name = NULL,
+        values = c("#c60158", "grey"),
+        labels = paste(legend_labels, " (", unique(df$Percent), "%)", sep = "")
       )
+    waffle
   } else {
-    waffle =
-      waffle +
-      ggplot2::facet_grid(cols = dplyr::vars(!!rlang::sym(disag))) +
-      ggplot2::scale_x_discrete(expand = c(0, 0)) +
-      ggplot2::scale_y_discrete(expand = c(0, 0)) +
-      ggplot2::coord_equal()
+    waffle = waffle +
+      facet_wrap(~disag_cat, nrow = 1) +
+      ggplot2::scale_colour_manual(
+        name = NULL,
+        values = c("#c60158", "grey"),
+        labels = legend_labels
+      ) +
+      ggplot2::theme(
+        panel.spacing = ggplot2::unit(1.5, "lines"),
+        plot.margin = ggplot2::unit(c(0.5, 0.5, 0.5, 0.5), "cm"),
+        strip.text = ggplot2::element_text(
+          face = "italic", hjust = 0, size = 10,
+          margin = margin(15, 5, 15, 0)
+        )
+      )
+    waffle
   }
-  return(waffle)
 }

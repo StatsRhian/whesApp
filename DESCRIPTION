@@ -1,22 +1,22 @@
 Type: Package
 Package: whesApp
 Title: Builds shiny app for the Welsh Health Equity Solutions Platform
-Version: 7.0.1
+Version: 7.0.2
 Authors@R: 
     person("Jumping", "Rivers", , "info@jumpingrivers.com", role = c("aut", "cre"))
 Description: An R package to contain the code for the shiny app.
 License: file LICENSE
 Depends: 
+    emojifont,
     R (>= 4.0.0)
 Imports: 
     bslib,
     dplyr,
-    emojifont,
     forcats,
     ggplot2,
     glue,
-    hrbrthemes,
     janitor,
+    png,
     purrr,
     ragg,
     reactable,
@@ -28,15 +28,12 @@ Imports:
     stringr,
     tibble,
     tidyr,
-    tidyselect,
-    waffle
+    tidyselect
 Suggests:
     covr,
     readr,
     shinytest,
     testthat (>= 3.0.0)
-Remotes: 
-    hrbrmstr/waffle
 Config/testthat/edition: 3
 Encoding: UTF-8
 LazyData: true

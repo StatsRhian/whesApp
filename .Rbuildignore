@@ -12,3 +12,4 @@ _files$
 docs
 ^CODEOWNERS$
 /rsconnect/
+^CONTRIBUTING\.md$
