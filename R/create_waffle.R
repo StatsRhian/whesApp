@@ -146,7 +146,7 @@ create_waffle = function(df, disag,
     ) +
     # add titles
     ggplot2::labs(
-      title = wrapper(title, width = 50 * plot_width),
+      title = stringr::str_wrap(title, width = 50 * plot_width),
       caption = caption
     ) +
     # add themes
@@ -155,7 +155,8 @@ create_waffle = function(df, disag,
       plot.title = ggplot2::element_text(
         size = 16,
         hjust = 0,
-        vjust = 0
+        vjust = 0,
+        margin = ggplot2::margin(0, 0, 10, 0)
       ),
       plot.caption = ggplot2::element_text(
         face = "italic",

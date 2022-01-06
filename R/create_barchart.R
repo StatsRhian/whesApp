@@ -7,6 +7,7 @@
 #' @param caption The plot caption
 #' @param lang The language to translate into
 #' @param labels Vector of possible labels
+#' @param plot_width The width of the plot
 #' @return The plot object
 
 create_barchart = function(df,
@@ -16,7 +17,8 @@ create_barchart = function(df,
                            title = "",
                            caption = "Welsh Health Equity Status 2020",
                            lang = "EN",
-                           labels = labels) {
+                           labels = labels,
+                           plot_width = 1) {
   df =
     df %>%
     dplyr::filter(!is.nan(.data$value))
@@ -57,10 +59,23 @@ create_barchart = function(df,
   # Add captions & theme
   g = g +
     ggplot2::labs(
-      title = wrapper(title, width = 80),
+      title = stringr::str_wrap(title, width = 50 * plot_width),
       caption = caption
     ) +
-    ggplot2::theme_minimal(base_size = 14)
+    ggplot2::theme_minimal(base_size = 14) +
+    ggplot2::theme(
+      plot.title = ggplot2::element_text(
+        size = 16,
+        hjust = 0,
+        vjust = 0
+      ),
+      plot.caption = ggplot2::element_text(
+        face = "italic",
+        hjust = 1,
+        size = 10,
+        margin = ggplot2::margin(10, 0, 5, 0)
+      )
+    )
 
   if (!is.null(ci)) {
     if (!all(is.na(df$ci_lower)) & (ci == TRUE)) {
@@ -79,10 +94,11 @@ create_barchart = function(df,
 
   if (unique(df$type) == "percent") {
     g = g +
-      ggplot2::scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+      ggplot2::scale_y_continuous(labels = scales::percent_format(accuracy = 1), limits = c(0, max(df$ci_upper))) +
       ggplot2::ylab(tr_pull(whesApp::translate_db, "percent", lang))
   } else {
-    g = g + ggplot2::ylab(tr_pull(whesApp::translate_db, "value", lang))
+    g = g + ggplot2::scale_y_continuous(limits = c(0, max(df$ci_upper))) +
+      ggplot2::ylab(tr_pull(whesApp::translate_db, "value", lang))
   }
   return(g)
 }
