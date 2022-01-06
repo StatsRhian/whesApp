@@ -46,6 +46,7 @@ get_labels = function(df, breaks, lang, labels) {
 translate_x_axis = function(g, df, col_name, lang, labels) {
   breaks = get_breaks(df, col_name)
   labels = get_labels(df, breaks, lang, labels)
+  labels = unlist(lapply(labels, function(x) stringr::str_wrap(x, width = 8)))
   g = g +
     ggplot2::scale_x_discrete(
       name = tr_pull(whesApp::translate_db,

@@ -12,7 +12,8 @@ create_barchart(
   title = "",
   caption = "Welsh Health Equity Status 2020",
   lang = "EN",
-  labels = labels
+  labels = labels,
+  plot_width = 1
 )
 }
 \arguments{
@@ -31,6 +32,8 @@ create_barchart(
 \item{lang}{The language to translate into}
 
 \item{labels}{Vector of possible labels}
+
+\item{plot_width}{The width of the plot}
 }
 \value{
 The plot object

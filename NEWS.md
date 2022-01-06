@@ -1,3 +1,7 @@
+# whesApp 7.0.3 _2022-01-05_
+
+- Fix bar chart axes
+
 # whesApp 7.0.2 _2021-12-22_
 
 - Update waffle functions
