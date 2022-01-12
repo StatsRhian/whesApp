@@ -4,7 +4,7 @@ test_that("Dimensions", {
 
 test_that("Indicator ids", {
   data_ids = sort(unique(indicator_data$ind_id))
-  expect_equal(length(data_ids), 89)
+  expect_equal(length(data_ids), 95)
   info_ids = sort(unique(indicator_info$ind_id))
   expect_equal(data_ids, info_ids)
 })

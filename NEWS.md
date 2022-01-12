@@ -1,3 +1,10 @@
+# whesApp 7.0.4 _2022-01-10_
+
+- Add 6 new covid indicators
+- Weight covid indidcators by sample weight
+- Add deprivation data for covid indicators
+- Remove year from plot caption
+
 # whesApp 7.0.3 _2022-01-05_
 
 - Fix bar chart axes

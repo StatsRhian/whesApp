@@ -28,6 +28,11 @@ living_ind_036,Percentage of adults feeling unsafe at home after dark,Cyfieithu 
 living_ind_038,"Percentage of households which eat eals with meat, chicken, fish (or vegetarian equivalent) at least every other day",Cyfieithu Cymraeg yn mynd yma
 living_ind_039,Value-added tax (VAT) on alcohol (%),Cyfieithu Cymraeg yn mynd yma
 living_ind_222,"Over the past week, have you been worried about going out in public places?",Cyfieithu Cymraeg yn mynd yma
+living_ind_225,"	
+Percentage of survey respondents who reported leaving their home for work, at least once, over the past week",Cyfieithu Cymraeg yn mynd yma
+living_ind_227,"Percentage of survey respondents who reported leaving their home to exercise, at least once, over the past week",Cyfieithu Cymraeg yn mynd yma
+living_ind_228,"Percentage of survey respondents who reported leaving their home to meet friends and family, at least once, over the past week",Cyfieithu Cymraeg yn mynd yma
+living_ind_229,"Percentage of survey respondents who reported leaving their home to shop for food, at least once, over the past week",Cyfieithu Cymraeg yn mynd yma
 living_ind_242,Do you have a garden?,Cyfieithu Cymraeg yn mynd yma
 social_ind_041,"Percentage of children at the final year of foundation phase achieving the expected Outcome (Outcome 5+) for Personal and social development, well-being and cultural diversity",Cyfieithu Cymraeg yn mynd yma
 social_ind_043,Percentage of adults who report a feeling lonely (a score of 4 to 6 on the De Jong Gierveld loneliness scale),Cyfieithu Cymraeg yn mynd yma
@@ -41,6 +46,7 @@ social_ind_052,Percentage of pupils in year 11/aged 15 who achieved Level 2 incl
 social_ind_054,Percentage of people who volunteer (National indicator),Cyfieithu Cymraeg yn mynd yma
 social_ind_055,Percentage of people who feel they are able to influence decisions affecting their local area,Cyfieithu Cymraeg yn mynd yma
 social_ind_056,Percentage of people who feel most people can be trusted,Cyfieithu Cymraeg yn mynd yma
+social_ind_230,"Percentage of survey respondents who reported leaving their home to to volunteer or support members of their local community, at least once, over the past week ",Cyfieithu Cymraeg yn mynd yma
 social_ind_217,"Over the past week, have you been worried about your children's education?",Cyfieithu Cymraeg yn mynd yma
 social_ind_236,Are you currently volunteering or supporting other members of your community through coronavirus?,Cyfieithu Cymraeg yn mynd yma
 social_ind_237,"Currently, when you go out, do you wear a face mask?",Cyfieithu Cymraeg yn mynd yma
@@ -60,7 +66,6 @@ employment_ind_076,Percentage of survey respondents who are working 49+ hours pe
 employment_ind_220,"Over the past week, have you been worried about work, even if you feel your job is secure?",Cyfieithu Cymraeg yn mynd yma
 income_ind_077,"Percentage of all individuals, children, working-age adults and pensioners living in relative income poverty",Cyfieithu Cymraeg yn mynd yma
 income_ind_078,Percentage of people in relative income poverty where there is disability within the family (Equality Act definition),Cyfieithu Cymraeg yn mynd yma
-income_ind_214,Have you been worrying about becoming seriously ill with coronavirus?,Cyfieithu Cymraeg yn mynd yma
 income_ind_085,Percentage of women giving birth receiving Maternity Allowance,Cyfieithu Cymraeg yn mynd yma
 income_ind_219,"Over the past week, have you been worried about losing your job or not being able to find one? ",Cyfieithu Cymraeg yn mynd yma
 income_ind_221,"Over the past week, have you been worried your finances? ",Cyfieithu Cymraeg yn mynd yma
@@ -85,6 +90,7 @@ health_ind_214,"Over the past week, have you been worried about your mental heal
 health_ind_215,"Over the past week, have you been worried about other health issues not related to coronavirus? ",Cyfieithu Cymraeg yn mynd yma
 health_ind_216,"Over the past week, have you been worried about the well-being of your children, if you have any (of any age)",Cyfieithu Cymraeg yn mynd yma
 health_ind_218,"Over the past week, have you been worried about the well-being of other family members (not children)",Cyfieithu Cymraeg yn mynd yma
+health_ind_226,"Percentage of survey respondents who reported leaving their home for for medical reasons, at least once, over the past week",Cyfieithu Cymraeg yn mynd yma
 health_ind_238,"In the last week, have you or anyone else in your household had smaller meals than usual or skipped meals because you couldn't afford or get access to food",Cyfieithu Cymraeg yn mynd yma
 health_ind_239,"In the last week, have you or anyone else in your household been hungry but not eaten because you couldn't afford or get access to food",Cyfieithu Cymraeg yn mynd yma
 health_ind_240,"In the last week, have you or anyone else in your household not eaten for a whole day because you couldn't afford or get access to food ",Cyfieithu Cymraeg yn mynd yma
@@ -108,7 +114,7 @@ inequities_tab_title,Inequities in Health,Anghydraddoldebau mewn Iechyd
 category_employment,Employment and Working Conditions,Amodau Cyflogaeth a Gwaith
 waffle_legend_label,Yes,Do
 waffle_legend_label,No,Naddo
-caption,Welsh Health Equity Solutions Platform 2020,Llwyfan Datrysiadau Ecwiti Iechyd Cymru 2020
+caption,Welsh Health Equity Solutions Platform,Llwyfan Datrysiadau Ecwiti Iechyd Cymru 
 infographics_tab_title,Infographics,Infograffeg
 details_tab_title,Data Explorer,Archwiliwr Data
 policies_tab_title,Policies & Health Economics,Polisïau ac Economeg Iechyd
