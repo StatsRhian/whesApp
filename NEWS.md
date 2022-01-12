@@ -1,3 +1,8 @@
+# whesApp 7.0.5 _2022-01-12_
+
+- add UI updates
+- redesign theme
+
 # whesApp 7.0.4 _2022-01-10_
 
 - Add 6 new covid indicators

@@ -44,7 +44,7 @@ create_reactable = function(df, lang) {
     table_out =
       df %>%
       reactable::reactable(
-        showPageSizeOptions = TRUE,
+        pagination = FALSE,
         columns = list(
           value = reactable::colDef(
             name = tr_pull(whesApp::translate_db, "col_value", lang),
@@ -57,7 +57,7 @@ create_reactable = function(df, lang) {
     table_out =
       df %>%
       reactable::reactable(
-        showPageSizeOptions = TRUE,
+        pagination = FALSE,
         columns = list(
           value = reactable::colDef(
             name = tr_pull(whesApp::translate_db, "col_value", lang),

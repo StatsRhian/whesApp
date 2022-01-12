@@ -15,6 +15,11 @@ colgroup {
     white-space: normal;
 }
 
+.container-fluid {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
 .tag {
 display: inline-block;
 padding: 2px 12px;
