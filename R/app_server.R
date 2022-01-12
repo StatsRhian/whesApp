@@ -6,7 +6,7 @@ app_server = function(input, output, session) {
     input$lan
   })
 
-  purrr::map(whesApp::cat_df$catID, ~ categoryPanelServer(.x, lang = lang, cat = .x))
+  purrr::map(whesApp::cat_df$catID, ~ dataServer(.x, lang = lang))
 
   shiny::observeEvent(lang(), {
     translate_reactable_options(lang = lang())
