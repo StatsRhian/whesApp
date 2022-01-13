@@ -1,3 +1,7 @@
+# whesApp 7.0.6 _2022-01-13_
+
+- Update fonts
+
 # whesApp 7.0.5 _2022-01-12_
 
 - add UI updates
