@@ -15,6 +15,7 @@ add_external_resources = function() {
       type = "text/css",
       ".shiny-output-error { visibility: hidden; }",
       ".shiny-output-error:before { visibility: hidden; }",
+      "body {padding-top: 70px;}"
     )
   )
 }

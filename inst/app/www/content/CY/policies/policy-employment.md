@@ -1,2 +1,0 @@
-gwybodaeth am bolisïau
-

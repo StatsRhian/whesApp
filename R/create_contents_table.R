@@ -8,7 +8,6 @@ create_contents_table = function(lang) {
       ~ tr_pull(whesApp::translate_db, glue::glue("{.y}_{.x}"), lang)
     )) %>%
     dplyr::select(.data$name, .data$category) %>%
-    dplyr::filter(.data$category %in% c("health", "income", "living", "social", "employment")) %>%
     reactable::reactable(
       defaultPageSize = 50,
       compact = TRUE,
@@ -24,7 +23,7 @@ create_contents_table = function(lang) {
               class = class,
               tr_pull(
                 whesApp::translate_db,
-                glue::glue("category_{value}"),
+                glue::glue("title_data_{value}"),
                 lang
               )
             )
