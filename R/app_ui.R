@@ -5,17 +5,16 @@
 app_ui = function(request) {
   shiny::tagList(
     shiny::navbarPage(
-      title = shiny::textOutput("whes_title"),
+      title = translateTitleUI("whes_platform"),
       position = c("fixed-top"),
-      shiny::tags$style(type = "text/css", "body {padding-top: 70px;}"),
       theme = bslib::bs_theme(
         primary = "#008586",
         secondary = "#c60158",
-        success = "#c60158",
         version = 4,
-        bootswatch = "flatly"
+        bootswatch = "united"
       ),
-      shiny::tabPanel(shiny::uiOutput("overview_tab_title", inline = TRUE),
+      header = add_external_resources(),
+      shiny::tabPanel(translateTitleUI("overview"),
                       shiny::br(),
                       shiny::br(),
                       shiny::div(
@@ -33,29 +32,25 @@ app_ui = function(request) {
                       shiny::br(),
                       shiny::uiOutput("intro_md")
       ),
-      shiny::navbarMenu("Data Explorer",
-                   dataUI("wellbeing"),
-                   dataUI("morbidity"),
-                   dataUI("health"),
-                   dataUI("income"),
-                   dataUI("living"),
-                   dataUI("social"),
-                   dataUI("employment"),
-                   shiny::tabPanel(shiny::uiOutput("search_tab_title", inline = TRUE),
-                                   icon = shiny::icon("search"),
-                                   shiny::br(),
-                                   reactable::reactableOutput("indicator_search")
-                   )
-                 ),
-      shiny::tabPanel(shiny::uiOutput("policies", inline = TRUE),
-                      shiny::br(),
-                      shiny::uiOutput("policy_md")
+      shiny::navbarMenu(translateTitleUI("data"),
+                        dataUI("wellbeing"),
+                        dataUI("morbidity"),
+                        dataUI("health"),
+                        dataUI("income"),
+                        dataUI("living"),
+                        dataUI("social"),
+                        dataUI("employment"),
+                        shiny::tabPanel(translateTitleUI("data_search"),
+                                        icon = shiny::icon("search"),
+                                        shiny::br(),
+                                        reactable::reactableOutput("indicator_search")
+                        )
       ),
-      shiny::tabPanel("Health Economics"),
-      shiny::tabPanel("International Evidence"),
-      shiny::tabPanel("Un-met needs"),
-      shiny::tabPanel("Solutions"),
-      add_external_resources()
+      navbarPagesUI("policy"),
+      navbarPagesUI("economics"),
+      navbarPagesUI("evidence"),
+      navbarPagesUI("needs"),
+      navbarPagesUI("solutions")
     )
   )
 }

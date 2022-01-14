@@ -137,7 +137,7 @@ create_waffle = function(df, disag,
     # create plot
     geom_user(
       family = "fontawesome-webfont",
-      size = 7,
+      size = c(7, 5)[(length(unique(df$disag_cat)) > 3) + 1],
       draw_key = "user"
     ) +
     ggplot2::coord_equal(
@@ -156,12 +156,14 @@ create_waffle = function(df, disag,
         size = 16,
         hjust = 0,
         vjust = 0,
-        margin = ggplot2::margin(0, 0, 10, 0)
+        margin = ggplot2::margin(10, 0, 10, 0),
+        lineheight = 1.2
       ),
       plot.caption = ggplot2::element_text(
         face = "italic",
         hjust = 1,
-        size = 10
+        size = 10,
+        lineheight = 1.2
       ),
       legend.text = ggplot2::element_text(margin = margin(t = 15, b = 15, unit = "pt"))
     )
@@ -175,7 +177,8 @@ create_waffle = function(df, disag,
     waffle
   } else {
     waffle = waffle +
-      facet_wrap(~disag_cat, nrow = 1) +
+      ggplot2::facet_wrap(~disag_cat, nrow = 1,
+                          labeller = ggplot2::labeller(disag_cat = ggplot2::label_wrap_gen(width = 20))) +
       ggplot2::scale_colour_manual(
         name = NULL,
         values = c("#c60158", "grey"),

@@ -1,12 +1,18 @@
 # Values should be 0, unless reasons given
 variables:
-  ALLOWED_WARNINGS: 1 # emojifont version
-  ALLOWED_NOTES: 1 # ASCII
+  ALLOWED_WARNINGS: 0
+  ALLOWED_NOTES: 1
   NO_IMPORTS: 2
-  # downstream_trigger_branch: main # adjust for testing different demos
+  #disable_verify_r_package: "false"
+  #publish_to_drat: "true"
 
+# This will include the project template main.yml
 include:
-  # https://gitlab.com/jumpingrivers/tools/ci-templates/-/blob/main/templates/r-package.yml
-  - project: 'jumpingrivers/tools/ci-templates'
-    ref: main
-    file: '/templates/r-package.yml'
+  - project: jumpingrivers/products/rdev/r-package
+    ref: $JR_CI_TEMPLATES_DEFAULT_BRANCH
+    file: /.ci/main.yml
+    rules:
+      - if: $CI_PROJECT_PATH != "jumpingrivers/products/rdev/r-package"
+  - local: /.ci/main.yml
+    rules:
+      - if: $CI_PROJECT_PATH == "jumpingrivers/products/rdev/r-package"

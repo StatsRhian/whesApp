@@ -30,7 +30,7 @@ create_barchart = function(df,
         x = tr_pull(whesApp::translate_db, "all", lang),
         y = .data$value
       )) +
-      ggplot2::geom_col(fill = "#1B9E77") +
+      ggplot2::geom_col(fill = "#008586") +
       ggplot2::xlab("")
   } else if (disag1 != "None" & disag2 == "None") {
     g = df %>%
@@ -67,13 +67,15 @@ create_barchart = function(df,
       plot.title = ggplot2::element_text(
         size = 16,
         hjust = 0,
-        vjust = 0
+        vjust = 0,
+        lineheight = 1.2
       ),
       plot.caption = ggplot2::element_text(
         face = "italic",
         hjust = 1,
         size = 10,
-        margin = ggplot2::margin(10, 0, 5, 0)
+        margin = ggplot2::margin(10, 0, 5, 0),
+        lineheight = 1.2
       )
     )
 

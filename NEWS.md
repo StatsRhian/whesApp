@@ -1,3 +1,8 @@
+# whesApp 7.0.7 _2022-01-14_
+
+- add policy dropdowns
+- minor UI tweeks
+
 # whesApp 7.0.6 _2022-01-13_
 
 - Update fonts

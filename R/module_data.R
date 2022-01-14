@@ -1,6 +1,6 @@
 dataUI = function(id) {
   ns = shiny::NS(id)
-  shiny::tabPanel(shiny::uiOutput(glue::glue("{id}_tab_title"), inline = TRUE),
+  shiny::tabPanel(translateTitleUI(glue::glue("data_{id}")),
                   value = id,
   shiny::tagList(
     shiny::fluidPage(
@@ -43,7 +43,7 @@ dataUI = function(id) {
           3,
           shinyWidgets::radioGroupButtons(
             ns("plot_type"),
-            label = "Choose plot type:",
+            label = "Please select plot type:",
             choices = c("Infographic" = "infographic",
                         "Bar chart" = "barchart",
                         "Table" = "table"),
@@ -226,7 +226,7 @@ dataServer = function(id, lang) {
         all()
 
       if (no_ci) {
-        shinyjs::hide("ci_button")
+        shinyjs::disable("ci_button")
       } else {
         shinyjs::show("ci_button")
       }
@@ -305,7 +305,7 @@ dataServer = function(id, lang) {
     })
 
     output$tab_heading = shiny::renderUI({
-      tr_pull(whesApp::translate_db, glue::glue("category_{id}"), lang()) %>%
+      tr_pull(whesApp::translate_db, glue::glue("title_data_{id}"), lang()) %>%
         shiny::h2()
     })
 
@@ -324,8 +324,11 @@ dataServer = function(id, lang) {
       content = function(file) {
         ggplot2::ggsave(file,
                         plot = plot_obj(),
-                        device = ragg::agg_png, bg = "white",
-                        width = get_plot_width(ind_df(), input$ind_id, input$disag) * 6, height = 6
+                        device = ragg::agg_png,
+                        bg = "white",
+                        width = get_plot_width(ind_df(), input$ind_id, input$disag) * 6, height = 6,
+                        unit = "in",
+                        dpi = 96
         )
       }
     )
