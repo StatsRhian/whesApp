@@ -5,7 +5,7 @@
 \title{Translate labels for ggplot
 Runs once on start up}
 \usage{
-translate_labels(translate_db)
+translate_labels(translate_db = whesApp::translate_db)
 }
 \arguments{
 \item{translate_db}{The translation database}

@@ -27,7 +27,7 @@ create_barchart = function(df,
   if (disag1 == "None" & disag2 == "None") {
     g = df %>%
       ggplot2::ggplot(ggplot2::aes(
-        x = tr_pull(whesApp::translate_db, "all", lang),
+        x = tr_pull("all", lang),
         y = .data$value
       )) +
       ggplot2::geom_col(fill = "#008586") +
@@ -97,10 +97,10 @@ create_barchart = function(df,
   if (unique(df$type) == "percent") {
     g = g +
       ggplot2::scale_y_continuous(labels = scales::percent_format(accuracy = 1), limits = c(0, max(df$ci_upper))) +
-      ggplot2::ylab(tr_pull(whesApp::translate_db, "percent", lang))
+      ggplot2::ylab(tr_pull("percent", lang))
   } else {
     g = g + ggplot2::scale_y_continuous(limits = c(0, max(df$ci_upper))) +
-      ggplot2::ylab(tr_pull(whesApp::translate_db, "value", lang))
+      ggplot2::ylab(tr_pull("value", lang))
   }
   return(g)
 }

@@ -4,14 +4,14 @@
 \alias{tr_table}
 \title{Translate}
 \usage{
-tr_table(df, translate_db, lang)
+tr_table(df, lang, translate_db = whesApp::translate_db)
 }
 \arguments{
 \item{df}{The table to translate}
 
-\item{translate_db}{The translation database}
-
 \item{lang}{The language to translate into (EN or CY)}
+
+\item{translate_db}{The translation database}
 }
 \description{
 Translate

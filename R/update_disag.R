@@ -19,8 +19,8 @@ update_disag = function(selected_ind_id, lang) {
   shiny::updateSelectInput(
     session,
     inputId = "disag",
-    label = tr_pull(whesApp::translate_db, "select_disag_label", lang),
-    choices = tr_deframe(whesApp::translate_db, pattern = search_disag, lang = lang),
-    selected = tr_deframe(whesApp::translate_db, pattern = "disaggregate_None", lang = lang)
+    label = tr_pull("select_disag_label", lang),
+    choices = tr_deframe(pattern = search_disag, lang = lang),
+    selected = tr_deframe(pattern = "disaggregate_None", lang = lang)
   )
 }

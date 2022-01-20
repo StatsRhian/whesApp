@@ -4,14 +4,14 @@
 \alias{tr_deframe}
 \title{Translation deframe}
 \usage{
-tr_deframe(translate_db, pattern, lang)
+tr_deframe(pattern, lang, translate_db = whesApp::translate_db)
 }
 \arguments{
-\item{translate_db}{The translation database}
-
 \item{pattern}{The pattern to search for}
 
 \item{lang}{The language to translate into}
+
+\item{translate_db}{The translation database}
 }
 \description{
 Translation deframe

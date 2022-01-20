@@ -14,37 +14,39 @@ app_ui = function(request) {
         bootswatch = "united"
       ),
       header = add_external_resources(),
-      shiny::tabPanel(translateTitleUI("overview"),
-                      shiny::br(),
-                      shiny::br(),
-                      shiny::div(
-                        purrr::map(
-                          .x = whesApp::cat_df$catID[3:7],
-                          .f = ~ shiny::img(
-                            src = glue::glue("www/images/{.x}.png"),
-                            height = "250px",
-                            id = glue::glue("img_{.x}"),
-                            style = "cursor:pointer;"
-                          )
-                        ),
-                        style = "text-align: center;"
-                      ),
-                      shiny::br(),
-                      shiny::uiOutput("intro_md")
+      shiny::tabPanel(
+        translateTitleUI("overview"),
+        shiny::br(),
+        shiny::br(),
+        shiny::div(
+          purrr::map(
+            .x = whesApp::cat_df$catID[3:7],
+            .f = ~ shiny::img(
+              src = glue::glue("www/images/{.x}.png"),
+              height = "250px",
+              id = glue::glue("img_{.x}"),
+              style = "cursor:pointer;"
+            )
+          ),
+          style = "text-align: center;"
+        ),
+        shiny::br(),
+        shiny::uiOutput("intro_md")
       ),
-      shiny::navbarMenu(translateTitleUI("data"),
-                        dataUI("wellbeing"),
-                        dataUI("morbidity"),
-                        dataUI("health"),
-                        dataUI("income"),
-                        dataUI("living"),
-                        dataUI("social"),
-                        dataUI("employment"),
-                        shiny::tabPanel(translateTitleUI("data_search"),
-                                        icon = shiny::icon("search"),
-                                        shiny::br(),
-                                        reactable::reactableOutput("indicator_search")
-                        )
+      shiny::navbarMenu(
+        translateTitleUI("data"),
+        dataUI("wellbeing"),
+        dataUI("morbidity"),
+        dataUI("health"),
+        dataUI("income"),
+        dataUI("living"),
+        dataUI("social"),
+        dataUI("employment"),
+        shiny::tabPanel(translateTitleUI("data_search"),
+          icon = shiny::icon("search"),
+          shiny::br(),
+          reactable::reactableOutput("indicator_search")
+        )
       ),
       navbarPagesUI("policy"),
       navbarPagesUI("economics"),

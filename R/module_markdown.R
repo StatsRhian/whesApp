@@ -5,25 +5,24 @@
 markdownTabUI = function(id) {
   ns = shiny::NS(id)
   shiny::tabPanel(shiny::uiOutput(ns("tab_heading"), inline = TRUE),
-                  value = id,
-                  shiny::tagList(
-                    shiny::fluidPage(
-                      shiny::fluidRow(
-                        shiny::column(
-                          12,
-                          shiny::uiOutput(ns("insert_markdown"))
-                        )
-                      )
-                    )
-                  )
+    value = id,
+    shiny::tagList(
+      shiny::fluidPage(
+        shiny::fluidRow(
+          shiny::column(
+            12,
+            shiny::uiOutput(ns("insert_markdown"))
+          )
+        )
+      )
+    )
   )
 }
 
 markdownTabServer = function(id, lang) {
   shiny::moduleServer(id, function(input, output, session) {
-
     output$tab_heading = shiny::renderUI({
-      tr_pull(whesApp::translate_db, glue::glue("title_{id}"), lang())
+      tr_pull(glue::glue("title_{id}"), lang())
     })
 
     output$insert_markdown = shiny::renderUI({

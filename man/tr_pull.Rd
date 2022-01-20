@@ -4,16 +4,16 @@
 \alias{tr_pull}
 \title{Pull translation}
 \usage{
-tr_pull(translate_db, key, lang, search = FALSE)
+tr_pull(key, lang, search = FALSE, translate_db = whesApp::translate_db)
 }
 \arguments{
-\item{translate_db}{The translation database}
-
 \item{key}{The phrase to translate}
 
 \item{lang}{The language to translate into}
 
 \item{search}{Whether to search for many matches or just one}
+
+\item{translate_db}{The translation database}
 }
 \value{
 Translation

@@ -4,13 +4,13 @@
 #' Runs once on start up
 #' @param translate_db The translation database
 
-translate_labels = function(translate_db) {
-  disag_facet_labels = tr_pull(translate_db,
+translate_labels = function(translate_db = whesApp::translate_db) {
+  disag_facet_labels = tr_pull(
     key = "disag_[A-Za-z]*_value_[0-9]*",
     lang = "EN",
     search = TRUE
   )
-  disag_facet_labels_CY = tr_pull(translate_db,
+  disag_facet_labels_CY = tr_pull(
     key = "disag_[A-Za-z]*_value_[0-9]*",
     lang = "CY",
     search = TRUE
@@ -49,7 +49,7 @@ translate_x_axis = function(g, df, col_name, lang, labels) {
   labels = unlist(lapply(labels, function(x) stringr::str_wrap(x, width = 8)))
   g = g +
     ggplot2::scale_x_discrete(
-      name = tr_pull(whesApp::translate_db,
+      name = tr_pull(
         key = glue::glue("disaggregate_{col_name}"), lang = lang
       ),
       breaks = breaks,
@@ -64,7 +64,7 @@ translate_fill = function(g, df, col_name, lang, labels) {
   g = g +
     ggplot2::scale_fill_brewer(
       palette = "Dark2",
-      name = tr_pull(whesApp::translate_db,
+      name = tr_pull(
         key = glue::glue("disaggregate_{col_name}"), lang = lang
       ),
       breaks = breaks,

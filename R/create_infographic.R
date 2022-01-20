@@ -9,16 +9,16 @@ create_infographic = function(df, id, disag, lang) {
       dplyr::pull(.data$name)
 
     df %>%
-      tr_table(whesApp::translate_db, lang) %>%
+      tr_table(lang) %>%
       prep_waffle(disag) %>%
       create_waffle(disag,
-        title = tr_pull(whesApp::translate_db,
+        title = tr_pull(
           key = id,
           lang = lang,
           search = TRUE
         ),
         caption = get_caption(id, lang),
-        legend_labels = tr_pull(whesApp::translate_db,
+        legend_labels = tr_pull(
           key = "waffle_legend_label",
           lang = lang
         ),

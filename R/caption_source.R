@@ -26,12 +26,12 @@ caption_source = function(id, info = whesApp::indicator_info) {
 #' @param lang language
 get_caption = function(id, lang) {
   glue::glue(
-    tr_pull(whesApp::translate_db,
+    tr_pull(
       key = "caption",
       lang = lang
     ),
     "\n",
-    tr_pull(whesApp::translate_db,
+    tr_pull(
       key = caption_source(
         id = id
       ),

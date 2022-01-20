@@ -6,7 +6,7 @@ translateTitleUI = function(id) {
 translateTitleServer = function(id, lang) {
   shiny::moduleServer(id, function(input, output, session) {
     output$translated_title = shiny::renderText({
-      tr_pull(whesApp::translate_db, key = glue::glue("title_{id}"), lang())
+      tr_pull(key = glue::glue("title_{id}"), lang())
     })
   })
 }
