@@ -11,14 +11,14 @@ app_server = function(input, output, session) {
 
   # Call modules for additional pages navbars
   pages = c("policy", "economics", "evidence", "needs", "solutions")
-  purrr::map(pages, ~navbarPagesServer(.x, lang = lang))
+  purrr::map(pages, ~ navbarPagesServer(.x, lang = lang))
 
   # Call module for translating titles
   titles = whesApp::translate_db %>%
     dplyr::pull(.data$key) %>%
     stringr::str_subset("^title_") %>%
     stringr::str_remove("^title_")
-  purrr::map(titles, ~translateTitleServer(.x, lang = lang))
+  purrr::map(titles, ~ translateTitleServer(.x, lang = lang))
 
   # Clickable images on home page
   purrr::map(whesApp::cat_df$catID[3:7], onclick_tabset)
@@ -36,7 +36,7 @@ app_server = function(input, output, session) {
 
   # Update browser tab title
   shiny::observeEvent(lang(), {
-    title = tr_pull(whesApp::translate_db, "title_whes_platform", lang())
+    title = tr_pull("title_whes_platform", lang())
     session$sendCustomMessage("changetitle", title)
   })
 }

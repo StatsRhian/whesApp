@@ -4,14 +4,19 @@
 \alias{tr_deframe_inds}
 \title{TR deframe indicators}
 \usage{
-tr_deframe_inds(translate_db, key_group, lang, indicator_info)
+tr_deframe_inds(
+  key_group,
+  lang,
+  translate_db = whesApp::translate_db,
+  indicator_info = whesApp::indicator_info
+)
 }
 \arguments{
-\item{translate_db}{The translation database}
-
 \item{key_group}{The key phrase}
 
 \item{lang}{The language to translate into}
+
+\item{translate_db}{The translation database}
 
 \item{indicator_info}{The indicator information}
 }

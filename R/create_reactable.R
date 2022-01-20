@@ -9,7 +9,7 @@ create_reactable = function(df, lang) {
   # Translate any disaggregate columns
   col_id = which(names(df) %in% whesApp::breakdown_vars)
   for (i in seq_along(col_id)) {
-    names(df)[col_id[i]] = tr_pull(whesApp::translate_db,
+    names(df)[col_id[i]] = tr_pull(
       key = glue::glue("disaggregate_{names(df)[col_id[i]]}"),
       lang = lang
     )
@@ -37,7 +37,7 @@ create_reactable = function(df, lang) {
       df %>%
       tidyr::unite(col = "confidence", .data$ci_lower:.data$ci_upper, sep = " - ") %>%
       dplyr::relocate(.data$confidence, .after = .data$value) %>%
-      dplyr::rename_with(~ tr_pull(whesApp::translate_db, "col_confidence", lang), "confidence")
+      dplyr::rename_with(~ tr_pull("col_confidence", lang), "confidence")
   }
 
   if (type == "percent") {
@@ -47,7 +47,7 @@ create_reactable = function(df, lang) {
         pagination = FALSE,
         columns = list(
           value = reactable::colDef(
-            name = tr_pull(whesApp::translate_db, "col_value", lang),
+            name = tr_pull("col_value", lang),
             format = reactable::colFormat(percent = TRUE, digits = 1),
             na = "*"
           )
@@ -60,7 +60,7 @@ create_reactable = function(df, lang) {
         pagination = FALSE,
         columns = list(
           value = reactable::colDef(
-            name = tr_pull(whesApp::translate_db, "col_value", lang),
+            name = tr_pull("col_value", lang),
             format = reactable::colFormat(digits = 2),
             na = "*"
           )

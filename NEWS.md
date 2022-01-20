@@ -1,7 +1,12 @@
+# whesApp 7.0.8 _2022-01-17_
+
+- translate indicators and buttons
+- tidy translate functions
+
 # whesApp 7.0.7 _2022-01-14_
 
 - add policy dropdowns
-- minor UI tweeks
+- minor UI tweaks
 
 # whesApp 7.0.6 _2022-01-13_
 

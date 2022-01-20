@@ -8,7 +8,7 @@
 update_db = function(indicator_info, translate_db) {
   info_titles = indicator_info$name
   tran_titles =
-  translate_db %>%
+    translate_db %>%
     dplyr::filter(stringr::str_detect(.data$key, "^[A-Za-z]+_ind_[0-9]{3}$")) %>%
     dplyr::pull(.data$EN)
   missing = which(!(info_titles %in% tran_titles))
@@ -35,7 +35,7 @@ update_db = function(indicator_info, translate_db) {
 #' @param lang The language to translate into
 #' @param search Whether to search for many matches or just one
 #' @return Translation
-tr_pull = function(translate_db, key, lang, search = FALSE) {
+tr_pull = function(key, lang, search = FALSE, translate_db = whesApp::translate_db) {
   if (search) {
     translate_db %>%
       dplyr::filter(stringr::str_detect(key, {{ key }})) %>%
@@ -51,7 +51,7 @@ tr_pull = function(translate_db, key, lang, search = FALSE) {
 #' @param df The table to translate
 #' @param translate_db The translation database
 #' @param lang The language to translate into (EN or CY)
-tr_table = function(df, translate_db, lang) {
+tr_table = function(df, lang, translate_db = whesApp::translate_db) {
   if (lang == "CY") {
     df_breakdown = which(whesApp::breakdown_vars %in% names(df))
 
@@ -80,21 +80,26 @@ tr_table = function(df, translate_db, lang) {
   return(df)
 }
 
-
 #' TR deframe indicators
-#' @param translate_db The translation database
 #' @param key_group The key phrase
 #' @param lang The language to translate into
+#' @param translate_db The translation database
 #' @param indicator_info The indicator information
 #' @return The translation
-tr_deframe_inds = function(translate_db, key_group, lang, indicator_info) {
+tr_deframe_inds = function(key_group, lang,
+                           translate_db = whesApp::translate_db,
+                           indicator_info = whesApp::indicator_info) {
   available_inds =
     indicator_info %>%
     dplyr::filter(.data$category == key_group) %>%
     dplyr::pull(.data$ind_id)
 
-  pattern = glue::glue("^{key_group}_({paste(available_inds, collapse = '|')})$")
-  return(tr_deframe(translate_db, pattern, lang))
+  pattern = glue::glue("^({paste(available_inds, collapse = '|')})$")
+
+  translate_db %>%
+    dplyr::filter(stringr::str_detect(.data$key, pattern)) %>%
+    dplyr::select({{ lang }}, .data$key) %>%
+    tibble::deframe()
 }
 
 #' Translation deframe
@@ -104,9 +109,8 @@ tr_deframe_inds = function(translate_db, key_group, lang, indicator_info) {
 # indented for the search filters
 # The key is stripped of everything before the _first underscore_
 # E.g Searching "disaggregate" returns "None", "Sex" (not "disaggregate_None")
-# E.g Searching "income" returns "ind_077", "ind_078", (not "income_ind_077")
 
-tr_deframe = function(translate_db, pattern, lang) {
+tr_deframe = function(pattern, lang, translate_db = whesApp::translate_db) {
   translate_db %>%
     dplyr::filter(stringr::str_detect(.data$key, pattern)) %>%
     dplyr::mutate(

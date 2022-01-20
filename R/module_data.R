@@ -1,115 +1,117 @@
 dataUI = function(id) {
   ns = shiny::NS(id)
   shiny::tabPanel(translateTitleUI(glue::glue("data_{id}")),
-                  value = id,
-  shiny::tagList(
-    shiny::fluidPage(
+    value = id,
+    shiny::tagList(
+      shiny::fluidPage(
 
-      # Title ------------------------------
-      shiny::fluidRow(
-        shiny::column(
-          12,
-          shiny::br(),
-          shiny::uiOutput(ns("tab_heading")),
-          shiny::br()
-        )
-      ), # End: fluid row
-
-      # Choose indicator ------------------------------
-      shiny::fluidRow(
-        shiny::column(
-          12,
-          shinyWidgets::pickerInput(
-            inputId = ns("ind_id"),
-            label = "Please select an indicator. You can type in the box to search for a key word.", # nolint
-            choices =
-              dplyr::filter(
-                whesApp::indicator_info,
-                .data$category == id
-              ) %>%
-              dplyr::select(.data$name, .data$ind_id) %>%
-              tibble::deframe(),
-            options = list(
-              `live-search` = TRUE
-            ),
-            width = "90%"
+        # Title ------------------------------
+        shiny::fluidRow(
+          shiny::column(
+            12,
+            shiny::br(),
+            shiny::uiOutput(ns("tab_heading")),
+            shiny::br()
           )
-        ),
-      ), # End: fluid row,
+        ), # End: fluid row
 
-      # Set options ------------------------------
-      shiny::fluidRow(
-        shiny::column(
-          3,
-          shinyWidgets::radioGroupButtons(
-            ns("plot_type"),
-            label = "Please select plot type:",
-            choices = c("Infographic" = "infographic",
-                        "Bar chart" = "barchart",
-                        "Table" = "table"),
-            status = "primary"
+        # Choose indicator ------------------------------
+        shiny::fluidRow(
+          shiny::column(
+            12,
+            shinyWidgets::pickerInput(
+              inputId = ns("ind_id"),
+              label = "Please select an indicator. You can type in the box to search for a key word.", # nolint
+              choices =
+                dplyr::filter(
+                  whesApp::indicator_info,
+                  .data$category == id
+                ) %>%
+                  dplyr::select(.data$name, .data$ind_id) %>%
+                  tibble::deframe(),
+              options = list(
+                `live-search` = TRUE
+              ),
+              width = "90%"
+            )
           ),
-          shiny::selectInput(ns("disag"),
-                             label = "Please select a grouping",
-                             choices = c(
-                               "None" = "None",
-                               "Gender" = "Gender",
-                               "Age" = "Age",
-                               "Deprivation" = "Deprivation",
-                               "Education level" = "Education"
-                             ),
-                             selected = "None"
-          ),
-          shiny::selectInput(ns("disag2"),
-                             label = "Please select a grouping",
-                             choices = c(
-                               "Gender" = "Gender",
-                               "Age" = "Age",
-                               "Deprivation" = "Deprivation",
-                               "Education level" = "Education"
-                             ),
-                             selected = "Age"
-          ),
-          shiny::uiOutput(ns("ci_button")),
-          shiny::uiOutput(ns("download_plot_button")),
-          shiny::uiOutput(ns("download_data_button"))
-        ),
+        ), # End: fluid row,
 
-        # Display plot ------------------------------
+        # Set options ------------------------------
+        shiny::fluidRow(
+          shiny::column(
+            3,
+            shinyWidgets::radioGroupButtons(
+              ns("output_type"),
+              label = "Please select plot type:",
+              choices = c(
+                "Infographic" = "infographic",
+                "Bar chart" = "barchart",
+                "Table" = "table"
+              ),
+              status = "primary"
+            ),
+            shiny::selectInput(ns("disag"),
+              label = "Please select a grouping",
+              choices = c(
+                "None" = "None",
+                "Gender" = "Gender",
+                "Age" = "Age",
+                "Deprivation" = "Deprivation",
+                "Education level" = "Education"
+              ),
+              selected = "None"
+            ),
+            shiny::selectInput(ns("disag2"),
+              label = "Please select a grouping",
+              choices = c(
+                "Gender" = "Gender",
+                "Age" = "Age",
+                "Deprivation" = "Deprivation",
+                "Education level" = "Education"
+              ),
+              selected = "Age"
+            ),
+            shiny::uiOutput(ns("ci_button")),
+            shiny::uiOutput(ns("download_plot_button")),
+            shiny::uiOutput(ns("download_data_button"))
+          ),
+
+          # Display plot ------------------------------
           shiny::column(
             9,
             shiny::wellPanel(
               shiny::fluidRow(shiny::column(
-                12, style = "height:400px;",
+                12,
+                style = "height:400px;",
                 shiny::plotOutput(ns("plot_window")),
                 reactable::reactableOutput(ns("detailed_table"), height = "400px")
-              )
-            )
-          ),
-        )
-      ), # End: fluid row,
+              ))
+            ),
+          )
+        ), # End: fluid row,
 
-      # Add spacing ------------------------------
-      shiny::br(),
+        # Add spacing ------------------------------
+        shiny::br(),
 
-      # Text warning ------------------------------
-      shiny::fluidRow(
-        shiny::column(
-          12,
+        # Text warning ------------------------------
+        shiny::fluidRow(
+          shiny::column(
+            12,
             shiny::textOutput(ns("small_numbers"))
-        )
-      ), # End: fluid row
+          )
+        ), # End: fluid row
 
-      # Display md text ------------------------------
-      shiny::fluidRow(
-        shiny::column(
-          12,
-          shiny::tags$br(),
-          shiny::uiOutput(ns("indicator_md"))
-        )
-      ) # End: fluid row
-    ) # End: fluid page
-  )
+        # Display md text ------------------------------
+        shiny::fluidRow(
+          shiny::column(
+            12,
+            shiny::tags$br(),
+            shiny::uiOutput(ns("indicator_md"))
+          )
+        ) # End: fluid row
+      ) # End: fluid page
+    )
   )
 }
 
@@ -122,6 +124,27 @@ dataServer = function(id, lang) {
       whesApp::indicator_data %>%
         dplyr::filter(.data$ind_id == input$ind_id) %>%
         filter_disag(input$disag)
+    })
+
+    # Translate "Select indicator"
+    shiny::observeEvent(lang(), {
+      shinyWidgets::updatePickerInput(
+        session,
+        inputId = "ind_id",
+        label = tr_pull("select_ind_label", lang()),
+        choices = tr_deframe_inds(key_group = id, lang = lang())
+      )
+    })
+
+    # Translate radio group buttons
+    shiny::observeEvent(lang(), {
+      shinyWidgets::updateRadioGroupButtons(
+        session,
+        inputId = "output_type",
+        label = tr_pull("select_output_type", lang()),
+        choices = tr_deframe(pattern = "^output", lang = lang()),
+        status = "primary"
+      )
     })
 
     # Update data for bar plot  -------------------------------
@@ -156,8 +179,8 @@ dataServer = function(id, lang) {
         shiny::updateSelectInput(
           session,
           inputId = "disag",
-          label = tr_pull(whesApp::translate_db, "select_disag_label", lang()),
-          choices = tr_deframe(whesApp::translate_db, pattern = "disaggregate_None", lang = lang())
+          label = tr_pull("select_disag_label", lang()),
+          choices = tr_deframe(pattern = "disaggregate_None", lang = lang())
         )
       } else {
         disag = disag_choices()
@@ -166,8 +189,8 @@ dataServer = function(id, lang) {
         shiny::updateSelectInput(
           session,
           inputId = "disag",
-          label = tr_pull(whesApp::translate_db, "select_disag_label", lang()),
-          choices = tr_deframe(whesApp::translate_db, pattern = search_disag, lang = lang())
+          label = tr_pull("select_disag_label", lang()),
+          choices = tr_deframe(pattern = search_disag, lang = lang())
         )
         if (input$disag != "None") {
           disag2 = disag_choices()[disag_choices() != input$disag]
@@ -179,8 +202,8 @@ dataServer = function(id, lang) {
         shiny::updateSelectInput(
           session,
           inputId = "disag2",
-          label = tr_pull(whesApp::translate_db, "select_disag_label", lang()),
-          choices = tr_deframe(whesApp::translate_db, pattern = search_disag2, lang = lang()),
+          label = tr_pull("select_disag_label", lang()),
+          choices = tr_deframe(pattern = search_disag2, lang = lang()),
           selected = "None"
         )
       }
@@ -191,8 +214,8 @@ dataServer = function(id, lang) {
         shiny::updateSelectInput(
           session,
           inputId = "disag2",
-          label = tr_pull(whesApp::translate_db, "select_disag_label", lang()),
-          choices = tr_deframe(whesApp::translate_db, pattern = "disaggregate_None", lang = lang())
+          label = tr_pull("select_disag_label", lang()),
+          choices = tr_deframe(pattern = "disaggregate_None", lang = lang())
         )
       } else {
         disag2 = disag_choices()[disag_choices() != input$disag]
@@ -201,8 +224,8 @@ dataServer = function(id, lang) {
         shiny::updateSelectInput(
           session,
           inputId = "disag2",
-          label = tr_pull(whesApp::translate_db, "select_disag_label", lang()),
-          choices = tr_deframe(whesApp::translate_db, pattern = search_disag2, lang = lang()),
+          label = tr_pull("select_disag_label", lang()),
+          choices = tr_deframe(pattern = search_disag2, lang = lang()),
           selected = "None"
         )
       }
@@ -234,43 +257,43 @@ dataServer = function(id, lang) {
 
     output$ci_button = shiny::renderUI({
       shiny::checkboxInput(session$ns("show_ci"),
-                           label = tr_pull(whesApp::translate_db, "show_ci", lang()), value = TRUE
+        label = tr_pull("show_ci", lang()), value = TRUE
       )
     })
 
     # Make plot ----------------------
     plot_obj = shiny::reactive({
-      if (input$plot_type == "infographic") {
+      if (input$output_type == "infographic") {
         create_infographic(ind_df(),
-                           id = input$ind_id,
-                           input$disag, lang()
+          id = input$ind_id,
+          input$disag, lang()
         )
-      } else if (input$plot_type == "barchart") {
+      } else if (input$output_type == "barchart") {
         create_barchart(
           df = data(),
           disag1 = input$disag,
           disag2 = input$disag2,
           ci = input$show_ci,
-          title = tr_pull(whesApp::translate_db,
-                          key = input$ind_id,
-                          lang = lang(),
-                          search = TRUE
+          title = tr_pull(
+            key = input$ind_id,
+            lang = lang(),
+            search = TRUE
           ),
           caption = glue::glue(
-            tr_pull(whesApp::translate_db,
-                    key = "caption",
-                    lang = lang()
+            tr_pull(
+              key = "caption",
+              lang = lang()
             ),
             "\n",
-            tr_pull(whesApp::translate_db,
-                    key = caption_source(
-                      id = input$ind_id
-                    ),
-                    lang = lang()
+            tr_pull(
+              key = caption_source(
+                id = input$ind_id
+              ),
+              lang = lang()
             )
           ),
           lang = lang(),
-          labels = translate_labels(whesApp::translate_db)
+          labels = translate_labels()
         )
       }
     })
@@ -279,7 +302,7 @@ dataServer = function(id, lang) {
     output$detailed_table =
       reactable::renderReactable({
         data() %>%
-          tr_table(whesApp::translate_db, lang = lang()) %>%
+          tr_table(lang = lang()) %>%
           create_reactable(lang = lang())
       })
 
@@ -288,12 +311,12 @@ dataServer = function(id, lang) {
       plot_obj()
     })
 
-    shiny::observeEvent(input$plot_type, {
-      shiny::req(input$plot_type)
-      if (input$plot_type %in% c("infographic", "barchart")) {
+    shiny::observeEvent(input$output_type, {
+      shiny::req(input$output_type)
+      if (input$output_type %in% c("infographic", "barchart")) {
         shinyjs::hide("detailed_table")
         shinyjs::show("plot_window")
-      }else{
+      } else {
         shinyjs::hide("plot_window")
         shinyjs::show("detailed_table")
       }
@@ -301,11 +324,11 @@ dataServer = function(id, lang) {
 
     # Small numbers text ------------------------
     output$small_numbers = shiny::renderText({
-      tr_pull(whesApp::translate_db, "small_numbers", lang())
+      tr_pull("small_numbers", lang())
     })
 
     output$tab_heading = shiny::renderUI({
-      tr_pull(whesApp::translate_db, glue::glue("title_data_{id}"), lang()) %>%
+      tr_pull(glue::glue("title_data_{id}"), lang()) %>%
         shiny::h2()
     })
 
@@ -313,28 +336,28 @@ dataServer = function(id, lang) {
     output$download_plot_button = shiny::renderUI({
       shiny::downloadButton(
         session$ns("download_plot"),
-        tr_pull(whesApp::translate_db, "download", lang())
+        tr_pull("download", lang())
       )
     })
 
     output$download_plot = shiny::downloadHandler(
       filename = function() {
-        glue::glue("{input$plot_type}_{input$ind_id}.png")
+        glue::glue("{input$output_type}_{input$ind_id}.png")
       },
       content = function(file) {
         ggplot2::ggsave(file,
-                        plot = plot_obj(),
-                        device = ragg::agg_png,
-                        bg = "white",
-                        width = get_plot_width(ind_df(), input$ind_id, input$disag) * 6, height = 6,
-                        unit = "in",
-                        dpi = 96
+          plot = plot_obj(),
+          device = ragg::agg_png,
+          bg = "white",
+          width = get_plot_width(ind_df(), input$ind_id, input$disag) * 6, height = 6,
+          unit = "in",
+          dpi = 96
         )
       }
     )
 
     output$download_data_button = shiny::renderUI({
-      shiny::downloadButton(session$ns("download_data"), tr_pull(whesApp::translate_db, "download", lang()))
+      shiny::downloadButton(session$ns("download_data"), tr_pull("download", lang()))
     })
 
     output$download_data = shiny::downloadHandler(
@@ -346,12 +369,12 @@ dataServer = function(id, lang) {
       }
     )
 
-    shiny::observeEvent(input$plot_type, {
-      shiny::req(input$plot_type)
-      if (input$plot_type %in% c("infographic", "barchart")) {
+    shiny::observeEvent(input$output_type, {
+      shiny::req(input$output_type)
+      if (input$output_type %in% c("infographic", "barchart")) {
         shinyjs::hide("download_data_button")
         shinyjs::show("download_plot_button")
-      }else{
+      } else {
         shinyjs::hide("download_plot_button")
         shinyjs::show("download_data_button")
       }
@@ -366,7 +389,5 @@ dataServer = function(id, lang) {
         shiny::includeMarkdown(app_sys(glue::glue("app/www/content/{lang()}/indicators/missing.md")))
       }
     })
-
-
   })
 }

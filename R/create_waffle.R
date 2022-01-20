@@ -19,14 +19,14 @@ prep_waffle = function(df, disag) {
     dplyr::select(-.data$type, -.data$ci_lower, -.data$ci_upper, -.data$ind_id) %>%
     purrr::when(
       (disag == "None") ~ tidyr::pivot_longer(.,
-                                              cols = tidyselect::everything(),
-                                              names_to = "Response",
-                                              values_to = "Percent"
+        cols = tidyselect::everything(),
+        names_to = "Response",
+        values_to = "Percent"
       ),
       ~ tidyr::pivot_longer(.,
-                            cols = -!!rlang::sym(disag),
-                            names_to = "Response",
-                            values_to = "Percent"
+        cols = -!!rlang::sym(disag),
+        names_to = "Response",
+        values_to = "Percent"
       )
     ) %>%
     dplyr::mutate(Response = forcats::as_factor(.data$Response)) %>%
@@ -101,9 +101,9 @@ set_draw_key = function(geom, draw_key = NULL) {
 
 # version of `geom_text()` with modifiable draw key
 geom_user = function(mapping = NULL, data = NULL, stat = "identity",
-                      position = "identity", na.rm = FALSE,
-                      show.legend = NA, inherit.aes = TRUE, draw_key = NULL,
-                      ...) {
+                     position = "identity", na.rm = FALSE,
+                     show.legend = NA, inherit.aes = TRUE, draw_key = NULL,
+                     ...) {
   ggplot2::layer(
     data = data,
     mapping = mapping,
@@ -177,8 +177,10 @@ create_waffle = function(df, disag,
     waffle
   } else {
     waffle = waffle +
-      ggplot2::facet_wrap(~disag_cat, nrow = 1,
-                          labeller = ggplot2::labeller(disag_cat = ggplot2::label_wrap_gen(width = 20))) +
+      ggplot2::facet_wrap(~disag_cat,
+        nrow = 1,
+        labeller = ggplot2::labeller(disag_cat = ggplot2::label_wrap_gen(width = 20))
+      ) +
       ggplot2::scale_colour_manual(
         name = NULL,
         values = c("#c60158", "grey"),
