@@ -32,33 +32,15 @@ prep_waffle = function(df, disag) {
     dplyr::mutate(Response = forcats::as_factor(.data$Response)) %>%
     dplyr::mutate(Percent = round(.data$Percent * 100, 0))
 
-  # For facetted - add Yes percent to factor
+  # format data to work with waffle
   if (disag != "None") {
     levels = df %>%
       dplyr::pull({{ disag }}) %>%
-      unique() %>%
-      as.character()
-
-    names(levels) =
-      df %>%
-      dplyr::filter(.data$Response == "Yes") %>%
-      dplyr::mutate(!!rlang::sym(disag) := paste0(
-        !!rlang::sym(disag),
-        " (", .data$Percent, "%", ")"
-      )) %>%
-      dplyr::pull({{ disag }}) %>%
       unique()
-
-    df = df %>%
-      dplyr::mutate(!!rlang::sym(disag) := forcats::fct_recode(!!rlang::sym(disag), !!!levels))
-  }
-
-  # format data to work with waffle
-  if (disag != "None") {
     df_new = rep_df(expand.grid(x = 1:10, y = 1:10), length(levels)) %>%
       dplyr::mutate(
         label = rep(emojifont::fontawesome("fa-user"), times = 100 * length(levels)),
-        disag_cat = rep(names(levels), each = 100),
+        disag_cat = rep(levels, each = 100),
         type = rep(df$Response, times = df$Percent)
       )
   } else {
