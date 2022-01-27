@@ -1,3 +1,7 @@
+# whesApp 7.0.9 _2022-01-25_
+
+- fix facets in infographic
+
 # whesApp 7.0.8 _2022-01-17_
 
 - translate indicators and buttons
