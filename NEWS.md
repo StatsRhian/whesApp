@@ -1,3 +1,7 @@
+# whesApp 7.0.10 _2022-01-25_
+
+- translate "No results" for pickerInput
+
 # whesApp 7.0.9 _2022-01-25_
 
 - fix facets in infographic

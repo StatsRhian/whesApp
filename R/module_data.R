@@ -21,7 +21,7 @@ dataUI = function(id) {
             12,
             shinyWidgets::pickerInput(
               inputId = ns("ind_id"),
-              label = "Please select an indicator. You can type in the box to search for a key word.", # nolint
+              label = tr_pull("select_ind_label", "EN"),
               choices =
                 dplyr::filter(
                   whesApp::indicator_info,
@@ -29,8 +29,9 @@ dataUI = function(id) {
                 ) %>%
                   dplyr::select(.data$name, .data$ind_id) %>%
                   tibble::deframe(),
-              options = list(
-                `live-search` = TRUE
+              options = shinyWidgets::pickerOptions(
+                noneResultsText = tr_pull("table_no_entries", "EN"),
+                liveSearch = TRUE
               ),
               width = "90%"
             )
@@ -43,7 +44,7 @@ dataUI = function(id) {
             3,
             shinyWidgets::radioGroupButtons(
               ns("output_type"),
-              label = "Please select plot type:",
+              label = tr_pull("select_output_type", "EN"),
               choices = c(
                 "Infographic" = "infographic",
                 "Bar chart" = "barchart",
@@ -132,7 +133,11 @@ dataServer = function(id, lang) {
         session,
         inputId = "ind_id",
         label = tr_pull("select_ind_label", lang()),
-        choices = tr_deframe_inds(key_group = id, lang = lang())
+        choices = tr_deframe_inds(key_group = id, lang = lang()),
+        options = shinyWidgets::pickerOptions(
+          noneResultsText = tr_pull("table_no_entries", lang()),
+          liveSearch = TRUE
+        )
       )
     })
 
