@@ -1,3 +1,7 @@
+# whesApp 7.0.11 _2022-01-25_
+
+- fix missing "search indicator" page
+
 # whesApp 7.0.10 _2022-01-25_
 
 - translate "No results" for pickerInput

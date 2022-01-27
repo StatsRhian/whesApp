@@ -2,10 +2,9 @@
 #' @param lang EN or CY
 create_contents_table = function(lang) {
   whesApp::indicator_info %>%
-    dplyr::mutate(name = purrr::map2_chr(
+    dplyr::mutate(name = purrr::map_chr(
       .data$ind_id,
-      .data$category,
-      ~ tr_pull(glue::glue("{.y}_{.x}"), lang)
+      ~ tr_pull(.x, lang)
     )) %>%
     dplyr::select(.data$name, .data$category) %>%
     reactable::reactable(
