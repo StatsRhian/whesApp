@@ -34,9 +34,11 @@ app_server = function(input, output, session) {
     shiny::includeMarkdown(filename)
   })
 
-  # Update browser tab title
+  # Update browser tab title and reactable defaults
   shiny::observeEvent(lang(), {
     title = tr_pull("title_whes_platform", lang())
     session$sendCustomMessage("changetitle", title)
+
+    translate_reactable_options(lang()) # Translate options for all reactable tables
   })
 }
