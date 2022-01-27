@@ -1,3 +1,7 @@
+# whesApp 7.0.12 _2022-01-25_
+
+- Remove dependency on {janitor}
+
 # whesApp 7.0.11 _2022-01-25_
 
 - fix missing "search indicator" page

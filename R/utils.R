@@ -7,6 +7,8 @@ app_sys = function(...) {
   system.file(..., package = "whesApp")
 }
 
+not_all_na = function(x) any(!is.na(x))
+
 #' On-click
 #' @param category The indicator category
 #' Function to create on-click event for images
