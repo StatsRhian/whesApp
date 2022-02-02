@@ -11,6 +11,7 @@
 #' @importFrom rlang :=
 #' @importFrom rlang .data
 #' @import ggplot2
+#' @importFrom markdown markdownToHTML
 NULL
 
 # Global variables

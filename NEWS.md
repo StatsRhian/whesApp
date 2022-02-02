@@ -1,3 +1,7 @@
+# whesApp 7.0.13 _2022-01-27_
+
+- Add dependency on {markdown}
+
 # whesApp 7.0.12 _2022-01-25_
 
 - Remove dependency on {janitor}
