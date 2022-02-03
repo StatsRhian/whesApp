@@ -1,11 +1,12 @@
 #' Prep Value Box
 #' @param df The data to visualise
 #' @param lang Language
-prep_valuebox = function(df, lang) {
+#' @param id Essential condition
+prep_valuebox = function(df, lang, id) {
   df %>%
     dplyr::mutate(label = tr_pull(key = df$ind_id, lang = lang, search = TRUE)) %>%
     dplyr::mutate(label = wrapper(.data$label, 50)) %>%
-    dplyr::mutate(icon = app_sys(glue::glue("app/www/images/bw/other.png"))) %>%
+    dplyr::mutate(icon = app_sys(glue::glue("app/www/images/bw/{id}.png"))) %>%
     dplyr::mutate(value = format(round(.data$value, 2), big.mark = ",")) %>%
     dplyr::mutate(value = ifelse(stringr::str_detect(.data$label, "\U00A3"),
       glue::glue("\U00A3{value}"), .data$value

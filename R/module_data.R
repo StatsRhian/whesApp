@@ -270,7 +270,8 @@ dataServer = function(id, lang) {
     plot_obj = shiny::reactive({
       if (input$output_type == "infographic") {
         create_infographic(ind_df(),
-          id = input$ind_id,
+          ind_id = input$ind_id,
+          id = id,
           input$disag, lang()
         )
       } else if (input$output_type == "barchart") {
