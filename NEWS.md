@@ -1,3 +1,8 @@
+# whesApp 7.0.14 _2022-02-02_
+
+- Dynamic images added in valuebox
+- y-limits fixed for barcharts
+
 # whesApp 7.0.13 _2022-01-27_
 
 - Add dependency on {markdown}
