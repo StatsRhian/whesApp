@@ -4,9 +4,15 @@
 #' @noRd
 app_ui = function(request) {
   shiny::tagList(
+    shiny::div(style = "text-align: center; color: #fff; background-color: #008586; padding: 10px; margin: 0",
+               shiny::titlePanel(
+                  title = shiny::span(
+                    translateTitleUI("whes_platform")
+                    )
+              )
+    ),
     shiny::navbarPage(
-      title = translateTitleUI("whes_platform"),
-      position = c("fixed-top"),
+      title = "",
       theme = bslib::bs_theme(
         primary = "#008586",
         secondary = "#c60158",
