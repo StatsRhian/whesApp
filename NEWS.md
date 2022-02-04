@@ -1,3 +1,9 @@
+# whesApp 7.0.15 _2022-02-03_
+
+- Move title above navbar
+- Fix bslib window_title warnings
+- Unstick navbar for now
+
 # whesApp 7.0.14 _2022-02-02_
 
 - Dynamic images added in valuebox
