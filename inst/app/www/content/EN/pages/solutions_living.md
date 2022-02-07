@@ -1,5 +1,3 @@
-# Solutions page for a specific essential condition
-
-
+## Solutions affecting living conditions
 
 Awaiting content from PHW

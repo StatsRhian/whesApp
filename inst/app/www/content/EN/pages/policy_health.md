@@ -1,10 +1,10 @@
-# Policies and legislation affecting health and health services
+## Policies and legislation affecting health and health services
 
 Policies that aim to ensure availability, accessibility, affordability and quality of preventative and health care services and interventions. 
 
 For example, health protection, health promotion and improvement, primary, secondary and scheduled care.
 
-## Resources
+### Resources
 
 - [Social Services
 and Well-being

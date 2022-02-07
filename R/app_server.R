@@ -41,4 +41,37 @@ app_server = function(input, output, session) {
 
     translate_reactable_options(lang()) # Translate options for all reactable tables
   })
+
+  # Reporting page
+  # Intro text
+  output$report_md = shiny::reactive({
+    filename = app_sys(glue::glue("app/www/content/{lang()}/reporting_page_intro.md"))
+    shiny::includeMarkdown(filename)
+  })
+
+  # Download button
+  output$generate_report_button = shiny::renderUI({
+    shinyjs::disabled(shiny::downloadButton(
+      "report",
+      label = tr_pull("generate", lang())
+    ))
+  })
+
+  shiny::observe({
+    shinyjs::toggleState(id = "report",
+                         condition = (!is.null(input$report_conditions) & !is.null(input$report_info)))
+  })
+
+  output$report = shiny::downloadHandler(
+    filename = "report.pdf",
+    content = function(file) {
+      tempReport = app_sys("app/www/content/EN/report/report.Rmd")
+      params = list(conditions = input$report_conditions,
+                    info = input$report_info)
+      rmarkdown::render(tempReport, output_file = file,
+                        params = params,
+                        envir = new.env(parent = globalenv())
+      )
+    })
+
 }

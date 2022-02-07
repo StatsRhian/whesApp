@@ -1,5 +1,3 @@
-# Solutions page for a specific essential condition
-
-
+## Solutions affecting health and employment and working conditions
 
 Awaiting content from PHW

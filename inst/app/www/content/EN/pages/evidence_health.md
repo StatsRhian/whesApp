@@ -1,5 +1,3 @@
-# International Evidence page for a specific essential condition
-
-
+## International evidence affecting health and health services
 
 Awaiting content from PHW

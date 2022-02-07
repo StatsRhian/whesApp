@@ -1,3 +1,7 @@
+# whesApp 7.0.16 _2022-02-03_
+
+- add reporting page
+
 # whesApp 7.0.15 _2022-02-03_
 
 - Move title above navbar

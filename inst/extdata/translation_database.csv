@@ -245,3 +245,5 @@ table_category,Essential Condition,Cyflwr Hanfodol
 col_value,Value,Gwerth
 col_confidence,Confidence,Hyder
 small_numbers,* indicates value removed due to small sample size (n < 30),* yn dynodi gwerth a dynnwyd oherwydd maint sampl bach (n <30)
+title_report,Generate Report,Cynhyrchu Adroddiad
+generate,Generate Report,Cynhyrchu Adroddiad
