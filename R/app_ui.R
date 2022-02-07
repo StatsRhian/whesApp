@@ -54,8 +54,52 @@ app_ui = function(request) {
           reactable::reactableOutput("indicator_search")
         )
       ),
-      navbarPagesUI("policy"),
+      # reporting page
+      shiny::tabPanel(
+        translateTitleUI("report"),
+        shiny::br(),
+        shiny::br(),
+        shiny::fluidPage(
+          shiny::h2("Generate Report"),
+          shiny::br(),
+          shiny::fluidRow(
+            shiny::column(
+              6,
+              shiny::uiOutput("report_md"),
+              shiny::br(),
+              shiny::uiOutput("generate_report_button")
+            ),
+            shiny::column(
+              6,
+              shiny::wellPanel(
+                shiny::fluidRow(
+                  shiny::column(
+                  12,
+                  shiny::checkboxGroupInput("report_conditions",
+                                     "Please select the essential condition(s) to include in report:",
+                                     c("Health Services" = "health",
+                                       "Income Security and Social Protection" = "income",
+                                       "Living Conditions" = "living",
+                                       "Social and Human Capital" = "social",
+                                       "Employment and Working Conditions" = "employment")),
+                  shiny::br(),
+                  shiny::checkboxGroupInput("report_info",
+                                            "Please select the type(s) of information to include in report:",
+                                            c("Health Economics" = "economics",
+                                              "Policies" = "policy",
+                                              "International Evidence" = "evidence",
+                                              "Un-met Needs" = "needs",
+                                              "Solutions" = "solutions"))
+                  ) #end column
+                ) #end fluidrow
+              ), #end wellpanel
+            ) #end column
+          )
+          ) #end fluidpage
+        ),
+      # additional tabs
       navbarPagesUI("economics"),
+      navbarPagesUI("policy"),
       navbarPagesUI("evidence"),
       navbarPagesUI("needs"),
       navbarPagesUI("solutions")

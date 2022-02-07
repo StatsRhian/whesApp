@@ -1,4 +1,4 @@
-# Policies and legislation affecting health and employment and working conditions
+## Policies and legislation affecting health and employment and working conditions
 
 Policies that aim to improve the health impact of employment, working conditions and workplace equality.
 

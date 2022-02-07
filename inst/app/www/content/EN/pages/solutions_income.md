@@ -1,5 +1,3 @@
-# Solutions page for a specific essential condition
-
-
+## Solutions affecting income security and social protection
 
 Awaiting content from PHW

@@ -1,5 +1,3 @@
-# Health Economics page for a specific essential condition
-
-
+## Health economics affecting health and employment and working conditions
 
 Awaiting content from PHW

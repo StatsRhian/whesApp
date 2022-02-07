@@ -1,5 +1,3 @@
-# Solutions page for a specific essential condition
-
-
+## Solutions affecting health and social and human capital
 
 Awaiting content from PHW
