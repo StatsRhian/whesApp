@@ -50,6 +50,8 @@ dataUI = function(id) {
                 "Bar chart" = "barchart",
                 "Table" = "table"
               ),
+              direction = "vertical",
+              width = "100%",
               status = "primary"
             ),
             shiny::selectInput(ns("disag"),
@@ -261,8 +263,10 @@ dataServer = function(id, lang) {
     })
 
     output$ci_button = shiny::renderUI({
-      shiny::checkboxInput(session$ns("show_ci"),
-        label = tr_pull("show_ci", lang()), value = TRUE
+      shinyWidgets::awesomeCheckbox(session$ns("show_ci"),
+        label = tr_pull("show_ci", lang()),
+        value = TRUE,
+        status = "default"
       )
     })
 
