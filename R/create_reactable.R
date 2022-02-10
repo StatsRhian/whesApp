@@ -24,12 +24,12 @@ create_reactable = function(df, lang) {
   if ("ci_lower" %in% names(df)) {
     if (type == "percent") {
       df = dplyr::mutate(df, dplyr::across(
-        c(.data$ci_upper, .data$ci_lower),
-        ~ scales::percent(round(., 2))
+        c(.data$ci_lower, .data$ci_upper),
+        ~ scales::percent(round(., 3), accuracy = 0.1)
       ))
     } else {
       df = dplyr::mutate(df, dplyr::across(
-        c(.data$ci_upper, .data$ci_lower),
+        c(.data$ci_lower, .data$ci_upper),
         ~ round(., 0)
       ))
     }

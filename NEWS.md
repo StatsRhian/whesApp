@@ -1,3 +1,7 @@
+# whesApp 7.0.18 _2022-02-08_
+
+- fix decimal in table
+
 # whesApp 7.0.17 _2022-02-08_
 
 - fix plot type buttons
