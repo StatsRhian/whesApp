@@ -1,3 +1,8 @@
+# whesApp 7.0.17 _2022-02-08_
+
+- fix plot type buttons
+- fix checkbox colour
+
 # whesApp 7.0.16 _2022-02-03_
 
 - add reporting page
