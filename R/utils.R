@@ -38,16 +38,12 @@ get_ind_type = function(id) {
 get_plot_width = function(df, id, disag) {
   if (get_ind_type(id) == "percent") {
     if (disag == "None") {
-      n = 1
+      n = 575
     } else {
-      n = df %>%
-        dplyr::pull({
-          disag
-        }) %>%
-        length()
+      n = 1000
     }
   } else {
-    n = 1.6
+    n = 575
   }
   return(n)
 }

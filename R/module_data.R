@@ -359,9 +359,10 @@ dataServer = function(id, lang) {
           plot = plot_obj(),
           device = ragg::agg_png,
           bg = "white",
-          width = get_plot_width(ind_df(), input$ind_id, input$disag) * 6, height = 6,
-          unit = "in",
-          dpi = 96
+          height = 400,
+          width = get_plot_width(ind_df(), input$ind_id, input$disag),
+          unit = "px",
+          dpi = 72
         )
       }
     )
