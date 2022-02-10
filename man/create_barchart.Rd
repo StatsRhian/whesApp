@@ -13,7 +13,7 @@ create_barchart(
   caption = "Welsh Health Equity Status 2020",
   lang = "EN",
   labels = labels,
-  plot_width = 1
+  plot_width = 1000
 )
 }
 \arguments{

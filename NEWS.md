@@ -1,3 +1,8 @@
+# whesApp 7.0.19 _2022-02-08_
+
+- standardise plot download sizes
+- fix title wrapping issues for waffle plots
+
 # whesApp 7.0.18 _2022-02-08_
 
 - fix decimal in table

@@ -18,7 +18,7 @@ create_barchart = function(df,
                            caption = "Welsh Health Equity Status 2020",
                            lang = "EN",
                            labels = labels,
-                           plot_width = 1) {
+                           plot_width = 1000) {
   df =
     df %>%
     dplyr::filter(!is.nan(.data$value))
@@ -59,7 +59,7 @@ create_barchart = function(df,
   # Add captions & theme
   g = g +
     ggplot2::labs(
-      title = stringr::str_wrap(title, width = 50 * plot_width),
+      title = stringr::str_wrap(title, width = plot_width / 12.5),
       caption = caption
     ) +
     ggplot2::theme_minimal(base_size = 14) +

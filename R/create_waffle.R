@@ -114,7 +114,7 @@ create_waffle = function(df, disag,
                          title = "",
                          caption = "Welsh Health Equity Status 2020",
                          legend_labels = c("Yes", "No"),
-                         plot_width = 1.6) {
+                         plot_width = 1000) {
   waffle = ggplot2::ggplot(df, ggplot2::aes(x = .data$x, y = .data$y, label = .data$label, colour = .data$type)) +
     # create plot
     geom_user(
@@ -128,7 +128,7 @@ create_waffle = function(df, disag,
     ) +
     # add titles
     ggplot2::labs(
-      title = stringr::str_wrap(title, width = 50 * plot_width),
+      title = stringr::str_wrap(title, width = plot_width / 12.5),
       caption = caption
     ) +
     # add themes
