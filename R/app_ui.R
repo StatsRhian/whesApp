@@ -4,10 +4,16 @@
 #' @noRd
 app_ui = function(request) {
   shiny::tagList(
-    shiny::div(style = "text-align: center; color: #fff; background-color: #008586; padding: 10px; margin: 0",
+    shiny::div(style = "text-align: center; color: #fff; background-color: #008586; padding: 5px; margin: 0",
                shiny::titlePanel(
                   title = shiny::span(
-                    translateTitleUI("whes_platform")
+                    shiny::img(src = "www/logos/who-euro.png", height = 40),
+                    shiny::HTML("&emsp;"),
+                    translateTitleUI("whes_platform"),
+                    shiny::HTML("&emsp;"),
+                    shiny::img(src = "www/logos/phw.png", height = 40),
+                    shiny::HTML("&emsp;"),
+                    shiny::img(src = "www/logos/welsh-gov.png", height = 50)
                     )
               )
     ),
