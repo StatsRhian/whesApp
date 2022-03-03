@@ -1,4 +1,2 @@
 Nod cyffredinol WHESRi yw llywio, galluogi a chefnogi atebion polisi, arloesi a buddsoddiad cynaliadwy tuag at fywydau iach, llewyrchus i bawb, cynyddu tegwch mewn iechyd a gadael neb ar ôl yng Nghymru a thu hwnt. Mae'r prosiect yn cefnogi Adeiladu Cymru Iachach a Rhaglen Drawsnewid Llywodraeth Cymru, gan hwyluso, monitro a chyflymu gweithredu ar y cyd ar draws sectorau, lefelau llywodraethu a rhanddeiliaid allweddol i helpu i gyflawni Cymru Iachach, Mwy Cyfartal, Ffyniannus a Chymdeithasol Gyfrifol ar gyfer y presennol a chenedlaethau'r dyfodol.
 Gallwch hefyd archwilio'r Statws Ecwiti Iechyd ar gyfer Ewrop yn [Y Set Ddata Ecwiti Iechyd] (https://whoeurope.shinyapps.io/health_equity_dataset/).
-
-Chwiliwch y tabl isod am ddangosydd penodol, i ddarganfod pa gategori y maen nhw wedi'i restru oddi tano. Neu dewiswch gategori ar y chwith i ddechrau archwilio.

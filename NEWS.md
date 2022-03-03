@@ -1,3 +1,7 @@
+# whesApp 7.0.20 _2022-02-11_
+
+- add logos
+
 # whesApp 7.0.19 _2022-02-08_
 
 - standardise plot download sizes
