@@ -96,8 +96,10 @@ create_barchart = function(df,
 
   if (unique(df$type) == "percent") {
     g = g +
-      ggplot2::scale_y_continuous(labels = scales::percent_format(accuracy = 1),
-                                  limits = c(0, 1)) +
+      ggplot2::scale_y_continuous(
+        labels = scales::percent_format(accuracy = 1),
+        limits = c(0, 1)
+      ) +
       ggplot2::ylab(tr_pull("percent", lang))
   } else {
     g = g + ggplot2::scale_y_continuous(limits = c(0, max(df$ci_upper))) +

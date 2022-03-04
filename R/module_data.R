@@ -54,6 +54,7 @@ dataUI = function(id) {
               width = "100%",
               status = "primary"
             ),
+            # disag1
             shiny::selectInput(ns("disag"),
               label = "Please select a grouping",
               choices = c(
@@ -65,6 +66,7 @@ dataUI = function(id) {
               ),
               selected = "None"
             ),
+            # disag2
             shiny::selectInput(ns("disag2"),
               label = "Please select a grouping",
               choices = c(
@@ -75,6 +77,7 @@ dataUI = function(id) {
               ),
               selected = "Age"
             ),
+            # ci
             shiny::uiOutput(ns("ci_button")),
             shiny::uiOutput(ns("download_plot_button")),
             shiny::uiOutput(ns("download_data_button"))
@@ -161,112 +164,47 @@ dataServer = function(id, lang) {
         filter_disag(c(input$disag, input$disag2))
     })
 
-    disag_choices = shiny::reactive({
-      whesApp::indicator_info %>%
-        dplyr::filter(.data$ind_id == input$ind_id) %>%
-        dplyr::pull(.data$disag) %>%
-        unlist()
+
+    listen_disag = shiny::reactive({
+      list(input$ind_id, input$output_type, input$disag, lang())
     })
 
-    multiple_disag = shiny::reactive({
-      if (length(disag_choices()) > 3) {
-        disags = disag_choices()[disag_choices() != "None"]
-        filtered_df = whesApp::indicator_data %>%
-          dplyr::filter(.data$ind_id == input$ind_id) %>%
-          filter_disag(c(disags[[1]], disags[[2]]))
-        out = nrow(filtered_df != 0)
-      } else {
-        out = TRUE
-      }
-      out
+    shiny::observeEvent(listen_disag(), {
+      update_disag(
+        selected_ind_id = input$ind_id,
+        selected_output_type = input$output_type,
+        selected_disag = input$disag,
+        lang = lang()
+      )
     })
 
-    shiny::observeEvent(toListen(), {
-      if (length(disag_choices()) == 1 & disag_choices()[[1]] == "None") {
-        shiny::updateSelectInput(
-          session,
-          inputId = "disag",
-          label = tr_pull("select_disag_label", lang()),
-          choices = tr_deframe(pattern = "disaggregate_None", lang = lang())
-        )
-      } else {
-        disag = disag_choices()
-        names(disag) = disag
-        search_disag = glue::glue("disaggregate_({paste(disag, collapse = '|')})")
-        shiny::updateSelectInput(
-          session,
-          inputId = "disag",
-          label = tr_pull("select_disag_label", lang()),
-          choices = tr_deframe(pattern = search_disag, lang = lang())
-        )
-        if (input$disag != "None") {
-          disag2 = disag_choices()[disag_choices() != input$disag]
-        } else {
-          disag2 = disag_choices()
-        }
-        names(disag2) = disag2
-        search_disag2 = glue::glue("disaggregate_({paste(disag2, collapse = '|')})")
-        shiny::updateSelectInput(
-          session,
-          inputId = "disag2",
-          label = tr_pull("select_disag_label", lang()),
-          choices = tr_deframe(pattern = search_disag2, lang = lang()),
-          selected = "None"
-        )
-      }
-    })
-
-    shiny::observeEvent(input$disag, {
-      if (input$disag == "None" | multiple_disag() == FALSE) {
-        shiny::updateSelectInput(
-          session,
-          inputId = "disag2",
-          label = tr_pull("select_disag_label", lang()),
-          choices = tr_deframe(pattern = "disaggregate_None", lang = lang())
-        )
-      } else {
-        disag2 = disag_choices()[disag_choices() != input$disag]
-        names(disag2) = disag2
-        search_disag2 = glue::glue("disaggregate_({paste(disag2, collapse = '|')})")
-        shiny::updateSelectInput(
-          session,
-          inputId = "disag2",
-          label = tr_pull("select_disag_label", lang()),
-          choices = tr_deframe(pattern = search_disag2, lang = lang()),
-          selected = "None"
-        )
-      }
-    })
-
-    toListen = shiny::reactive({
-      list(lang(), input$ind_id)
-    })
-
-    shiny::observeEvent(toListen(), {
-      update_disag(selected_ind_id = input$ind_id, lang = lang())
-    })
 
     # Confidence Intervals Button ----------------------
-    shiny::observeEvent(toListen(), {
-      no_ci =
+    shiny::observe({
+      no_ci_avail =
         whesApp::indicator_data %>%
         dplyr::filter(.data$ind_id == input$ind_id) %>%
         dplyr::pull(.data$ci_lower) %>%
         is.na() %>%
         all()
 
-      if (no_ci) {
-        shinyjs::disable("ci_button")
-      } else {
-        shinyjs::show("ci_button")
-      }
+      is_info = (input$output_type == "infographic")
+
+      no_ci = any(c(no_ci_avail, is_info))
+
+      shinyjs::toggleState(
+        id = "ci_button",
+        condition = !no_ci
+      )
     })
 
     output$ci_button = shiny::renderUI({
-      shinyWidgets::awesomeCheckbox(session$ns("show_ci"),
-        label = tr_pull("show_ci", lang()),
-        value = TRUE,
-        status = "default"
+      shinyjs::disabled(
+        shinyWidgets::awesomeCheckbox(session$ns("show_ci"),
+          label = tr_pull("show_ci", lang()),
+          value = TRUE,
+          status = "default"
+        )
       )
     })
 
@@ -276,7 +214,8 @@ dataServer = function(id, lang) {
         create_infographic(ind_df(),
           ind_id = input$ind_id,
           id = id,
-          input$disag, lang()
+          input$disag,
+          lang()
         )
       } else if (input$output_type == "barchart") {
         create_barchart(
@@ -313,7 +252,7 @@ dataServer = function(id, lang) {
       reactable::renderReactable({
         data() %>%
           tr_table(lang = lang()) %>%
-          create_reactable(lang = lang())
+          create_reactable(ci = input$show_ci, lang = lang())
       })
 
     # Display window ------------------------

@@ -1,3 +1,8 @@
+# whesApp 7.0.21 _2022-02-25_
+
+- refactor disag update 
+- disable CI button based on chart type
+
 # whesApp 7.0.20 _2022-02-11_
 
 - add logos

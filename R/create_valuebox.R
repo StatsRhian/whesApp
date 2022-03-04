@@ -9,7 +9,7 @@ prep_valuebox = function(df, lang, id) {
     dplyr::mutate(icon = app_sys(glue::glue("app/www/images/bw/{id}.png"))) %>%
     dplyr::mutate(value = format(round(.data$value, 2), big.mark = ",")) %>%
     dplyr::mutate(value = ifelse(stringr::str_detect(.data$label, "\U00A3"),
-                                 glue::glue("\U00A3{value}"), .data$value
+      glue::glue("\U00A3{value}"), .data$value
     ))
 }
 
@@ -35,7 +35,7 @@ create_valuebox = function(df, caption = caption) {
     ) +
     # add condition logo
     ggplot2::annotation_custom(grid::rasterGrob(png::readPNG(df$icon), interpolate = TRUE),
-                               xmin = 12, xmax = 14, ymin = 10.1, ymax = 12.5
+      xmin = 12, xmax = 14, ymin = 10.1, ymax = 12.5
     ) +
     # add caption
     ggplot2::labs(caption = caption) +
