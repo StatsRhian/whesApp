@@ -4,10 +4,12 @@
 \alias{create_reactable}
 \title{Create reactable table}
 \usage{
-create_reactable(df, lang)
+create_reactable(df, ci, lang)
 }
 \arguments{
 \item{df}{The data to visualise}
+
+\item{ci}{Whether to display confidence intervals (logical)}
 
 \item{lang}{The selected language}
 }

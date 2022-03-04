@@ -4,18 +4,19 @@
 #' @noRd
 app_ui = function(request) {
   shiny::tagList(
-    shiny::div(style = "text-align: center; color: #fff; background-color: #008586; padding: 5px; margin: 0",
-               shiny::titlePanel(
-                  title = shiny::span(
-                    shiny::img(src = "www/logos/who-euro.png", height = 40),
-                    shiny::HTML("&emsp;"),
-                    translateTitleUI("whes_platform"),
-                    shiny::HTML("&emsp;"),
-                    shiny::img(src = "www/logos/phw.png", height = 40),
-                    shiny::HTML("&emsp;"),
-                    shiny::img(src = "www/logos/welsh-gov.png", height = 50)
-                    )
-              )
+    shiny::div(
+      style = "text-align: center; color: #fff; background-color: #008586; padding: 5px; margin: 0",
+      shiny::titlePanel(
+        title = shiny::span(
+          shiny::img(src = "www/logos/who-euro.png", height = 40),
+          shiny::HTML("&emsp;"),
+          translateTitleUI("whes_platform"),
+          shiny::HTML("&emsp;"),
+          shiny::img(src = "www/logos/phw.png", height = 40),
+          shiny::HTML("&emsp;"),
+          shiny::img(src = "www/logos/welsh-gov.png", height = 50)
+        )
+      )
     ),
     shiny::navbarPage(
       title = "",
@@ -80,29 +81,37 @@ app_ui = function(request) {
               shiny::wellPanel(
                 shiny::fluidRow(
                   shiny::column(
-                  12,
-                  shiny::checkboxGroupInput("report_conditions",
-                                     "Please select the essential condition(s) to include in report:",
-                                     c("Health Services" = "health",
-                                       "Income Security and Social Protection" = "income",
-                                       "Living Conditions" = "living",
-                                       "Social and Human Capital" = "social",
-                                       "Employment and Working Conditions" = "employment")),
-                  shiny::br(),
-                  shiny::checkboxGroupInput("report_info",
-                                            "Please select the type(s) of information to include in report:",
-                                            c("Health Economics" = "economics",
-                                              "Policies" = "policy",
-                                              "International Evidence" = "evidence",
-                                              "Un-met Needs" = "needs",
-                                              "Solutions" = "solutions"))
-                  ) #end column
-                ) #end fluidrow
-              ), #end wellpanel
-            ) #end column
+                    12,
+                    shiny::checkboxGroupInput(
+                      "report_conditions",
+                      "Please select the essential condition(s) to include in report:",
+                      c(
+                        "Health Services" = "health",
+                        "Income Security and Social Protection" = "income",
+                        "Living Conditions" = "living",
+                        "Social and Human Capital" = "social",
+                        "Employment and Working Conditions" = "employment"
+                      )
+                    ),
+                    shiny::br(),
+                    shiny::checkboxGroupInput(
+                      "report_info",
+                      "Please select the type(s) of information to include in report:",
+                      c(
+                        "Health Economics" = "economics",
+                        "Policies" = "policy",
+                        "International Evidence" = "evidence",
+                        "Un-met Needs" = "needs",
+                        "Solutions" = "solutions"
+                      )
+                    )
+                  ) # end column
+                ) # end fluidrow
+              ), # end wellpanel
+            ) # end column
           )
-          ) #end fluidpage
-        ),
+        ) # end fluidpage
+      ),
       # additional tabs
       navbarPagesUI("economics"),
       navbarPagesUI("policy"),

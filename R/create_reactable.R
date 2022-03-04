@@ -1,9 +1,10 @@
 #' Create reactable table
 #' @param df The data to visualise
+#' @param ci Whether to display confidence intervals (logical)
 #' @param lang The selected language
 #' @return A reactable object
 
-create_reactable = function(df, lang) {
+create_reactable = function(df, ci, lang) {
   type = unique(df$type)
 
   # Translate any disaggregate columns
@@ -17,27 +18,32 @@ create_reactable = function(df, lang) {
 
   # Remove columns with NA and drop unnecessary cols
   df = df %>%
-    dplyr::select(where(not_all_na))  %>%
+    dplyr::select(where(not_all_na)) %>%
     dplyr::select(-.data$ind_id, -type)
 
-  # Format confidence intervals
-  if ("ci_lower" %in% names(df)) {
-    if (type == "percent") {
-      df = dplyr::mutate(df, dplyr::across(
-        c(.data$ci_lower, .data$ci_upper),
-        ~ scales::percent(round(., 3), accuracy = 0.1)
-      ))
-    } else {
-      df = dplyr::mutate(df, dplyr::across(
-        c(.data$ci_lower, .data$ci_upper),
-        ~ round(., 0)
-      ))
+  # Format confidence intervals (if CI button selected)
+  if (ci) {
+    if ("ci_lower" %in% names(df)) {
+      if (type == "percent") {
+        df = dplyr::mutate(df, dplyr::across(
+          c(.data$ci_lower, .data$ci_upper),
+          ~ scales::percent(round(., 3), accuracy = 0.1)
+        ))
+      } else {
+        df = dplyr::mutate(df, dplyr::across(
+          c(.data$ci_lower, .data$ci_upper),
+          ~ round(., 0)
+        ))
+      }
+      df =
+        df %>%
+        tidyr::unite(col = "confidence", .data$ci_lower:.data$ci_upper, sep = " - ") %>%
+        dplyr::relocate(.data$confidence, .after = .data$value) %>%
+        dplyr::rename_with(~ tr_pull("col_confidence", lang), "confidence")
     }
-    df =
-      df %>%
-      tidyr::unite(col = "confidence", .data$ci_lower:.data$ci_upper, sep = " - ") %>%
-      dplyr::relocate(.data$confidence, .after = .data$value) %>%
-      dplyr::rename_with(~ tr_pull("col_confidence", lang), "confidence")
+  } else if ("ci_lower" %in% names(df)) {
+    df = df %>%
+      dplyr::select(-.data$ci_upper, -.data$ci_lower)
   }
 
   if (type == "percent") {
@@ -48,6 +54,7 @@ create_reactable = function(df, lang) {
         columns = list(
           value = reactable::colDef(
             name = tr_pull("col_value", lang),
+            align = "center",
             format = reactable::colFormat(percent = TRUE, digits = 1),
             na = "*"
           )
@@ -61,6 +68,7 @@ create_reactable = function(df, lang) {
         columns = list(
           value = reactable::colDef(
             name = tr_pull("col_value", lang),
+            align = "center",
             format = reactable::colFormat(digits = 2),
             na = "*"
           )

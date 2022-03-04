@@ -58,20 +58,25 @@ app_server = function(input, output, session) {
   })
 
   shiny::observe({
-    shinyjs::toggleState(id = "report",
-                         condition = (!is.null(input$report_conditions) & !is.null(input$report_info)))
+    shinyjs::toggleState(
+      id = "report",
+      condition = (!is.null(input$report_conditions) & !is.null(input$report_info))
+    )
   })
 
   output$report = shiny::downloadHandler(
     filename = "report.pdf",
     content = function(file) {
       tempReport = app_sys("app/www/content/EN/report/report.Rmd")
-      params = list(conditions = input$report_conditions,
-                    info = input$report_info)
-      rmarkdown::render(tempReport, output_file = file,
-                        params = params,
-                        envir = new.env(parent = globalenv())
+      params = list(
+        conditions = input$report_conditions,
+        info = input$report_info
       )
-    })
-
+      rmarkdown::render(tempReport,
+        output_file = file,
+        params = params,
+        envir = new.env(parent = globalenv())
+      )
+    }
+  )
 }
