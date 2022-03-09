@@ -37,12 +37,25 @@ prep_waffle = function(df, disag) {
     levels = df %>%
       dplyr::pull({{ disag }}) %>%
       unique()
+    # make data frame
     df_new = rep_df(expand.grid(x = 1:10, y = 1:10), length(levels)) %>%
       dplyr::mutate(
         label = rep(emojifont::fontawesome("fa-user"), times = 100 * length(levels)),
         disag_cat = rep(levels, each = 100),
         type = rep(df$Response, times = df$Percent)
       )
+    # define labels for facets
+    facet_labs = df_new %>%
+      dplyr::group_by(.data$disag_cat, .data$type) %>%
+      dplyr::summarise(n = dplyr::n()) %>%
+      dplyr::mutate(facet_label = paste0(.data$disag_cat, " (", .data$n, "%)")) %>%
+      dplyr::filter(.data$type == "Yes")
+    facet_labs_f = facet_labs %>%
+      dplyr::mutate(facet_label_f = factor(.data$facet_label,
+                                           levels = .data$facet_label[order(facet_labs$disag_cat)])) %>%
+      dplyr::select(.data$disag_cat, .data$facet_label_f)
+    # join labels
+    df_new = dplyr::left_join(df_new, facet_labs_f, by = "disag_cat")
   } else {
     df_new = expand.grid(x = 1:10, y = 1:10) %>%
       dplyr::mutate(
@@ -159,9 +172,9 @@ create_waffle = function(df, disag,
     waffle
   } else {
     waffle = waffle +
-      ggplot2::facet_wrap(~disag_cat,
+      ggplot2::facet_wrap(~facet_label_f,
         nrow = 1,
-        labeller = ggplot2::labeller(disag_cat = ggplot2::label_wrap_gen(width = 20))
+        labeller = ggplot2::labeller(facet_label_f = ggplot2::label_wrap_gen(width = 20))
       ) +
       ggplot2::scale_colour_manual(
         name = NULL,
