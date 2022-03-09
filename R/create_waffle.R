@@ -179,7 +179,7 @@ create_waffle = function(df, disag,
       ggplot2::scale_colour_manual(
         name = NULL,
         values = c("#c60158", "grey"),
-        labels = legend_labels
+        labels = legend_labels #
       ) +
       ggplot2::theme(
         panel.spacing = ggplot2::unit(1.5, "lines"),
