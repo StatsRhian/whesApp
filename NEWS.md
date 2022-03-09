@@ -1,3 +1,7 @@
+# whesApp 7.0.23 _2022-03-07_
+
+- delay plot rendering by half second
+
 # whesApp 7.0.22 _2022-03-07_
 
 - add percentages to facet labels
