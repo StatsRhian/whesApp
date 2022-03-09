@@ -1,3 +1,7 @@
+# whesApp 7.0.22 _2022-03-07_
+
+- add percentages to facet labels
+
 # whesApp 7.0.21 _2022-02-25_
 
 - refactor disag update 
