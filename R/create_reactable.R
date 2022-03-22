@@ -5,7 +5,7 @@
 #' @return A reactable object
 
 create_reactable = function(df, ci, lang) {
-  type = unique(df$type)
+  is_percent = is_percent(unique(df$ind_id))
 
   # Translate any disaggregate columns
   col_id = which(names(df) %in% whesApp::breakdown_vars)
@@ -19,12 +19,12 @@ create_reactable = function(df, ci, lang) {
   # Remove columns with NA and drop unnecessary cols
   df = df %>%
     dplyr::select(where(not_all_na)) %>%
-    dplyr::select(-.data$ind_id, -type)
+    dplyr::select(-.data$ind_id)
 
   # Format confidence intervals (if CI button selected)
   if (ci) {
     if ("ci_lower" %in% names(df)) {
-      if (type == "percent") {
+      if (is_percent) {
         df = dplyr::mutate(df, dplyr::across(
           c(.data$ci_lower, .data$ci_upper),
           ~ scales::percent(round(., 3), accuracy = 0.1)
@@ -46,7 +46,7 @@ create_reactable = function(df, ci, lang) {
       dplyr::select(-.data$ci_upper, -.data$ci_lower)
   }
 
-  if (type == "percent") {
+  if (is_percent) {
     table_out =
       df %>%
       reactable::reactable(

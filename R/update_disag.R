@@ -1,4 +1,3 @@
-
 #' Update disag
 #' Handles all enable/disabling and updating of the dropdowns for disags
 #' Updates based on indicator, output type, possible disags and language
@@ -19,15 +18,13 @@ update_disag = function(selected_ind_id,
 
   no_disag_avail = (length(disag_choices) == 1) & (disag_choices[[1]] == "None")
   single_disag_avail = (length(disag_choices) == 2) & ("None" %in% disag_choices)
-  type = get_ind_type(selected_ind_id)
-
 
   if (selected_output_type == "infographic") {
     # Always disable disag 2 and set disag2 to None
     shinyjs::disable("disag2")
     update_disag_input("disag2", "disaggregate_None", "disaggregate_None", lang)
 
-    if (type == "percent" & !no_disag_avail) {
+    if (is_percent(selected_ind_id) & !no_disag_avail) {
       # Enable disag and set to choices
       shinyjs::enable("disag")
       set_disag1_to_choices(selected_disag, disag_choices, lang)
@@ -87,8 +84,6 @@ update_disag_input = function(disag, choices, selected, lang) {
     selected = tr_deframe(pattern = selected, lang = lang)
   )
 }
-
-
 
 set_disag1_to_choices = function(selected_disag, disag_choices, lang) {
 

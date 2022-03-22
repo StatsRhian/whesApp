@@ -1,16 +1,8 @@
 #' Definition of the WHES categories
 #'
-#' A dataset containing short name, full name and icons for the
-#' seven categories
-#'
-#' @format A data frame with 7 rows and 3 variables:
-#' \describe{
-#'   \item{catID}{short key}
-#'   \item{name}{Full category name}
-#'   \item{icon}{key for font-awesome icon}
-#'   ...
-#' }
-"cat_df"
+#' #' A vector containing the the 7 essential conditions
+
+"essential_conditions"
 
 
 #' Breakdown variables

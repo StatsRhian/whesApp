@@ -6,7 +6,6 @@ rep_df = function(x, times) {
   as.data.frame(lapply(x, rep, times = times))
 }
 
-
 #' Prepare the waffle plot
 #' @param df The selected data
 #' @param disag The grouping to disaggregate (can be None)
@@ -16,7 +15,7 @@ prep_waffle = function(df, disag) {
     df %>%
     dplyr::rename(Yes = .data$value) %>%
     dplyr::mutate(No = 1 - .data$Yes) %>%
-    dplyr::select(-.data$type, -.data$ci_lower, -.data$ci_upper, -.data$ind_id) %>%
+    dplyr::select(-.data$ci_lower, -.data$ci_upper, -.data$ind_id) %>%
     purrr::when(
       (disag == "None") ~ tidyr::pivot_longer(.,
         cols = tidyselect::everything(),
@@ -52,7 +51,8 @@ prep_waffle = function(df, disag) {
       dplyr::filter(.data$type == "Yes")
     facet_labs_f = facet_labs %>%
       dplyr::mutate(facet_label_f = factor(.data$facet_label,
-                                           levels = .data$facet_label[order(facet_labs$disag_cat)])) %>%
+        levels = .data$facet_label[order(facet_labs$disag_cat)]
+      )) %>%
       dplyr::select(.data$disag_cat, .data$facet_label_f)
     # join labels
     df_new = dplyr::left_join(df_new, facet_labs_f, by = "disag_cat")

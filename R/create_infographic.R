@@ -1,7 +1,7 @@
 create_infographic = function(df, ind_id, id, disag, lang) {
   session = shiny::getDefaultReactiveDomain()
 
-  if (get_ind_type(ind_id) == "percent") {
+  if (is_percent(ind_id)) {
     # If percent - make a waffle chart
     df %>%
       tr_table(lang) %>%

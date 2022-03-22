@@ -1,3 +1,7 @@
+# whesApp 7.0.24 _2022-03-16_
+
+- data refresh
+
 # whesApp 7.0.23 _2022-03-07_
 
 - delay plot rendering by half second
