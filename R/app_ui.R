@@ -8,7 +8,7 @@ app_ui = function(request) {
       style = "text-align: center; color: #fff; background-color: #008586; padding: 5px; margin: 0",
       shiny::titlePanel(
         title = shiny::span(
-          shiny::img(src = "www/logos/who-euro.png", height = 40),
+          shiny::img(src = "www/logos/who-euro-white.png", height = 40),
           shiny::HTML("&emsp;"),
           translateTitleUI("whes_platform"),
           shiny::HTML("&emsp;"),

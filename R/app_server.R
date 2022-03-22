@@ -43,7 +43,7 @@ app_server = function(input, output, session) {
   })
 
   # Reporting page
-  # Intro text
+  # Intro text on app page
   output$report_md = shiny::reactive({
     filename = app_sys(glue::glue("app/www/content/{lang()}/reporting_page_intro.md"))
     shiny::includeMarkdown(filename)
@@ -64,18 +64,23 @@ app_server = function(input, output, session) {
     )
   })
 
+  # Generate report
   output$report = shiny::downloadHandler(
     filename = "report.pdf",
     content = function(file) {
-      tempReport = app_sys("app/www/content/EN/report/report.Rmd")
-      params = list(
-        conditions = input$report_conditions,
-        info = input$report_info
-      )
-      rmarkdown::render(tempReport,
+      path = app_sys("rmarkdown/templates/report/skeleton/skeleton.Rmd")
+      report_params = list(title = tr_pull("title_whes_platform", lang()),
+                           lang = lang(),
+                           author = "",
+                           date = format(Sys.Date(), format = "%B %d %Y"),
+                           conditions = input$report_conditions,
+                           info = input$report_info)
+
+      rmarkdown::render(
+        path,
         output_file = file,
-        params = params,
-        envir = new.env(parent = globalenv())
+        envir = new.env(parent = globalenv()),
+        params = report_params
       )
     }
   )

@@ -13,7 +13,7 @@ navbarPagesUI = function(id) {
 
 navbarPagesServer = function(id, lang) {
   shiny::moduleServer(id, function(input, output, session) {
-    sub_pages = c("overview", whesApp::essential_conditions[3:7])
+    sub_pages = c("overview", as.character(whesApp::essential_conditions[3:7]))
     markdown_pages = glue::glue("{id}_{sub_pages}")
     purrr::map(markdown_pages, ~ markdownTabServer(.x, lang = lang))
   })

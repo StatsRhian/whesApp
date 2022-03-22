@@ -1,0 +1,138 @@
+---
+output:
+  whesApp::report
+params:
+  lang: NA
+  title: NA
+  author: NA
+  date: NA
+  conditions: NA
+  info: NA
+urlcolor: blue
+
+title: "`r params$title`"
+author: "`r params$author`"
+date: "`r params$date`"
+---
+
+```{r setup, echo = FALSE}
+library("whesApp")
+```
+
+```{r, include = FALSE}
+health = "health" %in% params$conditions
+income = "income" %in% params$conditions
+living = "living" %in% params$conditions
+social = "social" %in% params$conditions
+employment = "employment" %in% params$conditions
+```
+
+```{r, echo = FALSE, results = "asis"}
+cat("\n\n\\pagebreak\n")
+```
+
+```{r intro}
+#| child = system.file(
+#|   glue::glue("app/www/content/{params$lang}/report/report_overview.md"),
+#|   package = "whesApp",
+#|   mustWork = TRUE
+#| )
+```
+
+```{r, echo = FALSE, out.width='90%', fig.align='center'}
+fname = system.file(
+  glue::glue("rmarkdown/templates/report/resources/five-essential-conditions-{params$lang}.png"),
+  package = "whesApp",
+  mustWork = TRUE)
+knitr::include_graphics(fname)
+```
+
+```{r health}
+#| child = if (health) system.file(
+#|   glue::glue("app/www/content/{params$lang}/report/health_overview.md"),
+#|   package = "whesApp",
+#|   mustWork = TRUE
+#| )
+```
+
+```{r}
+#| child = if (health) unlist(purrr::map(.x = params$info, .f = ~ system.file(
+#|   glue::glue("app/www/content/{params$lang}/pages/{.x}_health.md"),
+#|   package = "whesApp",
+#|   mustWork = TRUE
+#| )))
+```
+
+
+
+```{r income}
+#| child = if (income) system.file(
+#|   glue::glue("app/www/content/{params$lang}/report/income_overview.md"),
+#|   package = "whesApp",
+#|   mustWork = TRUE
+#| )
+```
+
+```{r}
+#| child = if (income) unlist(purrr::map(.x = params$info, .f = ~ system.file(
+#|   glue::glue("app/www/content/{params$lang}/pages/{.x}_income.md"),
+#|   package = "whesApp",
+#|   mustWork = TRUE
+#| )))
+```
+
+
+
+```{r living}
+#| child = if (living) system.file(
+#|   glue::glue("app/www/content/{params$lang}/report/living_overview.md"),
+#|   package = "whesApp",
+#|   mustWork = TRUE
+#| )
+```
+
+```{r}
+#| child = if (living) unlist(purrr::map(.x = params$info, .f = ~ system.file(
+#|   glue::glue("app/www/content/{params$lang}/pages/{.x}_living.md"),
+#|   package = "whesApp",
+#|   mustWork = TRUE
+#| )))
+```
+
+
+
+```{r social}
+#| child = if (social) system.file(
+#|   glue::glue("app/www/content/{params$lang}/report/social_overview.md"),
+#|   package = "whesApp",
+#|   mustWork = TRUE
+#| )
+```
+
+```{r}
+#| child = if (social) unlist(purrr::map(.x = params$info, .f = ~ system.file(
+#|   glue::glue("app/www/content/{params$lang}/pages/{.x}_social.md"),
+#|   package = "whesApp",
+#|   mustWork = TRUE
+#| )))
+```
+
+
+
+```{r employment}
+#| child = if (employment) system.file(
+#|   glue::glue("app/www/content/{params$lang}/report/employment_overview.md"),
+#|   package = "whesApp",
+#|   mustWork = TRUE
+#| )
+```
+
+```{r}
+#| child = if (employment) unlist(purrr::map(.x = params$info, .f = ~ system.file(
+#|   glue::glue("app/www/content/{params$lang}/pages/{.x}_employment.md"),
+#|   package = "whesApp",
+#|   mustWork = TRUE
+#| )))
+```
+
+
