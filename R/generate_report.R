@@ -5,7 +5,9 @@
 
 report = function(keep_tex = FALSE) {
 
-  template = app_sys("rmarkdown/templates/report/resources/template.tex")
+  template = system.file(glue::glue("rmarkdown/templates/report/resources/template.tex"),
+              package = "whesApp",
+              mustWork = TRUE)
 
   rmarkdown::pdf_document(
     template = template,

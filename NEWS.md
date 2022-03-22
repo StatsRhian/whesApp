@@ -1,3 +1,7 @@
+# whesApp 7.0.26 _2022-03-22_
+
+- use temp dir for report
+
 # whesApp 7.0.25 _2022-03-21_
 
 - add report styling
