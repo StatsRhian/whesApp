@@ -94,7 +94,7 @@ create_barchart = function(df,
     }
   }
 
-  if (unique(df$type) == "percent") {
+  if (is_percent(unique(df$ind_id))) {
     g = g +
       ggplot2::scale_y_continuous(
         labels = scales::percent_format(accuracy = 1),

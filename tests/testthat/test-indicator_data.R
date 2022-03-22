@@ -1,5 +1,5 @@
 test_that("Dimensions", {
-  expect_equal(ncol(indicator_data), 9)
+  expect_equal(ncol(indicator_data), 8)
 })
 
 test_that("Indicator ids", {

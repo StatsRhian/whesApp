@@ -33,7 +33,7 @@ app_ui = function(request) {
         shiny::br(),
         shiny::div(
           purrr::map(
-            .x = whesApp::cat_df$catID[3:7],
+            .x = whesApp::essential_conditions[3:7],
             .f = ~ shiny::img(
               src = glue::glue("www/images/{.x}.png"),
               height = "250px",
@@ -48,8 +48,8 @@ app_ui = function(request) {
       ),
       shiny::navbarMenu(
         translateTitleUI("data"),
-        dataUI("wellbeing"),
-        dataUI("morbidity"),
+        dataUI("outcome"),
+        dataUI("behaviour"),
         dataUI("health"),
         dataUI("income"),
         dataUI("living"),

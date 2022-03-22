@@ -23,20 +23,20 @@ onclick_tabset = function(category) {
   )
 }
 
-#' Get indicator type
-#' @param id Indicator id
-get_ind_type = function(id) {
+#' Is the selected indicator a percent?
+#' @param id Data for selected indicator
+is_percent = function(id) {
   whesApp::indicator_info %>%
     dplyr::filter(.data$ind_id == id) %>%
-    dplyr::pull(.data$type)
+    dplyr::pull(.data$is_percent)
 }
 
 #' Calculate multiplier for plot settings
 #' @param df The indicator data set
-#' @param id The indicator id
+#' @param ind_id The indicator id
 #' @param disag The selected disaggregate
-get_plot_width = function(df, id, disag) {
-  if (get_ind_type(id) == "percent") {
+get_plot_width = function(df, ind_id, disag) {
+  if (is_percent(ind_id)) {
     if (disag == "None") {
       n = 575
     } else {

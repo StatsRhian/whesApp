@@ -7,7 +7,7 @@ app_server = function(input, output, session) {
   })
 
   # Call module for data pages
-  purrr::map(whesApp::cat_df$catID, ~ dataServer(.x, lang = lang))
+  purrr::map(whesApp::essential_conditions, ~ dataServer(.x, lang = lang))
 
   # Call modules for additional pages navbars
   pages = c("policy", "economics", "evidence", "needs", "solutions")
@@ -20,8 +20,8 @@ app_server = function(input, output, session) {
     stringr::str_remove("^title_")
   purrr::map(titles, ~ translateTitleServer(.x, lang = lang))
 
-  # Clickable images on home page
-  purrr::map(whesApp::cat_df$catID[3:7], onclick_tabset)
+  # Click-able images on home page
+  purrr::map(whesApp::essential_conditions[3:7], onclick_tabset)
 
   # Indicator search table
   output$indicator_search = reactable::renderReactable({

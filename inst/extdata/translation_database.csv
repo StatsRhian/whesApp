@@ -1,44 +1,44 @@
 key,EN,CY
-ind_001,"Percentage of adults reporting fair, bad or very bad health","Canran yr oedolion sy'n adrodd am iechyd teg, gwael neu wael iawn"
+ind_001,"Percentage of adults (16+) reporting fair, bad or very bad health","Canran yr oedolion sy'n adrodd am iechyd teg, gwael neu wael iawn"
 ind_002,Percentage of students who rate their health as fair or poor,Canran y myfyrwyr sy'n graddio eu hiechyd mor deg neu dlawd
-ind_003,"Percentage of survey respondents with a limiting long-standing illness, disability or infirmity","Canran yr ymatebwyr arolwg gyda salwch, anabledd neu wendid hirsefydlog cyfyngol"
+ind_003,"Percentage of adults (16+) with a limiting long-standing illness, disability or infirmity","Canran yr ymatebwyr arolwg gyda salwch, anabledd neu wendid hirsefydlog cyfyngol"
 ind_004,"Estimated prevalence of self-reported illness caused or made worse by work, for people working in the last 12 months (per 100,000)","Amcangyfrif o nifer yr achosion o salwch hunan-gofnodedig a achoswyd neu a wnaed yn waeth trwy waith, i bobl sy'n gweithio yn ystod y 12 mis diwethaf (fesul 100,000)"
-ind_006,Percentage of survey respondents with heart and circulatory illness,Canran yr ymatebwyr arolwg â salwch calon a chylchrediad y gwaed
-ind_007,Percentage of survey respondents with Diabetes incl. Hyperglycaemia,Canran yr ymatebwyr arolwg gyda Diabetes Incl. Hyperglycaemia
+ind_006,Percentage of adults (16+) with heart and circulatory illness,Canran yr ymatebwyr arolwg â salwch calon a chylchrediad y gwaed
+ind_007,Percentage of adults (16+) with Diabetes incl. Hyperglycaemia,Canran yr ymatebwyr arolwg gyda Diabetes Incl. Hyperglycaemia
 ind_008,"Death rate per 100,000 due to tuberculosis","Cyfradd marwolaeth fesul 100,000 oherwydd twbercwlosis"
-ind_009,Percentage of survey respondents who rated their satisfaction with life as low (0-4 out of 10),Canran yr ymatebwyr arolwg a nododd eu boddhad â bywyd mor isel (0-4 allan o 10)
+ind_009,Percentage of adults (16+) who rated their satisfaction with life as low (0 - 4 out of 10),Canran yr ymatebwyr arolwg a nododd eu boddhad â bywyd mor isel (0-4 allan o 10)
 ind_010,"Percentage of students who rated their life satisfaction as 6 out of 10, or above","Canran y myfyrwyr a nododd eu boddhad bywyd fel 6 allan o 10, neu uwch"
-ind_011,Percentage of adults (16+) scoring low on the  Warwick-Edinburgh Mental Well-being Scale,Canran yr Oedolion (16+) Sgorio Isel ar y Graddfa Lles Meddyliol Warwick-Edinburgh
+ind_011,Percentage of adults (16+) scoring low on the Warwick-Edinburgh Mental Wellbeing Scale,Canran yr Oedolion (16+) Sgorio Isel ar y Graddfa Lles Meddyliol Warwick-Edinburgh
 ind_012,"Infant mortality rate, the number of children that die under one year of age, per 1,000 live births","Cyfradd marwolaethau babanod, nifer y plant sy'n marw o dan flwydd oed, fesul 1,000 o enedigaethau byw"
 ind_013,Life expectancy at birth in years,Disgwyliad oes adeg geni mewn blynyddoedd
-ind_014,Percentage of survey respondents who currently smoke either daily or occasionally,Canran yr ymatebwyr arolwg sy'n ysmygu ar hyn o bryd naill ai'n ddyddiol neu'n achlysurol
-ind_015,Usual weekly alcohol consumption is lower risk (>0 but <=14 units),Mae yfed alcohol wythnosol arferol yn risg is (> 0 ond <= 14 uned)
-ind_016,Usual weekly alcohol consumption is higher risk (>14 units),Mae yfed alcohol wythnosol arferol yn risg uwch (> 14 uned)
-ind_017,Percentage of adults aged 18-64 who are obese,Canran yr oedolion 18-64 oed sy'n ordew
+ind_014,Percentage of adults (16+) who currently smoke either daily or occasionally,Canran yr ymatebwyr arolwg sy'n ysmygu ar hyn o bryd naill ai'n ddyddiol neu'n achlysurol
+ind_015,Percentage of adults (16+) whose usual weekly alcohol consumption is lower risk (>0 but <=14 units),Mae yfed alcohol wythnosol arferol yn risg is (> 0 ond <= 14 uned)
+ind_016,Percentage of adults (16+) whose usual weekly alcohol consumption is higher risk (>14 units),Mae yfed alcohol wythnosol arferol yn risg uwch (> 14 uned)
+ind_017,Percentage of adults (16+) who are obese,Canran yr oedolion 18-64 oed sy'n ordew
 ind_018,Percentage of students who are physically active for at least 60 minutes per day,Canran y myfyrwyr sy'n gorfforol egnïol am o leiaf 60 munud y dydd
 ind_019,Percentage of households with a sufficient number of bedrooms for the household,Canran yr aelwydydd sydd â nifer digonol o ystafelloedd gwely ar gyfer yr aelwyd
-ind_020,Percentage of survey respondents who rated their overall satisfaction with their accommodation as low (0-4 out of 10),Canran yr ymatebwyr arolwg a nododd eu boddhad cyffredinol â'u llety mor isel (0-4 allan o 10)
+ind_020,Percentage of adults (16+) who rated their overall satisfaction with their accommodation as low (0-4 out of 10),Canran yr ymatebwyr arolwg a nododd eu boddhad cyffredinol â'u llety mor isel (0-4 allan o 10)
 ind_025,"Death rate per 100,000 due to road traffic accidents","Cyfradd marwolaeth fesul 100,000 oherwydd damweiniau traffig ar y ffyrdd"
 ind_026,Number of households receiving housing benefit,Nifer yr aelwydydd sy'n derbyn Budd-dal Tai
 ind_032,Average PM10 concentrations across Wales (µg/m3),Crynodiadau PM10 ar gyfartaledd ledled Cymru (μg / m3)
-ind_033,Percentage of adults aged 16+ years reporting difficulty accessing local green space,Canran yr oedolion 16+ oed sy'n adrodd am anhawster cael mynediad i fannau gwyrdd lleol
-ind_034,Percentage of disabled persons (aged 16+) reporting difficulty getting to or from stop/station,Canran y bobl anabl (16+ oed) yn rhoi gwybod am anhawster cyrraedd neu o Stop / Orsaf
+ind_033,Percentage of adults (16+) reporting difficulty accessing local green space,Canran yr oedolion 16+ oed sy'n adrodd am anhawster cael mynediad i fannau gwyrdd lleol
+ind_034,Percentage of adults (16+) who do not travel on local trains (as much) due to difficulty getting to or from the station,Canran y bobl anabl (16+ oed) yn rhoi gwybod am anhawster cyrraedd neu o Stop / Orsaf
 ind_035,Percentage of adults (16+) feeling unsafe when walking alone in local area after dark,Canran yr oedolion (16+) yn teimlo'n anniogel wrth gerdded ar eich pen eich hun yn yr ardal leol ar ôl iddi dywyllu
-ind_036,Percentage of adults feeling unsafe at home after dark,Canran yr oedolion yn teimlo'n anniogel gartref ar ôl iddi dywyllu
+ind_036,Percentage of adults (16+) feeling unsafe at home after dark,Canran yr oedolion yn teimlo'n anniogel gartref ar ôl iddi dywyllu
 ind_038,"Percentage of households which eat meals with meat, chicken, fish (or vegetarian equivalent) at least every other day","Canran yr aelwydydd sy'n bwyta prydau bwyd gyda chig, cyw iâr, pysgod (neu gyfwerth llysieuol) o leiaf bob yn ail ddiwrnod"
 ind_039,Value-added tax (VAT) on alcohol (%),Treth gwerth ychwanegol (TAW) ar alcohol (%)
 ind_041,"Percentage of children at the final year of foundation phase achieving the expected Outcome (Outcome 5+) for Personal and social development, well-being and cultural diversity","Canran y plant ym mlwyddyn olaf y Cyfnod Sylfaen Cyflawni'r Canlyniad Disgwyliedig (Canlyniad 5+) ar gyfer Datblygiad Personol a Chymdeithasol, Lles ac Amrywiaeth Ddiwylliannol"
-ind_043,Percentage of adults who report a feeling lonely (a score of 4 to 6 on the De Jong Gierveld loneliness scale),Canran yr oedolion sy'n adrodd am deimlad unig (sgôr o 4 i 6 ar raddfa unigrwydd DE Jong Giervalt)
+ind_043,Percentage of adults (16+) who report feeling lonely (a score of 4 to 6 on the De Jong Gierveld loneliness scale),Canran yr oedolion sy'n adrodd am deimlad unig (sgôr o 4 i 6 ar raddfa unigrwydd DE Jong Giervalt)
 ind_044,"Percentage of students who agree that there is support at their school for students who feel unhappy, worried or unable to cope","Canran y myfyrwyr sy'n cytuno bod cefnogaeth yn eu hysgol i fyfyrwyr sy'n teimlo'n anhapus, yn poeni neu'n methu ymdopi"
-ind_045,"Percentage of adults (aged 16+) who have relatives, friends, or neighbours they can ask for help","Canran yr oedolion (16+ oed) sydd â pherthnasau, ffrindiau, neu gymdogion gallant ofyn am help"
-ind_046,Percentage of adults who feel they are in control of their daily life as much as they can be,Canran yr oedolion sy'n teimlo eu bod yn rheoli eu bywyd bob dydd gymaint ag y gallant fod
+ind_045,"Percentage of adults (16+) who have relatives, friends, or neighbours they can ask for help","Canran yr oedolion (16+ oed) sydd â pherthnasau, ffrindiau, neu gymdogion gallant ofyn am help"
+ind_046,Percentage of adults (16+) who feel they are in control of their daily life as much as they can be,Canran yr oedolion sy'n teimlo eu bod yn rheoli eu bywyd bob dydd gymaint ag y gallant fod
 ind_049,Percentage of childen aged 4 years participating in education,Canran y plant 4 oed sy'n cymryd rhan mewn addysg
-ind_050,Total expenditure delegated to nursery school education (£ thousand),Cyfanswm y gwariant a ddirprwywyd i addysg ysgol feithrin (£ mil)
-ind_051,"Percentage of 16-24 year olds not in education, training or employment","Canran o bobl ifanc 16-24 oed nad ydynt mewn addysg, hyfforddiant na chyflogaeth"
-ind_052,Percentage of pupils in year 11/aged 15 who achieved Level 2 incl. English/Welsh and maths,Canran y disgyblion ym mlwyddyn 11/15 oed a gyflawnodd lefel 2 yn cynnwys. Saesneg / Cymraeg a Mathemateg
-ind_054,Percentage of people who volunteer (National indicator),Canran y bobl sy'n gwirfoddoli (Dangosydd Cenedlaethol)
-ind_055,Percentage of people who feel they are able to influence decisions affecting their local area,Canran y bobl sy'n teimlo eu bod yn gallu dylanwadu ar benderfyniadau sy'n effeithio ar eu hardal leol
-ind_056,Percentage of people who feel most people can be trusted,Canran y bobl sy'n teimlo y gellir ymddiried ynddynt y gellir ymddiried ynddynt
+ind_050,Total net current expenditure delegated to nursery school education (£ thousand),Cyfanswm y gwariant a ddirprwywyd i addysg ysgol feithrin (£ mil)
+ind_051,"Percentage of 16 - 24 year olds not in education, training or employment","Canran o bobl ifanc 16-24 oed nad ydynt mewn addysg, hyfforddiant na chyflogaeth"
+ind_052,Percentage of pupils in year 11 who achieved Level 2 inclusive,Canran y disgyblion ym mlwyddyn 11/15 oed a gyflawnodd lefel 2 yn cynnwys. Saesneg / Cymraeg a Mathemateg
+ind_054,Percentage of adults (16+) who volunteer (National indicator),Canran y bobl sy'n gwirfoddoli (Dangosydd Cenedlaethol)
+ind_055,Percentage of adults (16+) who feel they are able to influence decisions affecting their local area,Canran y bobl sy'n teimlo eu bod yn gallu dylanwadu ar benderfyniadau sy'n effeithio ar eu hardal leol
+ind_056,Percentage of adults (16+) who feel most people can be trusted,Canran y bobl sy'n teimlo y gellir ymddiried ynddynt y gellir ymddiried ynddynt
 ind_057,Gross Value Added through compensation of employees i.e. wages and salaries plus employers' social contributions (£ million),Gwerth Ychwanegol Crynswth trwy iawndal o weithwyr I.E. cyflogau a chyflogau ynghyd â chyfraniadau cymdeithasol cyflogwyr (£ miliwn)
 ind_059,"Estimated incidence of self-reported workplace non-fatal injuries, for people working in the last 12 months (per 100,000)","Amcangyfrif o achosion o anafiadau nad ydynt yn angheuol yn y gweithle hunan-gofnodedig, i bobl sy'n gweithio yn ystod y 12 mis diwethaf (fesul 100,000)"
 ind_060,Percent difference in employment rates between those who are disabled and not disabled,Y cant gwahaniaeth mewn cyfraddau cyflogaeth rhwng y rhai sy'n anabl ac nad ydynt yn anabl
@@ -50,9 +50,9 @@ ind_069,Temporary employees as a percentage of the total number of employees age
 ind_070,National Living Wage and the National Minimum Wage rates (£),Cyflog Byw Cenedlaethol a'r Cyfraddau Isafswm Cyflog Cenedlaethol (£)
 ind_071,Average (median) gross hourly earnings (£),Enillion cyfartalog (canolrif) gros (£)
 ind_074,Percentage of working age adults in relative income poverty,Canran yr oedolion o oedran gweithio mewn tlodi incwm cymharol
-ind_075,Percentage of survey respondents who are moderately or highly satisfied with present job,Canran yr ymatebwyr arolwg sy'n gymedrol neu'n hynod fodlon â swydd bresennol
-ind_076,Percentage of survey respondents who are working 49+ hours per week,Canran yr ymatebwyr arolwg sy'n gweithio 49+ awr yr wythnos
-ind_077,"Percentage of all individuals, children, working-age adults and pensioners living in relative income poverty","Canran yr holl unigolion, plant, oedolion o oedran gweithio a phensiynwyr sy'n byw mewn tlodi incwm cymharol"
+ind_075,Percentage of adults (16+) who are moderately or highly satisfied with present job,Canran yr ymatebwyr arolwg sy'n gymedrol neu'n hynod fodlon â swydd bresennol
+ind_076,Percentage of adults (16+) who are working 49+ hours per week,Canran yr ymatebwyr arolwg sy'n gweithio 49+ awr yr wythnos
+ind_077,Percentage of people living in relative income poverty,"Canran yr holl unigolion, plant, oedolion o oedran gweithio a phensiynwyr sy'n byw mewn tlodi incwm cymharol"
 ind_078,Percentage of people in relative income poverty where there is disability within the family (Equality Act definition),Canran y bobl mewn tlodi incwm cymharol lle mae anabledd o fewn y teulu (diffiniad y Ddeddf Cydraddoldeb)
 ind_085,Percentage of women giving birth receiving Maternity Allowance,Canran y merched sy'n rhoi genedigaeth yn derbyn lwfans mamolaeth
 ind_092,Percentage of women (25 - 49) who are eligible for cervical screening who have been screened within the last 3.5 years,Canran y menywod (25 - 49) sy'n gymwys i gael sgrinio serfigol sydd wedi'u sgrinio o fewn y 3.5 mlynedd diwethaf
@@ -62,38 +62,38 @@ ind_095,Prevalence of diabetes in the GP practice registered population,Nifer yr
 ind_097,Total identifiable expenditure on health (£ per head),Cyfanswm y gwariant adnabyddadwy ar iechyd (£ y pen)
 ind_099,"Number of physicians or doctors per 100,000 inhabitants","Nifer y meddygon neu feddygon fesul 100,000 o drigolion"
 ind_102,"Available hospital beds per 100,000 inhabitants","Gwelyau ysbyty sydd ar gael fesul 100,000 o drigolion"
-ind_103,Percentage of survey respondents aged 16+ years caring for family members/friends/neighbours,Canran yr ymatebwyr arolwg 16+ oed sy'n gofalu am aelodau o'r teulu / ffrindiau / cymdogion
-ind_107,Percentage of survey respondents aged 16+ who wanted to but couldn't see a GP/family doctor about own health,Canran yr ymatebwyr arolwg 16+ oed oedd eisiau ond na allent weld meddyg teulu / teulu am iechyd eich hun
-ind_109,Percentage of survey respondents dissatisfied with the care they received at their last appointment with GP/family doctor,Canran yr ymatebwyr arolwg yn anfodlon â'r gofal a gawsant yn eu penodiad olaf gyda meddyg teulu / meddyg teulu
-ind_212,"Percentage of survey respondents who reported being worried 'a lot' about becoming seriously ill with coronavirus, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am ddod yn ddifrifol wael gyda Coronavirus, dros yr wythnos ddiwethaf"
-ind_213,"Percentage of survey respondents who reported being worried 'a lot' about losing someone they love to the virus, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am golli rhywun maen nhw'n ei hoffi i'r firws, dros yr wythnos ddiwethaf"
-ind_214,"Percentage of survey respondents who reported being worried 'a lot' about their mental health and well-being, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am eu hiechyd meddwl a'u lles, dros yr wythnos ddiwethaf"
-ind_215,"Percentage of survey respondents who reported being worried 'a lot' about other health issues not related to coronavirus, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am faterion iechyd eraill nad ydynt yn gysylltiedig â Coronavirus, dros yr wythnos ddiwethaf"
-ind_216,"Percentage of survey respondents who reported being worried 'a lot' about the well-being of their children (of any age), over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am les eu plant (o unrhyw oedran), dros yr wythnos ddiwethaf"
-ind_217,"Percentage of survey respondents who reported being worried 'a lot' about their children's education, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am addysg eu plant, dros yr wythnos ddiwethaf"
-ind_218,"Percentage of survey respondents who reported being worried 'a lot' about the well-being of other family members (other than their children), over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am les aelodau eraill o'r teulu (heblaw eu plant), dros yr wythnos ddiwethaf"
-ind_219,"Percentage of survey respondents who reported being worried 'a lot' about losing their job or not being able to find one, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am golli eu swydd neu beidio â gallu dod o hyd i un, dros yr wythnos ddiwethaf"
-ind_220,"Percentage of survey respondents who reported being worried 'a lot' about work, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am waith, dros yr wythnos ddiwethaf"
-ind_221,Percentage of survey respondents who reported being worried 'a lot' about their finances over the past week,Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am eu harian dros yr wythnos ddiwethaf
-ind_222,"Percentage of survey respondents who reported being worried 'a lot' about going out in public places, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am fynd allan mewn mannau cyhoeddus, dros yr wythnos ddiwethaf"
-ind_225,"Percentage of survey respondents who reported leaving their home for work, at least once, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn gadael eu cartref am waith, o leiaf unwaith, dros yr wythnos ddiwethaf"
-ind_226,"Percentage of survey respondents who reported leaving their home for for medical reasons, at least once, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn gadael eu cartref am resymau meddygol, o leiaf unwaith, dros yr wythnos ddiwethaf"
-ind_227,"Percentage of survey respondents who reported leaving their home to exercise, at least once, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn gadael eu cartref i ymarfer, o leiaf unwaith, dros yr wythnos ddiwethaf"
-ind_228,"Percentage of survey respondents who reported leaving their home to meet friends and family, at least once, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn gadael eu cartref i gwrdd â ffrindiau a theulu, o leiaf unwaith, dros yr wythnos ddiwethaf"
-ind_229,"Percentage of survey respondents who reported leaving their home to shop for food, at least once, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn gadael eu cartref i siopa am fwyd, o leiaf unwaith, dros yr wythnos ddiwethaf"
-ind_230,"Percentage of survey respondents who reported leaving their home to to volunteer or support members of their local community, at least once, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn gadael eu cartref i wirfoddoli neu gefnogi aelodau o'u cymuned leol, o leiaf unwaith, dros yr wythnos ddiwethaf"
-ind_232,Percentage of survey respondents who reported that a member of their household has lost their job permanently,Canran yr ymatebwyr arolwg a ddywedodd fod aelod o'u cartref wedi colli eu swydd yn barhaol
-ind_233,Percentage of survey respondents who reported that a member of their household has been suspended from work on lower or no pay (e.g. furloughed),Canran yr ymatebwyr arolwg a ddywedodd fod aelod o'u cartref wedi cael ei atal o'r gwaith ar gyflog is neu ddim (e.e. Furulouged)
-ind_234,Percentage of survey respondents who reported that a member of their household has had their income considerably reduced through getting less work or reduced hours,Canran yr ymatebwyr arolwg a ddywedodd fod aelod o'u cartref wedi gostwng eu hincwm yn sylweddol trwy gael llai o waith neu lai o oriau
-ind_235,"Percentage of survey respondents who reported that a member of their household has experienced any other financial impact (other than job loss, furloughed or reduced income)","Canran yr ymatebwyr arolwg a ddywedodd fod aelod o'u cartref wedi profi unrhyw effaith ariannol arall (heblaw am golli swyddi, incwm wedi'i furlouchhed neu is)"
-ind_236,Percentage of survey respondents who reported volunteering or supporting members of the local community,Canran yr ymatebwyr arolwg a ddywedodd wrth wirfoddoli neu gefnogi aelodau o'r gymuned leol
-ind_237,Percentage of survey respondents who wore a face covering at least some of the time when going out,Canran yr ymatebwyr arolwg a oedd yn gwisgo wyneb yn cwmpasu o leiaf rhywfaint o'r amser wrth fynd allan
-ind_238,Percentage of survey respondents who had smaller meals than usual or skipped meals because they couldn't afford or get access to food,Canran yr ymatebwyr arolwg a oedd â phrydau llai nag arfer neu hepgor prydau oherwydd na allent fforddio na chael mynediad i fwyd
-ind_239,Percentage of survey respondents who had been hungry but not eaten because they couldn't afford or get access to food,Canran yr ymatebwyr arolwg a oedd wedi bod yn llwglyd ond nad oeddent yn cael eu bwyta oherwydd na allent fforddio na chael mynediad i fwyd
-ind_240,Percentage of survey respondents who had not eaten for a whole day because they couldn't afford or get access to food,Canran yr ymatebwyr arolwg nad oeddent wedi bwyta am ddiwrnod cyfan oherwydd na allent fforddio na chael mynediad i fwyd
-ind_241,Percentage of survey respondents who had been tested for coronavirus or had an antibodies test,Canran yr ymatebwyr arolwg a brofwyd am Coronavirus neu gael prawf gwrthgyrff
-ind_242,Percentage of survey respondents who had a garden,Canran yr ymatebwyr arolwg a oedd â gardd
-ind_243,Percentage of survey respondents who reported being in a worse financial situation as a result of the coronavirus restrictions,Canran yr ymatebwyr arolwg a ddywedodd eu bod mewn sefyllfa ariannol waeth o ganlyniad i gyfyngiadau Coronavirus
+ind_103,"Percentage of adults (16+) who look after, or give any help or support to family members, friends, neighbours or others",Canran yr ymatebwyr arolwg 16+ oed sy'n gofalu am aelodau o'r teulu / ffrindiau / cymdogion
+ind_107,Percentage of adults (16+) who wanted to but couldn't see a GP/family doctor about own health,Canran yr ymatebwyr arolwg 16+ oed oedd eisiau ond na allent weld meddyg teulu / teulu am iechyd eich hun
+ind_109,Percentage of adults (16+) dissatisfied with the care they received at their last appointment with GP/family doctor,Canran yr ymatebwyr arolwg yn anfodlon â'r gofal a gawsant yn eu penodiad olaf gyda meddyg teulu / meddyg teulu
+ind_212,"Percentage of adults who reported being worried 'a lot' about becoming seriously ill with coronavirus, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am ddod yn ddifrifol wael gyda Coronavirus, dros yr wythnos ddiwethaf"
+ind_213,"Percentage of adults who reported being worried 'a lot' about losing someone they love to the virus, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am golli rhywun maen nhw'n ei hoffi i'r firws, dros yr wythnos ddiwethaf"
+ind_214,"Percentage of adults who reported being worried 'a lot' about their mental health and well-being, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am eu hiechyd meddwl a'u lles, dros yr wythnos ddiwethaf"
+ind_215,"Percentage of adults who reported being worried 'a lot' about other health issues not related to coronavirus, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am faterion iechyd eraill nad ydynt yn gysylltiedig â Coronavirus, dros yr wythnos ddiwethaf"
+ind_216,"Percentage of adults who reported being worried 'a lot' about the well-being of their children (of any age), over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am les eu plant (o unrhyw oedran), dros yr wythnos ddiwethaf"
+ind_217,"Percentage of adults who reported being worried 'a lot' about their children's education, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am addysg eu plant, dros yr wythnos ddiwethaf"
+ind_218,"Percentage of adults who reported being worried 'a lot' about the well-being of other family members (other than their children), over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am les aelodau eraill o'r teulu (heblaw eu plant), dros yr wythnos ddiwethaf"
+ind_219,"Percentage of adults who reported being worried 'a lot' about losing their job or not being able to find one, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am golli eu swydd neu beidio â gallu dod o hyd i un, dros yr wythnos ddiwethaf"
+ind_220,"Percentage of adults who reported being worried 'a lot' about work, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am waith, dros yr wythnos ddiwethaf"
+ind_221,Percentage of adults who reported being worried 'a lot' about their finances over the past week,Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am eu harian dros yr wythnos ddiwethaf
+ind_222,"Percentage of adults who reported being worried 'a lot' about going out in public places, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn poeni 'llawer' am fynd allan mewn mannau cyhoeddus, dros yr wythnos ddiwethaf"
+ind_225,"Percentage of adults who reported leaving their home for work, at least once, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn gadael eu cartref am waith, o leiaf unwaith, dros yr wythnos ddiwethaf"
+ind_226,"Percentage of adults who reported leaving their home for for medical reasons, at least once, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn gadael eu cartref am resymau meddygol, o leiaf unwaith, dros yr wythnos ddiwethaf"
+ind_227,"Percentage of adults who reported leaving their home to exercise, at least once, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn gadael eu cartref i ymarfer, o leiaf unwaith, dros yr wythnos ddiwethaf"
+ind_228,"Percentage of adults who reported leaving their home to meet friends and family, at least once, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn gadael eu cartref i gwrdd â ffrindiau a theulu, o leiaf unwaith, dros yr wythnos ddiwethaf"
+ind_229,"Percentage of adults who reported leaving their home to shop for food, at least once, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn gadael eu cartref i siopa am fwyd, o leiaf unwaith, dros yr wythnos ddiwethaf"
+ind_230,"Percentage of adults who reported leaving their home to to volunteer or support members of their local community, at least once, over the past week","Canran yr ymatebwyr arolwg a ddywedodd eu bod yn gadael eu cartref i wirfoddoli neu gefnogi aelodau o'u cymuned leol, o leiaf unwaith, dros yr wythnos ddiwethaf"
+ind_232,Percentage of adults who reported that a member of their household has lost their job permanently,Canran yr ymatebwyr arolwg a ddywedodd fod aelod o'u cartref wedi colli eu swydd yn barhaol
+ind_233,Percentage of adults who reported that a member of their household has been suspended from work on lower or no pay (e.g. furloughed),Canran yr ymatebwyr arolwg a ddywedodd fod aelod o'u cartref wedi cael ei atal o'r gwaith ar gyflog is neu ddim (e.e. Furulouged)
+ind_234,Percentage of adults who reported that a member of their household has had their income considerably reduced through getting less work or reduced hours,Canran yr ymatebwyr arolwg a ddywedodd fod aelod o'u cartref wedi gostwng eu hincwm yn sylweddol trwy gael llai o waith neu lai o oriau
+ind_235,"Percentage of adults who reported that a member of their household has experienced any other financial impact (other than job loss, furloughed or reduced income)","Canran yr ymatebwyr arolwg a ddywedodd fod aelod o'u cartref wedi profi unrhyw effaith ariannol arall (heblaw am golli swyddi, incwm wedi'i furlouchhed neu is)"
+ind_236,Percentage of adults who reported volunteering or supporting members of the local community,Canran yr ymatebwyr arolwg a ddywedodd wrth wirfoddoli neu gefnogi aelodau o'r gymuned leol
+ind_237,Percentage of adults who wore a face covering at least some of the time when going out,Canran yr ymatebwyr arolwg a oedd yn gwisgo wyneb yn cwmpasu o leiaf rhywfaint o'r amser wrth fynd allan
+ind_238,Percentage of adults who had smaller meals than usual or skipped meals because they couldn't afford or get access to food,Canran yr ymatebwyr arolwg a oedd â phrydau llai nag arfer neu hepgor prydau oherwydd na allent fforddio na chael mynediad i fwyd
+ind_239,Percentage of adults who had been hungry but not eaten because they couldn't afford or get access to food,Canran yr ymatebwyr arolwg a oedd wedi bod yn llwglyd ond nad oeddent yn cael eu bwyta oherwydd na allent fforddio na chael mynediad i fwyd
+ind_240,Percentage of adults who had not eaten for a whole day because they couldn't afford or get access to food,Canran yr ymatebwyr arolwg nad oeddent wedi bwyta am ddiwrnod cyfan oherwydd na allent fforddio na chael mynediad i fwyd
+ind_241,Percentage of adults who had been tested for coronavirus or had an antibodies test,Canran yr ymatebwyr arolwg a brofwyd am Coronavirus neu gael prawf gwrthgyrff
+ind_242,Percentage of adults who have a garden,Canran yr ymatebwyr arolwg a oedd â gardd
+ind_243,Percentage of adults who reported being in a worse financial situation as a result of the coronavirus restrictions,Canran yr ymatebwyr arolwg a ddywedodd eu bod mewn sefyllfa ariannol waeth o ganlyniad i gyfyngiadau Coronavirus
 disaggregate_Gender,Sex,Rhyw
 disaggregate_Age,Age,Oedran
 disaggregate_Deprivation,Deprivation,Amddifadedd
@@ -167,20 +167,12 @@ disag_Age_value_38,18 - 34,18 - 34
 disag_Age_value_39,35 - 54,35 - 54
 disag_Age_value_40,55 - 74,55 - 74
 disag_Age_value_41,75+,75+
-source_temp,Temporary Caption,Pennawd Dros Dro
-source_nsw1819,National Survey for Wales 2018 - 2019,Arolwg Cenedlaethol Cymru 2018 - 2019
-source_nsw1718,National Survey for Wales 2017 - 2018,Arolwg Cenedlaethol Cymru 2017 - 2018
-source_nsw1617,National Survey for Wales 2016 - 2017,Arolwg Cenedlaethol Cymru 2016 - 2017
-source_nsw1314,National Survey for Wales 2013 - 2014,Arolwg Cenedlaethol Cymru 2013 - 2014
-source_shrn,School Health Research Network,Cyfieithu Cymraeg yn mynd yma
-source_gov,UK Government,Cyfieithu Cymraeg yn mynd yma
-source_covid,PHW Coronavirus public engagement survey,Arolwg ymgysylltu cyhoeddus Coronavirus PHW
 title_whes_platform,Welsh Health Equity Solutions Platform,Llwyfan Datrysiadau Ecwiti Iechyd Cymru
 title_overview,Home Page,Hafan
 title_data,Data Explorer,Archwiliwr Data
 title_data_search,Search Indicators,Dangosyddion Chwilio
-title_data_wellbeing,Well-being,Lles
-title_data_morbidity,Morbidity,Morbidrwydd
+title_data_outcome,Outcome,Lles
+title_data_behaviour,Health Behaviour,Morbidrwydd
 title_data_health,Health Services,Gwasanaethau Iechyd
 title_data_income,Income Security and Social Protection,Nawdd Incwm a Diogelwch Cymdeithasol
 title_data_living,Living Conditions,Amodau byw
@@ -247,3 +239,28 @@ col_confidence,Confidence,Hyder
 small_numbers,* indicates value removed due to small sample size (n < 30),* yn dynodi gwerth a dynnwyd oherwydd maint sampl bach (n <30)
 title_report,Generate Report,Cynhyrchu Adroddiad
 generate,Generate Report,Cynhyrchu Adroddiad
+source_nsw,"National Survey for Wales, Welsh Government",ffynhonnell
+source_shrn,School Health Research Network (SHRN) & Health Behaviour in School-Aged Children (HBSC),ffynhonnell
+source_lfs,"
+Labour Force Survey, Office for National Statistics",ffynhonnell
+source_mortality,"Mortality statistics, Office for National Statistics",ffynhonnell
+source_lifeexp,"Health and life expectancies, Office for National Statistics",ffynhonnell
+source_dwp,Department for Work and Pensions,ffynhonnell
+source_defra,"Air Concentration, Department for Environment, Food and Rural Affairs",ffynhonnell
+source_gov,UK Government website,ffynhonnell
+source_ntadc,"National Teacher Assessment Data Collection, Welsh Government",ffynhonnell
+source_eurostat,Eurostat,ffynhonnell
+source_rodc,"Revenue Outturn Data Collection, Welsh Government",ffynhonnell
+source_plasc,"Pupil Level Annual School Census (PLASC), Welsh Government",ffynhonnell
+source_wed,"Welsh Examinations Database, Welsh Government",ffynhonnell
+source_ra,"Regional Accounts, Office for National Statistics",ffynhonnell
+source_pesa,HMT Public Expenditure Statistical Analyses (PESA),ffynhonnell
+source_aps,"Annual Population Survey, Office for National Statistics",ffynhonnell
+source_ashe,"Annual Survey of Hours and Earnings, Office for National Statistics",ffynhonnell
+source_frs,"Family Resources Survey, Department for Work and Pensions",ffynhonnell
+source_csw,"Cervical Screening Wales, Public Health Wales",ffynhonnell
+source_niud,"National Immunisation Uptake Data, Public Health Wales",ffynhonnell
+source_gpqof,"GP Quality and Outcomes Framework, NHS Wales Informatics Service",ffynhonnell
+source_nhsesr,NHS Electronic Staff Record,ffynhonnell
+source_quest1,"QueSt1 return, NHS Wales Informatics Service",ffynhonnell
+source_covid,"Welsh COVID-19 National Public Engagement Survey, Public Health Wales",ffynhonnell

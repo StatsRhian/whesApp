@@ -164,7 +164,6 @@ dataServer = function(id, lang) {
         filter_disag(c(input$disag, input$disag2))
     })
 
-
     listen_disag = shiny::reactive({
       list(input$ind_id, input$output_type, input$disag, lang())
     })
@@ -177,7 +176,6 @@ dataServer = function(id, lang) {
         lang = lang()
       )
     })
-
 
     # Confidence Intervals Button ----------------------
     shiny::observe({

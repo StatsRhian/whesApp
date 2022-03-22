@@ -4,12 +4,12 @@
 \alias{get_plot_width}
 \title{Calculate multiplier for plot settings}
 \usage{
-get_plot_width(df, id, disag)
+get_plot_width(df, ind_id, disag)
 }
 \arguments{
 \item{df}{The indicator data set}
 
-\item{id}{The indicator id}
+\item{ind_id}{The indicator id}
 
 \item{disag}{The selected disaggregate}
 }
