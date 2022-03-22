@@ -68,16 +68,28 @@ app_server = function(input, output, session) {
   output$report = shiny::downloadHandler(
     filename = "report.pdf",
     content = function(file) {
-      path = app_sys("rmarkdown/templates/report/skeleton/skeleton.Rmd")
+      # make temp dir
+      tmp_dir = tempdir()
+
+      # define files
+      tempReport = file.path(tmp_dir, "rmarkdown/templates/report/skeleton/skeleton.Rmd")
+
+      #copy files
+      file.copy(app_sys("rmarkdown"),
+                tmp_dir,
+                recursive = TRUE,
+                overwrite = TRUE)
+
+      #report params
       report_params = list(title = tr_pull("title_whes_platform", lang()),
                            lang = lang(),
                            author = "",
                            date = format(Sys.Date(), format = "%B %d %Y"),
                            conditions = input$report_conditions,
                            info = input$report_info)
-
+      # render report
       rmarkdown::render(
-        path,
+        tempReport,
         output_file = file,
         envir = new.env(parent = globalenv()),
         params = report_params
