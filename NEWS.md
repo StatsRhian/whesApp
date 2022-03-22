@@ -1,3 +1,8 @@
+# whesApp 7.0.25 _2022-03-21_
+
+- add report styling
+- add white WHO logo
+
 # whesApp 7.0.24 _2022-03-16_
 
 - data refresh
