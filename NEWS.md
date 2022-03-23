@@ -1,4 +1,9 @@
+# whesApp 7.0.28 _2022-03-23_
+
+- prevent modules from loading on start up
+
 # whesApp 7.0.27 _2022-03-23_
+
 - Minor refactoring of a path
 
 # whesApp 7.0.26 _2022-03-22_
