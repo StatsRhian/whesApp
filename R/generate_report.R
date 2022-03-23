@@ -4,8 +4,7 @@
 #' @export
 
 report = function(keep_tex = FALSE) {
-
-  template = system.file(glue::glue("rmarkdown/templates/report/resources/template.tex"),
+  template = system.file("rmarkdown", "templates", "report", "resources", "template.tex",
               package = "whesApp",
               mustWork = TRUE)
 
