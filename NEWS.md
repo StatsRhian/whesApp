@@ -1,3 +1,6 @@
+# whesApp 7.0.27 _2022-03-23_
+- Minor refactoring of a path
+
 # whesApp 7.0.26 _2022-03-22_
 
 - use temp dir for report
