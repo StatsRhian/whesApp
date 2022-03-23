@@ -20,6 +20,7 @@ app_ui = function(request) {
     ),
     shiny::navbarPage(
       title = "",
+      id = "page",
       theme = bslib::bs_theme(
         primary = "#008586",
         secondary = "#c60158",
