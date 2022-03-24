@@ -1,3 +1,7 @@
+# whesApp 7.0.30 _2022-03-24_
+
+- Data refresh
+
 # whesApp 7.0.29 _2022-03-24_
 
 - Don't debounce (revert 7.0.23)
