@@ -244,7 +244,6 @@ dataServer = function(id, lang) {
         )
       }
     })
-    plot_obj_d = plot_obj %>% shiny::debounce(500)
 
     # Make table ------------------------
     output$detailed_table =
@@ -256,7 +255,7 @@ dataServer = function(id, lang) {
 
     # Display window ------------------------
     output$plot_window = shiny::renderPlot({
-      plot_obj_d()
+      plot_obj()
     })
 
     shiny::observeEvent(input$output_type, {

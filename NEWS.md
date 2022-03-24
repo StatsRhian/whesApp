@@ -1,3 +1,7 @@
+# whesApp 7.0.29 _2022-03-24_
+
+- Don't debounce (revert 7.0.23)
+
 # whesApp 7.0.28 _2022-03-23_
 
 - prevent modules from loading on start up
