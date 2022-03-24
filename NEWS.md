@@ -1,3 +1,7 @@
+# whesApp 7.0.31 _2022-03-24_
+
+- Update translation database with professional translation
+
 # whesApp 7.0.30 _2022-03-24_
 
 - Data refresh
