@@ -9,7 +9,7 @@ update_db = function(indicator_info, translate_db) {
   info_titles = indicator_info$name
   tran_titles =
     translate_db %>%
-    dplyr::filter(stringr::str_detect(.data$key, "^[A-Za-z]+_ind_[0-9]{3}$")) %>%
+    dplyr::filter(stringr::str_detect(.data$key, "^ind_[0-9]{3}$")) %>%
     dplyr::pull(.data$EN)
   missing = which(!(info_titles %in% tran_titles))
 
@@ -19,7 +19,7 @@ update_db = function(indicator_info, translate_db) {
 
     for (i in seq_along(new_id)) {
       id = new_id[i]
-      trans_row = stringr::str_which(translate_db$key, id)
+      trans_row = stringr::str_which(translate_db$key, glue::glue("^{id}"))
       if (length(trans_row) != 1) {
         stop("Error in updating translation db")
       }

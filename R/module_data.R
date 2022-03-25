@@ -221,24 +221,8 @@ dataServer = function(id, lang) {
           disag1 = input$disag,
           disag2 = input$disag2,
           ci = input$show_ci,
-          title = tr_pull(
-            key = input$ind_id,
-            lang = lang(),
-            search = TRUE
-          ),
-          caption = glue::glue(
-            tr_pull(
-              key = "caption",
-              lang = lang()
-            ),
-            "\n",
-            tr_pull(
-              key = caption_source(
-                id = input$ind_id
-              ),
-              lang = lang()
-            )
-          ),
+          title = get_plot_title(input$ind_id, lang()),
+          caption = get_caption(input$ind_id, lang()),
           lang = lang(),
           labels = translate_labels()
         )

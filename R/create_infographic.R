@@ -7,11 +7,7 @@ create_infographic = function(df, ind_id, id, disag, lang) {
       tr_table(lang) %>%
       prep_waffle(disag) %>%
       create_waffle(disag,
-        title = tr_pull(
-          key = ind_id,
-          lang = lang,
-          search = TRUE
-        ),
+        title = get_plot_title(ind_id, lang),
         caption = get_caption(ind_id, lang),
         legend_labels = tr_pull(
           key = "waffle_legend_label",

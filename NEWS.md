@@ -1,3 +1,7 @@
+# whesApp 7.0.32 _2022-03-24_
+
+- Add dates to plot titles
+
 # whesApp 7.0.31 _2022-03-24_
 
 - Update translation database with professional translation
