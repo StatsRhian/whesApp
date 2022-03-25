@@ -4,7 +4,7 @@
 #' @param id Essential condition
 prep_valuebox = function(df, lang, id) {
   df %>%
-    dplyr::mutate(label = tr_pull(key = df$ind_id, lang = lang, search = TRUE)) %>%
+    dplyr::mutate(label = tr_pull(key = unique(df$ind_id), lang = lang)) %>%
     dplyr::mutate(label = wrapper(.data$label, 50)) %>%
     dplyr::mutate(icon = app_sys(glue::glue("app/www/images/bw/{id}.png"))) %>%
     dplyr::mutate(value = format(round(.data$value, 2), big.mark = ",")) %>%

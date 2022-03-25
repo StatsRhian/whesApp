@@ -31,6 +31,15 @@ is_percent = function(id) {
     dplyr::pull(.data$is_percent)
 }
 
+#' Grab title for plots
+#' @param ind_id The indicator id
+#' @param lang EN or CY
+get_plot_title = function(ind_id, lang) {
+  name = tr_pull(key = glue::glue("^{ind_id}"), lang = lang, search = TRUE)
+  date = tr_pull(key = glue::glue("^date_{ind_id}"), lang = lang, search = TRUE)
+  title = glue::glue("{name} ({date})")
+}
+
 #' Calculate multiplier for plot settings
 #' @param df The indicator data set
 #' @param ind_id The indicator id
