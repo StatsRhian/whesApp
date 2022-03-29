@@ -1,3 +1,7 @@
+# whesApp 7.0.33 _2022-03-29_
+
+- Update logo sizes
+
 # whesApp 7.0.32 _2022-03-24_
 
 - Add dates to plot titles
