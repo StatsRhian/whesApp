@@ -8,10 +8,11 @@ app_server = function(input, output, session) {
 
   # Call module for data pages
   purrr::map(whesApp::essential_conditions,
-             ~ shiny::observeEvent({
-               input$page == .x}, {
+             ~ shiny::observeEvent(
+               input$page == .x, {
                  dataServer(.x, lang = lang)},
-               ignoreInit = TRUE, once = TRUE))
+               ignoreInit = TRUE,
+               once = TRUE))
 
   # Call modules for additional pages navbars
   pages = c("policy", "economics", "evidence", "needs", "solutions")
