@@ -69,8 +69,8 @@ translate_fill = function(g, df, col_name, lang, labels) {
       name = tr_pull(
         key = glue::glue("disaggregate_{col_name}"), lang = lang
       ),
-      breaks = breaks,
-      labels = labels
+      breaks = sort(breaks),
+      labels = sort(labels)
     )
   return(g)
 }
