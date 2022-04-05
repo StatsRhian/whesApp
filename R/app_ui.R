@@ -8,13 +8,13 @@ app_ui = function(request) {
       style = "text-align: center; color: #fff; background-color: #008586; padding: 5px; margin: 0",
       shiny::titlePanel(
         title = shiny::span(
-          shiny::img(src = "www/logos/who-euro-white.png", height = 40),
+          shiny::img(src = "www/logos/who-euro-white.png", width = "25%"),
           shiny::HTML("&emsp;"),
           translateTitleUI("whes_platform"),
           shiny::HTML("&emsp;"),
-          shiny::img(src = "www/logos/phw.png", height = 40),
+          shiny::img(src = "www/logos/phw.png", width = "13%"),
           shiny::HTML("&emsp;"),
-          shiny::img(src = "www/logos/welsh-gov.png", height = 50)
+          shiny::img(src = "www/logos/welsh-gov.png", width = "5%")
         )
       )
     ),
