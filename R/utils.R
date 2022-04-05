@@ -64,3 +64,15 @@ get_plot_width = function(df, ind_id, disag) {
 wrapper = function(x, ...) {
   paste(strwrap(x, ...), collapse = "\n")
 }
+
+#' Sort output type order
+#' @param lang Language
+#' @return Named ordered factor
+sort_output_choice = function(lang) {
+  choices = tr_deframe(pattern = "^output", lang = lang)
+  sorted_choices = sort(factor(choices,
+                               levels = c("infographic", "barchart", "table")))
+  output = as.character(sorted_choices)
+  names(output) = names(sorted_choices)
+  return(output)
+}
