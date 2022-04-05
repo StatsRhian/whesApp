@@ -15,7 +15,8 @@ app_ui = function(request) {
           shiny::img(src = "www/logos/phw.png", width = "13%"),
           shiny::HTML("&emsp;"),
           shiny::img(src = "www/logos/welsh-gov.png", width = "5%")
-        )
+        ),
+        windowTitle = "Welsh Health Equity Solutions Platform"
       )
     ),
     shiny::navbarPage(
