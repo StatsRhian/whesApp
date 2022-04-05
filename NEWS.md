@@ -1,3 +1,7 @@
+# whesApp 7.0.35 _2022-03-29_
+
+- Fix order of items in legend
+
 # whesApp 7.0.34 _2022-03-29_
 
 - Switch to larger colour palette for bar chart
