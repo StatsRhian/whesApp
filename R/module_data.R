@@ -232,9 +232,11 @@ dataServer = function(id, lang) {
     # Make table ------------------------
     output$detailed_table =
       reactable::renderReactable({
-        data() %>%
-          tr_table(lang = lang()) %>%
-          create_reactable(ci = input$show_ci, lang = lang())
+        if (shiny::req(input$output_type) == "table") {
+          data() %>%
+            tr_table(lang = lang()) %>%
+            create_reactable(ci = input$show_ci, lang = lang())
+        }
       })
 
     # Display window ------------------------

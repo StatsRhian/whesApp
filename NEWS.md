@@ -1,3 +1,7 @@
+# whesApp 7.0.37 _2022-03-30_
+
+- Adds require statement to table rendering
+
 # whesApp 7.0.36 _2022-03-30_
 
 - Fix order of output type to not depend on order of key
