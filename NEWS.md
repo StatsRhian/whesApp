@@ -1,3 +1,7 @@
+# whesApp 7.0.38 _2022-03-30_
+
+- Initially set window title as English version
+
 # whesApp 7.0.37 _2022-03-30_
 
 - Adds require statement to table rendering

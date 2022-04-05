@@ -1,7 +1,7 @@
 Type: Package
 Package: whesApp
 Title: Builds shiny app for the Welsh Health Equity Solutions Platform
-Version: 7.0.37
+Version: 7.0.38
 Authors@R: 
     person("Jumping", "Rivers", , "info@jumpingrivers.com", role = c("aut", "cre"))
 Description: An R package to contain the code for the shiny app.
