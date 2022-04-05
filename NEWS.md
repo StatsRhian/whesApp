@@ -1,3 +1,7 @@
+# whesApp 7.0.36 _2022-03-30_
+
+- Fix order of output type to not depend on order of key
+
 # whesApp 7.0.35 _2022-03-29_
 
 - Fix order of items in legend

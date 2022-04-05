@@ -152,7 +152,7 @@ dataServer = function(id, lang) {
         session,
         inputId = "output_type",
         label = tr_pull("select_output_type", lang()),
-        choices = tr_deframe(pattern = "^output", lang = lang()),
+        choices = sort_output_choice(lang = lang()),
         status = "primary"
       )
     })
