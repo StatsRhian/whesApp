@@ -1,13 +1,12 @@
 Type: Package
 Package: whesApp
 Title: Builds shiny app for the Welsh Health Equity Solutions Platform
-Version: 7.0.38
+Version: 7.0.39
 Authors@R: 
     person("Jumping", "Rivers", , "info@jumpingrivers.com", role = c("aut", "cre"))
 Description: An R package to contain the code for the shiny app.
 License: file LICENSE
 Depends: 
-    emojifont,
     R (>= 4.0.0)
 Imports: 
     bslib,
@@ -26,7 +25,9 @@ Imports:
     shiny,
     shinyjs,
     shinyWidgets,
+    showtext,
     stringr,
+    sysfonts,
     tibble,
     tidyr,
     tidyselect

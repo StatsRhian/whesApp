@@ -1,3 +1,8 @@
+# whesApp 7.0.39 _2022-03-31_
+
+- Remove {emojifont} from Depends
+- Add fontawesome font 
+
 # whesApp 7.0.38 _2022-03-30_
 
 - Initially set window title as English version

@@ -39,7 +39,7 @@ prep_waffle = function(df, disag) {
     # make data frame
     df_new = rep_df(expand.grid(x = 1:10, y = 1:10), length(levels)) %>%
       dplyr::mutate(
-        label = rep(emojifont::fontawesome("fa-user"), times = 100 * length(levels)),
+        label = rep("\uf007", times = 100 * length(levels)),
         disag_cat = rep(levels, each = 100),
         type = rep(df$Response, times = df$Percent)
       )
@@ -59,7 +59,7 @@ prep_waffle = function(df, disag) {
   } else {
     df_new = expand.grid(x = 1:10, y = 1:10) %>%
       dplyr::mutate(
-        label = rep(emojifont::fontawesome("fa-user"), times = 100),
+        label = rep("\uf007", times = 100),
         type = rep(df$Response, times = df$Percent),
         Percent = rep(df$Percent, times = df$Percent)
       )
@@ -70,7 +70,7 @@ prep_waffle = function(df, disag) {
 # set key for legend
 draw_key_user = function(data, params, size) {
   grid::textGrob(
-    label = emojifont::fontawesome("fa-user"),
+    label = "\uf007",
     x = c(0.5),
     y = c(0.5),
     gp = grid::gpar(
@@ -122,7 +122,6 @@ geom_user = function(mapping = NULL, data = NULL, stat = "identity",
 #' @param caption The caption for the plot
 #' @param legend_labels The legend labels
 #' @param plot_width The width of the plot
-#' @import emojifont
 create_waffle = function(df, disag,
                          title = "",
                          caption = "Welsh Health Equity Status 2020",
