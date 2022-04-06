@@ -2,7 +2,6 @@
 
 export(report)
 export(run_app)
-import(emojifont)
 import(ggplot2)
 importFrom(dplyr,"%>%")
 importFrom(markdown,markdownToHTML)
