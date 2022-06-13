@@ -101,4 +101,11 @@ app_server = function(input, output, session) {
       )
     }
   )
+
+  # add footer
+  output$insert_footer = shiny::renderUI({
+    filename = app_sys(glue::glue("app/www/content/{lang()}/footer.md"))
+    shiny::hr()
+    shiny::includeMarkdown(filename)
+  })
 }

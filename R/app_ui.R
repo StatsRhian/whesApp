@@ -22,6 +22,7 @@ app_ui = function(request) {
     shiny::navbarPage(
       title = "",
       id = "page",
+      footer = shiny::uiOutput("insert_footer"),
       theme = bslib::bs_theme(
         primary = "#008586",
         secondary = "#c60158",
