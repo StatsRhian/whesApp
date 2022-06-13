@@ -38,9 +38,8 @@ app_ui = function(request) {
             .x = whesApp::essential_conditions[3:7],
             .f = ~ shiny::img(
               src = glue::glue("www/images/{.x}.png"),
-              height = "250px",
-              id = glue::glue("img_{.x}"),
-              style = "cursor:pointer;"
+              height = "200px",
+              id = glue::glue("img_{.x}")
             )
           ),
           style = "text-align: center;"
