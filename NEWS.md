@@ -1,3 +1,7 @@
+# whesApp 7.0.40 _2022-06-13_
+
+- crop images on front page
+
 # whesApp 7.0.39 _2022-03-31_
 
 - Remove {emojifont} from Depends
