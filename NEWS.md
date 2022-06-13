@@ -1,3 +1,7 @@
+# whesApp 7.0.41 _2022-06-13_
+
+- add footer
+
 # whesApp 7.0.40 _2022-06-13_
 
 - crop images on front page
