@@ -24,7 +24,7 @@ update_disag = function(selected_ind_id,
     shinyjs::disable("disag2")
     update_disag_input("disag2", "disaggregate_None", "disaggregate_None", lang)
 
-    if (is_percent(selected_ind_id) & !no_disag_avail) {
+    if (is_percent(selected_ind_id) && !no_disag_avail) {
       # Enable disag and set to choices
       shinyjs::enable("disag")
       set_disag1_to_choices(selected_disag, disag_choices, lang)

@@ -24,7 +24,7 @@ create_barchart = function(df,
     dplyr::filter(!is.nan(.data$value))
 
   d = 0.9
-  if (disag1 == "None" & disag2 == "None") {
+  if (disag1 == "None" && disag2 == "None") {
     g = df %>%
       ggplot2::ggplot(ggplot2::aes(
         x = tr_pull("all", lang),
@@ -32,7 +32,7 @@ create_barchart = function(df,
       )) +
       ggplot2::geom_col(fill = "#008586") +
       ggplot2::xlab("")
-  } else if (disag1 != "None" & disag2 == "None") {
+  } else if (disag1 != "None" && disag2 == "None") {
     g = df %>%
       ggplot2::ggplot(ggplot2::aes(
         x = !!rlang::sym(disag1),
@@ -43,7 +43,7 @@ create_barchart = function(df,
     g = g %>%
       translate_x_axis(df, disag1, lang = lang, labels = labels) %>%
       translate_fill(df, disag1, lang = lang, labels = labels)
-  } else if (disag1 != "None" & disag2 != "None") {
+  } else if (disag1 != "None" && disag2 != "None") {
     g = df %>%
       ggplot2::ggplot(ggplot2::aes(
         x = !!rlang::sym(disag2),
@@ -80,7 +80,7 @@ create_barchart = function(df,
     )
 
   if (!is.null(ci)) {
-    if (!all(is.na(df$ci_lower)) & (ci == TRUE)) {
+    if (!all(is.na(df$ci_lower)) && (ci == TRUE)) {
       g = g +
         ggplot2::geom_errorbar(ggplot2::aes(
           ymin = .data$ci_lower,
