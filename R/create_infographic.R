@@ -1,5 +1,5 @@
 create_infographic = function(df, ind_id, id, disag, lang) {
-  session = shiny::getDefaultReactiveDomain()
+  session = shiny::getDefaultReactiveDomain() # nolint
 
   if (is_percent(ind_id)) {
     # If percent - make a waffle chart

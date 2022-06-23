@@ -41,6 +41,7 @@ get_labels = function(df, breaks, lang, labels) {
   } else if (lang == "CY") {
     labels_x = labels$CY[which(labels$EN %in% breaks)]
   }
+  return(labels_x)
 }
 
 translate_x_axis = function(g, df, col_name, lang, labels) {

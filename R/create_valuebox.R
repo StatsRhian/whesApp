@@ -40,7 +40,7 @@ create_valuebox = function(df, caption = caption) {
     # add caption
     ggplot2::labs(caption = caption) +
     # edit theme
-    ggplot2::coord_fixed(expand = F) +
+    ggplot2::coord_fixed(expand = FALSE) +
     ggplot2::theme_void() +
     ggplot2::theme(
       plot.caption = ggplot2::element_text(face = "italic", hjust = 1, size = 10),

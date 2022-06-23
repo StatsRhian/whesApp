@@ -38,6 +38,7 @@ get_plot_title = function(ind_id, lang) {
   name = tr_pull(key = glue::glue("^{ind_id}"), lang = lang, search = TRUE)
   date = tr_pull(key = glue::glue("^date_{ind_id}"), lang = lang, search = TRUE)
   title = glue::glue("{name} ({date})")
+  return(title)
 }
 
 #' Calculate multiplier for plot settings

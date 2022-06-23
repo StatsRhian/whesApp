@@ -1,3 +1,7 @@
+# whesApp 7.0.42 _2022-06-14_
+
+- switch language drop down to radio button
+
 # whesApp 7.0.41 _2022-06-13_
 
 - add footer
