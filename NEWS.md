@@ -1,3 +1,8 @@
+# whesApp 7.0.44 _2022-06-27_
+
+- Move report tab
+- Add data explorer overview page
+
 # whesApp 7.0.43 _2022-06-27_
 
 - Add English pages content
