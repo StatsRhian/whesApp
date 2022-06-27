@@ -1,3 +1,7 @@
+# whesApp 7.0.43 _2022-06-27_
+
+- Add English pages content
+
 # whesApp 7.0.42 _2022-06-14_
 
 - switch language drop down to radio button

@@ -1,14 +1,62 @@
 ## Policies and legislation affecting income security and social protection
 
-Policies that aim to provide economic security and support to reduce the health and social consequences of poverty and low income throughout a
-person’s life.
+<h4><a href="https://gov.wales/childcare-offer-for-wales-campaign#:~:text=The%20Welsh%20Government%E2%80%99s%20Childcare%20Offer%20for%20Wales%20means,education%20and%20childcare%20in%20Wales%20for%20eligible%20parents." target="_blank">Childcare Offer Wales</a></h4>
 
-For example, financial support for parents, older people or unemployed.
+The Welsh Government Childcare Offer for Wales sets out help with childcare costs for working parents of 3 to 4 year olds.
 
-### Resources
+<h4><a href="https://gov.wales/written-statement-warm-homes-programme-annual-reports" target="_blank">Warm Homes Programme</a></h4>
 
-- [Tackling Fuel Poverty 2021 -2035](https://gov.wales/sites/default/files/publications/2021-03/tackling-fuel-poverty-2021-2035.pdf)
-- [Flying Start Health
-Programme Guidance](https://gov.wales/sites/default/files/publications/2019-07/flying-start-health-programme-guidance_0.pdf)
-- [Tax policy work plan
-2020-2021](https://gov.wales/sites/default/files/pdf-versions/2021/1/3/1610565146/tax-policy-work-plan-2020-2021.pdf)
+*CABINET STATEMENT* 
+
+The Welsh Government statement on the Warm Homes Programme Annual Reports.
+
+<h4><a href="https://gov.wales/discretionary-assistance-fund-daf" target="_blank">Discretionary Assistance Fund</a></h4>
+
+*GUIDANCE*
+
+The Welsh Government guidance on eligbility and applying for the Discretionary Assistance Fund.
+
+<h4><a href="https://gov.wales/flying-start-guidance" target="_blank">Flying Start</a></h4>
+
+*GUIDANCE*
+
+The Welsh Government guidance for local authorities, professionals and parents.
+
+<h4><a href="https://gov.wales/families-first-guidance" target="_blank">Families First</a></h4>
+
+*GUIDANCE*
+
+The Welsh Government guidance for local authorities about planning and providing services funded by Families First.
+
+<h4><a href="https://gov.wales/projects-tackle-youth-homelessness-announced-julie-james" target="_blank">Youth Homelessness Innovation Fund</a></h4>
+
+*PRESS RELEASE*
+
+The Welsh Government press release on projects to tackle homelessness among young people.
+
+<h4><a href="https://gov.wales/tackling-fuel-poverty-2021-2035" target="_blank">Tackling fuel poverty 2021 to 2035</a></h4>
+
+*POLICY AND STRATEGY*
+
+The Welsh Government plan to support people struggling to meet the cost of their domestic energy needs.
+
+<h4><a href="https://gov.wales/equality-plan-and-objectives-2020-2024" target="_blank">Equality plan and objectives: 2020 to 2024</a></h4>
+
+*POLICY AND STRATEGY*
+
+The Welsh Government plan sets out aims, objectives and actions to tackle inequality and make our society fairer and more inclusive, including the long-term aim to eliminate inequality caused by poverty.
+
+<h4><a href="https://gov.wales/raising-awareness-childrens-rights" target="_blank">Raising awareness of children’s rights</a></h4>
+
+*POLICY AND STRATEGY*
+
+The Welsh Government plan to raise awareness of the 'United Nations Convention on the Rights of the Child' in Wales until the end of 2023.
+
+
+
+
+
+
+
+
+
