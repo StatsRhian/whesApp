@@ -1,3 +1,8 @@
+# whesApp 7.0.45 _2022-06-27_
+
+- Rename tabs
+- Update translation db
+
 # whesApp 7.0.44 _2022-06-27_
 
 - Move report tab

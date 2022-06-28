@@ -325,14 +325,14 @@ title_economics_income,Income Security and Social Protection,Diogelwch Incwm a D
 title_economics_living,Living Conditions,Amodau Byw
 title_economics_overview,Overview,MISSING
 title_economics_social,Social and Human Capital,Cyfalaf Cymdeithasol a Dynol
-title_evidence,International Evidence,Tystiolaeth Ryngwladol
+title_evidence,UK and International,MISSING
 title_evidence_employment,Employment and Working Conditions,Cyflogaeth ac Amodau Gwaith
 title_evidence_health,Health Services,Gwasanaethau Iechyd
 title_evidence_income,Income Security and Social Protection,Diogelwch Incwm a Diogelu Cymdeithasol
 title_evidence_living,Living Conditions,Amodau Byw
 title_evidence_overview,Overview,MISSING
 title_evidence_social,Social and Human Capital,Cyfalaf Cymdeithasol a Dynol
-title_needs,Un-met Needs,Anghenion Heb eu Diwallu
+title_needs,Unmet Needs and Vulnerability,MISSING
 title_needs_employment,Employment and Working Conditions,Cyflogaeth ac Amodau Gwaith
 title_needs_health,Health Services,Gwasanaethau Iechyd
 title_needs_income,Income Security and Social Protection,Diogelwch Incwm a Diogelu Cymdeithasol
@@ -359,3 +359,6 @@ title_whes_platform,Welsh Health Equity Solutions Platform,Platfform Datrysiadau
 waffle_legend_label,Yes,Ydw
 waffle_legend_label,No,Nac ydw
 title_data_overview,Overview,MISSING
+report_conditions_label,Please select the essential condition(s) to include in report:,MISSING
+report_pages_label,Please select the type(s) of information to include in report:,MISSING
+title_report_page,Generate Report,Cynhyrchu Adroddiad
