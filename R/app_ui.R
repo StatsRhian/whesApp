@@ -50,6 +50,8 @@ app_ui = function(request) {
       ),
       shiny::navbarMenu(
         translateTitleUI("data"),
+        shiny::tabPanel(translateTitleUI("data_overview"),
+                        shiny::uiOutput("data_overview")),
         dataUI("outcome"),
         dataUI("behaviour"),
         dataUI("health"),
@@ -63,6 +65,12 @@ app_ui = function(request) {
           reactable::reactableOutput("indicator_search")
         )
       ),
+      # additional tabs
+      navbarPagesUI("economics"),
+      navbarPagesUI("policy"),
+      navbarPagesUI("evidence"),
+      navbarPagesUI("needs"),
+      navbarPagesUI("solutions"),
       # reporting page
       shiny::tabPanel(
         translateTitleUI("report"),
@@ -113,13 +121,7 @@ app_ui = function(request) {
             ) # end column
           )
         ) # end fluidpage
-      ),
-      # additional tabs
-      navbarPagesUI("economics"),
-      navbarPagesUI("policy"),
-      navbarPagesUI("evidence"),
-      navbarPagesUI("needs"),
-      navbarPagesUI("solutions")
+      )
     )
   )
 }

@@ -47,6 +47,16 @@ app_server = function(input, output, session) {
     translate_reactable_options(lang()) # Translate options for all reactable tables
   })
 
+  # Add data overview page
+  output$data_overview = shiny::renderUI({
+    filename = app_sys(glue::glue("app/www/content/{lang()}/pages/data_overview.md"))
+    if (file.exists(filename)) {
+      shiny::includeMarkdown(filename)
+    } else {
+      shiny::includeMarkdown(app_sys(glue::glue("app/www/content/{lang()}/pages/missing.md")))
+    }
+  })
+
   # Reporting page
   # Intro text on app page
   output$report_md = shiny::reactive({
