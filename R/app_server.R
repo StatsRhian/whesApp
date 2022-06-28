@@ -64,6 +64,35 @@ app_server = function(input, output, session) {
     shiny::includeMarkdown(filename)
   })
 
+  # Checkboxes
+  output$conditions_checkbox = shiny::renderUI({
+    conditions_choices = c("health", "income", "living", "social", "employment")
+    names(conditions_choices) = c(tr_pull(key = "title_data_health", lang()),
+                                  tr_pull(key = "title_data_income", lang()),
+                                  tr_pull(key = "title_data_living", lang()),
+                                  tr_pull(key = "title_data_social", lang()),
+                                  tr_pull(key = "title_data_employment", lang()))
+    shiny::checkboxGroupInput(
+      "report_conditions",
+      label = tr_pull(key = "report_conditions_label", lang()),
+      choices = conditions_choices
+    )
+  })
+
+  output$pages_checkbox = shiny::renderUI({
+    pages_choices = c("economics", "policy", "evidence", "needs", "solutions")
+    names(pages_choices) = c(tr_pull(key = "title_economics", lang()),
+                             tr_pull(key = "title_policy", lang()),
+                             tr_pull(key = "title_evidence", lang()),
+                             tr_pull(key = "title_needs", lang()),
+                             tr_pull(key = "title_solutions", lang()))
+    shiny::checkboxGroupInput(
+      "report_info",
+      label = tr_pull(key = "report_pages_label", lang()),
+      choices = pages_choices
+    )
+  })
+
   # Download button
   output$generate_report_button = shiny::renderUI({
     shinyjs::disabled(shiny::downloadButton(

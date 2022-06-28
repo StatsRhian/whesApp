@@ -77,7 +77,7 @@ app_ui = function(request) {
         shiny::br(),
         shiny::br(),
         shiny::fluidPage(
-          shiny::h2("Generate Report"),
+          shiny::h2(translateTitleUI("report_page")),
           shiny::br(),
           shiny::fluidRow(
             shiny::column(
@@ -92,29 +92,10 @@ app_ui = function(request) {
                 shiny::fluidRow(
                   shiny::column(
                     12,
-                    shiny::checkboxGroupInput(
-                      "report_conditions",
-                      "Please select the essential condition(s) to include in report:",
-                      c(
-                        "Health Services" = "health",
-                        "Income Security and Social Protection" = "income",
-                        "Living Conditions" = "living",
-                        "Social and Human Capital" = "social",
-                        "Employment and Working Conditions" = "employment"
-                      )
-                    ),
+                    # checkboxes conditions and pages
+                    shiny::uiOutput("pages_checkbox"),
                     shiny::br(),
-                    shiny::checkboxGroupInput(
-                      "report_info",
-                      "Please select the type(s) of information to include in report:",
-                      c(
-                        "Health Economics" = "economics",
-                        "Policies" = "policy",
-                        "International Evidence" = "evidence",
-                        "Un-met Needs" = "needs",
-                        "Solutions" = "solutions"
-                      )
-                    )
+                    shiny::uiOutput("conditions_checkbox")
                   ) # end column
                 ) # end fluidrow
               ), # end wellpanel
