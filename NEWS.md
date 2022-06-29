@@ -1,3 +1,7 @@
+# whesApp 7.0.46 _2022-06-28_
+
+- Update content on landing page
+
 # whesApp 7.0.45 _2022-06-27_
 
 - Rename tabs
@@ -27,7 +31,7 @@
 # whesApp 7.0.39 _2022-03-31_
 
 - Remove {emojifont} from Depends
-- Add fontawesome font 
+- Add fontawesome font
 
 # whesApp 7.0.38 _2022-03-30_
 
@@ -100,7 +104,7 @@
 
 # whesApp 7.0.21 _2022-02-25_
 
-- refactor disag update 
+- refactor disag update
 - disable CI button based on chart type
 
 # whesApp 7.0.20 _2022-02-11_
