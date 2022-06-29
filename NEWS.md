@@ -1,3 +1,7 @@
+# whesApp 7.0.47 _2022-06-29_
+
+- Add T&Cs
+
 # whesApp 7.0.46 _2022-06-28_
 
 - Update content on landing page
