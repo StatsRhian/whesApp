@@ -102,6 +102,10 @@ app_ui = function(request) {
             ) # end column
           )
         ) # end fluidpage
+      ),
+      shiny::tabPanel(
+        translateTitleUI("terms_conditions"),
+        shiny::uiOutput("terms_md")
       )
     )
   )

@@ -141,6 +141,12 @@ app_server = function(input, output, session) {
     }
   )
 
+  # Terms and Conditions
+  output$terms_md = shiny::reactive({
+    filename = app_sys(glue::glue("app/www/content/{lang()}/terms.md"))
+    shiny::includeMarkdown(filename)
+  })
+
   # add footer
   output$insert_footer = shiny::renderUI({
     filename = app_sys(glue::glue("app/www/content/{lang()}/footer.md"))
