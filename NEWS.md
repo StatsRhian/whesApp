@@ -1,3 +1,7 @@
+# whesApp 7.0.48 _2022-06-30_
+
+- Add overview pages
+
 # whesApp 7.0.47 _2022-06-29_
 
 - Add T&Cs

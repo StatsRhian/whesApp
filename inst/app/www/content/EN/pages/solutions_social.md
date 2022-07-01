@@ -1,4 +1,4 @@
-## Solutions affecting health and social and human capital
+## Health and social and human capital
 
 Policies that aim to develop and strengthen social relations and community assets, including education, skills, community resources and meaningful social interactions to promote learning, and protect and promote health and wellbeing throughout a person’s life.
 
@@ -8,12 +8,9 @@ Human capital and social capital are known to have an impact on health and well-
 
 Definitions of human capital encompass the notion that there are investments in people such as education, training or health, and that these investments increase an individual’s productivity. Human capital is the value of individuals’ skills, knowledge, abilities, social attributes, personality and health attributes. These factors enable individuals to work, and therefore produce something of economic value. It is measured as the sum of the total potential future earnings of everyone in the labour market. The Office of National Statistics (ONS) produces [human capital estimates for the UK](https://www.ons.gov.uk/releases/humancapital). 
 
-<p align="center">
-  <img src="solutions-social-fig1.png" width = "70%"
-     alt="Graph of age vs human capital showing a positive relationship, with those who attended pre-school showing a steeper line"/>
-</p>
-
 Human capital accumulates over a lifetime and early childhood experiences can have lifelong impacts, see Figure 1.
+
+![](solutions-social-fig1.png)
 
 **Figure 1:  Compound effects of gaining human capital throughout life. Source:** [ONS Human Capital Indicators Consultation](https://consultations.ons.gov.uk/well-being-inequalities-sustainability-and-environment/indicator-based-approach-to-measuring-human-capita/supporting_documents/Human_capital_consultation_final.pdf)
 
@@ -29,55 +26,55 @@ Health literacy is a key feature of social capital. It is the s[ocial resources 
 
 **Useful resources:**
 
-<h4><a href="https://phwwhocc.co.uk/resources/prosperity-for-all/">Driving Prosperity for All through Investing for Health and Well-being: An Evidence Informed Guide for Cross-sector Investment</a></h4>
+#### [Driving Prosperity for All through Investing for Health and Well-being: An Evidence Informed Guide for Cross-sector Investment](https://phwwhocc.co.uk/resources/prosperity-for-all/)
 
 *GUIDE*
 
 This guide by Public Health Wales suggests policy options for priority investment in Wales, based on the best available Welsh and European evidence. The policy options address areas of high burden and costs, as well as demonstrating co-benefits (returns) to the economy, society and the environment, including investing in quality early education and care, life-long learning opportunities and job training and supporting adult learning and health literacy. The guide can be used by policy- and decision-makers across national and local government, the health and social care service, and public bodies in all other sectors in Wales.
 
-<h4><a href="https://phwwhocc.co.uk/resources/how-to-make-the-case-for-sustainable-investment-in-well-being-and-health-equity-a-practical-guide/">How to Make the Case for Sustainable Investment in Well-being and Health Equity: A Practical Guide</a></h4>
+#### [How to Make the Case for Sustainable Investment in Well-being and Health Equity: A Practical Guide](https://phwwhocc.co.uk/resources/how-to-make-the-case-for-sustainable-investment-in-well-being-and-health-equity-a-practical-guide/)
 
 *PRACTICAL GUIDE*
 
 This practical guide by Public Health Wales is a tool to improve governance, investment and accountability for health and equity. The guide is intended to help the development of evidence-informed, context-tailored advocacy reports and other relevant documents and tools, enabling healthy policy- and decision-making across different sectors, levels of government and country settings. It aims to prevent disinvestment in health, increase investment in prevention (public health), and mainstream cross-sectoral investment to address the wider determinants of health and equity.
 
-<h4><a href="https://phwwhocc.co.uk/resources/welsh-health-equity-status-report-whesri/">Placing health equity at the heart of the COVID-19 sustainable response and recovery: Building prosperous lives for all in Wales</a></h4>
+#### [Placing health equity at the heart of the COVID-19 sustainable response and recovery: Building prosperous lives for all in Wales](https://phwwhocc.co.uk/resources/welsh-health-equity-status-report-whesri/)
 
 *REPORT* (**COVID**)
 
 This report by Public Health Wales places health equity at the heart of a sustainable response and recovery to the COVID-19 pandemic and explores the impacts of educational disruption, use of digital technology and social media, and volunteering in Wales. 
 
-<h4><a href="https://www.euro.who.int/en/publications/abstracts/participation-as-a-driver-of-health-equity-2019">Participation as a driver of health equity</a></h4>
+#### [Participation as a driver of health equity](https://www.euro.who.int/en/publications/abstracts/participation-as-a-driver-of-health-equity-2019)
 
 *REPORT*
 
 This report by the WHO Regional Office for Europe sets out that the promotion of social participatory systems can be an efficient formula for reducing inequities in health.
 
-<h4><a href="https://www.nhsconfed.org/sites/default/files/2021-05/Making%20the%20difference%20-%20April%202021.pdf">Making the difference: Tackling health inequalities in Wales</a></h4>
+#### [Making the difference: Tackling health inequalities in Wales](https://www.nhsconfed.org/sites/default/files/2021-05/Making%20the%20difference%20-%20April%202021.pdf)
 
 *SHORT PAPER*
 
 This short paper by the Welsh Confederation outlines ideas on ways of working that would ensure collective impact in addressing health inequalities, including approaches that prioritise the value of social connectedness alongside health.
 
-<h4><a href="https://www.wcpp.org.uk/publication/stakeholders-ideas-for-tackling-loneliness-in-wales-through-the-pandemic-and-beyond/">Tackling loneliness in Wales through the pandemic and beyond: Stakeholders’ ideas for action</a></h4> 
+#### [Tackling loneliness in Wales through the pandemic and beyond: Stakeholders’ ideas for action](https://www.wcpp.org.uk/publication/stakeholders-ideas-for-tackling-loneliness-in-wales-through-the-pandemic-and-beyond/)
 
 *REPORT* (**COVID**)
 
 This report by The Wales Centre for Public Policy (WCPP) sets out five areas of action for tackling loneliness, with a focus on technology, the role of communities, the experience of vulnerable groups, managing the transition from COVID-19, and improving collaboration and collective ways of working. 
 
-<h4><a href="https://www.wcpp.org.uk/publication/supporting-the-welsh-lifelong-learning-system/">Supporting the Welsh Lifelong Learning System</a></h4> 
+#### [Supporting the Welsh Lifelong Learning System](https://www.wcpp.org.uk/publication/supporting-the-welsh-lifelong-learning-system/)
 
 *REPORT*
 
 This report by the Wales Centre for Public Policy sets out the benefits of adopting an all-age lifelong learning strategy. The report draws attention to how lifelong learning and skills acquisition can help find solutions which will aid the economy and the well-being of Welsh residents and suggests using learning to promote a preventative approach to health. 
 
-<h4><a href="https://wcva.cymru/projects/better-futures-wales-community-foresight-project/">Building Better Futures: Toolkit</a></h4> 
+#### [Building Better Futures: Toolkit](https://wcva.cymru/projects/better-futures-wales-community-foresight-project/)
 
 *TOOLKIT*
 
 This toolkit provides practical tools to help stretch the shared imagination about what might be possible in the future, and to support communities to identify a preferred future and to make specific plans to work towards that future. The toolkit was developed through a pilot community foresight exercise with voluntary and community groups across three different communities in Wales. 
 
-<h4><a href="https://eurohealthnet.eu/publication/digital-health-literacy-how-new-skills-can-help-improve-health-equity-and-sustainability/">Digital health literacy: how new skills can help improve health, equity and sustainability</a></h4> 
+#### [Digital health literacy: how new skills can help improve health, equity and sustainability](https://eurohealthnet.eu/publication/digital-health-literacy-how-new-skills-can-help-improve-health-equity-and-sustainability/)
 
 *POLICY PRÉCIS*
 

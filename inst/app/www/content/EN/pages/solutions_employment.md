@@ -1,4 +1,4 @@
-## Solutions affecting health and employment and working conditions
+## Health and employment and working conditions
 
 Policies that aim to improve the health impact of employment, working conditions and workplace equality.
 
@@ -12,43 +12,43 @@ During the COVID-19 pandemic it became even more evident that economic insecurit
 
 **Useful resources:**
 
-<h4><a href="https://phwwhocc.co.uk/resources/prosperity-for-all/" target="_blank">Driving Prosperity for All through Investing for Health and Well-being: An Evidence Informed Guide for Cross-sector Investment</a></h4>
+#### [Driving Prosperity for All through Investing for Health and Well-being: An Evidence Informed Guide for Cross-sector Investment](https://phwwhocc.co.uk/resources/prosperity-for-all/)
 
 *GUIDE*
 
 This guide by Public Health Wales suggests policy options for priority investment in Wales, based on the best available Welsh and European evidence. The policy options address areas of high burden and costs, as well as demonstrating co-benefits (returns) to the economy, society and the environment, including investing in improving working lives and mental health in the workplace. The guide can be used by policy- and decision-makers across national and local government, the health and social care service, and public bodies in all other sectors in Wales.
 
-<h4><a href="https://phwwhocc.co.uk/resources/how-to-make-the-case-for-sustainable-investment-in-well-being-and-health-equity-a-practical-guide/" target="_blank">How to Make the Case for Sustainable Investment in Well-being and Health Equity: A Practical Guide</a></h4>
+#### [How to Make the Case for Sustainable Investment in Well-being and Health Equity: A Practical Guide](https://phwwhocc.co.uk/resources/how-to-make-the-case-for-sustainable-investment-in-well-being-and-health-equity-a-practical-guide/)
 
 *PRACTICAL GUIDE*
 
 This practical guide by Public Health Wales is a tool to improve governance, investment and accountability for health and equity. The guide is intended to help the development of evidence-informed, context-tailored advocacy reports and other relevant documents and tools, enabling healthy policy- and decision-making across different sectors, levels of government and country settings. It aims to prevent disinvestment in health, increase investment in prevention (public health), and mainstream cross-sectoral investment to address the wider determinants of health and equity.
 
-<h4><a href="https://www.wcpp.org.uk/publication/improving-health-and-employment-outcomes/" target="_blank">Improving Health & Employment Outcomes through Joint Working</a></h4>
+#### [Improving Health & Employment Outcomes through Joint Working](https://www.wcpp.org.uk/publication/improving-health-and-employment-outcomes/)
 
 *REPORT*
 
 This report by the Public Policy Institute for Wales presents the literature and evaluation evidence on ‘what works’ in the field of health and work, and how health and employment interventions for people living with health conditions can be made to work more effectively. 
 
-<h4><a href="https://phw.nhs.wales/services-and-teams/wider-determinants-of-health-unit/good-fair-work/?msclkid=30482650cfaf11eca38ad41368af28de" target="_blank">COVID-19 and employment changes in Wales: Promising interventions to improve health and health equity</a></h4>
+#### [COVID-19 and employment changes in Wales: Promising interventions to improve health and health equity](https://phw.nhs.wales/services-and-teams/wider-determinants-of-health-unit/good-fair-work/?msclkid=30482650cfaf11eca38ad41368af28de)
 
 *REPORT* (**COVID**)
 
 This report by Alma Economics and commissioned by Public Health Wales identifies and describes the evidence on labour market interventions that can be implemented to improve health and health equity outcomes for people in Wales, and protect them from the employment hardship caused by the COVID-19 crisis.
 
-<h4><a href="https://phw.nhs.wales/publications/publications1/covid-19-and-employment-changes-in-wales-insights-for-policy-young-people-employment-and-health-prepared-for-public-health-wales-by-beaufort-research/" target="_blank">COVID-19 and employment changes in Wales: Insights for policy – young people, employment and health. Qualitative research findings</a></h4>
+#### [COVID-19 and employment changes in Wales: Insights for policy – young people, employment and health. Qualitative research findings](https://phw.nhs.wales/publications/publications1/covid-19-and-employment-changes-in-wales-insights-for-policy-young-people-employment-and-health-prepared-for-public-health-wales-by-beaufort-research/)
 
 *REPORT* (**COVID**)
 
 This report prepared for Public Health Wales provides population insights from organisations which support young people, young people aged 18-24 years (with and without dependent children) and policy influencers and decision-makers on COVID-19 related employment changes. The report presents their views on changes that would support young people in the future with opportunities for work, including ensuring the voice of young people is part of the process of co-producing solutions.
 
-<h4><a href="https://phwwhocc.co.uk/resources/welsh-health-equity-status-report-whesri/" target="_blank">Placing health equity at the heart of the COVID-19 sustainable response and recovery: Building prosperous lives for all in Wales</a></h4>
+#### [Placing health equity at the heart of the COVID-19 sustainable response and recovery: Building prosperous lives for all in Wales](https://phwwhocc.co.uk/resources/welsh-health-equity-status-report-whesri/)
 
 *REPORT* (**COVID**)
 
 This report by Public Health Wales places health equity at the heart of a sustainable response and recovery to the COVID-19 pandemic and explores its impacts on unemployment, employment and working conditions in Wales. 
 
-<h4><a href="https://www.who.int/publications/i/item/9789240035546" target="_blank">Health labour market analysis guidebook</a></h4>
+#### [Health labour market analysis guidebook](https://www.who.int/publications/i/item/9789240035546)
 
 *GUIDEBOOK*
 

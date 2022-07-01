@@ -1,4 +1,4 @@
-## Un-met needs affecting health and social and human capital
+## Health and social and human capital
 
 <h4><a href="https://phwwhocc.co.uk/resources/resilience-understanding-the-interdependence-between-individuals-and-communities/" target="_blank">Resilience: Understanding the interdependence between individuals and communities </a></h4>
 
@@ -30,13 +30,13 @@ This report by Welsh Government explores the impact of the COVID-19 pandemic on 
 
 This qualitative research by Public Health Wales draws on insights from the Voluntary and Community Sector (VCS) in Wales to help understand how the COVID-19 pandemic has affected vulnerability. It found that during the pandemic, vulnerability rapidly arose and was often exacerbated when individuals were unable to access support from particular resources, services and local infrastructure.
 
-<h4><a href="https://gov.wales/locked-out-liberating-disabled-peoples-lives-and-rights-wales-beyond-covid-19-html#section-75305" target="_blank">Locked out: liberating disabled people’s lives and rights in Wales beyond COVID-19</a></h4>
+#### [Locked out: liberating disabled people’s lives and rights in Wales beyond COVID-19](https://gov.wales/locked-out-liberating-disabled-peoples-lives-and-rights-wales-beyond-covid-19-html#section-75305)
 
 *REPORT* (**COVID**)
 
 This report by the Welsh Government looks at the impact of the COVID-19 pandemic on disabled people and presents findings on health and wellbeing, socio-economic disadvantages, exclusion and accessibility. 
 
-<h4><a href="https://phwwhocc.co.uk/resources/children-and-young-peoples-mental-well-being-during-the-covid-19-pandemic/">Children and young people’s mental well-being during the COVID-19 pandemic</a></h4>
+#### [Children and young people’s mental well-being during the COVID-19 pandemic](https://phwwhocc.co.uk/resources/children-and-young-peoples-mental-well-being-during-the-covid-19-pandemic/)
 
 *REPORT* (**COVID**)
 
