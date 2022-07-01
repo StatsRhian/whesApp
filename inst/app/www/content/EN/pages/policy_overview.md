@@ -1,36 +1,11 @@
-# Policies
+# Policy
 
-The concept of health in all policies (HiAP) is increasingly accepted by governments and the scientific community as an important
-pre-condition for improved population health and an overall fairer and more cohesive society. HiAP entails working synergistically across
-sectors to take account of the health implications of decisions, aims to avoid health harm and rebalance social and health equity.
+Wales is a small nation, yet it has a proud history of being outward and forward looking, and committed to achieving sustainable development and prosperity for all within and beyond Welsh borders. The ground-breaking [Well-being of Future Generations (Wales) Act 2015](https://www.futuregenerations.wales/about-us/future-generations-act/), implemented in synergy with a number of modern Welsh laws, positions Wales at the forefront of the sustainability agenda and enables transformative cross-sector work that benefits the people, the economy and the planet. It places an explicit commitment on public bodies towards achieving a healthier and more equal Wales. More recently, the [Socio-economic Duty 2020](https://gov.wales/socio-economic-duty-overview) cements a commitment to safeguarding equality and human rights, and places tackling inequality at the heart of decision-making.
 
-Policy brings the theory and research of public health into the practical world and finds widespread solutions to previously identified
-problems. To accelerate progress in reaching those being left behind because of poor health and in preventing others from falling behind,
-policy action is required that reaches not only the most vulnerable but also those disproportionally at risk of avoidable poor health.
+The concept of health in all policies (HiAP) is increasingly accepted by governments and the scientific community as an important pre-condition for improved population health and an overall fairer and more cohesive society. HiAP entails working synergistically across sectors to take account of the health implications of decisions, aims to avoid health harm and rebalance social and health equity. To accelerate progress in reaching those being left behind because of poor health, and in preventing others from falling behind, [policy action](https://www.euro.who.int/__data/assets/pdf_file/0003/410457/FINAL-20190812-h1905-policy-tool-en.pdf) is required that reaches not only the most vulnerable but also those disproportionally at risk of avoidable poor health. 
 
-### Sources:
+The WHESRi and the Solutions Platform can help bring health and equity in all policies in Wales and beyond, through informing and supporting policies, plans and investment prioritisation across different sectors and key stakeholders, in order to accelerate action and progress towards closing the health gap and achieving healthy prosperous lives for all in Wales and beyond. 
 
-- [Health in all policies: Helsinki statement. Framework for country action (who.int)]()
-- [WHO Policy Tool, 2019](https://www.euro.who.int/__data/assets/pdf_file/0003/410457/FINAL-20190812-h1905-policy-tool-en.pdf)
+**The Five Essential Conditions**
 
-
-## Welsh Government policies and legislation
-
-Welsh Government is a devolved nation with its own government and Parliament, and as such has the ability to legislate in specific areas
-including for health, social care, planning and the environment. It has an underpinning tenet of sustainable development, built on the
-platform of the Well-being of the Future Generations (Wales) Act 2015. The UK Government reserves other matters such as foreign policy
-and policing.
-
-Many policies or legislation adopted in Wales help to reduce inequity, and create a more sustainable and fairer Welsh society.
-
-## Key Welsh policies that affect multiple essential conditions:
-
-- [Well-being of
-  Future Generations
-  (Wales) Act 2015](https://www.futuregenerations.wales/wp-content/uploads/2017/02/150623-guide-to-the-fg-act-en.pdf)
-
-- [A Healthier Wales:
-  our Plan for Health and Social Care](https://gov.wales/sites/default/files/publications/2019-10/a-healthier-wales-action-plan.pdf)
-
-- [Strategic
-  Equality Plan](https://gov.wales/sites/default/files/publications/2020-04/strategic-equality-plan-equality-aims-objectives-actions-2020-2024.pdf)
+Many policies or legislation adopted in Wales help to reduce inequity and create a more sustainable and fairer Welsh society. 
