@@ -31,22 +31,6 @@ employment = "employment" %in% params$conditions
 cat("\n\n\\pagebreak\n")
 ```
 
-```{r intro}
-#| child = system.file(
-#|   glue::glue("app/www/content/{params$lang}/report/report_overview.md"),
-#|   package = "whesApp",
-#|   mustWork = TRUE
-#| )
-```
-
-```{r, echo = FALSE, out.width='90%', fig.align='center'}
-fname = system.file(
-  glue::glue("rmarkdown/templates/report/resources/five-essential-conditions-{params$lang}.png"),
-  package = "whesApp",
-  mustWork = TRUE)
-knitr::include_graphics(fname)
-```
-
 ```{r health}
 #| child = if (health) system.file(
 #|   glue::glue("app/www/content/{params$lang}/report/health_overview.md"),
