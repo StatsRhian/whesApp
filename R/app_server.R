@@ -128,7 +128,7 @@ app_server = function(input, output, session) {
       report_params = list(title = tr_pull("title_whes_platform", lang()),
                            lang = lang(),
                            author = "",
-                           date = format(Sys.Date(), format = "%B %d %Y"),
+                           date = format(Sys.Date(), format = "%d/%m/%Y"),
                            conditions = input$report_conditions,
                            info = input$report_info)
       # render report

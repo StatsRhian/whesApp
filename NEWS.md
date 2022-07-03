@@ -1,3 +1,8 @@
+# whesApp 7.0.49 _2022-07-01_
+
+- Remove English from report
+- Fix report styling
+
 # whesApp 7.0.48 _2022-06-30_
 
 - Add overview pages

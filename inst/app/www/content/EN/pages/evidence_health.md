@@ -32,13 +32,13 @@ This technical brief by the United Nations Population Fund highlights the crucia
 
 This policy brief by the World Health Organization and European Observatory on Health Systems and Policies maps the many European tools that can help to improve health and care systems and how they relate to the challenges faced by health policy-makers in Member States.
 
-#### [Economic vulnerability and unmet healthcare needs among the population aged 50 + years during the COVID-19 pandemic in Europe](https://pubmed.ncbi.nlm.nih.gov/34512226/)
+#### [Economic vulnerability and unmet healthcare needs among the population aged 50+ years during the COVID-19 pandemic in Europe](https://pubmed.ncbi.nlm.nih.gov/34512226/)
 
 *RESEARCH ARTICLE* (**COVID**)
 
 This research article points towards the existence of significant differences in accessing healthcare during the pandemic according to economic vulnerability. 
 
-#### [Economic vulnerability and unmet healthcare needs among the population aged 50+years during the COVID-19 pandemic in Europe](https://pubmed.ncbi.nlm.nih.gov/34512226/)
+#### [Economic vulnerability and unmet healthcare needs among the population aged 50+ years during the COVID-19 pandemic in Europe](https://pubmed.ncbi.nlm.nih.gov/34512226/)
 
 *RESEARCH ARTICLE* (**COVID**)
 
