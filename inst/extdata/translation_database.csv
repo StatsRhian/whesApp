@@ -272,6 +272,7 @@ output_infographic,Infographic,Ffeithlun
 output_barchart,Barchart,Siart bar
 output_table,Table,Tabl
 percent,Percent,Canran
+section_source,Source,MISSING
 select_disag_label,Please select a grouping,Dewiswch grŵp
 select_ind_label,Please select an indicator. You can type in the box to search for a key word,Dewiswch ddangosydd. Gallwch deipio yn y blwch i chwilio am air allweddol
 select_output_type,Please select an output type,Dewiswch fath o allbwn

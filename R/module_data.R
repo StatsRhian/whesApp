@@ -315,13 +315,6 @@ dataServer = function(id, lang) {
     })
 
     # Indicator text ------------------------
-    output$indicator_md = shiny::renderUI({
-      filename = app_sys(glue::glue("app/www/content/{lang()}/indicators/{input$ind_id}.md"))
-      if (file.exists(filename)) {
-        shiny::includeMarkdown(filename)
-      } else {
-        shiny::includeMarkdown(app_sys(glue::glue("app/www/content/{lang()}/indicators/missing.md")))
-      }
-    })
+    output$indicator_md =  shiny::renderUI(get_source_text(input$ind_id, lang()))
   })
 }
