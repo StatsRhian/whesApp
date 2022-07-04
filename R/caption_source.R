@@ -21,6 +21,25 @@ caption_source = function(id, info = whesApp::indicator_info) {
     dplyr::pull(.data$source_id)
 }
 
+get_source_url = function(id, info = whesApp::indicator_info) {
+  id %>%
+    tibble::enframe(name = NULL, value = "ind_id") %>%
+    dplyr::left_join(dplyr::select(info, .data$ind_id, .data$source_url),
+                     by = "ind_id"
+    ) %>%
+    dplyr::pull(.data$source_url)
+}
+
+#' Get source text
+#' @param id indicator id
+#' @param lang language
+  get_source_text = function(id, lang) {
+  date = tr_pull(key = glue::glue("^date_{id}"), lang = lang, search = TRUE)
+  source_name = tr_pull(key = caption_source(id), lang)
+  source_url = get_source_url(id)
+  shiny::HTML(glue::glue("{tr_pull(key = 'section_source', lang)}: <a href={source_url} target = '_blank'>{source_name}</a> ({date})")) #nolint
+}
+
 #' Get caption
 #' @param id indicator id
 #' @param lang language

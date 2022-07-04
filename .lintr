@@ -3,10 +3,10 @@ linters: linters_with_defaults(
     object_name_linter = NULL,
     line_length_linter = line_length_linter(120),
     undesirable_operator_linter = undesirable_operator_linter(
-        linters_with_defaults(
-                default_undesirable_operators,
-                "<-" = "Use =, not <-, for assignment."
-        )
+      modify_defaults(
+        default_undesirable_operators,
+        "<-" = "Use =, not <-, for assignment."
+      )
     )
   )
 exclusions: list("renv/")

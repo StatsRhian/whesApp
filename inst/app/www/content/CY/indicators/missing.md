@@ -1,3 +1,0 @@
-## Gwybodaeth dangosydd ar goll
-
-

@@ -1,3 +1,7 @@
+# whesApp 7.0.50 _2022-07-04_
+
+- Update metadata
+
 # whesApp 7.0.49 _2022-07-01_
 
 - Remove English from report
@@ -12,6 +16,7 @@
 - Add T&Cs
 
 # whesApp 7.0.46 _2022-06-28_
+>>>>>>> main
 
 - Update content on landing page
 
