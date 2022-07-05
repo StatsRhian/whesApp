@@ -1,3 +1,8 @@
+# whesApp 7.0.51 _2022-07-04_
+
+- Add Welsh landing page
+- Add Welsh terms of use
+
 # whesApp 7.0.50 _2022-07-04_
 
 - Update metadata
