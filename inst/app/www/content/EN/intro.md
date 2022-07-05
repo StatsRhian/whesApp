@@ -68,20 +68,16 @@ Policies that aim to ensure opportunities for, and access and exposure to living
 </details>
 
 <details>
-<summary> <img src="www/images/social.png" width="20"/> __Health & social and human capital__ </summary>
+<summary> <img src="www/images/social.png" width="20"/> **Health & social and human capital** </summary>
 
-Policies that aim to develop and strengthen social relations and community
-assets, including education, skills, community resources and meaningful
-social interactions to promote learning, and protect and promote health
-and well-being throughout a person’s life. For example, improving training, apprenticeship, building community cohesion and resilience, trust, sense of belonging.
+Policies that aim to develop and strengthen social relations and community assets, including education, skills, community resources and meaningful social interactions to promote learning, and protect and promote health and well-being throughout a person’s life. For example, improving training, apprenticeship, building community cohesion and resilience, trust, sense of belonging.
 
 </details>
 
 <details>
 <summary> <img src="www/images/employment.png" width="20"/> **Health & employment and working conditions** </summary>
 
-Policies that aim to improve the health impact of employment, working conditions and workplace equality. For example, availability of work, a living wage, physical and
-mental demands, ensuring health and safety at work.
+Policies that aim to improve the health impact of employment, working conditions and workplace equality. For example, availability of work, a living wage, physical and mental demands, ensuring health and safety at work.
 
 </details>
 
