@@ -1,5 +1,11 @@
-# Solutions page for a specific essential condition
+## Iechyd ac amodau byw
 
+Mae nifer o benderfynyddion ehangach iechyd yn deillio o'n hiechyd a'n hamodau byw; er enghraifft, tai. Mae'r angen am ddiogelwch o ran cael a chadw cartref a chael ein hamgylchynu gan amgylchedd cartref diogel a chyson, a'i effaith ar iechyd a lles corfforol a meddyliol, wedi'i gydnabod ers tro byd.
 
+Mae Iechyd Cyhoeddus Cymru wedi cynhyrchu nifer o adroddiadau sy'n amlygu problemau tai o ansawdd gwael a'i effaith ar iechyd. Mae'r adroddiadau hyn yn cynnwys atebion posib, gan gynnwys yr [achos dros fuddsoddi mewn tai](https://phw.nhs.wales/files/housing-and-health-reports/a-case-for-investment-report/) sy'n amlinellu'r angen am daclo tai fel penderfynydd sylfaenol iechyd ac yn cyflwyno atebion gan gynnwys: dileu oerfel, lleithder a llwydni mewn cartrefi; gwella awyru; mesurau effeithlonrwydd ynni a chynlluniau tlodi tanwydd; cefnogi aelwydydd sy'n agored i niwed yn lle ymyriadau seiliedig ar ardaloedd. 
 
-Awaiting content from PHW
+Yn Ewrop, mae [prosiect sy'n mapio tueddiadau a pholisïau i daclo digartrefedd](https://www.euro.centre.org/projects/detail/3656). Mae hyn wedi cynnwys nodi [argymhellion i fynd i'r afael â digartrefedd](https://www.euro.centre.org/downloads/detail/4001), gan gynnwys yr hawl i dai digonol ar gyfer pob person (agored i niwed) yn Ewrop ac integreiddio gwasanaethau iechyd o fewn datrysiadau tai.
+
+Yn ystod cyfnodau o ansicrwydd, fel y pandemig COVID-19, gall cartref ddarparu sylfaen ddiogel a sefydlog i unigolion ac aelwydydd. Cynhaliwyd [asesiad o'r effaith ar iechyd mewn perthynas ag effaith COVID-19 ar dai](https://phwwhocc.co.uk/resources/no-place-like-home-exploring-the-health-and-well-being-impact-of-covid-19-on-housing-and-housing-insecurity/?lang=cy) gan Iechyd Cyhoeddus Cymru, a gwnaed argymhellion pellach ar gyfer y dyfodol gan gynnwys: buddsoddi mewn tai fforddiadwy, diogel a chynaliadwy fel rhan o adferiad 'gwyrdd' yn sgil y pandemig, a chymorth i greu lleoedd cynaliadwy fel yr amlinellir ym Mholisi Cynllunio Cymru; annog tenantiaethau tymor hwy i roi mwy o sicrwydd i denantiaid a mwy o amddiffyniad rhag cael eu troi allan - gan gydbwyso hyn ag anghenion landlordiaid, er mwyn lleihau'r rhwystrau i ddod o hyd i lety diogel yn y dyfodol.
+
+**Adnoddau defnyddiol:**

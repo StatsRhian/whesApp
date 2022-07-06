@@ -7,3 +7,9 @@ Adolygir yr adnoddau yn erbyn y meini prawf dethol a ganlyn: perthnasedd yr adno
 Barn yr awduron yw unrhyw farn a fynegir yn yr adnoddau dan sylw. Nid oes unrhyw awgrym bod Iechyd Cyhoeddus Cymru yn cymeradwyo unrhyw sefydliad, cynnyrch neu wasanaethau penodol. Nid yw Iechyd Cyhoeddus Cymru yn gyfrifol am gynnwys gwefannau nac adnoddau allanol, ac nid yw o reidrwydd yn cefnogi'r safbwyntiau y maent yn eu mynegi nac yn gwarantu cywirdeb yr wybodaeth y maent yn ei darparu. Y darllenydd sy'n gyfrifol am ddehongli a defnyddio'r deunydd.
 
 Ni fydd Iechyd Cyhoeddus Cymru yn atebol am ddifrod neu golled o ganlyniad i unrhyw weithred neu anwaith sy'n deillio o ddefnyddio gwybodaeth ar Lwyfan Datrysiadau Tegwch Iechyd Cymru.
+
+## Hysbysiad Preifatrwydd
+
+[Hysbysiad Preifatrwydd](https://icc.gig.cymru/defnydd-y-safle/hysbysiad-preifatrwydd/)
+
+Nid yw'r Hysbysiad Preifatrwydd hwn yn cynnwys gwefannau, cymwysiadau na phyrth etc. y cysylltir â hwy o Lwyfan Datrysiadau Tegwch Iechyd Cymru; anogir defnyddwyr i ddarllen y datganiadau preifatrwydd ar wahân hyn.

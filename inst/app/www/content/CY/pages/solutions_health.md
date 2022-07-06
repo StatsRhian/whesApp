@@ -1,5 +1,17 @@
-# Solutions page for a specific essential condition
+## Iechyd a gwasanaethau iechyd
 
+Mae'r ddeddf gofal gwrthgyfartal - yn syml, lle mae gan y rhai sydd â'r angen mwyaf y mynediad lleiaf at ofal - yn amlwg yng Nghymru a thu hwnt. Trwy gydol y pandemig COVID-19 nodwyd bod canlyniadau gwaeth i'r rhai sy'n byw mewn ardaloedd mwy difreintiedig, gan daflu goleuni unwaith eto ar anghydraddoldebau.
 
+Pan fydd galw acíwt (er enghraifft, rhestrau aros mewn ysbytai ar ôl y pandemig) gall fod yn anodd dyrannu gwariant i atal, ond dyma'r unig ffordd o ostwng y galw acíwt pellach yn ddiweddarach. Gall offer fel [Adenillion ar Fuddsoddiad](https://jech.bmj.com/content/71/8/827) ac [Enillion Cymdeithasol ar Fuddsoddiad](https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-020-08685-7) fod yn ddefnyddiol.
 
-Awaiting content from PHW
+Wrth gynllunio a darparu gwasanaethau gofal iechyd, mae llawer o offer a thechnegau y gellir eu cymhwyso i leihau anghydraddoldebau. Mae'r rhain yn cynnwys defnyddio [asesiadau o'r effaith ar iechyd](https://phwwhocc.co.uk/whiasu/?lang=cy), [asesu anghenion iechyd](https://www.healthknowledge.org.uk/public-health-textbook/research-methods/1c-health-care-evaluation-health-care-assessment/uses-epidemiology-health-service-needs), ac [asesiadau economaidd](https://www.healthknowledge.org.uk/public-health-textbook/medical-sociology-policy-economics/4d-health-economics/economic-appraisal).
+
+Mae penderfyniadau ar wasanaethau yn seiliedig ar ddata: gwybodaeth gan y bobl mewn angen (er enghraifft, [asesu anghenion iechyd](https://www.healthknowledge.org.uk/public-health-textbook/research-methods/1c-health-care-evaluation-health-care-assessment/uses-epidemiology-health-service-needs) a data epidemiolegol), lle mae'n well gwario adnoddau (er enghraifft, [canllawiau NICE](https://www.nice.org.uk/) neu astudiaethau [adenillion ar fuddsoddiad](https://jech.bmj.com/content/71/8/827)) a data ar leihau anghydraddoldebau (er enghraifft, [asesiad o'r effaith ar iechyd](https://phwwhocc.co.uk/whiasu/?lang=cy) neu asesiad effaith integredig). Mae buddsoddi'n aml yn cael ei ysgogi gan angen a data ond nid yw hyn yn wir bob amser.
+
+**Dadansoddi Penderfyniadau Aml-faen prawf a Chyllidebu Rhaglenni a Dadansoddi Ymylol**
+
+Fel system a ariennir gan drethi, mae'r GIG o dan straen parhaus gan fod y galw am ofal iechyd yn agos at fod yn anfeidraidd, tra bod adnoddau gofal iechyd yn gyfyngedig. Er mwyn creu cydbwysedd rhwng adnoddau meidraidd a dymuniadau ac anghenion anfeidraidd, mae angen gwneud dewisiadau ac o ganlyniad i hynny mae'n rhaid cymharu costau a manteision. Mae angen blaenoriaethu hefyd er mwyn cynorthwyo'r broses gwneud penderfyniadau hon fel bod adnoddau'n cael eu defnyddio mewn ffordd sy'n sicrhau'r budd mwyaf posib.
+
+Mae Dadansoddi Penderfyniadau Aml-faen prawf (MCDA) a Chyllidebu Rhaglenni a Dadansoddi Ymylol (PBMA) yn offer sy'n cynorthwyo gwneud penderfyniadau a dyrannu adnoddau fel bod manteision yn cael eu mwyafu. Maent yn cynnig fframwaith i nodi ymyriadau sy'n gost-effeithiol ac sy'n ymdrin â thegwch economaidd-gymdeithasol, sy'n gwella cynhyrchiant ac yn cadw pobl mewn gwaith yng Nghymru (e.e. ymdrin â materion cyhyrysgerbydol ac iechyd meddwl). Mae'r fframweithiau hyn yn gofyn am wybodaeth am ddangosyddion mesuradwy ar gyfer ymyriadau, er enghraifft faint o bobl sy'n defnyddio gwasanaethau; faint mae gwasanaethau yn ei gostio; pa mor eang maen nhw'n cyrraedd; a ydynt yn seiliedig ar dystiolaeth ac yn gost-effeithiol; eu buddion (e.e. faint o bobl sy'n rhoi'r gorau i ysmygu o ganlyniad i'r ymyriad) etc. Gall y fframweithiau hyn hefyd helpu i ddatblygu dangosyddion perfformiad allweddol cyn cynnal gwerthusiad.
+
+**Adnoddau defnyddiol:**

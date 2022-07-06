@@ -2,7 +2,7 @@
 variables:
   INSTALL_PHANTOMJS: "true"
   ALLOWED_WARNINGS: 0
-  ALLOWED_NOTES: 1
+  ALLOWED_NOTES: 2
   NO_IMPORTS: 1
   #disable_verify_r_package: "false"
   #publish_to_drat: "true"
