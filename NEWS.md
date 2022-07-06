@@ -1,3 +1,7 @@
+# whesApp 7.0.52 _2022-07-06_
+
+- Add Welsh overviews
+
 # whesApp 7.0.51 _2022-07-04_
 
 - Add Welsh landing page

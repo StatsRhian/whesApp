@@ -14,7 +14,7 @@ This report by Public Health Wales brings together international evidence and in
 
 This report by The World Bank spotlights how COVID-19 has deepened the education crisis. It also charts a course for creating more resilient education systems for the future, including how to build on the investments made and the lessons learned during the pandemic to accelerate learning recovery and emerge from the crisis with increased education quality, resilience, and equity in the longer term.
 
-#### [Youth in Europe: Effects of COVID-19 on their economic and social situation](https://www.europarl.europa.eu/thinktank/en/document/IPOL_STU(2021)662942)
+#### [Youth in Europe: Effects of COVID-19 on their economic and social situation](https://www.europarl.europa.eu/thinktank/en/document/IPOL_STU(2021%29662942)
 
 *REPORT* (**COVID**)
 
