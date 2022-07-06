@@ -1,3 +1,9 @@
+# whesApp 7.0.53 _2022-07-06_
+
+- Fix landing page links
+- Add CY Solutions pages
+- Add privacy notice
+
 # whesApp 7.0.52 _2022-07-06_
 
 - Add Welsh overviews
