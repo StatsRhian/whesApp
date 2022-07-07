@@ -324,21 +324,21 @@ title_economics_employment,Employment and Working Conditions,Cyflogaeth ac Amoda
 title_economics_health,Health Services,Gwasanaethau Iechyd
 title_economics_income,Income Security and Social Protection,Diogelwch Incwm a Diogelu Cymdeithasol
 title_economics_living,Living Conditions,Amodau Byw
-title_economics_overview,Overview,MISSING
+title_economics_overview,Overview,Trosolwg
 title_economics_social,Social and Human Capital,Cyfalaf Cymdeithasol a Dynol
 title_evidence,UK and International,MISSING
 title_evidence_employment,Employment and Working Conditions,Cyflogaeth ac Amodau Gwaith
 title_evidence_health,Health Services,Gwasanaethau Iechyd
 title_evidence_income,Income Security and Social Protection,Diogelwch Incwm a Diogelu Cymdeithasol
 title_evidence_living,Living Conditions,Amodau Byw
-title_evidence_overview,Overview,MISSING
+title_evidence_overview,Overview,Trosolwg
 title_evidence_social,Social and Human Capital,Cyfalaf Cymdeithasol a Dynol
 title_needs,Unmet Needs and Vulnerability,MISSING
 title_needs_employment,Employment and Working Conditions,Cyflogaeth ac Amodau Gwaith
 title_needs_health,Health Services,Gwasanaethau Iechyd
 title_needs_income,Income Security and Social Protection,Diogelwch Incwm a Diogelu Cymdeithasol
 title_needs_living,Living Conditions,Amodau Byw
-title_needs_overview,Overview,MISSING
+title_needs_overview,Overview,Trosolwg
 title_needs_social,Social and Human Capital,Cyfalaf Cymdeithasol a Dynol
 title_overview,Home Page,Hafan
 title_policy,Policies,Polisďau
@@ -346,7 +346,7 @@ title_policy_employment,Employment and Working Conditions,Cyflogaeth ac Amodau G
 title_policy_health,Health Services,Gwasanaethau Iechyd
 title_policy_income,Income Security and Social Protection,Diogelwch Incwm a Diogelu Cymdeithasol
 title_policy_living,Living Conditions,Amodau Byw
-title_policy_overview,Overview,MISSING
+title_policy_overview,Overview,Trosolwg
 title_policy_social,Social and Human Capital,Cyfalaf Cymdeithasol a Dynol
 title_report,Generate Report,Cynhyrchu Adroddiad
 title_solutions,Solutions,Atebion
@@ -354,13 +354,13 @@ title_solutions_employment,Employment and Working Conditions,Cyflogaeth ac Amoda
 title_solutions_health,Health Services,Gwasanaethau Iechyd
 title_solutions_income,Income Security and Social Protection,Diogelwch Incwm a Diogelu Cymdeithasol
 title_solutions_living,Living Conditions,Amodau Byw
-title_solutions_overview,Overview,MISSING
+title_solutions_overview,Overview,Trosolwg
 title_solutions_social,Social and Human Capital,Cyfalaf Cymdeithasol a Dynol
 title_terms_conditions,Terms & Conditions,MISSING
 title_whes_platform,Welsh Health Equity Solutions Platform,Platfform Datrysiadau Tegwch Iechyd Cymru
 waffle_legend_label,Yes,Ydw
 waffle_legend_label,No,Nac ydw
-title_data_overview,Overview,MISSING
+title_data_overview,Overview,Trosolwg
 report_conditions_label,Please select the essential condition(s) to include in report:,MISSING
 report_pages_label,Please select the type(s) of information to include in report:,MISSING
 title_report_page,Generate Report,Cynhyrchu Adroddiad

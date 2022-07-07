@@ -1,3 +1,7 @@
+# whesApp 7.0.54 _2022-07-06_
+
+- Add CY resources pages
+
 # whesApp 7.0.53 _2022-07-06_
 
 - Fix landing page links
