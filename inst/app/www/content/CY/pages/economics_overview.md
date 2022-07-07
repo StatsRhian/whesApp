@@ -2,7 +2,7 @@
  
 **Trosolwg**
 
-Mae annhegwch iechyd yn peri c[ostau cymdeithasol ac economaidd](https://www.who.int/news-room/facts-in-pictures/detail/health-inequities-and-their-causes) arwyddocaol i unigolion a chymdeithasau. Yng Nghymru, mae'r  Ddyletswydd Economaidd-Gymdeithasol yn amlygu ymrwymiad Llywodraeth Cymru i ddiogelu cydraddoldeb a hawliau dynol, ac yn gosod taclo anghydraddoldeb wrth wraidd y broses o wneud penderfyniadau. 
+Mae annhegwch iechyd yn peri [costau cymdeithasol ac economaidd](https://www.who.int/news-room/facts-in-pictures/detail/health-inequities-and-their-causes) arwyddocaol i unigolion a chymdeithasau. Yng Nghymru, mae'r  Ddyletswydd Economaidd-Gymdeithasol yn amlygu ymrwymiad Llywodraeth Cymru i ddiogelu cydraddoldeb a hawliau dynol, ac yn gosod taclo anghydraddoldeb wrth wraidd y broses o wneud penderfyniadau. 
 
 Mae lleihau anghydraddoldebau iechyd yn amcan polisi pwysig, o safbwynt cyfiawnder cymdeithasol. Gall [dadl economaidd o bosib ychwanegu pwysau at yr amcan](https://www.euro.who.int/en/health-topics/health-determinants/social-determinants/publications/2016/discussion-paper-on-economics-and-health-inequalities-2016) o leihau anghydraddoldebau iechyd.
 
