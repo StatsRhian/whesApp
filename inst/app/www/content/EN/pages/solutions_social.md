@@ -1,7 +1,5 @@
 ## Health and social and human capital
 
-Policies that aim to develop and strengthen social relations and community assets, including education, skills, community resources and meaningful social interactions to promote learning, and protect and promote health and wellbeing throughout a person’s life.
-
 Human capital and social capital are known to have an impact on health and well-being. [Evidence from Europe](file:////rytxasrvfil0001/National%20Public%20Health%20Service/1.%20PRID%20Directorate/1.2.%20Divisions/1.2a.%20International%20Health%20Development/VO&HESRi/WHESP/Pages/Solutions%20page/Is%20social%20capital%20good%20for%20health%3f%20(who.int)) suggests that policy interventions targeted at improving individual social capital can directly improve individual health and contribute to community social capital, reinforcing the beneficial role of individual social capital.
 
 **Human Capital**

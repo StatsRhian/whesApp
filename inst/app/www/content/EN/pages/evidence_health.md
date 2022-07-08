@@ -36,12 +36,6 @@ This policy brief by the World Health Organization and European Observatory on H
 
 *RESEARCH ARTICLE* (**COVID**)
 
-This research article points towards the existence of significant differences in accessing healthcare during the pandemic according to economic vulnerability. 
-
-#### [Economic vulnerability and unmet healthcare needs among the population aged 50+ years during the COVID-19 pandemic in Europe](https://pubmed.ncbi.nlm.nih.gov/34512226/)
-
-*RESEARCH ARTICLE* (**COVID**)
-
 This research article reports significant differences in accessing healthcare during the pandemic among the population aged 50 years and older in Europe according to economic vulnerability.
 
 #### [Global prevalence and burden of depressive and anxiety disorders in 204 countries and territories in 2020 due to the COVID-19 pandemic](https://pubmed.ncbi.nlm.nih.gov/34634250/)

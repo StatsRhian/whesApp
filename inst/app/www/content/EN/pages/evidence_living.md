@@ -1,7 +1,5 @@
 ## Health and living conditions
 
-Policies that aim to ensure opportunities for, and access and exposure to living conditions and environments that have a positive influence on people’s health and well-being.
-
 #### [International Horizon Scanning and Learning – Summary Report On the impact of COVID-19 on increasing the Health Gap and Vulnerability](https://phwwhocc.co.uk/resources/international-horizon-scanning-and-learning-summary-report-on-the-impact-of-covid-19-on-increasing-the-health-gap-and-vulnerability/)
 
 *REPORT* (**COVID**)

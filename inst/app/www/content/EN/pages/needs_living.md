@@ -1,7 +1,5 @@
 ## Health and living conditions
 
-Policies that aim to ensure opportunities for, and access and exposure to living conditions and environments that have a positive influence on people’s health and well-being.
-
 #### [The full cost of poor housing in Wales](https://phwwhocc.co.uk/resources/the-full-cost-of-poor-housing-in-wales/)
 
 *REPORT*

@@ -25,9 +25,9 @@ Mae'r adran hon yn cynnwys enghreifftiau o adnoddau o bob cwr o'r byd ar natur a
 * Briffiau polisi
 * Briffiau ymchwil 
 
-> Cael yr wybodaeth ddiweddaraf. Diweddarir Llwyfan Datrysiadau Tegwch Iechyd Cymru yn barhaus gyda'r adnoddau a'r deunyddiau diweddaraf, gan gynnwys data, polisïau, adroddiadau ac astudiaethau achos. Cysylltwch â ni i gael eich hysbysu am ddiweddariadau i'r Llwyfan Datrysiadau. 
+> Cael yr wybodaeth ddiweddaraf. Diweddarir Llwyfan Datrysiadau Tegwch Iechyd Cymru yn barhaus gyda'r adnoddau a'r deunyddiau diweddaraf, gan gynnwys data, polisïau, adroddiadau ac astudiaethau achos. [Cysylltwch â ni](mailto:platfformdatrysiadau@gig.cymru) i gael eich hysbysu am ddiweddariadau i'r Llwyfan Datrysiadau. 
 
-> Cysylltwch â ni i gymryd rhan. Rydym yn gweithio gyda rhanddeiliaid a defnyddwyr i ddiweddaru ac ehangu'r Llwyfan Datrysiadau gyda phrosiectau, astudiaethau achos a nodweddion sbotolau sy'n canolbwyntio ar degwch iechyd. Cysylltwch â ni i rannu eich prosiectau a'ch storïau am lwyddiant, i'w dangos ar y llwyfan.
+> [Cysylltwch â ni](mailto:platfformdatrysiadau@gig.cymru) i gymryd rhan. Rydym yn gweithio gyda rhanddeiliaid a defnyddwyr i ddiweddaru ac ehangu'r Llwyfan Datrysiadau gyda phrosiectau, astudiaethau achos a nodweddion sbotolau sy'n canolbwyntio ar degwch iechyd. [Cysylltwch â ni](mailto:platfformdatrysiadau@gig.cymru) i rannu eich prosiectau a'ch storïau am lwyddiant, i'w dangos ar y llwyfan.
 
 ### Adnoddau defnyddiol:
 

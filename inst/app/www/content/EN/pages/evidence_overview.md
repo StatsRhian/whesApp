@@ -31,9 +31,9 @@ This section contains examples of resources from around the world on the nature 
 * Policy briefs
 * Research briefs 
 
->**Stay up to date.** The Welsh Health Equity Solutions Platform is continuously updated with latest resources and materials, including data, policies, reports and case studies. Contact us to be notified of updates to the Solutions Platform. 
+>**Stay up to date.** The Welsh Health Equity Solutions Platform is continuously updated with latest resources and materials, including data, policies, reports and case studies. [Contact us](mailto:solutionsplatform@wales.nhs.uk) to be notified of updates to the Solutions Platform. 
 
-> **Get in touch to get involved.** We are working with stakeholders and users to update and expand the Solutions Platform with projects, case studies and spotlight features focused on health equity. Contact us to share your projects and success stories, to feature on the platform.
+> **Get in touch to get involved.** We are working with stakeholders and users to update and expand the Solutions Platform with projects, case studies and spotlight features focused on health equity. [Contact us](mailto:solutionsplatform@wales.nhs.uk) to share your projects and success stories, to feature on the platform.
 
 ### Useful resources:
 

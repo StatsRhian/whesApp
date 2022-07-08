@@ -1,7 +1,5 @@
 ## Health and health services
 
-Policies that aim to ensure availability, accessibility, affordability and quality of preventative and health care services and interventions.
-
 #### [Cost of Health Inequality to the NHS in Wales Report 1: Cost Associated with Inequality in Hospital Service Utilisation to the NHS in Wales](https://phwwhocc.co.uk/resources/cost-of-health-inequality-to-the-nhs-in-wales-report-1-cost-associated-with-inequality-in-hospital-service-utilisation/)
 
 *REPORT*

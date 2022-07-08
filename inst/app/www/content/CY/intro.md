@@ -26,7 +26,7 @@ Mae Llwyfan Datrysiadau Tegwch Iechyd Cymru'n borth i ddata, tystiolaeth, econom
 
 Datblygwyd WHESRi a'r Llwyfan Datrysiadau gan weithwyr proffesiynol ac arbenigwyr perthnasol ar draws Llywodraeth Cymru, Sefydliad Iechyd y Byd, cyrff academaidd a rhanddeiliaid a phartneriaid allweddol eraill ledled Cymru ac yn rhyngwladol ac maent yn datblygu mewn cydweithrediad agos â hwy. Mae'n cael ei chyfeirio a'i siapio trwy adborth parhaus gan randdeiliaid a defnyddwyr a chan dystiolaeth sy'n dod i'r amlwg, ac yn adlewyrchu blaenoriaethau cenedlaethol a byd-eang deinamig.
 
-Gan weithio gyda rhanddeiliaid a defnyddwyr, bydd y Llwyfan Datrysiadau'n cael ei diweddaru a'i hehangu i gynnwys prosiectau ac astudiaethau achos sy'n canolbwyntio ar degwch iechyd o Gymru a thu hwnt. Cysylltwch â ni i gymryd rhan. 
+Gan weithio gyda rhanddeiliaid a defnyddwyr, bydd y Llwyfan Datrysiadau'n cael ei diweddaru a'i hehangu i gynnwys prosiectau ac astudiaethau achos sy'n canolbwyntio ar degwch iechyd o Gymru a thu hwnt. [Cysylltwch â ni](mailto:platfformdatrysiadau@gig.cymru) i gymryd rhan. 
 
 Mae'r Llwyfan Datrysiadau'n cynnwys:
 
@@ -40,9 +40,9 @@ Mae'r Llwyfan Datrysiadau'n cynnwys:
   
 Gweler y fideo cyfarwyddiadol ar sut i ddod o hyd i'r hyn sydd ei angen arnoch ar y Llwyfan Datrysiadau.
 
-> **Cael yr wybodaeth ddiweddaraf.** Diweddarir Llwyfan Datrysiadau Tegwch Iechyd Cymru yn barhaus gyda'r adnoddau a'r deunyddiau diweddaraf, gan gynnwys data, polisïau, adroddiadau ac astudiaethau achos. Cysylltwch â ni i gael eich hysbysu am ddiweddariadau i'r Llwyfan Datrysiadau. 
+> **Cael yr wybodaeth ddiweddaraf.** Diweddarir Llwyfan Datrysiadau Tegwch Iechyd Cymru yn barhaus gyda'r adnoddau a'r deunyddiau diweddaraf, gan gynnwys data, polisïau, adroddiadau ac astudiaethau achos. [Cysylltwch â ni](mailto:platfformdatrysiadau@gig.cymru) i gael eich hysbysu am ddiweddariadau i'r Llwyfan Datrysiadau. 
 
-> **Cysylltwch â ni i gymryd rhan.** Rydym yn gweithio gyda rhanddeiliaid a defnyddwyr i ddiweddaru ac ehangu'r Llwyfan Datrysiadau gyda phrosiectau, astudiaethau achos a nodweddion sbotolau sy'n canolbwyntio ar degwch iechyd. Cysylltwch â ni i rannu eich prosiectau a'ch storïau am lwyddiant, i'w dangos ar y llwyfan.
+> **Cysylltwch â ni i gymryd rhan.** Rydym yn gweithio gyda rhanddeiliaid a defnyddwyr i ddiweddaru ac ehangu'r Llwyfan Datrysiadau gyda phrosiectau, astudiaethau achos a nodweddion sbotolau sy'n canolbwyntio ar degwch iechyd.[Cysylltwch â ni](mailto:platfformdatrysiadau@gig.cymru) i rannu eich prosiectau a'ch storïau am lwyddiant, i'w dangos ar y llwyfan.
 
 ## Y Pum Amod Hanfodol
 

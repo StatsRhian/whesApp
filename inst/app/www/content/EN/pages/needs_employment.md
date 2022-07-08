@@ -1,7 +1,5 @@
 ## Health and employment and working conditions
 
-Policies that aim to improve the health impact of employment, working conditions and workplace equality.
-
 #### [Inequality in a Future Wales: Areas for action in work, climate and demographic change](https://phwwhocc.co.uk/resources/inequality-in-a-future-wales-areas-for-action-in-work-climate-and-demographic-change/)
 
 *REPORT* 

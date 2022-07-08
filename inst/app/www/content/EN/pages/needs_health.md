@@ -1,7 +1,5 @@
 ## Health and health services
 
-Policies that aim to ensure availability, accessibility, affordability and quality of preventative and health care services and interventions.
-
 #### [The Health Experiences of Asylum Seekers and Refugees in Wales](https://phwwhocc.co.uk/resources/hear-study/)
 
 *REPORT* 

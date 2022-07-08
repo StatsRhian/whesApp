@@ -1,7 +1,5 @@
 ## Diogelu incwm a diogelu cymdeithasol 
 
-Polisïau sydd â'r nod o ddarparu sicrwydd a chymorth economaidd i leihau canlyniadau iechyd a chymdeithasol sy'n deillio o dlodi ac incwm isel drwy gydol bywyd unigolyn.
-
 #### [Incwm sylfaenol i wella iechyd a llesiant y boblogaeth yng Nghymru?](https://phwwhocc.co.uk/resources/a-basic-income-to-improve-population-health-and-well-being-in-wales/?lang=cy)
 
 **ADRODDIAD**

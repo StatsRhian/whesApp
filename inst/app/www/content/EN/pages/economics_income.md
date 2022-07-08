@@ -1,7 +1,5 @@
 ## Health and income security and social protection
 
-Policies that aim to ensure availability, accessibility, affordability and quality of preventative and health care services and interventions.
-
 #### [A taxing issue? The tax system and healthier lifestyles in Wales](https://phwwhocc.co.uk/resources/the-tax-system-and-healthier-lifestyles-in-wales/)
 
 *REPORT*

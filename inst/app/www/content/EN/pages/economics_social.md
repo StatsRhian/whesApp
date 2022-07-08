@@ -1,7 +1,5 @@
 ## Health and social and human capital
 
-Policies that aim to develop and strengthen social relations and community assets, including education, skills, community resources and meaningful social interactions to promote learning, and protect and promote health and wellbeing throughout a person’s life.
-
 #### [How to Make the Case for Sustainable Investment in Well-being and Health Equity: A Practical Guide](https://phwwhocc.co.uk/resources/how-to-make-the-case-for-sustainable-investment-in-well-being-and-health-equity-a-practical-guide/)
 
 *PRACTICAL GUIDE*

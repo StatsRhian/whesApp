@@ -1,4 +1,4 @@
-## Policies and legislation affecting health and living conditions
+## Iechyd ac amodau byw
 
 #### [Safon ansawdd tai Cymru](https://llyw.cymru/safon-ansawdd-tai-cymru?_ga=2.185288044.434911827.1649419464-2141711118.1643382218)
 
