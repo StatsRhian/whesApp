@@ -12,7 +12,7 @@ Mae'r adroddiad hwn gan Iechyd Cyhoeddus Cymru yn dwyn ynghyd dystiolaeth a mewn
 
 Mae'r papur gweithio hwn gan y Sefydliad Astudiaethau Cyllid yn adolygu effeithiau'r pandemig COVID-19 ar anghydraddoldebau gan gynnwys safonau byw aelwydydd yn y DU.
 
-#### [Goresgyn anghydraddoldebau iechyd mewn cymdogaethau 'sydd wedi'u gadael ar ôl'](https://www.appg-leftbehindneighbourhoods.org.uk/publication/overcoming-health-inequalities-in-left-behind-neighbourhoods/#:~:text=Tackling the health inequalities facing local authorities with,extra £29.8bn to the country’s economy each year.)
+#### [Goresgyn anghydraddoldebau iechyd mewn cymdogaethau 'sydd wedi'u gadael ar ôl'](https://www.appg-leftbehindneighbourhoods.org.uk/publication/overcoming-health-inequalities-in-left-behind-neighbourhoods/)
 
 **ADRODDIAD**
 

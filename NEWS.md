@@ -1,3 +1,7 @@
+# whesApp 7.0.56 _2022-07-08_
+
+- Fix Welsh report
+
 # whesApp 7.0.55 _2022-07-07_
 
 - Finalise resources pages
