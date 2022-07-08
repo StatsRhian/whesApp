@@ -1,7 +1,5 @@
 ## Health and employment and working conditions
 
-Policies that aim to improve the health impact of employment, working conditions and workplace equality.
-
 #### [What’s next? Key issues for the Sixth Senedd](https://research.senedd.wales/research-articles/what-s-next-key-issues-for-the-sixth-senedd/)
 
 *REPORT*

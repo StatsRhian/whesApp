@@ -1,7 +1,5 @@
 ## Iechyd a chyfalaf cymdeithasol a dynol
 
-Polisïau sydd â'r nod o ddatblygu a chryfhau cysylltiadau cymdeithasol ac asedau cymunedol, gan gynnwys addysg, sgiliau, adnoddau cymunedol a rhyngweithio cymdeithasol pwrpasol i hyrwyddo dysgu, a diogelu a hyrwyddo iechyd a lles drwy gydol oes unigolyn.
-
 #### [Cadernid – Deall y Rhyngddibyniaeth Rhwng Unigolion a Chymunedau](https://phwwhocc.co.uk/resources/cadernid-deall-y-rhyngddibyniaeth-rhwng-unigolion-a-chymunedau/?lang=cy)
 
 **ADRODDIAD** 

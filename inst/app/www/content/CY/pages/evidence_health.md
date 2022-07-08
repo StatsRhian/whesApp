@@ -30,12 +30,6 @@ Mae'r briff technegol hwn gan Gronfa Boblogaeth y Cenhedloedd Unedig yn amlygu p
 
 Mae'r briff polisi hwn gan Sefydliad Iechyd y Byd a'r Arsyllfa Ewropeaidd ar Systemau a Pholisïau Iechyd yn mapio'r llu o offer Ewropeaidd a all helpu i wella systemau iechyd a gofal a sut maent yn gysylltiedig â'r heriau a wynebir gan wneuthurwyr polisi iechyd mewn Aelod-wladwriaethau. 
 
-#### [Bregusrwydd economaidd ac anghenion gofal iechyd nas diwallwyd ymhlith y boblogaeth 50 + oed yn ystod y pandemig COVID-19 yn Ewrop](https://pubmed.ncbi.nlm.nih.gov/34512226/)
-
-**ERTHYGL YMCHWIL (COVID)**
-
-Mae'r erthygl ymchwil hon yn cyfeirio at fodolaeth gwahaniaethau arwyddocaol wrth gael mynediad i ofal iechyd yn ystod y pandemig fesul bregusrwydd economaidd. 
-
 #### [Bregusrwydd economaidd ac anghenion gofal iechyd nas diwallwyd ymhlith y boblogaeth 50+oed yn ystod pandemig COVID-19 yn Ewrop ](https://pubmed.ncbi.nlm.nih.gov/34512226/)
 
 **ERTHYGL YMCHWIL COVID**

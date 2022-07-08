@@ -1,7 +1,5 @@
 ## Iechyd a chyflogaeth ac amodau gweithio
 
-Polisïau sydd â'r nod o wella effaith cyflogaeth, amodau gweithio a chydraddoldeb yn y gweithle ar iechyd.
-
 #### [Anghydraddoldeb yng Nghymru’r Dyfodol: Meysydd gweithredu mewn gwaith, hinsawdd a newid demograffig](https://phwwhocc.co.uk/resources/inequality-in-a-future-wales-areas-for-action-in-work-climate-and-demographic-change/?lang=cy)
 
 **ADRODDIAD** 

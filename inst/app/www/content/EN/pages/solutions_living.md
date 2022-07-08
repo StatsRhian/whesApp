@@ -1,7 +1,5 @@
 ## Health and living conditions
 
-Policies that aim to ensure opportunities for, and access and exposure to living conditions and environments that have a positive influence on people’s health and well-being.
-
 A number of the wider determinants of health derive from our health and living conditions; for example, housing. The need for security in relation to having and keeping a home and being surrounded by a safe and consistent home environment, and its impact on both physical and mental health and well-being, has long been recognised.
 
 Public Health Wales has produced a number of reports that highlight the issues of poor quality housing and its impact on health. These reports include potential solutions, including the [case for investment in housing](https://phw.nhs.wales/files/housing-and-health-reports/a-case-for-investment-report/) which outlines the need to tackle housing as a fundamental determinant of health and presents solutions including: eliminating cold damp and mouldy homes; improving ventilation; energy efficiency measures and fuel poverty schemes; support for vulnerable households instead of area-based interventions. 

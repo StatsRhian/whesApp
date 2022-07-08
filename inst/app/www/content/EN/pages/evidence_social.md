@@ -1,7 +1,5 @@
 ## Health and social and human capital
 
-Policies that aim to develop and strengthen social relations and community assets, including education, skills, community resources and meaningful social interactions to promote learning, and protect and promote health and wellbeing throughout a person’s life.
-
 #### [International Horizon Scanning and Learning – Summary Report On the impact of COVID-19 on increasing the Health Gap and Vulnerability](https://phwwhocc.co.uk/resources/international-horizon-scanning-and-learning-summary-report-on-the-impact-of-covid-19-on-increasing-the-health-gap-and-vulnerability/)
 
 *REPORT* (**COVID**)

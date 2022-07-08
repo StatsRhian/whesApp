@@ -1,7 +1,5 @@
 ## Health and income security and social protection
 
-Policies that aim to provide economic security and support to reduce the health and social consequences of poverty and low income throughout a person’s life.
-
 #### [A basic income to improve population health and well-being in Wales?](https://phwwhocc.co.uk/resources/a-basic-income-to-improve-population-health-and-well-being-in-wales/?lang=cy)
 
 *REPORT*

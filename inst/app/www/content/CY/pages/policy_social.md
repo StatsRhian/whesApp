@@ -1,4 +1,4 @@
-## Policies and legislation affecting health and social and human capital
+## Iechyd a chyfalaf cymdeithasol a dynol
 
 #### [Cynllun cyflawni ar gyfer iechyd meddwl 2019 i 2022](Cynllun cyflawni ar gyfer iechyd meddwl 2019 i 2022)
 

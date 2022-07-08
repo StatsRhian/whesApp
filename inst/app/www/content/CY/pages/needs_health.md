@@ -1,7 +1,5 @@
 ## Iechyd a gwasanaethau iechyd
 
-Polisïau sy'n ceisio sicrhau argaeledd, hygyrchedd, fforddadwyedd ac ansawdd gwasanaethau ac ymyriadau ataliol a gofal iechyd.
-
 #### [Profiadau Iechyd Ceiswyr Lloches a Ffoaduriaid yng](https://phwwhocc.co.uk/resources/astudiaeth-hear/?lang=cy) Nghymru
 
 **ADRODDIAD** 

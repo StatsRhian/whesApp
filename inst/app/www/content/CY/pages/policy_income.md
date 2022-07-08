@@ -1,4 +1,4 @@
-## Policies and legislation affecting income security and social protection
+## Diogelu incwm a diogelu cymdeithasol 
 
 #### [Cynnig Gofal Plant Cymru](https://llyw.cymru/cynnig-gofal-plant-cymru-ymgyrch?_ga=2.115428803.434911827.1649419464-2141711118.1643382218)
 

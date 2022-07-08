@@ -1,7 +1,5 @@
 ## Health and employment and working conditions
 
-Policies that aim to improve the health impact of employment, working conditions and workplace equality.
-
 #### [International Horizon Scanning and Learning – Summary Report On the impact of COVID-19 on increasing the Health Gap and Vulnerability](https://phwwhocc.co.uk/resources/international-horizon-scanning-and-learning-summary-report-on-the-impact-of-covid-19-on-increasing-the-health-gap-and-vulnerability/)
 
 *REPORT* (**COVID**)

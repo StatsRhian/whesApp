@@ -1,7 +1,5 @@
 ## Health and living conditions
 
-Policies that aim to ensure opportunities for, and access and exposure to living conditions and environments that have a positive influence on people’s health and well-being.
-
 #### [What’s next? Key issues for the Sixth Senedd](https://research.senedd.wales/research-articles/what-s-next-key-issues-for-the-sixth-senedd/)
 
 *REPORT*

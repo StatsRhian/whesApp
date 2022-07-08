@@ -59,7 +59,7 @@ This health policy series book by the WHO European Observatory on Health Systems
 
 This compendium by the World Health Organization describes tools and resources for WHO Member States aiming to improve the quality of service delivery. The compendium includes tools and resources on quality improvement and provides examples of how the tools and resources have been applied in country settings. It covers a range of technical areas from hospital management and emergency care to primary care and person-centered care. 
 
-#### [The path to global equity in mental health care in the context of COVID-19](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)02233-9/fulltext)
+#### [The path to global equity in mental health care in the context of COVID-19](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21%2902233-9/fulltext)
 
 *COMMENT* (**COVID**)
 

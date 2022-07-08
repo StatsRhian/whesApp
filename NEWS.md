@@ -1,3 +1,8 @@
+# whesApp 7.0.55 _2022-07-07_
+
+- Finalise resources pages
+- Add contact us mailto links
+
 # whesApp 7.0.54 _2022-07-06_
 
 - Add CY resources pages
