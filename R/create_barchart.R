@@ -30,7 +30,7 @@ create_barchart = function(df,
         x = tr_pull("all", lang),
         y = .data$value
       )) +
-      ggplot2::geom_col(fill = "#008586") +
+      ggplot2::geom_col(fill = "#005d5d") +
       ggplot2::xlab("")
   } else if (disag1 != "None" && disag2 == "None") {
     g = df %>%

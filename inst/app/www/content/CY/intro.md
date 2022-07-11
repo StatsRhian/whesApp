@@ -22,6 +22,8 @@ Mae Llwyfan Datrysiadau Tegwch Iechyd Cymru yn rhan o [fenter Adroddiad Statws T
 
 Cymru yw'r wlad gyntaf i gymhwyso carreg filltir menter [Adroddiad Statws Tegwch Iechyd Ewropeaidd (HESR)](https://www.euro.who.int/en/health-topics/health-determinants/social-determinants/health-equity-status-report-initiative) Sefydliad Iechyd y Byd, gan fod yn ddylanwad byd-eang a safle arloesi byw ar gyfer tegwch iechyd a buddsoddi mewn iechyd a lles, gan ddatblygu a hyrwyddo ymagweddau, offer a datrysiadau blaengar er mwyn sicrhau bywydau ffyniannus iach i bawb yng Nghymru a thu hwnt. 
 
+Gweler ein [hanimeiddiadau WHESRi](https://icc.gig.cymru/animeiddiadau-whesri/).
+
 Mae Llwyfan Datrysiadau Tegwch Iechyd Cymru'n borth i ddata, tystiolaeth, economeg a modelu iechyd, polisïau, arfer da, offer arloesol a datrysiadau ymarferol i helpu i wella lles y boblogaeth a lleihau'r bwlch tegwch iechyd yng Nghymru a thu hwnt. Mae wedi'i strwythuro o amgylch fframwaith arloesol Sefydliad Iechyd y Byd o 'Bum Amod Hanfodol' ar gyfer bywydau ffyniannus ac iach i bawb. Bydd y Llwyfan yn cysylltu â phorth ecwiti iechyd Sefydliad Iechyd y Byd ac yn bwydo iddo, gan ddarparu enghraifft ac ysbrydoliaeth i wledydd ddysgu ohoni a'i dilyn, yn ogystal â chyfrannu a rhannu. 
 
 Datblygwyd WHESRi a'r Llwyfan Datrysiadau gan weithwyr proffesiynol ac arbenigwyr perthnasol ar draws Llywodraeth Cymru, Sefydliad Iechyd y Byd, cyrff academaidd a rhanddeiliaid a phartneriaid allweddol eraill ledled Cymru ac yn rhyngwladol ac maent yn datblygu mewn cydweithrediad agos â hwy. Mae'n cael ei chyfeirio a'i siapio trwy adborth parhaus gan randdeiliaid a defnyddwyr a chan dystiolaeth sy'n dod i'r amlwg, ac yn adlewyrchu blaenoriaethau cenedlaethol a byd-eang deinamig.

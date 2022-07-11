@@ -5,7 +5,7 @@
 app_ui = function(request) {
   shiny::tagList(
     shiny::div(
-      style = "text-align: center; color: #fff; background-color: #008586; padding: 5px; margin: 0",
+      style = "text-align: center; color: #fff; background-color: #005d5d; padding: 5px; margin: 0",
       shiny::titlePanel(
         title = shiny::span(
           shiny::img(src = "www/logos/who-euro-white.png", width = "25%"),
@@ -24,7 +24,7 @@ app_ui = function(request) {
       id = "page",
       footer = shiny::uiOutput("insert_footer"),
       theme = bslib::bs_theme(
-        primary = "#008586",
+        primary = "#005d5d",
         secondary = "#c60158",
         version = 4,
         bootswatch = "united"

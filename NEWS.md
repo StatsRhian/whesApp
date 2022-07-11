@@ -1,3 +1,11 @@
+# whesApp 7.0.57 _2022-07-11_
+
+- update link colour
+- Add footer
+- Add solutions resources
+- Add animation links
+- Add SVDS resources
+
 # whesApp 7.0.56 _2022-07-08_
 
 - Fix Welsh report

@@ -8,7 +8,7 @@ In Europe, a [project mapping trends and policies to tackle homelessness](https:
 
 During times of uncertainty, such as the COVID-19 pandemic, a home can provide a secure and stable base for individuals and households. A health impact assessment of the impact of COVID-19 on housing was undertaken by Public Health Wales, and made further recommendations for the future including: investment in affordable, safe and sustainable housing as part of a ‘green’ pandemic recovery, and support for sustainable place-making as outlined in Planning Policy Wales; encouragement of longer-term tenancies to give tenants greater security and greater protection from eviction- balancing this with the needs of landlords, to reduce barriers to gaining future secure accommodation. 
 
-*Useful resources:*
+**Useful resources:**
 
 #### [Driving Prosperity for All through Investing for Health and Well-being: An Evidence Informed Guide for Cross-sector Investment](https://phwwhocc.co.uk/resources/prosperity-for-all/)
 
