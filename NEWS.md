@@ -1,3 +1,8 @@
+# whesApp 7.0.58 _2022-07-11_
+
+- update report structure
+- update report colours
+
 # whesApp 7.0.57 _2022-07-11_
 
 - update link colour
