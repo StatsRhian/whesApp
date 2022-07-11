@@ -22,6 +22,8 @@ The Welsh Health Equity Solutions Platform is part of the [Welsh Health Equity S
 
 Wales is the first country to apply a milestone WHO [European Health Equity Status Report (HESR) initiative](https://www.euro.who.int/en/health-topics/health-determinants/social-determinants/health-equity-status-report-initiative), becoming a global influencer and live innovation site for health equity and investment for health and well-being, developing and promoting innovative approaches, tools and solutions for achieving healthy prosperous lives for all in Wales and beyond.
 
+See our [WHESRi animations](https://phw.nhs.wales/welsh-health-equity-status-report-initiative-whesri-animations/).
+
 The Welsh Health Equity Solutions Platform is a gateway to data, evidence, health economics and modelling, policies, good practice, innovative tools and practical solutions to help improve population well-being and reduce the health equity gap in Wales and beyond. It is structured around an innovative WHO framework of ‘Five Essential Conditions’ for healthy prosperous lives for all. The Platform will be link with and feed into a WHO health equity gateway, providing an example and inspiration for countries to learn and follow, as well as to contribute and share.
 
 The WHESRi and the Solutions Platform have been developed and are progressing in close collaboration with relevant professionals and experts across Welsh Government, the WHO, academic bodies and other key stakeholders and partners across Wales and internationally. It is being informed and shaped by continuous stakeholder and user feedback and emerging evidence, and reflecting dynamic national and global priorities.

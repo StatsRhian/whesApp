@@ -6,7 +6,7 @@ Many organisations have explored potential solutions to the issue of income secu
 
 The Welsh Government has outlined plans to extend support for care leavers through a [Basic Income pilot](https://gov.wales/basic-income-care-leavers-wales-pilot-announced) in Wales. The pilot is designed to extend support for care leavers and will provide a test for the stated benefits of basic income, such as addressing poverty and unemployment and improving health and financial wellbeing. Public Health Wales has produced a [Basic Income report](https://phwwhocc.co.uk/resources/a-basic-income-to-improve-population-health-and-well-being-in-wales/) which considers a range of evidence and explores the potential impacts on health and well-being. It also looks into the different approaches to policy design and implementation internationally. The report identifies options for policy-makers who are thinking about basic income, such as carrying out economic modelling, placing health and wellbeing as a core aim of any scheme, and carrying out feasibility studies to understand how basic income could be introduced in Wales.
 
-*Useful resources:*
+**Useful resources:**
 
 #### [Driving Prosperity for All through Investing for Health and Well-being: An Evidence Informed Guide for Cross-sector Investment](https://phwwhocc.co.uk/resources/prosperity-for-all/)
 

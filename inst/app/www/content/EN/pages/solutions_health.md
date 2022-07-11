@@ -1,7 +1,5 @@
 ## Health and health services
 
-Policies that aim to ensure availability, accessibility, affordability and quality of preventative and health care services and interventions.
-
 The inverse care law - put simply, where those in greatest need have least access to care - is evident in Wales and beyond. Throughout the COVID-19 pandemic it was noted that those living in more disadvantaged areas had worse outcomes, once again shining the spotlight on inequalities. 
 
 When there is acute demand (for example, hospital waiting lists following the pandemic) it can be difficult to allocate spend to prevention, but this is the only way to reduce further acute demand at a later time point. Tools such as [Return on Investment](https://jech.bmj.com/content/71/8/827) and [Social Return on Investment](https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-020-08685-7) can be helpful. 
