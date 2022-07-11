@@ -93,9 +93,9 @@ app_ui = function(request) {
                   shiny::column(
                     12,
                     # checkboxes conditions and pages
-                    shiny::uiOutput("conditions_checkbox"),
-                    shiny::br(),
                     shiny::uiOutput("pages_checkbox"),
+                    shiny::br(),
+                    shiny::uiOutput("conditions_checkbox"),
                   ) # end column
                 ) # end fluidrow
               ), # end wellpanel

@@ -20,103 +20,97 @@ library("whesApp")
 ```
 
 ```{r, include = FALSE}
-health = "health" %in% params$conditions
-income = "income" %in% params$conditions
-living = "living" %in% params$conditions
-social = "social" %in% params$conditions
-employment = "employment" %in% params$conditions
+economics = "economics" %in% params$info
+policy = "policy" %in% params$info
+evidence = "evidence" %in% params$info
+needs = "needs" %in% params$info
+solutions = "solutions" %in% params$info
 ```
 
 ```{r, echo = FALSE, results = "asis"}
 cat("\n\n\\pagebreak\n")
 ```
 
-```{r health}
-#| child = if (health) system.file(
-#|   glue::glue("app/www/content/{params$lang}/report/health_overview.md"),
+```{r economics}
+#| child = if (economics) system.file(
+#|   glue::glue("app/www/content/{params$lang}/report/economics_overview.md"),
 #|   package = "whesApp",
 #|   mustWork = TRUE
 #| )
 ```
 
 ```{r}
-#| child = if (health) unlist(purrr::map(.x = params$info, .f = ~ system.file(
-#|   glue::glue("app/www/content/{params$lang}/pages/{.x}_health.md"),
+#| child = if (economics) unlist(purrr::map(.x = params$conditions, .f = ~ system.file(
+#|   glue::glue("app/www/content/{params$lang}/pages/economics_{.x}.md"),
 #|   package = "whesApp",
 #|   mustWork = TRUE
 #| )))
 ```
 
 
-
-```{r income}
-#| child = if (income) system.file(
-#|   glue::glue("app/www/content/{params$lang}/report/income_overview.md"),
+```{r policy}
+#| child = if (policy) system.file(
+#|   glue::glue("app/www/content/{params$lang}/report/policy_overview.md"),
 #|   package = "whesApp",
 #|   mustWork = TRUE
 #| )
 ```
 
 ```{r}
-#| child = if (income) unlist(purrr::map(.x = params$info, .f = ~ system.file(
-#|   glue::glue("app/www/content/{params$lang}/pages/{.x}_income.md"),
+#| child = if (policy) unlist(purrr::map(.x = params$conditions, .f = ~ system.file(
+#|   glue::glue("app/www/content/{params$lang}/pages/policy_{.x}.md"),
 #|   package = "whesApp",
 #|   mustWork = TRUE
 #| )))
 ```
 
 
-
-```{r living}
-#| child = if (living) system.file(
-#|   glue::glue("app/www/content/{params$lang}/report/living_overview.md"),
+```{r evidence}
+#| child = if (evidence) system.file(
+#|   glue::glue("app/www/content/{params$lang}/report/evidence_overview.md"),
 #|   package = "whesApp",
 #|   mustWork = TRUE
 #| )
 ```
 
 ```{r}
-#| child = if (living) unlist(purrr::map(.x = params$info, .f = ~ system.file(
-#|   glue::glue("app/www/content/{params$lang}/pages/{.x}_living.md"),
+#| child = if (evidence) unlist(purrr::map(.x = params$conditions, .f = ~ system.file(
+#|   glue::glue("app/www/content/{params$lang}/pages/evidence_{.x}.md"),
 #|   package = "whesApp",
 #|   mustWork = TRUE
 #| )))
 ```
 
 
-
-```{r social}
-#| child = if (social) system.file(
-#|   glue::glue("app/www/content/{params$lang}/report/social_overview.md"),
+```{r needs}
+#| child = if (needs) system.file(
+#|   glue::glue("app/www/content/{params$lang}/report/needs_overview.md"),
 #|   package = "whesApp",
 #|   mustWork = TRUE
 #| )
 ```
 
 ```{r}
-#| child = if (social) unlist(purrr::map(.x = params$info, .f = ~ system.file(
-#|   glue::glue("app/www/content/{params$lang}/pages/{.x}_social.md"),
+#| child = if (needs) unlist(purrr::map(.x = params$conditions, .f = ~ system.file(
+#|   glue::glue("app/www/content/{params$lang}/pages/needs_{.x}.md"),
 #|   package = "whesApp",
 #|   mustWork = TRUE
 #| )))
 ```
 
 
-
-```{r employment}
-#| child = if (employment) system.file(
-#|   glue::glue("app/www/content/{params$lang}/report/employment_overview.md"),
+```{r solutions}
+#| child = if (solutions) system.file(
+#|   glue::glue("app/www/content/{params$lang}/report/solutions_overview.md"),
 #|   package = "whesApp",
 #|   mustWork = TRUE
 #| )
 ```
 
 ```{r}
-#| child = if (employment) unlist(purrr::map(.x = params$info, .f = ~ system.file(
-#|   glue::glue("app/www/content/{params$lang}/pages/{.x}_employment.md"),
+#| child = if (solutions) unlist(purrr::map(.x = params$conditions, .f = ~ system.file(
+#|   glue::glue("app/www/content/{params$lang}/pages/solutions_{.x}.md"),
 #|   package = "whesApp",
 #|   mustWork = TRUE
 #| )))
 ```
-
-
