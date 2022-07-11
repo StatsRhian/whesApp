@@ -1,3 +1,7 @@
+# whesApp 7.0.59 _2022-07-11_
+
+- add new translations to database
+
 # whesApp 7.0.58 _2022-07-11_
 
 - update report structure
