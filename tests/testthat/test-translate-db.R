@@ -28,3 +28,16 @@ test_that("All indicators present in translation db are unique", {
     dplyr::pull(key)
   expect_false(any(duplicated(ind)))
 })
+
+test_that("All indicators labels are present in translation db", {
+  all_in_translation = function(x) {
+    all(x %in% whesApp:::translate_labels()$EN) #nolint
+  }
+
+  whesApp::indicator_data %>%
+    dplyr::select(whesApp::breakdown_vars) %>%
+    purrr::map(unique) %>%
+    purrr::map_lgl(all_in_translation) %>%
+    all() %>%
+    expect_true()
+})

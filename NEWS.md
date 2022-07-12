@@ -1,3 +1,7 @@
+# whesApp 7.0.61 _2022-07-11_
+
+- Bugfix: Fix labels for ind_070
+
 # whesApp 7.0.60 _2022-07-11_
 
 - Bugfix: Handle second disag
