@@ -1,3 +1,7 @@
+# whesApp 7.0.60 _2022-07-11_
+
+- Bugfix: Handle second disag
+
 # whesApp 7.0.59 _2022-07-11_
 
 - add new translations to database
@@ -61,7 +65,6 @@
 - Add T&Cs
 
 # whesApp 7.0.46 _2022-06-28_
->>>>>>> main
 
 - Update content on landing page
 
