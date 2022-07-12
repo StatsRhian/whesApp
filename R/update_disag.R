@@ -17,7 +17,12 @@ update_disag = function(selected_ind_id,
     unlist()
 
   no_disag_avail = (length(disag_choices) == 1) & (disag_choices[[1]] == "None")
-  single_disag_avail = (length(disag_choices) == 2) & ("None" %in% disag_choices)
+  second_disag_avail = is_second_allowed(selected_ind_id, selected_disag)
+  single_disag_only = ((length(disag_choices) == 2) & ("None" %in% disag_choices)) | (!second_disag_avail)
+
+  if (sum(c(no_disag_avail, second_disag_avail, single_disag_only) == TRUE) != 1) {
+    "Problem with disaggregate checks."
+  }
 
   if (selected_output_type == "infographic") {
     # Always disable disag 2 and set disag2 to None
@@ -42,7 +47,7 @@ update_disag = function(selected_ind_id,
       update_disag_input("disag", "disaggregate_None", "disaggregate_None", lang)
       shinyjs::disable("disag2")
       update_disag_input("disag2", "disaggregate_None", "disaggregate_None", lang)
-    } else if (single_disag_avail) {
+    } else if (single_disag_only) {
 
       # Enable disag and set to choices
       shinyjs::enable("disag")
@@ -100,4 +105,22 @@ set_disag2_to_choices = function(selected_disag, disag_choices, lang) {
   disag_choices_2 = disag_choices[disag_choices != selected_disag]
   search_disag = glue::glue("disaggregate_({paste(disag_choices_2, collapse = '|')})")
   update_disag_input("disag2", search_disag, "disaggregate_None", lang)
+}
+
+is_second_allowed = function(selected_ind_id, selected_disag) {
+  if (selected_disag == "None") {
+    return(FALSE)
+  }
+  whesApp::indicator_data %>%
+    dplyr::filter(.data$ind_id == selected_ind_id) %>%
+    dplyr::filter(!!rlang::sym(selected_disag) != "All") %>%
+    dplyr::select(!!whesApp::breakdown_vars) %>%
+    dplyr::select(-!!selected_disag) %>%
+    purrr::map_lgl(is_all) %>%
+    all() %>%
+    isFALSE()
+}
+
+is_all = function(x) {
+  all(x == "All")
 }
