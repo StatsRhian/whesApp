@@ -288,7 +288,7 @@ source_eurostat,Eurostat,Eurostat
 source_frs,"Family Resources Survey, Department for Work and Pensions","Arolwg Adnoddau Teulu, Adran Gwaith a Phensiynau"
 source_gov,UK Government website,Gwefan Llywodraeth y DU
 source_gpqof,"GP Quality and Outcomes Framework, NHS Wales Informatics Service","Fframwaith Ansawdd a Chanlyniadau Meddygon Teulu (QOF), Gwasanaeth Gwybodeg GIG Cymru"
-source_lfs,"Labour Force Survey, Office for National Statistics","Arolwg y Gweithlu Llafur, Swyddfa Ystadegau Gwladol"""
+source_lfs,"Labour Force Survey, Office for National Statistics","Arolwg y Gweithlu Llafur, Swyddfa Ystadegau Gwladol"
 source_lifeexp,"Health and life expectancies, Office for National Statistics","Iechyd a disgwyliad oes, Swyddfa Ystadegau Gwladol"
 source_mortality,"Mortality statistics, Office for National Statistics","Ystadegau Marwoldeb, Swyddfa Ystadegau Gwladol"
 source_nhsesr,NHS Electronic Staff Record,Cofnod Staff Electronig y GIG
@@ -341,7 +341,7 @@ title_needs_living,Living Conditions,Amodau Byw
 title_needs_overview,Overview,Trosolwg
 title_needs_social,Social and Human Capital,Cyfalaf Cymdeithasol a Dynol
 title_overview,Home Page,Hafan
-title_policy,Policies,Polisďau
+title_policy,Policies,Polisïau
 title_policy_employment,Employment and Working Conditions,Cyflogaeth ac Amodau Gwaith
 title_policy_health,Health Services,Gwasanaethau Iechyd
 title_policy_income,Income Security and Social Protection,Diogelwch Incwm a Diogelu Cymdeithasol
