@@ -1,3 +1,7 @@
+# whesApp 7.0.63 _2022-07-14_
+
+- Disable the report download button while document is generating. Fixes #182.
+
 # whesApp 7.0.62 _2022-07-12_
 
 - Fix typo in CY

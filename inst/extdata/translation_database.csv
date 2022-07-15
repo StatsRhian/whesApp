@@ -173,6 +173,7 @@ disaggregate_Gender,Sex,Rhyw
 disaggregate_None,None,Dim
 download,Download,Lawrlwytho
 generate,Generate Report,Cynhyrchu Adroddiad
+generating,Generating &hellip;,Cynhyrchu &hellip;
 ind_001,"Percentage of adults (16+) reporting fair, bad or very bad health","Canran yr oedolion (16+) sy'n adrodd iechyd gweddol, wael neu wael iawn"
 ind_002,Percentage of students who rate their health as fair or poor,Canran y myfyrwyr sy'n sgorio eu hiechyd yn weddol neu'n wael
 ind_003,"Percentage of adults (16+) with a limiting long-standing illness, disability or infirmity","Canran yr oedolion (16+) sydd â salwch, anabledd neu lesgedd hirdymor cyfyngol"

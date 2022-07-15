@@ -26,6 +26,7 @@ app_ui = function(request) {
       theme = bslib::bs_theme(
         primary = "#005d5d",
         secondary = "#c60158",
+        info = "#669d9d",
         version = 4,
         bootswatch = "united"
       ),
@@ -98,7 +99,7 @@ app_ui = function(request) {
                     shiny::uiOutput("conditions_checkbox"),
                   ) # end column
                 ) # end fluidrow
-              ), # end wellpanel
+              ) # end wellpanel
             ) # end column
           )
         ) # end fluidpage
