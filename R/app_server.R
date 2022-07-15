@@ -112,6 +112,16 @@ app_server = function(input, output, session) {
   output$report = shiny::downloadHandler(
     filename = "report.pdf",
     content = function(file) {
+      # Disable the download button during the operation
+      shinyjs::disable(id = "report")
+      session$sendCustomMessage(type = "disable_download_button",
+                                message = c("report", tr_pull("generating", lang())))
+      on.exit({
+        shinyjs::enable(id = "report")
+        session$sendCustomMessage(type = "enable_download_button",
+                                  message = c("report", tr_pull("generate", lang())))
+      })
+
       # make temp dir
       tmp_dir = tempdir()
 

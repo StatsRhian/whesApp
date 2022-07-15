@@ -9,6 +9,7 @@ add_external_resources = function() {
   shiny::tags$head(
     shinyjs::useShinyjs(),
     shiny::tags$script(type = "text/javascript", src = "www/logo.js"),
+    shiny::tags$script(src = "www/whesApp.js"),
     shiny::tags$script(shiny::HTML("Shiny.addCustomMessageHandler('changetitle', function(x) {document.title=x});")),
     shiny::tags$link(rel = "stylesheet", type = "text/css", href = "www/phw-style.css"),
     shiny::tags$style(
