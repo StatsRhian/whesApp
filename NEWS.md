@@ -1,3 +1,8 @@
+# whesApp 7.0.64 _2022-07-15_
+
+- Make external links in app open in new window.
+- Fix needs_income//A basic income: URL in EN site goes to CY page.
+
 # whesApp 7.0.63 _2022-07-14_
 
 - Disable the report download button while document is generating. Fixes #182.

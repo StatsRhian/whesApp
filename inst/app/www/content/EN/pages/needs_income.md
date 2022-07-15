@@ -1,6 +1,6 @@
 ## Health and income security and social protection
 
-#### [A basic income to improve population health and well-being in Wales?](https://phwwhocc.co.uk/resources/a-basic-income-to-improve-population-health-and-well-being-in-wales/?lang=cy)
+#### [A basic income to improve population health and well-being in Wales?](https://phwwhocc.co.uk/resources/a-basic-income-to-improve-population-health-and-well-being-in-wales/)
 
 *REPORT*
 
