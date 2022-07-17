@@ -41,4 +41,5 @@ This report by Public Health Wales places health equity at the heart of a sustai
 #### [Confronting poverty and income insecurity during COVID-19 through strengthening social protection](https://www.who.int/news-room/events/detail/2021/02/25/default-calendar/who-webinar---confronting-poverty-and-income-insecurity-during-covid-19-through-strengthening-social-protection)
 
 *WEBINAR* (**COVID**)
+
 This webinar is part of a global webinar series by the World Health Organization on the COVID-19 pandemic’s impact on equity and the social determinants of health. The webinar includes discussions on the global evidence on the role of social protection in mitigating the health inequity impacts arising from poverty and income insecurity caused by the COVID-19 pandemic.

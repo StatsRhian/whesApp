@@ -1,3 +1,21 @@
+ <div style="display: flex; width:70%; margin:auto;">
+  <div style="flex: 20%;padding: 5px;">
+    <img src="www/images/health.png" alt="" style="width:100%">
+  </div>
+  <div style="flex: 20%;padding: 5px;">
+    <img src="www/images/income.png" alt="" style="width:100%">
+  </div>
+  <div style="flex: 20%;padding: 5px;">
+    <img src="www/images/living.png" alt="" style="width:100%">
+  </div>
+  <div style="flex: 20%;padding: 5px;">
+    <img src="www/images/social.png" alt="" style="width:100%">
+  </div>
+  <div style="flex: 20%;padding: 5px;">
+    <img src="www/images/employment.png" alt="" style="width:100%">
+  </div>
+</div> 
+
 ## Overview
 
 **Attention to health equity* and achieving healthy prosperous lives for all has never been more important.**
@@ -49,35 +67,35 @@ The Solutions Platform contains:
 The Welsh Health Equity Solutions Platform is organised around an innovative WHO health equity framework of ['five essential conditions’](https://www.who.int/europe/publications/i/item/9789289054256) [p.48] developed by the [WHO European Office for Investment for Health and Development](https://www.who.int/europe/teams/office-for-investment-for-health-development-%28ita%29) in Venice, Italy. The five essential conditions are the multi-sectoral policy action areas to address complex and persistent health gaps and increase opportunities to live healthy and prosperous lives for all.
 
 <details>
-<summary> <img src="www/images/health.png" width="20"/> **Health & health services** </summary>
+<summary> <img src="www/images/health.png" width="20" alt=""/> **Health & health services** </summary>
 
 Policies that aim to ensure availability, accessibility, affordability and quality of preventative and health care services and interventions. For example, health protection, health promotion and improvement, primary, secondary and scheduled care.
 
 </details>
 
 <details>
-<summary> <img src="www/images/income.png" width="20"/> **Health & income and social protection**  </summary>
+<summary> <img src="www/images/income.png" width="20" alt=""/> **Health & income and social protection**  </summary>
 
 Policies that aim to provide economic security and support to reduce the health and social consequences of poverty and low income throughout a person’s life. For example, financial support for parents, older people or unemployed.
 
 </details>
 
 <details>
-<summary> <img src="www/images/living.png" width="20"/> **Health & living conditions** </summary>
+<summary> <img src="www/images/living.png" width="20" alt=""/> **Health & living conditions** </summary>
 
 Policies that aim to ensure opportunities for, and access and exposure to living conditions and environments that have a positive influence on people’s health and well-being. For example, planning, good quality and secure housing, clean air, green spaces.
 
 </details>
 
 <details>
-<summary> <img src="www/images/social.png" width="20"/> **Health & social and human capital** </summary>
+<summary> <img src="www/images/social.png" width="20" alt=""/> **Health & social and human capital** </summary>
 
 Policies that aim to develop and strengthen social relations and community assets, including education, skills, community resources and meaningful social interactions to promote learning, and protect and promote health and well-being throughout a person’s life. For example, improving training, apprenticeship, building community cohesion and resilience, trust, sense of belonging.
 
 </details>
 
 <details>
-<summary> <img src="www/images/employment.png" width="20"/> **Health & employment and working conditions** </summary>
+<summary> <img src="www/images/employment.png" width="20" alt=""/> **Health & employment and working conditions** </summary>
 
 Policies that aim to improve the health impact of employment, working conditions and workplace equality. For example, availability of work, a living wage, physical and mental demands, ensuring health and safety at work.
 

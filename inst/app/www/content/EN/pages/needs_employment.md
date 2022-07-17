@@ -39,6 +39,7 @@ This report presents evidence that certain population groups have been more affe
 #### [Characteristics of those most vulnerable to employment changes during the COVID-19 pandemic: a nationally representative cross-sectional study in Wales](https://pubmed.ncbi.nlm.nih.gov/34193569/)
 
 *RESEARCH ARTICLE* (**COVID**)
+
 This research article reveals that a number of vulnerable population groups experienced detrimental employment outcomes during the initial stage of the COVID-19 pandemic in Wales. It recommends that to ensure that health and wealth inequalities are not exacerbated by COVID-19 or the economic response to the pandemic, interventions should include the promotion of secure employment and target the groups identified as most susceptible to the emerging harms of the pandemic.
 
 #### [COVID-19 and employment changes in Wales: Insights for policy – young people, employment and health](https://phw.nhs.wales/services-and-teams/wider-determinants-of-health-unit/good-fair-work/insights-for-policy-young-people-employment-and-health/)

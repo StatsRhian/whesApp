@@ -96,6 +96,7 @@ Mae'r adroddiad hwn gan Shelter Cymru yn cydnabod y berthynas rhwng tai ac iechy
 #### [Ymdrin â'r Syndemig Cenedlaethol: Problemau ac atebion sy'n seiliedig ar le i anghydraddoldeb iechyd y DU](https://www.instituteofhealthequity.org/resources-reports/addressing-the-national-syndemic-place-based-problems-and-solutions-to-uk-health-inequality)
 
 *ADRODDIAD* (**COVID**)
+
 Mae'r adroddiad hwn gan Brosiectau Polisi Cyhoeddus a'r Sefydliad Tegwch Iechyd yn cyflwyno enghreifftiau o'r hyn y gellir ei wneud i daclo anghydraddoldebau iechyd: gan y system iechyd a gofal, llywodraeth leol a rhanbarthol, y sector gwirfoddol a chymunedol, a chan fusnes, gan weithio gydag unigolion a chymunedau.
 
 #### [Lefelu Iechyd i Fyny: Fframwaith ymarferol sy'n seiliedig ar dystiolaeth](https://www.phpc.cam.ac.uk/pcu/research/research-groups/crmh/research/crmh-health-inequalities/levelling-up-health-a-practical-evidence-based-framework/)

@@ -24,7 +24,7 @@ Mae'r adroddiad hwn gan y Grŵp Seneddol Hollbleidiol (APPG) ar gyfer cymdogaeth
 
 Mae'r erthygl ymchwil hon yn cyflwyno tystiolaeth gan naw gwlad ddatblygol nad oedd strategaethau ymdopi aelwydydd a chymorth gan y llywodraeth yn ddigonol i gynnal safonau byw cyn COVID-19, gan arwain at ansicrwydd bwyd cyffredinol ac amodau economaidd gwael. 
 
-[Canllawiau iechyd a thai Sefydliad Iechyd y Byd: Argymhellion i hyrwyddo tai iach ar gyfer dyfodol cynaliadwy a theg](https://www.who.int/publications/i/item/9789241550376)
+#### [Canllawiau iechyd a thai Sefydliad Iechyd y Byd: Argymhellion i hyrwyddo tai iach ar gyfer dyfodol cynaliadwy a theg](https://www.who.int/publications/i/item/9789241550376)
 
 *CANLLAWIAU*
 

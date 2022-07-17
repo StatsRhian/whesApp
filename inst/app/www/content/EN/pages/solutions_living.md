@@ -42,7 +42,7 @@ This report by Public Health Wales sets out the evidence on the impact of COVID-
 
 #### [Health Impact Assessment (HIA) and Local Development Plans (LDPs): A Toolkit for Practice](https://phwwhocc.co.uk/resources/health-impact-assessment-hia-and-local-development-plans-ldps-a-toolkit-for-practice/)
 
-**TOOLKIT**
+*TOOLKIT*
 
 This toolkit by Public Health Wales outlines the context and policy levers for HIA and land use planning and practical advice and resources which can be used as an accessible reference when required during the development of local development plans (LDPs), strategic development plans (SDPs) and supplementary planning guidance (SPGs). The Toolkit aims to support the ongoing collaboration between the planning and public health sectors in Wales in order to maximize positive health and well-being outcomes through land use planning policies that create healthy, equitable and cohesive communities.
 
@@ -54,7 +54,7 @@ This report by Public Health Wales promotes a better understanding of the broade
 
 #### [No place like home? Exploring the health and well-being impact of COVID-19 on housing and housing insecurity](https://phwwhocc.co.uk/resources/no-place-like-home-exploring-the-health-and-well-being-impact-of-covid-19-on-housing-and-housing-insecurity/?lang=cy)
 
-*REPORT* (*COVID*)
+*REPORT* (**COVID**)
 
 This report by Public Health Wales is based on a comprehensive and participatory Health Impact Assessment (HIA) explores the health and well-being impact of COVID-19 on housing and housing insecurity. The report sets out actions to promote individual, community and societal well-being. The evidence in this report can assist policy and decision-makers when considering the impact of the pandemic on housing and housing insecurity, so that potential inequalities and negative impacts can be reduced, and future opportunities for positive health and well-being maximised.
 

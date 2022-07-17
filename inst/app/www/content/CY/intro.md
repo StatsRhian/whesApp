@@ -1,10 +1,28 @@
+ <div style="display: flex; width:70%; margin:auto;">
+  <div style="flex: 20%;padding: 5px;">
+    <img src="www/images/health.png" alt="" style="width:100%">
+  </div>
+  <div style="flex: 20%;padding: 5px;">
+    <img src="www/images/income.png" alt="" style="width:100%">
+  </div>
+  <div style="flex: 20%;padding: 5px;">
+    <img src="www/images/living.png" alt="" style="width:100%">
+  </div>
+  <div style="flex: 20%;padding: 5px;">
+    <img src="www/images/social.png" alt="" style="width:100%">
+  </div>
+  <div style="flex: 20%;padding: 5px;">
+    <img src="www/images/employment.png" alt="" style="width:100%">
+  </div>
+</div> 
+
 ## Trosolwg
 
 **Ni fu sylw i degwch iechyd* a sicrhau bywydau ffyniannus ac iach i bawb erioed yn bwysicach.**
 
 Mae gan Gymru hanes a thraddodiad hir o gynnal polisïau cyffredinol, lles, cynaladwyedd ac ymagweddau at les y boblogaeth sy'n seiliedig ar hawliau. Fodd bynnag, mae'r tueddiadau o ran lleihau'r bwlch iechyd yn gymysg, mae cyfradd y gwelliant yn arafach na'r disgwyl, ac mae grwpiau newydd yn dod i'r amlwg gyda risg anghymesur o uwch o iechyd gwael a marwolaeth a chlefyd cynamserol. 
 
-**Mae annhegwch iechyd yn fater hirsefydlog yng Nghymru**, fel y mae mewn llawer o wledydd ledled y byd. Maent yn effeithio'n anghymesur ar bobl, grwpiau a chymunedau difreintiedig, a'u ddeilliannau iechyd, yn enwedig ymhlith y rhai sy'n byw yn y [rhannau mwyaf difreintiedig o'r wlad](https://llyw.cymru/adolygiad-o-dystiolaeth-am-anfantais-economaidd-gymdeithasol-ac-anghydraddoldebau-canlyniadau-html)neu'r rhai sydd ag anghenion neu fregusrwydd nas diwallir. Y canlyniad yw bod ein cymdeithasau'n parhau i fod ar ei hôl hi o ran iechyd a lles, ac mae hyn yn ei dro yn atal eu cyfleoedd i fyw bywydau llawn a llewyrchus.
+**Mae annhegwch iechyd yn fater hirsefydlog yng Nghymru**, fel y mae mewn llawer o wledydd ledled y byd. Maent yn effeithio'n anghymesur ar bobl, grwpiau a chymunedau difreintiedig, a'u ddeilliannau iechyd, yn enwedig ymhlith y rhai sy'n byw yn y [rhannau mwyaf difreintiedig o'r wlad](https://llyw.cymru/adolygiad-o-dystiolaeth-am-anfantais-economaidd-gymdeithasol-ac-anghydraddoldebau-canlyniadau-html) neu'r rhai sydd ag anghenion neu fregusrwydd nas diwallir. Y canlyniad yw bod ein cymdeithasau'n parhau i fod ar ei hôl hi o ran iechyd a lles, ac mae hyn yn ei dro yn atal eu cyfleoedd i fyw bywydau llawn a llewyrchus.
 
 **Nid yw annhegwch iechyd yn anochel**. Mae'n deillio o anghydraddoldebau o fewn a rhwng gwledydd a chymdeithasau, ac yn ganlyniad i [ffactorau niferus ac amrywiol](https://www.who.int/publications/m/item/health-equity-and-its-determinants) gan gynnwys yr amodau y mae pobl yn cael eu geni, yn tyfu i fyny, yn byw, yn gweithio ac yn heneiddio ynddynt, ac o stigma a gwahaniaethu, megis ar sail hil a rhyw. Gall y materion hyn ddwysáu a gwaethygu ei gilydd, ac yn aml maent yn arwain at effeithiau negyddol gydol oes, megis deilliannau iechyd corfforol a meddyliol gwaeth. 
 
@@ -51,35 +69,35 @@ Gweler y fideo cyfarwyddiadol ar sut i ddod o hyd i'r hyn sydd ei angen arnoch a
 Mae Llwyfan Datrysiadau Tegwch Iechyd Cymru wedi'i drefnu o amgylch fframwaith tegwch iechyd blaengar Sefydliad Iechyd y Byd o ['bum amod hanfodol'](https://www.euro.who.int/en/publications/abstracts/health-equity-status-report-2019) a ddatblygwyd gan [Swyddfa Ewropeaidd Sefydliad Iechyd y Byd ar gyfer Buddsoddi mewn Iechyd a Datblygu](https://www.euro.who.int/en/about-us/organization/office-locations/who-european-office-for-investment-for-health-and-development,-venice,-italy) yn Fenis, yr Eidal. Y pum amod hanfodol yw'r meysydd gweithredu polisi aml-sectoraidd i ymdrin â bylchau iechyd cymhleth a pharhaus a chynyddu cyfleoedd i bawb fyw bywydau iach a llewyrchus. 
 
 <details>
-<summary> <img src="www/images/health.png" width="20"/> **Iechyd a gwasanaethau iechyd** </summary>
+<summary> <img src="www/images/health.png" width="20" alt=""/> **Iechyd a gwasanaethau iechyd** </summary>
 
 Polisïau sy'n ceisio sicrhau argaeledd, hygyrchedd, fforddadwyedd ac ansawdd gwasanaethau ac ymyriadau ataliol a gofal iechyd. Er enghraifft, diogelu iechyd, hybu a gwella iechyd, gofal sylfaenol, eilaidd a gofal wedi'i drefnu.
 
 </details>
 
 <details>
-<summary> <img src="www/images/income.png" width="20"/> **Iechyd ac incwm a diogelu cymdeithasol**  </summary>
+<summary> <img src="www/images/income.png" width="20" alt=""/> **Iechyd ac incwm a diogelu cymdeithasol**  </summary>
 
 Polisïau sydd â'r nod o ddarparu sicrwydd a chymorth economaidd i leihau canlyniadau iechyd a chymdeithasol sy'n deillio o dlodi ac incwm isel drwy gydol bywyd unigolyn. Er enghraifft, cymorth ariannol i rieni, pobl hŷn neu bobl ddi-waith. 
 
 </details>
 
 <details>
-<summary> <img src="www/images/living.png" width="20"/> **Iechyd ac amodau byw** </summary>
+<summary> <img src="www/images/living.png" width="20" alt=""/> **Iechyd ac amodau byw** </summary>
 
 Polisïau sydd â'r nod o sicrhau cyfleoedd ar gyfer, a mynediad ac amlygiad i, amodau byw ac amgylcheddau sy'n cael dylanwad cadarnhaol ar iechyd a lles pobl. Er enghraifft, cynllunio, tai diogel o ansawdd da, aer glân, mannau gwyrdd.
 
 </details>
 
 <details>
-<summary> <img src="www/images/social.png" width="20"/> **Iechyd a chyfalaf cymdeithasol a dynol** </summary>
+<summary> <img src="www/images/social.png" width="20" alt=""/> **Iechyd a chyfalaf cymdeithasol a dynol** </summary>
 
 Polisïau sydd â'r nod o ddatblygu a chryfhau cysylltiadau cymdeithasol ac asedau cymunedol, gan gynnwys addysg, sgiliau, adnoddau cymunedol a phwrpasol rhyngweithio cymdeithasol i hyrwyddo dysgu, a diogelu a hyrwyddo iechyd a lles drwy gydol bywyd rhywun. Er enghraifft, gwella hyfforddiant, prentisiaethau, adeiladu cydlyniant cymunedol a gwydnwch, ymddiriedaeth, ymdeimlad o berthyn.
 
 </details>
 
 <details>
-<summary> <img src="www/images/employment.png" width="20"/> **Iechyd a chyflogaeth ac amodau gweithio** </summary>
+<summary> <img src="www/images/employment.png" width="20" alt=""/> **Iechyd a chyflogaeth ac amodau gweithio** </summary>
 
 Polisïau sydd â'r nod o wella effaith cyflogaeth, amodau gweithio a chydraddoldeb yn y gweithle ar iechyd. Er enghraifft, argaeledd gwaith, cyflog byw, gofynion corfforol a meddyliol, sicrhau iechyd a diogelwch yn y gwaith.
 

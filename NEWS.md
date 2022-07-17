@@ -1,3 +1,8 @@
+# whesApp 7.0.65 _2022-07-15_
+
+- Fix formatting issues in md documents
+- Add empty alt text
+
 # whesApp 7.0.64 _2022-07-15_
 
 - Make external links in app open in new window.

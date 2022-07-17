@@ -39,6 +39,7 @@ Mae'r canllaw ymarferol hwn gan Iechyd Cyhoeddus Cymru yn offeryn i wella llywod
 #### [Gosod tegwch iechyd wrth wraidd ymateb ac adferiad cynaliadwy COVID-19: Adeiladu bywydau llewyrchus i bawb yng Nghymru](https://phwwhocc.co.uk/resources/welsh-health-equity-status-report-whesri/?lang=cy)
 
 *ADRODDIAD* (**COVID**)
+
 Mae'r adroddiad hwn gan Iechyd Cyhoeddus Cymru yn rhoi tegwch iechyd wrth wraidd ymateb ac adfer cynaliadwy yn sgil y pandemig COVID-19 ac yn archwilio effeithiau tarfu ar addysg, defnyddio technoleg ddigidol a chyfryngau cymdeithasol, a gwirfoddoli yng Nghymru. 
 
 #### [Cyfranogiad fel ysgogydd i degwch iechyd](https://www.euro.who.int/en/publications/abstracts/participation-as-a-driver-of-health-equity-2019)
