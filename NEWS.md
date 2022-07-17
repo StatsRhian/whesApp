@@ -1,3 +1,8 @@
+# whesApp 7.0.66 _2022-07-15_
+
+- Add PDFs
+- Fix links 
+
 # whesApp 7.0.65 _2022-07-15_
 
 - Fix formatting issues in md documents

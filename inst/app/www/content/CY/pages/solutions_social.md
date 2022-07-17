@@ -1,6 +1,6 @@
 ## Iechyd a chyfalaf cymdeithasol a dynol
 
-Gwyddys bod cyfalaf dynol a chyfalaf cymdeithasol yn cael effaith ar iechyd a lles. [Mae tystiolaeth o Ewrop]() yn awgrymu y gall ymyriadau polisi sydd wedi'u targedu at wella cyfalaf cymdeithasol unigol wella iechyd unigolion yn uniongyrchol a chyfrannu at gyfalaf cymdeithasol cymunedol, gan atgyfnerthu rôl fuddiol cyfalaf cymdeithasol unigol.
+Gwyddys bod cyfalaf dynol a chyfalaf cymdeithasol yn cael effaith ar iechyd a lles. [Mae tystiolaeth o Ewrop](https://www.euro.who.int/__data/assets/pdf_file/0005/170078/Is-Social-Capital-good-for-your-health.pdf) yn awgrymu y gall ymyriadau polisi sydd wedi'u targedu at wella cyfalaf cymdeithasol unigol wella iechyd unigolion yn uniongyrchol a chyfrannu at gyfalaf cymdeithasol cymunedol, gan atgyfnerthu rôl fuddiol cyfalaf cymdeithasol unigol.
 
 **Cyfalaf Dynol**
 
@@ -8,7 +8,7 @@ Mae diffiniadau o gyfalaf dynol yn cwmpasu'r syniad y ceir buddsoddiadau mewn po
 
 Mae cyfalaf dynol yn cronni trwy gydol oes a gall profiadau plentyndod cynnar gael effeithiau gydol oes, gweler Ffigur 1.
 
-![](solutions-social-fig1.png)
+![Adnodd uniaith Saesneg](solutions-social-fig1.png)
 
 **Ffigur 1:  Effeithiau cyfansawdd ennill cyfalaf dynol drwy gydol oes. Ffynhonnell:** [Ymgynghoriad ar Ddangosyddion Cyfalaf Dynol y Swyddfa Ystadegau Gwladol](https://consultations.ons.gov.uk/well-being-inequalities-sustainability-and-environment/indicator-based-approach-to-measuring-human-capita/supporting_documents/Human_capital_consultation_final.pdf)
 

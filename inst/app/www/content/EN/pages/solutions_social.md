@@ -1,6 +1,6 @@
 ## Health and social and human capital
 
-Human capital and social capital are known to have an impact on health and well-being. [Evidence from Europe]() suggests that policy interventions targeted at improving individual social capital can directly improve individual health and contribute to community social capital, reinforcing the beneficial role of individual social capital.
+Human capital and social capital are known to have an impact on health and well-being. [Evidence from Europe](https://www.euro.who.int/__data/assets/pdf_file/0005/170078/Is-Social-Capital-good-for-your-health.pdf) suggests that policy interventions targeted at improving individual social capital can directly improve individual health and contribute to community social capital, reinforcing the beneficial role of individual social capital.
 
 **Human Capital**
 
@@ -8,7 +8,7 @@ Definitions of human capital encompass the notion that there are investments in 
 
 Human capital accumulates over a lifetime and early childhood experiences can have lifelong impacts, see Figure 1.
 
-![](solutions-social-fig1.png)
+![English-only source](solutions-social-fig1.png)
 
 **Figure 1:  Compound effects of gaining human capital throughout life. Source:** [ONS Human Capital Indicators Consultation](https://consultations.ons.gov.uk/well-being-inequalities-sustainability-and-environment/indicator-based-approach-to-measuring-human-capita/supporting_documents/Human_capital_consultation_final.pdf)
 
