@@ -52,3 +52,8 @@ This report by Public Health Wales places health equity at the heart of a sustai
 
 This guidebook by the Health Workforce Department of the World Health Organization provides a comprehensive overview of the health labour market, offers guidance on how to analyse and understand its dynamics, and identifies key steps to undertake a health labour market analysis. It also facilitates the implementation of standardized health labour market analysis approaches in supporting countries to answer key policy questions relating to health and care workers.
 
+#### [Fair work for health, well-being and equity](https://phw.nhs.wales/services-and-teams/wider-determinants-of-health-unit/fair-work-for-health-well-being-and-equity/)
+
+*ANIMATION AND RESOURCES*
+
+This set of resources by Public Health Wales recognises that work is a key building block to health and well-being and that, in turn, being in good health supports work and the economy. The animation describes action on fair work for local and regional agencies. The resources include a guide for delivering fair work for health, wellbeing and equity, an expert panel report and case studies. 

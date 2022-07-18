@@ -2,14 +2,12 @@
 
 **Overview**
 
-Long-standing and persistent health inequity is as evident in Wales as it is across Europe and the rest of the world. 
+Long-standing and persistent health inequity is as evident in Wales as it is across Europe and the rest of the world. The United Nations [2030 Agenda for Sustainable Development](https://www.un.org/sustainabledevelopment/development-agenda/) sets 17 [Sustainable Development Goals](https://www.un.org/sustainabledevelopment/sustainable-development-goals/) (SDGs, or Global Goals) with [Goal 10](https://sdgs.un.org/goals/goal10) explicitly focusing on reducing inequalities; and all other Goals having a direct or indirect impact on people’s wellbeing and the health gap. Particularly relevant Goals are [Goal 1 No poverty](https://sdgs.un.org/goals/goal1); [Goal 2 Zero hunger](https://sdgs.un.org/goals/goal2); [Goal 3 Good Health and Well-being](https://sdgs.un.org/goals/goal3); [Goal 4 Quality education](https://sdgs.un.org/goals/goal4); [Goal 5 Gender Equality](https://sdgs.un.org/goals/goal5) and [Goal 8 Decent work and economic growth](https://sdgs.un.org/goals/goal8).
 
-The United Nations [2030 Agenda for Sustainable Development](https://www.un.org/sustainabledevelopment/development-agenda/) sets 17 [Sustainable Development Goals](https://www.un.org/sustainabledevelopment/sustainable-development-goals/) (SDGs, or Global Goals) with [Goal 10](https://sdgs.un.org/goals/goal10) explicitly focusing on reducing inequalities; and all other Goals having a direct or indirect impact on people’s wellbeing and the health gap. Particularly relevant Goals are [Goal 1 No poverty](https://sdgs.un.org/goals/goal1); [Goal 2 Zero hunger](https://sdgs.un.org/goals/goal2); G[oal 3 Good Health and Well-being](https://sdgs.un.org/goals/goal3); [Goal 4 Quality education](https://sdgs.un.org/goals/goal4); [Goal 5 Gender Equality](https://sdgs.un.org/goals/goal5) and [Goal 8 Decent work and economic growth](https://sdgs.un.org/goals/goal8).
-
-*SDGs explicitly related to improving health and equity*
-
-![English-only source](international-overview-fig1.png) 
-
+<p style="text-align:center;">
+<img src="international-overview-fig1.png" alt="Sustainable development goals 1, 2, 3, 4, 5, 8 and 10. Adapted from United Nations Department of Economic and Social Affairs, Sustainable Development, SDG poster and individual goals for web and print. English-only source." width="60%">
+</p>
+ 
 Improving health and well-being for all, reducing health inequities and ensuring no one is left behind can bring wider economic, social and environmental benefits to populations, contributing to inclusive economic growth and sustainable development. However, progress towards the SDGs across the world has been [stalled by the Coronavirus pandemic](https://www.who.int/news-room/spotlight/the-impact-of-covid-19-on-global-health-goals). 
 
 Aligned with the SDGs, the [WHO’s Thirteenth General Programme of Work 2019–2023](https://www.who.int/about/what-we-do/thirteenth-general-programme-of-work-2019---2023) aims to ensure healthy lives and promote well-being for all at all ages. To drive and facilitate implementation, the [WHO European Office for Investment for Health and Development](https://www.who.int/europe/teams/office-for-investment-for-health-development-(ita)) in Venice, Italy, developed the [Health Equity Status Report initiative (HESRi)](https://www.who.int/europe/initiatives/health-equity-status-report-initiative) looking into the key challenges, opportunities and options to: a) remove the barriers that are holding people back in health and in life; and b) create the conditions for all people to prosper and flourish in health and in life. It also provides a cutting-edge methodology and a suite of tools to promote and support policy action for health equity and well-being. 

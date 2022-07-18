@@ -1,3 +1,8 @@
+# whesApp 7.0.68 _2022-07-18_
+
+- update images
+- add new resource
+
 # whesApp 7.0.67 _2022-07-18_
 
 - Fixes #184: Inherit position and adjust width of `div#insert_footer`.
