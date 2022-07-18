@@ -51,3 +51,9 @@ Mae'r adroddiad hwn gan Iechyd Cyhoeddus Cymru yn rhoi tegwch iechyd wrth wraidd
 *CANLLAW*
 
 Mae'r canllaw hwn gan Adran Gweithlu Iechyd Sefydliad Iechyd y Byd yn darparu trosolwg cynhwysfawr o'r farchnad lafur iechyd, yn cynnig arweiniad ar sut i ddadansoddi a deall ei ddeinameg, ac yn nodi camau allweddol i ymgymryd â dadansoddiad o'r farchnad lafur iechyd. Mae hefyd yn hwyluso gweithredu ymagweddau dadansoddi'r farchnad lafur iechyd safonedig wrth gefnogi gwledydd i ateb cwestiynau polisi allweddol mewn perthynas â gweithwyr iechyd a gofal.
+
+#### [Gwaith teg ar gyfer iechyd, llesiant a thegwch](https://icc.gig.cymru/gwasanaethau-a-thimau/uned-penderfynyddion-iechyd-ehangach/gwaith-teg-ar-gyfer-iechyd-llesiant-a-thegwch/)
+
+*ANIMEIDDIO AC ADNODDAU*
+
+Mae’r set hon o adnoddau gan Iechyd Cyhoeddus Cymru yn cydnabod bod gwaith yn floc adeiladu allweddol i iechyd a llesiant ac tn ei dro, mae cael iechyd da yn cefnogi gwaith a’r economi. Mae'r animeiddiad yn disgrifio gweithredu ar waith teg i asiantaethau lleol a rhanbarthol. Mae’r adnoddau’n cynnwys canllaw ar gyfer cyflawni gwaith teg ar gyfer iechyd, llesiant a thegwch, adroddiad panel arbenigol ac astudiaethau achos. 
