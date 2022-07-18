@@ -1,3 +1,7 @@
+# whesApp 7.0.67 _2022-07-18_
+
+- Fixes #184: Inherit position and adjust width of `div#insert_footer`.
+
 # whesApp 7.0.66 _2022-07-15_
 
 - Add PDFs
