@@ -31,16 +31,8 @@ app_ui = function(request) {
         bootswatch = "united"
       ),
       header = add_external_resources(),
-      shiny::tabPanel(
-        translateTitleUI("overview"),
-        shiny::br(),
-        shiny::br(),
-        shiny::uiOutput("intro_md")
-      ),
       shiny::navbarMenu(
         translateTitleUI("data"),
-        shiny::tabPanel(translateTitleUI("data_overview"),
-                        shiny::uiOutput("data_overview")),
         dataUI("outcome"),
         dataUI("behaviour"),
         dataUI("health"),
@@ -53,48 +45,6 @@ app_ui = function(request) {
           shiny::br(),
           reactable::reactableOutput("indicator_search")
         )
-      ),
-      # additional tabs
-      navbarPagesUI("economics"),
-      navbarPagesUI("policy"),
-      navbarPagesUI("evidence"),
-      navbarPagesUI("needs"),
-      navbarPagesUI("solutions"),
-      # reporting page
-      shiny::tabPanel(
-        translateTitleUI("report"),
-        shiny::br(),
-        shiny::br(),
-        shiny::fluidPage(
-          shiny::h2(translateTitleUI("report_page")),
-          shiny::br(),
-          shiny::fluidRow(
-            shiny::column(
-              6,
-              shiny::uiOutput("report_md"),
-              shiny::br(),
-              shiny::uiOutput("generate_report_button")
-            ),
-            shiny::column(
-              6,
-              shiny::wellPanel(
-                shiny::fluidRow(
-                  shiny::column(
-                    12,
-                    # checkboxes conditions and pages
-                    shiny::uiOutput("pages_checkbox"),
-                    shiny::br(),
-                    shiny::uiOutput("conditions_checkbox"),
-                  ) # end column
-                ) # end fluidrow
-              ) # end wellpanel
-            ) # end column
-          )
-        ) # end fluidpage
-      ),
-      shiny::tabPanel(
-        translateTitleUI("terms_conditions"),
-        shiny::uiOutput("terms_md")
       )
     )
   )

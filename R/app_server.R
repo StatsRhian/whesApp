@@ -14,10 +14,6 @@ app_server = function(input, output, session) {
                ignoreInit = TRUE,
                once = TRUE))
 
-  # Call modules for additional pages navbars
-  pages = c("policy", "economics", "evidence", "needs", "solutions")
-  purrr::map(pages, ~ navbarPagesServer(.x, lang = lang))
-
   # Call module for translating titles
   titles = whesApp::translate_db %>%
     dplyr::pull(.data$key) %>%
@@ -25,136 +21,17 @@ app_server = function(input, output, session) {
     stringr::str_remove("^title_")
   purrr::map(titles, ~ translateTitleServer(.x, lang = lang))
 
-  # Click-able images on home page
-  purrr::map(whesApp::essential_conditions[3:7], onclick_tabset)
-
   # Indicator search table
   output$indicator_search = reactable::renderReactable({
     create_contents_table(lang = lang())
-  })
-
-  # Text on homepage
-  output$intro_md = shiny::reactive({
-    filename = app_sys(glue::glue("app/www/content/{lang()}/intro.md"))
-    shiny::includeMarkdown(filename)
   })
 
   # Update browser tab title and reactable defaults
   shiny::observeEvent(lang(), {
     title = tr_pull("title_whes_platform", lang())
     session$sendCustomMessage("changetitle", title)
-
-    translate_reactable_options(lang()) # Translate options for all reactable tables
-  })
-
-  # Add data overview page
-  output$data_overview = shiny::renderUI({
-    filename = app_sys(glue::glue("app/www/content/{lang()}/pages/data_overview.md"))
-    if (file.exists(filename)) {
-      shiny::includeMarkdown(filename)
-    } else {
-      shiny::includeMarkdown(app_sys(glue::glue("app/www/content/{lang()}/pages/missing.md")))
-    }
-  })
-
-  # Reporting page
-  # Intro text on app page
-  output$report_md = shiny::reactive({
-    filename = app_sys(glue::glue("app/www/content/{lang()}/reporting_page_intro.md"))
-    shiny::includeMarkdown(filename)
-  })
-
-  # Checkboxes
-  output$conditions_checkbox = shiny::renderUI({
-    conditions_choices = c("health", "income", "living", "social", "employment")
-    names(conditions_choices) = c(tr_pull(key = "title_data_health", lang()),
-                                  tr_pull(key = "title_data_income", lang()),
-                                  tr_pull(key = "title_data_living", lang()),
-                                  tr_pull(key = "title_data_social", lang()),
-                                  tr_pull(key = "title_data_employment", lang()))
-    shiny::checkboxGroupInput(
-      "report_conditions",
-      label = tr_pull(key = "report_conditions_label", lang()),
-      choices = conditions_choices
-    )
-  })
-
-  output$pages_checkbox = shiny::renderUI({
-    pages_choices = c("economics", "policy", "evidence", "needs", "solutions")
-    names(pages_choices) = c(tr_pull(key = "title_economics", lang()),
-                             tr_pull(key = "title_policy", lang()),
-                             tr_pull(key = "title_evidence", lang()),
-                             tr_pull(key = "title_needs", lang()),
-                             tr_pull(key = "title_solutions", lang()))
-    shiny::checkboxGroupInput(
-      "report_info",
-      label = tr_pull(key = "report_pages_label", lang()),
-      choices = pages_choices
-    )
-  })
-
-  # Download button
-  output$generate_report_button = shiny::renderUI({
-    shinyjs::disabled(shiny::downloadButton(
-      "report",
-      label = tr_pull("generate", lang())
-    ))
-  })
-
-  shiny::observe({
-    shinyjs::toggleState(
-      id = "report",
-      condition = (!is.null(input$report_conditions) & !is.null(input$report_info))
-    )
-  })
-
-  # Generate report
-  output$report = shiny::downloadHandler(
-    filename = "report.pdf",
-    content = function(file) {
-      # Disable the download button during the operation
-      shinyjs::disable(id = "report")
-      session$sendCustomMessage(type = "disable_download_button",
-                                message = c("report", tr_pull("generating", lang())))
-      on.exit({
-        shinyjs::enable(id = "report")
-        session$sendCustomMessage(type = "enable_download_button",
-                                  message = c("report", tr_pull("generate", lang())))
-      })
-
-      # make temp dir
-      tmp_dir = tempdir()
-
-      # define files
-      tempReport = file.path(tmp_dir, "rmarkdown/templates/report/skeleton/skeleton.Rmd")
-
-      #copy files
-      file.copy(app_sys("rmarkdown"),
-                tmp_dir,
-                recursive = TRUE,
-                overwrite = TRUE)
-
-      #report params
-      report_params = list(title = tr_pull("title_whes_platform", lang()),
-                           lang = lang(),
-                           author = "",
-                           date = format(Sys.Date(), format = "%d/%m/%Y"),
-                           conditions = input$report_conditions,
-                           info = input$report_info)
-      # render report
-      rmarkdown::render(
-        tempReport,
-        output_file = file,
-        envir = new.env(parent = globalenv()),
-        params = report_params
-      )
-    }
-  )
-
-  # Terms and Conditions
-  output$terms_md = shiny::reactive({
-    filename = app_sys(glue::glue("app/www/content/{lang()}/terms.md"))
-    shiny::includeMarkdown(filename)
+    # Translate options for all reactable tables
+    translate_reactable_options(lang())
   })
 
   # add footer
