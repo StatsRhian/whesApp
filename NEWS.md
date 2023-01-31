@@ -1,3 +1,7 @@
+# whesApp 8.0.0 _2023-01-31_
+
+- delete all pages no longer required
+
 # whesApp 7.0.68 _2022-07-18_
 
 - update images
