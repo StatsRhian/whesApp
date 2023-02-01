@@ -1,3 +1,7 @@
+# whesApp 8.0.4 _2023-02-01_
+
+- Resolves #188: Add a skip link to the page.
+
 # whesApp 8.0.3 _2023-02-01_
 
 - Fixes #197: Input radios no longer nested inside buttons.
