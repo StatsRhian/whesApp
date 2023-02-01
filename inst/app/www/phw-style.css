@@ -11,6 +11,20 @@ colgroup {
     border-right: solid
 }
 
+#skiplink {
+    position: absolute;
+    transform: translateY(-100%);
+}
+#skiplink:focus {
+  	transform: translateY(0%);
+  	background-color: #fd0;
+  	padding: 8px 20px;
+  	z-index: 9999;
+  	width: 100%;
+  	text-decoration: underline;
+  	color: #000;
+}
+
 .nav .navbar-brand {
     white-space: normal;
 }

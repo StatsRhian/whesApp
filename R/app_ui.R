@@ -4,6 +4,11 @@
 #' @noRd
 app_ui = function(request) {
   shiny::tagList(
+    shiny::tags$a(
+      id = "skiplink",
+      href = "#main-content-skip",
+      "Skip to Main Content"
+    ),
     shiny::div(
       style = "text-align: center; color: #fff; background-color: #005d5d; padding: 5px; margin: 0",
       shiny::titlePanel(
@@ -30,7 +35,10 @@ app_ui = function(request) {
         version = 4,
         bootswatch = "united"
       ),
-      header = add_external_resources(),
+      header = shiny::tagList(
+        shiny::tags$div(id = "main-content-skip"),
+        add_external_resources()
+      ),
       lang = "en",
       shiny::navbarMenu(
         translateTitleUI("data"),
