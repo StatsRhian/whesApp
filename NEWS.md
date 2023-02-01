@@ -1,3 +1,9 @@
+# whesApp 8.0.3 _2023-02-01_
+
+- Fixes #197: Input radios no longer nested inside buttons.
+- Fixes #228: Focus order no longer jumps on changing this input. This is a side
+effect of fixing #197.
+
 # whesApp 8.0.2 _2023-02-01_
 
 - Fix #194, Fix #195, Fix #196: Correct aria grouping and `aria-label` for radio

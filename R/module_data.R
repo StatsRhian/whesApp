@@ -42,17 +42,15 @@ dataUI = function(id) {
         shiny::fluidRow(
           shiny::column(
             3,
-            shinyWidgets::radioGroupButtons(
-              ns("output_type"),
+            shiny::radioButtons(
+              inputId = ns("output_type"),
               label = tr_pull("select_output_type", "EN"),
               choices = c(
                 "Infographic" = "infographic",
                 "Bar chart" = "barchart",
                 "Table" = "table"
               ),
-              direction = "vertical",
-              width = "100%",
-              status = "primary"
+              width = "100%"
             ),
             # disag1
             shiny::selectInput(ns("disag"),
@@ -148,12 +146,11 @@ dataServer = function(id, lang) {
 
     # Translate radio group buttons
     shiny::observeEvent(lang(), {
-      shinyWidgets::updateRadioGroupButtons(
+      shiny::updateRadioButtons(
         session,
         inputId = "output_type",
         label = tr_pull("select_output_type", lang()),
-        choices = sort_output_choice(lang = lang()),
-        status = "primary"
+        choices = sort_output_choice(lang = lang())
       )
     })
 
