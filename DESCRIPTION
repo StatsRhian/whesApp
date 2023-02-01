@@ -23,7 +23,6 @@ Imports:
     scales,
     shiny,
     shinyjs,
-    shinyWidgets,
     showtext,
     stringr,
     sysfonts,

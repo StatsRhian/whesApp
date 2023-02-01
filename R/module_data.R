@@ -19,7 +19,7 @@ dataUI = function(id) {
         shiny::fluidRow(
           shiny::column(
             12,
-            shinyWidgets::pickerInput(
+            shiny::selectInput(
               inputId = ns("ind_id"),
               label = tr_pull("select_ind_label", "EN"),
               choices =
@@ -29,12 +29,9 @@ dataUI = function(id) {
                 ) %>%
                   dplyr::select(.data$name, .data$ind_id) %>%
                   tibble::deframe(),
-              options = shinyWidgets::pickerOptions(
-                noneResultsText = tr_pull("table_no_entries", "EN"),
-                liveSearch = TRUE
-              ),
-              width = "90%"
-            )
+              width = "90%",
+              selectize = FALSE
+            ),
           ),
         ), # End: fluid row,
 
@@ -62,7 +59,8 @@ dataUI = function(id) {
                 "Deprivation" = "Deprivation",
                 "Education level" = "Education"
               ),
-              selected = "None"
+              selected = "None",
+              selectize = FALSE
             ),
             # disag2
             shiny::selectInput(ns("disag2"),
@@ -73,7 +71,8 @@ dataUI = function(id) {
                 "Deprivation" = "Deprivation",
                 "Education level" = "Education"
               ),
-              selected = "Age"
+              selected = "Age",
+              selectize = FALSE
             ),
             # ci
             shiny::uiOutput(ns("ci_button")),
@@ -132,15 +131,11 @@ dataServer = function(id, lang) {
 
     # Translate "Select indicator"
     shiny::observeEvent(lang(), {
-      shinyWidgets::updatePickerInput(
+      shiny::updateSelectInput(
         session,
         inputId = "ind_id",
         label = tr_pull("select_ind_label", lang()),
-        choices = tr_deframe_inds(key_group = id, lang = lang()),
-        options = shinyWidgets::pickerOptions(
-          noneResultsText = tr_pull("table_no_entries", lang()),
-          liveSearch = TRUE
-        )
+        choices = tr_deframe_inds(key_group = id, lang = lang())
       )
     })
 
@@ -195,10 +190,10 @@ dataServer = function(id, lang) {
 
     output$ci_button = shiny::renderUI({
       shinyjs::disabled(
-        shinyWidgets::awesomeCheckbox(session$ns("show_ci"),
+        shiny::checkboxInput(
+          inputId = session$ns("show_ci"),
           label = tr_pull("show_ci", lang()),
-          value = TRUE,
-          status = "default"
+          value = TRUE
         )
       )
     })
