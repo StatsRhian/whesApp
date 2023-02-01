@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+
   // Set page language
   function setPageLanguage(language) {
     $("html").attr("lang", language);
@@ -6,6 +7,11 @@ $( document ).ready(function() {
 
   // Let Shiny server modify page language
   Shiny.addCustomMessageHandler("setLanguage", setPageLanguage);
+
+  // Let Shiny server update page title
+  Shiny.addCustomMessageHandler('changetitle', function(x) {
+    document.title = x
+  });
 
   // Make hyperlinks open in new tabs.
   new MutationObserver(function(mutations) {
