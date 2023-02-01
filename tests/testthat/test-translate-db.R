@@ -1,3 +1,7 @@
+test_that("Dimensions", {
+  expect_equal(ncol(whesApp::translate_db), 3)
+})
+
 test_that("Indicators wording is correct in translation db", {
   ind1 = whesApp::indicator_info %>% dplyr::pull(name)
   ind2 = whesApp::translate_db %>%
