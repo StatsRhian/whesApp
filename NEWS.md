@@ -1,3 +1,7 @@
+# whesApp 8.0.6 _2023-02-01_
+
+- Resolves #227: Load plots on startup
+
 # whesApp 8.0.5 _2023-02-01_
 
 - Resolves #226: Bug in CY plots
