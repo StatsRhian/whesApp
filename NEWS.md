@@ -1,3 +1,9 @@
+# whesApp 8.0.2 _2023-02-01_
+
+- Fix #194, Fix #195, Fix #196: Correct aria grouping and `aria-label` for radio
+buttons that change app language.
+- Move changetitle Shiny custom handler to JS file
+
 # whesApp 8.0.1 _2023-01-31_
 
 - Fixes #189: Set HTML language of page
