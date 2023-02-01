@@ -1,3 +1,7 @@
+# whesApp 8.0.1 _2023-01-31_
+
+- Fixes #189: Set HTML language of page
+
 # whesApp 8.0.0 _2023-01-31_
 
 - delete all pages no longer required
