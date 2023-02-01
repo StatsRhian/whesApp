@@ -12,7 +12,7 @@ app_server = function(input, output, session) {
              ~ shiny::observeEvent(
                input$page == .x, {
                  dataServer(.x, lang = lang)},
-               ignoreInit = TRUE,
+               ignoreInit = FALSE,
                once = TRUE))
 
   # Call module for translating titles
