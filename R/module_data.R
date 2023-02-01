@@ -156,13 +156,32 @@ dataServer = function(id, lang) {
         filter_disag(c(input$disag, input$disag2))
     })
 
-    listen_disag = shiny::reactive({
-      list(input$ind_id, input$output_type, input$disag, lang())
+    disag_choices = shiny::reactive(get_disag_choices(input$ind_id))
+
+    disag_count = shiny::reactive({
+      count_available_disag(
+        disag_choices = disag_choices(),
+        selected_ind_id = input$ind_id,
+        selected_disag = input$disag
+      )
     })
 
-    shiny::observeEvent(listen_disag(), {
-      update_disag(
+    shiny::observeEvent(c(input$output_type, input$ind_id, lang()), {
+      update_disag1_input(
         selected_ind_id = input$ind_id,
+        disag_choices = disag_choices(),
+        disag_count = disag_count(),
+        selected_output_type = input$output_type,
+        selected_disag = input$disag,
+        lang = lang()
+      )
+    })
+
+    shiny::observe({
+      shiny::freezeReactiveValue(input, "disag2")
+      update_disag2_input(
+        disag_choices = disag_choices(),
+        disag_count = disag_count(),
         selected_output_type = input$output_type,
         selected_disag = input$disag,
         lang = lang()

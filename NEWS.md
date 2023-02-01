@@ -1,3 +1,9 @@
+# whesApp 8.0.7 _2023-02-01_
+
+- Fixes #206: Remove selectize and dependency on ShinyWidgets
+- fix: Fix bug where changing disag input rapidly would cause
+an infinite loop of input updates.
+
 # whesApp 8.0.6 _2023-02-01_
 
 - Resolves #227: Load plots on startup

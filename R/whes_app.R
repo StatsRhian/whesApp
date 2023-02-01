@@ -9,7 +9,7 @@
 #' @name whesApp
 #' @importFrom dplyr %>%
 #' @importFrom rlang :=
-#' @importFrom rlang .data
+#' @importFrom rlang .data .env
 #' @import ggplot2
 #' @importFrom markdown markdownToHTML
 NULL
