@@ -3,6 +3,7 @@
 #' @noRd
 app_server = function(input, output, session) {
   lang = shiny::reactive({
+    session$sendCustomMessage("setLanguage", format_language_code(input$lan))
     input$lan
   })
 

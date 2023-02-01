@@ -31,6 +31,7 @@ app_ui = function(request) {
         bootswatch = "united"
       ),
       header = add_external_resources(),
+      lang = "en",
       shiny::navbarMenu(
         translateTitleUI("data"),
         dataUI("outcome"),
