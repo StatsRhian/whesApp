@@ -71,8 +71,8 @@ tr_table = function(df, lang, translate_db = whesApp::translate_db) {
           dplyr::rename({{ disag }} := "CY") %>%
           dplyr::relocate({{ disag }}, .before = .data$value) %>%
           dplyr::mutate({{ disag }} := forcats::fct_relevel(
-            forcats::as_factor(!!rlang::sym(disag)),
-            levels = levels_cy
+            .f = forcats::as_factor(!!rlang::sym(disag)),
+            levels_cy
           )) # keep level order
       )
     }
