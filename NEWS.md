@@ -1,3 +1,9 @@
+# whesApp 8.0.5 _2023-02-01_
+
+- Resolves #226: Bug in CY plots
+- fix: New versions of {forcats} require that `...` arguments in `forcats::fct_relevel`
+are specified by position rather than named.
+
 # whesApp 8.0.4 _2023-02-01_
 
 - Resolves #188: Add a skip link to the page.
