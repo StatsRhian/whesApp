@@ -55,6 +55,7 @@ app_ui = function(request) {
           reactable::reactableOutput("indicator_search")
         )
       )
-    )
+    ),
+    shiny::tags$link(href = "www/ss-connect-dialog.css", rel = "stylesheet")
   )
 }

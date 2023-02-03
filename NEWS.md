@@ -1,3 +1,9 @@
+# whesApp 8.0.8 _2023-02-03_
+
+- Partially resolves #190: Handles some issues with the disconnection dialog box
+  - Resolve #191: Make timeout message more prominent, informative, and bilingual
+  - Resolve #192: Redirect focus to the overlay
+
 # whesApp 8.0.7 _2023-02-01_
 
 - Fixes #206: Remove selectize and dependency on ShinyWidgets
