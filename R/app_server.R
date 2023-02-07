@@ -22,11 +22,6 @@ app_server = function(input, output, session) {
     stringr::str_remove("^title_")
   purrr::map(titles, ~ translateTitleServer(.x, lang = lang))
 
-  # Indicator search table
-  output$indicator_search = reactable::renderReactable({
-    create_contents_table(lang = lang())
-  })
-
   # Update browser tab title and reactable defaults
   shiny::observeEvent(lang(), {
     title = tr_pull("title_whes_platform", lang())

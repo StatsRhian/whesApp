@@ -1,3 +1,7 @@
+# whesApp 8.0.9 _2023-02-08_
+
+- Remove search indicator functionality
+
 # whesApp 8.0.8 _2023-02-07_
 
 - Resolves #190: Handles some issues with the disconnection dialog box
