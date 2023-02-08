@@ -1,3 +1,7 @@
+# whesApp 8.0.12 _2023-02-08_
+
+- Resolve #242: Contrast of buttons in timeout warning
+
 # whesApp 8.0.11 _2023-02-08_
 
 - Update README.md with correct deployment links
