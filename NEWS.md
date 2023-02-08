@@ -1,3 +1,7 @@
+# whesApp 8.0.10 _2023-02-08_
+
+- Fixes #240: Contrast colour for language selection radio buttons
+
 # whesApp 8.0.9 _2023-02-08_
 
 - Remove search indicator functionality
