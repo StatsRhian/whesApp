@@ -6,7 +6,7 @@ add_timeout_warning = function() {
                           "Click to continue with your session",
                           class = "btn-primary"),
       role = "alert",
-      class = "alert alert-warning col-xs-12 d-none",
+      class = "dialog d-none",
       id = "timeout-warning"
     )
   )

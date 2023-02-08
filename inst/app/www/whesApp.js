@@ -1,9 +1,36 @@
 $( document ).ready(function() {
+  'use strict';
+
+  function browserSupportsInert() {
+    const div = document.createElement('div');
+    return 'inert' in div;
+  }
+
+  function makeInert($el) {
+    if (browserSupportsInert()) {
+      $el.attr('inert', '');
+    }
+    else {
+      $el.css('display', 'none');
+    };
+  }
+
+  function makeActive($el) {
+    if (browserSupportsInert()) {
+      $el.removeAttr('inert');
+    }
+    else {
+      $el.css('display', "");
+    };
+  }
+
+  function shinyAlert(message) {
+    alert(message);
+  }
 
   // Set page language
   function setPageLanguage(language) {
     $("html").attr("lang", language);
-    updateTimeoutMessageLanguage(language);
   }
 
   // Let Shiny server modify page language
@@ -28,61 +55,85 @@ $( document ).ready(function() {
     { childList: true, subtree:true }
   );
 
-  // Clear timeout message
-  function clearTimeoutMessage(msg) {
-    document.getElementById("timeout-warning").classList.add("d-none");
-  }
-  Shiny.addCustomMessageHandler("timeoutExtend", clearTimeoutMessage);
+  // Disconnection message due to timeout or internal error
+  $(document).on('shiny:disconnected', function () {
+  $("#timeout-warning").addClass("d-none");
 
-  // Warn that the page is about to disconnect after 14 minutes of inactivity
-  var timeoutWarningMsecs = 14 * 60 * 1000;
-  var idleTimer;
+  const dialog = $("#ss-connect-dialog")
+    .empty()
+    .attr('role', 'alert')
+    .removeAttr('id')
+    .addClass('dialog');
 
-  function onTimeout() {
-    document.getElementById("timeout-warning").classList.remove("d-none");
-    document.getElementById("timeout_extend").focus();
+  makeInert($('main'));
+
+  const lang = $("html").attr("lang");
+  let pText, buttonText;
+
+  if (lang === 'cy') {
+      pText = "Mae eich sesiwn wedi'i ddatgysylltu oherwydd terfyn amser sesiwn neu wall mewnol";
+      buttonText = "Cliciwch i ail-lwytho'r dudalen";
+    }
+    else {
+      pText = "Your session has been disconnected due to a timeout because of 15 minutes of inactivity, or an internal error.";
+      buttonText = "Click to reload the page";
+    }
+
+    $('<p>').text(pText).appendTo(dialog);
+
+    $('<button>').text(buttonText)
+      .appendTo(dialog)
+      .on('click', () => window.location.reload())
+      .focus();
+  });
+
+
+  let oldFocus;
+
+  function clearIdleWarning(_) {
+    makeActive($('main'));
+    $('#ss-overlay').css('display', 'none');
+    $('#timeout-warning').addClass('d-none');
+    if (oldFocus) $(oldFocus).focus();
   }
+
+  // Warning due to inactivity after 14 minutes
+  Shiny.addCustomMessageHandler("clearTimeout", clearIdleWarning);
+
+  const idleTimeout = 14 * 60 * 1000;
+  let idleTimer;
+
+
+  function launchIdleWarning() {
+    oldFocus = document.activeElement;
+    makeInert($('main'));
+    $('#ss-overlay').css('display', 'block');
+    const dialog = $('#timeout-warning').removeClass('d-none');
+
+    const lang = $("html").attr("lang");
+    let pText, buttonText;
+
+    if (lang === 'cy') {
+      pText = "Mae eich sesiwn ar fin datgysylltu mewn llai na 60 eiliad oherwydd anweithgarwch.";
+      buttonText = "Cliciwch i barhau â'ch sesiwn";
+    }
+    else {
+      pText = "Your session is about to disconnect in less than 60 seconds due to inactivity.";
+      buttonText = "Click to continue with your session";
+    }
+
+    dialog.find('p').text(pText);
+    dialog.find('button').text(buttonText).focus();
+  }
+
 
   function startIdleTimer() {
-    if (idleTimer) clearTimeout(idleTimer);
-    idleTimer = setTimeout(onTimeout, timeoutWarningMsecs);
-    clearTimeoutMessage(true);
+    if (idleTimer) { clearTimeout(idleTimer); }
+    idleTimer = setTimeout(launchIdleWarning, idleTimeout);
+    clearIdleWarning(true);
   }
 
   $(document).on('shiny:message shiny:inputchanged', startIdleTimer);
 
-});
-
-function updateTimeoutMessageLanguage(lang) {
-  const timeout_message_en = "Your session is about to disconnect in less than 60 seconds due to inactivity.";
-  const timeout_message_cy = "Mae eich sesiwn ar fin datgysylltu mewn llai na 60 eiliad oherwydd anweithgarwch.";
-
-  const button_en = "Click to reload the page";
-  const button_cy = "Cliciwch i barhau â'ch sesiwn";
-
-  var timeout_text = lang === "cy" ? timeout_message_cy : timeout_message_en;
-  var button_text = lang === "cy" ? button_cy : button_en;
-
-  document.querySelector("#timeout-warning p").innerText = timeout_text;
-  document.getElementById("timeout_extend").innerText = button_text;
-}
-
-// When the server disconnects the session, print a more descriptive message.
-$(document).on('shiny:disconnected', function(event) {
-  const discon_label_en = "Your session has been disconnected due to a timeout because of 15 minutes of inactivity, or an internal error.";
-  const discon_label_cy = "Mae eich sesiwn wedi'i ddatgysylltu oherwydd terfyn amser sesiwn neu wall mewnol";
-
-  const reload_en = "Click to reload the page";
-  const reload_cy = "Cliciwch i ail-lwytho'r dudalen";
-
-  var current_lang = $("html").attr("lang");
-  var discon_label_text = current_lang === "cy" ? discon_label_cy : discon_label_en;
-  var reload_text = current_lang === "cy" ? reload_cy : reload_en;
-
-  document.querySelector("#ss-connect-dialog label").innerText = discon_label_text;
-  document.getElementById("ss-reload-link").innerText = reload_text;
-
-  // Make the dialog an "alert" for screen-readers and grab focus onto reload link
-  document.getElementById("ss-connect-dialog").setAttribute("role", "alert");
-  document.getElementById("ss-reload-link").focus();
+  startIdleTimer();
 });
