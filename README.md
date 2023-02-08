@@ -1,3 +1,6 @@
 # Welsh Health Equity Solutions Platform
 
-* Public releases are available at [phw-whes.jmpr.io/app/v5](http://phw-whes.jmpr.io/app/v5)
+* Dev version on [JR Posit Connect](https://phw-cov.jmpr.io/demo/)
+* Dev version on [JR shinyapps.io](https://jumpingrivers.shinyapps.io/whesDeploy/)
+* Old version on Imrpublic release [Improvement Cymru shinyapps.io](https://improvementcymru.shinyapps.io/solutions-platform)
+

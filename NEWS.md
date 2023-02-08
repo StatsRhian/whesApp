@@ -1,3 +1,7 @@
+# whesApp 8.0.11 _2023-02-08_
+
+- Update README.md with correct deployment links
+
 # whesApp 8.0.10 _2023-02-08_
 
 - Fixes #240: Contrast colour for language selection radio buttons
