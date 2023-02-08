@@ -25,6 +25,7 @@ colgroup {
   	color: #000;
 }
 
+
 .dialog {
   opacity: 1 !important;
   width: 300px;
@@ -45,6 +46,14 @@ colgroup {
 
 .dialog button {
   color: black;
+}
+
+#lan label {
+  color: #fff;
+}
+
+#lan input {
+  margin-right: 5px;
 }
 
 .nav .navbar-brand {
