@@ -49,12 +49,7 @@ app_ui = function(request) {
         dataUI("income"),
         dataUI("living"),
         dataUI("social"),
-        dataUI("employment"),
-        shiny::tabPanel(translateTitleUI("data_search"),
-          icon = shiny::icon("search"),
-          shiny::br(),
-          reactable::reactableOutput("indicator_search")
-        )
+        dataUI("employment")
       )
     )
   )
