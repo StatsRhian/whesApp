@@ -25,6 +25,28 @@ colgroup {
   	color: #000;
 }
 
+.dialog {
+  opacity: 1 !important;
+  width: 300px;
+  height: auto;
+  z-index: 99999;
+  background-color: #404040;
+  color: white;
+  border-radius: 3px;
+  box-shadow: rgb(0 0 0 / 30%) 3px 3px 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 100%;
+  padding: 20px;
+  font-size: 1.2em;
+}
+
+.dialog button {
+  color: black;
+}
+
 .nav .navbar-brand {
     white-space: normal;
 }

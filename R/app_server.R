@@ -35,6 +35,10 @@ app_server = function(input, output, session) {
     translate_reactable_options(lang())
   })
 
+  # Clear warning of imminent timeout
+  shiny::observe(session$sendCustomMessage("timeoutExtend", TRUE)) %>%
+    shiny::bindEvent(input$timeout_extend)
+
   # add footer
   output$insert_footer = shiny::renderUI({
     filename = app_sys(glue::glue("app/www/content/{lang()}/footer.md"))

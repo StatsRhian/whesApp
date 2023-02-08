@@ -37,6 +37,7 @@ app_ui = function(request) {
       ),
       header = shiny::tagList(
         shiny::tags$div(id = "main-content-skip"),
+        add_timeout_warning(),
         add_external_resources()
       ),
       lang = "en",
