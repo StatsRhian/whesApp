@@ -1,3 +1,7 @@
+# whesApp 8.0.13 _2023-02-09_
+
+- Resolve #230: Content pushed down page when skiplink appears
+
 # whesApp 8.0.12 _2023-02-08_
 
 - Resolve #242: Contrast of buttons in timeout warning

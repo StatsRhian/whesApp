@@ -12,19 +12,25 @@ colgroup {
 }
 
 #skiplink {
-    position: absolute;
-    transform: translateY(-100%);
-}
-#skiplink:focus {
-  	transform: translateY(0%);
-  	background-color: #fd0;
-  	padding: 8px 20px;
-  	z-index: 9999;
-  	width: 100%;
-  	text-decoration: underline;
-  	color: #000;
+  display: block;
+  transform: translateY(-200%);
+  position: absolute;
+  background-color: #fd0;
+  padding: 8px 20px;
+  width: 100%;
+  text-decoration: underline;
+  color: #000;
 }
 
+#skiplink:focus {
+  transform: none;
+  position: static;
+  outline-offset: -4px;
+}
+
+#skiplink:hover {
+  box-shadow: inset 0 0 10px black;
+}
 
 .dialog {
   opacity: 1 !important;
