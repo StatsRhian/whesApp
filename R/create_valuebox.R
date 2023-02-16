@@ -19,22 +19,27 @@ prep_valuebox = function(df, lang, id) {
 #' @return The visualisation
 create_valuebox = function(df, caption = caption) {
   g =
-    ggplot2::ggplot(df, ggplot2::aes(10, 10, height = 5, width = 8, label = .data$ind_id)) +
-    ggplot2::geom_tile(fill = "#D3D3D3", colour = "#D3D3D3", linejoin = "round") +
+    ggplot2::ggplot(df,
+                    ggplot2::aes(10, 10, height = 5, width = 8, label = .data$ind_id)) +
+    ggplot2::geom_tile(
+      fill = phw_grey,
+      colour = phw_grey,
+      linejoin = "round") +
     # add value
     ggplot2::geom_text(
       x = 6.3, y = 11.3, hjust = 0,
-      color = "#008586", fontface = "bold", size = 26,
+      color = phw_blue, fontface = "bold", size = 26,
       ggplot2::aes(label = .data$value), family = "sans"
     ) +
     # add text description underneath
     ggplot2::geom_text(
       x = 6.3, y = 9, hjust = 0,
-      color = "#303030", size = 5.5,
+      size = 5.5,
       ggplot2::aes(label = .data$label), family = "sans"
     ) +
     # add condition logo
-    ggplot2::annotation_custom(grid::rasterGrob(png::readPNG(df$icon), interpolate = TRUE),
+    ggplot2::annotation_custom(
+      grid::rasterGrob(png::readPNG(df$icon), interpolate = TRUE),
       xmin = 12, xmax = 14, ymin = 10.1, ymax = 12.5
     ) +
     # add caption
@@ -45,8 +50,8 @@ create_valuebox = function(df, caption = caption) {
     ggplot2::theme(
       plot.caption = ggplot2::element_text(face = "italic", hjust = 1, size = 10),
       plot.margin = ggplot2::unit(c(0.5, 0.5, 0.5, 0.5), "cm"),
-      plot.background = ggplot2::element_rect(fill = "#D3D3D3", colour = NA),
-      panel.background = ggplot2::element_rect(fill = "#D3D3D3", colour = NA)
+      plot.background = ggplot2::element_rect(fill = phw_grey, colour = NA),
+      panel.background = ggplot2::element_rect(fill = phw_grey, colour = NA)
     )
   return(g)
 }
