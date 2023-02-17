@@ -86,10 +86,13 @@ dataUI = function(id) {
             shiny::wellPanel(
               shiny::fluidRow(shiny::column(
                 12,
-                style = "height:400px;",
-                shiny::plotOutput(ns("plot_window")),
+                style = "height:420px; overflow-x: scroll;",
+                shiny::plotOutput(ns("plot_window"),
+                                  height = "400px",
+                                  width = "800px"),
                 reactable::reactableOutput(ns("detailed_table"), height = "400px")
-              ))
+              )),
+              style = "background: white;"
             ),
           )
         ), # End: fluid row,
