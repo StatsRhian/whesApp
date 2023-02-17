@@ -60,16 +60,16 @@ create_barchart = function(df,
   # Add captions & theme
   g = g +
     ggplot2::labs(
-      title = stringr::str_wrap(title, width = plot_width / 12.5),
+      title = stringr::str_wrap(title, width = 80),
       caption = caption
     ) +
     ggplot2::theme_minimal(base_size = 14) +
     ggplot2::theme(
       plot.title.position = "plot",
       plot.title = ggplot2::element_text(
-        size = 16,
         hjust = 0,
-        vjust = 0,
+        size = 16,
+        margin = ggplot2::margin(10, 0, 5, 0),
         lineheight = 1.2
       ),
       plot.caption = ggplot2::element_text(

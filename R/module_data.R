@@ -86,7 +86,7 @@ dataUI = function(id) {
             shiny::wellPanel(
               shiny::fluidRow(shiny::column(
                 12,
-                style = "height:420px; overflow-x: scroll;",
+                style = "height:460px; overflow-x: scroll;",
                 offset = 0,
                 shiny::plotOutput(ns("plot_window"),
                                   height = "400px",
@@ -298,7 +298,7 @@ dataServer = function(id, lang) {
           device = ragg::agg_png,
           bg = "white",
           height = 400,
-          width = get_plot_width(ind_df(), input$ind_id, input$disag),
+          width = 800,
           unit = "px",
           dpi = 72
         )
