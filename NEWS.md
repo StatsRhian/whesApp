@@ -1,3 +1,7 @@
+# whesApp 8.0.16 _2023-02-20_
+
+- Resolve #181 and #231: Fix height and width of plots
+
 # whesApp 8.0.15 _2023-02-20_
 
 - Resolve #244: Fix the bug caused by have `disag_choices = "None"` when
