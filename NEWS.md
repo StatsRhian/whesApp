@@ -1,3 +1,7 @@
+# whesApp 8.0.24 _2023-02-24_
+
+- Resolve #200: Move asterisk text to table only
+
 # whesApp 8.0.23 _2023-02-24_
 
 - Descriptive hyperlink text in footer and an "Opens in new window" message.

@@ -165,24 +165,21 @@ app_ui = function(request) {
             shiny::wellPanel(
               shiny::fluidRow(shiny::column(
                 12,
-                style = "height:400px;",
-                shiny::plotOutput("plot_window"),
-                reactable::reactableOutput("detailed_table", height = "400px")
-              ))
+                style = "height:460px; overflow-x: scroll;",
+                offset = 0,
+                shiny::plotOutput("plot_window",
+                                  height = "400px",
+                                  width = "800px"),
+                reactable::reactableOutput("detailed_table", height = "400px"),
+                shiny::textOutput("small_numbers")
+              )),
+              style = "background: white;"
             ),
           )
         ), # End: fluid row,
 
         # Add spacing ------------------------------
         shiny::br(),
-
-        # Text warning ------------------------------
-        shiny::fluidRow(
-          shiny::column(
-            12,
-            shiny::textOutput("small_numbers")
-          )
-        ), # End: fluid row
 
         # Display md text ------------------------------
         shiny::fluidRow(
