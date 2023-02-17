@@ -181,6 +181,7 @@ create_waffle = function(df, disag,
         labels = legend_labels
       ) +
       ggplot2::theme(
+        plot.title.position = "plot",
         panel.spacing = ggplot2::unit(1.5, "lines"),
         plot.margin = ggplot2::unit(c(0.5, 0.5, 0.5, 0.5), "cm"),
         strip.text = ggplot2::element_text(

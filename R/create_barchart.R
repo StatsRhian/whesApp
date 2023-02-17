@@ -65,6 +65,7 @@ create_barchart = function(df,
     ) +
     ggplot2::theme_minimal(base_size = 14) +
     ggplot2::theme(
+      plot.title.position = "plot",
       plot.title = ggplot2::element_text(
         size = 16,
         hjust = 0,
