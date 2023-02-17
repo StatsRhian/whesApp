@@ -10,8 +10,7 @@ create_waffle(
   disag,
   title = "",
   caption = "Welsh Health Equity Status 2020",
-  legend_labels = c("Yes", "No"),
-  plot_width = 1000
+  legend_labels = c("Yes", "No")
 )
 }
 \arguments{
@@ -24,8 +23,6 @@ create_waffle(
 \item{caption}{The caption for the plot}
 
 \item{legend_labels}{The legend labels}
-
-\item{plot_width}{The width of the plot}
 }
 \description{
 Create waffle

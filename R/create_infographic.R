@@ -12,8 +12,7 @@ create_infographic = function(df, ind_id, id, disag, lang) {
         legend_labels = tr_pull(
           key = "waffle_legend_label",
           lang = lang
-        ),
-        plot_width = get_plot_width(df, ind_id, disag)
+        )
       )
   } else {
     # If not waffle - make valuebox

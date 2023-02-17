@@ -7,7 +7,6 @@
 #' @param caption The plot caption
 #' @param lang The language to translate into
 #' @param labels Vector of possible labels
-#' @param plot_width The width of the plot
 #' @return The plot object
 
 create_barchart = function(df,
@@ -17,8 +16,7 @@ create_barchart = function(df,
                            title = "",
                            caption = "Welsh Health Equity Status 2020",
                            lang = "EN",
-                           labels = labels,
-                           plot_width = 1000) {
+                           labels = labels) {
   df =
     df %>%
     dplyr::filter(!is.nan(.data$value))
