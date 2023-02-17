@@ -87,6 +87,7 @@ dataUI = function(id) {
               shiny::fluidRow(shiny::column(
                 12,
                 style = "height:420px; overflow-x: scroll;",
+                offset = 0,
                 shiny::plotOutput(ns("plot_window"),
                                   height = "400px",
                                   width = "800px"),

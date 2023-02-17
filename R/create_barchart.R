@@ -74,7 +74,7 @@ create_barchart = function(df,
       ),
       plot.caption = ggplot2::element_text(
         face = "italic",
-        hjust = 1,
+        hjust = 0,
         size = 10,
         margin = ggplot2::margin(10, 0, 5, 0),
         lineheight = 1.2

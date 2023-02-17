@@ -155,7 +155,7 @@ create_waffle = function(df, disag,
       ),
       plot.caption = ggplot2::element_text(
         face = "italic",
-        hjust = 1,
+        hjust = 0,
         size = 10,
         lineheight = 1.2
       ),
