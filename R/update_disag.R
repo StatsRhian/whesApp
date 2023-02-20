@@ -24,7 +24,8 @@ count_available_disag = function(disag_choices,
                                  selected_disag) {
   no_disag_avail = (length(disag_choices) == 1) & (disag_choices[[1]] == "None")
   second_disag_avail = is_second_allowed(selected_ind_id, selected_disag)
-  single_disag_only = ((length(disag_choices) == 2) & ("None" %in% disag_choices)) | (!second_disag_avail)
+  single_disag_only = ((length(disag_choices) == 2) & ("None" %in% disag_choices)) |
+    (!second_disag_avail & !no_disag_avail)
 
   if (sum(c(no_disag_avail, second_disag_avail, single_disag_only) == TRUE) != 1) {
     stop("Problem with disaggregate checks.")

@@ -1,3 +1,9 @@
+# whesApp 8.0.15 _2023-02-20_
+
+- Resolve #244: Fix the bug caused by have `disag_choices = "None"` when
+checking for number of available disags.
+- Add a test to check `disag_choices = "None"` is handled correctly.
+
 # whesApp 8.0.14 _2023-02-16_
 
 - Resolve #222: Contrast in plots
