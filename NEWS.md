@@ -1,3 +1,7 @@
+# whesApp 8.0.14 _2023-02-16_
+
+- Resolve #222: Contrast in plots
+
 # whesApp 8.0.13 _2023-02-09_
 
 - Resolve #230: Content pushed down page when skiplink appears

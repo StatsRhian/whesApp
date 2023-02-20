@@ -64,9 +64,9 @@ translate_fill = function(g, df, col_name, lang, labels) {
   labels = get_labels(df, breaks, lang, labels)
   g = g +
     ggplot2::scale_fill_manual(
-      values = c("#88CCEE", "#CC6677", "#DDCC77", "#117733",
-                 "#332288", "#AA4499", "#44AA99", "#999933",
-                 "#882255", "#661100", "#6699CC", "#888888"),
+      values = c("#CC6677", "#332288", "#117733", "#AA4499",
+                 "#882255", "#661100", "#888888", "#6699CC",
+                 "#999933", "#3BA392"),
       name = tr_pull(
         key = glue::glue("disaggregate_{col_name}"), lang = lang
       ),

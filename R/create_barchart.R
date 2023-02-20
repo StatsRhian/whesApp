@@ -30,7 +30,7 @@ create_barchart = function(df,
         x = tr_pull("all", lang),
         y = .data$value
       )) +
-      ggplot2::geom_col(fill = "#005d5d") +
+      ggplot2::geom_col(fill = phw_blue, colour = "black") +
       ggplot2::xlab("")
   } else if (disag1 != "None" && disag2 == "None") {
     g = df %>%
@@ -39,7 +39,7 @@ create_barchart = function(df,
         y = .data$value,
         fill = !!rlang::sym(disag1)
       )) +
-      ggplot2::geom_col()
+      ggplot2::geom_col(colour = "black")
     g = g %>%
       translate_x_axis(df, disag1, lang = lang, labels = labels) %>%
       translate_fill(df, disag1, lang = lang, labels = labels)
@@ -50,7 +50,8 @@ create_barchart = function(df,
         y = .data$value,
         fill = !!rlang::sym(disag1)
       )) +
-      ggplot2::geom_col(position = ggplot2::position_dodge(d))
+      ggplot2::geom_col(position = ggplot2::position_dodge(d),
+                        colour = "black")
     g = g %>%
       translate_x_axis(df, disag2, lang = lang, labels = labels) %>%
       translate_fill(df, disag1, lang = lang, labels = labels)
