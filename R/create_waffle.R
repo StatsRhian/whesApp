@@ -165,7 +165,7 @@ create_waffle = function(df, disag,
     waffle = waffle +
       ggplot2::scale_colour_manual(
         name = NULL,
-        values = c(phw_blue, phw_pink),
+        values = c(phw_pink, waffle_no),
         labels = paste(legend_labels, " (", unique(df$Percent), "%)", sep = "")
       )
     waffle
@@ -177,7 +177,7 @@ create_waffle = function(df, disag,
       ) +
       ggplot2::scale_colour_manual(
         name = NULL,
-        values = c(phw_blue, phw_pink),
+        values = c(phw_pink, waffle_no),
         labels = legend_labels
       ) +
       ggplot2::theme(

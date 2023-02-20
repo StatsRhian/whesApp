@@ -9,3 +9,6 @@ phw_pink = "#C81F5B"
 
 #' PHW branding colour grey
 phw_grey = "#E8EDEF"
+
+#' Waffle "no" group
+waffle_no = "#636969"
