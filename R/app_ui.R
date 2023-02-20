@@ -22,7 +22,6 @@ app_ui = function(request) {
           shiny::img(src = "www/logos/who-euro-white.png", width = "25%", alt = ""),
           shiny::HTML("&emsp;"),
           shiny::uiOutput("translated_title", inline = TRUE),
-          #tr_pull("title_whes_platform", "EN"),
           shiny::HTML("&emsp;"),
           shiny::img(src = "www/logos/phw.png", width = "13%", alt = ""),
           shiny::HTML("&emsp;"),
