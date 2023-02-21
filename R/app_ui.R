@@ -11,6 +11,7 @@ app_ui = function(request) {
     ),
     # header
     shiny::tags$header(
+      class = "container-fluid",
       shiny::titlePanel(
         title = shiny::span(
           shiny::img(src = "www/logos/who-euro-white.png", width = "25%", alt = ""),
@@ -24,7 +25,7 @@ app_ui = function(request) {
         windowTitle = "Welsh Health Equity Solutions Platform"
       ),
       shiny::tags$div(
-        class = "container-fluid row",
+        class = "row",
         shiny::tags$div(
           class = "col align-self-end text-right",
           add_language_selection()
