@@ -4,6 +4,33 @@
 #' @noRd
 app_ui = function(request) {
   shiny::tagList(
+    shiny::tags$a(
+      id = "skiplink",
+      href = "#main-content-skip",
+      "Skip to Main Content"
+    ),
+    # header
+    shiny::tags$header(
+      shiny::titlePanel(
+        title = shiny::span(
+          shiny::img(src = "www/logos/who-euro-white.png", width = "25%", alt = ""),
+          shiny::HTML("&emsp;"),
+          shiny::uiOutput("translated_title", inline = TRUE),
+          shiny::HTML("&emsp;"),
+          shiny::img(src = "www/logos/phw.png", width = "13%", alt = ""),
+          shiny::HTML("&emsp;"),
+          shiny::img(src = "www/logos/welsh-gov.png", width = "5%", alt = "")
+        ),
+        windowTitle = "Welsh Health Equity Solutions Platform"
+      ),
+      shiny::tags$div(
+        class = "container-fluid row",
+        shiny::tags$div(
+          class = "col align-self-end text-right",
+          add_language_selection()
+        )
+      )
+    ),
     shiny::fluidPage(
       title = NULL,
       theme = bslib::bs_theme(
@@ -19,34 +46,8 @@ app_ui = function(request) {
       ),
       lang = "en",
       id = "page", # FIXME: Check if needed?
-      shiny::tags$a(
-        id = "skiplink",
-        href = "#main-content-skip",
-        "Skip to Main Content"
-      ),
       add_timeout_warning(),
       add_external_resources(),
-      # header
-      shiny::tags$header(
-        shiny::titlePanel(
-          title = shiny::span(
-            shiny::img(src = "www/logos/who-euro-white.png", width = "25%", alt = ""),
-            shiny::HTML("&emsp;"),
-            shiny::uiOutput("translated_title", inline = TRUE),
-            shiny::HTML("&emsp;"),
-            shiny::img(src = "www/logos/phw.png", width = "13%", alt = ""),
-            shiny::HTML("&emsp;"),
-            shiny::img(src = "www/logos/welsh-gov.png", width = "5%", alt = "")
-          ),
-          windowTitle = "Welsh Health Equity Solutions Platform"
-        ),
-        shiny::fluidRow(
-          shiny::tags$div(
-            class = "col align-self-end text-right",
-            add_language_selection()
-          )
-        )
-      ),
 
       shiny::tags$div(
         id = "main-content-skip",
