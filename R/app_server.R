@@ -51,7 +51,7 @@ app_server = function(input, output, session) {
   })
 
   # Update "Select indicator" on language or category ------------------------
-  update_indicators = reactive({
+  update_indicators = shiny::reactive({
     list(lang(), input$category)
   })
   shiny::observeEvent(update_indicators(), {

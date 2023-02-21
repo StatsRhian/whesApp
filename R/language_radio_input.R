@@ -6,7 +6,7 @@
 #'
 #' @return A pair of inline radio buttons providing a choice between English and
 #' Cymraeg.
-add_language_selection <- function() {
+add_language_selection = function() {
   shiny::tags$div(
     id = "lan",
     class = "form-group shiny-input-radiogroup shiny-input-container shiny-input-container-inline shinyjs-resettable shiny-bound-input", # nolint: line_length_linter

@@ -18,7 +18,7 @@ create_infographic = function(df, ind_id, id, disag, lang) {
   } else {
     # If not waffle - make valuebox
     df %>%
-      prep_valuebox(lang = lang, id = input$category) %>%
+      prep_valuebox(lang = lang, id = id) %>%
       create_valuebox(caption = get_caption(ind_id, lang))
   }
 }

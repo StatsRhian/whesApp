@@ -53,7 +53,7 @@ app_ui = function(request) {
       shiny::fluidRow(
         shiny::column(
           12,
-          shiny::tags$h1(textOutput("data_explorer_title"))
+          shiny::tags$h1(shiny::textOutput("data_explorer_title"))
         ),
 
         # Choose category ------------------------------
@@ -78,7 +78,7 @@ app_ui = function(request) {
                 whesApp::indicator_info,
                 .data$category == "outcome" # This is overwritten by updateSelectInput
               ) %>%
-              dplyr::select(name, ind_id) %>%
+              dplyr::select(.data$name, .data$ind_id) %>%
               tibble::deframe(),
             width = "90%",
             selectize = FALSE
