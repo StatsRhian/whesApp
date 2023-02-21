@@ -3,7 +3,7 @@
 - Replace `navbarPage()` with `fluidPage()`
 - Fix #223: Provide minimum contrast on focus of download button.
 - Allow width of select box to fit content or page width.
-- Resign header to be responsive for different viewport widths.
+- Redesign header to be responsive for different viewport widths.
 
 # whesApp 8.0.15 _2023-02-20_
 
