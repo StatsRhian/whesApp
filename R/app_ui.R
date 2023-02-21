@@ -12,17 +12,27 @@ app_ui = function(request) {
     # header
     shiny::tags$header(
       class = "container-fluid",
-      shiny::titlePanel(
-        title = shiny::span(
-          shiny::img(src = "www/logos/who-euro-white.png", width = "25%", alt = ""),
-          shiny::HTML("&emsp;"),
-          shiny::uiOutput("translated_title", inline = TRUE),
-          shiny::HTML("&emsp;"),
-          shiny::img(src = "www/logos/phw.png", width = "13%", alt = ""),
-          shiny::HTML("&emsp;"),
-          shiny::img(src = "www/logos/welsh-gov.png", width = "5%", alt = "")
+      shiny::tags$div(
+        class = "row align-items-center",
+        shiny::tags$div(
+          class = "col-lg-4 col-sm-12 order-1",
+          shiny::img(src = "www/logos/who-euro-white.png", alt = "") # FIXME: Alt text needed
         ),
-        windowTitle = "Welsh Health Equity Solutions Platform"
+        shiny::tags$div(
+          class = "col-lg col-sm-12 order-xs-first order-lg-2",
+          shiny::titlePanel(
+            shiny::textOutput("translated_title", inline = TRUE),
+            windowTitle = "Welsh Health Equity Solutions Platform"
+          )
+        ),
+        shiny::tags$div(
+          class = "col-lg-2 col-sm-7 order-3",
+          shiny::img(src = "www/logos/phw.png", alt = "") # FIXME: Alt text needed
+        ),
+        shiny::tags$div(
+          class = "col-lg-1 col-sm-5 order-4",
+          shiny::img(src = "www/logos/welsh-gov.png", alt = "") # FIXME: Alt text needed
+        )
       ),
       shiny::tags$div(
         class = "row",
