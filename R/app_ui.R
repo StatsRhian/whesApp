@@ -15,15 +15,15 @@ app_ui = function(request) {
       shiny::tags$div(
         class = "row align-items-center",
         shiny::tags$div(
-          class = "col-lg-4 col-sm-12 order-1",
-          shiny::img(src = "www/logos/who-euro-white.png", alt = "") # FIXME: Alt text needed
-        ),
-        shiny::tags$div(
           class = "col-lg col-sm-12 order-xs-first order-lg-2",
           shiny::titlePanel(
             shiny::textOutput("translated_title", inline = TRUE),
             windowTitle = "Welsh Health Equity Solutions Platform"
           )
+        ),
+        shiny::tags$div(
+          class = "col-lg-4 col-sm-12 order-1",
+          shiny::img(src = "www/logos/who-euro-white.png", alt = "") # FIXME: Alt text needed
         ),
         shiny::tags$div(
           class = "col-lg-2 col-sm-7 order-3",
