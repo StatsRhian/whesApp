@@ -135,3 +135,8 @@ header {
   padding: 5px;
   margin: 0
 }
+
+.btn-primary:focus, .btn-primary.focus {
+  box-shadow: 0 0 0 .2rem #EB7FA5;
+  text-decoration: underline;
+}

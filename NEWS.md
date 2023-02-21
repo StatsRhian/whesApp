@@ -1,6 +1,7 @@
 # whesApp 8.0.16 _2023-02-20_
 
 - Replace `navbarPage()` with `fluidPage()`
+- Fix #223: Provide minimum contrast on focus of download button.
 
 # whesApp 8.0.15 _2023-02-20_
 

@@ -199,7 +199,8 @@ app_server = function(input, output, session) {
   output$download_plot_button = shiny::renderUI({
     shiny::downloadButton(
       session$ns("download_plot"),
-      tr_pull("download", lang())
+      tr_pull("download", lang()),
+      class = "btn-primary"
     )
   })
 
