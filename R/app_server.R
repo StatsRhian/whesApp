@@ -7,7 +7,12 @@ app_server = function(input, output, session) {
   output$translated_title = shiny::renderText({
     tr_pull(key = "title_whes_platform", lang())
   })
-  
+
+  # Data explorer heading ----------------------
+  output$data_explorer_title = shiny::renderText({
+    tr_pull(key = "title_data", lang())
+  })
+
   # Update language ------------------------
   lang = shiny::reactive({
     session$sendCustomMessage("setLanguage", format_language_code(input$lan))
@@ -24,7 +29,7 @@ app_server = function(input, output, session) {
       dplyr::filter(.data$ind_id == input$ind_id) %>%
       filter_disag(input$disag)
   })
-  
+
   # Translate output radio buttons ------------------------
   shiny::observeEvent(lang(), {
     shiny::updateRadioButtons(
@@ -44,11 +49,11 @@ app_server = function(input, output, session) {
       choices = tr_deframe("^category", lang())
     )
   })
-  
+
   # Update "Select indicator" on language or category ------------------------
   update_indicators = reactive({
     list(lang(), input$category)
-  }) 
+  })
   shiny::observeEvent(update_indicators(), {
     shiny::updateSelectInput(
       session,
@@ -248,5 +253,5 @@ app_server = function(input, output, session) {
     shiny::hr()
     shiny::includeMarkdown(filename)
   })
-  
+
 }

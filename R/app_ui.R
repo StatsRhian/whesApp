@@ -53,7 +53,7 @@ app_ui = function(request) {
       shiny::fluidRow(
         shiny::column(
           12,
-          shiny::tags$h1("Data Explorer") # FIXME: Translation
+          shiny::tags$h1(textOutput("data_explorer_title"))
         ),
 
         # Choose category ------------------------------
