@@ -5,7 +5,9 @@ app_server = function(input, output, session) {
 
   # Page title ------------------------
   output$translated_title = shiny::renderText({
-    tr_pull(key = "title_whes_platform", lang())
+    new_title = tr_pull(key = "title_whes_platform", lang())
+    session$sendCustomMessage("changetitle", new_title)
+    return(new_title)
   })
 
   # Data explorer heading ----------------------
