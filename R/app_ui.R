@@ -4,7 +4,18 @@
 #' @noRd
 app_ui = function(request) {
   shiny::fluidPage(
-    title = "",
+    title = NULL,
+    theme = bslib::bs_theme(
+      version = 4,
+      bootswatch = "united",
+      fg = "#000000",
+      bg = "#FFFFFF",
+      primary = phw_blue,
+      secondary = phw_pink,
+      info = phw_aqua,
+      base_font = c("Verdana", "Arial", "sans-serif"),
+      heading_font = c("Verdana", "Arial", "sans-serif")
+    ),
     lang = "en",
     id = "page", # FIXME: Check if needed?
     shiny::tags$a(
@@ -15,8 +26,7 @@ app_ui = function(request) {
     add_timeout_warning(),
     add_external_resources(),
     # header
-    shiny::div(
-      style = "text-align: center; color: #fff; background-color: #005d5d; padding: 5px; margin: 0", # FIXME: Move to CSS
+    shiny::tags$header(
       shiny::titlePanel(
         title = shiny::span(
           shiny::img(src = "www/logos/who-euro-white.png", width = "25%", alt = ""),
@@ -25,37 +35,39 @@ app_ui = function(request) {
           shiny::HTML("&emsp;"),
           shiny::img(src = "www/logos/phw.png", width = "13%", alt = ""),
           shiny::HTML("&emsp;"),
-          shiny::img(src = "www/logos/welsh-gov.png", width = "5%", alt = ""),
-          shiny::radioButtons("lan",
-                              label = "",
-                              choices = c("English" = "EN", "Cymraeg" = "CY"),
-                              width = "5%") # FIXME: styling, inline, alt text
+          shiny::img(src = "www/logos/welsh-gov.png", width = "5%", alt = "")
         ),
         windowTitle = "Welsh Health Equity Solutions Platform"
       ),
+      shiny::fluidRow(
+        shiny::tags$div(
+          class = "col align-self-end text-right",
+          add_language_selection()
+        )
+      )
     ),
 
     shiny::tags$div(
       id = "main-content-skip",
 
-      # Add spacing ------------------------------
-      shiny::br(),
-
-      # Choose category ------------------------------
       shiny::fluidRow(
+        shiny::column(
+          12,
+          shiny::tags$h1("Data Explorer") # FIXME: Translation
+        ),
+
+        # Choose category ------------------------------
         shiny::column(
           12,
           shiny::selectInput(
             inputId = "category",
             label = tr_pull("select_category", "EN"),
-            choices = tr_deframe("^category", "EN")
-          ),
+            choices = tr_deframe("^category", "EN"),
+            selectize = FALSE
+          )
         ),
-      ), # End: fluid row,
 
-
-      # Choose indicator ------------------------------
-      shiny::fluidRow(
+        # Choose indicator ------------------------------
         shiny::column(
           12,
           shiny::selectInput(
