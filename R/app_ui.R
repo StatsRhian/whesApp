@@ -16,9 +16,8 @@ app_ui = function(request) {
         class = "row align-items-center",
         shiny::tags$div(
           class = "col-lg col-sm-12 order-xs-first order-lg-2",
-          shiny::titlePanel(
+          shiny::tags$h1(
             shiny::textOutput("translated_title", inline = TRUE),
-            windowTitle = "Welsh Health Equity Solutions Platform"
           )
         ),
         shiny::tags$div(
@@ -43,7 +42,7 @@ app_ui = function(request) {
       )
     ),
     shiny::fluidPage(
-      title = NULL,
+      title = "Welsh Health Equity Solutions Platform",
       theme = bslib::bs_theme(
         version = 4,
         bootswatch = "united",
@@ -66,7 +65,7 @@ app_ui = function(request) {
         shiny::fluidRow(
           shiny::column(
             12,
-            shiny::tags$h1(shiny::textOutput("data_explorer_title"))
+            shiny::tags$h2(shiny::textOutput("data_explorer_title"))
           ),
 
           # Choose category ------------------------------
