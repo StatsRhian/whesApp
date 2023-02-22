@@ -80,7 +80,6 @@ app_ui = function(request) {
               ) %>%
               dplyr::select(.data$name, .data$ind_id) %>%
               tibble::deframe(),
-            width = "90%",
             selectize = FALSE
           ),
         ),
