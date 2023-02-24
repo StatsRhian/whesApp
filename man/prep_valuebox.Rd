@@ -4,7 +4,7 @@
 \alias{prep_valuebox}
 \title{Prep Value Box}
 \usage{
-prep_valuebox(df, lang, id)
+prep_valuebox(df, lang = "EN", id)
 }
 \arguments{
 \item{df}{The data to visualise}

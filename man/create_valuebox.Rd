@@ -11,7 +11,7 @@ create_valuebox(df, caption = caption, lang = lang)
 
 \item{caption}{The caption of the infographic}
 
-\item{lang}{Language}
+\item{lang}{The language to translate into}
 }
 \value{
 The visualisation

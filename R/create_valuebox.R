@@ -2,7 +2,7 @@
 #' @param df The data to visualise
 #' @param lang Language
 #' @param id Essential condition
-prep_valuebox = function(df, lang, id) {
+prep_valuebox = function(df, lang = "EN", id) {
   df %>%
     dplyr::mutate(label = tr_pull(key = unique(df$ind_id), lang = lang)) %>%
     dplyr::mutate(label = wrapper(.data$label, 50)) %>%

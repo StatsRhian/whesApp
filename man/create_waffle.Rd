@@ -12,7 +12,7 @@ create_waffle(
   caption = "Welsh Health Equity Status 2020",
   legend_labels = c("Yes", "No"),
   plot_width = 1000,
-  lang = lang()
+  lang = "EN"
 )
 }
 \arguments{
@@ -20,15 +20,15 @@ create_waffle(
 
 \item{disag}{The grouping to disaggregate (can be None)}
 
-\item{title}{The title for the plot}
+\item{title}{The plot title}
 
-\item{caption}{The caption for the plot}
+\item{caption}{The plot caption}
 
 \item{legend_labels}{The legend labels}
 
 \item{plot_width}{The width of the plot}
 
-\item{lang}{Language}
+\item{lang}{The language to translate into}
 }
 \description{
 Create waffle

@@ -124,7 +124,7 @@ create_waffle = function(df, disag,
                          caption = "Welsh Health Equity Status 2020",
                          legend_labels = c("Yes", "No"),
                          plot_width = 1000,
-                         lang = lang()) {
+                         lang = "EN") {
   waffle = ggplot2::ggplot(df, ggplot2::aes(x = .data$x, y = .data$y, label = .data$label, colour = .data$type)) +
     # create plot
     geom_user(

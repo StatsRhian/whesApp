@@ -1,4 +1,4 @@
-create_infographic = function(df, ind_id, id, disag, lang) {
+create_infographic = function(df, ind_id, id, disag, lang = "EN") {
   session = shiny::getDefaultReactiveDomain() # nolint
 
   if (is_percent(ind_id)) {
