@@ -1,6 +1,6 @@
 # whesApp 8.0.19 _2023-02-24_
 
-# Resolve #247: Remove y-axis label when displaying percentage values.
+- Resolve #247: Remove y-axis label when displaying percentage values.
 
 # whesApp 8.0.18 _2023-02-24_
 
