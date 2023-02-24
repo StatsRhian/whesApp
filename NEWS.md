@@ -1,3 +1,7 @@
+# whesApp 8.0.21 _2023-02-24_
+
+- Add translations for the disconnection warning/message.
+
 # whesApp 8.0.20 _2023-02-24_
 
 - Add translation for skip link

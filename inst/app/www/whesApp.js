@@ -79,12 +79,12 @@ $( document ).ready(function() {
   let pText, buttonText;
 
   if (lang === 'cy') {
-      pText = "Mae eich sesiwn wedi'i ddatgysylltu oherwydd terfyn amser sesiwn neu wall mewnol";
-      buttonText = "Cliciwch i ail-lwytho'r dudalen";
+      pText = "Mae eich sesiwn wedi cael ei dadgysylltu yn ôl terfyn amser oherwydd 15 munud o anweithgarwch, neu wall mewnol.";
+      buttonText = "Cliciwch i ailddechrau eich sesiwn";
     }
     else {
       pText = "Your session has been disconnected due to a timeout because of 15 minutes of inactivity, or an internal error.";
-      buttonText = "Click to reload the page";
+      buttonText = "Click to restart your session";
     }
 
     $('<p>').text(pText).appendTo(dialog);
@@ -122,7 +122,7 @@ $( document ).ready(function() {
     let pText, buttonText;
 
     if (lang === 'cy') {
-      pText = "Mae eich sesiwn ar fin datgysylltu mewn llai na 60 eiliad oherwydd anweithgarwch.";
+      pText = "Mae eich sesiwn ar fin dadgysylltu mewn llai na 60 eiliad oherwydd anweithgarwch.";
       buttonText = "Cliciwch i barhau â'ch sesiwn";
     }
     else {
