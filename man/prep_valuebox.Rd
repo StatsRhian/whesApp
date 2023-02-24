@@ -4,14 +4,14 @@
 \alias{prep_valuebox}
 \title{Prep Value Box}
 \usage{
-prep_valuebox(df, lang = "EN", id)
+prep_valuebox(df, id, lang = "EN")
 }
 \arguments{
 \item{df}{The data to visualise}
 
-\item{lang}{Language}
-
 \item{id}{Essential condition}
+
+\item{lang}{Language}
 }
 \description{
 Prep Value Box
