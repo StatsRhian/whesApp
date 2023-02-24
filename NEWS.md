@@ -1,3 +1,7 @@
+# whesApp 8.0.28 _2023-02-24_
+
+- Change language of aria-label for language switcher
+
 # whesApp 8.0.27 _2023-02-24_
 
 - Reduce number of allowed notes from 2 to 1.
