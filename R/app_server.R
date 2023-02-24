@@ -209,7 +209,7 @@ app_server = function(input, output, session) {
   output$download_plot_button = shiny::renderUI({
     shiny::downloadButton(
       session$ns("download_plot"),
-      tr_pull("download", lang()),
+      label = tr_pull(paste("download", input$output_type, sep = "_"), lang()),
       class = "btn-primary"
     )
   })
@@ -232,7 +232,9 @@ app_server = function(input, output, session) {
   )
 
   output$download_data_button = shiny::renderUI({
-    shiny::downloadButton(session$ns("download_data"), tr_pull("download", lang()))
+    shiny::downloadButton(session$ns("download_data"),
+                          label = tr_pull("download_table", lang()),
+                          class = "btn-primary")
   })
 
   output$download_data = shiny::downloadHandler(

@@ -174,6 +174,9 @@ disaggregate_Education,Education Level,Lefel Addysg
 disaggregate_Gender,Sex,Rhyw
 disaggregate_None,None,Dim
 download,Download,Lawrlwytho
+download_infographic,"Download infographic (PNG file; opens in new window)","Lawrlwytho ffeithlun (ffeil PNG; Yn agor mewn gwefan newydd)"
+download_barchart,"Download barchart (PNG file; opens in new window)","Lawrlwytho siart bar (ffeil PNG; Yn agor mewn gwefan newydd)"
+download_table,"Download table (CSV file; opens in new window)","Lawrlwytho tabl (ffeil CSV; Yn agor mewn gwefan newydd)"
 generate,Generate Report,Cynhyrchu Adroddiad
 ind_001,"Percentage of adults (16+) reporting fair, bad or very bad health","Canran yr oedolion (16+) sy'n adrodd iechyd gweddol, wael neu wael iawn"
 ind_002,Percentage of students who rate their health as fair or poor,Canran y myfyrwyr sy'n sgorio eu hiechyd yn weddol neu'n wael
@@ -270,6 +273,7 @@ ind_240,Percentage of adults who had not eaten for a whole day because they coul
 ind_241,Percentage of adults who had been tested for coronavirus or had an antibodies test,Canran yr oedolion a oedd wedi cael prawf coronafeirws neu wedi cael prawf gwrthgyrff
 ind_242,Percentage of adults who have a garden,Canran yr oedolion sydd â gardd
 ind_243,Percentage of adults who reported being in a worse financial situation as a result of the coronavirus restrictions,Canran yr oedolion a ddywedodd eu bod mewn sefyllfa ariannol waeth o ganlyniad i'r cyfyngiadau coronafeirws
+open_new_tab,Opens in a new window,Yn agor mewn gwefan newydd
 output_infographic,Infographic,Ffeithlun
 output_barchart,Barchart,Siart bar
 output_table,Table,Tabl

@@ -35,9 +35,10 @@ get_source_url = function(id, info = whesApp::indicator_info) {
 #' @param lang language
   get_source_text = function(id, lang) {
   date = tr_pull(key = glue::glue("^date_{id}"), lang = lang, search = TRUE)
-  source_name = tr_pull(key = caption_source(id), lang)
+  source_name = tr_pull(key = caption_source(id), lang = lang)
   source_url = get_source_url(id)
-  shiny::HTML(glue::glue("{tr_pull(key = 'section_source', lang)}: <a href={source_url} target = '_blank'>{source_name}</a> ({date})")) #nolint
+  new_tab = tr_pull("open_new_tab", lang = lang)
+  shiny::HTML(glue::glue("{tr_pull(key = 'section_source', lang)}: <a href={source_url} target = '_blank'>{source_name} ({new_tab})</a> ({date})")) # nolint: line_length_linter
 }
 
 #' Get caption

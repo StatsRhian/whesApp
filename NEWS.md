@@ -1,3 +1,7 @@
+# whesApp 8.0.25 _2023-02-24_
+
+- Fixes #208, #209: Add descriptive label for download button and translations.
+
 # whesApp 8.0.24 _2023-02-24_
 
 - Resolve #200: Move asterisk text to table only
