@@ -1,3 +1,10 @@
+# whesApp 8.0.16 _2023-02-20_
+
+- Replace `navbarPage()` with `fluidPage()`
+- Fix #223: Provide minimum contrast on focus of download button.
+- Allow width of select box to fit content or page width.
+- Redesign header to be responsive for different viewport widths.
+
 # whesApp 8.0.15 _2023-02-20_
 
 - Resolve #244: Fix the bug caused by have `disag_choices = "None"` when

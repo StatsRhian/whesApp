@@ -41,20 +41,6 @@ $( document ).ready(function() {
     document.title = x
   });
 
-  // Make hyperlinks open in new tabs.
-  new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-      $('a')
-        .filter('[href^="http"], [href^="//"]')
-        .not('[href*="' + window.location.host + '"]')
-        .attr('rel', 'nofollow noopener noreferrer')
-        .attr('target', '_blank');
-    });
-  }).observe(
-    $(".tab-content")[0],
-    { childList: true, subtree:true }
-  );
-
   // Disconnection message due to timeout or internal error
   $(document).on('shiny:disconnected', function () {
   $("#timeout-warning").addClass("d-none");
