@@ -116,13 +116,9 @@ geom_user = function(mapping = NULL, data = NULL, stat = "identity",
 
 #' Create waffle
 #' Create waffle plot on selected data
-#' @param df The data to plot
 #' @param disag The grouping to disaggregate (can be None)
-#' @param title The title for the plot
-#' @param caption The caption for the plot
 #' @param legend_labels The legend labels
-#' @param plot_width The width of the plot
-#' @param lang Language
+#' @inheritParams create_barchart
 create_waffle = function(df, disag,
                          title = "",
                          caption = "Welsh Health Equity Status 2020",

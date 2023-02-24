@@ -16,7 +16,7 @@ prep_valuebox = function(df, lang, id) {
 #' Create Value Box
 #' @param df The data to visualise
 #' @param caption The caption of the infographic
-#' @param lang Language
+#' @inheritParams create_barchart
 #' @return The visualisation
 create_valuebox = function(df, caption = caption, lang = lang) {
   g =
