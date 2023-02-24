@@ -22,15 +22,29 @@ app_ui = function(request) {
         ),
         shiny::tags$div(
           class = "col-lg-4 col-sm-12 order-1",
-          shiny::img(src = "www/logos/who-euro-white.png", alt = "") # FIXME: Alt text needed
+          shiny::img(
+            src = "www/logos/who-euro-white.png",
+            id = "world-health-org-logo",
+            alt = "World Health Organisation Collaborating Centre on Investment
+              for Health and Well-being logo - Logo Canolfan Gydweithredol
+              Sefydliad Iechyd y Byd ar Fudsoddi ar gyfer Iechyd a Llesaint"
+          )
         ),
         shiny::tags$div(
           class = "col-lg-2 col-sm-7 order-3",
-          shiny::img(src = "www/logos/phw.png", alt = "") # FIXME: Alt text needed
+          shiny::img(
+            src = "www/logos/phw.png",
+            id = "public-health-wales-logo",
+            alt = "Public Health Wales logo - Logo Iechyd Cyhoeddus Cymru"
+          )
         ),
         shiny::tags$div(
           class = "col-lg-1 col-sm-5 order-4",
-          shiny::img(src = "www/logos/welsh-gov.png", alt = "") # FIXME: Alt text needed
+          shiny::img(
+            src = "www/logos/welsh-gov.png",
+            id = "welsh-government-logo",
+            alt = "Welsh Government logo - Logo Llwodraeth Cymru"
+          )
         )
       ),
       shiny::tags$div(

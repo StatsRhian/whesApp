@@ -1,3 +1,7 @@
+# whesApp 8.0.17 _2023-02-24_
+
+- Resolve #201: Add logo alt text and make it update with language changes.
+
 # whesApp 8.0.16 _2023-02-20_
 
 - Replace `navbarPage()` with `fluidPage()`
