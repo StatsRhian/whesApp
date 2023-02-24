@@ -1,3 +1,7 @@
+# whesApp 8.0.22 _2023-02-24_
+
+- Resolve #202: Add alt text for plots. 
+
 # whesApp 8.0.21 _2023-02-24_
 
 - Add translations for the disconnection warning/message.

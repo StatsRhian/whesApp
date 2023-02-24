@@ -1,4 +1,4 @@
-create_infographic = function(df, ind_id, id, disag, lang) {
+create_infographic = function(df, ind_id, id, disag, lang = "EN") {
   session = shiny::getDefaultReactiveDomain() # nolint
 
   if (is_percent(ind_id)) {
@@ -13,12 +13,13 @@ create_infographic = function(df, ind_id, id, disag, lang) {
           key = "waffle_legend_label",
           lang = lang
         ),
-        plot_width = get_plot_width(df, ind_id, disag)
+        plot_width = get_plot_width(df, ind_id, disag),
+        lang = lang
       )
   } else {
     # If not waffle - make valuebox
     df %>%
-      prep_valuebox(lang = lang, id = id) %>%
-      create_valuebox(caption = get_caption(ind_id, lang))
+      prep_valuebox(id = id, lang = lang) %>%
+      create_valuebox(caption = get_caption(ind_id, lang), lang = lang)
   }
 }

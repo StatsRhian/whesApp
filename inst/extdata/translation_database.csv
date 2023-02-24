@@ -1,5 +1,7 @@
 key,EN,CY
 all,All,Pob un
+alt_barchart,A barchart displaying the data for selected statistic,Siart bar yn arddangos y data ar gyfer ystadegyn dethol
+alt_infographic,An infographic displaying the data for selected statistic,Ffeithlun yn arddangos y data ar gyfer ystadegyn dethol
 caption,Welsh Health Equity Solutions Platform,Platfform Datrysiadau Tegwch Iechyd Cymru
 col_confidence,Confidence,Hyder
 col_value,Value,Gwerth

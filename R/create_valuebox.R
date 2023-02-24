@@ -2,7 +2,7 @@
 #' @param df The data to visualise
 #' @param lang Language
 #' @param id Essential condition
-prep_valuebox = function(df, lang, id) {
+prep_valuebox = function(df, id, lang = "EN") {
   df %>%
     dplyr::mutate(label = tr_pull(key = unique(df$ind_id), lang = lang)) %>%
     dplyr::mutate(label = wrapper(.data$label, 50)) %>%
@@ -16,8 +16,9 @@ prep_valuebox = function(df, lang, id) {
 #' Create Value Box
 #' @param df The data to visualise
 #' @param caption The caption of the infographic
+#' @inheritParams create_barchart
 #' @return The visualisation
-create_valuebox = function(df, caption = caption) {
+create_valuebox = function(df, caption = caption, lang = lang) {
   g =
     ggplot2::ggplot(df,
                     ggplot2::aes(10, 10, height = 5, width = 8, label = .data$ind_id)) +
@@ -43,7 +44,8 @@ create_valuebox = function(df, caption = caption) {
       xmin = 12, xmax = 14, ymin = 10.1, ymax = 12.5
     ) +
     # add caption
-    ggplot2::labs(caption = caption) +
+    ggplot2::labs(caption = caption,
+                  alt = tr_pull("alt_infographic", lang)) +
     # edit theme
     ggplot2::coord_fixed(expand = FALSE) +
     ggplot2::theme_void() +
