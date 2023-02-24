@@ -136,7 +136,6 @@ header {
   margin: 0
 }
 
-
 .btn-primary:focus, .btn-primary.focus {
   box-shadow: 0 0 0 .2rem #EB7FA5;
   text-decoration: underline;
@@ -149,4 +148,10 @@ header {
 
 .shiny-input-container:not(.shiny-input-container-inline) select {
   white-space: pre-wrap;
+}
+
+header img {
+  max-width: 100%;
+  max-height: 85px;
+  margin: 16px 0px;
 }
