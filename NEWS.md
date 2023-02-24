@@ -1,3 +1,7 @@
+# whesApp 8.0.20 _2023-02-24_
+
+- Add translation for skip link
+
 # whesApp 8.0.19 _2023-02-24_
 
 - Resolve #247: Remove y-axis label when displaying percentage values.

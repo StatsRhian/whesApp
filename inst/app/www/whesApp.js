@@ -31,7 +31,16 @@ $( document ).ready(function() {
   // Set page language
   function setPageLanguage(language) {
     $("html").attr("lang", language);
+    updateSkipLinkText(language);
     updateLogoAltText(language);
+  }
+
+  function updateSkipLinkText(language) {
+    if (language == "cy") {
+      $("#skiplink").text("Neidio i'r Prif Gynnwys");
+    } else {
+      $("#skiplink").text("Skip to main content");
+    }
   }
 
   function updateLogoAltText(language) {
