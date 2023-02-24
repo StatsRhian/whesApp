@@ -1,3 +1,7 @@
+# whesApp 8.0.27 _2023-02-24_
+
+- Reduce number of allowed notes from 2 to 1.
+
 # whesApp 8.0.26 _2023-02-24_
 
 - Resolve #245: Switch colours to avoid accidental stereotype
