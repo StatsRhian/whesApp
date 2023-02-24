@@ -185,16 +185,24 @@ app_server = function(input, output, session) {
     shiny::req(input$output_type)
     if (input$output_type %in% c("infographic", "barchart")) {
       shinyjs::hide("detailed_table")
+      shinyjs::hide("small_numbers")
       shinyjs::show("plot_window")
     } else {
       shinyjs::hide("plot_window")
       shinyjs::show("detailed_table")
+      shinyjs::show("small_numbers")
     }
   })
 
   # Small numbers text ------------------------
   output$small_numbers = shiny::renderText({
-    tr_pull("small_numbers", lang())
+    # if data has nan
+    has_Nan = any(is.nan(data()$value))
+    if (has_Nan) {
+      tr_pull("small_numbers", lang())
+    } else {
+      ""
+    }
   })
 
   # Download button ------------------------
@@ -216,7 +224,7 @@ app_server = function(input, output, session) {
                       device = ragg::agg_png,
                       bg = "white",
                       height = 400,
-                      width = get_plot_width(ind_df(), input$ind_id, input$disag),
+                      width = 800,
                       unit = "px",
                       dpi = 72
       )
