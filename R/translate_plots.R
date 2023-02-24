@@ -64,7 +64,7 @@ translate_fill = function(g, df, col_name, lang, labels) {
   labels = get_labels(df, breaks, lang, labels)
   g = g +
     ggplot2::scale_fill_manual(
-      values = c("#CC6677", "#332288", "#117733", "#AA4499",
+      values = c("#332288", "#CC6677", "#117733", "#AA4499",
                  "#882255", "#661100", "#888888", "#6699CC",
                  "#999933", "#3BA392"),
       name = tr_pull(

@@ -1,3 +1,7 @@
+# whesApp 8.0.26 _2023-02-24_
+
+- Resolve #245: Switch colours to avoid accidental stereotype
+
 # whesApp 8.0.25 _2023-02-24_
 
 - Fixes #208, #209: Add descriptive label for download button and translations.
