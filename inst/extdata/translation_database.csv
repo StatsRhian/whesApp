@@ -273,7 +273,8 @@ output_barchart,Barchart,Siart bar
 output_table,Table,Tabl
 percent,Percent,Canran
 section_source,Source,Ffynhonnell
-select_disag_label,Please select a grouping,Dewiswch grŵp
+select_disag_1_label, Select a primary breakdown,	Dewis dadansoddiad sylfaenol
+select_disag_2_label, Select a secondary breakdown, Dewis dadansoddiad eilaidd
 select_category,Select a health equity topic, Dewis testun tegwch iechyd
 select_ind_label,Select a statistic to display, Dewis ystadegyn i'w arddangos
 select_output_type,Select how to display the data,	Dewis sut i arddangos y data

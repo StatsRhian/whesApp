@@ -42,10 +42,16 @@ count_available_disag = function(disag_choices,
 
 update_disag_input = function(disag, choices, selected, lang) {
   session = shiny::getDefaultReactiveDomain()
+
+  label = case_when(
+    disag == "disag" ~ "select_disag_1_label",
+    disag == "disag2" ~ "select_disag_2_label"
+  )
+
   shiny::updateSelectInput(
     session,
     inputId = disag,
-    label = tr_pull("select_disag_label", lang),
+    label = tr_pull(label, lang),
     choices = tr_deframe(pattern = choices, lang = lang),
     selected = tr_deframe(pattern = selected, lang = lang)
   )
