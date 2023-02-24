@@ -11,7 +11,8 @@ create_waffle(
   title = "",
   caption = "Welsh Health Equity Status 2020",
   legend_labels = c("Yes", "No"),
-  plot_width = 1000
+  plot_width = 1000,
+  lang = lang()
 )
 }
 \arguments{
@@ -26,6 +27,8 @@ create_waffle(
 \item{legend_labels}{The legend labels}
 
 \item{plot_width}{The width of the plot}
+
+\item{lang}{Language}
 }
 \description{
 Create waffle

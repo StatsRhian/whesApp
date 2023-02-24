@@ -4,12 +4,14 @@
 \alias{create_valuebox}
 \title{Create Value Box}
 \usage{
-create_valuebox(df, caption = caption)
+create_valuebox(df, caption = caption, lang = lang)
 }
 \arguments{
 \item{df}{The data to visualise}
 
 \item{caption}{The caption of the infographic}
+
+\item{lang}{Language}
 }
 \value{
 The visualisation
