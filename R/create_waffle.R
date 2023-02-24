@@ -122,11 +122,13 @@ geom_user = function(mapping = NULL, data = NULL, stat = "identity",
 #' @param caption The caption for the plot
 #' @param legend_labels The legend labels
 #' @param plot_width The width of the plot
+#' @param lang Language
 create_waffle = function(df, disag,
                          title = "",
                          caption = "Welsh Health Equity Status 2020",
                          legend_labels = c("Yes", "No"),
-                         plot_width = 1000) {
+                         plot_width = 1000,
+                         lang = lang()) {
   waffle = ggplot2::ggplot(df, ggplot2::aes(x = .data$x, y = .data$y, label = .data$label, colour = .data$type)) +
     # create plot
     geom_user(
@@ -141,7 +143,8 @@ create_waffle = function(df, disag,
     # add titles
     ggplot2::labs(
       title = stringr::str_wrap(title, width = plot_width / 12.5),
-      caption = caption
+      caption = caption,
+      alt = tr_pull("alt_infographic", lang)
     ) +
     # add themes
     ggplot2::theme_void() +
