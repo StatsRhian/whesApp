@@ -33,6 +33,7 @@ $( document ).ready(function() {
     $("html").attr("lang", language);
     updateSkipLinkText(language);
     updateLogoAltText(language);
+    updateAriaLanguage(language);
   }
 
   function updateSkipLinkText(language) {
@@ -52,6 +53,14 @@ $( document ).ready(function() {
       $("#world-health-org-logo").prop("alt", "World Health Organisation Collaborating Centre on Investment for Health and Well-being logo");
       $("#public-health-wales-logo").prop("alt", "Public Health Wales logo");
       $("#welsh-government-logo").prop("alt", "Welsh Government logo");
+    }
+  }
+
+  function updateAriaLanguage(language) {
+    if (language == "cy") {
+      $("#lan").attr("aria-label", "Newid iaith y dudalen hon");
+    } else {
+      $("#lan").attr("aria-label", "Change language of this page");
     }
   }
 
