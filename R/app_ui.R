@@ -24,6 +24,7 @@ app_ui = function(request) {
           class = "col-lg-4 col-sm-12 order-1",
           shiny::img(
             src = "www/logos/who-euro-white.png",
+            id = "world-health-org-logo",
             alt = "World health organisation collaborating centre on investment
               for health and well-being logo - Logo Canolfan Gydweithredol
               Sefydliad Iechyd y Byd ar Fudsoddi ar gyfer Iechyd a Llesaint"
@@ -33,14 +34,16 @@ app_ui = function(request) {
           class = "col-lg-2 col-sm-7 order-3",
           shiny::img(
             src = "www/logos/phw.png",
-            alt = "Public Health Wales logo – Logo Iechyd Cyhoeddus Cymru"
+            id = "public-health-wales-logo",
+            alt = "Public Health Wales logo - Logo Iechyd Cyhoeddus Cymru"
           )
         ),
         shiny::tags$div(
           class = "col-lg-1 col-sm-5 order-4",
           shiny::img(
             src = "www/logos/welsh-gov.png",
-            alt = "Welsh government logo – Logo Llwodraeth Cymru"
+            id = "welsh-government-logo",
+            alt = "Welsh government logo - Logo Llwodraeth Cymru"
           )
         )
       ),

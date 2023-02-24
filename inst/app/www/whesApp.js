@@ -31,6 +31,19 @@ $( document ).ready(function() {
   // Set page language
   function setPageLanguage(language) {
     $("html").attr("lang", language);
+    updateLogoAltText(language);
+  }
+
+  function updateLogoAltText(language) {
+    if (language == "cy") {
+      $("#world-health-org-logo").prop("alt", "Logo Canolfan Gydweithredol Sefydliad Iechyd y Byd ar Fudsoddi ar gyfer Iechyd a Llesaint");
+      $("#public-health-wales-logo").prop("alt", "Logo Iechyd Cyhoeddus Cymru");
+      $("#welsh-government-logo").prop("alt", "Logo Llwodraeth Cymru");
+    } else {
+      $("#world-health-org-logo").prop("alt", "World health organisation collaborating centre on investment for health and well-being logo");
+      $("#public-health-wales-logo").prop("alt", "Public Health Wales logo");
+      $("#welsh-government-logo").prop("alt", "Welsh government logo");
+    }
   }
 
   // Let Shiny server modify page language
