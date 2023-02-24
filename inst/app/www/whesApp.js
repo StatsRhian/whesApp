@@ -40,9 +40,9 @@ $( document ).ready(function() {
       $("#public-health-wales-logo").prop("alt", "Logo Iechyd Cyhoeddus Cymru");
       $("#welsh-government-logo").prop("alt", "Logo Llwodraeth Cymru");
     } else {
-      $("#world-health-org-logo").prop("alt", "World health organisation collaborating centre on investment for health and well-being logo");
+      $("#world-health-org-logo").prop("alt", "World Health Organisation Collaborating Centre on Investment for Health and Well-being logo");
       $("#public-health-wales-logo").prop("alt", "Public Health Wales logo");
-      $("#welsh-government-logo").prop("alt", "Welsh government logo");
+      $("#welsh-government-logo").prop("alt", "Welsh Government logo");
     }
   }
 
