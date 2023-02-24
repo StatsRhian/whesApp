@@ -275,7 +275,7 @@ percent,Percent,Canran
 section_source,Source,Ffynhonnell
 select_disag_label,Please select a grouping,Dewiswch grŵp
 select_category,Select a health equity topic,Dewiswch bwnc tegwch iechyd
-select_ind_label,Select an indicator,Dewiswch ddangosydd
+select_ind_label,Select a statistic to display, Dewis ystadegyn i'w arddangos
 select_output_type,Select how to display the data,	Dewis sut i arddangos y data
 show_ci,Show confidence intervals?,Dangos cyfwng hyder?
 small_numbers,* indicates value removed due to small sample size (n < 30),* yn nodi gwerth wedi'i dynnu oherwydd maint sampl bach (n < 30)
