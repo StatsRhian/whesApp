@@ -101,7 +101,7 @@ create_barchart = function(df,
         labels = scales::percent_format(accuracy = 1),
         limits = c(0, 1)
       ) +
-      ggplot2::ylab(tr_pull("percent", lang))
+      ggplot2::theme(axis.title.y = ggplot2::element_blank())
   } else {
     g = g + ggplot2::scale_y_continuous(limits = c(0, max(df$ci_upper))) +
       ggplot2::ylab(tr_pull("value", lang))
