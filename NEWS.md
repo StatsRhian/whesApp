@@ -1,3 +1,7 @@
+# whesApp 8.0.18 _2023-02-24_
+
+- Resolve #224 & #225: Reword and translate select labels and "Outcome". 
+
 # whesApp 8.0.17 _2023-02-24_
 
 - Resolve #201: Add logo alt text and make it update with language changes.
