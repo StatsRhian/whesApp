@@ -47,7 +47,7 @@ create_valuebox = function(df, caption = caption, lang = lang) {
     ggplot2::labs(caption = caption,
                   alt = tr_pull("alt_infographic", lang)) +
     # edit theme
-    ggplot2::coord_fixed(expand = FALSE) +
+    ggplot2::coord_cartesian(expand = FALSE) +
     ggplot2::theme_void() +
     ggplot2::theme(
       plot.caption = ggplot2::element_text(face = "italic", hjust = 1, size = 10),
