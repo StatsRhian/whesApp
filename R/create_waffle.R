@@ -119,26 +119,23 @@ geom_user = function(mapping = NULL, data = NULL, stat = "identity",
 #' @param disag The grouping to disaggregate (can be None)
 #' @param legend_labels The legend labels
 #' @inheritParams create_barchart
+#' @return Waffle plot showing a proportion of population meeting an indicator.
 create_waffle = function(df, disag,
                          title = "",
                          caption = "Welsh Health Equity Status 2020",
                          legend_labels = c("Yes", "No"),
-                         plot_width = 1000,
                          lang = "EN") {
   waffle = ggplot2::ggplot(df, ggplot2::aes(x = .data$x, y = .data$y, label = .data$label, colour = .data$type)) +
     # create plot
     geom_user(
       family = "fontawesome-webfont",
-      size = c(7, 5)[(length(unique(df$disag_cat)) > 3) + 1],
+      size = c(6.5, 4.5)[(length(unique(df$disag_cat)) > 3) + 1],
       draw_key = "user"
     ) +
-    ggplot2::coord_equal(
-      xlim = c(1, 10),
-      ylim = c(10, 1)
-    ) +
+    ggplot2::scale_y_reverse() +
     # add titles
     ggplot2::labs(
-      title = stringr::str_wrap(title, width = plot_width / 12.5),
+      title = stringr::str_wrap(title, width = 80),
       caption = caption,
       alt = tr_pull("alt_infographic", lang)
     ) +
@@ -146,18 +143,19 @@ create_waffle = function(df, disag,
     ggplot2::theme_void() +
     ggplot2::theme(
       plot.title = ggplot2::element_text(
-        size = 16,
         hjust = 0,
-        vjust = 0,
-        margin = ggplot2::margin(10, 0, 10, 0),
+        size = 16,
+        margin = ggplot2::margin(10, 0, 5, 0),
         lineheight = 1.2
       ),
       plot.caption = ggplot2::element_text(
         face = "italic",
-        hjust = 1,
+        hjust = 0,
         size = 10,
+        margin = ggplot2::margin(10, 0, 5, 0),
         lineheight = 1.2
       ),
+      plot.margin = ggplot2::margin(10, 10, 10, 10),
       legend.text = ggplot2::element_text(margin = margin(t = 15, b = 15, unit = "pt"))
     )
   if (disag == "None") {
@@ -180,6 +178,7 @@ create_waffle = function(df, disag,
         labels = legend_labels
       ) +
       ggplot2::theme(
+        plot.title.position = "plot",
         panel.spacing = ggplot2::unit(1.5, "lines"),
         plot.margin = ggplot2::unit(c(0.5, 0.5, 0.5, 0.5), "cm"),
         strip.text = ggplot2::element_text(

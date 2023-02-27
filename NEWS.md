@@ -1,3 +1,7 @@
+# whesApp 8.0.29 _2023-02-27_
+
+- Resolve #181 and #231: Fix height and width of plots
+
 # whesApp 8.0.28 _2023-02-24_
 
 - Change language of aria-label for language switcher

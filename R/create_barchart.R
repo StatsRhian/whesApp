@@ -7,7 +7,6 @@
 #' @param caption The plot caption
 #' @param lang The language to translate into
 #' @param labels Vector of possible labels
-#' @param plot_width The width of the plot
 #' @return The plot object
 
 create_barchart = function(df,
@@ -17,8 +16,7 @@ create_barchart = function(df,
                            title = "",
                            caption = "Welsh Health Equity Status 2020",
                            lang = "EN",
-                           labels = labels,
-                           plot_width = 1000) {
+                           labels = labels) {
   df =
     df %>%
     dplyr::filter(!is.nan(.data$value))
@@ -60,21 +58,22 @@ create_barchart = function(df,
   # Add captions & theme
   g = g +
     ggplot2::labs(
-      title = stringr::str_wrap(title, width = plot_width / 12.5),
+      title = stringr::str_wrap(title, width = 80),
       caption = caption,
       alt = tr_pull("alt_barchart", lang)
     ) +
     ggplot2::theme_minimal(base_size = 14) +
     ggplot2::theme(
+      plot.title.position = "plot",
       plot.title = ggplot2::element_text(
-        size = 16,
         hjust = 0,
-        vjust = 0,
+        size = 16,
+        margin = ggplot2::margin(10, 0, 5, 0),
         lineheight = 1.2
       ),
       plot.caption = ggplot2::element_text(
         face = "italic",
-        hjust = 1,
+        hjust = 0,
         size = 10,
         margin = ggplot2::margin(10, 0, 5, 0),
         lineheight = 1.2
