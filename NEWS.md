@@ -1,3 +1,7 @@
+# whesApp 8.0.31 _2023-02-27_
+
+- Resolve #249: Left align valuebox
+
 # whesApp 8.0.30 _2023-02-27_
 
 - Resolve #248: Remove aria-label from download icon
