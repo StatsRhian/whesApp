@@ -118,6 +118,8 @@ geom_user = function(mapping = NULL, data = NULL, stat = "identity",
 #' Create waffle plot on selected data
 #' @param disag The grouping to disaggregate (can be None)
 #' @param legend_labels The legend labels
+#' @inheritParams create_barchart
+#' @return Waffle plot showing a proportion of population meeting an indicator.
 create_waffle = function(df, disag,
                          title = "",
                          caption = "Welsh Health Equity Status 2020",

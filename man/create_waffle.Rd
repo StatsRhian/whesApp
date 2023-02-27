@@ -15,9 +15,20 @@ create_waffle(
 )
 }
 \arguments{
+\item{df}{The data to plot}
+
 \item{disag}{The grouping to disaggregate (can be None)}
 
+\item{title}{The plot title}
+
+\item{caption}{The plot caption}
+
 \item{legend_labels}{The legend labels}
+
+\item{lang}{The language to translate into}
+}
+\value{
+Waffle plot showing a proportion of population meeting an indicator.
 }
 \description{
 Create waffle
