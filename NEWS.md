@@ -1,3 +1,7 @@
+# whesApp 8.0.30 _2023-02-27_
+
+- Resolve #248: Remove aria-label from download icon
+
 # whesApp 8.0.29 _2023-02-27_
 
 - Resolve #181 and #231: Fix height and width of plots
