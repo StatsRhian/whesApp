@@ -116,15 +116,13 @@ geom_user = function(mapping = NULL, data = NULL, stat = "identity",
 
 #' Create waffle
 #' Create waffle plot on selected data
-#' @param df The data to plot
 #' @param disag The grouping to disaggregate (can be None)
-#' @param title The title for the plot
-#' @param caption The caption for the plot
 #' @param legend_labels The legend labels
 create_waffle = function(df, disag,
                          title = "",
                          caption = "Welsh Health Equity Status 2020",
-                         legend_labels = c("Yes", "No")) {
+                         legend_labels = c("Yes", "No"),
+                         lang = "EN") {
   waffle = ggplot2::ggplot(df, ggplot2::aes(x = .data$x, y = .data$y, label = .data$label, colour = .data$type)) +
     # create plot
     geom_user(
@@ -136,7 +134,8 @@ create_waffle = function(df, disag,
     # add titles
     ggplot2::labs(
       title = stringr::str_wrap(title, width = 80),
-      caption = caption
+      caption = caption,
+      alt = tr_pull("alt_infographic", lang)
     ) +
     # add themes
     ggplot2::theme_void() +

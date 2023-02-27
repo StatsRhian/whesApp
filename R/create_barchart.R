@@ -58,8 +58,9 @@ create_barchart = function(df,
   # Add captions & theme
   g = g +
     ggplot2::labs(
-      title = stringr::str_wrap(title, width = 80),
-      caption = caption
+      title = stringr::str_wrap(title, width = plot_width / 12.5),
+      caption = caption,
+      alt = tr_pull("alt_barchart", lang)
     ) +
     ggplot2::theme_minimal(base_size = 14) +
     ggplot2::theme(
@@ -100,7 +101,7 @@ create_barchart = function(df,
         labels = scales::percent_format(accuracy = 1),
         limits = c(0, 1)
       ) +
-      ggplot2::ylab(tr_pull("percent", lang))
+      ggplot2::theme(axis.title.y = ggplot2::element_blank())
   } else {
     g = g + ggplot2::scale_y_continuous(limits = c(0, max(df$ci_upper))) +
       ggplot2::ylab(tr_pull("value", lang))

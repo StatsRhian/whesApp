@@ -1,6 +1,61 @@
-# whesApp 8.0.16 _2023-02-20_
+# whesApp 8.0.29 _2023-02-27_
 
 - Resolve #181 and #231: Fix height and width of plots
+
+# whesApp 8.0.28 _2023-02-24_
+
+- Change language of aria-label for language switcher
+
+# whesApp 8.0.27 _2023-02-24_
+
+- Reduce number of allowed notes from 2 to 1.
+
+# whesApp 8.0.26 _2023-02-24_
+
+- Resolve #245: Switch colours to avoid accidental stereotype
+
+# whesApp 8.0.25 _2023-02-24_
+
+- Fixes #208, #209: Add descriptive label for download button and translations.
+
+# whesApp 8.0.24 _2023-02-24_
+
+- Resolve #200: Move asterisk text to table only
+
+# whesApp 8.0.23 _2023-02-24_
+
+- Descriptive hyperlink text in footer and an "Opens in new window" message.
+
+# whesApp 8.0.22 _2023-02-24_
+
+- Resolve #202: Add alt text for plots. 
+
+# whesApp 8.0.21 _2023-02-24_
+
+- Add translations for the disconnection warning/message.
+
+# whesApp 8.0.20 _2023-02-24_
+
+- Add translation for skip link
+
+# whesApp 8.0.19 _2023-02-24_
+
+- Resolve #247: Remove y-axis label when displaying percentage values.
+
+# whesApp 8.0.18 _2023-02-24_
+
+- Resolve #224 & #225: Reword and translate select labels and "Outcome". 
+
+# whesApp 8.0.17 _2023-02-24_
+
+- Resolve #201: Add logo alt text and make it update with language changes.
+
+# whesApp 8.0.16 _2023-02-20_
+
+- Replace `navbarPage()` with `fluidPage()`
+- Fix #223: Provide minimum contrast on focus of download button.
+- Allow width of select box to fit content or page width.
+- Redesign header to be responsive for different viewport widths.
 
 # whesApp 8.0.15 _2023-02-20_
 

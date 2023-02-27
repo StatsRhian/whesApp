@@ -59,14 +59,6 @@ colgroup {
   padding: 6px;
 }
 
-#lan label {
-  color: #fff;
-}
-
-#lan input {
-  margin-right: 5px;
-}
-
 .nav .navbar-brand {
     white-space: normal;
 }
@@ -126,4 +118,40 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+a {
+  color: #C81F5B;
+}
+
+a:hover {
+  color: #a71a4c;
+}
+
+header {
+  text-align: center;
+  color: #fff;
+  background-color: #325083;
+  padding: 5px;
+  margin: 0
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  box-shadow: 0 0 0 .2rem #EB7FA5;
+  text-decoration: underline;
+}
+
+.shiny-input-container:not(.shiny-input-container-inline) {
+  width: max-content;
+  max-width: 100%;
+}
+
+.shiny-input-container:not(.shiny-input-container-inline) select {
+  white-space: pre-wrap;
+}
+
+header img {
+  max-width: 100%;
+  max-height: 85px;
+  margin: 16px 0px;
 }

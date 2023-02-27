@@ -10,17 +10,12 @@ create_waffle(
   disag,
   title = "",
   caption = "Welsh Health Equity Status 2020",
-  legend_labels = c("Yes", "No")
+  legend_labels = c("Yes", "No"),
+  lang = "EN"
 )
 }
 \arguments{
-\item{df}{The data to plot}
-
 \item{disag}{The grouping to disaggregate (can be None)}
-
-\item{title}{The title for the plot}
-
-\item{caption}{The caption for the plot}
 
 \item{legend_labels}{The legend labels}
 }

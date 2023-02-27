@@ -1,5 +1,7 @@
 key,EN,CY
 all,All,Pob un
+alt_barchart,A barchart displaying the data for selected statistic,Siart bar yn arddangos y data ar gyfer ystadegyn dethol
+alt_infographic,An infographic displaying the data for selected statistic,Ffeithlun yn arddangos y data ar gyfer ystadegyn dethol
 caption,Welsh Health Equity Solutions Platform,Platfform Datrysiadau Tegwch Iechyd Cymru
 col_confidence,Confidence,Hyder
 col_value,Value,Gwerth
@@ -172,6 +174,9 @@ disaggregate_Education,Education Level,Lefel Addysg
 disaggregate_Gender,Sex,Rhyw
 disaggregate_None,None,Dim
 download,Download,Lawrlwytho
+download_infographic,"Download infographic (PNG file; opens in new window)","Lawrlwytho ffeithlun (ffeil PNG; Yn agor mewn gwefan newydd)"
+download_barchart,"Download barchart (PNG file; opens in new window)","Lawrlwytho siart bar (ffeil PNG; Yn agor mewn gwefan newydd)"
+download_table,"Download table (CSV file; opens in new window)","Lawrlwytho tabl (ffeil CSV; Yn agor mewn gwefan newydd)"
 generate,Generate Report,Cynhyrchu Adroddiad
 ind_001,"Percentage of adults (16+) reporting fair, bad or very bad health","Canran yr oedolion (16+) sy'n adrodd iechyd gweddol, wael neu wael iawn"
 ind_002,Percentage of students who rate their health as fair or poor,Canran y myfyrwyr sy'n sgorio eu hiechyd yn weddol neu'n wael
@@ -268,14 +273,17 @@ ind_240,Percentage of adults who had not eaten for a whole day because they coul
 ind_241,Percentage of adults who had been tested for coronavirus or had an antibodies test,Canran yr oedolion a oedd wedi cael prawf coronafeirws neu wedi cael prawf gwrthgyrff
 ind_242,Percentage of adults who have a garden,Canran yr oedolion sydd â gardd
 ind_243,Percentage of adults who reported being in a worse financial situation as a result of the coronavirus restrictions,Canran yr oedolion a ddywedodd eu bod mewn sefyllfa ariannol waeth o ganlyniad i'r cyfyngiadau coronafeirws
+open_new_tab,Opens in a new window,Yn agor mewn gwefan newydd
 output_infographic,Infographic,Ffeithlun
 output_barchart,Barchart,Siart bar
 output_table,Table,Tabl
 percent,Percent,Canran
 section_source,Source,Ffynhonnell
-select_disag_label,Please select a grouping,Dewiswch grŵp
-select_ind_label,Please select an indicator. You can type in the box to search for a key word,Dewiswch ddangosydd. Gallwch deipio yn y blwch i chwilio am air allweddol
-select_output_type,Please select an output type,Dewiswch fath o allbwn
+select_disag_1_label,Select a primary breakdown,Dewis dadansoddiad sylfaenol
+select_disag_2_label,Select a secondary breakdown,Dewis dadansoddiad eilaidd
+select_category,Select a health equity topic,Dewis testun tegwch iechyd
+select_ind_label,Select a statistic to display,Dewis ystadegyn i'w arddangos
+select_output_type,Select how to display the data,Dewis sut i arddangos y data
 show_ci,Show confidence intervals?,Dangos cyfwng hyder?
 small_numbers,* indicates value removed due to small sample size (n < 30),* yn nodi gwerth wedi'i dynnu oherwydd maint sampl bach (n < 30)
 source_aps,"Annual Population Survey, Office for National Statistics","Arolwg Poblogaeth Blynyddol, Swyddfa Ystadegau Gwladol"
@@ -310,56 +318,14 @@ table_no_entries,No entries found,Heb ganfod cofnodion
 table_previous,Previous page,Tudalen flaenorol
 table_rows,Show {rows},Dangos {rows}
 table_search,Search...,Chwilio...
-title_data,Data Explorer,Archwiliwr Data
-title_data_behaviour,Health Behaviour,Ymddygiadau Iechyd
-title_data_employment,Employment and Working Conditions,Cyflogaeth ac Amodau Gwaith
-title_data_health,Health Services,Gwasanaethau Iechyd
-title_data_income,Income Security and Social Protection,Diogelwch Incwm a Diogelu Cymdeithasol
-title_data_living,Living Conditions,Amodau Byw
-title_data_outcome,Outcome,Canlyniad
-title_data_social,Social and Human Capital,Cyfalaf Cymdeithasol a Dynol
-title_economics,Health Economics,Economeg Iechyd
-title_economics_employment,Employment and Working Conditions,Cyflogaeth ac Amodau Gwaith
-title_economics_health,Health Services,Gwasanaethau Iechyd
-title_economics_income,Income Security and Social Protection,Diogelwch Incwm a Diogelu Cymdeithasol
-title_economics_living,Living Conditions,Amodau Byw
-title_economics_overview,Overview,Trosolwg
-title_economics_social,Social and Human Capital,Cyfalaf Cymdeithasol a Dynol
-title_evidence,UK and International,DU a Rhyngwladol
-title_evidence_employment,Employment and Working Conditions,Cyflogaeth ac Amodau Gwaith
-title_evidence_health,Health Services,Gwasanaethau Iechyd
-title_evidence_income,Income Security and Social Protection,Diogelwch Incwm a Diogelu Cymdeithasol
-title_evidence_living,Living Conditions,Amodau Byw
-title_evidence_overview,Overview,Trosolwg
-title_evidence_social,Social and Human Capital,Cyfalaf Cymdeithasol a Dynol
-title_needs,Unmet Needs and Vulnerability,Anghenion heb eu Diwallu a bod yn Agored i Niwed
-title_needs_employment,Employment and Working Conditions,Cyflogaeth ac Amodau Gwaith
-title_needs_health,Health Services,Gwasanaethau Iechyd
-title_needs_income,Income Security and Social Protection,Diogelwch Incwm a Diogelu Cymdeithasol
-title_needs_living,Living Conditions,Amodau Byw
-title_needs_overview,Overview,Trosolwg
-title_needs_social,Social and Human Capital,Cyfalaf Cymdeithasol a Dynol
-title_overview,Home Page,Hafan
-title_policy,Policies,Polisïau
-title_policy_employment,Employment and Working Conditions,Cyflogaeth ac Amodau Gwaith
-title_policy_health,Health Services,Gwasanaethau Iechyd
-title_policy_income,Income Security and Social Protection,Diogelwch Incwm a Diogelu Cymdeithasol
-title_policy_living,Living Conditions,Amodau Byw
-title_policy_overview,Overview,Trosolwg
-title_policy_social,Social and Human Capital,Cyfalaf Cymdeithasol a Dynol
-title_report,Generate Report,Cynhyrchu Adroddiad
-title_solutions,Solutions,Atebion
-title_solutions_employment,Employment and Working Conditions,Cyflogaeth ac Amodau Gwaith
-title_solutions_health,Health Services,Gwasanaethau Iechyd
-title_solutions_income,Income Security and Social Protection,Diogelwch Incwm a Diogelu Cymdeithasol
-title_solutions_living,Living Conditions,Amodau Byw
-title_solutions_overview,Overview,Trosolwg
-title_solutions_social,Social and Human Capital,Cyfalaf Cymdeithasol a Dynol
-title_terms_conditions,Terms of Use,Telerau Defnyddio
+category_behaviour,Health Behaviour,Ymddygiadau Iechyd
+category_employment,Employment and Working Conditions,Cyflogaeth ac Amodau Gwaith
+category_health,Health Services,Gwasanaethau Iechyd
+category_income,Income Security and Social Protection,Diogelwch Incwm a Diogelu Cymdeithasol
+category_living,Living Conditions,Amodau Byw
+category_outcome,Health Outcome,Canlyniad Iechyd
+category_social,Social and Human Capital,Cyfalaf Cymdeithasol a Dynol
 title_whes_platform,Welsh Health Equity Solutions Platform,Platfform Datrysiadau Tegwch Iechyd Cymru
+title_data,Data Explorer,Archwiliwr Data
 waffle_legend_label,Yes,Ydw
 waffle_legend_label,No,Nac ydw
-title_data_overview,Overview,Trosolwg
-report_conditions_label,Please select the essential condition(s) to include in report:,Dewiswch yr amod(au) hanfodol i'w cynnwys yn yr adroddiad:
-report_pages_label,Please select the type(s) of information to include in report:,Dewiswch y math(au) o wybodaeth i'w cynnwys yn yr adroddiad:
-title_report_page,Generate Report,Cynhyrchu Adroddiad
