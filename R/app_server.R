@@ -209,8 +209,12 @@ app_server = function(input, output, session) {
   output$download_plot_button = shiny::renderUI({
     shiny::downloadButton(
       session$ns("download_plot"),
-      label = tr_pull(paste("download", input$output_type, sep = "_"), lang()),
-      class = "btn-primary"
+      label = shiny::tagList(
+        shiny::tags$i(class = "fas fa-download", role = "presentation"), " ",
+        tr_pull(paste("download", input$output_type, sep = "_"), lang())
+      ),
+      class = "btn-primary",
+      icon = NULL
     )
   })
 
@@ -232,9 +236,15 @@ app_server = function(input, output, session) {
   )
 
   output$download_data_button = shiny::renderUI({
-    shiny::downloadButton(session$ns("download_data"),
-                          label = tr_pull("download_table", lang()),
-                          class = "btn-primary")
+    shiny::downloadButton(
+      outputId = session$ns("download_data"),
+      label = shiny::tagList(
+        shiny::tags$i(class = "fas fa-download", role = "presentation"),
+        tr_pull("download_table", lang())
+      ),
+      class = "btn-primary",
+      icon = NULL
+    )
   })
 
   output$download_data = shiny::downloadHandler(

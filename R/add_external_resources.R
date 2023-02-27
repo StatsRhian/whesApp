@@ -11,6 +11,10 @@ add_external_resources = function() {
       shinyjs::useShinyjs(),
       shiny::tags$script(type = "text/javascript", src = "www/whesApp.js"),
       shiny::tags$link(rel = "stylesheet", type = "text/css", href = "www/phw-style.css"),
+      shiny::tags$link(href = "font-awesome-6.2.1/css/all.min.css",
+                       rel = "stylesheet", type = "text/css"),
+      shiny::tags$link(href = "font-awesome-6.2.1/css/v4-shims.min.css",
+                       rel = "stylesheet", type = "text/css"),
       shiny::tags$style(
         type = "text/css",
         ".shiny-output-error { visibility: hidden; }",
