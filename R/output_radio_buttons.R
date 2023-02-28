@@ -19,7 +19,7 @@ output_radio_buttons = function() {
         name = "output_type",
         value = "infographic",
         id = "output_type_infographic",
-        class ="form-check-input",
+        class = "form-check-input",
         checked = "checked"
       ),
       shiny::tags$label(
@@ -35,7 +35,7 @@ output_radio_buttons = function() {
         name = "output_type",
         value = "barchart",
         id = "output_type_barchart",
-        class ="form-check-input"
+        class = "form-check-input"
       ),
       shiny::tags$label(
         "Bar chart",
@@ -50,7 +50,7 @@ output_radio_buttons = function() {
         name = "output_type",
         value = "table",
         id = "output_type_table",
-        class ="form-check-input"
+        class = "form-check-input"
       ),
       shiny::tags$label(
         "Table",
