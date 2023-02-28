@@ -161,7 +161,7 @@ app_ui = function(request) {
 
           # Display plot ------------------------------
           shiny::tags$div(
-            class = "col-lg-9 well output-well",
+            class = "col-lg-9 well output-well mt-3 mt-lg-0",
             shiny::tags$div(
               class = "horizontal-scroll-output",
               shiny::plotOutput("plot_window",
