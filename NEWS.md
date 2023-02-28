@@ -1,3 +1,8 @@
+# whesApp 8.0.36 _2023-02-28_
+
+- Remove "Opens in new window" from download button.
+- Open footer URL in new tab
+
 # whesApp 8.0.35 _2023-02-28_
 
 - Resolve #256: Right-align value column in table.
