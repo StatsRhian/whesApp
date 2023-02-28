@@ -114,8 +114,8 @@ app_ui = function(request) {
 
         # Choose output type ------------------------------
         shiny::fluidRow(
-          shiny::column(
-            3,
+          shiny::tags$div(
+            class = "col-lg-3",
             shiny::radioButtons(
               inputId = "output_type",
               label = tr_pull("select_output_type", "EN"),
@@ -160,16 +160,16 @@ app_ui = function(request) {
           ),
 
           # Display plot ------------------------------
-          shiny::column(
-            9,
-            shiny::wellPanel(
-              style = "background-color: white; height:460px; overflow-x: scroll;",
+          shiny::tags$div(
+            class = "col-lg-9 well output-well mt-3 mt-lg-0",
+            shiny::tags$div(
+              class = "horizontal-scroll-output",
               shiny::plotOutput("plot_window",
                                 height = "400px",
-                                width = "800px"),
-              reactable::reactableOutput("detailed_table", height = "400px"),
-              shiny::textOutput("small_numbers")
-            )
+                                width = "800px")
+            ),
+            reactable::reactableOutput("detailed_table"),
+            shiny::textOutput("small_numbers")
           )
         ), # End: fluid row,
 

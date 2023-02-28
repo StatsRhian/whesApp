@@ -56,8 +56,12 @@ create_reactable = function(df, ci, lang) {
             name = tr_pull("col_value", lang),
             align = "center",
             format = reactable::colFormat(percent = TRUE, digits = 1),
-            na = "*"
+            na = "*",
+            minWidth = 100
           )
+        ),
+        defaultColDef = reactable::colDef(
+          minWidth = 120
         )
       )
   } else {

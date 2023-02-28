@@ -155,3 +155,12 @@ header img {
   max-height: 85px;
   margin: 16px 0px;
 }
+
+.output-well {
+  background-color: white;
+}
+
+.horizontal-scroll-output {
+  overflow-x: auto;
+  max-height: 460px;
+}
