@@ -116,16 +116,7 @@ app_ui = function(request) {
         shiny::fluidRow(
           shiny::tags$div(
             class = "col-lg-3",
-            shiny::radioButtons(
-              inputId = "output_type",
-              label = tr_pull("select_output_type", "EN"),
-              choices = c(
-                "Infographic" = "infographic",
-                "Bar chart" = "barchart",
-                "Table" = "table"
-              ),
-              width = "100%"
-            ),
+            output_radio_buttons(),
 
             # Choose disag1 ------------------------------
             shiny::selectInput("disag",
