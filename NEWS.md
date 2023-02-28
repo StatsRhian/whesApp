@@ -1,3 +1,7 @@
+# whesApp 8.0.38 _2023-02-28_
+
+- Use ellipsis for overflowing text in select menus
+
 # whesApp 8.0.37 _2023-02-28_
 
 - Make focus highlighting of table-sort buttons clearer
