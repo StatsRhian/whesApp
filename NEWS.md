@@ -1,3 +1,8 @@
+# whesApp 8.0.32 _2023-02-28_
+
+- Resolves #251: Removes horizontal scroll from outer container.
+- Allows unlimited height tables.
+
 # whesApp 8.0.31 _2023-02-27_
 
 - Resolve #249: Left align valuebox
