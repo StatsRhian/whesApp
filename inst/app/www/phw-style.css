@@ -148,7 +148,7 @@ header {
 }
 
 .shiny-input-container:not(.shiny-input-container-inline) select {
-  white-space: pre-wrap;
+  text-overflow: ellipsis;
 }
 
 header img {
