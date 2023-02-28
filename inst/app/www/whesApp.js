@@ -34,6 +34,7 @@ $( document ).ready(function() {
     updateSkipLinkText(language);
     updateLogoAltText(language);
     updateAriaLanguage(language);
+    updateOutputRadiogroupLanguage(language);
   }
 
   function updateSkipLinkText(language) {
@@ -61,6 +62,20 @@ $( document ).ready(function() {
       $("#lan").attr("aria-label", "Newid iaith y dudalen hon");
     } else {
       $("#lan").attr("aria-label", "Change language of this page");
+    }
+  }
+
+  function updateOutputRadiogroupLanguage(language) {
+    if (language == "cy") {
+      $("#output_type_grouplabel").text("Dewis sut i arddangos y data");
+      $("#output_type_infographic").next("label").text("Ffeithlun");
+      $("#output_type_barchart").next("label").text("Siart bar");
+      $("#output_type_table").next("label").text("Tabl");
+    } else {
+      $("#output_type_grouplabel").text("Select how to display the data");
+      $("#output_type_infographic").next("label").text("Infographic");
+      $("#output_type_barchart").next("label").text("Bar chart");
+      $("#output_type_table").next("label").text("Table");
     }
   }
 

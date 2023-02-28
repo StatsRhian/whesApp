@@ -1,3 +1,7 @@
+# whesApp 8.0.39 _2023-02-28_
+
+- Fix #258: make radiogroup manually to avoid label pointing to no input.
+
 # whesApp 8.0.38 _2023-02-28_
 
 - Use ellipsis for overflowing text in select menus

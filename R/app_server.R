@@ -32,16 +32,6 @@ app_server = function(input, output, session) {
       filter_disag(input$disag)
   })
 
-  # Translate output radio buttons ------------------------
-  shiny::observeEvent(lang(), {
-    shiny::updateRadioButtons(
-      session,
-      inputId = "output_type",
-      label = tr_pull("select_output_type", lang()),
-      choices = sort_output_choice(lang = lang())
-    )
-  })
-
   # Translate category select ------------------------
   shiny::observeEvent(lang(), {
     shiny::updateSelectInput(
@@ -62,16 +52,6 @@ app_server = function(input, output, session) {
       inputId = "ind_id",
       label = tr_pull("select_ind_label", lang()),
       choices = tr_deframe_inds(key_group = input$category, lang = lang())
-    )
-  })
-
-  # Translate output radio group buttons ------------------------
-  shiny::observeEvent(lang(), {
-    shiny::updateRadioButtons(
-      session,
-      inputId = "output_type",
-      label = tr_pull("select_output_type", lang()),
-      choices = sort_output_choice(lang = lang())
     )
   })
 
