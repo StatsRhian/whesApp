@@ -2,6 +2,7 @@
 
 - Resolves #251: Removes horizontal scroll from outer container.
 - Allows unlimited height tables.
+- Stop table header word wrapping.
 
 # whesApp 8.0.31 _2023-02-27_
 
