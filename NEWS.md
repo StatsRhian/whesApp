@@ -1,3 +1,7 @@
+# whesApp 8.0.33 _2023-02-28_
+
+- Set default text-colour to #000000 to meet minimum contrast standards.
+
 # whesApp 8.0.32 _2023-02-28_
 
 - Resolves #251: Removes horizontal scroll from outer container.
