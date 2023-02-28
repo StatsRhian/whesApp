@@ -165,3 +165,7 @@ header img {
   overflow-x: auto;
   max-height: 460px;
 }
+
+.rt-th:focus-visible .rt-sort-right {
+  outline: 1px solid black;
+}

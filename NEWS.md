@@ -1,3 +1,7 @@
+# whesApp 8.0.37 _2023-02-28_
+
+- Make focus highlighting of table-sort buttons clearer
+
 # whesApp 8.0.36 _2023-02-28_
 
 - Remove "Opens in new window" from download button.
