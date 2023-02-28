@@ -161,6 +161,6 @@ header img {
 }
 
 .horizontal-scroll-output {
-  overflow-x: scroll;
+  overflow-x: auto;
   max-height:460px;
 }
