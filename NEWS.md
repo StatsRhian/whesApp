@@ -1,3 +1,7 @@
+# whesApp 8.0.35 _2023-02-28_
+
+- Resolve #256: Right-align value column in table.
+
 # whesApp 8.0.34 _2023-02-28_
 
 - Fix #252: Imports fontawesome icons.
