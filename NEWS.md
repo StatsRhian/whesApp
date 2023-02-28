@@ -1,3 +1,7 @@
+# whesApp 8.0.34 _2023-02-28_
+
+- Fix #252: Imports fontawesome icons.
+
 # whesApp 8.0.33 _2023-02-28_
 
 - Set default text-colour to #000000 to meet minimum contrast standards.
