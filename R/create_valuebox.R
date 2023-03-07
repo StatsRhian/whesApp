@@ -15,10 +15,9 @@ prep_valuebox = function(df, id, lang = "EN") {
 
 #' Create Value Box
 #' @param df The data to visualise
-#' @param caption The caption of the infographic
 #' @inheritParams create_barchart
 #' @return The visualisation
-create_valuebox = function(df, caption = caption, lang = lang) {
+create_valuebox = function(df, title = "", caption = caption, lang = lang) {
   g =
     ggplot2::ggplot(df,
                     ggplot2::aes(10, 10, height = 5, width = 8, label = .data$ind_id)) +
@@ -45,7 +44,7 @@ create_valuebox = function(df, caption = caption, lang = lang) {
     ) +
     # add caption
     ggplot2::labs(caption = caption,
-                  alt = tr_pull("alt_infographic", lang)) +
+                  alt = paste(tr_pull("alt_infographic", lang), title, sep = ": ")) +
     # edit theme
     ggplot2::coord_cartesian(expand = FALSE) +
     ggplot2::theme_void() +

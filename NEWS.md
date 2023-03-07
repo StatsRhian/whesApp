@@ -1,3 +1,7 @@
+# whesApp 8.0.41 _2023-03-07_
+
+- Fix #261: Use title in plot alt text, and present table first
+
 # whesApp 8.0.40 _2023-03-06_
 
 - Fix #259: Trap focus on disconnection dialog
