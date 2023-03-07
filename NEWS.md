@@ -1,3 +1,8 @@
+# whesApp 8.0.40 _2023-03-06_
+
+- Fix #259: Trap focus on disconnection dialog
+- Fix #260: More distinctive disconnection button focus indicator.
+
 # whesApp 8.0.39 _2023-02-28_
 
 - Fix #258: make radiogroup manually to avoid label pointing to no input.

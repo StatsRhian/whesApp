@@ -1,31 +1,47 @@
-$( document ).ready(function() {
+$(document).ready(function () {
   'use strict';
+
+  const inertList = [
+    '#skiplink',
+    '#lang-en',
+    '#main-content-skip',
+  ];
 
   function browserSupportsInert() {
     const div = document.createElement('div');
     return 'inert' in div;
   }
 
-  function makeInert($el) {
-    if (browserSupportsInert()) {
-      $el.attr('inert', '');
-    }
-    else {
-      $el.css('display', 'none');
-    };
+  function makeInert() {
+    inertList.forEach(function (query) {
+      const $el = $(query);
+      if (browserSupportsInert()) {
+        $el.attr('inert', '');
+      }
+      else {
+        $el.css('display', 'none');
+      };
+    });
   }
 
-  function makeActive($el) {
-    if (browserSupportsInert()) {
-      $el.removeAttr('inert');
-    }
-    else {
-      $el.css('display', "");
-    };
+  function makeActive() {
+    inertList.forEach(function (query) {
+      const $el = $(query);
+      if (browserSupportsInert()) {
+        $el.removeAttr('inert');
+      }
+      else {
+        $el.css('display', "");
+      };
+    });
   }
 
-  function shinyAlert(message) {
-    alert(message);
+  function isInert() {
+    const $el = $(inertList[0]);
+    if (browserSupportsInert()) {
+      return $el.attr('inert') !== undefined
+    }
+    return $el.css('display') === 'none';
   }
 
   // Set page language
@@ -83,26 +99,26 @@ $( document ).ready(function() {
   Shiny.addCustomMessageHandler("setLanguage", setPageLanguage);
 
   // Let Shiny server update page title
-  Shiny.addCustomMessageHandler('changetitle', function(x) {
+  Shiny.addCustomMessageHandler('changetitle', function (x) {
     document.title = x
   });
 
   // Disconnection message due to timeout or internal error
   $(document).on('shiny:disconnected', function () {
-  $("#timeout-warning").addClass("d-none");
+    $("#timeout-warning").addClass("d-none");
 
-  const dialog = $("#ss-connect-dialog")
-    .empty()
-    .attr('role', 'alert')
-    .removeAttr('id')
-    .addClass('dialog');
+    const dialog = $("#ss-connect-dialog")
+      .empty()
+      .attr('role', 'alert')
+      .removeAttr('id')
+      .addClass('dialog');
 
-  makeInert($('main'));
+    makeInert();
 
-  const lang = $("html").attr("lang");
-  let pText, buttonText;
+    const lang = $("html").attr("lang");
+    let pText, buttonText;
 
-  if (lang === 'cy') {
+    if (lang === 'cy') {
       pText = "Mae eich sesiwn wedi cael ei dadgysylltu yn ôl terfyn amser oherwydd 15 munud o anweithgarwch, neu wall mewnol.";
       buttonText = "Cliciwch i ailddechrau eich sesiwn";
     }
@@ -119,14 +135,15 @@ $( document ).ready(function() {
       .focus();
   });
 
-
   let oldFocus;
 
   function clearIdleWarning(_) {
-    makeActive($('main'));
+    if (!isInert()) { return; };
+    makeActive();
     $('#ss-overlay').css('display', 'none');
     $('#timeout-warning').addClass('d-none');
-    if (oldFocus) $(oldFocus).focus();
+    if (oldFocus) { $(oldFocus).focus(); }
+    oldFocus = null;
   }
 
   // Warning due to inactivity after 14 minutes
@@ -138,7 +155,7 @@ $( document ).ready(function() {
 
   function launchIdleWarning() {
     oldFocus = document.activeElement;
-    makeInert($('main'));
+    makeInert();
     $('#ss-overlay').css('display', 'block');
     const dialog = $('#timeout-warning').removeClass('d-none');
 
@@ -162,7 +179,7 @@ $( document ).ready(function() {
   function startIdleTimer() {
     if (idleTimer) { clearTimeout(idleTimer); }
     idleTimer = setTimeout(launchIdleWarning, idleTimeout);
-    clearIdleWarning(true);
+    clearIdleWarning();
   }
 
   $(document).on('shiny:message shiny:inputchanged', startIdleTimer);
