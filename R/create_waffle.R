@@ -137,7 +137,7 @@ create_waffle = function(df, disag,
     ggplot2::labs(
       title = stringr::str_wrap(title, width = 80),
       caption = caption,
-      alt = tr_pull("alt_infographic", lang)
+      alt = paste(tr_pull("alt_infographic", lang), title, sep = ": ")
     ) +
     # add themes
     ggplot2::theme_void() +
