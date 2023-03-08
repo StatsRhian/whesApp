@@ -1,3 +1,8 @@
+# whesApp 8.1.0 _2023-03-08_
+
+- Change focus-visible to focus for browser compatability
+- Major bump as ready for DAC
+
 # whesApp 8.0.41 _2023-03-07_
 
 - Fix #261: Use title in plot alt text, and present table first

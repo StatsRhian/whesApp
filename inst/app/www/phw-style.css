@@ -166,10 +166,10 @@ header img {
   max-height: 460px;
 }
 
-.rt-th:focus-visible .rt-sort-right {
+.rt-th:focus .rt-sort-right {
   outline: 1px solid black;
 }
 
-[role="alert"] button:focus-visible {
+[role="alert"] button:focus {
   box-shadow: 0 0 0 .2rem #EB7FA5;
 }
