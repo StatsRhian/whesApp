@@ -37,7 +37,7 @@ colgroup {
   width: 300px;
   height: auto;
   z-index: 99999;
-  background-color: #404040;
+  background-color: #171717;
   color: white;
   border-radius: 3px;
   box-shadow: rgb(0 0 0 / 30%) 3px 3px 10px;
@@ -137,8 +137,12 @@ header {
   margin: 0
 }
 
+.form-control:focus {
+  box-shadow: 0 0 0 3px #325083;
+}
+
 .btn-primary:focus, .btn-primary.focus {
-  box-shadow: 0 0 0 .2rem #EB7FA5;
+  box-shadow: 0 0 0 4px #C81F5B;
   text-decoration: underline;
 }
 
@@ -166,10 +170,12 @@ header img {
   max-height: 460px;
 }
 
-.rt-th:focus .rt-sort-right {
-  outline: 1px solid black;
+.rt-th:focus .rt-sort-right::after, .rt-th:focus .rt-sort-left::after {
+  outline: 2px solid black;
+  color: #000;
 }
 
 [role="alert"] button:focus {
-  box-shadow: 0 0 0 .2rem #EB7FA5;
+  box-shadow: 0 0 0 6px #C81F5B;
 }
+

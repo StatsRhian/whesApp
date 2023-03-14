@@ -1,3 +1,9 @@
+# whesApp 8.1.1 _2023-03-13_
+
+- Increase focus border contrasts and sizes.
+- fix: table column sort indicator for "value" now gets focus border.
+- Swap back to `focus-visible`.
+
 # whesApp 8.1.0 _2023-03-08_
 
 - Change focus-visible to focus for browser compatability
