@@ -1,3 +1,7 @@
+# whesApp 9.0.2 _2023-04-05_
+
+- Fix ind_052
+
 # whesApp 9.0.1 _2023-04-05_
 
 - Add accessibility statement
