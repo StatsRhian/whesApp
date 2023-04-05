@@ -10,6 +10,17 @@ test_that("Indicators wording is correct in translation db", {
   expect_identical(length(which(!(ind1 %in% ind2))), 0L)
 })
 
+test_that("Dates are correct in translation db", {
+  dates1 = whesApp::indicator_info %>% dplyr::select(ind_id, date)
+  dates2 = whesApp::translate_db %>%
+    dplyr::filter(stringr::str_detect(key, "^date_ind_\\d{3}")) %>%
+    dplyr::select("key", "EN") %>%
+    dplyr::mutate(key = stringr::str_remove(.data$key, "^date_"))
+  dates = dplyr::inner_join(dates1, dates2, by = c("ind_id" = "key"))
+
+  expect_identical(nrow(dates %>% dplyr::filter(date != EN)), 0L)
+})
+
 test_that("Source keys present in translation db", {
   source1 = whesApp::indicator_info %>% dplyr::pull(source_id)
   source2 = whesApp::translate_db %>%
