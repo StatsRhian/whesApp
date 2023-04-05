@@ -1,3 +1,7 @@
+# whesApp 9.0.1 _2023-04-05_
+
+- Add accessibility statement
+
 # whesApp 9.0.0 _2023-04-05_
 
 - Data refresh for 2023
