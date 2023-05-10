@@ -1,3 +1,7 @@
+# whesApp 9.0.3 _2023-05-10_
+
+- feat: update ind_069 APS
+
 # whesApp 9.0.2 _2023-04-05_
 
 - Fix ind_052
