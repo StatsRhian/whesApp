@@ -1,3 +1,9 @@
+# whesApp 9.0.5 _2023-05-12_
+
+- fix: Make anchor for DAC logo `display:block` to ensure Firefox renders
+  a focus:visible box that surrounds the entire link area.
+- Add bottom margin to DAC logo.
+
 # whesApp 9.0.4 _2023-05-10_
 
 - feat: add DAC logo

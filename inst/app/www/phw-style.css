@@ -129,6 +129,11 @@ a:hover {
   color: #a71a4c;
 }
 
+a.block-link {
+  display: block;
+  margin-bottom: 12px;
+}
+
 header {
   text-align: center;
   color: #fff;
