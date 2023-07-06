@@ -1,3 +1,7 @@
+# whesApp 9.0.6 _2023-07-06_
+
+- fix: update accessibility docs
+
 # whesApp 9.0.5 _2023-05-12_
 
 - fix: Make anchor for DAC logo `display:block` to ensure Firefox renders
