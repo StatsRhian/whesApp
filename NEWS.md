@@ -1,3 +1,7 @@
+# whesApp 9.0.7 _2023-07-10_
+
+- fix: update contact email
+
 # whesApp 9.0.6 _2023-07-06_
 
 - fix: update accessibility docs
