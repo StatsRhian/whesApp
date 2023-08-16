@@ -1,3 +1,7 @@
+# whesApp 9.0.8 _2023-08-15_
+
+- fix: lintr 3.1.0
+
 # whesApp 9.0.7 _2023-07-10_
 
 - fix: update contact email

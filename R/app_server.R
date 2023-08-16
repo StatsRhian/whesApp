@@ -130,8 +130,7 @@ app_server = function(input, output, session) {
                          ind_id = input$ind_id,
                          id = input$category,
                          input$disag,
-                         lang()
-      )
+                         lang())
     } else if (input$output_type == "barchart") {
       create_barchart(
         df = data(),
@@ -210,8 +209,7 @@ app_server = function(input, output, session) {
                       height = 400,
                       width = 800,
                       unit = "px",
-                      dpi = 72
-      )
+                      dpi = 72)
     }
   )
 

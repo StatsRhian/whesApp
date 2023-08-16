@@ -77,11 +77,10 @@ update_disag1_input = function(selected_ind_id,
                                selected_output_type,
                                selected_disag,
                                lang) {
-  if ((selected_output_type == "infographic" &&
-       (is_percent(selected_ind_id) &&
-        disag_count > 0L)) ||
-      (selected_output_type != "infographic" &&
-       disag_count > 0L)) {
+  if (
+    (selected_output_type == "infographic" && is_percent(selected_ind_id) && disag_count > 0L) ||
+      (selected_output_type != "infographic" && disag_count > 0L)
+  ) {
     shinyjs::enable("disag")
     set_disag1_to_choices(selected_disag, disag_choices, lang)
   } else {

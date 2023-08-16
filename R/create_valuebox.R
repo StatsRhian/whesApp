@@ -9,8 +9,7 @@ prep_valuebox = function(df, id, lang = "EN") {
     dplyr::mutate(icon = app_sys(glue::glue("app/www/images/bw/{id}.png"))) %>%
     dplyr::mutate(value = format(round(.data$value, 2), big.mark = ",")) %>%
     dplyr::mutate(value = ifelse(stringr::str_detect(.data$label, "\U00A3"),
-      glue::glue("\U00A3{value}"), .data$value
-    ))
+                                 glue::glue("\U00A3{value}"), .data$value))
 }
 
 #' Create Value Box
@@ -19,12 +18,15 @@ prep_valuebox = function(df, id, lang = "EN") {
 #' @return The visualisation
 create_valuebox = function(df, title = "", caption = caption, lang = lang) {
   g =
-    ggplot2::ggplot(df,
-                    ggplot2::aes(10, 10, height = 5, width = 8, label = .data$ind_id)) +
+    ggplot2::ggplot(
+      df,
+      ggplot2::aes(10, 10, height = 5, width = 8, label = .data$ind_id)
+    ) +
     ggplot2::geom_tile(
       fill = phw_grey,
       colour = phw_grey,
-      linejoin = "round") +
+      linejoin = "round"
+    ) +
     # add value
     ggplot2::geom_text(
       x = 6.3, y = 11.3, hjust = 0,
