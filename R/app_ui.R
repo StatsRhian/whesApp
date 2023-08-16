@@ -119,30 +119,32 @@ app_ui = function(request) {
             output_radio_buttons(),
 
             # Choose disag1 ------------------------------
-            shiny::selectInput("disag",
-                               label = "Please select a grouping",
-                               choices = c(
-                                 "None" = "None",
-                                 "Gender" = "Gender",
-                                 "Age" = "Age",
-                                 "Deprivation" = "Deprivation",
-                                 "Education level" = "Education"
-                               ),
-                               selected = "None",
-                               selectize = FALSE
+            shiny::selectInput(
+              "disag",
+              label = "Please select a grouping",
+              choices = c(
+                "None" = "None",
+                "Gender" = "Gender",
+                "Age" = "Age",
+                "Deprivation" = "Deprivation",
+                "Education level" = "Education"
+              ),
+              selected = "None",
+              selectize = FALSE
             ),
 
             # Choose disag2 ------------------------------
-            shiny::selectInput("disag2",
-                               label = "Please select a grouping",
-                               choices = c(
-                                 "Gender" = "Gender",
-                                 "Age" = "Age",
-                                 "Deprivation" = "Deprivation",
-                                 "Education level" = "Education"
-                               ),
-                               selected = "Age",
-                               selectize = FALSE
+            shiny::selectInput(
+              "disag2",
+              label = "Please select a grouping",
+              choices = c(
+                "Gender" = "Gender",
+                "Age" = "Age",
+                "Deprivation" = "Deprivation",
+                "Education level" = "Education"
+              ),
+              selected = "Age",
+              selectize = FALSE
             ),
             # ci
             shiny::uiOutput("ci_button"),

@@ -15,8 +15,7 @@ caption_source = function(id, info = whesApp::indicator_info) {
   id %>%
     tibble::enframe(name = NULL, value = "ind_id") %>%
     dplyr::left_join(dplyr::select(info, .data$ind_id, .data$source_id),
-      by = "ind_id"
-    ) %>%
+                     by = "ind_id") %>%
     dplyr::mutate(source_id = glue::glue("source_{.data$source_id}")) %>%
     dplyr::pull(.data$source_id)
 }
@@ -24,8 +23,9 @@ caption_source = function(id, info = whesApp::indicator_info) {
 get_source_url = function(id, info = whesApp::indicator_info) {
   id %>%
     tibble::enframe(name = NULL, value = "ind_id") %>%
-    dplyr::left_join(dplyr::select(info, .data$ind_id, .data$source_url),
-                     by = "ind_id"
+    dplyr::left_join(
+      dplyr::select(info, .data$ind_id, .data$source_url),
+      by = "ind_id"
     ) %>%
     dplyr::pull(.data$source_url)
 }
@@ -33,7 +33,7 @@ get_source_url = function(id, info = whesApp::indicator_info) {
 #' Get source text
 #' @param id indicator id
 #' @param lang language
-  get_source_text = function(id, lang) {
+get_source_text = function(id, lang) {
   date = tr_pull(key = glue::glue("^date_{id}"), lang = lang, search = TRUE)
   source_name = tr_pull(key = caption_source(id), lang = lang)
   source_url = get_source_url(id)

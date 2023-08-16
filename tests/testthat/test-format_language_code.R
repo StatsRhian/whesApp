@@ -11,6 +11,5 @@ test_that("language code is correctly formatted for Chinese Simplified/Tradition
 })
 
 test_that("vectors of language codes are correctly converted", {
-  expect_identical(format_language_code(c("en", "DE", "CY")),
-                                        c("en", "de", "cy"))
+  expect_identical(format_language_code(c("en", "DE", "CY")), c("en", "de", "cy"))
 })
