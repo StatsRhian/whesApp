@@ -1,3 +1,7 @@
+# whesApp 9.0.9 _2023-12-07_
+
+- internal: note client has no RSPM access
+
 # whesApp 9.0.8 _2023-08-15_
 
 - fix: lintr 3.1.0
