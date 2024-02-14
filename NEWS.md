@@ -1,3 +1,7 @@
+# whesApp 9.1.0 _2024-02-14_
+
+- update: update data to match {whesPrep} v0.2.5 
+
 # whesApp 9.0.9 _2023-12-07_
 
 - internal: note client has no RSPM access
@@ -166,7 +170,7 @@
 # whesApp 8.0.15 _2023-02-20_
 
 - Resolve #244: Fix the bug caused by have `disag_choices = "None"` when
-checking for number of available disags.
+  checking for number of available disags.
 - Add a test to check `disag_choices = "None"` is handled correctly.
 
 # whesApp 8.0.14 _2023-02-16_
@@ -204,7 +208,7 @@ checking for number of available disags.
 
 - Fixes #206: Remove selectize and dependency on ShinyWidgets
 - fix: Fix bug where changing disag input rapidly would cause
-an infinite loop of input updates.
+  an infinite loop of input updates.
 
 # whesApp 8.0.6 _2023-02-01_
 
@@ -214,7 +218,7 @@ an infinite loop of input updates.
 
 - Resolves #226: Bug in CY plots
 - fix: New versions of {forcats} require that `...` arguments in `forcats::fct_relevel`
-are specified by position rather than named.
+  are specified by position rather than named.
 
 # whesApp 8.0.4 _2023-02-01_
 
@@ -224,12 +228,12 @@ are specified by position rather than named.
 
 - Fixes #197: Input radios no longer nested inside buttons.
 - Fixes #228: Focus order no longer jumps on changing this input. This is a side
-effect of fixing #197.
+  effect of fixing #197.
 
 # whesApp 8.0.2 _2023-02-01_
 
 - Fix #194, Fix #195, Fix #196: Correct aria grouping and `aria-label` for radio
-buttons that change app language.
+  buttons that change app language.
 - Move changetitle Shiny custom handler to JS file
 
 # whesApp 8.0.1 _2023-01-31_
